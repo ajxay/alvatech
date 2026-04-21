@@ -19,11 +19,12 @@ export default function Features() {
                 Main features
               </span>
               <h2 className="h3 lg:h2 xl:h1 m-0">
-                A CRM tools help you keep track of leads
+                We build, market, and scale your digital presence
               </h2>
               <p className="fs-6 xl:fs-5 text-dark dark:text-white text-opacity-70">
-                Join the thousands of satisfied users and take your business to
-                the next level. Trusted by over 2,500 startups.
+                From high-performing Shopify stores to result-driven marketing
+                and social media strategies—we help you attract, engage, and
+                convert your audience.
               </p>
             </div>
             <div

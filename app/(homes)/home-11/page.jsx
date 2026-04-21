@@ -40,9 +40,6 @@ export default function page() {
             <Features />
             <Integration />
             <Associations />
-            <Testimonials />
-            {/* testimonials have some additonal section which
-            needs to be removed */}
             <Facts />
             <Feedback />
             <Timeline />
