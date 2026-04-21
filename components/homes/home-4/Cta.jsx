@@ -14,9 +14,9 @@ export default function Cta() {
               className="vstack items-center gap-2 sm:max-w-600px lg:max-w-650px mx-auto text-center"
               data-anime="onview: -200; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});"
             >
-              <h2 className="h3 lg:h2 m-0">Start your 30-day free trial.</h2>
+              <h2 className="h3 lg:h2 m-0">Get a call back.</h2>
               <p className="fs-6 md:fs-5 xl:fs-4 text-dark dark:text-white text-opacity-70">
-                Join over 2,500+ startups already growing with Lexend.
+                Join over 500+ business already growing with Alvatch.
               </p>
               <div className="vstack sm:hstack justify-center gap-1 lg:gap-2 mt-1 lg:mt-2 flex-sm-column">
                 <a
@@ -31,7 +31,7 @@ export default function Cta() {
                   href={`/page-pricing`}
                   className="btn btn-md btn-primary rounded-default text-white shadow-xs"
                 >
-                  Start free trial
+                  Contact Us
                 </Link>
               </div>
             </div>

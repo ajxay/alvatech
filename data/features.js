@@ -235,7 +235,7 @@ export const featureItems = [
 
 export const featureItemsShopify = [
   {
-    imageSrc: "/assets/images/template/home-four-feature-01.png",
+    imageSrc: "/assets/images/template/shopify-feature-01.png",
     altText: "What We Offer",
     title: "Custom Shopify Store Development",
     description:
@@ -244,7 +244,7 @@ export const featureItemsShopify = [
     reverseOrder: false,
   },
   {
-    imageSrc: "/assets/images/template/home-four-feature-02.png",
+    imageSrc: "/assets/images/template/shopify-feature-02.png",
     altText: "Theme Design & Customization",
     title: "Theme Design & Customization",
     description:
@@ -254,7 +254,7 @@ export const featureItemsShopify = [
     reverseOrder: true,
   },
   {
-    imageSrc: "/assets/images/template/home-four-feature-03.png",
+    imageSrc: "/assets/images/template/shopify-feature-03.png",
     altText: "Shopify App Development & Integration",
     title: "Shopify App Development & Integration",
     description:
@@ -264,7 +264,7 @@ export const featureItemsShopify = [
     reverseOrder: false,
   },
   {
-    imageSrc: "/assets/images/template/home-four-feature-04.png",
+    imageSrc: "/assets/images/template/shopify-feature-04.png",
     altText: "Store Migration",
     title: "Store Migration",
     description:
@@ -275,6 +275,47 @@ export const featureItemsShopify = [
   },
 ];
 
+export const featureItemsDevelopment = [
+  {
+    imageSrc: "/assets/images/template/home-four-feature-01.png",
+    altText: "What We Offer",
+    title: "Custom Web Development",
+    description:
+      "Build fast, scalable, and secure websites tailored to your business goals using modern technologies.",
+    icon: "unicon-cloud-download",
+    reverseOrder: false,
+  },
+  {
+    imageSrc: "/assets/images/template/home-four-feature-02.png",
+    altText: "Mobile App Development",
+    title: "Mobile App Development",
+    description:
+      "Create intuitive and high-performance iOS and Android apps that deliver seamless user experiences.",
+    linkText: "See all spreadsheets",
+    icon: "unicon-course",
+    reverseOrder: true,
+  },
+  {
+    imageSrc: "/assets/images/template/home-four-feature-03.png",
+    altText: "UI/UX Design",
+    title: "UI/UX Design",
+    description:
+      "Design engaging, user-centric interfaces that improve usability and increase conversions.",
+    linkText: "See apps & integrations",
+    icon: "unicon-volume-block-storage",
+    reverseOrder: false,
+  },
+  {
+    imageSrc: "/assets/images/template/home-four-feature-04.png",
+    altText: "API & Backend Development",
+    title: "API & Backend Development",
+    description:
+      "Moving from another platform? We ensure a smooth migration to Shopify with zero data loss and minimal downtime.",
+    linkText: "Let's find out",
+    icon: "unicon-model",
+    reverseOrder: true,
+  },
+];
 export const featureItems2 = [
   {
     order: "order-1 lg:order-0",

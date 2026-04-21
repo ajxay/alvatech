@@ -48,6 +48,24 @@ export const factItems = [
   },
 ];
 
+export const factItemsShopify = [
+  {
+    id: 1,
+    value: "200+",
+    description: "Live Shopify Stores",
+  },
+  {
+    id: 2,
+    value: "90%",
+    description: "Client Retention Rate",
+  },
+  {
+    id: 3,
+    value: "8.2M+",
+    description: "Orders Processed",
+  },
+];
+
 export const panelsData = [
   {
     value: 2014,

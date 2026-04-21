@@ -5,7 +5,7 @@ export const integrations = [
     category: "Shopify & custom solutions",
     description:
       "Notify your teammates of the latest activities with instant Slack messages.",
-    imageUrl: "/assets/images/template/tool-slack.svg",
+    imageUrl: "/assets/images/template/tool-shopify.svg",
     imageAlt: "Slack",
     link: "/page-shopify",
   },
@@ -15,7 +15,7 @@ export const integrations = [
     category: "Web & mobile applications",
     description:
       "Leave a lasting impression all done inside Salesforce CPQ platform.",
-    imageUrl: "/assets/images/template/tool-salesforce.svg",
+    imageUrl: "/assets/images/template/tool-custom.svg",
     imageAlt: "Salesforce",
     link: "/page-development",
   },
@@ -25,7 +25,7 @@ export const integrations = [
     category: "Performance & growth",
     description:
       "Collect credit card and ACH payments within your sales documents.",
-    imageUrl: "/assets/images/template/tool-stripe.svg",
+    imageUrl: "/assets/images/template/tool-marketing.svg",
     imageAlt: "Stripe",
     link: "/page-marketing",
   },
@@ -45,7 +45,7 @@ export const integrations = [
     category: "Business optimization",
     description:
       "Expand the ROI from your CRM and unlock easy generation and capabilities.",
-    imageUrl: "/assets/images/template/tool-hubspot.svg",
+    imageUrl: "/assets/images/template/tool-erp.svg",
     imageAlt: "HubSpot",
     link: "/page-erp",
   },
@@ -54,7 +54,7 @@ export const integrations = [
     name: "ZOHO CRM",
     category: "CRM & ERP solutions",
     description: "Create custom, automated workflows using your favorite Zaps.",
-    imageUrl: "/assets/images/template/tool-zapier.svg",
+    imageUrl: "/assets/images/template/tool-zoho.svg",
     imageAlt: "Zapier",
     link: "/page-zoho",
   },

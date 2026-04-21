@@ -15,7 +15,7 @@ export default function Footer3() {
           className="footer-inner vstack gap-4 lg:gap-6 xl:gap-8"
           data-anime="onview: -100; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});"
         >
-          <div className="uc-footer-top panel p-4 lg:p-6 rounded-1-5 lg:rounded-2 bg-secondary dark:bg-gray-800">
+          {/* <div className="uc-footer-top panel p-4 lg:p-6 rounded-1-5 lg:rounded-2 bg-secondary dark:bg-gray-800">
             <div className="vstack lg:hstack gap-4 justify-between section-heading-2">
               <div>
                 <div className="uc-logo">
@@ -66,7 +66,7 @@ export default function Footer3() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="uc-footer-nav panel">
             <div className="row child-cols-6 sm:child-cols col-match g-4">
               {footerLinks2.map((section, index) => (
@@ -93,7 +93,7 @@ export default function Footer3() {
           <div className="uc-footer-bottom panel vstack gap-4 pt-4 lg:pt-6 border-top dark:text-white">
             <div className="vstack sm:hstack justify-center items-center gap-1 lg:gap-2">
               <p className="opacity-60">
-                Lexend © {new Date().getFullYear()}, All rights reserved.
+                {/* Lexend © {new Date().getFullYear()}, All rights reserved. */}
               </p>
               <ul className="nav-x gap-2 fw-medium">
                 <li>
