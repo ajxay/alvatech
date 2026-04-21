@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { testimonials } from "@/data/testimonials";
+import { testimonialsShopify } from "@/data/testimonials";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Thumbs, EffectFade, Autoplay, Pagination } from "swiper/modules";
 import { useState } from "react";
@@ -46,7 +46,7 @@ export default function Testimonials() {
                       {...swiperThumbOptions}
                       className="swiper connect-image"
                     >
-                      {testimonials.map((elm, i) => (
+                      {testimonialsShopify.map((elm, i) => (
                         <SwiperSlide key={i} className="swiper-slide">
                           <figure className="featured-image m-0 rounded ratio ratio-3x4 uc-transition-toggle overflow-hidden">
                             <Image
@@ -68,12 +68,12 @@ export default function Testimonials() {
                       thumbs={{ swiper: thumbsSwiper }}
                       {...swiperOptions2}
                       pagination={{
-                        clickable:true,
+                        clickable: true,
                         el: ".spb1",
                       }}
                       className="swiper h-100 swiper-fade swiper-initialized swiper-horizontal swiper-watch-progress swiper-backface-hidden"
                     >
-                      {testimonials.map((testimonial, index) => (
+                      {testimonialsShopify.map((testimonial, index) => (
                         <SwiperSlide
                           className="swiper-slide h-100 pb-6"
                           key={index}

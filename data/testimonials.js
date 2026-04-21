@@ -31,6 +31,40 @@ export const testimonials = [
     imgSrc: "/assets/images/portrait/03.jpg",
   },
 ];
+
+export const testimonialsShopify = [
+  {
+    quote: `“We partnered with them to migrate our store from Vendre to Shopify, including both our B2C and B2B shops. The entire process was smooth, and the final result exceeded our expectations. The new store is faster, easier to manage, and built to scale.”`,
+    name: "Sara Sidenbladh",
+    position: "CEO And Owner at GEGGAMOJA",
+    imgSrc: "/assets/images/portrait/01.jpg",
+  },
+  {
+    quote: `“They handled everything from design to app integrations perfectly. The store is fast, mobile-friendly, and easy for our team to manage. Highly reliable Shopify experts.”`,
+    name: "Ananya Mehta",
+    position: "Ecommerce Manager, Beauty Brand",
+    imgSrc: "/assets/images/portrait/02.jpg",
+  },
+  {
+    quote: `“We migrated from WooCommerce to Shopify without any issues. The transition was smooth, and our store performance improved significantly. Great communication throughout the project.”`,
+    name: "Karan Verma",
+    position: "Owner, Electronics Store",
+    imgSrc: "/assets/images/portrait/03.jpg",
+  },
+  {
+    quote: `“Their focus on conversion optimization really stands out. Small changes in layout and checkout flow made a big impact on our sales. Definitely worth it.”`,
+    name: "Neha Kapoor",
+    position: "Co-Founder, Skincare Brand",
+    imgSrc: "/assets/images/portrait/04.jpg",
+  },
+  {
+    quote: `“From idea to launch, everything was handled professionally. The final Shopify store looks amazing and performs even better. We’ve already seen an increase in customer engagement.”`,
+    name: "Arjun Patel",
+    position: "Startup Founder",
+    imgSrc: "/assets/images/portrait/05.jpg",
+  },
+];
+
 export const slidesData = [
   {
     rating: 5,

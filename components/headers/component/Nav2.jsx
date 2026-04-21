@@ -359,9 +359,7 @@ export default function Nav2() {
           </div>
         </div>
       </li>
-      <li>
-        <Link href={`/page-pricing`}>Pricing</Link>
-      </li>
+
       <li>
         <a href="/page-about" target="_blank">
           About Us

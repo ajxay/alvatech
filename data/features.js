@@ -233,6 +233,48 @@ export const featureItems = [
   },
 ];
 
+export const featureItemsShopify = [
+  {
+    imageSrc: "/assets/images/template/home-four-feature-01.png",
+    altText: "What We Offer",
+    title: "Custom Shopify Store Development",
+    description:
+      "From idea to launch, we create fully customized Shopify stores tailored to your brand and business goals.",
+    icon: "unicon-cloud-download",
+    reverseOrder: false,
+  },
+  {
+    imageSrc: "/assets/images/template/home-four-feature-02.png",
+    altText: "Theme Design & Customization",
+    title: "Theme Design & Customization",
+    description:
+      "We design visually compelling storefronts or customize existing Shopify themes to match your identity and improve user experience.",
+    linkText: "See all spreadsheets",
+    icon: "unicon-course",
+    reverseOrder: true,
+  },
+  {
+    imageSrc: "/assets/images/template/home-four-feature-03.png",
+    altText: "Shopify App Development & Integration",
+    title: "Shopify App Development & Integration",
+    description:
+      "Need advanced features? We integrate and configure apps for payments, subscriptions, inventory, marketing, and more.",
+    linkText: "See apps & integrations",
+    icon: "unicon-volume-block-storage",
+    reverseOrder: false,
+  },
+  {
+    imageSrc: "/assets/images/template/home-four-feature-04.png",
+    altText: "Store Migration",
+    title: "Store Migration",
+    description:
+      "Moving from another platform? We ensure a smooth migration to Shopify with zero data loss and minimal downtime.",
+    linkText: "Let's find out",
+    icon: "unicon-model",
+    reverseOrder: true,
+  },
+];
+
 export const featureItems2 = [
   {
     order: "order-1 lg:order-0",
