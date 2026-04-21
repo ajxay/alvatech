@@ -363,11 +363,8 @@ export default function Nav2() {
         <Link href={`/page-pricing`}>Pricing</Link>
       </li>
       <li>
-        <a
-          href="https://themeforest.net/user/ib-themes/portfolio"
-          target="_blank"
-        >
-          More
+        <a href="/page-about" target="_blank">
+          About Us
         </a>
       </li>
     </>
