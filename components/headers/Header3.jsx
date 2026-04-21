@@ -71,15 +71,15 @@ export default function Header3() {
                 >
                   <Image
                     className="dark:d-none"
-                    alt="Lexend"
-                    src="/assets/images/common/logo-light.svg"
+                    alt="alvatech"
+                    src="/assets/images/common/main-logo.svg"
                     width="117"
                     height="40"
                   />
                   <Image
                     className="d-none dark:d-block"
-                    alt="Lexend"
-                    src="/assets/images/common/logo-dark.svg"
+                    alt="alvatech"
+                    src="/assets/images/common/main-logo-dark.svg"
                     width="117"
                     height="40"
                   />
@@ -97,7 +97,7 @@ export default function Header3() {
                     role="button"
                     aria-haspopup="true"
                   >
-                    Request a demo
+                    Know More
                   </a>
                   <div
                     className={`uc-navbar-dropdown p-3 w-300px ft-primary text-unset fs-6 fw-normal p-0 hide-scrollbar rounded-2 overflow-hidden uc-drop ${
@@ -172,7 +172,7 @@ export default function Header3() {
                 className="btn btn-sm btn-primary rounded-default text-white text-none d-none lg:d-inline-flex"
                 href={`/page-pricing`}
               >
-                Start free trial
+             Request A Call
               </Link>
               <a
                 className="d-block lg:d-none uc-icon uc-navbar-toggle-icon"

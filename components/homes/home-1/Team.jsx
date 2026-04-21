@@ -4,6 +4,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function Team() {
+  const firstRowMembers = teamMembers.slice(0, 4);
+  const secondRowMembers = teamMembers.slice(4);
+
   return (
     <div id="about-team" className="about-team section panel overflow-hidden">
       <div className="section-outer panel py-6 xl:py-9">
@@ -17,12 +20,31 @@ export default function Team() {
                 Our Executive Team
               </h2>
               <div
-                className="row child-cols-6 sm:child-cols-4 lg:child-cols-3 col-match gx-2 lg:gx-4 gy-4 lg:gy-6"
+                className="row child-cols-6 sm:child-cols-4 col-match gx-2 lg:gx-4 gy-4 lg:gy-6"
                 data-anime="onview: -100; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});"
                 data-uc-grid=""
               >
-                {teamMembers.map((member, index) => (
-                  <div key={index}>
+                {firstRowMembers.map((member, index) => (
+                  <div key={index} className="sm:w-1/4">
+                    <div className="panel vstack gap-2">
+                      <Image
+                        className="w-100 rounded"
+                        src={member.imageSrc}
+                        width={400}
+                        height={400}
+                        alt={member.altText}
+                      />
+                      <div className="panel vstack items-start gap-0">
+                        <h6 className="h6 m-0">{member.name}</h6>
+                        <span className="fs-7 opacity-70">
+                          {member.position}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+                {secondRowMembers.map((member, index) => (
+                  <div key={`second-row-${index}`} className="sm:w-1/4 sm:mx-auto">
                     <div className="panel vstack gap-2">
                       <Image
                         className="w-100 rounded"

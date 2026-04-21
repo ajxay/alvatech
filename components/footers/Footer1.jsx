@@ -19,18 +19,16 @@ export default function Footer1() {
                         <Image
                           className="w-32px text-primary"
                           alt="Lexend"
-                          src="/assets/images/common/logo-mark.svg"
+                          src="/assets/images/common/main-logo.svg"
                           width="34"
                           height="34"
                         />
                       </Link>
                       <p>
-                        This powerfull tool eliminates the need to leave
-                        Salesforce to get things done as I can create a custom
-                        proposal with dynamic pricing tables.
+                      Alvatech is a leading Shopify development agency, delivering tailored ecommerce solutions to help businesses grow and thrive online.
                       </p>
                     </div>
-                    <div className="hstack items-start gap-1">
+                    {/* <div className="hstack items-start gap-1">
                       <a href="#">
                         <Image
                           className="text-gray-900 dark:text-white hover:text-opacity-70 transition-all duration-150"
@@ -51,7 +49,7 @@ export default function Footer1() {
                           height="40"
                         />
                       </a>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
                 {footerLinks.map((section, index) => (
@@ -70,7 +68,7 @@ export default function Footer1() {
             <div className="uc-footer-bottom panel vstack lg:hstack gap-4 justify-center lg:justify-between pt-4 lg:pt-6 border-top dark:text-white">
               <div className="vstack sm:hstack justify-center lg:justify-start items-center lg:items-start gap-1 lg:gap-2">
                 <p className="opacity-60">
-                  Lexend © {new Date().getFullYear()}, All rights reserved.
+                  Alvatech © {new Date().getFullYear()}, All rights reserved.
                 </p>
                 <ul className="nav-x gap-2 fw-medium">
                   <li>

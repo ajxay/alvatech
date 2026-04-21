@@ -2,43 +2,24 @@ export const footerLinks = [
   {
     links: [
       { href: "/page-about", label: "About" },
-      { href: "/page-pricing", label: "Pricing" },
-      { href: "/page-features", label: "Features" },
-      { href: "/page-integrations", label: "Integrations" },
+      { href: "/page-integrations", label: "Services" },
       { href: "/page-career", label: "Career" },
       { href: "/page-contact", label: "Contact" },
-      { href: "/page-contact-2", label: "Contact v2" },
     ],
   },
+ 
   {
     links: [
-      { href: "/shop", label: "Shop" },
-      { href: "/shop", label: "With sidebar" },
-      { href: "/shop-product-detail/1", label: "Product detail" },
-      { href: "/shop-product-detail-2/1", label: "Product detail v2" },
-      { href: "/shop-cart", label: "Cart" },
-      { href: "/shop-checkout", label: "Checkout" },
-      { href: "/shop-order", label: "Order confirmation" },
-    ],
-  },
-  {
-    links: [
-      { href: "/sign-in", label: "Request a demo" },
+      { href: "/sign-in", label: "Request a call" },
       { href: "/sign-in", label: "Sign in" },
-      { href: "/sign-in-2", label: "Sign in v2" },
       { href: "/sign-up", label: "Sign up" },
-      { href: "/sign-up-2", label: "Sign up v2" },
-      { href: "/reset-password", label: "Reset password" },
-      { href: "/reset-password-2", label: "Reset password v2" },
+      { href: "/legal", label: "Legal" },
     ],
   },
   {
     links: [
       { href: "/blog", label: "Blog" },
-      { href: "/blog-details/1", label: "Blog detail" },
       { href: "/page-terms", label: "FAQ" },
-      { href: "/page-not-found", label: "404" },
-      { href: "/coming-soon", label: "Coming Soon" },
       { href: "/page-terms", label: "Terms of service" },
       { href: "/page-privacy", label: "Privacy policy" },
     ],

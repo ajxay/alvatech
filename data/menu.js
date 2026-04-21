@@ -641,35 +641,36 @@ export const icons = [
 ];
 export const features = [
   {
+    id: 5,
+    iconClass: "unicon-store",
+    title: "Shopify Development",
+    description: "Amplify the conversation across multiple channels",
+  },
+  {
     id: 1,
     iconClass: "unicon-email",
-    title: "Email Template Builder",
-    description: "Design personalized emails that convert",
+    title: "Marketing & Growth",
+    description: "Boost your online presence with our expert strategies",
   },
   {
     id: 2,
     iconClass: "unicon-blog",
-    title: "Landing Page Builder",
-    description: "Deliver the right message to the right user",
+    title: "Web Development",
+    description: "Build scalable, and robust websites using latest technologies.",
   },
   {
     id: 3,
     iconClass: "unicon-increase-level",
-    title: "Reporting & analytics",
-    description: "Track sales & campaign performance",
+    title: "CRM & ERP Solutions",
+    description: "Optimize your business operations with our CRM & ERP solutions",
   },
   {
     id: 4,
     iconClass: "unicon-magic-wand-filled",
-    title: "AI-Powered Tools",
-    description: "Say hello to your AI growth assistant",
+    title: "Mobile App Development",
+    description: "Build intuitive, high-performance mobile apps for iOS and Android",
   },
-  {
-    id: 5,
-    iconClass: "unicon-store",
-    title: "E-commerce and retail",
-    description: "Amplify the conversation across multiple channels",
-  },
+ 
   {
     id: 6,
     iconClass: "unicon-shopping-catalog",

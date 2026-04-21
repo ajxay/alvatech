@@ -32,7 +32,7 @@ export default function page() {
     <>
       <div className="theme-3">
         <div className="bp-xs page-wrapper home-7 bp-sm bp-md bp-lg bp-xl dom-ready bp-xxl-max uni-body panel uni-body panel bg-white text-gray-900 dark:bg-black dark:text-gray-200 overflow-x-hidden disable-cursor">
-          <Topbar />
+          {/* <Topbar /> */}
           <Header3 />
           <div id="wrapper" className="wrap">
             <Hero />

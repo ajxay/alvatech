@@ -50,14 +50,14 @@ export default function Cta() {
                 <Image
                   className="w-200px xl:w-250px d-block dark:d-none"
                   alt="talking"
-                  src="/assets/images/template/talking.svg"
+                  src="/assets/images/template/talkingnew.svg"
                   width="195"
                   height="254"
                 />
                 <Image
                   className="w-200px xl:w-250px d-none dark:d-block"
                   alt="talking-dark"
-                  src="/assets/images/template/talking-dark.svg"
+                  src="/assets/images/template/talkingnew.svg"
                   width="195"
                   height="254"
                 />
@@ -66,14 +66,14 @@ export default function Cta() {
                 <Image
                   className="w-200px xl:w-250px d-block dark:d-none"
                   alt="chatting"
-                  src="/assets/images/template/chatting.svg"
+                  src="/assets/images/template/chattingnew.svg"
                   width="255"
                   height="283"
                 />
                 <Image
                   className="w-200px xl:w-250px d-none dark:d-block"
                   alt="chatting-dark"
-                  src="/assets/images/template/chatting-dark.svg"
+                  src="/assets/images/template/chattingnew.svg"
                   width="255"
                   height="283"
                 />
@@ -87,17 +87,17 @@ export default function Cta() {
                 Prevent costly mistakes
               </h2>
               <p className="fs-6 sm:fs-5 text-dark dark:text-white text-opacity-70">
-                Create pre-approved templates and lock all legal information.
+               Lets build optimized solutions for your business.
               </p>
               <Link
                 href={`/page-pricing`}
                 className="btn btn-md h-48px lg:h-56px min-w-150px btn-primary text-white mt-2"
               >
-                <span>Try it now</span>
+                <span>Reach us now</span>
                 <i className="icon icon-1 unicon-arrow-up-right" />
               </Link>
               <p className="fs-7 text-dark dark:text-white text-opacity-70">
-                14-day trial, no credit card required.
+                {/* 14-day trial, no credit card required. */}
               </p>
             </div>
           </div>

@@ -19,9 +19,8 @@ export default function Features() {
                 Smart features for your business
               </h2>
               <p className="fs-6 xl:fs-5 text-dark dark:text-white text-opacity-70">
-                We focus on helping you to make useful content more accessible
-                with an utlimate goal for a good sharing profit as a content
-                creator.
+                We focus on helping you to reach more audience and grow your
+                business with latest technologies .
               </p>
             </div>
             <div className="row child-cols-12 sm:child-cols-6 xl:child-cols-4 col-match justify-center g-2 lg:g-4">

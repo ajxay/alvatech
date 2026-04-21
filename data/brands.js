@@ -182,11 +182,11 @@ export const brands4 = [
 ];
 
 export const brands5 = [
-  { src: "/assets/images/apps/asana.svg", width: 2500, height: 2311 },
-  { src: "/assets/images/apps/mailchimp.svg", width: 351, height: 373 },
-  { src: "/assets/images/apps/zapier.svg", width: 800, height: 800 },
-  { src: "/assets/images/apps/bitbucket.svg", width: 333, height: 300 },
-  { src: "/assets/images/apps/drive.svg", width: 800, height: 800 },
+  { src: "/assets/images/apps/shopify-plus.svg", width: 2500, height: 2311 },
+  { src: "/assets/images/apps/klaviyo.svg", width: 351, height: 373 },
+  { src: "/assets/images/apps/salesforce.svg", width: 800, height: 800 },
+  { src: "/assets/images/apps/omnisend.svg", width: 333, height: 300 },
+  { src: "/assets/images/apps/zoho.svg", width: 800, height: 800 },
 ];
 
 export const brands6 = [
