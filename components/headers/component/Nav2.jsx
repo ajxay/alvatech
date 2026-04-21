@@ -368,8 +368,13 @@ export default function Nav2() {
         </a>
       </li>
       <li>
-        <a href="/page-features" target="_blank">
+        <a href="/page-integrations" target="_blank">
           Services
+        </a>
+      </li>
+      <li>
+        <a href="/page-features" target="_blank">
+          Services Detail
         </a>
       </li>
     </>
