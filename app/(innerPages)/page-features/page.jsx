@@ -10,9 +10,9 @@ import Brands2 from "@/components/common/Brands2";
 import Header3 from "@/components/headers/Header3";
 export const metadata = {
   title:
-    "Features || Lexend - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Features || Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
   description:
-    "Lexend - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
 };
 export default function FeaturesPage() {
   return (

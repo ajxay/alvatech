@@ -7,9 +7,9 @@ import Topbar from "@/components/headers/Topbar";
 import React from "react";
 export const metadata = {
   title:
-    "Blog Sidebar Left || Lexend - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Blog Sidebar Left || Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
   description:
-    "Lexend - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
 };
 export default function page() {
   return (

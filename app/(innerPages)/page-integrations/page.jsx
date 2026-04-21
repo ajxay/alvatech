@@ -1,6 +1,6 @@
-import Header2 from "@/components/headers/Header2";
+import Header3 from "@/components/headers/Header3";
 
-import Footer2 from "@/components/footers/Footer2";
+import Footer1 from "@/components/footers/Footer1";
 
 import Faq from "@/components/homes/home-2/Faq";
 import Testimonials from "@/components/homes/home-3/Testimonials";
@@ -9,15 +9,16 @@ import Cta from "@/components/innerpages/features/Cta";
 import Integrations from "@/components/innerpages/Integrations";
 export const metadata = {
   title:
-    "Integrations || Lexend - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Integrations || Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
   description:
-    "Lexend - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
 };
 export default function IntegrationPage() {
   return (
     <>
       <div className="page-wrapper uni-body panel bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-200 overflow-x-hidden bp-xs bp-sm bp-md bp-lg bp-xl bp-xxl dom-ready">
-        <Header2 />
+      <Header3 />
+
         <div id="wrapper" className="wrap">
           <Integrations />
           {/* <div className="pt-6 xl:pt-9"></div> */}
@@ -46,7 +47,7 @@ export default function IntegrationPage() {
           </div>
           <Cta />
         </div>
-        <Footer2 />
+        <Footer1 />
       </div>
     </>
   );

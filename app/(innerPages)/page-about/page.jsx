@@ -1,6 +1,6 @@
-import Header2 from "@/components/headers/Header2";
+import Header3 from "@/components/headers/Header3";
 
-import Footer2 from "@/components/footers/Footer2";
+import Footer1 from "@/components/footers/Footer1";
 import About from "@/components/innerpages/About";
 import Brands from "@/components/common/Brands2";
 import About2 from "@/components/innerpages/About2";
@@ -11,15 +11,16 @@ import Team from "@/components/homes/home-1/Team";
 import Cta from "@/components/innerpages/Cta";
 export const metadata = {
   title:
-    "About || Lexend - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "About || Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
   description:
-    "Lexend - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
 };
 export default function AboutPage() {
   return (
     <>
       <div className="page-wrapper uni-body panel bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-200 overflow-x-hidden bp-xs bp-sm bp-md bp-lg bp-xl bp-xxl dom-ready">
-        <Header2 />
+      <Header3 />
+
         <div id="wrapper" className="wrap">
           <About />
           <div
@@ -48,7 +49,8 @@ export default function AboutPage() {
           <Team />
           <Cta />
         </div>
-        <Footer2 />
+        <Footer1 />
+
       </div>
     </>
   );

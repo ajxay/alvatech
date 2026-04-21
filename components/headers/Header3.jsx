@@ -106,7 +106,7 @@ export default function Header3() {
                     data-uc-drop="mode: click; offset: 0; boundary: !.uc-navbar; animation: uc-animation-slide-top-small; duration: 150;"
                   >
                     <p className="fs-7">
-                      Lexend offers a comprehensive suite of tools that cover
+                      Alvatech offers a comprehensive suite of tools that cover
                       all aspects of your business.
                     </p>
                     <form

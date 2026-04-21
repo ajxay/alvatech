@@ -18,7 +18,7 @@ export default function Footer1() {
                       <Link href={`/`}>
                         <Image
                           className="w-32px text-primary"
-                          alt="Lexend"
+                          alt="Alvatech"
                           src="/assets/images/common/main-logo.svg"
                           width="34"
                           height="34"

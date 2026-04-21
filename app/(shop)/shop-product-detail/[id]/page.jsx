@@ -6,9 +6,9 @@ import ShopDetails1 from "@/components/shop/ShopDetails1";
 import { products } from "@/data/products";
 export const metadata = {
   title:
-    "Shop Details 1 || Lexend - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Shop Details 1 || Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
   description:
-    "Lexend - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
 };
 export default async function ShopDetailsPage1(props) {
   const params = await props.params;
