@@ -33,9 +33,13 @@ export default function Facts() {
                 {factItemsShopify.map((fact, index) => (
                   <div key={index}>
                     <div className="fact-item panel vstack gap-1">
-                      <h5 className="h3 md:h2 lg:h1 xl:display-5 m-0 text-primary dark:text-secondary">
+                      <h5
+                        className="h3 md:h2 lg:h1 xl:display-5 m-0"
+                        style={{ color: "#84BA41" }}
+                      >
                         {fact.value}
                       </h5>
+                 
                       <p className="fw-medium">{fact.description}</p>
                     </div>
                   </div>

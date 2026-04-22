@@ -44,7 +44,7 @@ export default function Nav2() {
                           Discover our Services &amp; Solutions
                         </h5>
                         <Link
-                          href={`/page-features`}
+                          href={`/page-shopify`}
                           className="btn btn-sm dark:text-white"
                         >
                           <span>See what's new</span>
@@ -57,7 +57,7 @@ export default function Nav2() {
                         {features.map((feature, index) => (
                           <div key={index}>
                             <Link
-                              href={`/page-features`}
+                              href={feature.link}
                               className="hstack items-start gap-2 p-2 text-none rounded-1-5 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150"
                             >
                               <span className="icon">
@@ -82,7 +82,7 @@ export default function Nav2() {
                 </div>
                 <div className="col-4">
                   <div className="panel vstack gap-4 p-5 bg-gray-25 dark:bg-gray-800">
-                    <div className="panel category-section">
+                    {/* <div className="panel category-section">
                       <h6 className="h6 fs-8 text-uppercase">
                         Professional solutions
                       </h6>
@@ -93,7 +93,7 @@ export default function Nav2() {
                           </li>
                         ))}
                       </ul>
-                    </div>
+                    </div> */}
                     <div className="panel category-section">
                       <h6 className="h6 fs-8 text-uppercase">
                         Get started is Easy!
@@ -229,12 +229,12 @@ export default function Nav2() {
       </li>
 
       <li>
-        <a href="/page-about" target="_blank">
+        <a href="/page-about">
           About Us
         </a>
       </li>
       <li>
-        <a href="/page-integrations" target="_blank">
+        <a href="/page-integrations">
           Services
         </a>
       </li>

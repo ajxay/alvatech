@@ -157,38 +157,7 @@ export const testimonials2 = [
     authorName: "Anna Yon",
     authorRole: "Senior UI/UX Designer",
   },
-  {
-    brandImg: "/assets/images/brands/brand-02.svg",
-    testimonial:
-      "“We’re looking for people who share our vision! Most of our time used to be taken up by alternate administrative work whereas now we can focus on building out to help our employees.”",
-    authorImg: "/assets/images/avatars/01.png",
-    authorName: "Mark Zellers",
-    authorRole: "CEO, Co-Founder",
-  },
-  {
-    brandImg: "/assets/images/brands/brand-03.svg",
-    testimonial:
-      "“This powerful tool eliminates the need to leave Salesforce to get things done as I can create a custom proposal with dynamic pricing tables, and get approval from my boss all within 36 minutes.”",
-    authorImg: "/assets/images/avatars/04.png",
-    authorName: "Natalia Larsson",
-    authorRole: "Director of Sales",
-  },
-  {
-    brandImg: "/assets/images/brands/brand-04.svg",
-    testimonial:
-      "“We are based in Europe and the latest Data Protection Regulation forces us to look for service suppliers that comply with this regulation and as we look to create our website and this builder just outstanding!”",
-    authorImg: "/assets/images/avatars/03.png",
-    authorName: "Sarah Edrissi",
-    authorRole: "Lead Marketing",
-  },
-  {
-    brandImg: "/assets/images/brands/brand-05.svg",
-    testimonial:
-      "“We’re looking for people who share our vision! Most of our time used to be taken up by alternate administrative work whereas now we can focus on building out to help our employees.”",
-    authorImg: "/assets/images/avatars/08.png",
-    authorName: "Anna Yon",
-    authorRole: "Senior UI/UX Designer",
-  },
+  
 ];
 
 export const testimonials3 = [

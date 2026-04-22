@@ -1,6 +1,6 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { brands } from "@/data/brands";
+import { reviewLogos } from "@/data/brands";
 import Image from "next/image";
 
 export default function Brands2() {
@@ -24,17 +24,17 @@ export default function Brands2() {
   };
   return (
     <Swiper {...swiperOptions}>
-      {brands.map((brand, index) => (
+      {reviewLogos.map((brand, index) => (
         <SwiperSlide
           className="brand-item swiper-slide text-center"
           key={index}
         >
           <Image
             className="brand-item-image h-40px image-filter"
-            src={brand.src}
+            src={brand.lightSrc}
             width={165}
             height={48}
-            alt={brand.alt}
+            alt="brand"
           />
         </SwiperSlide>
       ))}

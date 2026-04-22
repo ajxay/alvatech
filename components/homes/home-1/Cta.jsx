@@ -92,6 +92,7 @@ export default function Cta() {
               <Link
                 href={`/page-pricing`}
                 className="btn btn-md h-48px lg:h-56px min-w-150px btn-primary text-white mt-2"
+                style={{ backgroundColor: "#84BA41", borderColor: "#84BA41" }}
               >
                 <span>Reach us now</span>
                 <i className="icon icon-1 unicon-arrow-up-right" />

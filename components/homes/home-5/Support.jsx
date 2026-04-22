@@ -45,6 +45,7 @@ export default function Support() {
               <Link
                 href={`/page-contact`}
                 className="btn btn-md btn-primary rounded-default text-white shadow-xs mt-1 lg:mt-2"
+                style={{ backgroundColor: "#84BA41", borderColor: "#84BA41" }}
               >
                 Get in touch
               </Link>

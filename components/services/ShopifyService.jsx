@@ -62,7 +62,10 @@ export default function Features() {
                           <div className="panel vstack justify-center gap-4 h-100 sm:p-3 lg:p-4">
                             <div>
                               <div className="panel vstack gap-2">
-                                <span className="cstack w-48px h-48px bg-primary text-secondary rounded-1-5 mb-2 d-none lg:d-inline-flex">
+                                <span
+                                  className="cstack w-48px h-48px rounded-1-5 mb-2 d-none lg:d-inline-flex"
+                                  style={{ backgroundColor: "#84BA41", color: "#ffffff" }}
+                                >
                                   <i className={`icon-1 ${elm.icon}`} />
                                 </span>
                                 <h3 className="h4 sm:h3 xl:h2 m-0">

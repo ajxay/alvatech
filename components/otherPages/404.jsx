@@ -18,11 +18,12 @@ export default function Notfound() {
           <Link
             href={`/`}
             className="btn btn-sm sm:btn-md btn-primary text-white my-2 sm:my-0"
+            style={{ backgroundColor: "#84BA41", borderColor: "#84BA41" }}
           >
             Go back home
           </Link>
           <p>
-            Why Not try to search again?
+            Why Not try to search again? { " "}
             <a className="uc-link" onClick={openSearchModal} data-uc-toggle>
               Search now
             </a>

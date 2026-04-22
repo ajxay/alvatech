@@ -67,6 +67,7 @@ export default function Blog() {
                     <Link
                       href={`/blog`}
                       className="btn btn-sm lg:btn-md btn-primary rounded-default"
+                      style={{ backgroundColor: "#84BA41", borderColor: "#84BA41" }}
                     >
                       View all posts
                     </Link>

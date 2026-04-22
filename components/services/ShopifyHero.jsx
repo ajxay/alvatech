@@ -17,7 +17,7 @@ export default function Hero() {
                   <h1 className="h2 xl:display-5 mb-1 xl:mb-2">
                     We
                     <br />
-                    <span className="text-primary dark:text-secondary">
+                    <span style={{ color: "#84BA41" }}>
                       build, market, and scale{" "}
                     </span>
                     your digital presence
@@ -46,11 +46,13 @@ export default function Hero() {
                     </div>
                     <div className="col-12 sm:col-auto">
                       <Link
+                    
                         href={`/page-pricing`}
                         className="btn btn-md btn-primary rounded-default h-48px w-100 lg:min-w-150px text-white"
+                        style={{ backgroundColor: "#84BA41", borderColor: "#84BA41" }}
                       >
                         <span className="d-none md:d-block">Hear from us</span>
-                        <span className="d-block md:d-none">Sign up</span>
+                        <span className="d-block md:d-none">Hear from us</span>
                       </Link>
                     </div>
                   </form>
@@ -59,6 +61,7 @@ export default function Hero() {
                     <Link
                       href={`/page-privacy`}
                       className="uc-link text-underline dark:text-secondary"
+                      style={{ color: "#84BA41" }}
                     >
                       privacy policy
                     </Link>

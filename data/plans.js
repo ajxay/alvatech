@@ -1,8 +1,8 @@
 export const panelsData = [
   {
     id: 1,
-    lightImgSrc: "/assets/images/template/icon-diamond.svg",
-    darkImgSrc: "/assets/images/template/icon-diamond-dark.svg",
+    lightImgSrc: "/assets/images/template/diamond.svg",
+    darkImgSrc: "/assets/images/template/diamond.svg",
     altText: "impact-icon",
     title: "Make an impact",
     description:
@@ -10,8 +10,8 @@ export const panelsData = [
   },
   {
     id: 2,
-    lightImgSrc: "/assets/images/template/icon-trophy.svg",
-    darkImgSrc: "/assets/images/template/icon-trophy-dark.svg",
+    lightImgSrc: "/assets/images/template/trophy.svg",
+    darkImgSrc: "/assets/images/template/trophy.svg",
     altText: "crown-icon",
     title: "Learn",
     description:
@@ -19,8 +19,8 @@ export const panelsData = [
   },
   {
     id: 3,
-    lightImgSrc: "/assets/images/template/icon-globe.svg",
-    darkImgSrc: "/assets/images/template/icon-globe-dark.svg",
+    lightImgSrc: "/assets/images/template/globe.svg",
+    darkImgSrc: "/assets/images/template/globe.svg",
     altText: "fun-icon",
     title: "Have fun",
     description:
@@ -28,8 +28,8 @@ export const panelsData = [
   },
   {
     id: 4,
-    lightImgSrc: "/assets/images/template/icon-crown.svg",
-    darkImgSrc: "/assets/images/template/icon-crown-dark.svg",
+    lightImgSrc: "/assets/images/template/crown.svg",
+    darkImgSrc: "/assets/images/template/crown.svg",
     altText: "empathy-icon",
     title: "Empathy",
     description:

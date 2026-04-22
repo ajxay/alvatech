@@ -80,7 +80,7 @@ export default function Testimonials() {
                         >
                           <div className="panel vstack justify-between items-center gap-2 lg:gap-3 h-100 text-center">
                             <div className="panel">
-                              <i className="icon icon-4 unicon-quotes text-primary" />
+                              <i className="icon icon-4 unicon-quotes" style={{ color: "#84BA41" }} />
                               <p className="fs-6 sm:fs-5 lg:fs-4 fw-bold mt-1 sm:mt-4 dark:text-white">
                                 {testimonial.quote}
                               </p>

@@ -93,6 +93,7 @@ export default function Cta() {
               <Link
                 href={`/page-career`}
                 className="btn btn-md lg:btn-lg btn-primary text-white mt-1 xl:mt-2"
+                style={{ backgroundColor: "#84BA41", borderColor: "#84BA41" }}
               >
                 View current openings
               </Link>

@@ -1,7 +1,51 @@
-import { featureItems2 } from "@/data/features";
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
+
+const marketingFeatures = [
+  {
+    title: "Social media advertising",
+    description:
+      "We create ad campaigns on platforms like Facebook and Google to boost your reach.",
+    image: "/assets/images/marketing/card-1.png",
+    points: ["PPC / SEM", "Display Advertising", "Facebook & Google Advertising"],
+  },
+  {
+    title: "SEO optimization",
+    description:
+      "Our team improves search ranking through detailed audits and expert coaching.",
+    image: "/assets/images/marketing/card-2.png",
+    points: ["SEO Audits", "SEO Strategy & Coaching", "Page Speed Optimization"],
+  },
+  {
+    title: "Advanced analytics",
+    description:
+      "We analyze user behavior with tools like heat maps and goal tracking to refine your strategy.",
+    image: "/assets/images/marketing/card-3.png",
+    points: ["Goals & Targets Setup", "User Analytics", "Heat Map Analytics"],
+  },
+  {
+    title: "Funnel optimization",
+    description:
+      "We conduct thorough funnel audits and UX analysis to improve your conversion rates.",
+    image: "/assets/images/marketing/card-4.png",
+    points: ["UX Analysis", "Funnel Audit", "CR Optimization"],
+  },
+  {
+    title: "Paid advertising",
+    description:
+      "Experts manage A/B testing, retargeting campaigns, and conversion optimization.",
+    image: "/assets/images/marketing/card-5.png",
+    points: ["Ads A/B Testing", "CR Optimization", "Retargeting"],
+  },
+  {
+    title: "Content marketing",
+    description:
+      "We develop content plans and manage your community to build a loyal audience.",
+    image: "/assets/images/marketing/card-6.png",
+    points: ["Content Plan", "Content Creation", "Community Management"],
+  },
+];
+
 export default function Features() {
   return (
     <div
@@ -12,56 +56,70 @@ export default function Features() {
         <div className="container sm:max-w-lg xl:max-w-xl">
           <div className="section-inner panel">
             <div
-              className="panel vstack items-center gap-2 xl:gap-3 mb-4 sm:mb-6 lg:mb-8 sm:max-w-600px lg:max-w-700px xl:max-w-800px mx-auto text-center"
+              className="panel vstack items-center gap-1 sm:gap-2 mb-4 sm:mb-6 lg:mb-8 sm:max-w-700px mx-auto text-center"
               data-anime="onview: -200; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});"
             >
-              <span className="fw-bold py-narrow px-2 border rounded-pill text-primary dark:text-secondary">
-                Features
-              </span>
-              <h2 className="h3 sm:h2 lg:h1 xl:display-6 m-0">
-                Recognized by the experts
-              </h2>
-              <p className="fs-7 sm:fs-6 lg:fs-5 xl:fs-4 text-opacity-70">
-                Offers a unified platform that fosters innovation while
-                providing end-to-end data management. See how we help your team
-                solve today’s biggest challenges.
+              <h2 className="h3 sm:h2 m-0">Next-level business services</h2>
+              <p className="fs-7 sm:fs-6 text-opacity-70 m-0">
+                Our comprehensive services are designed to elevate your brand,
+                from targeted advertising to data-driven SEO and compelling
+                content.
               </p>
             </div>
             <div
-              className="features-items row child-cols-12 sm:child-cols-6 lg:child-cols-4 g-0 col-match"
+              className="features-items row g-2 lg:g-3 col-match justify-center max-w-980px mx-auto"
               data-anime="onview: -100; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 400});"
             >
-              {featureItems2.map((item, index) => (
-                <div key={index} className={item.order}>
+              {marketingFeatures.map((item, index) => (
+                <div key={index} className="col-12 sm:col-6 lg:col-4">
                   <div
-                    className={`features-item vstack justify-between gap-6 xl:gap-8 p-4 xl:p-6 rounded-1-5 ${
-                      item.bgClass || ""
-                    }`}
+                    className="features-item vstack gap-2 p-2 lg:p-3 rounded-2 bg-white h-100 min-h-460px"
+                    style={{ boxShadow: "0 0 0 1px rgba(0, 0, 0, 0.06)" }}
                   >
-                    <div className="icon-box w-48px h-48px rounded-1-5 cstack bg-primary">
+                    <div
+                      className="overflow-hidden rounded-1-5 h-170px d-flex items-center justify-center"
+                      style={{
+                        background:
+                          "linear-gradient(180deg, rgba(248, 170, 191, 0.12) 0%, rgba(255, 255, 255, 0.9) 100%)",
+                      }}
+                    >
                       <Image
-                        className="w-20px xl:w-24px text-white image-filter-white"
-                        src={item.iconSrc}
-                        width={24}
-                        height={24}
-                        alt={item.alt}
-                        data-uc-svg=""
+                        src={item.image}
+                        width={430}
+                        height={260}
+                        alt={item.title}
+                        className="max-w-180px w-100 h-auto"
                       />
                     </div>
-                    <div className="panel">
-                      <div className="vstack gap-1">
-                        <h3 className="title h5 xl:h4 m-0">{item.title}</h3>
-                        <p className="desc fs-7 xl:fs-6 text-opacity-70">
-                          {item.description}
-                        </p>
-                        <Link
-                          className="uc-link dark:text-secondary fs-7 xl:fs-6 fw-bold hstack gap-1 sm:mt-1"
-                          href={`/page-features`}
+                    <div className="vstack gap-1 min-h-144px">
+                      <h3 className="title h5 m-0 min-h-48px d-flex items-start">
+                        {item.title}
+                      </h3>
+                      <p className="desc fs-7 text-opacity-70 m-0 min-h-88px">
+                        {item.description}
+                      </p>
+                    </div>
+                    <div className="vstack gap-1 mt-1 mt-auto">
+                      {item.points.map((point, pointIndex) => (
+                        <div
+                          key={pointIndex}
+                          className="hstack items-center gap-narrow py-1 border-top fs-7"
+                          style={{ borderColor: "#ececec" }}
                         >
-                          <span>Learn more</span>
-                          <i className="position-relative icon unicon-arrow-right fw-bold rtl:rotate-180 translate-y-px" />
-                        </Link>
-                      </div>
+                          <Image
+                            src={
+                              index % 2 === 0
+                                ? "/assets/images/marketing/tick-red.svg"
+                                : "/assets/images/marketing/tick-green.svg"
+                            }
+                            alt="tick"
+                            width={14}
+                            height={14}
+                            className="flex-none"
+                          />
+                          <span>{point}</span>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </div>

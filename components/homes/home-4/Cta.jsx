@@ -30,6 +30,7 @@ export default function Cta() {
                 <Link
                   href={`/page-pricing`}
                   className="btn btn-md btn-primary rounded-default text-white shadow-xs"
+                  style={{ backgroundColor: "#84BA41", borderColor: "#84BA41" }}
                 >
                   Contact Us
                 </Link>

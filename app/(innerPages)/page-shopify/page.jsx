@@ -12,6 +12,7 @@ import Pricing from "@/components/homes/home-4/Pricing";
 import Team from "@/components/homes/home-4/Team";
 import Testimonials from "@/components/homes/home-4/Testimonials";
 import React from "react";
+import Footer1 from "@/components/footers/Footer1";
 export const metadata = {
   title:
     "Home 4 || Alvatech - Website",
@@ -36,7 +37,7 @@ export default function HomePage4() {
           {/* <Blogs /> */}
           {/* <Cta2 /> */}
         </div>
-        <Footer3 />
+        <Footer1 />
       </div>
     </>
   );

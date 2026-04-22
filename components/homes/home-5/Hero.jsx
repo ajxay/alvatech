@@ -43,13 +43,13 @@ export default function Hero() {
                         </div>
                       </div>
                       <div className="col-12 sm:col-auto">
-                        <button className="btn btn-md btn-primary rounded-default h-48px w-100 lg:min-w-150px text-white">
+                        <button className="btn btn-md btn-primary rounded-default h-48px w-100 lg:min-w-150px text-white" style={{ backgroundColor: "#84BA41", borderColor: "#84BA41" }}>
                           Get a demo
                         </button>
                       </div>
                     </form>
                     <p className="fs-7 text-dark dark:text-white text-opacity-70">
-                      We care about your data in our
+                      We care about your data in our { " " }
                       <Link
                         href={`/page-privacy`}
                         className="uc-link text-underline dark:text-secondary"

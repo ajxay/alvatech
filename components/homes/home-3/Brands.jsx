@@ -36,7 +36,7 @@ export default function Brands() {
                   Based on 4,000+ reviews with customer satisfaction on
                 </span>
               </div>
-              <div className="panel mt-3 sm:mt-4 vstack gap-2">
+              <div className="panel mt-3 sm:mt-4 vstack gap-4 lg:gap-5">
                 <div className="brands-marquee-row">
                   <div className="brands-marquee-track marquee-right">
                     {[...firstRow, ...firstRow].map((logo, index) => (
