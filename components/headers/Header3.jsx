@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Nav2 from "./component/Nav2";
 import Image from "next/image";
@@ -25,26 +25,6 @@ export default function Header3() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [prevScrollPos]);
-
-  const elementRef = useRef(null);
-  const [isDDOpen, setIsDDOpen] = useState(false);
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (
-        elementRef.current && // Check if click is outside .gt-menu-area
-        !elementRef.current.contains(event.target)
-      ) {
-        setIsDDOpen(false);
-        // Add your custom logic here
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
 
   return (
     <header
@@ -73,101 +53,25 @@ export default function Header3() {
                     className="dark:d-none"
                     alt="alvatech"
                     src="/assets/images/common/main-logo.svg"
-                    width="117"
-                    height="40"
+                    width="140"
+                    height="60"
                   />
                   <Image
                     className="d-none dark:d-block"
                     alt="alvatech"
                     src="/assets/images/common/main-logo-dark.svg"
-                    width="117"
-                    height="40"
+                    width="140"
+                    height="60"
                   />
                 </Link>
               </div>
-              <ul className="uc-navbar-nav gap-3 xl:gap-4 d-none lg:d-flex fw-medium ltr:ms-2 ltr:xl:ms-4 rtl:me-2 rtl:xl:me-4">
+            </div>
+            <div className="uc-navbar-center">
+              <ul className="uc-navbar-nav gap-3 xl:gap-4 d-none lg:d-flex fw-medium">
                 <Nav2 />
               </ul>
             </div>
             <div className="uc-navbar-right">
-              <ul className="uc-navbar-nav gap-3 xl:gap-4 d-none lg:d-flex fw-medium ltr:ms-2 ltr:xl:ms-4 rtl:me-2 rtl:xl:me-4">
-                <li ref={elementRef}>
-                  <a
-                    onClick={() => setIsDDOpen((pre) => !pre)}
-                    role="button"
-                    aria-haspopup="true"
-                  >
-                    Know More
-                  </a>
-                  <div
-                    className={`uc-navbar-dropdown p-3 w-300px ft-primary text-unset fs-6 fw-normal p-0 hide-scrollbar rounded-2 overflow-hidden uc-drop ${
-                      isDDOpen ? "uc-open" : ""
-                    } `}
-                    data-uc-drop="mode: click; offset: 0; boundary: !.uc-navbar; animation: uc-animation-slide-top-small; duration: 150;"
-                  >
-                    <p className="fs-7">
-                      Alvatech offers a comprehensive suite of tools that cover
-                      all aspects of your business.
-                    </p>
-                    <form
-                      onSubmit={(e) => e.preventDefault()}
-                      className="vstack gap-1 my-2"
-                    >
-                      <input
-                        className="form-control form-control-sm rounded-default fs-7 w-full bg-gray-25 dark:bg-opacity-0 dark:text-white dark:border-gray-300 dark:border-opacity-30"
-                        type="text"
-                        placeholder="Full name"
-                        required
-                      />
-                      <input
-                        className="form-control form-control-sm rounded-default fs-7 w-full bg-gray-25 dark:bg-opacity-0 dark:text-white dark:border-gray-300 dark:border-opacity-30"
-                        type="email"
-                        placeholder="Your email"
-                        required
-                      />
-                      <div className="hstack items-center justify-between mt-1">
-                        <div className="form-check m-0">
-                          <input
-                            id="header_request_demo_application"
-                            className="form-check-input rounded bg-white dark:bg-opacity-0 dark:text-white dark:border-gray-300 dark:border-opacity-30"
-                            type="checkbox"
-                            required
-                          />
-                          <label
-                            htmlFor="header_request_demo_application"
-                            className="hstack justify-between form-check-label fw-medium fs-7"
-                          >
-                            I read and agree to{" "}
-                            <Link
-                              href={`/page-terms`}
-                              className="uc-link text-underline ltr:ms-narrow rtl:me-narrow dark:text-secondary"
-                            >
-                              terms
-                            </Link>
-                            .
-                          </label>
-                        </div>
-                      </div>
-                      <button
-                        className="btn btn-primary btn-sm rounded-default text-white mt-1"
-                        type="submit"
-                      >
-                        Request a demo
-                      </button>
-                    </form>
-                    <p className="fs-7">
-                      We care about your data in our{" "}
-                      <Link
-                        href={`/page-privacy`}
-                        className="uc-link text-underline dark:text-secondary"
-                      >
-                        privacy policy
-                      </Link>
-                      .
-                    </p>
-                  </div>
-                </li>
-              </ul>
               <Link
                 className="btn btn-sm btn-primary rounded-default text-white text-none d-none lg:d-inline-flex"
                 href={`/page-pricing`}

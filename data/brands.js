@@ -64,33 +64,33 @@ export const brands = [
 export const reviewLogos = [
   {
     id: 13,
-    lightSrc: "/assets/images/review-logo/01.svg",
-    darkSrc: "/assets/images/review-logo/dark-01.svg",
+    lightSrc: "/assets/images/review-logo/brand-01.svg",
+    darkSrc: "/assets/images/review-logo/brand-01-dark.svg",
   },
   {
     id: 14,
-    lightSrc: "/assets/images/review-logo/02.svg",
-    darkSrc: "/assets/images/review-logo/dark-02.svg",
+    lightSrc: "/assets/images/review-logo/brand-02.svg",
+    darkSrc: "/assets/images/review-logo/brand-02-dark.svg",
   },
   {
     id: 15,
-    lightSrc: "/assets/images/review-logo/03.svg",
-    darkSrc: "/assets/images/review-logo/dark-03.svg",
+    lightSrc: "/assets/images/review-logo/brand-03.svg",
+    darkSrc: "/assets/images/review-logo/brand-03-dark.svg",
   },
   {
     id: 16,
-    lightSrc: "/assets/images/review-logo/04.svg",
-    darkSrc: "/assets/images/review-logo/dark-04.svg",
+    lightSrc: "/assets/images/review-logo/brand-04.svg",
+    darkSrc: "/assets/images/review-logo/brand-04-dark.svg",
   },
   {
     id: 17,
-    lightSrc: "/assets/images/review-logo/05.svg",
-    darkSrc: "/assets/images/review-logo/dark-05.svg",
+    lightSrc: "/assets/images/review-logo/brand-05.svg",
+    darkSrc: "/assets/images/review-logo/brand-05-dark.svg",
   },
   {
     id: 18,
-    lightSrc: "/assets/images/review-logo/06.svg",
-    darkSrc: "/assets/images/review-logo/dark-06.svg",
+    lightSrc: "/assets/images/review-logo/brand-06.svg",
+    darkSrc: "/assets/images/review-logo/brand-06-dark.svg",
   },
 ];
 

@@ -86,13 +86,21 @@ export default function MobileMenu() {
             <Link
               href={`/`}
               className="h5 text-none text-gray-900 dark:text-white"
+              style={{ width: 140 }}
             >
               <Image
-                className="w-32px"
+                className="dark:d-none"
                 alt="Alvatech"
-                src="/assets/images/common/logo-mark.svg"
-                width="34"
-                height="34"
+                src="/assets/images/common/main-logo.svg"
+                width="117"
+                height="40"
+              />
+              <Image
+                className="d-none dark:d-block"
+                alt="Alvatech"
+                src="/assets/images/common/main-logo-dark.svg"
+                width="117"
+                height="40"
               />
             </Link>
           </div>
@@ -105,7 +113,7 @@ export default function MobileMenu() {
           </button>
         </header>
         <div className="panel">
-          <form
+          {/* <form
             onSubmit={(e) => e.preventDefault()}
             id="search-panel"
             className="form-icon-group vstack gap-1 mb-2 uc-sticky"
@@ -119,7 +127,7 @@ export default function MobileMenu() {
             <span className="form-icon text-gray">
               <i className="unicon-search icon-1" />
             </span>
-          </form>
+          </form> */}
           <div
             className="uc-sticky-placeholder"
             style={{ height: 40, width: 290, margin: "0px 0px 16px" }}

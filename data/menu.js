@@ -1,52 +1,37 @@
 export const menuItems = [
   {
     id: 1,
-    label: "Home",
+    label: "What We Offer",
     subItems: [
       {
-        href: "/",
-        label: "Home 1",
+        href: "/shopify-development",
+        label: "Shopify Development",
       },
       {
-        href: "/home-2",
-        label: "Home 2",
+        href: "/marketing-growth",
+        label: "Marketing & Growth",
       },
       {
-        href: "/home-3",
-        label: "Home 3",
+        href: "/web-development",
+        label: "Web Development",
       },
       {
-        href: "/home-4",
-        label: "Home 4",
+        href: "/crm-erp-solutions",
+        label: "CRM & ERP Solutions",
       },
       {
-        href: "/home-5",
-        label: "Home 5",
+        href: "/mobile-app-development",
+        label: "Mobile App Development",
+      },  
+      {
+        href: "/ecommerce-development",
+        label: "Ecommerce Development",
       },
       {
-        href: "/home-6",
-        label: "Home 6",
+        href: "/sales-force",
+        label: "Sales Force ",
       },
-      {
-        href: "/home-7",
-        label: "Home 7",
-      },
-      {
-        href: "/home-8",
-        label: "Home 8",
-      },
-      {
-        href: "/home-9",
-        label: "Home 9",
-      },
-      {
-        href: "/home-10",
-        label: "Home 10",
-      },
-      {
-        href: "/rtl",
-        label: "Home RTL",
-      },
+      
     ],
   },
   {

@@ -35,16 +35,16 @@ export default function Brands() {
                     <React.Fragment key={index}>
                       <Image
                         src={logo.lightSrc}
-                        width={32}
-                        height={42}
+                        width={36}
+                        height={46}
                         style={{ height: "42px", width: "fit-content" }}
                         alt="Trustpilot"
                         className="dark:d-none"
                       />
                       <Image
                         src={logo.darkSrc}
-                        width={32}
-                        height={42}
+                        width={36}
+                        height={46}
                         style={{ height: "42px", width: "fit-content" }}
                         alt="Trustpilot"
                         className="d-none dark:d-block"

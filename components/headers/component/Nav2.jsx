@@ -29,8 +29,11 @@ export default function Nav2() {
             </svg>
           </span>
         </a>
-        <div className="uc-dropbar uc-full-dd uc-products uc-dropbar-top p-0 ft-primary text-unset fs-6 fw-normal hide-scrollbar border-top border-dark dark:border-white border-opacity-5 rounded-2 overflow-hidden shadow-xl bg-white dark:bg-gray-900 uc-drop w-100 ">
-          <div className="container max-w-xl">
+        <div
+          className="uc-dropbar uc-full-dd uc-products uc-dropbar-top p-0 ft-primary text-unset fs-6 fw-normal hide-scrollbar border-top border-dark dark:border-white border-opacity-5 rounded-2 overflow-hidden shadow-xl bg-white dark:bg-gray-900 uc-drop"
+          style={{ width: "min(1120px, 96vw)", left: "50%", transform: "translateX(-50%)" }}
+        >
+          <div className="container max-w-none px-3 lg:px-4">
             <div className="uc-dropbar-inner after-bg ">
               <div className="row gx-5 col-match justify-between ">
                 <div className="col-8">
