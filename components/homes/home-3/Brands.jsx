@@ -1,8 +1,15 @@
+"use client";
+
 import { reviewLogos } from "@/data/brands";
 import React from "react";
 import Image from "next/image";
 
 export default function Brands() {
+  const chunkSize = 5;
+  const firstRow = reviewLogos.slice(0, chunkSize);
+  const secondRow = reviewLogos.slice(chunkSize, chunkSize * 2);
+  const secondRowSource = secondRow.length > 0 ? secondRow : firstRow;
+
   return (
     <div id="trusted_brands" className="trusted-brands section panel">
       <div className="section-outer panel pb-4 lg:pb-6">
@@ -29,34 +36,113 @@ export default function Brands() {
                   Based on 4,000+ reviews with customer satisfaction on
                 </span>
               </div>
-              <div className="panel mt-3 sm:mt-4">
-                <div className="brands hstack gap-4 justify-between max-w-950px mx-auto">
-                  {reviewLogos.map((logo, index) => (
-                    <React.Fragment key={index}>
-                      <Image
-                        src={logo.lightSrc}
-                        width={36}
-                        height={46}
-                        style={{ height: "42px", width: "fit-content" }}
-                        alt="Trustpilot"
-                        className="dark:d-none"
-                      />
-                      <Image
-                        src={logo.darkSrc}
-                        width={36}
-                        height={46}
-                        style={{ height: "42px", width: "fit-content" }}
-                        alt="Trustpilot"
-                        className="d-none dark:d-block"
-                      />
-                    </React.Fragment>
-                  ))}
+              <div className="panel mt-3 sm:mt-4 vstack gap-2">
+                <div className="brands-marquee-row">
+                  <div className="brands-marquee-track marquee-right">
+                    {[...firstRow, ...firstRow].map((logo, index) => (
+                      <div
+                        key={`first-${index}-${logo.lightSrc}`}
+                        className="brand-item"
+                      >
+                        <Image
+                          src={logo.lightSrc}
+                          width={36}
+                          height={46}
+                          style={{ height: "42px", width: "fit-content" }}
+                          alt="Trustpilot"
+                          className="dark:d-none"
+                        />
+                        <Image
+                          src={logo.darkSrc}
+                          width={36}
+                          height={46}
+                          style={{ height: "42px", width: "fit-content" }}
+                          alt="Trustpilot"
+                          className="d-none dark:d-block"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="brands-marquee-row">
+                  <div className="brands-marquee-track marquee-left">
+                    {[...secondRowSource, ...secondRowSource].map((logo, index) => (
+                      <div
+                        key={`second-${index}-${logo.lightSrc}`}
+                        className="brand-item"
+                      >
+                        <Image
+                          src={logo.lightSrc}
+                          width={36}
+                          height={46}
+                          style={{ height: "42px", width: "fit-content" }}
+                          alt="Trustpilot"
+                          className="dark:d-none"
+                        />
+                        <Image
+                          src={logo.darkSrc}
+                          width={36}
+                          height={46}
+                          style={{ height: "42px", width: "fit-content" }}
+                          alt="Trustpilot"
+                          className="d-none dark:d-block"
+                        />
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <style jsx>{`
+        .brands-marquee-row {
+          overflow: hidden;
+          width: 100%;
+        }
+
+        .brands-marquee-track {
+          display: flex;
+          align-items: center;
+          width: max-content;
+          gap: 28px;
+        }
+
+        .brand-item {
+          flex: 0 0 auto;
+          min-width: 120px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .marquee-right {
+          animation: marquee-right 20s linear infinite;
+        }
+
+        .marquee-left {
+          animation: marquee-left 20s linear infinite;
+        }
+
+        @keyframes marquee-right {
+          from {
+            transform: translateX(-50%);
+          }
+          to {
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes marquee-left {
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(-50%);
+          }
+        }
+      `}</style>
     </div>
   );
 }

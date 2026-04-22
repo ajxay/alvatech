@@ -52,9 +52,9 @@ export default function page() {
             <Faqs />
             */}
           </div>
-          <Footer1 />
         </div>
       </div>
+      <Footer1 />
     </>
   );
 }

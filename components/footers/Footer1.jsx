@@ -17,11 +17,12 @@ export default function Footer1() {
                     <div className="vstack gap-2">
                       <Link href={`/`}>
                         <Image
-                          className="w-32px text-primary"
+                          className="w-120px text-primary"
                           alt="Alvatech"
                           src="/assets/images/common/main-logo.svg"
-                          width="34"
-                          height="34"
+                          width="140"
+                          height="60"
+                          style={{ width: "140px", height: "auto" }}
                         />
                       </Link>
                       <p>

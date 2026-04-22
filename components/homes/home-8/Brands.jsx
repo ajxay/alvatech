@@ -9,7 +9,7 @@ export default function Brands() {
       className="companies-sponsores section panel overflow-hidden my-8"
     >
       <div className="section-outer panel">
-        <div className="container sm:max-w-md">
+        <div className="container max-w-xl">
           <div className="section-inner panel">
             <div
               className="brands panel vstack gap-3 sm:gap-4 xl:gap-5 text-center"
@@ -19,16 +19,19 @@ export default function Brands() {
                 Trusted by over most popular companies worldwide
               </h5>
               <div className="panel">
-                <div className="row child-cols items-center text-center">
+                <div className="hstack justify-center flex-wrap lg:flex-nowrap gap-2 lg:gap-4 text-center">
                   {brands5.map((brand, index) => (
-                    <div key={index}>
-                      <div className="panel">
+                    <div key={index} className="w-1/2 sm:w-1/3 lg:w-auto lg:flex-none">
+                      <div
+                        className="panel d-flex items-center justify-center mx-auto w-84px h-36px lg:w-180px lg:h-72px"
+                      >
                         <Image
-                          className="max-w-40px lg:max-w-56px"
+                          className="w-100 h-100"
                           alt="brand"
                           src={brand.src}
                           width={brand.width}
                           height={brand.height}
+                          style={{ objectFit: "contain" }}
                         />
                       </div>
                     </div>

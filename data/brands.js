@@ -92,6 +92,26 @@ export const reviewLogos = [
     lightSrc: "/assets/images/review-logo/brand-06.svg",
     darkSrc: "/assets/images/review-logo/brand-06-dark.svg",
   },
+  {
+    id: 19,
+    lightSrc: "/assets/images/review-logo/brand-07.svg",
+    darkSrc: "/assets/images/review-logo/brand-07-dark.svg",
+  },
+  {
+    id: 20,
+    lightSrc: "/assets/images/review-logo/brand-08.svg",
+    darkSrc: "/assets/images/review-logo/brand-08-dark.svg",
+  },
+  {
+    id: 21,
+    lightSrc: "/assets/images/review-logo/brand-09.svg",
+    darkSrc: "/assets/images/review-logo/brand-09-dark.svg",
+  },
+  {
+    id: 22,
+    lightSrc: "/assets/images/review-logo/brand-10.svg",
+    darkSrc: "/assets/images/review-logo/brand-10-dark.svg",
+  },
 ];
 
 export const brands2 = [
@@ -193,8 +213,8 @@ export const brands6 = [
   {
     src: "/assets/images/brands/brand-01.svg",
     alt: "brand",
-    width: 165,
-    height: 48,
+    width: 265,
+    height: 88,
   },
   {
     src: "/assets/images/brands/brand-05.svg",

@@ -49,9 +49,9 @@ export default function AboutPage() {
           <Team />
           <Cta />
         </div>
-        <Footer1 />
-
       </div>
+      <Footer1 />
+
     </>
   );
 }
