@@ -13,9 +13,9 @@ import Testimonials2 from "@/components/homes/home-10/Testimonials2";
 import React from "react";
 export const metadata = {
   title:
-    "Home 10 || Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Home 10 || Alvatech - Website",
   description:
-    "Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Alvatech - Website",
 };
 export default function page() {
   return (

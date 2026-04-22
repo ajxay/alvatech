@@ -7,9 +7,9 @@ import Topbar from "@/components/headers/Topbar";
 import React from "react";
 export const metadata = {
   title:
-    "Blog Sidebar Left || Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Blog Sidebar Left || Alvatech - Website",
   description:
-    "Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Alvatech - Website",
 };
 export default function page() {
   return (

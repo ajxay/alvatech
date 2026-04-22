@@ -13,9 +13,9 @@ import Tools from "@/components/homes/home-8/Tools";
 import React from "react";
 export const metadata = {
   title:
-    "Home 8 || Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Home 8 || Alvatech - Website",
   description:
-    "Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Alvatech - Website",
 };
 export default function page() {
   return (

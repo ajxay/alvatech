@@ -3,9 +3,9 @@ import Header2 from "@/components/headers/Header2";
 import Footer2 from "@/components/footers/Footer2";
 export const metadata = {
   title:
-    "Home || Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Home || Alvatech - Website",
   description:
-    "Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Alvatech - Website",
 };
 export default function page() {
   return (

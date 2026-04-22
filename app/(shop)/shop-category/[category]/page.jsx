@@ -6,9 +6,9 @@ import ShopCategory from "@/components/shop/ShopCategory";
 import Breadcumb3 from "@/components/shop/Breadcumb3";
 export const metadata = {
   title:
-    "Shop Category || Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Shop Category || Alvatech - Website",
   description:
-    "Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Alvatech - Website",
 };
 export default async function ShopCategoryPage(props) {
   const params = await props.params;

@@ -1,9 +1,9 @@
 import CommingSoon from "@/components/otherPages/CommingSoon";
 export const metadata = {
   title:
-    "Comming Soon || Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Comming Soon || Alvatech - Website",
   description:
-    "Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Alvatech - Website",
 };
 export default function CommingSoonPage() {
   return (

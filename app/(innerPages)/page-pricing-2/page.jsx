@@ -10,9 +10,9 @@ import PricingCompare from "@/components/innerpages/PricingCompare";
 import React from "react";
 export const metadata = {
   title:
-    "Pricing 02 || Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Pricing 02 || Alvatech - Website",
   description:
-    "Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Alvatech - Website",
 };
 export default function page() {
   return (

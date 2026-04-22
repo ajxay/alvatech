@@ -5,9 +5,9 @@ import Breadcumb from "@/components/shop/Breadcumb";
 import Shop2 from "@/components/shop/Shop2";
 export const metadata = {
   title:
-    "Shop 2 || Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Shop 2 || Alvatech - Website",
   description:
-    "Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Alvatech - Website",
 };
 export default function ShopPage2() {
   return (

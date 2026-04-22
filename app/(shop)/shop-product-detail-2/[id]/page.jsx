@@ -6,9 +6,9 @@ import ShopDetails2 from "@/components/shop/ShopDetails2";
 import { products } from "@/data/products";
 export const metadata = {
   title:
-    "Shop Details 2 || Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Shop Details 2 || Alvatech - Website",
   description:
-    "Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Alvatech - Website",
 };
 export default async function ShopDetailsPage2(props) {
   const params = await props.params;

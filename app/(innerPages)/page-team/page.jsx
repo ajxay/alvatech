@@ -6,9 +6,9 @@ import Faq from "@/components/innerpages/Faq";
 import Team from "@/components/innerpages/Team";
 export const metadata = {
   title:
-    "Team || Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Team || Alvatech - Website",
   description:
-    "Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Alvatech - Website",
 };
 export default function TeamPage() {
   return (

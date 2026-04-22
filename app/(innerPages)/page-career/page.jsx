@@ -9,9 +9,9 @@ import Brands from "@/components/innerpages/Brands";
 import Blogs from "@/components/homes/home-2/Blogs";
 export const metadata = {
   title:
-    "Career || Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Career || Alvatech - Website",
   description:
-    "Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Alvatech - Website",
 };
 export default function CareerPage() {
   return (

@@ -8,9 +8,9 @@ import Brands from "@/components/common/Brands2";
 import Blogs from "@/components/homes/home-2/Blogs";
 export const metadata = {
   title:
-    "Contact 1 || Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Contact 1 || Alvatech - Website",
   description:
-    "Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Alvatech - Website",
 };
 export default function ContactPage() {
   return (

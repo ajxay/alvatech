@@ -1,9 +1,9 @@
 import SignIn from "@/components/otherPages/SignIn";
 export const metadata = {
   title:
-    "Signin 1 || Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Signin 1 || Alvatech - Website",
   description:
-    "Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Alvatech - Website",
 };
 export default function SigninPage1() {
   return (

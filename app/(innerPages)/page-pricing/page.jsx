@@ -9,9 +9,9 @@ import Cta from "@/components/innerpages/features/Cta";
 import Pricing from "@/components/innerpages/Pricing";
 export const metadata = {
   title:
-    "Pricing || Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Pricing || Alvatech - Website",
   description:
-    "Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Alvatech - Website",
 };
 export default function PricingPage() {
   return (

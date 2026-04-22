@@ -6,9 +6,9 @@ import BreadCumb from "@/components/blog/BreadCumb";
 import Blogs4 from "@/components/blog/Blogs4";
 export const metadata = {
   title:
-    "Blog Author || Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Blog Author || Alvatech - Website",
   description:
-    "Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Alvatech - Website",
 };
 export default async function BlogAuthorPage(props) {
   const params = await props.params;

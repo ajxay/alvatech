@@ -5,9 +5,9 @@ import Breadcumb from "@/components/otherPages/Breadcumb";
 import Notfound from "@/components/otherPages/404";
 export const metadata = {
   title:
-    "Not Found || Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Not Found || Alvatech - Website",
   description:
-    "Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Alvatech - Website",
 };
 export default function NotFoundPage() {
   return (

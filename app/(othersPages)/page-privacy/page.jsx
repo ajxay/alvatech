@@ -5,9 +5,9 @@ import Breadcumb from "@/components/otherPages/Breadcumb";
 import Privacy from "@/components/otherPages/Privacy";
 export const metadata = {
   title:
-    "Privacy || Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Privacy || Alvatech - Website",
   description:
-    "Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Alvatech - Website",
 };
 export default function PrivacyPage() {
   return (

@@ -5,9 +5,9 @@ import Breadcumb from "@/components/otherPages/Breadcumb";
 import SignIn2 from "@/components/otherPages/SignIn2";
 export const metadata = {
   title:
-    "Signin 2 || Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Signin 2 || Alvatech - Website",
   description:
-    "Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Alvatech - Website",
 };
 export default function SigninPage2() {
   return (

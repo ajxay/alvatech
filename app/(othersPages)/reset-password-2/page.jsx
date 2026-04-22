@@ -5,9 +5,9 @@ import Breadcumb from "@/components/otherPages/Breadcumb";
 import Resetpass2 from "@/components/otherPages/Resetpass2";
 export const metadata = {
   title:
-    "Reset Password 2 || Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Reset Password 2 || Alvatech - Website",
   description:
-    "Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Alvatech - Website",
 };
 export default function ResetPasswordPage2() {
   return (

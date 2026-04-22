@@ -5,9 +5,9 @@ import Breadcumb from "@/components/shop/Breadcumb";
 import Cart1 from "@/components/shop/Cart1";
 export const metadata = {
   title:
-    "Shop Cart || Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Shop Cart || Alvatech - Website",
   description:
-    "Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Alvatech - Website",
 };
 export default function ShopCartPage1() {
   return (

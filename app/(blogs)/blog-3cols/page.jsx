@@ -6,9 +6,9 @@ import BreadCumb from "@/components/blog/BreadCumb";
 import Blogs6 from "@/components/blog/Blogs6";
 export const metadata = {
   title:
-    "Blog 3 Cols || Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Blog 3 Cols || Alvatech - Website",
   description:
-    "Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Alvatech - Website",
 };
 export default function Blog3ColsPage() {
   return (

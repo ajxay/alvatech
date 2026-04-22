@@ -12,9 +12,9 @@ import Footer2 from "@/components/footers/Footer2";
 import Brands3 from "@/components/common/Brands2";
 export const metadata = {
   title:
-    "Home 3 || Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Home 3 || Alvatech - Website",
   description:
-    "Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Alvatech - Website",
 };
 export default function HomePage3() {
   return (

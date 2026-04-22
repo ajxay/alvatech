@@ -8,9 +8,9 @@ import Brands from "@/components/innerpages/Brands";
 import { jobListings } from "@/data/career";
 export const metadata = {
   title:
-    "Career Details || Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Career Details || Alvatech - Website",
   description:
-    "Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Alvatech - Website",
 };
 export default async function CareerDetailsPage(props) {
   const params = await props.params;

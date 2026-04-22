@@ -1,9 +1,9 @@
 import Signup from "@/components/otherPages/Signup";
 export const metadata = {
   title:
-    "Signup 1 || Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Signup 1 || Alvatech - Website",
   description:
-    "Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Alvatech - Website",
 };
 export default function SignupPage1() {
   return (

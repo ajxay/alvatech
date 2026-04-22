@@ -9,9 +9,9 @@ import Cta from "@/components/innerpages/features/Cta";
 import Integrations from "@/components/innerpages/Integrations";
 export const metadata = {
   title:
-    "Integrations || Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Integrations || Alvatech - Website",
   description:
-    "Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Alvatech - Website",
 };
 export default function IntegrationPage() {
   return (

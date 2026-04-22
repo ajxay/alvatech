@@ -11,9 +11,9 @@ import Team from "@/components/homes/home-1/Team";
 import Cta from "@/components/innerpages/Cta";
 export const metadata = {
   title:
-    "About || Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "About || Alvatech - Website",
   description:
-    "Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Alvatech - Website",
 };
 export default function AboutPage() {
   return (

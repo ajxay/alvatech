@@ -5,9 +5,9 @@ import Breadcumb from "@/components/shop/Breadcumb";
 import Order from "@/components/shop/Order";
 export const metadata = {
   title:
-    "Shop Order || Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Shop Order || Alvatech - Website",
   description:
-    "Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Alvatech - Website",
 };
 export default function ShopOrder() {
   return (

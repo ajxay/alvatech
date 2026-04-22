@@ -5,9 +5,9 @@ import BlogDetails1 from "@/components/blog/BlogDetails1";
 import { allBlogs } from "@/data/blogs";
 export const metadata = {
   title:
-    "Blog Details || Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Blog Details || Alvatech - Website",
   description:
-    "Alvatech - Full-featured, professional-looking software, saas and startup nextjs template.",
+    "Alvatech - Website",
 };
 export default async function BlogDetailsPage1(props) {
   const params = await props.params;
