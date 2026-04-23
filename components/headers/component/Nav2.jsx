@@ -228,14 +228,20 @@ export default function Nav2() {
         </div>
       </li>
 
+     
+      <li>
+        <a href="/page-integrations">
+          Services
+        </a>
+      </li>
       <li>
         <a href="/page-about">
           About Us
         </a>
       </li>
       <li>
-        <a href="/page-integrations">
-          Services
+        <a href="/page-contact">
+          Contact Us
         </a>
       </li>
       

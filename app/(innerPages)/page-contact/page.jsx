@@ -6,6 +6,8 @@ import ContactLinks from "@/components/innerpages/ContactLinks";
 import Faq from "@/components/homes/home-2/Faq";
 import Brands from "@/components/common/Brands2";
 import Blogs from "@/components/homes/home-2/Blogs";
+import Header3 from "@/components/headers/Header3";
+import Footer1 from "@/components/footers/Footer1";
 export const metadata = {
   title:
     "Contact 1 || Alvatech - Website",
@@ -16,7 +18,7 @@ export default function ContactPage() {
   return (
     <>
       <div className="page-wrapper uni-body panel bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-200 overflow-x-hidden bp-xs bp-sm bp-md bp-lg bp-xl bp-xxl dom-ready">
-        <Header2 />
+        <Header3 />
         <div id="wrapper" className="wrap">
           <Contact1 />
 
@@ -45,7 +47,7 @@ export default function ContactPage() {
           </div>
           <Blogs />
         </div>
-        <Footer2 />
+        <Footer1 />
       </div>
     </>
   );

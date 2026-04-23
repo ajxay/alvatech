@@ -1,32 +1,30 @@
-import Footer1 from "@/components/footers/Footer1";
 import Header3 from "@/components/headers/Header3";
 import Brands from "@/components/homes/home-4/Brands";
 import Cta from "@/components/homes/home-4/Cta";
 import Faq from "@/components/homes/home-4/Faq";
 import Testimonials from "@/components/homes/home-4/Testimonials";
-import DevelopmentFacts from "@/components/services/DevelopmentFacts";
-import DevelopmentHero from "@/components/services/DevelopmentHero";
-import DevelopmentService from "@/components/services/DevelopmentService";
+import ErpHero from "@/components/services/ErpHero";
+import ErpFacts from "@/components/services/ErpFacts";
+import ErpService from "@/components/services/ErpService";
 import React from "react";
-import SalesforceBrands from "@/components/services/SalesforceBrands";
+import Footer1 from "@/components/footers/Footer1";
+
 export const metadata = {
-  title: "Custom Development || Alvatech - Website",
+  title: "ERP Services || Alvatech - Website",
   description:
-    "Alvatech custom development services — scalable MERN stack web applications, APIs, and system modernization.",
+    "All in one Business Solution. Centralize all core business functions in one platform to improve collaboration, streamline operations, and enhance overall productivity.",
 };
 
-export default function DevelopmentPage() {
+export default function ErpPage() {
   return (
     <>
       <div className="page-wrapper uni-body panel bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-200 overflow-x-hidden bp-xs bp-sm bp-md bp-lg dom-ready bp-xl bp-xxl">
         <Header3 />
         <div id="wrapper" className="wrap">
-          <DevelopmentHero />
-          {/* <Brands /> */}
-          <SalesforceBrands />
-
-          <DevelopmentFacts />
-          <DevelopmentService />
+          <ErpHero />
+          <Brands />
+          <ErpFacts />
+          <ErpService />
           <Cta />
           <Testimonials />
           <Faq />

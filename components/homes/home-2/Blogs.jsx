@@ -25,9 +25,9 @@ export default function Blogs() {
                     <div key={index}>
                       <article className="post type-post panel vstack gap-3 rounded-3 p-2 pb-3 bg-white dark:bg-gray-800">
                         <Link
-                          className="position-absolute top-0 ltr:start-0 rtl:end-0 m-3 fs-7 fw-bold text-none z-1 bg-primary text-white py-narrow px-1"
+                          className="position-absolute top-0 ltr:start-0 rtl:end-0 m-3 fs-7 fw-bold text-none z-1  text-white py-narrow px-1"
                           href={`/blog`}
-                          style={{ borderRadius: 8 }}
+                          style={{ borderRadius: 8, backgroundColor: "#84BA41", borderColor: "#84BA41" }}
                         >
                           {article.category}
                         </Link>

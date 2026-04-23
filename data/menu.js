@@ -709,7 +709,8 @@ export const homeLinks = [
 export const links = [
   {
     id: 1,
-    href: "/page-career",
+    // href: "/page-career",
+    href: "/page-contact",
     label: "Hire an Expert",
     isInternal: true,
   },
@@ -727,19 +728,22 @@ export const links = [
   },
   {
     id: 4,
-    href: "/blog",
+    // href: "/blog",
+    href: "#",
     label: "Blog",
     isInternal: true,
   },
   {
     id: 5,
-    href: "/page-career",
+    // href: "/page-career",
+    href: "#",
     label: "Career",
     isInternal: true,
   },
   {
     id: 6,
-    href: "/page-team",
+    // href: "/page-team",
+    href: "#",
     label: "Team",
     isInternal: true,
   },

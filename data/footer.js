@@ -3,25 +3,25 @@ export const footerLinks = [
     links: [
       { href: "/page-about", label: "About" },
       { href: "/page-integrations", label: "Services" },
-      { href: "/page-career", label: "Career" },
+      { href: "$", label: "Career" },
       { href: "/page-contact", label: "Contact" },
     ],
   },
  
   {
     links: [
-      { href: "/sign-in", label: "Request a call" },
-      { href: "/sign-in", label: "Sign in" },
-      { href: "/sign-up", label: "Sign up" },
-      { href: "/legal", label: "Legal" },
+      { href: "/page-contact", label: "Request a call" },
+      { href: "#", label: "Sign in" },
+      { href: "#", label: "Sign up" },
+      { href: "#", label: "Legal" },
     ],
   },
   {
     links: [
-      { href: "/blog", label: "Blog" },
-      { href: "/page-terms", label: "FAQ" },
-      { href: "/page-terms", label: "Terms of service" },
-      { href: "/page-privacy", label: "Privacy policy" },
+      { href: "#", label: "Blog" },
+      { href: "#", label: "FAQ" },
+      { href: "#", label: "Terms of service" },
+      { href: "#", label: "Privacy policy" },
     ],
   },
 ];

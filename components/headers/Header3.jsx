@@ -74,7 +74,7 @@ export default function Header3() {
             <div className="uc-navbar-right">
               <Link
                 className="btn btn-sm btn-primary rounded-default text-white text-none d-none lg:d-inline-flex"
-                href={`/page-pricing`}
+                href={`/page-contact`}
                 style={{ backgroundColor: "#84BA41", borderColor: "#84BA41" }}
               >
              Request A Call

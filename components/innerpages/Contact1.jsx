@@ -127,11 +127,12 @@ export default function Contact1() {
                     <button
                       className="btn btn-primary btn-md text-white mt-2"
                       type="submit"
+                      style={{ backgroundColor: "#84BA41", borderColor: "#84BA41" }}
                     >
                       Send message
                     </button>
                     <p className="text-center">
-                      Or drop us a message via
+                      Or drop us a message via {" "}
                       <a className="uc-link" href="mailto:hello@Alvatech.co">
                         email
                       </a>
