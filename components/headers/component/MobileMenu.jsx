@@ -237,19 +237,16 @@ export default function MobileMenu() {
                 )}
               </li>
             ))}
-            <li className="hr opacity-10 my-1" />
-            <li>
-              <Link href={`/sign-up`}>Create an account</Link>
-            </li>
-            <li>
-              <Link href={`/sign-in`}>Log in</Link>
-            </li>
-            <li>
-              <a href="https://themeforest.net/user/ib-themes/portfolio">
-                Buy Template
-              </a>
-            </li>
           </ul>
+          <div className="mt-3">
+            <Link
+              href="/page-contact"
+              className="btn btn-primary rounded-default text-white text-none w-100 justify-center"
+              style={{ backgroundColor: "#84BA41", borderColor: "#84BA41" }}
+            >
+              Request A Call
+            </Link>
+          </div>
           <ul className="social-icons nav-x mt-4">
             <li>
               {icons.map((icon, index) => (
