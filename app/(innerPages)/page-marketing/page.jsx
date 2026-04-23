@@ -54,7 +54,7 @@ export default function HomePage5() {
           </div>
           <Features />
           <hr className="w-100 m-0 d-block lg:d-none" />
-          <Cta />
+          {/* <Cta /> */}
           <Howworks />
           <Testimonials />
           <Faq />

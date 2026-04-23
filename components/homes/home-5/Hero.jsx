@@ -162,7 +162,7 @@ export default function Hero() {
                     <Image
                       className="media-cover image"
                       alt="image"
-                      src="/assets/images/template/hero-05.jpg"
+                      src="/assets/images/marketing/hero-market.png"
                       width="1184"
                       height="1280"
                     />
@@ -175,7 +175,7 @@ export default function Hero() {
                     <Image
                       alt="Countries"
                       data-anime="onscroll: .hero-scroll-scene; onscroll-offset: -200; onscroll-trigger: 0; onscroll-duration: 400%; translateY: [-100, 0];"
-                      src="/assets/images/template/hero-05-countries.png"
+                     src="/assets/images/marketing/hero-market.png"
                       width="710"
                       height="854"
                     />

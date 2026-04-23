@@ -124,26 +124,26 @@ export const shopifyFaq = [
 export const accordionItems2 = [
   {
     id: 23,
-    title: "Manage tasks",
+    title: "Let's make a plan",
     icon: "/assets/images/common/icons/zap.svg",
     content:
-      "Offers a unified platform that fosters innovation while providing end-to-end data management.",
+      "We begin defining clear objectives and KPIs, mapping a strategy that aligns with your business goals.",
     isOpen: false,
   },
   {
     id: 25,
-    title: "Set priorities",
+    title: "Launch and execute",
     icon: "/assets/images/common/icons/target.svg",
     content:
-      "Providing end-to-end data management. See how we help your team solve today’s biggest challenges.",
+      "Our team puts the plan into action, deploying campaigns and monitoring performance.",
     isOpen: false,
   },
   {
     id: 27,
-    title: "Collaborate with your team",
+    title: "Grow and scale",
     icon: "/assets/images/common/icons/settings.svg",
     content:
-      "Our shared team inboxes keep everyone on the same page and in the loop.",
+      "We analyze data to optimize for performance, ensuring sustainable growth and success.",
     isOpen: true,
   },
 ];

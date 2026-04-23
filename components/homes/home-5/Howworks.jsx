@@ -32,12 +32,10 @@ export default function Howworks() {
                         data-anime="onview: -100; targets: >*; translateY: [16, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 500});"
                       >
                         <h3 className="h3 lg:h2 m-0">
-                          End-to-End Data Shared Management
+                        Powerful and simple workflow
                         </h3>
                         <p className="fs-6 lg:fs-5">
-                          Whether you have a team of 2 or 200, our shared team
-                          inboxes keep everyone on the same page and in the
-                          loop.
+                        Our process is designed for clarity and impact. We work with you to define goals, execute strategies, and deliver measurable results.
                         </p>
                         <div className="panel w-100 mt-2 lg:mt-4">
                           <ul
@@ -53,7 +51,7 @@ export default function Howworks() {
                   </div>
                 </div>
               </div>
-              <div>
+              {/* <div>
                 <div className="panel">
                   <div className="row child-cols-12 lg:child-cols-6 col-match items-center g-0">
                     <div
@@ -141,7 +139,7 @@ export default function Howworks() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
