@@ -8,7 +8,7 @@ import ErpFacts from "@/components/services/ErpFacts";
 import ErpService from "@/components/services/ErpService";
 import React from "react";
 import Footer1 from "@/components/footers/Footer1";
-
+import SalesforceBrands from "@/components/services/SalesforceBrands";
 export const metadata = {
   title: "ERP Services || Alvatech - Website",
   description:
@@ -22,7 +22,7 @@ export default function ErpPage() {
         <Header3 />
         <div id="wrapper" className="wrap">
           <ErpHero />
-          <Brands />
+          <SalesforceBrands />
           <ErpFacts />
           <ErpService />
           <Cta />

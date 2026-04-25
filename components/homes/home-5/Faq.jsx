@@ -12,7 +12,7 @@ export default function Faq() {
           >
             <div className="panel vstack gap-6 xl:gap-8">
               <div className="vstack gap-2 text-center">
-                <span className="fw-bold text-primary dark:text-secondary">
+                <span className="fw-bold " style={{ color: "#84BA41" }}>
                   FAQ
                 </span>
                 <h2 className="h4 sm:h3 xl:h2 m-0 text-center">

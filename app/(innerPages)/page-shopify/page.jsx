@@ -7,12 +7,14 @@ import Cta2 from "@/components/homes/home-4/Cta2";
 import Facts from "@/components/homes/home-4/Facts";
 import Faq from "@/components/homes/home-4/Faq";
 import Features from "@/components/services/ShopifyService";
+import ShopifyBento from "@/components/services/ShopifyBento";
 import Hero from "@/components/services/ShopifyHero";
 import Pricing from "@/components/homes/home-4/Pricing";
 import Team from "@/components/homes/home-4/Team";
 import Testimonials from "@/components/homes/home-4/Testimonials";
 import React from "react";
 import Footer1 from "@/components/footers/Footer1";
+import SalesforceBrands from "@/components/services/SalesforceBrands";
 export const metadata = {
   title:
     "Home 4 || Alvatech - Website",
@@ -26,9 +28,12 @@ export default function HomePage4() {
         <Header3 />
         <div id="wrapper" className="wrap">
           <Hero />
-          <Brands />
+          {/* <Brands /> */}
+          <SalesforceBrands />
+
           <Facts />
           <Features />
+          <ShopifyBento />
           <Cta />
           {/* <Pricing /> */}
           <Testimonials />

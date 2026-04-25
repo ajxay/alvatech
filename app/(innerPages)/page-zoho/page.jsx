@@ -8,7 +8,7 @@ import ZohoFacts from "@/components/services/ZohoFacts";
 import ZohoHero from "@/components/services/ZohoHero";
 import ZohoService from "@/components/services/ZohoService";
 import React from "react";
-
+import SalesforceBrands from "@/components/services/SalesforceBrands";
 export const metadata = {
   title: "Zoho CRM || Alvatech - Website",
   description:
@@ -22,7 +22,7 @@ export default function ZohoPage() {
         <Header3 />
         <div id="wrapper" className="wrap">
           <ZohoHero />
-          <Brands />
+          <SalesforceBrands />
           <ZohoFacts />
           <ZohoService />
           <Cta />

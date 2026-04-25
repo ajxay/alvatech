@@ -19,21 +19,14 @@ export default function Cta() {
                 Join over 500+ business already growing with Alvatch.
               </p>
               <div className="vstack sm:hstack justify-center gap-1 lg:gap-2 mt-1 lg:mt-2 flex-sm-column">
-                <a
+                
+                <button
                   onClick={openContactModal}
-                  className="btn btn-md rounded-default bg-white dark:bg-gray-700 dark:text-white border-gray-900 dark:border-white border-opacity-20 hover:border-opacity-40 shadow-xs"
-                  data-uc-toggle=""
-                >
-                  <i className="icon-1 unicon-play-outline fw-medium" />
-                  <span>View demo</span>
-                </a>
-                <Link
-                  href={`/page-pricing`}
                   className="btn btn-md btn-primary rounded-default text-white shadow-xs"
                   style={{ backgroundColor: "#84BA41", borderColor: "#84BA41" }}
                 >
                   Contact Us
-                </Link>
+                </button>
               </div>
             </div>
           </div>

@@ -25,13 +25,13 @@ export default function Faq() {
                   <Accordion parentClass="panel p-3 lg:p-4 rounded-1-5 lg:rounded-2 bg-secondary dark:bg-gray-800" />
                 </ul>
               </div>
-              <a
+              {/* <a
                 href="#"
                 className="uc-link dark:text-secondary fw-bold d-inline-flex items-center gap-narrow mx-auto"
               >
                 <span>Still have a question?</span>
                 <i className="icon icon-1 unicon-arrow-right rtl:rotate-180" />
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

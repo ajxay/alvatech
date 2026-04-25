@@ -56,7 +56,7 @@ export default function ContactModal() {
         <div className="panel vstack gap-2 md:gap-4 text-center">
           <div className="panel cstack px-3 md:px-4 py-4 md:py-8 m-0 lg:mx-auto">
             <div className="panel vstack justify-center items-center gap-2 sm:gap-4 text-center">
-              <h4 className="h5 lg:h4 m-0">Schedule your 15-minute demo now</h4>
+              <h4 className="h5 lg:h4 m-0">Hear from us</h4>
               <div className="panel w-100 sm:w-350px md:w-500px mx-auto">
                 <form
                   onSubmit={(e) => e.preventDefault()}
@@ -110,8 +110,9 @@ export default function ContactModal() {
                   <button
                     className="btn btn-primary btn-md text-white mt-2"
                     type="submit"
+                    style={{ backgroundColor: "#84BA41", borderColor: "#84BA41" }}
                   >
-                    Schedule my demo
+                    Submit
                   </button>
                   <p className="fs-7 opacity-70 mt-2 text-center">
                     We’ll tailor your demo to your immediate needs and answer

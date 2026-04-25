@@ -13,6 +13,7 @@ import Pricing from "@/components/homes/home-5/Pricing";
 import Support from "@/components/homes/home-5/Support";
 import Team from "@/components/homes/home-5/Team";
 import Testimonials from "@/components/homes/home-5/Testimonials";
+import SalesforceBrands from "@/components/services/SalesforceBrands";
 import React from "react";
 export const metadata = {
   title:
@@ -44,7 +45,8 @@ export default function HomePage5() {
                     </p>
                     <div className="block-panel panel">
                       <div className="element-brands text-black dark:text-white mask-x">
-                        <Brands />
+          <SalesforceBrands />
+                        
                       </div>
                     </div>
                   </div>

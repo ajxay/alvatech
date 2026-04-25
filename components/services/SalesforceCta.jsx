@@ -29,17 +29,9 @@ export default function SalesforceCta() {
                 Join over 500+ business already growing with Alvatech.
               </p>
               <div className="vstack gap-1 w-100 mt-1 lg:mt-2 sm:max-w-500px mx-auto">
-                <a
+                
+                <button
                   onClick={openContactModal}
-                  className="btn btn-md rounded-default bg-white text-dark d-inline-flex items-center justify-center gap-narrow shadow-xs w-100"
-                  style={{ borderColor: "rgba(14, 14, 15, 0.2)" }}
-                  data-uc-toggle=""
-                >
-                  <i className="icon-1 unicon-play-outline fw-medium" />
-                  <span>View demo</span>
-                </a>
-                <Link
-                  href={`/page-pricing`}
                   className="btn btn-md rounded-default text-dark shadow-xs w-100 fw-bold"
                   style={{
                     backgroundColor: "#84BA41",
@@ -48,7 +40,7 @@ export default function SalesforceCta() {
                   }}
                 >
                   Contact Us
-                </Link>
+                </button>
               </div>
             </div>
           </div>
