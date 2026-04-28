@@ -31,6 +31,17 @@ export default function ContactModal() {
   useEffect(() => {
     closeContactModal();
   }, [pathname]);
+
+  const services = [
+    "Shopify Development",
+    "Custom Development",
+    "Marketing",
+    "Salesforce CRM",
+    "ERP Solutions",
+    "ZOHO CRM",
+    "Other",
+  ];
+
   return (
     <div
       ref={containerRef}
@@ -42,7 +53,13 @@ export default function ContactModal() {
     >
       <div
         ref={elementRef}
-        className="uc-modal-dialog lg:max-w-650px bg-secondary text-dark dark:bg-gray-800 dark:text-white rounded-1-5"
+        className="uc-modal-dialog lg:max-w-650px text-dark dark:bg-gray-800 dark:text-white rounded-1-5"
+        style={{
+          backgroundColor: "#ffffff",
+          backgroundImage:
+            "linear-gradient(to right, rgba(17, 24, 39, 0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(17, 24, 39, 0.06) 1px, transparent 1px)",
+          backgroundSize: "52px 52px",
+        }}
         role="dialog"
         aria-modal="true"
       >
@@ -57,67 +74,86 @@ export default function ContactModal() {
           <div className="panel cstack px-3 md:px-4 py-4 md:py-8 m-0 lg:mx-auto">
             <div className="panel vstack justify-center items-center gap-2 sm:gap-4 text-center">
               <h4 className="h5 lg:h4 m-0">Hear from us</h4>
-              <div className="panel w-100 sm:w-350px md:w-500px mx-auto">
+              <div className="panel w-100 mx-auto" style={{ maxWidth: 760 }}>
                 <form
                   onSubmit={(e) => e.preventDefault()}
-                  className="vstack gap-2"
+                  className="vstack gap-2 text-start"
                 >
-                  <div
-                    className="vstack lg:hstack gap-2"
-                    style={{ flexDirection: "row" }}
-                  >
-                    <input
-                      className="form-control h-48px w-100 md:w-1/2 bg-white dark:border-white dark:text-dark"
-                      type="text"
-                      placeholder="Full name*"
-                      required
-                    />
-                    <input
-                      className="form-control h-48px w-100 md:w-1/2 bg-white dark:border-white dark:text-dark"
-                      type="text"
-                      placeholder="Last name*"
-                      required
-                    />
+                  <div className="row g-2">
+                    <div className="col-12 md:col-6">
+                      <label className="d-block fw-bold mb-1">First name</label>
+                      <input
+                        className="form-control h-48px w-100 bg-white dark:border-white dark:text-dark"
+                        type="text"
+                        placeholder="First name"
+                        required
+                      />
+                    </div>
+                    <div className="col-12 md:col-6">
+                      <label className="d-block fw-bold mb-1">Last name</label>
+                      <input
+                        className="form-control h-48px w-100 bg-white dark:border-white dark:text-dark"
+                        type="text"
+                        placeholder="Last name"
+                        required
+                      />
+                    </div>
                   </div>
-                  <div
-                    className="vstack lg:hstack gap-2"
-                    style={{ flexDirection: "row" }}
-                  >
+
+                  <div>
+                    <label className="d-block fw-bold mb-1">Email</label>
                     <input
-                      className="form-control h-48px w-100 md:w-1/2 bg-white dark:border-white dark:text-dark"
+                      className="form-control h-48px w-100 bg-white dark:border-white dark:text-dark"
                       type="email"
-                      placeholder="Your email*"
-                      required
-                    />
-                    <input
-                      className="form-control h-48px w-100 md:w-1/2 rtl:text-end bg-white dark:border-white dark:text-dark"
-                      type="tel"
-                      placeholder="Phone number*"
+                      placeholder="you@company.com"
                       required
                     />
                   </div>
-                  <input
-                    className="form-control h-48px w-full bg-white dark:border-white dark:text-dark"
-                    type="text"
-                    placeholder="Company name*"
-                    required
-                  />
-                  <textarea
-                    className="form-control min-h-150px w-full bg-white dark:border-white dark:text-dark"
-                    placeholder="Your message.."
-                    defaultValue={""}
-                  />
+
+                  <div>
+                    <label className="d-block fw-bold mb-1">Phone number</label>
+                    <input
+                      className="form-control h-48px w-100 rtl:text-end bg-white dark:border-white dark:text-dark"
+                      type="tel"
+                      placeholder="+1 (555) 000-0000"
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <label className="d-block fw-bold mb-1">Message</label>
+                    <textarea
+                      className="form-control min-h-150px w-100 bg-white dark:border-white dark:text-dark"
+                      placeholder="Leave us a message..."
+                      defaultValue={""}
+                    />
+                  </div>
+
+                  <div>
+                    <label className="d-block fw-bold mb-1">Services</label>
+                    <div className="row g-1">
+                      {services.map((service) => (
+                        <div key={service} className="col-12 md:col-6">
+                          <label className="hstack items-center gap-1 m-0">
+                            <input type="checkbox" />
+                            <span className="fw-medium">{service}</span>
+                          </label>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
                   <button
-                    className="btn btn-primary btn-md text-white mt-2"
+                    className="btn btn-md text-white mt-2"
                     type="submit"
-                    style={{ backgroundColor: "#84BA41", borderColor: "#84BA41" }}
+                    style={{
+                      backgroundColor: "#84BA41",
+                      borderColor: "#84BA41",
+                      borderRadius: 12,
+                    }}
                   >
-                    Submit
+                    Send message
                   </button>
-                  <p className="fs-7 opacity-70 mt-2 text-center">
-                    We’ll tailor your demo to your immediate needs and answer
-                    all your questions. Get ready to see how it works!
-                  </p>
                 </form>
               </div>
             </div>

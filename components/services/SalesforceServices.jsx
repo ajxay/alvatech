@@ -7,20 +7,39 @@ const INK_MUTED = "rgba(33, 37, 41, 0.7)";
 const CARD_SHADOW = "0 10px 30px rgba(15, 23, 42, 0.08)";
 const CARD_BORDER = "1px solid rgba(15, 23, 42, 0.06)";
 
-function FeatureText({ icon, title, description }) {
+function IntroFeature({ icon, title, description }) {
   return (
-    <div className="panel vstack gap-2 max-w-420px">
+    <div className="vstack gap-1">
       <span
         className="cstack rounded-1-5"
         style={{
           width: 44,
           height: 44,
-          backgroundColor: GREEN,
-          color: "#fff",
+          backgroundColor: "#eff8e6",
+          color: GREEN,
         }}
       >
         {icon}
       </span>
+      <h4 className="h5 m-0" style={{ color: INK }}>
+        {title}
+      </h4>
+      <p
+        className="m-0"
+        style={{ color: INK_MUTED, fontSize: 14, lineHeight: 1.5 }}
+      >
+        {description}
+      </p>
+    </div>
+  );
+}
+
+function FeatureText({ icon, title, description }) {
+  return (
+    <div className="panel vstack gap-2 max-w-420px">
+        <span style={{ fontSize: 48 }} aria-hidden>
+          {icon}
+        </span>
       <h3
         className="h4 lg:h3 m-0"
         style={{ color: INK, letterSpacing: "-0.3px" }}
@@ -81,513 +100,69 @@ function SalesforceLogo() {
 }
 
 function LeadsMockup() {
-  const rows = [
-    { label: "New Lead", active: true },
-    { label: "Contacted" },
-    { label: "Qualified" },
-    { label: "Converted" },
-  ];
-  const bars = [30, 38, 28, 44, 52, 40, 60, 70, 58, 76, 85];
   return (
     <div
-      className="panel position-relative"
+      className="panel"
       style={{
-        backgroundColor: "#fff",
         borderRadius: 14,
-        boxShadow: CARD_SHADOW,
-        border: CARD_BORDER,
-        padding: 18,
-        maxWidth: 430,
+        overflow: "hidden",
+        maxWidth: 520,
       }}
     >
-      <div
-        className="hstack items-center justify-between mb-2"
-        style={{ paddingBottom: 10, borderBottom: "1px solid #f1f3f5" }}
-      >
-        <SalesforceLogo />
-        <span style={{ color: "#a9adb4", letterSpacing: 2 }}>•••</span>
-      </div>
-
-      <div className="hstack items-start gap-2">
-        <div className="vstack gap-1" style={{ flex: "0 0 42%", fontSize: 12 }}>
-          {rows.map((r) => (
-            <div
-              key={r.label}
-              className="hstack items-center gap-narrow py-1"
-              style={{ color: r.active ? INK : "#6b7280" }}
-            >
-              <span
-                className="d-inline-block rounded-circle"
-                style={{
-                  width: 8,
-                  height: 8,
-                  backgroundColor: r.active ? GREEN : "#d7dbe0",
-                }}
-              />
-              {r.label}
-            </div>
-          ))}
-        </div>
-
-        <div
-          className="vstack gap-1 p-2"
-          style={{
-            flex: 1,
-            backgroundColor: "#fafbfc",
-            borderRadius: 10,
-            border: "1px solid #eef0f2",
-          }}
-        >
-          <div className="hstack items-center gap-narrow">
-            <span
-              className="cstack rounded-circle"
-              style={{
-                width: 34,
-                height: 34,
-                backgroundColor: "#e7f0d9",
-                fontSize: 16,
-              }}
-            >
-              👤
-            </span>
-            <div className="vstack" style={{ lineHeight: 1.15 }}>
-              <strong style={{ fontSize: 12, color: INK }}>John Smith</strong>
-              <span style={{ fontSize: 10, color: "#6b7280" }}>
-                Acme Corporation
-              </span>
-              <span
-                className="d-inline-block mt-narrow px-1"
-                style={{
-                  alignSelf: "flex-start",
-                  backgroundColor: GREEN,
-                  color: "#fff",
-                  fontSize: 9,
-                  borderRadius: 4,
-                }}
-              >
-                New Lead
-              </span>
-            </div>
-          </div>
-          <div
-            className="vstack"
-            style={{ fontSize: 10, color: "#6b7280", lineHeight: 1.5 }}
-          >
-            <div>
-              <span style={{ color: "#9aa0a6" }}>Email</span> · john.smith@acme.com
-            </div>
-            <div>
-              <span style={{ color: "#9aa0a6" }}>Phone</span> · (555) 123-4567
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div
-        className="mt-2 p-2"
-        style={{
-          backgroundColor: "#fafbfc",
-          borderRadius: 10,
-          border: "1px solid #eef0f2",
-        }}
-      >
-        <div
-          className="hstack items-center justify-between mb-1"
-          style={{ fontSize: 11 }}
-        >
-          <span style={{ color: "#6b7280" }}>Leads This Month</span>
-          <span style={{ color: GREEN_DARK, fontWeight: 700 }}>↑ 28%</span>
-        </div>
-        <div
-          className="hstack items-end gap-narrow"
-          style={{ height: 64 }}
-          aria-hidden
-        >
-          {bars.map((h, i) => (
-            <span
-              key={i}
-              style={{
-                flex: 1,
-                height: `${h}%`,
-                backgroundColor: i === bars.length - 1 ? GREEN : "#c7e0b9",
-                borderRadius: 3,
-              }}
-            />
-          ))}
-        </div>
-      </div>
-
-      <span
-        className="position-absolute cstack rounded-circle"
-        style={{
-          width: 44,
-          height: 44,
-          backgroundColor: GREEN,
-          color: "#fff",
-          left: -16,
-          bottom: -16,
-          boxShadow: CARD_SHADOW,
-          fontSize: 20,
-        }}
-      >
-        👤
-      </span>
+      <img
+        src="/assets/images/services/salesforce/lead-contact-management.png"
+        alt="Salesforce lead and contact management"
+        className="d-block w-100 h-auto"
+      />
     </div>
   );
 }
 
 function PipelineMockup() {
-  const stages = [
-    { name: "Prospecting", value: "$50K", bar: 55, count: 6 },
-    { name: "Qualification", value: "$75K", bar: 72, count: 6 },
-    { name: "Proposal", value: "$40K", bar: 45, count: 4 },
-    { name: "Closed Won", value: "$120K", bar: 90, count: 3 },
-  ];
   return (
-    <div className="panel position-relative" style={{ maxWidth: 460 }}>
-      <div
-        className="panel"
-        style={{
-          backgroundColor: "#fff",
-          borderRadius: 14,
-          boxShadow: CARD_SHADOW,
-          border: CARD_BORDER,
-          padding: 18,
-        }}
-      >
-        <div
-          className="hstack items-center justify-between mb-2"
-          style={{ fontSize: 13 }}
-        >
-          <strong style={{ color: INK }}>Sales Pipeline</strong>
-          <span style={{ color: "#a9adb4", letterSpacing: 2 }}>•••</span>
-        </div>
-        <div className="row child-cols col-4 g-1">
-          {stages.map((s) => (
-            <div key={s.name}>
-              <div className="vstack gap-narrow" style={{ fontSize: 11 }}>
-                <span style={{ color: "#6b7280" }}>{s.name}</span>
-                <strong style={{ fontSize: 13, color: INK }}>{s.value}</strong>
-                <div
-                  style={{
-                    height: 4,
-                    backgroundColor: "#eef0f2",
-                    borderRadius: 4,
-                    overflow: "hidden",
-                  }}
-                >
-                  <div
-                    style={{
-                      width: `${s.bar}%`,
-                      height: "100%",
-                      backgroundColor: GREEN,
-                    }}
-                  />
-                </div>
-                <span style={{ color: "#6b7280" }}>{s.count}</span>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div
-        className="panel position-absolute"
-        style={{
-          backgroundColor: "#fff",
-          borderRadius: 14,
-          boxShadow: CARD_SHADOW,
-          border: CARD_BORDER,
-          padding: 14,
-          right: -8,
-          bottom: -60,
-          width: 240,
-        }}
-      >
-        <div style={{ fontSize: 11, color: "#6b7280" }}>Total Pipeline Value</div>
-        <div
-          className="hstack items-center justify-between mb-1"
-          style={{ color: INK }}
-        >
-          <strong style={{ fontSize: 18 }}>$285K</strong>
-          <span
-            style={{ color: GREEN_DARK, fontSize: 11, fontWeight: 700 }}
-          >
-            ↑ 18%
-          </span>
-        </div>
-        <svg viewBox="0 0 240 70" width="100%" height="56" aria-hidden>
-          <defs>
-            <linearGradient id="pipeGrad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor={GREEN} stopOpacity="0.35" />
-              <stop offset="100%" stopColor={GREEN} stopOpacity="0" />
-            </linearGradient>
-          </defs>
-          <path
-            d="M0,55 L30,48 L60,50 L90,40 L120,32 L150,36 L180,22 L210,18 L240,8 L240,70 L0,70 Z"
-            fill="url(#pipeGrad)"
-          />
-          <path
-            d="M0,55 L30,48 L60,50 L90,40 L120,32 L150,36 L180,22 L210,18 L240,8"
-            fill="none"
-            stroke={GREEN}
-            strokeWidth="2"
-            strokeLinecap="round"
-          />
-        </svg>
-      </div>
-
-      <span
-        className="position-absolute cstack rounded-circle"
-        style={{
-          width: 44,
-          height: 44,
-          backgroundColor: GREEN,
-          color: "#fff",
-          left: -10,
-          top: "55%",
-          boxShadow: CARD_SHADOW,
-          fontSize: 16,
-        }}
-        aria-hidden
-      >
-        ▽
-      </span>
+    <div className="panel" style={{ maxWidth: 520, borderRadius: 14, overflow: "hidden" }}>
+      <img
+        src="/assets/images/services/salesforce/pipeline-management.png"
+        alt="Salesforce opportunity and pipeline management"
+        className="d-block w-100 h-auto"
+      />
     </div>
   );
 }
 
 function ReportsMockup() {
-  const stats = [
-    { label: "Total Sales", value: "$450K", change: "+15%" },
-    { label: "New Opportunities", value: "32", change: "+12%" },
-    { label: "Win Rate", value: "26%", change: "+8%" },
-  ];
   return (
-    <div className="panel position-relative" style={{ maxWidth: 430 }}>
-      <div
-        className="panel"
-        style={{
-          backgroundColor: "#fff",
-          borderRadius: 14,
-          boxShadow: CARD_SHADOW,
-          border: CARD_BORDER,
-          padding: 18,
-        }}
-      >
-        <div
-          className="hstack items-center justify-between mb-2"
-          style={{ paddingBottom: 10, borderBottom: "1px solid #f1f3f5" }}
-        >
-          <SalesforceLogo />
-          <span style={{ color: "#a9adb4", letterSpacing: 2 }}>•••</span>
-        </div>
-
-        <div
-          className="hstack items-center gap-narrow mb-1"
-          style={{ fontSize: 12, color: INK }}
-        >
-          <strong>Dashboard</strong>
-        </div>
-
-        <div className="row child-cols col-4 g-1 mb-2">
-          {stats.map((s) => (
-            <div key={s.label}>
-              <div
-                className="vstack p-1"
-                style={{
-                  backgroundColor: "#fafbfc",
-                  borderRadius: 8,
-                  border: "1px solid #eef0f2",
-                  fontSize: 10,
-                }}
-              >
-                <span style={{ color: "#6b7280" }}>{s.label}</span>
-                <strong style={{ fontSize: 14, color: INK }}>{s.value}</strong>
-                <span style={{ color: GREEN_DARK, fontWeight: 700 }}>
-                  ↑ {s.change}
-                </span>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div style={{ fontSize: 11, color: "#6b7280" }}>Sales Over Time</div>
-        <svg viewBox="0 0 400 90" width="100%" height="90" aria-hidden>
-          <defs>
-            <linearGradient id="reportGrad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor={GREEN} stopOpacity="0.35" />
-              <stop offset="100%" stopColor={GREEN} stopOpacity="0" />
-            </linearGradient>
-          </defs>
-          <path
-            d="M0,70 L50,60 L100,64 L150,52 L200,44 L250,48 L300,32 L350,24 L400,12 L400,90 L0,90 Z"
-            fill="url(#reportGrad)"
-          />
-          <path
-            d="M0,70 L50,60 L100,64 L150,52 L200,44 L250,48 L300,32 L350,24 L400,12"
-            fill="none"
-            stroke={GREEN}
-            strokeWidth="2.5"
-            strokeLinecap="round"
-          />
-        </svg>
-      </div>
-
-      <span
-        className="position-absolute cstack rounded-circle"
-        style={{
-          width: 44,
-          height: 44,
-          backgroundColor: GREEN,
-          color: "#fff",
-          right: -12,
-          bottom: -16,
-          boxShadow: CARD_SHADOW,
-          fontSize: 18,
-        }}
-        aria-hidden
-      >
-        📊
-      </span>
+    <div className="panel" style={{ maxWidth: 520, borderRadius: 14, overflow: "hidden" }}>
+      <img
+        src="/assets/images/services/salesforce/reports-analytics.png"
+        alt="Salesforce reports and analytics dashboard"
+        className="d-block w-100 h-auto"
+      />
     </div>
   );
 }
 
 function WorkflowMockup() {
-  const steps = [
-    { label: "New Lead Created", icon: "👤" },
-    { label: "Assign to Sales Rep", icon: "👥" },
-    { label: "Send Welcome Email", icon: "✉" },
-    { label: "Create Follow-up Task", icon: "✓" },
-  ];
   return (
-    <div className="panel position-relative" style={{ maxWidth: 460 }}>
-      <div
-        className="panel"
-        style={{
-          backgroundColor: "#fff",
-          borderRadius: 14,
-          boxShadow: CARD_SHADOW,
-          border: CARD_BORDER,
-          padding: 18,
-        }}
-      >
-        <div
-          className="hstack items-start justify-between"
-          style={{ gap: 6 }}
-        >
-          {steps.map((s, i) => (
-            <React.Fragment key={s.label}>
-              <div
-                className="vstack items-center"
-                style={{ flex: "0 0 auto", width: 84, textAlign: "center" }}
-              >
-                <span
-                  className="cstack rounded-1"
-                  style={{
-                    width: 54,
-                    height: 54,
-                    backgroundColor: "#fafbfc",
-                    border: "1px solid #eef0f2",
-                    fontSize: 20,
-                  }}
-                >
-                  {s.icon}
-                </span>
-                <span
-                  className="mt-narrow"
-                  style={{ fontSize: 10, color: INK, lineHeight: 1.2 }}
-                >
-                  {s.label}
-                </span>
-              </div>
-              {i < steps.length - 1 && (
-                <span
-                  aria-hidden
-                  style={{
-                    flex: 1,
-                    borderTop: `2px dashed ${GREEN}`,
-                    marginTop: 26,
-                  }}
-                />
-              )}
-            </React.Fragment>
-          ))}
-        </div>
-      </div>
-
-      <div
-        className="panel position-absolute"
-        style={{
-          backgroundColor: "#fff",
-          borderRadius: 14,
-          boxShadow: CARD_SHADOW,
-          border: CARD_BORDER,
-          padding: 14,
-          right: 20,
-          bottom: -56,
-          width: 260,
-        }}
-      >
-        <div
-          className="hstack items-center justify-between"
-          style={{ fontSize: 12 }}
-        >
-          <div className="vstack">
-            <span style={{ color: "#6b7280", fontSize: 10 }}>
-              Workflow Rule
-            </span>
-            <strong style={{ color: INK }}>Lead Score &gt; 50</strong>
-          </div>
-          <span
-            className="d-inline-block position-relative"
-            style={{
-              width: 40,
-              height: 22,
-              borderRadius: 22,
-              backgroundColor: GREEN,
-            }}
-            aria-hidden
-          >
-            <span
-              className="d-inline-block position-absolute rounded-circle"
-              style={{
-                width: 18,
-                height: 18,
-                backgroundColor: "#fff",
-                right: 2,
-                top: 2,
-                boxShadow: "0 1px 2px rgba(0,0,0,0.2)",
-              }}
-            />
-          </span>
-        </div>
-      </div>
-
-      <span
-        className="position-absolute cstack rounded-circle"
-        style={{
-          width: 44,
-          height: 44,
-          backgroundColor: GREEN,
-          color: "#fff",
-          left: -12,
-          top: -16,
-          boxShadow: CARD_SHADOW,
-          fontSize: 18,
-        }}
-        aria-hidden
-      >
-        ✓
-      </span>
+    <div className="panel" style={{ maxWidth: 520, borderRadius: 14, overflow: "hidden" }}>
+      <img
+        src="/assets/images/services/salesforce/workflow-automation.png"
+        alt="Salesforce workflow and automation"
+        className="d-block w-100 h-auto"
+      />
     </div>
   );
 }
 
 const features = [
   {
-    icon: "👤",
+    icon: (
+      <img
+        src="/assets/images/services/salesforce/lead-contact-icon.svg"
+        alt=""
+        style={{ width: 48, height: 48 }}
+      />
+    ),
     title: "Lead & Contact Management",
     description:
       "Capture, organize, and track leads and contacts in one place to build stronger relationships and never miss an opportunity.",
@@ -595,7 +170,13 @@ const features = [
     reverse: false,
   },
   {
-    icon: "📅",
+    icon: (
+      <img
+        src="/assets/images/services/salesforce/pipeline-management-icon.svg"
+        alt=""
+        style={{ width: 48, height: 48 }}
+      />
+    ),
     title: "Opportunity & Pipeline Management",
     description:
       "Visualize your sales pipeline, track deal progress, and forecast revenue with real-time insights to close more deals.",
@@ -603,7 +184,13 @@ const features = [
     reverse: true,
   },
   {
-    icon: "📊",
+    icon: (
+      <img
+        src="/assets/images/services/salesforce/report-icon.svg"
+        alt=""
+        style={{ width: 48, height: 48 }}
+      />
+    ),
     title: "Reports & Analytics",
     description:
       "Get real-time reports and actionable insights to make smarter decisions and drive your business growth.",
@@ -611,7 +198,13 @@ const features = [
     reverse: false,
   },
   {
-    icon: "⚙",
+    icon: (
+      <img
+        src="/assets/images/services/salesforce/workflow-automation-icon.svg"
+        alt=""
+        style={{ width: 48, height: 48 }}
+      />
+    ),
     title: "Workflow & Automation",
     description:
       "Automate repetitive tasks, set up workflows, and save time so your team can focus on what really matters.",
@@ -627,30 +220,9 @@ export default function SalesforceServices() {
       className="salesforce-services section panel overflow-hidden"
     >
       <div className="section-outer panel pt-6 md:pt-8 xl:pt-9 pb-6 md:pb-8 xl:pb-9">
-        <div className="container max-w-xl">
-          <div
-            className="vstack items-center text-center mx-auto mb-5 md:mb-6 xl:mb-7"
-            style={{ maxWidth: 820, gap: 10 }}
-            data-anime="onview: -200; targets: >*; translateY: [24, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});"
-          >
-            <h2
-              className="h3 md:h2 m-0"
-              style={{ color: INK, letterSpacing: "-0.5px" }}
-            >
-              We build, market, and scale your your digital presence
-            </h2>
-            <p
-              className="fs-6 xl:fs-5 m-0"
-              style={{ color: INK_MUTED }}
-            >
-              From high-performing Shopify stores to result-driven marketing
-              and social media strategies—we help you attract, engage, and
-              convert your audience.
-            </p>
-          </div>
-        </div>
+        
 
-        <div className="container max-w-xl">
+        <div className="container max-w-xl mt-4 md:mt-6 xl:mt-7 mb-6 md:mb-8 xl:mb-9">
           <div className="section-inner panel vstack gap-6 md:gap-8 xl:gap-9">
             {features.map((f, i) => (
               <div
@@ -674,9 +246,7 @@ export default function SalesforceServices() {
                 <div className={`col-12 md:col-6 ${f.reverse ? "md:order-1" : ""}`}>
                   <FeatureText
                     icon={
-                      <span style={{ fontSize: 20 }} aria-hidden>
-                        {f.icon}
-                      </span>
+                       f.icon
                     }
                     title={f.title}
                     description={f.description}
@@ -684,6 +254,59 @@ export default function SalesforceServices() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+        <div className="container max-w-xl mt-4 md:mt-6 xl:mt-7">
+          <div
+            className="row child-cols items-center g-4 xl:g-6 mb-6 md:mb-8 xl:mb-9"
+            data-anime="onview: -200; targets: >*; translateY: [24, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});"
+          >
+            <div className="col-12 lg:col-6">
+              <div
+                className="panel"
+                style={{ borderRadius: 10, overflow: "hidden", maxWidth: 620 }}
+              >
+                <img
+                  src="/assets/images/services/salesforce/crm-business-success.png"
+                  alt="Salesforce CRM dashboard"
+                  className="d-block w-100 h-auto"
+                />
+              </div>
+            </div>
+
+            <div className="col-12 lg:col-6">
+              <div className="vstack gap-3 max-w-520px">
+                <h2
+                  className="h2 lg:h1 m-0"
+                  style={{ color: "#0f1f4c", letterSpacing: "-0.4px" }}
+                >
+                  Your All-in-One CRM for Business Success
+                </h2>
+                <p className="fs-6 lg:fs-5 m-0" style={{ color: INK_MUTED, lineHeight: 1.55 }}>
+                  Salesforce is your complete CRM solution, designed to streamline your
+                  sales, customer service, and marketing efforts. With powerful tools and
+                  integrations, you can effortlessly manage customer relationships and drive
+                  business growth.
+                </p>
+
+                <div className="row child-cols col-1 sm:col-2 g-3 md:g-4 mt-1">
+                  <div>
+                    <IntroFeature
+                      icon={<span style={{ fontSize: 22 }}>📈</span>}
+                      title="Enhanced Analytics"
+                      description="Leverage deep insights to understand your customers better and create personalized experiences that drive engagement."
+                    />
+                  </div>
+                  <div>
+                    <IntroFeature
+                      icon={<span style={{ fontSize: 22 }}>👥</span>}
+                      title="Effortless Management"
+                      description="Manage your entire customer lifecycle with ease, from tracking leads to delivering exceptional customer support."
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
