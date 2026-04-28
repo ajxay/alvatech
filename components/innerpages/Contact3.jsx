@@ -1,15 +1,15 @@
 "use client";
 
 import "./Contact3.css";
-import Image from "next/image";
 
 const services = [
-  "Website design",
-  "UX design",
-  "User research",
-  "Content creation",
-  "Strategy & consulting",
-  "Other",
+  { label: "Shopify Development", checked: false },
+  { label: "Custom Development", checked: false },
+  { label: "Marketing", checked: false },
+  { label: "Salesforce CRM", checked: false },
+  { label: "ERP Solutions", checked: false },
+  { label: "ZOHO CRM", checked: false },
+  { label: "Other", checked: false },
 ];
 
 function ContactForm({ compact = false }) {
@@ -41,9 +41,9 @@ function ContactForm({ compact = false }) {
         <span>Services</span>
         <div className="contact3-services__grid">
           {services.map((item) => (
-            <label key={item}>
-              <input type="checkbox" />
-              <span>{item}</span>
+            <label key={item.label}>
+              <input type="checkbox" defaultChecked={item.checked} />
+              <span>{item.label}</span>
             </label>
           ))}
         </div>
@@ -129,20 +129,6 @@ export default function Contact3() {
             </div>
 
             <aside className="contact3-mobile-card">
-              <div className="contact3-mobile-card__head">
-                <Image
-                  src="/assets/images/common/main-logo.svg"
-                  alt="Alvatech"
-                  width={234}
-                  height={32}
-                  className="contact3-mobile-card__logo"
-                />
-                <button className="contact3-mobile-card__menu" type="button" aria-label="Open menu">
-                  <span />
-                  <span />
-                  <span />
-                </button>
-              </div>
               <h2>Contact our team</h2>
               <p>
                 Got any questions about the product or scaling on our platform?

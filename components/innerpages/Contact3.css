@@ -326,6 +326,10 @@
 }
 
 @media (max-width: 767.98px) {
+  .contact3 {
+    padding-top: 72px;
+  }
+
   .contact3-full {
     padding: 0 16px;
   }
