@@ -5,14 +5,12 @@ import Footer1 from "@/components/footers/Footer1";
 
 import Hero from "@/components/homes/home-12/Hero";
 import Features from "@/components/homes/home-13/Features";
-
-import Brands from "@/components/homes/home-3/Brands";
-import Cta from "@/components/homes/home-1/Cta";
+import Sections from "@/components/homes/home-13/Sections";
 
 export const metadata = {
   title: "Home 13 || Alvatech - Website",
   description:
-    "Smart features for your business. We help brands launch eCommerce stores, scale revenue with performance marketing, and streamline operations with smart systems.",
+    "Do More, Grow Faster with Smart Systems. We combine eCommerce development, performance marketing, and CRM automation to help brands launch quickly, scale efficiently, and manage operations without complexity.",
 };
 
 export default function HomeThirteenPage() {
@@ -23,9 +21,8 @@ export default function HomeThirteenPage() {
           <Header3 />
           <div id="wrapper" className="wrap">
             <Hero />
-            <Brands />
             <Features />
-            <Cta />
+            <Sections />
           </div>
         </div>
       </div>

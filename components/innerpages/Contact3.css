@@ -1,0 +1,372 @@
+.contact3 {
+  background-image: linear-gradient(to right, rgba(17, 24, 39, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(17, 24, 39, 0.06) 1px, transparent 1px);
+  background-size: 52px 52px;
+  min-height: calc(100vh - 70px);
+}
+
+.contact3-full {
+  width: 100%;
+  padding: 0 32px;
+}
+
+.contact3-shell {
+  position: relative;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  min-height: calc(100vh - 120px);
+}
+
+.contact3-browser {
+  border: 0;
+  border-radius: 0;
+  overflow: hidden;
+  background: transparent;
+  box-shadow: none;
+}
+
+.contact3-toolbar {
+  height: 58px;
+  border-bottom: 1px solid #ebedf0;
+  display: grid;
+  grid-template-columns: 140px 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 0 16px;
+  background: #fff;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.contact3-dots {
+  display: inline-flex;
+  gap: 6px;
+}
+
+.contact3-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #d1d5db;
+}
+
+.contact3-address {
+  justify-self: center;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 4px 10px;
+  min-width: 220px;
+  text-align: center;
+  color: #374151;
+}
+
+.contact3-actions {
+  white-space: nowrap;
+}
+
+.contact3-content {
+  position: relative;
+  padding: 34px 32px 32px;
+  background: transparent;
+  min-height: calc(100vh - 120px);
+}
+
+.contact3-intro {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 30px;
+}
+
+.contact3-intro h1 {
+  margin: 0 0 10px;
+  font-size: 56px;
+  line-height: 1.1;
+  color: #111827;
+}
+
+.contact3-intro p {
+  margin: 0;
+  font-size: 16px;
+  color: #4b5563;
+}
+
+.contact3-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 700px) minmax(320px, 420px);
+  justify-content: center;
+  gap: 36px;
+}
+
+.contact3-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact3-form > label,
+.contact3-form > .contact3-grid > label,
+.contact3-services {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contact3-form span,
+.contact3-services > span {
+  font-size: 13px;
+  color: #111827;
+  font-weight: 600;
+}
+
+.contact3-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.contact3-form input:not([type="checkbox"]),
+.contact3-form textarea {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 14px;
+  color: #111827;
+  background: #ffffff;
+}
+
+.contact3-services__grid input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+  margin: 0;
+}
+
+.contact3-form textarea {
+  min-height: 94px;
+  resize: vertical;
+}
+
+.contact3-services__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 14px;
+}
+
+.contact3-services__grid label {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  font-size: 13px;
+  color: #374151;
+}
+
+.contact3-form button {
+  margin-top: 6px;
+  border: 0;
+  height: 44px;
+  border-radius: 10px;
+  background: #111827;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.contact3-info h3 {
+  margin: 0 0 4px;
+  font-size: 28px;
+  color: #111827;
+}
+
+.contact3-info p {
+  margin: 0 0 10px;
+  color: #4b5563;
+  font-size: 14px;
+}
+
+.contact3-info__links {
+  list-style: none;
+  margin: 0 0 18px;
+  padding: 0;
+  color: #111827;
+  display: grid;
+  gap: 8px;
+}
+
+.contact3-info__links li,
+.contact3-info__contact-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact3-info__icon {
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #111827;
+}
+
+.contact3-info__icon svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.contact3-info__links a {
+  font-size: 16px;
+  line-height: 24px;
+  color: #111827;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+.contact3-info strong {
+  display: block;
+  margin: 0 0 14px;
+  color: #111827;
+  font-size: 16px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+.contact3-mobile-card {
+  display: none;
+  position: absolute;
+  right: 40px;
+  top: 150px;
+  width: 310px;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.98);
+  padding: 16px;
+  box-shadow: 0 16px 35px rgba(2, 6, 23, 0.08);
+}
+
+.contact3-mobile-card__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.contact3-mobile-card__logo {
+  width: 170px;
+  height: auto;
+}
+
+.contact3-mobile-card__menu {
+  width: 40px;
+  height: 32px;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 4px;
+  color: #111827;
+}
+
+.contact3-mobile-card__menu span {
+  display: block;
+  height: 2px;
+  border-radius: 1px;
+  background: currentColor;
+}
+
+.contact3-mobile-card__menu span:nth-child(1) {
+  width: 18px;
+}
+
+.contact3-mobile-card__menu span:nth-child(2) {
+  width: 22px;
+}
+
+.contact3-mobile-card__menu span:nth-child(3) {
+  width: 14px;
+}
+
+.contact3-mobile-card h2 {
+  margin: 0 0 8px;
+  font-size: 34px;
+  color: #111827;
+  line-height: 1.1;
+}
+
+.contact3-mobile-card p {
+  margin: 0 0 12px;
+  font-size: 13px;
+  color: #4b5563;
+}
+
+.contact3-form.is-compact button {
+  display: none;
+}
+
+@media (max-width: 1199.98px) {
+  .contact3-shell {
+    min-height: 0;
+  }
+  .contact3-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .contact3-full {
+    padding: 0 16px;
+  }
+
+  .contact3-browser {
+    display: none;
+  }
+  .contact3-mobile-card {
+    display: block;
+    position: static;
+    width: 100%;
+    margin-top: 0;
+    overflow: hidden;
+  }
+  .contact3-toolbar {
+    grid-template-columns: 1fr;
+    height: auto;
+    gap: 8px;
+    padding: 10px 12px;
+  }
+  .contact3-address {
+    justify-self: start;
+    min-width: 0;
+  }
+  .contact3-actions {
+    white-space: normal;
+  }
+  .contact3-content {
+    padding: 20px 14px;
+    min-height: 0;
+  }
+  .contact3-intro h1 {
+    font-size: 42px;
+  }
+  .contact3-grid,
+  .contact3-services__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact3-services__grid label {
+    display: flex;
+    justify-content: flex-start;
+  }
+}

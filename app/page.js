@@ -1,4 +1,4 @@
-import Home1 from "./(homes)/home-11/page";
+import Home1 from "./(homes)/home-13/page";
 export const metadata = {
   title:
     "Home 1 || Alvatech - Website",
