@@ -20,8 +20,8 @@ const integrationCards = [
     description:
       "Notify your teammates of the latest activities with instant Slack messages.",
     icon: "/assets/images/home-13/integrations/shopify.png",
-    iconWidth: 35,
-    iconHeight: 40,
+    iconWidth: 100,
+    iconHeight: 100,
   },
   {
     title: "Custom Development",
@@ -55,8 +55,8 @@ const integrationCards = [
     tag: "CRM",
     description: "Expand the ROI from your CRM and unlock easy generation and capabilities.",
     icon: "/assets/images/home-13/integrations/erp-solutions.png",
-    iconWidth: 48,
-    iconHeight: 48,
+    iconWidth: 55,
+    iconHeight: 55,
   },
   {
     title: "ZOHO CRM",
