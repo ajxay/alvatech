@@ -451,7 +451,7 @@
     flex-wrap: wrap;
   }
   .hero-twelve .hero-twelve__title .hero-twelve__line-1 {
-    margin-bottom: 24px;
+    margin-bottom: 1px;
   }
   .hero-twelve .hero-twelve__title .hero-twelve__line-2 {
     display: flex;

@@ -63,7 +63,7 @@ export default function Features() {
                 <article key={idx} className="features-thirteen__card">
                   <div
                     className="features-thirteen__media"
-                    style={{ background: card.mediaBg }}
+                    style={{ background: card.mediaBg,}}
                   >
                     <div className="features-thirteen__media-inner">
                       <Image

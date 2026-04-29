@@ -695,7 +695,11 @@
   }
 
   .home13-section {
-    padding: 56px 0;
+    padding: 40px 0;
+  }
+
+  .home13-header {
+    margin-bottom: 24px;
   }
 
   .home13-header h2 {
@@ -707,9 +711,19 @@
   .home13-seamless__grid,
   .home13-posts__grid,
   .home13-testimonials__grid,
-  .home13-timeline,
-  .home13-team__grid {
+  .home13-timeline {
     grid-template-columns: 1fr;
+  }
+
+  .home13-team__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 16px;
+  }
+
+  .home13-card {
+    padding: 20px;
+    gap: 12px;
+    min-height: auto;
   }
 
   .home13-cta {
