@@ -84,6 +84,8 @@ const seamlessCards = [
     text: "We create wireframes and UI/UX designs that are intuitive, engaging, and on-brand.",
     iconOffsetX: -114,
     iconOffsetY: -95,
+    iconShiftX: -4,
+    iconShiftY: 3,
     preview: "/assets/images/home-13/seamless/design.png",
   },
   {
@@ -308,6 +310,7 @@ export default function Sections() {
                       className="home13-seamless__icon-sprite"
                       style={{
                         backgroundPosition: `${item.iconOffsetX}px ${item.iconOffsetY}px`,
+                        transform: `translate(${item.iconShiftX || 0}px, ${item.iconShiftY || 0}px)`,
                       }}
                       aria-hidden="true"
                     />
@@ -329,30 +332,68 @@ export default function Sections() {
                 alt="Salesforce"
                 width={91}
                 height={64}
+                style={{
+                  maxWidth: "100%",
+                  height: "50px",     // Try forcing a specific height
+                  width: "auto",      // Maintain aspect ratio
+                  objectFit: "contain",
+                  display: "block"
+                }}
               />
               <Image
                 src="/assets/images/home-13/seamless/partner-klaviyo.png"
                 alt="Klaviyo"
                 width={82}
                 height={64}
+                style={{
+                  maxWidth: "100%",
+                  height: "70px",     // Try forcing a specific height
+                  width: "auto",      // Maintain aspect ratio
+                  objectFit: "contain",
+                  display: "block"
+                }}
               />
-              <Image
-                src="/assets/images/home-13/seamless/partner-shopify-bag.png"
-                alt="Shopify"
-                width={57}
-                height={64}
-              />
+              <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+                <Image
+                  src="/assets/images/home-13/seamless/partner-shopify-bag.png"
+                  alt="Shopify"
+                  width={180}
+                  height={180}
+                  style={{
+                    maxWidth: "100%",
+                    height: "90px",     // Try forcing a specific height
+                    width: "auto",      // Maintain aspect ratio
+                    objectFit: "contain",
+                    display: "block"
+                  }}
+                />
+              </div>
+    
               <Image
                 src="/assets/images/home-13/seamless/partner-zoho.png"
                 alt="Zoho"
                 width={146}
                 height={64}
+                style={{
+                  maxWidth: "100%",
+                  height: "50px",     // Try forcing a specific height
+                  width: "auto",      // Maintain aspect ratio
+                  objectFit: "contain",
+                  display: "block"
+                }}
               />
               <Image
                 src="/assets/images/home-13/seamless/partner-shopify-plus.png"
                 alt="Shopify Plus Partner"
                 width={214}
                 height={64}
+                style={{
+                  maxWidth: "100%",
+                  height: "40px",     // Try forcing a specific height
+                  width: "auto",      // Maintain aspect ratio
+                  objectFit: "contain",
+                  display: "block"
+                }}
               />
             </div>
           </div>

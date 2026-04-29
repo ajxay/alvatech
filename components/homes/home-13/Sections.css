@@ -732,6 +732,37 @@
     font-size: 28px;
   }
 
+  .home13-app-strip {
+    margin-top: 16px;
+    padding: 28px 16px;
+    gap: 24px;
+  }
+
+  .home13-app-strip__logos {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    justify-items: center;
+    align-items: center;
+    gap: 18px 12px;
+  }
+
+  .home13-app-strip__logos img {
+    height: 44px;
+    max-width: 100%;
+    grid-column: span 2;
+  }
+
+  .home13-app-strip__logos img:nth-child(4) {
+    grid-column: 1 / 4;
+    height: 52px;
+  }
+
+  .home13-app-strip__logos img:nth-child(5) {
+    grid-column: 4 / 7;
+    height: 64px;
+  }
+
+
   .home13-stats__item strong {
     font-size: 40px;
     line-height: 1.1;

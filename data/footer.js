@@ -1,19 +1,20 @@
 export const footerLinks = [
   {
     links: [
-      { href: "/page-about", label: "About" },
-      { href: "/page-integrations", label: "Services" },
-      { href: "$", label: "Career" },
-      { href: "/page-contact", label: "Contact" },
+      { href: "/page-salesforce", label: "Salesforce CRM" },
+      { href: "/page-erp", label: "ERP Solutions" },
+      { href: "/page-zoho", label: "ZOHO CRM" },
+      { href: "/page-development", label: "Custom Development" },
+      { href: "/page-marketing", label: "Marketing" },
     ],
   },
  
   {
     links: [
+      { href: "/page-integrations", label: " All Services" },
+      { href: "/page-about", label: "About" },
+      { href: "/page-career", label: "Career" },
       { href: "/page-contact", label: "Request a call" },
-      { href: "#", label: "Sign in" },
-      { href: "#", label: "Sign up" },
-      { href: "#", label: "Legal" },
     ],
   },
   {
