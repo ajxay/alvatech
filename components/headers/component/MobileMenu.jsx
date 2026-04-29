@@ -261,17 +261,10 @@ export default function MobileMenu() {
             data-uc-sticky="position: bottom"
           >
             <div className="vstack gap-1">
-              <span className="fs-7 opacity-60">Select theme:</span>
-              <div className="darkmode-trigger" data-darkmode-switch="">
-                <label className="switch">
-                  <input
-                    checked={!isDark}
-                    onChange={handleToggle}
-                    type="checkbox"
-                  />
-                  <span className="slider fs-5" />
-                </label>
-              </div>
+              {/* Theme toggle disabled: always render light mode. */}
+              <span className="fs-7 opacity-60" style={{ visibility: "hidden" }}>
+                Select theme:
+              </span>
             </div>
           </div>
           <div

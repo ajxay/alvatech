@@ -74,7 +74,8 @@ export default function Context({ children }) {
     localStorage.setItem("wishlist", JSON.stringify(wishList));
   }, [wishList]);
 
-  const [isDark, setisDark] = useState(true);
+  // Force light mode by default and prevent theme switching (see handleToggle).
+  const [isDark, setisDark] = useState(false);
   const toggleDark = (value) => {
     if (value) {
       document.documentElement.classList.add("uc-dark");
@@ -98,13 +99,10 @@ export default function Context({ children }) {
   }, []);
 
   const handleToggle = () => {
-    const saveBooleanValue = (key, value) => {
-      localStorage.setItem(key, JSON.stringify(value));
-    };
-    const newValue = !isDark;
-    setisDark(newValue);
-    saveBooleanValue("isDark", newValue);
-    toggleDark(newValue);
+    // Keep app in light mode only.
+    setisDark(false);
+    toggleDark(false);
+    localStorage.setItem("isDark", JSON.stringify(false));
   };
 
   const contextElement = {
