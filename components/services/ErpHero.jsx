@@ -76,14 +76,14 @@ export default function ErpHero() {
                   <Image
                     className="ltr:d-block rtl:d-none"
                     alt="erp-hero-mockup"
-                    src="/assets/images/template/hero-mockup.png"
+                    src="/assets/images/services/erp/hero-erp.png"
                     width="1492"
                     height="1250"
                   />
                   <Image
                     className="ltr:d-none rtl:d-block"
                     alt="erp-hero-mockup-rtl"
-                    src="/assets/images/template/hero-mockup-rtl.png"
+                    src="/assets/images/services/erp/hero-erp.png"
                     width="1492"
                     height="1250"
                   />

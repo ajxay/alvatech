@@ -80,14 +80,14 @@ export default function DevelopmentHero() {
                   <Image
                     className="ltr:d-block rtl:d-none"
                     alt="development-hero-mockup"
-                    src="/assets/images/template/hero-mockup.png"
+                    src="/assets/images/services/custom/hero-custom-dev.png"
                     width="1492"
                     height="1250"
                   />
                   <Image
                     className="ltr:d-none rtl:d-block"
                     alt="development-hero-mockup-rtl"
-                    src="/assets/images/template/hero-mockup-rtl.png"
+                    src="/assets/images/services/custom/hero-custom-dev.png"
                     width="1492"
                     height="1250"
                   />

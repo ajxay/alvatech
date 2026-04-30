@@ -129,6 +129,10 @@
 }
 
 @media (max-width: 575.98px) {
+  .features-thirteen {
+    margin-top: 20px;
+  }
+
   .features-thirteen__header {
     margin-bottom: 32px;
     gap: 16px;

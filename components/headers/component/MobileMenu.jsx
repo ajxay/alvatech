@@ -1,6 +1,7 @@
 "use client";
 import { useContextElement } from "@/context/Context";
-import { icons, menuItems } from "@/data/menu";
+import { menuItems } from "@/data/menu";
+import { socialLinks } from "@/data/footer";
 import { closeMobileMenu } from "@/utlis/toggleMobileMenu";
 import Image from "next/image";
 import Link from "next/link";
@@ -249,7 +250,7 @@ export default function MobileMenu() {
           </div>
           <ul className="social-icons nav-x mt-4">
             <li>
-              {icons.map((icon, index) => (
+              {socialLinks.slice(0, 4).map((icon, index) => (
                 <a key={index} href={icon.href}>
                   <i className={icon.iconClass} />
                 </a>

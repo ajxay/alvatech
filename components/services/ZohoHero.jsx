@@ -79,14 +79,14 @@ export default function ZohoHero() {
                   <Image
                     className="ltr:d-block rtl:d-none"
                     alt="zoho-hero-mockup"
-                    src="/assets/images/template/hero-mockup.png"
+                    src="/assets/images/services/zoho/hero-zoho.png"
                     width="1492"
                     height="1250"
                   />
                   <Image
                     className="ltr:d-none rtl:d-block"
                     alt="zoho-hero-mockup-rtl"
-                    src="/assets/images/template/hero-mockup-rtl.png"
+                    src="/assets/images/services/zoho/hero-zoho.png"
                     width="1492"
                     height="1250"
                   />
