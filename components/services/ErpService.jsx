@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const erpFeatures = [
   {
-    imageSrc: "/assets/images/template/home-four-feature-01.png",
+    imageSrc: "/assets/images/services/erp/cloud-based-erp.png",
     altText: "Cloud-Based ERP",
     title: "Cloud-Based ERP",
     description:
@@ -13,7 +13,7 @@ const erpFeatures = [
     reverseOrder: false,
   },
   {
-    imageSrc: "/assets/images/template/home-four-feature-02.png",
+    imageSrc: "/assets/images/services/erp/global-operations.png",
     altText: "Global Operations",
     title: "Global Operations",
     description:
@@ -23,7 +23,7 @@ const erpFeatures = [
     reverseOrder: true,
   },
   {
-    imageSrc: "/assets/images/template/home-four-feature-03.png",
+    imageSrc: "/assets/images/services/erp/smart-analytics.png",
     altText: "Smart Analytics",
     title: "Smart Analytics",
     description:
@@ -33,7 +33,7 @@ const erpFeatures = [
     reverseOrder: false,
   },
   {
-    imageSrc: "/assets/images/template/home-four-feature-04.png",
+    imageSrc: "/assets/images/services/erp/integration.png",
     altText: "Integration with Microsoft products",
     title: "Integration with Microsoft products",
     description:
@@ -43,7 +43,7 @@ const erpFeatures = [
     reverseOrder: true,
   },
   {
-    imageSrc: "/assets/images/template/home-four-feature-01.png",
+    imageSrc: "/assets/images/services/erp/custom-workflows.png",
     altText: "Custom Workflows",
     title: "Custom Workflows",
     description:
