@@ -13,7 +13,7 @@ export const footerLinks = [
     links: [
       { href: "/page-integrations", label: " All Services" },
       { href: "/page-about", label: "About" },
-      { href: "/page-career", label: "Career" },
+      { href: "#", label: "Career" },
       { href: "/page-contact", label: "Request a call" },
     ],
   },
@@ -34,7 +34,7 @@ export const footerLinks2 = [
       { href: "/page-features", label: "Features" },
       { href: "/page-pricing", label: "Pricing" },
       { href: "/page-about", label: "About" },
-      { href: "/page-career", label: "Career" },
+      { href: "#", label: "Career" },
       { href: "/page-contact", label: "Contact" },
       { href: "/page-contact-2", label: "Contact v2" },
     ],
@@ -93,7 +93,7 @@ export const footerLinks3 = [
       { href: "/page-pricing", label: "Overview" },
       { href: "/page-features", label: "Features" },
       { href: "/page-integrations", label: "Solutions" },
-      { href: "/page-career", label: "Tutorials" },
+      { href: "#", label: "Tutorials" },
       { href: "/page-contact", label: "Pricing" },
       { href: "/page-contact-2", label: "Releases" },
     ],
@@ -165,7 +165,7 @@ export const footerLinks4 = [
     title: "Company",
     links: [
       { text: "About us", href: "/page-about", isLink: true },
-      { text: "Careers", href: "/page-career", isLink: true },
+      { text: "Careers", href: "#", isLink: true },
       { text: "Press", href: "#" },
       { text: "News", href: "/blog", isLink: true },
       { text: "Media kit", href: "#" },
@@ -209,7 +209,7 @@ export const footerLinks5 = [
     title: "Company",
     links: [
       { text: "About us", href: "/page-about" },
-      { text: "Careers", href: "/page-career" },
+      { text: "Careers", href: "#" },
       { text: "Press", href: "/blog-sidebar" },
       { text: "News", href: "/blog-sidebar" },
       { text: "Contact", href: "/page-contact" },
@@ -242,7 +242,7 @@ export const footerLinks6 = [
   {
     links: [
       { text: "About us", href: "/page-about", isLink: true },
-      { text: "Careers", href: "/page-career", isLink: true },
+      { text: "Careers", href: "#", isLink: true },
       { text: "Press", href: "#", isLink: false },
       { text: "News", href: "/blog", isLink: true },
       { text: "Media kit", href: "#", isLink: false },

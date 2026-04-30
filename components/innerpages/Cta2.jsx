@@ -17,7 +17,7 @@ export default function Cta2() {
                 adaptable, driven, and friendly?&nbsp;
               </p>
               <Link
-                href={`/page-career`}
+                href={`#`}
                 className="btn btn-md rounded-default bg-white dark:bg-gray-700 dark:text-white border-gray-900 dark:border-white border-opacity-20 hover:border-opacity-40 shadow-xs mt-1"
               >
                 <span>Submit application</span>

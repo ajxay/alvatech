@@ -34,7 +34,7 @@ export default function CareerOpenings() {
                           </span>
                         </div>
                         <Link
-                          href={`/page-career-detail/${job.id}`}
+                          href={`#-detail/${job.id}`}
                           className="uc-link fs-7 fw-bold d-inline-flex items-center gap-narrow border-bottom pb-narrow"
                         >
                           <span>Apply now</span>

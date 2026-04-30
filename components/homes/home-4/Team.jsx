@@ -56,7 +56,7 @@ export default function Team() {
                 </div>
               </div>
               <Link
-                href={`/page-career`}
+                href={`#`}
                 className="uc-link dark:text-secondary fw-bold d-inline-flex items-center gap-narrow mx-auto"
               >
                 <span>We’re hiring</span>

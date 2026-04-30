@@ -42,7 +42,7 @@ export const menuItems = [
         label: "Know More About Us",
       },
       {
-        href: "/page-career",
+        href: "#",
         label: "We're hiring",
       },
       {
@@ -180,7 +180,7 @@ export const pagesData = [
         label: "About",
       },
       {
-        href: "/page-career",
+        href: "#",
         label: "Career",
       },
       {
@@ -192,7 +192,7 @@ export const pagesData = [
         },
       },
       {
-        href: "/page-career-detail/2",
+        href: "#-detail/2",
         label: "Job details",
       },
       {
@@ -438,8 +438,8 @@ export const mainPages = [
 ];
 
 export const othermenuItems = [
-  { href: "/page-career", icon: "unicon-wikis", title: "Career" },
-  { href: "/page-career-detail/2", icon: "unicon-wikis", title: "Job details" },
+  { href: "#", icon: "unicon-wikis", title: "Career" },
+  { href: "#-detail/2", icon: "unicon-wikis", title: "Job details" },
   { href: "/page-contact", icon: "unicon-wikis", title: "Contact" },
   { href: "/page-contact-2", icon: "unicon-wikis", title: "Contact v2" },
   { href: "/blog", icon: "unicon-course", title: "Blog" },
@@ -562,7 +562,7 @@ export const homeLinks = [
 export const links = [
   {
     id: 1,
-    // href: "/page-career",
+    // href: "#",
     href: "/page-contact",
     label: "Hire an Expert",
     isInternal: true,
@@ -588,7 +588,7 @@ export const links = [
   },
   {
     id: 5,
-    // href: "/page-career",
+    // href: "#",
     href: "#",
     label: "Career",
     isInternal: true,
@@ -672,7 +672,7 @@ export const sections = [
       { href: "#", text: "Customer stories" },
       { href: "#", text: "Resources" },
       { href: "/blog-sidebar", text: "Blog" },
-      { href: "/page-career", text: "Career" },
+      { href: "#", text: "Career" },
       { href: "/page-contact", text: "Help Center" },
     ],
   },
@@ -915,7 +915,7 @@ export const categories = [
       { text: "Customer stories", href: "#" },
       { text: "Resources", href: "#" },
       { text: "Blog", href: "/blog-sidebar" },
-      { text: "Career", href: "/page-career" },
+      { text: "Career", href: "#" },
       { text: "Help Center", href: "/page-contact" },
     ],
   },
