@@ -19,9 +19,9 @@ const integrationCards = [
     tag: "Productivity",
     description:
       "Notify your teammates of the latest activities with instant Slack messages.",
-    icon: "/assets/images/home-13/integrations/shopify.png",
-    iconWidth: 100,
-    iconHeight: 100,
+    icon: "/assets/images/integrations/shopify-2.png",
+    iconWidth: 42,
+    iconHeight: 42,
   },
   {
     title: "Custom Development",
@@ -73,6 +73,7 @@ const seamlessCards = [
     step: "01",
     title: "Discover",
     text: "We understand your goals, audience, and requirements to build the right strategy.",
+    iconAsset: "/assets/images/home-13/seamless/search-icon.svg",
     iconOffsetX: -52,
     iconOffsetY: -95,
     iconBgDark: true,
@@ -146,8 +147,9 @@ const blogPosts = [
     excerpt:
       "How do you create compelling presentations that wow your colleagues and impress your managers?",
     date: "April 26, 2026",
-    author: "Mark Zellers",
+    author: "Pratik Shah",
     image: "/assets/images/home-13/posts/post-1.png",
+    authorImageSrc: "/assets/images/avatars/01.jpg",
   },
   {
     title: "Migrating to Linear 101",
@@ -156,14 +158,16 @@ const blogPosts = [
     date: "April 26, 2026",
     author: "Mark Zellers",
     image: "/assets/images/home-13/posts/post-2.png",
+    authorImageSrc: "/assets/images/avatars/02.jpg",
   },
   {
     title: "Building your API stack",
     excerpt:
       "The rise of RESTful APIs has been met by a rise in tools for creating, testing, & managing them.",
     date: "April 26, 2026",
-    author: "Mark Zellers",
+    author: "Anjali Chauhan",
     image: "/assets/images/home-13/posts/post-3.png",
+    authorImageSrc: "/assets/images/avatars/04.png",
   },
 ];
 
@@ -306,14 +310,18 @@ export default function Sections() {
                       item.iconBgDark ? " is-dark" : ""
                     }`}
                   >
-                    <span
-                      className="home13-seamless__icon-sprite"
-                      style={{
-                        backgroundPosition: `${item.iconOffsetX}px ${item.iconOffsetY}px`,
-                        transform: `translate(${item.iconShiftX || 0}px, ${item.iconShiftY || 0}px)`,
-                      }}
-                      aria-hidden="true"
-                    />
+                    {item.iconAsset ? (
+                      <Image src={item.iconAsset} alt="" width={24} height={24} aria-hidden="true" />
+                    ) : (
+                      <span
+                        className="home13-seamless__icon-sprite"
+                        style={{
+                          backgroundPosition: `${item.iconOffsetX}px ${item.iconOffsetY}px`,
+                          transform: `translate(${item.iconShiftX || 0}px, ${item.iconShiftY || 0}px)`,
+                        }}
+                        aria-hidden="true"
+                      />
+                    )}
                   </span>
                 </div>
                 <h3>{item.title}</h3>
@@ -325,7 +333,7 @@ export default function Sections() {
             ))}
           </div>
           <div className="home13-app-strip">
-            <h3>Alva Tech Partners</h3>
+            <h3>Alvatech Partners</h3>
             <div className="home13-app-strip__logos">
               <Image
                 src="/assets/images/home-13/seamless/partner-salesforce.png"
@@ -355,7 +363,7 @@ export default function Sections() {
               />
               <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
                 <Image
-                  src="/assets/images/home-13/seamless/partner-shopify-bag.png"
+                  src="/assets/images/home-13/seamless/shopify-2.png"
                   alt="Shopify"
                   width={180}
                   height={180}
@@ -460,7 +468,7 @@ export default function Sections() {
                   <p className="home13-posts__excerpt">{post.excerpt}</p>
                   <div className="home13-posts__author">
                     <Image
-                      src="/assets/images/home-13/posts/author-mark-zellers.png"
+                      src={post.authorImageSrc}
                       alt={post.author}
                       width={48}
                       height={48}
