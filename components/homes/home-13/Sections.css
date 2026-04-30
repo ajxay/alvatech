@@ -579,14 +579,14 @@
 }
 
 .home13-cta__figure--left {
-  left: 85px;
+  left: 36px;
   top: 72px;
   width: 195px;
   height: 253px;
 }
 
 .home13-cta__figure--right {
-  right: 28px;
+  right: -8px;
   top: 72px;
   width: 278px;
   height: 309px;
@@ -598,21 +598,21 @@
 }
 
 .home13-cta__sparkle--left {
-  left: 332.5px;
+  left: 248px;
   top: 252.4px;
 }
 
 .home13-cta__sparkle--right {
-  right: 77px;
+  right: 18px;
   top: 79px;
 }
 
 .home13-cta h2 {
   margin: 0 auto 20px;
-  font-size: 64px;
-  line-height: 80px;
+  font-size: 58px;
+  line-height: 64px;
   color: #434243;
-  max-width: 433px;
+  max-width: 560px;
   letter-spacing: 0;
 }
 

@@ -9,6 +9,8 @@ import Feedback from "@/components/homes/home-2/Feedback";
 import Timeline from "@/components/homes/home-1/Timeline";
 import Team from "@/components/homes/home-1/Team";
 import Cta from "@/components/innerpages/Cta";
+import { team } from "@/components/homes/home-13/Sections";
+import Image from "next/image";
 export const metadata = {
   title:
     "About || Alvatech - Website",
@@ -45,8 +47,23 @@ export default function AboutPage() {
           <About2 />
           <AboutValues />
           <Feedback />
-          <Timeline />
-          <Team />
+          {/* <Timeline /> */}
+          <section className="home13-section home13-team">
+        <div className="container sm:max-w-lg xl:max-w-xl">
+          <header className="home13-header">
+            <h2>Our Executive Team</h2>
+          </header>
+          <div className="home13-team__grid">
+            {team.map((member) => (
+              <article key={member.name} className="home13-team__card">
+                <Image src={member.image} alt={member.name} width={180} height={180} />
+                <h3>{member.name}</h3>
+                <p>{member.role}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
           <Cta />
         </div>
       </div>

@@ -36,26 +36,23 @@ export default function About2() {
             <div
               className="panel vstack text-center"
               data-anime="onview: -100; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});"
-            >
+            >   
               <h2 className="h3 lg:h2 mb-4">How Alvatech helps</h2>
               <p className="fs-5 xl:fs-4 text-dark dark:text-white text-opacity-70">
-                Teams use Alvatech to improve document workflows, insights, and
-                speed while delivering an amazing experience for their
-                customers. Businesses trust Alvatech’s all-in-one document
-                automation software to streamline the process to create,
-                approve, and eSign proposals, quotes, contracts, and more. With
-                powerful document creation and workflow capabilities, teams can
-                provide their customers with a more professional, timely, and
-                engaging experience.
+              Our solutions are designed to integrate seamlessly with your existing systems,
+ensuring a smooth transition and maximum ROI. We specialize in crafting tailored
+digital strategies that align with your business goals and drive measurable growth.
+With a focus on user experience, security, and scalability, we deliver solutions
+that not only meet your immediate needs but also position you for long-term success.
               </p>
-              <p className="fs-5 xl:fs-4 text-dark dark:text-white text-opacity-70">
+              {/* <p className="fs-5 xl:fs-4 text-dark dark:text-white text-opacity-70">
                 In 2014, Steven Smith have gotten so much of our time back that
                 we're now able to put towards things that are actually helping
                 our company as opposed to just throwing content out there. and
                 the idea of Alvatech was born. Today, Alvatech empowers teams to
                 easily communicate with customers through personalized documents
                 that can be created in minutes, build meaningful relationships..
-              </p>
+              </p> */}
               <div className="panel mt-6">
                 <div className="row child-cols-6 lg:child-cols-4 justify-center g-3 col-match">
                   {panelsData.map((panel, index) => (

@@ -65,8 +65,8 @@ export default function Feedback() {
                 href="#"
                 className="uc-link fw-bold d-inline-flex items-center gap-narrow"
               >
-                <span>See all feedbacks</span>
-                <i className="icon icon-1 unicon-arrow-right rtl:rotate-180" />
+                {/* <span>See all feedbacks</span> */}
+                {/* <i className="icon icon-1 unicon-arrow-right rtl:rotate-180" /> */}
               </a>
             </div>
           </div>

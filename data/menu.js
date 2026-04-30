@@ -34,12 +34,8 @@ export const menuItems = [
     label: "Resources",
     subItems: [
       {
-        href: "/blog",
+        href: "/#",
         label: "Blog",
-      },
-      {
-        href: "/page-features",
-        label: "Know More About Us",
       },
       {
         href: "#",

@@ -211,7 +211,7 @@ const timeline = [
   { year: "2026", title: "AI automation", icon: "/assets/images/template/fun.svg" },
 ];
 
-const team = [
+ export const team = [
   { name: "MONICA LANDBERG", role: "CEO", image: "/assets/images/home-13/team/monica-landberg.png" },
   { name: "ANDRES LANDBERG", role: "COO", image: "/assets/images/home-13/team/andres-landberg.png" },
   { name: "NIKHIL KHETAN", role: "CTO", image: "/assets/images/home-13/team/nikhil-khetan.png" },
@@ -571,7 +571,11 @@ export default function Sections() {
               className="home13-cta__sparkle home13-cta__sparkle--left"
             />
             <div className="home13-cta__content">
-              <h2>Prevent costly mistakes</h2>
+              <h2>
+                {"Prevent\u00A0costly"}
+                <br />
+                mistakes
+              </h2>
               <p>Lets build optimized solutions for your business.</p>
               <Link href="/page-contact" className="home13-cta__button">
                 Reach Us Now

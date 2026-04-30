@@ -46,12 +46,12 @@ export default function About() {
                 About Alvatech.
               </h1>
               <p className="fs-6 md:fs-5 text-dark dark:text-white text-opacity-70">
-                In 2014, Steven Smith have gotten so much of our time back that
-                we're now able to put towards things that are actually helping
-                our company as opposed to just throwing content out there. and
-                the idea of Alvatech was born. Today, Alvatech empowers teams to
-                easily communicate with customers through personalized documents
-                that can be created in minutes, build meaningful relationships.
+              At Alvatech, we combine strategic consulting with advanced digital solutions to
+transform how modern enterprises operate and grow. Our expertise spans
+high performance e-commerce, custom web & app development, data driven marketing,
+and scalable CRM & ERP implementations.
+Built on Swedish engineering excellence, we help organizations unlock efficiency,
+accelerate innovation, and future ready their digital ecosystem.
               </p>
             </div>
             <div className="panel row child-cols-12 col-match g-1 sm:g-2">

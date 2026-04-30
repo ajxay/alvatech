@@ -82,7 +82,7 @@ export default function NewsletterModal() {
                     className="form-control form-control-sm w-full fs-6 bg-white dark:border-white dark:border-gray-700"
                     placeholder="Your email address.."
                   />
-                  <button type="submit" className="btn btn-sm btn-primary">
+                  <button type="submit" className="btn btn-sm btn-primary" style={{ backgroundColor: "#84BA41", borderColor: "#84BA41", color: "#434243" }}>
                     Sign up
                   </button>
                 </form>
