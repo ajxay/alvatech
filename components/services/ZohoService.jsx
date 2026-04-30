@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const zohoFeatures = [
   {
-    imageSrc: "/assets/images/template/home-four-feature-01.png",
+    imageSrc: "/assets/images/services/zoho/lead-management.png",
     altText: "Lead Management",
     title: "Lead Management",
     description:
@@ -13,7 +13,7 @@ const zohoFeatures = [
     reverseOrder: false,
   },
   {
-    imageSrc: "/assets/images/template/home-four-feature-02.png",
+    imageSrc: "/assets/images/services/zoho/workflow-automation.png",
     altText: "Workflow Automation",
     title: "Workflow Automation",
     description:
@@ -23,7 +23,7 @@ const zohoFeatures = [
     reverseOrder: true,
   },
   {
-    imageSrc: "/assets/images/template/home-four-feature-03.png",
+    imageSrc: "/assets/images/services/zoho/sales-process-builder.png",
     altText: "Sales Process Builder",
     title: "Sales Process Builder",
     description:
@@ -33,7 +33,7 @@ const zohoFeatures = [
     reverseOrder: false,
   },
   {
-    imageSrc: "/assets/images/template/home-four-feature-04.png",
+    imageSrc: "/assets/images/services/zoho/analytics-forecasting.png",
     altText: "Analytics & Forecasting",
     title: "Analytics & Forecasting",
     description:
