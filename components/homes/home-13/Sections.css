@@ -271,6 +271,261 @@
   object-fit: contain;
 }
 
+.home13-marketplaces {
+  margin-top: 48px;
+  border-radius: 16px;
+  padding: 80px 48px 56px;
+  background: linear-gradient(180deg, #f1f4ee 26.68%, #d6e9bf 149.01%);
+  background-image:
+    linear-gradient(180deg, #f1f4ee 26.68%, #d6e9bf 149.01%),
+    url("/assets/images/home-13/marketplaces/bg-pattern.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.home13-marketplaces__header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.home13-marketplaces__header h3 {
+  margin: 0;
+  font-size: 44px;
+  line-height: 1.2;
+  color: #434243;
+  font-weight: 500;
+}
+
+.home13-marketplaces__header p {
+  margin: 14px 0 0;
+  color: #434243;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.home13-marketplaces__block {
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.6) 100%);
+  padding: 24px 16px;
+}
+
+.home13-marketplaces__block h4 {
+  margin: 0;
+  text-align: center;
+  color: #434243;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+}
+
+.home13-marketplaces__block--top,
+.home13-marketplaces__block--bottom {
+  max-width: 880px;
+  margin: 0 auto;
+  padding-inline: 40px;
+}
+
+.home13-marketplaces__middle {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 320px 1fr 320px;
+  align-items: center;
+  gap: 40px;
+}
+
+.home13-marketplaces__block--bottom {
+  margin-top: 40px;
+}
+
+.home13-marketplaces__rows {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.home13-marketplaces__row,
+.home13-marketplaces__list-item {
+  min-height: 38px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0%, rgba(254, 252, 252, 0.75) 100%);
+}
+
+.home13-marketplaces__row {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  padding: 0 26px;
+}
+
+.home13-marketplaces__block--top .home13-marketplaces__row:last-child {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding-inline: 92px;
+}
+
+.home13-marketplaces__row-item,
+.home13-marketplaces__list-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.home13-marketplaces__row-item span,
+.home13-marketplaces__list-item span {
+  color: #434243;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.home13-marketplaces__list {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.home13-marketplaces__list-item {
+  min-height: 36px;
+  justify-content: center;
+}
+
+.home13-marketplaces__hub {
+  --ring-size: 240px;
+  --dot-size: 20px;
+  --axis-color: #84ba41;
+  position: relative;
+  height: 320px;
+  display: grid;
+  place-items: center;
+}
+
+.home13-marketplaces__hub-ring {
+  width: var(--ring-size);
+  height: var(--ring-size);
+  border-radius: 999px;
+  border: 2px dashed #f2f5ef;
+  background: radial-gradient(54.17% 54.17% at 50% 50%, #f4fcea 0%, #d9eac4 100%);
+  position: relative;
+  z-index: 1;
+}
+
+.home13-marketplaces__hub-core {
+  width: 100px;
+  height: 100px;
+  border-radius: 16px;
+  background: #f4fcea;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+
+.home13-marketplaces__axis {
+  position: absolute;
+  background: var(--axis-color);
+  z-index: 2;
+}
+
+.home13-marketplaces__axis--horizontal {
+  left: 12px;
+  right: 12px;
+  top: 50%;
+  height: 2px;
+  transform: translateY(-50%);
+}
+
+.home13-marketplaces__axis--vertical {
+  left: 50%;
+  top: 10px;
+  bottom: 10px;
+  width: 2px;
+  transform: translateX(-50%);
+}
+
+.home13-marketplaces__axis--horizontal::before,
+.home13-marketplaces__axis--horizontal::after,
+.home13-marketplaces__axis--vertical::before,
+.home13-marketplaces__axis--vertical::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.home13-marketplaces__axis--horizontal::before {
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 10px solid var(--axis-color);
+}
+
+.home13-marketplaces__axis--horizontal::after {
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 10px solid var(--axis-color);
+}
+
+.home13-marketplaces__axis--vertical::before {
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 10px solid var(--axis-color);
+}
+
+.home13-marketplaces__axis--vertical::after {
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid var(--axis-color);
+}
+
+.home13-marketplaces__dot {
+  position: absolute;
+  width: var(--dot-size);
+  height: var(--dot-size);
+  border-radius: 999px;
+  border: 4px solid var(--axis-color);
+  background: #d9eac4;
+  z-index: 4;
+}
+
+.home13-marketplaces__dot--left {
+  left: calc(50% - (var(--ring-size) / 2) - (var(--dot-size) / 2));
+  top: calc(50% - (var(--dot-size) / 2));
+}
+
+.home13-marketplaces__dot--top {
+  top: calc(50% - (var(--ring-size) / 2) - (var(--dot-size) / 2));
+  left: calc(50% - (var(--dot-size) / 2));
+}
+
+.home13-marketplaces__dot--right {
+  right: calc(50% - (var(--ring-size) / 2) - (var(--dot-size) / 2));
+  top: calc(50% - (var(--dot-size) / 2));
+}
+
+.home13-marketplaces__dot--bottom {
+  bottom: calc(50% - (var(--ring-size) / 2) - (var(--dot-size) / 2));
+  left: calc(50% - (var(--dot-size) / 2));
+}
+
 .home13-stats {
   background: linear-gradient(180deg, #d6e9bf 0%, #f3f6f1 100%);
 }
@@ -656,6 +911,28 @@
     padding: 36px 24px;
   }
 
+  .home13-marketplaces {
+    padding: 56px 24px 40px;
+  }
+
+  .home13-marketplaces__header h3 {
+    font-size: 36px;
+  }
+
+  .home13-marketplaces__middle {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .home13-marketplaces__hub {
+    order: -1;
+  }
+
+  .home13-marketplaces__block--top,
+  .home13-marketplaces__block--bottom {
+    padding-inline: 20px;
+  }
+
   .home13-app-strip__logos {
     flex-wrap: wrap;
     justify-content: center;
@@ -763,6 +1040,107 @@
     margin-top: 16px;
     padding: 28px 16px;
     gap: 24px;
+  }
+
+  .home13-marketplaces {
+    margin-top: 24px;
+    padding: 36px 12px 24px;
+    border-radius: 12px;
+  }
+
+  .home13-marketplaces__header {
+    margin-bottom: 24px;
+  }
+
+  .home13-marketplaces__header h3 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .home13-marketplaces__header p {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .home13-marketplaces__block {
+    border-radius: 12px;
+    padding: 18px 12px;
+  }
+
+  .home13-marketplaces__block h4 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .home13-marketplaces__block--top,
+  .home13-marketplaces__block--bottom {
+    padding-inline: 12px;
+  }
+
+  .home13-marketplaces__rows {
+    gap: 10px;
+  }
+
+  .home13-marketplaces__row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 8px 6px;
+    gap: 8px 10px;
+  }
+
+  .home13-marketplaces__block--top .home13-marketplaces__row:last-child {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 8px 6px;
+  }
+
+  .home13-marketplaces__row-item,
+  .home13-marketplaces__list-item {
+    justify-content: flex-start;
+    padding: 2px 10px;
+  }
+
+  .home13-marketplaces__row-item span,
+  .home13-marketplaces__list-item span {
+    font-size: 16px;
+  }
+
+  .home13-marketplaces__middle {
+    margin-top: 20px;
+    gap: 16px;
+  }
+
+  .home13-marketplaces__block--bottom {
+    margin-top: 20px;
+  }
+
+  .home13-marketplaces__hub {
+    --ring-size: 170px;
+    --dot-size: 16px;
+    height: 220px;
+  }
+
+  .home13-marketplaces__hub-ring {
+    width: 170px;
+    height: 170px;
+  }
+
+  .home13-marketplaces__hub-core {
+    width: 82px;
+    height: 82px;
+  }
+
+  .home13-marketplaces__hub-core img {
+    width: 52px;
+    height: 52px;
+  }
+
+  .home13-marketplaces__axis--horizontal {
+    left: 10px;
+    right: 10px;
+  }
+
+  .home13-marketplaces__dot {
+    border-width: 3px;
   }
 
   .home13-app-strip__logos {

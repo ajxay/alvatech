@@ -107,6 +107,51 @@ const seamlessCards = [
   },
 ];
 
+const marketplaceMigrationRows = [
+  [
+    { name: "Vendre", logo: "/assets/images/home-13/marketplaces/vendre.png", width: 16, height: 16 },
+    { name: "Norce", logo: "/assets/images/home-13/marketplaces/norce.png", width: 49, height: 14 },
+    { name: "Kodmyran", logo: "/assets/images/home-13/marketplaces/kodmyran.png", width: 50, height: 16 },
+    { name: "Magento", logo: "/assets/images/home-13/marketplaces/magento.png", width: 16, height: 16 },
+  ],
+  [
+    { name: "Centra", logo: "/assets/images/home-13/marketplaces/centra.png", width: 50, height: 16 },
+    { name: "Abicart", logo: "/assets/images/home-13/marketplaces/abicart.png", width: 51, height: 16 },
+    { name: "Woocommerce", logo: "/assets/images/home-13/marketplaces/woocommerce.png", width: 27, height: 16 },
+  ],
+];
+
+const marketplacePayment = [
+  { name: "Qliro", logo: "/assets/images/home-13/marketplaces/qliro.png", width: 26, height: 16 },
+  { name: "Klarna", logo: "/assets/images/home-13/marketplaces/klarna.png", width: 18, height: 18 },
+  { name: "Swish", logo: "/assets/images/home-13/marketplaces/swish.png", width: 18, height: 18 },
+  { name: "Vipps", logo: "/assets/images/home-13/marketplaces/vipps.png", width: 16, height: 16 },
+  { name: "Paypal", logo: "/assets/images/home-13/marketplaces/paypal.png", width: 16, height: 16 },
+];
+
+const marketplaceShipping = [
+  { name: "PostNord", logo: "/assets/images/home-13/marketplaces/postnord.png", width: 16, height: 16 },
+  { name: "DHL", logo: "/assets/images/home-13/marketplaces/dhl.png", width: 18, height: 18 },
+  { name: "Budbee", logo: "/assets/images/home-13/marketplaces/budbee.png", width: 56, height: 14 },
+  { name: "Instabox", logo: "/assets/images/home-13/marketplaces/instabox.png", width: 16, height: 16 },
+  { name: "Nshift", logo: "/assets/images/home-13/marketplaces/nshift.png", width: 54, height: 14 },
+];
+
+const marketplaceRows = [
+  [
+    { name: "Zalando", logo: "/assets/images/home-13/marketplaces/zalando.png", width: 19, height: 20 },
+    { name: "Amazon", logo: "/assets/images/home-13/marketplaces/amazon.png", width: 26, height: 20 },
+    { name: "CDON", logo: "/assets/images/home-13/marketplaces/cdon.png", width: 40, height: 13 },
+    { name: "ASOS", logo: "/assets/images/home-13/marketplaces/asos.png", width: 56, height: 16 },
+  ],
+  [
+    { name: "Bol", logo: "/assets/images/home-13/marketplaces/bol.png", width: 42, height: 16 },
+    { name: "Elkjop", logo: "/assets/images/home-13/marketplaces/elkjop.png", width: 44, height: 16 },
+    { name: "Ellos", logo: "/assets/images/home-13/marketplaces/ellos.png", width: 36, height: 16 },
+    { name: "Zalando", logo: "/assets/images/home-13/marketplaces/zalando.png", width: 19, height: 20 },
+  ],
+];
+
 const valueCards = [
   {
     title: "Make an impact",
@@ -404,6 +449,89 @@ export default function Sections() {
                 }}
               />
             </div>
+          </div>
+
+          <div id="marketplaces" className="home13-marketplaces">
+            <header className="home13-marketplaces__header">
+              <h3>Connect with top marketing places</h3>
+              <p>Everything you need is right at your fingertips</p>
+            </header>
+
+            <article className="home13-marketplaces__block home13-marketplaces__block--top">
+              <h4>Migrate from existing Ecommerce platform</h4>
+              <div className="home13-marketplaces__rows">
+                {marketplaceMigrationRows.map((row, rowIndex) => (
+                  <div key={`migration-row-${rowIndex}`} className="home13-marketplaces__row">
+                    {row.map((item) => (
+                      <div key={item.name} className="home13-marketplaces__row-item">
+                        <Image src={item.logo} alt="" width={item.width} height={item.height} aria-hidden="true" />
+                        <span>{item.name}</span>
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </article>
+
+            <div className="home13-marketplaces__middle">
+              <article className="home13-marketplaces__block home13-marketplaces__block--side">
+                <h4>Payment gateway integration</h4>
+                <div className="home13-marketplaces__list">
+                  {marketplacePayment.map((item) => (
+                    <div key={item.name} className="home13-marketplaces__list-item">
+                      <Image src={item.logo} alt="" width={item.width} height={item.height} aria-hidden="true" />
+                      <span>{item.name}</span>
+                    </div>
+                  ))}
+                </div>
+              </article>
+
+              <div className="home13-marketplaces__hub">
+                <span className="home13-marketplaces__axis home13-marketplaces__axis--horizontal" aria-hidden="true" />
+                <span className="home13-marketplaces__axis home13-marketplaces__axis--vertical" aria-hidden="true" />
+                <span className="home13-marketplaces__dot home13-marketplaces__dot--left" aria-hidden="true" />
+                <span className="home13-marketplaces__dot home13-marketplaces__dot--top" aria-hidden="true" />
+                <span className="home13-marketplaces__dot home13-marketplaces__dot--right" aria-hidden="true" />
+                <span className="home13-marketplaces__dot home13-marketplaces__dot--bottom" aria-hidden="true" />
+                <div className="home13-marketplaces__hub-ring" />
+                <div className="home13-marketplaces__hub-core">
+                  <Image
+                    src="/assets/images/home-13/marketplaces/shopify-center.png"
+                    alt="Shopify"
+                    width={64}
+                    height={64}
+                  />
+                </div>
+              </div>
+
+              <article className="home13-marketplaces__block home13-marketplaces__block--side">
+                <h4>Shipping integration</h4>
+                <div className="home13-marketplaces__list">
+                  {marketplaceShipping.map((item) => (
+                    <div key={item.name} className="home13-marketplaces__list-item">
+                      <Image src={item.logo} alt="" width={item.width} height={item.height} aria-hidden="true" />
+                      <span>{item.name}</span>
+                    </div>
+                  ))}
+                </div>
+              </article>
+            </div>
+
+            <article className="home13-marketplaces__block home13-marketplaces__block--bottom">
+              <h4>Marketplace</h4>
+              <div className="home13-marketplaces__rows">
+                {marketplaceRows.map((row, rowIndex) => (
+                  <div key={`marketplace-row-${rowIndex}`} className="home13-marketplaces__row">
+                    {row.map((item, itemIndex) => (
+                      <div key={`${item.name}-${itemIndex}`} className="home13-marketplaces__row-item">
+                        <Image src={item.logo} alt="" width={item.width} height={item.height} aria-hidden="true" />
+                        <span>{item.name}</span>
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </article>
           </div>
         </div>
       </section>
