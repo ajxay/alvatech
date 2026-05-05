@@ -48,7 +48,7 @@ function ContactForm({ compact = false }) {
           ))}
         </div>
       </div>
-      {!compact ? <button type="submit">Send message</button> : null}
+      <button type="submit">Send message</button>
     </form>
   );
 }

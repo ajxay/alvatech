@@ -312,10 +312,6 @@
   color: #4b5563;
 }
 
-.contact3-form.is-compact button {
-  display: none;
-}
-
 @media (max-width: 1199.98px) {
   .contact3-shell {
     min-height: 0;
