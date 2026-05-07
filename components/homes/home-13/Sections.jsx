@@ -1,3 +1,8 @@
+"use client";
+
+import { useEffect } from "react";
+import gsap from "gsap";
+import { Observer, ScrollTrigger } from "gsap/all";
 import Image from "next/image";
 import Link from "next/link";
 import "./Sections.css";
@@ -268,6 +273,95 @@ const timeline = [
 ];
 
 export default function Sections() {
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger, Observer);
+    const mm = gsap.matchMedia();
+
+    mm.add("(max-width: 767.98px)", () => {
+      const root = document.querySelector("#marketplaces .home13-marketplaces__mobile");
+      if (!root) return () => {};
+
+      const cardsStage = root.querySelector(".home13-marketplaces__cards");
+      const cards = gsap.utils.toArray(root.querySelectorAll(".home13-mkt-card"));
+      if (!cardsStage || cards.length !== 4) return () => {};
+
+      const duration = 0.5;
+      let animating = false;
+      const stageHeight = cardsStage.offsetHeight || window.innerHeight;
+      const enterFromY = stageHeight + 40;
+
+      gsap.set(cards, {
+        y: (index) => (index === 0 ? 0 : enterFromY),
+        transformOrigin: "center top",
+      });
+
+      const tl = gsap.timeline({ paused: true });
+      tl.add("card2");
+      tl.to(cards[0], { scale: 0.92, duration });
+      tl.to(cards[1], { y: 0, duration }, "<");
+
+      tl.add("card3");
+      tl.to(cards[1], { scale: 0.94, duration });
+      tl.to(cards[2], { y: 0, duration }, "<");
+
+      tl.add("card4");
+      tl.to(cards[2], { scale: 0.96, duration });
+      tl.to(cards[3], { y: 0, duration }, "<");
+
+      // Keep a final step so last card has its own settle state.
+      tl.add("card5");
+      tl.to(cards[3], { scale: 0.98, duration: duration * 0.8 });
+
+      function tweenToLabel(direction, isScrollingDown) {
+        if ((!tl.nextLabel() && isScrollingDown) || (!tl.previousLabel() && !isScrollingDown)) {
+          cardsObserver.disable();
+          return;
+        }
+        if (!animating && direction) {
+          animating = true;
+          tl.tweenTo(direction, { onComplete: () => (animating = false) });
+        }
+      }
+
+      const cardsObserver = Observer.create({
+        wheelSpeed: -1,
+        onDown: () => tweenToLabel(tl.previousLabel(), false),
+        onUp: () => tweenToLabel(tl.nextLabel(), true),
+        tolerance: 10,
+        preventDefault: true,
+        onEnable(self) {
+          const savedScroll = self.scrollY();
+          self._restoreScroll = () => self.scrollY(savedScroll);
+          document.addEventListener("scroll", self._restoreScroll, { passive: false });
+        },
+        onDisable: (self) => {
+          document.removeEventListener("scroll", self._restoreScroll);
+        },
+      });
+
+      cardsObserver.disable();
+
+      const trigger = ScrollTrigger.create({
+        trigger: root,
+        pin: true,
+        start: "top 20%",
+        end: "+=60",
+        onEnter: () => !cardsObserver.isEnabled && cardsObserver.enable(),
+        onEnterBack: () => !cardsObserver.isEnabled && cardsObserver.enable(),
+        onLeave: () => cardsObserver.disable(),
+        onLeaveBack: () => cardsObserver.disable(),
+      });
+
+      return () => {
+        trigger.kill();
+        cardsObserver.kill();
+        tl.kill();
+      };
+    });
+
+    return () => mm.revert();
+  }, []);
+
   return (
     <>
       <section className="home13-trust">
@@ -456,82 +550,145 @@ export default function Sections() {
               <h3>Connect with top marketing places</h3>
               <p>Everything you need is right at your fingertips</p>
             </header>
-
-            <article className="home13-marketplaces__block home13-marketplaces__block--top">
-              <h4>Migrate from existing Ecommerce platform</h4>
-              <div className="home13-marketplaces__rows">
-                {marketplaceMigrationRows.map((row, rowIndex) => (
-                  <div key={`migration-row-${rowIndex}`} className="home13-marketplaces__row">
-                    {row.map((item) => (
-                      <div key={item.name} className="home13-marketplaces__row-item">
-                        <Image src={item.logo} alt="" width={item.width} height={item.height} aria-hidden="true" />
-                        <span>{item.name}</span>
-                      </div>
-                    ))}
-                  </div>
-                ))}
-              </div>
-            </article>
-
-            <div className="home13-marketplaces__middle">
-              <article className="home13-marketplaces__block home13-marketplaces__block--side">
-                <h4>Payment gateway integration</h4>
-                <div className="home13-marketplaces__list">
-                  {marketplacePayment.map((item) => (
-                    <div key={item.name} className="home13-marketplaces__list-item">
-                      <Image src={item.logo} alt="" width={item.width} height={item.height} aria-hidden="true" />
-                      <span>{item.name}</span>
+            <div className="home13-marketplaces__desktop">
+              <article className="home13-marketplaces__block home13-marketplaces__block--top">
+                <h4>Migrate from existing Ecommerce platform</h4>
+                <div className="home13-marketplaces__rows">
+                  {marketplaceMigrationRows.map((row, rowIndex) => (
+                    <div key={`migration-row-${rowIndex}`} className="home13-marketplaces__row">
+                      {row.map((item) => (
+                        <div key={item.name} className="home13-marketplaces__row-item">
+                          <Image src={item.logo} alt="" width={item.width} height={item.height} aria-hidden="true" />
+                          <span>{item.name}</span>
+                        </div>
+                      ))}
                     </div>
                   ))}
                 </div>
               </article>
 
-              <div className="home13-marketplaces__hub">
-                <span className="home13-marketplaces__axis home13-marketplaces__axis--horizontal" aria-hidden="true" />
-                <span className="home13-marketplaces__axis home13-marketplaces__axis--vertical" aria-hidden="true" />
-                <span className="home13-marketplaces__dot home13-marketplaces__dot--left" aria-hidden="true" />
-                <span className="home13-marketplaces__dot home13-marketplaces__dot--top" aria-hidden="true" />
-                <span className="home13-marketplaces__dot home13-marketplaces__dot--right" aria-hidden="true" />
-                <span className="home13-marketplaces__dot home13-marketplaces__dot--bottom" aria-hidden="true" />
-                <div className="home13-marketplaces__hub-ring" />
-                <div className="home13-marketplaces__hub-core">
-                  <Image
-                    src="/assets/images/home-13/marketplaces/shopify-center.png"
-                    alt="Shopify"
-                    width={64}
-                    height={64}
-                  />
+              <div className="home13-marketplaces__middle">
+                <article className="home13-marketplaces__block home13-marketplaces__block--side">
+                  <h4>Payment gateway integration</h4>
+                  <div className="home13-marketplaces__list">
+                    {marketplacePayment.map((item) => (
+                      <div key={item.name} className="home13-marketplaces__list-item">
+                        <Image src={item.logo} alt="" width={item.width} height={item.height} aria-hidden="true" />
+                        <span>{item.name}</span>
+                      </div>
+                    ))}
+                  </div>
+                </article>
+
+                <div className="home13-marketplaces__hub">
+                  <span className="home13-marketplaces__axis home13-marketplaces__axis--horizontal" aria-hidden="true" />
+                  <span className="home13-marketplaces__axis home13-marketplaces__axis--vertical" aria-hidden="true" />
+                  <span className="home13-marketplaces__dot home13-marketplaces__dot--left" aria-hidden="true" />
+                  <span className="home13-marketplaces__dot home13-marketplaces__dot--top" aria-hidden="true" />
+                  <span className="home13-marketplaces__dot home13-marketplaces__dot--right" aria-hidden="true" />
+                  <span className="home13-marketplaces__dot home13-marketplaces__dot--bottom" aria-hidden="true" />
+                  <div className="home13-marketplaces__hub-ring" />
+                  <div className="home13-marketplaces__hub-core">
+                    <Image
+                      src="/assets/images/home-13/marketplaces/shopify-center.png"
+                      alt="Shopify"
+                      width={64}
+                      height={64}
+                    />
+                  </div>
                 </div>
+
+                <article className="home13-marketplaces__block home13-marketplaces__block--side">
+                  <h4>Shipping integration</h4>
+                  <div className="home13-marketplaces__list">
+                    {marketplaceShipping.map((item) => (
+                      <div key={item.name} className="home13-marketplaces__list-item">
+                        <Image src={item.logo} alt="" width={item.width} height={item.height} aria-hidden="true" />
+                        <span>{item.name}</span>
+                      </div>
+                    ))}
+                  </div>
+                </article>
               </div>
 
-              <article className="home13-marketplaces__block home13-marketplaces__block--side">
-                <h4>Shipping integration</h4>
-                <div className="home13-marketplaces__list">
-                  {marketplaceShipping.map((item) => (
-                    <div key={item.name} className="home13-marketplaces__list-item">
-                      <Image src={item.logo} alt="" width={item.width} height={item.height} aria-hidden="true" />
-                      <span>{item.name}</span>
+              <article className="home13-marketplaces__block home13-marketplaces__block--bottom">
+                <h4>Marketplace</h4>
+                <div className="home13-marketplaces__rows">
+                  {marketplaceRows.map((row, rowIndex) => (
+                    <div key={`marketplace-row-${rowIndex}`} className="home13-marketplaces__row">
+                      {row.map((item, itemIndex) => (
+                        <div key={`${item.name}-${itemIndex}`} className="home13-marketplaces__row-item">
+                          <Image src={item.logo} alt="" width={item.width} height={item.height} aria-hidden="true" />
+                          <span>{item.name}</span>
+                        </div>
+                      ))}
                     </div>
                   ))}
                 </div>
               </article>
             </div>
 
-            <article className="home13-marketplaces__block home13-marketplaces__block--bottom">
-              <h4>Marketplace</h4>
-              <div className="home13-marketplaces__rows">
-                {marketplaceRows.map((row, rowIndex) => (
-                  <div key={`marketplace-row-${rowIndex}`} className="home13-marketplaces__row">
-                    {row.map((item, itemIndex) => (
-                      <div key={`${item.name}-${itemIndex}`} className="home13-marketplaces__row-item">
-                        <Image src={item.logo} alt="" width={item.width} height={item.height} aria-hidden="true" />
-                        <span>{item.name}</span>
-                      </div>
-                    ))}
-                  </div>
-                ))}
+            <div className="home13-marketplaces__mobile">
+              <div className="home13-marketplaces__cards-section">
+                <div className="home13-marketplaces__cards">
+                  <article className="home13-marketplaces__block home13-marketplaces__block--top home13-mkt-card">
+                    <h4>Migrate from existing Ecommerce platform</h4>
+                    <div className="home13-marketplaces__rows">
+                      {marketplaceMigrationRows.map((row, rowIndex) => (
+                        <div key={`migration-row-mobile-${rowIndex}`} className="home13-marketplaces__row">
+                          {row.map((item) => (
+                            <div key={item.name} className="home13-marketplaces__row-item">
+                              <Image src={item.logo} alt="" width={item.width} height={item.height} aria-hidden="true" />
+                              <span>{item.name}</span>
+                            </div>
+                          ))}
+                        </div>
+                      ))}
+                    </div>
+                  </article>
+
+                  <article className="home13-marketplaces__block home13-marketplaces__block--side home13-mkt-card">
+                    <h4>Payment gateway integration</h4>
+                    <div className="home13-marketplaces__list">
+                      {marketplacePayment.map((item) => (
+                        <div key={item.name} className="home13-marketplaces__list-item">
+                          <Image src={item.logo} alt="" width={item.width} height={item.height} aria-hidden="true" />
+                          <span>{item.name}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </article>
+
+                  <article className="home13-marketplaces__block home13-marketplaces__block--side home13-mkt-card">
+                    <h4>Shipping integration</h4>
+                    <div className="home13-marketplaces__list">
+                      {marketplaceShipping.map((item) => (
+                        <div key={item.name} className="home13-marketplaces__list-item">
+                          <Image src={item.logo} alt="" width={item.width} height={item.height} aria-hidden="true" />
+                          <span>{item.name}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </article>
+
+                  <article className="home13-marketplaces__block home13-marketplaces__block--bottom home13-mkt-card">
+                    <h4>Marketplace</h4>
+                    <div className="home13-marketplaces__rows">
+                      {marketplaceRows.map((row, rowIndex) => (
+                        <div key={`marketplace-row-mobile-${rowIndex}`} className="home13-marketplaces__row">
+                          {row.map((item, itemIndex) => (
+                            <div key={`${item.name}-${itemIndex}`} className="home13-marketplaces__row-item">
+                              <Image src={item.logo} alt="" width={item.width} height={item.height} aria-hidden="true" />
+                              <span>{item.name}</span>
+                            </div>
+                          ))}
+                        </div>
+                      ))}
+                    </div>
+                  </article>
+                </div>
               </div>
-            </article>
+            </div>
           </div>
         </div>
       </section>
