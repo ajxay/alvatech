@@ -77,7 +77,7 @@ export default function Header3() {
                 href={`/page-contact`}
                 style={{ backgroundColor: "#84BA41", borderColor: "#84BA41" }}
               >
-             Request A Call
+             Schedule A Call
               </Link>
               <a
                 className="d-block lg:d-none uc-icon uc-navbar-toggle-icon"

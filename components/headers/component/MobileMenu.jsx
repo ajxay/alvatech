@@ -245,7 +245,7 @@ export default function MobileMenu() {
               className="btn btn-primary rounded-default text-white text-none w-100 justify-center"
               style={{ backgroundColor: "#84BA41", borderColor: "#84BA41" }}
             >
-              Request A Call
+              Schedule A Call
             </Link>
           </div>
           <ul className="social-icons nav-x mt-4">

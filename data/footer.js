@@ -14,7 +14,7 @@ export const footerLinks = [
       { href: "/page-integrations", label: " All Services" },
       { href: "/page-about", label: "About" },
       { href: "#", label: "Career" },
-      { href: "/page-contact", label: "Request a call" },
+      { href: "/page-contact", label: "Schedule A Call" },
     ],
   },
   {

@@ -9,14 +9,27 @@ import Feedback from "@/components/homes/home-2/Feedback";
 import Timeline from "@/components/homes/home-1/Timeline";
 import Team from "@/components/homes/home-1/Team";
 import Cta from "@/components/innerpages/Cta";
-import { team } from "@/components/homes/home-13/Sections";
+// import { team } from "@/components/homes/home-13/Sections";
 import Image from "next/image";
+import "@/components/homes/home-13/Sections.css";
 export const metadata = {
   title:
     "About || Alvatech - Website",
   description:
     "Alvatech - Website",
 };
+
+export const team = [
+  { name: "MONICA LANDBERG", role: "CEO", image: "/assets/images/home-13/team/monica-landberg.png" },
+  { name: "ANDRES LANDBERG", role: "COO", image: "/assets/images/home-13/team/andres-landberg.png" },
+  { name: "NIKHIL KHETAN", role: "CTO", image: "/assets/images/home-13/team/nikhil-khetan.png" },
+  { name: "ANDRE RANDAHL", role: "CFO", image: "/assets/images/home-13/team/andre-randahl.png" },
+  { name: "MANISH KUMAR", role: "Tech Lead", image: "/assets/images/home-13/team/manish-kumar.png" },
+  { name: "ASHISH RANJAN", role: "Marketing Lead", image: "/assets/images/home-13/team/ashish-ranjan.png" },
+  { name: "LUICY", role: "Lead of Fun", image: "/assets/images/home-13/team/luicy.png" },
+  { name: "MOOLY", role: "Director of Joy", image: "/assets/images/home-13/team/mooly.png" },
+];
+
 export default function AboutPage() {
   return (
     <>
