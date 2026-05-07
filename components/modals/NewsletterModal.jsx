@@ -59,7 +59,7 @@ export default function NewsletterModal() {
               <Image
                 className="media-cover"
                 alt="Newsletter image"
-                src="/assets/images/common/newsletter.jpg"
+                src="/assets/images/common/newsletter.png"
                 width="544"
                 height="660"
               />

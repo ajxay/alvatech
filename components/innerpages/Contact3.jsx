@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import "./Contact3.css";
 
 const services = [
@@ -13,42 +14,115 @@ const services = [
 ];
 
 function ContactForm({ compact = false }) {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [toast, setToast] = useState({ show: false, type: "success", message: "" });
+
+  useEffect(() => {
+    if (!toast.show) return undefined;
+    const timer = setTimeout(() => {
+      setToast((prev) => ({ ...prev, show: false }));
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, [toast.show]);
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    if (isSubmitting) return;
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const payload = {
+      firstName: formData.get("firstName")?.toString() || "",
+      lastName: formData.get("lastName")?.toString() || "",
+      email: formData.get("email")?.toString() || "",
+      phone: formData.get("phone")?.toString() || "",
+      message: formData.get("message")?.toString() || "",
+      services: formData.getAll("services[]").map(String),
+      source: compact ? "contact3-mobile" : "contact3-web",
+    };
+
+    try {
+      setIsSubmitting(true);
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
+
+      setToast({
+        show: true,
+        type: "success",
+        message: "Message sent successfully.",
+      });
+      form.reset();
+    } catch (_error) {
+      setToast({
+        show: true,
+        type: "error",
+        message: "Unable to send right now. Please try again.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+
   return (
-    <form className={`contact3-form${compact ? " is-compact" : ""}`} onSubmit={(e) => e.preventDefault()}>
+    <form className={`contact3-form${compact ? " is-compact" : ""}`} onSubmit={handleSubmit}>
       <div className="contact3-grid">
         <label>
           <span>First name</span>
-          <input type="text" placeholder="First name" />
+          <input type="text" name="firstName" placeholder="First name" required />
         </label>
         <label>
           <span>Last name</span>
-          <input type="text" placeholder="Last name" />
+          <input type="text" name="lastName" placeholder="Last name" required />
         </label>
       </div>
       <label>
         <span>Email</span>
-        <input type="email" placeholder="you@company.com" />
+        <input type="email" name="email" placeholder="you@company.com" required />
       </label>
       <label>
         <span>Phone number</span>
-        <input type="text" placeholder="+1 (555) 000-0000" />
+        <input type="text" name="phone" placeholder="+1 (555) 000-0000" required />
       </label>
       <label>
         <span>Message</span>
-        <textarea placeholder="Leave us a message..." />
+        <textarea name="message" placeholder="Leave us a message..." />
       </label>
       <div className="contact3-services">
         <span>Services</span>
         <div className="contact3-services__grid">
           {services.map((item) => (
             <label key={item.label}>
-              <input type="checkbox" defaultChecked={item.checked} />
+              <input
+                type="checkbox"
+                name="services[]"
+                value={item.label}
+                defaultChecked={item.checked}
+              />
               <span>{item.label}</span>
             </label>
           ))}
         </div>
       </div>
-      <button type="submit">Send message</button>
+      <button type="submit" disabled={isSubmitting}>
+        {isSubmitting ? "Sending..." : "Send message"}
+      </button>
+      {toast.show ? (
+        <div
+          className={`contact3-toast ${toast.type === "error" ? "is-error" : "is-success"}`}
+          role="status"
+          aria-live="polite"
+        >
+          {toast.message}
+        </div>
+      ) : null}
     </form>
   );
 }

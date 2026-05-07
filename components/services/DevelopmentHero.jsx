@@ -54,8 +54,8 @@ export default function DevelopmentHero() {
                           borderColor: "#84BA41",
                         }}
                       >
-                        <span className="d-none md:d-block">Hear from us</span>
-                        <span className="d-block md:d-none">Hear from us</span>
+                        <span className="d-none md:d-block">Contact Us</span>
+                        <span className="d-block md:d-none">Contact Us</span>
                       </Link>
                     </div>
                   </form>

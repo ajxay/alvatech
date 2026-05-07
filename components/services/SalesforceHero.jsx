@@ -61,7 +61,7 @@ export default function SalesforceHero() {
                           borderColor: "#84BA41",
                         }}
                       >
-                        Hear from us
+                        Contact Us
                       </Link>
                     </div>
                   </form>

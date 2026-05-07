@@ -51,8 +51,8 @@ export default function Hero() {
                         className="btn btn-md btn-primary rounded-default h-48px w-100 lg:min-w-150px text-white"
                         style={{ backgroundColor: "#84BA41", borderColor: "#84BA41" }}
                       >
-                        <span className="d-none md:d-block">Hear from us</span>
-                        <span className="d-block md:d-none">Hear from us</span>
+                        <span className="d-none md:d-block">Contact Us</span>
+                        <span className="d-block md:d-none">Contact Us</span>
                       </Link>
                     </div>
                   </form>

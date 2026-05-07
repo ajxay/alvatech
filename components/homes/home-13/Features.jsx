@@ -49,9 +49,7 @@ export default function Features() {
                 Smart features for your business
               </h2>
               <p className="features-thirteen__subtitle m-0">
-                We focus on helping you to make useful content more accessible
-                with an ultimate goal for a good sharing profit as a content
-                creator.
+                We combine strategic consulting with advanced digital solutions to transform how modern enterprises operate and grow.
               </p>
             </header>
 

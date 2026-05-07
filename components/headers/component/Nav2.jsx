@@ -161,7 +161,7 @@ export default function Nav2() {
                     </span>
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <a
                     className="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5"
                     onClick={openNewsletterModal}
@@ -175,7 +175,7 @@ export default function Nav2() {
                       </span>
                     </span>
                   </a>
-                </li>
+                </li> */}
                 <li>
                   <Link
                     className="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5"
@@ -194,7 +194,7 @@ export default function Nav2() {
             </div>
             <div>
               <ul className="uc-nav uc-navbar-dropdown-nav p-2 h-100 bg-gray-25 dark:bg-gray-300 dark:bg-opacity-5">
-                <li>
+                {/* <li>
                   <Link
                     className="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5"
                     href={`#`}
@@ -208,6 +208,21 @@ export default function Nav2() {
                       </span>
                     </span>
                   </Link>
+                </li> */}
+                 <li>
+                  <a
+                    className="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5"
+                    onClick={openNewsletterModal}
+                    role="button"
+                  >
+                    <i className="icon-1 unicon-email fw-bold text-primary dark:text-secondary" />
+                    <span className="vstack gap-narrow mt-nnarrow">
+                      <b className="fw-bold dark:text-white">Newsletter</b>
+                      <span className="fw-normal">
+                        The latest industry reports, updates and info.
+                      </span>
+                    </span>
+                  </a>
                 </li>
                 <li>
                   <Link

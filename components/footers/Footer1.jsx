@@ -28,7 +28,7 @@ export default function Footer1() {
                         />
                       </Link>
                       <p style={{ maxWidth: 340, margin: 0, lineHeight: 1.5, fontSize: 16 }}>
-                        Alvatech is a leading Shopify development agency,
+                        Alvatech is a leading digital transformation agency,
                         delivering tailored ecommerce solutions to help businesses
                         grow and thrive online.
                       </p>

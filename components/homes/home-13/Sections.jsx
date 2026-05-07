@@ -161,7 +161,7 @@ const valueCards = [
   {
     title: "Make an impact",
     description:
-      "This powerful tool eliminates the need to leave Salesforce to get things done as I can create a custom proposal with dynamic pricing tables. You can also customize your own dynamic versions.",
+      "We build scalable digital solutions that help businesses achieve measurable growth across every stage of their digital journey.",
     icon: "/assets/images/home-13/values/impact.png",
     iconWidth: 100,
     iconHeight: 100,
@@ -169,15 +169,15 @@ const valueCards = [
   {
     title: "Learn",
     description:
-      "Teams are masters of their craft though we're all experts in our respective fields, we always make time to expand our minds.",
+      "Technology evolves fast, and so do we. Our team constantly explores new strategies, platforms, and innovations to deliver future ready solutions.",
     icon: "/assets/images/home-13/values/learn.png",
     iconWidth: 73,
     iconHeight: 82,
   },
   {
-    title: "Empathy",
+    title: "Client First Approach",
     description:
-      "We strive to be empathetic to every customer and colleague and by doing so we provide a better experience for all.",
+      "We believe strong partnerships create lasting success. By understanding our clients’ goals and challenges, we deliver solutions that are practical, personalized, and results driven.",
     icon: "/assets/images/home-13/values/empathy.png",
     iconWidth: 80,
     iconHeight: 64,
@@ -397,9 +397,9 @@ export default function Sections() {
       <section id="integrations" className="home13-section home13-integrations">
         <div className="container sm:max-w-lg xl:max-w-xl">
           <header className="home13-header">
-            <h2>Boost your efficiency with integrations</h2>
+            <h2>Boost your business with technology</h2>
             <p>
-              Connect every part of your business with integrations that will
+              Connect every part of your business with technology that will
               simplify your workflow.
             </p>
           </header>
@@ -433,7 +433,7 @@ export default function Sections() {
       <section className="home13-section home13-seamless">
         <div className="container sm:max-w-lg xl:max-w-xl">
           <header className="home13-header">
-            <h2>Seamless Integrations That Power Your Growth</h2>
+            <h2>Everything You Need to Grow</h2>
             <p>
               Connect your tools, automate workflows, and create a unified
               system that scales effortlessly with your business.
@@ -770,7 +770,7 @@ export default function Sections() {
         </div>
       </section>
 
-      <section className="home13-section home13-testimonials">
+      {/* <section className="home13-section home13-testimonials">
         <div className="container sm:max-w-lg xl:max-w-xl">
           <header className="home13-header">
             <h2>Don&apos;t just take our words</h2>
@@ -802,7 +802,7 @@ export default function Sections() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* <section className="home13-section">
         <div className="container sm:max-w-lg xl:max-w-xl">
