@@ -2,7 +2,7 @@ export const facts = [
   {
     id: 1,
     year: 2014,
-    description: "Alvatech founded",
+    description: "Alva Tech founded",
     animation:
       "onview: -100; textContent: 2014; round: 1; easing: linear; duration: 1200;",
   },

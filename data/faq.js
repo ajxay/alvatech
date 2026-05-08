@@ -286,6 +286,39 @@ export const zohoCrmFaq = [
   },
 ];
 
+export const integrationsFaq = [
+  {
+    id: 1,
+    question: "What services does Alva Tech offer?",
+    answer:
+      "Alva Tech provides digital marketing services including social media management, branding, SEO, paid ads, content creation, and website development.",
+  },
+  {
+    id: 2,
+    question: "How can Alva Tech help my business grow?",
+    answer:
+      "We create result-driven marketing strategies that improve your online presence, attract customers, and increase brand engagement.",
+  },
+  {
+    id: 3,
+    question: "Do you offer customized marketing packages?",
+    answer:
+      "Yes, we tailor our services according to your business goals, industry, and budget requirements.",
+  },
+  {
+    id: 4,
+    question: "Do you manage social media accounts and ads?",
+    answer:
+      "Absolutely. We handle content creation, posting, audience engagement, and paid advertising campaigns across multiple platforms.",
+  },
+  {
+    id: 5,
+    question: "How can I get started with Alva Tech?",
+    answer:
+      "Simply connect with us through our website, email, or social media, and our team will guide you with the best marketing solutions for your brand.",
+  },
+];
+
 export const accordionItems2 = [
   {
     id: 23,

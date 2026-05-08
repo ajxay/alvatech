@@ -7,6 +7,7 @@ import Testimonials from "@/components/homes/home-3/Testimonials";
 import Brands from "@/components/common/Brands2";
 import Cta from "@/components/innerpages/features/Cta";
 import Integrations from "@/components/innerpages/Integrations";
+import { integrationsFaq } from "@/data/faq";
 export const metadata = {
   title:
     "Integrations || Alvatech - Website",
@@ -21,7 +22,7 @@ export default function IntegrationPage() {
 
         <div id="wrapper" className="wrap">
           <Integrations />
-          <Faq />
+          <Faq faqData={integrationsFaq} />
           {/* <Testimonials /> */} {/* commented out testimonials section */}
           <div
             id="clients_brands"

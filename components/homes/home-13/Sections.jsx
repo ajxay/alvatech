@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { Observer, ScrollTrigger } from "gsap/all";
 import Image from "next/image";
 import Link from "next/link";
+import { blogsPosts4 } from "@/data/blogs";
 import "./Sections.css";
 
 const trustedLogos = [
@@ -23,7 +24,7 @@ const integrationCards = [
     title: "Shopify",
     tag: "Productivity",
     description:
-      "Manage your online store, products, orders, and customer experiences with seamless Shopify integrations.",
+      "Build and scale your Shopify store with optimized storefronts, app integrations, and conversion-focused customer experiences.",
     icon: "/assets/images/integrations/shopify-2.png",
     iconWidth: 42,
     iconHeight: 42,
@@ -32,7 +33,7 @@ const integrationCards = [
     title: "Custom Development",
     tag: "CRM",
     description:
-      "Build tailored CRM workflows, automations, and custom Salesforce CPQ solutions for your business needs.",
+      "Develop tailored web and mobile solutions with scalable architecture, custom APIs, and workflows built for your operations.",
     icon: "/assets/images/home-13/integrations/custom-development.png",
     iconWidth: 48,
     iconHeight: 48,
@@ -41,7 +42,7 @@ const integrationCards = [
     title: "Marketing",
     tag: "Payment",
     description:
-      "Run targeted campaigns, track conversions, and optimize performance across Google and Meta platforms.",
+      "Launch data-driven marketing campaigns, improve lead quality, and optimize performance across search, social, and paid channels.",
     icon: "/assets/images/home-13/integrations/marketing.png",
     iconWidth: 67,
     iconHeight: 40,
@@ -50,7 +51,7 @@ const integrationCards = [
     title: "Salesforce CRM",
     tag: "Payment",
     description:
-      "Streamline sales, customer relationships, and business operations with Salesforce CRM solutions.",
+      "Optimize sales pipelines, automate customer journeys, and unify service operations with customized Salesforce CRM solutions.",
     icon: "/assets/images/home-13/integrations/salesforce-crm.png",
     iconWidth: 51,
     iconHeight: 36,
@@ -58,7 +59,7 @@ const integrationCards = [
   {
     title: "ERP Solutions",
     tag: "CRM",
-    description: "Integrate finance, inventory, operations, and reporting systems to improve business efficiency and scalability.",
+    description: "Unify finance, inventory, procurement, and operations in one ERP ecosystem to improve visibility and business scalability.",
     icon: "/assets/images/home-13/integrations/erp-solutions.png",
     iconWidth: 55,
     iconHeight: 55,
@@ -66,7 +67,7 @@ const integrationCards = [
   {
     title: "ZOHO CRM",
     tag: "Integration platforms",
-    description: "Create automated workflows, manage leads, and improve customer engagement with Zoho CRM tools.",
+    description: "Automate lead management, streamline sales follow-ups, and improve customer engagement with tailored Zoho CRM solutions.",
     icon: "/assets/images/home-13/integrations/zoho-crm.png",
     iconWidth: 91,
     iconHeight: 40,
@@ -191,35 +192,15 @@ const stats = [
   { label: "Years of industry experience", value: "16+" },
 ];
 
-const blogPosts = [
-  {
-    title: "UX review presentations",
-    excerpt:
-      "How do you create compelling presentations that wow your colleagues and impress your managers?",
-    date: "April 26, 2026",
-    author: "Pratik Shah",
-    image: "/assets/images/home-13/posts/post-1.png",
-    authorImageSrc: "/assets/images/avatars/01.jpg",
-  },
-  {
-    title: "Migrating to Linear 101",
-    excerpt:
-      "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here's how to get started.",
-    date: "April 26, 2026",
-    author: "Mark Zellers",
-    image: "/assets/images/home-13/posts/post-2.png",
-    authorImageSrc: "/assets/images/avatars/02.jpg",
-  },
-  {
-    title: "Building your API stack",
-    excerpt:
-      "The rise of RESTful APIs has been met by a rise in tools for creating, testing, & managing them.",
-    date: "April 26, 2026",
-    author: "Anjali Chauhan",
-    image: "/assets/images/home-13/posts/post-3.png",
-    authorImageSrc: "/assets/images/avatars/04.png",
-  },
-];
+const blogPosts = blogsPosts4.slice(0, 3).map((post) => ({
+  id: post.id,
+  title: post.title,
+  excerpt: post.desc,
+  date: post.date,
+  author: post.authorName,
+  image: post.imgSrc,
+  authorImageSrc: post.authorImg,
+}));
 
 const testimonials = [
   {
@@ -696,7 +677,7 @@ export default function Sections() {
       <section className="home13-section home13-stats">
         <div className="container sm:max-w-lg xl:max-w-xl">
           <header className="home13-header">
-            <h2>Our Values it&apos;s Simple!</h2>
+            <h2>Our Values</h2>
           </header>
           <div className="home13-values__grid">
             {valueCards.map((item) => (
@@ -730,11 +711,11 @@ export default function Sections() {
       <section className="home13-section home13-posts">
         <div className="container sm:max-w-lg xl:max-w-xl">
           <header className="home13-header home13-posts__header">
-            <h2>Latest posts and updates</h2>
+            <h2>Latest Posts and Updates</h2>
           </header>
           <div className="home13-posts__grid">
             {blogPosts.map((post) => (
-              <article key={post.title} className="home13-posts__card">
+              <article key={post.id} className="home13-posts__card">
                 <div
                   className="home13-posts__media"
                   style={{ backgroundImage: `url(${post.image})` }}
@@ -742,13 +723,17 @@ export default function Sections() {
                 />
                 <div className="home13-posts__body">
                   <div className="home13-posts__title-row">
-                    <h3>{post.title}</h3>
-                    <Image
-                      src="/assets/images/home-13/posts/post-arrow-icon.svg"
-                      alt=""
-                      width={24}
-                      height={24}
-                    />
+                    <h3>
+                      <Link href={`/blog-details/${post.id}`}>{post.title}</Link>
+                    </h3>
+                    <Link href={`/blog-details/${post.id}`} aria-label={`Read ${post.title}`}>
+                      <Image
+                        src="/assets/images/home-13/posts/post-arrow-icon.svg"
+                        alt=""
+                        width={24}
+                        height={24}
+                      />
+                    </Link>
                   </div>
                   <p className="home13-posts__excerpt">{post.excerpt}</p>
                   <div className="home13-posts__author">

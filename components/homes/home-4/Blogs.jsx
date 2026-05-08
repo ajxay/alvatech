@@ -25,7 +25,7 @@ export default function Blogs() {
                     Our insights
                   </span>
                   <h2 className="title h3 lg:h2 xl:h1 m-0">
-                    Latest posts and updates
+                    Latest Posts and Updates
                   </h2>
                 </div>
                 <div>

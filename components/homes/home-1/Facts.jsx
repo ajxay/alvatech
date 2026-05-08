@@ -19,7 +19,7 @@ export default function Facts() {
                 data-anime="onview: -100; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: 100;"
                 style={{ transform: "translateY(0px)", opacity: 1 }}
               >
-                Our Values it’s Simple!
+                Our Values
               </h2>
               <div
                 className="panel vstack g-2 lg:gap-4"
