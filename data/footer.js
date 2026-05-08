@@ -1,11 +1,16 @@
 export const footerLinks = [
   {
     links: [
+      { href: "/page-shopify", label: "Shopify Development" },
+      { href: "/page-development", label: "Custom Development" },
+      { href: "/page-marketing", label: "Marketing" },
+     ],
+  },
+  {
+    links: [
       { href: "/page-salesforce", label: "Salesforce CRM" },
       { href: "/page-erp", label: "ERP Solutions" },
       { href: "/page-zoho", label: "ZOHO CRM" },
-      { href: "/page-development", label: "Custom Development" },
-      { href: "/page-marketing", label: "Marketing" },
     ],
   },
  
@@ -13,18 +18,17 @@ export const footerLinks = [
     links: [
       { href: "/page-integrations", label: " All Services" },
       { href: "/page-about", label: "About" },
-      { href: "#", label: "Career" },
       { href: "/page-contact", label: "Schedule A Call" },
     ],
   },
   {
     links: [
       { href: "#", label: "Blog" },
-      { href: "#", label: "FAQ" },
-      { href: "#", label: "Terms of service" },
-      { href: "#", label: "Privacy policy" },
+      { href: "/page-terms", label: "Terms of service" },
+      { href: "/page-privacy", label: "Privacy policy" },
     ],
   },
+  
 ];
 
 export const footerLinks2 = [

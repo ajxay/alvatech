@@ -43,10 +43,10 @@ export default function About() {
           >
             <div className="vstack items-center gap-4 mb-4 sm:mb-6 lg:mb-8 max-w-850px mx-auto text-center">
               <h1 className="h2 sm:h1 lg:display-6 xl:display-5 m-0">
-                About Alvatech.
+                About Alva Tech.
               </h1>
               <p className="fs-6 md:fs-5 text-dark dark:text-white text-opacity-70">
-              At Alvatech, we combine strategic consulting with advanced digital solutions to
+              At Alva Tech, we combine strategic consulting with advanced digital solutions to
 transform how modern enterprises operate and grow. Our expertise spans
 high performance e-commerce, custom web & app development, data driven marketing,
 and scalable CRM & ERP implementations.

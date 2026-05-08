@@ -23,7 +23,7 @@ const integrationCards = [
     title: "Shopify",
     tag: "Productivity",
     description:
-      "Notify your teammates of the latest activities with instant Slack messages.",
+      "Manage your online store, products, orders, and customer experiences with seamless Shopify integrations.",
     icon: "/assets/images/integrations/shopify-2.png",
     iconWidth: 42,
     iconHeight: 42,
@@ -32,7 +32,7 @@ const integrationCards = [
     title: "Custom Development",
     tag: "CRM",
     description:
-      "Leave a lasting impression all done inside Salesforce CPQ platform.",
+      "Build tailored CRM workflows, automations, and custom Salesforce CPQ solutions for your business needs.",
     icon: "/assets/images/home-13/integrations/custom-development.png",
     iconWidth: 48,
     iconHeight: 48,
@@ -41,7 +41,7 @@ const integrationCards = [
     title: "Marketing",
     tag: "Payment",
     description:
-      "Collect credit card and ACH payments within your sales documents.",
+      "Run targeted campaigns, track conversions, and optimize performance across Google and Meta platforms.",
     icon: "/assets/images/home-13/integrations/marketing.png",
     iconWidth: 67,
     iconHeight: 40,
@@ -50,7 +50,7 @@ const integrationCards = [
     title: "Salesforce CRM",
     tag: "Payment",
     description:
-      "Provide a world-class checkout experience for your customers.",
+      "Streamline sales, customer relationships, and business operations with Salesforce CRM solutions.",
     icon: "/assets/images/home-13/integrations/salesforce-crm.png",
     iconWidth: 51,
     iconHeight: 36,
@@ -58,7 +58,7 @@ const integrationCards = [
   {
     title: "ERP Solutions",
     tag: "CRM",
-    description: "Expand the ROI from your CRM and unlock easy generation and capabilities.",
+    description: "Integrate finance, inventory, operations, and reporting systems to improve business efficiency and scalability.",
     icon: "/assets/images/home-13/integrations/erp-solutions.png",
     iconWidth: 55,
     iconHeight: 55,
@@ -66,7 +66,7 @@ const integrationCards = [
   {
     title: "ZOHO CRM",
     tag: "Integration platforms",
-    description: "Create custom, automated workflows using your favorite Zaps.",
+    description: "Create automated workflows, manage leads, and improve customer engagement with Zoho CRM tools.",
     icon: "/assets/images/home-13/integrations/zoho-crm.png",
     iconWidth: 91,
     iconHeight: 40,
@@ -185,10 +185,10 @@ const valueCards = [
 ];
 
 const stats = [
-  { label: "Lexend founded", value: "2014" },
-  { label: "Hardworking group", value: "50" },
-  { label: "Document workflows", value: "4600" },
-  { label: "Taux convertion", value: "17%" },
+  { label: "Experts in-house team size.", value: "70+ " },
+  { label: "Strong Day to Day Support", value: "24x7" },
+  { label: "Implementations", value: "400+" },
+  { label: "Years of industry experience", value: "16+" },
 ];
 
 const blogPosts = [

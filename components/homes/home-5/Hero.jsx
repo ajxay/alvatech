@@ -18,14 +18,10 @@ export default function Hero() {
                   data-anime="targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});"
                 >
                   <h1 className="h2 sm:display-6 xl:display-4 fw-light mb-1 xl:mb-2">
-                    Use Data &amp; AI, Responsibly
+                  Stop Guessing  Start Growing. 
                   </h1>
                   <p className="fs-6 xl:fs-4">
-                    Unlock your productivity potential with our
-                    <br className="d-none lg:d-block" />
-                    intuitive and powerful to-do app. Manage tasks, set
-                    priorities, collaborate with your team, and track progress
-                    effortlessly.
+                  From paid ads to SEO, social media to conversion optimization — we build and run performance-driven marketing strategies that turn traffic into revenue. No vanity metrics. Just measurable growth.
                   </p>
                   <div className="vstack gap-1 mt-2 xl:mt-4">
                     <form
@@ -44,7 +40,7 @@ export default function Hero() {
                       </div>
                       <div className="col-12 sm:col-auto">
                         <button className="btn btn-md btn-primary rounded-default h-48px w-100 lg:min-w-150px text-white" style={{ backgroundColor: "#84BA41", borderColor: "#84BA41" }}>
-                          Get a demo
+                          Get a Call
                         </button>
                       </div>
                     </form>
@@ -143,7 +139,7 @@ export default function Hero() {
                           />
                         </li>
                         <li>
-                          <span className="fs-8 fw-medium ms-narrow">5.0</span>
+                          <span className="fs-8 fw-medium ms-narrow">4.7</span>
                         </li>
                       </ul>
                       <span className="fs-7 fw-medium">

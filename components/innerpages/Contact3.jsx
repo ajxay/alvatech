@@ -89,7 +89,7 @@ function ContactForm({ compact = false }) {
       </label>
       <label>
         <span>Phone number</span>
-        <input type="text" name="phone" placeholder="+1 (555) 000-0000" required />
+        <input type="text" name="phone" placeholder="+46 70 496 45 69 " required />
       </label>
       <label>
         <span>Message</span>
@@ -165,7 +165,7 @@ export default function Contact3() {
                             <path d="m22 2-7 20-4-9-9-4 20-7Z" />
                           </svg>
                         </span>
-                        <a href="mailto:support@untitledui.com">Shoot us an email</a>
+                        <a href="mailto:sales@alvatech.se">Shoot us an email</a>
                       </li>
                       <li>
                         <span className="contact3-info__icon" aria-hidden="true">
@@ -184,7 +184,7 @@ export default function Contact3() {
                           <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.4 2.1L8 10a16 16 0 0 0 6 6l1.5-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7A2 2 0 0 1 22 16.9Z" />
                         </svg>
                       </span>
-                      <strong>+1 (555) 000-0000</strong>
+                      <strong>+46 70 496 45 69 </strong>
                     </div>
                     <h3>Visit us</h3>
                     <p>Chat to us in person at our Melbourne HQ.</p>

@@ -31,8 +31,8 @@ export const panelsData = [
     lightImgSrc: "/assets/images/template/crown.svg",
     darkImgSrc: "/assets/images/template/crown.svg",
     altText: "empathy-icon",
-    title: "Empathy",
+    title: "Client First Approach",
     description:
-      "We strive to be empathetic to every customer and colleague and by doing so we can provide a better experience for all.",
+      " By understanding our clients’ goals and challenges, we deliver solutions that are practical, personalized, and results driven.",
   },
 ];

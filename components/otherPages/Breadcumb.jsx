@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-export default function Breadcumb() {
+export default function Breadcumb({ title = "" }) {
   return (
     <div
       style={{ marginTop: "80px" }}
@@ -25,7 +25,7 @@ export default function Breadcumb() {
             <i className="unicon-chevron-right fw-medium opacity-50 rtl:rotate-180" />
           </li>
           <li>
-            <span className="opacity-50">Sign in</span>
+            <span className="opacity-50">{title? title : "Home"}</span>
           </li>
         </ul>
       </div>

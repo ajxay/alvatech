@@ -1,7 +1,7 @@
 import Accordion from "@/components/common/Accordion";
 import React from "react";
 
-export default function Faq() {
+export default function Faq({ faqData }) {
   return (
     <div id="faq" className="section panel overflow-hidden">
       <div className="section-outer panel py-4 md:py-6 xl:py-9">
@@ -22,7 +22,10 @@ export default function Faq() {
                   className="gap-1 uc-accordion"
                   data-uc-accordion="targets: > li;"
                 >
-                  <Accordion parentClass="panel p-3 lg:p-4 rounded-1-5 lg:rounded-2 bg-secondary dark:bg-gray-800" />
+                  <Accordion
+                    faqData={faqData}
+                    parentClass="panel p-3 lg:p-4 rounded-1-5 lg:rounded-2 bg-secondary dark:bg-gray-800"
+                  />
                 </ul>
               </div>
               {/* <a

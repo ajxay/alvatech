@@ -1,9 +1,9 @@
 import Accordion from "@/components/common/Accordion";
 import React from "react";
 
-export default function Faq() {
+export default function Faq({ faqData }) {
   return (
-    <div id="faq" className="faq section panel overflow-hidden">
+    <div id="faq" className="faq section panel overflow-hidden mt-8">
       <div className="section-outer panel">
         <div className="container max-w-md">
           <div
@@ -13,7 +13,7 @@ export default function Faq() {
             <div className="panel vstack gap-6 xl:gap-8">
               <div className="vstack gap-2 text-center">
                 <span className="fw-bold " style={{ color: "#84BA41" }}>
-                  FAQ
+                  {/* FAQ */}
                 </span>
                 <h2 className="h4 sm:h3 xl:h2 m-0 text-center">
                   Frequenlty asked questions:
@@ -28,7 +28,7 @@ export default function Faq() {
                   data-uc-accordion="targets: > li;"
                   style={{ "--divider-gap": "40px" }}
                 >
-                  <Accordion parentClass="panel" />
+                  <Accordion faqData={faqData} parentClass="panel" />
                 </ul>
               </div>
             </div>

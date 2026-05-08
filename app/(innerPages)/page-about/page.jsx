@@ -12,11 +12,12 @@ import Cta from "@/components/innerpages/Cta";
 // import { team } from "@/components/homes/home-13/Sections";
 import Image from "next/image";
 import "@/components/homes/home-13/Sections.css";
+
 export const metadata = {
   title:
-    "About || Alvatech - Website",
+    "About || Alva tech - Website",
   description:
-    "Alvatech - Website",
+    "Alva tech - Website",
 };
 
 export const team = [
@@ -59,7 +60,7 @@ export default function AboutPage() {
           </div>
           <About2 />
           <AboutValues />
-          <Feedback />
+          {/* <Feedback /> */}  {/* commented out feedback section */}
           {/* <Timeline /> */}
           <section className="home13-section home13-team">
         <div className="container sm:max-w-lg xl:max-w-xl">

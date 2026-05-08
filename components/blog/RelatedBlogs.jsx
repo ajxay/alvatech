@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function RelatedBlogs() {
   return (
     <>
-      {blogsPosts4.slice(7, 10).map((elm, i) => (
+      {blogsPosts4.slice(2, 5).map((elm, i) => (
         <div key={i}>
           <article className="post type-post panel vstack gap-2">
             <figure className="featured-image m-0 rounded ratio ratio-4x3 uc-transition-toggle overflow-hidden">

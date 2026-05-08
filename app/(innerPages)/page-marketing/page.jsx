@@ -15,6 +15,7 @@ import Team from "@/components/homes/home-5/Team";
 import Testimonials from "@/components/homes/home-5/Testimonials";
 import SalesforceBrands from "@/components/services/SalesforceBrands";
 import React from "react";
+import { marketingFaq } from "@/data/faq";
 export const metadata = {
   title:
     "Home 5 || Alvatech - Website",
@@ -40,7 +41,7 @@ export default function HomePage5() {
                     data-anime="onview: -100; translateY: [-16, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 350;"
                   >
                     <p className="fs-6 sm:fs-5 lg:fs-4 xl:fs-3 fw-medium">
-                      14,000+ customers large and small rely on us for trust
+                      14,00+ Companies large and small trust on us for
                       transformation
                     </p>
                     <div className="block-panel panel">
@@ -56,12 +57,11 @@ export default function HomePage5() {
           </div>
           <Features />
           <hr className="w-100 m-0 d-block lg:d-none" />
-          {/* <Cta /> */}
           <Howworks />
-          <Testimonials />
-          <Faq />
+          {/* <Testimonials /> */} {/* commented out testimonials section */}
+          <Faq faqData={marketingFaq} />
           <Support />
-          <Blog />
+          {/* <Blog /> */}
         </div>
         <Footer1 />
       </div>

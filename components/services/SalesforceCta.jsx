@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function SalesforceCta() {
   return (
     <div id="pre_cta" className="pre-cta section panel overflow-hidden">
-      <div className="section-outer panel py-4 sm:py-6 xl:py-9">
+      <div className="section-outer panel py-4 sm:py-6 xl:pb-9">
         <div className="container max-w-xl">
           <div
             className="section-inner panel p-4 md:p-6 lg:p-7 rounded-2 position-relative overflow-hidden"
@@ -20,7 +20,7 @@ export default function SalesforceCta() {
               data-anime="onview: -200; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});"
             >
               <h2 className="h3 lg:h2 m-0" style={{ color: "#0e0e0f" }}>
-                Get a call back.
+                Schedule a call.
               </h2>
               <p
                 className="fs-6 md:fs-5 m-0"

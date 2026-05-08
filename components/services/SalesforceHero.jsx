@@ -31,9 +31,8 @@ export default function SalesforceHero() {
                     </span>
                   </h1>
                   <p className="fs-6 lg:fs-5 text-dark text-opacity-70">
-                    From high-performing Shopify stores to result-driven
-                    marketing and social media strategies—we help you attract,
-                    engage, and convert your audience.
+                  From CRM implementation to custom automation and AI-driven insights,
+                  we help you get the most out of Salesforce so your sales, service, and operations run as one.
                   </p>
                   <form
                     onSubmit={(e) => e.preventDefault()}

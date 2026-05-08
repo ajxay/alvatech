@@ -9,6 +9,7 @@ import DevelopmentHero from "@/components/services/DevelopmentHero";
 import DevelopmentService from "@/components/services/DevelopmentService";
 import React from "react";
 import SalesforceBrands from "@/components/services/SalesforceBrands";
+import { customDevelopmentFaq } from "@/data/faq";
 export const metadata = {
   title: "Custom Development || Alvatech - Website",
   description:
@@ -28,8 +29,8 @@ export default function DevelopmentPage() {
           <DevelopmentFacts />
           <DevelopmentService />
           <Cta />
-          <Testimonials />
-          <Faq />
+          {/* <Testimonials /> */} {/* commented out testimonials section */}
+          <Faq faqData={customDevelopmentFaq} />
         </div>
         <Footer1 />
       </div>

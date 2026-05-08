@@ -178,7 +178,7 @@ export default function ContactModal() {
                       className="form-control h-48px w-100 rtl:text-end bg-white dark:border-white dark:text-dark"
                       type="tel"
                       name="phone"
-                      placeholder="+1 (555) 000-0000"
+                      placeholder="+46 70 496 45 69 "
                       required
                     />
                   </div>

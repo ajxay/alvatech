@@ -15,6 +15,7 @@ import Testimonials from "@/components/homes/home-4/Testimonials";
 import React from "react";
 import Footer1 from "@/components/footers/Footer1";
 import SalesforceBrands from "@/components/services/SalesforceBrands";
+import { shopifyFaq } from "@/data/faq";
 export const metadata = {
   title:
     "Home 4 || Alvatech - Website",
@@ -28,19 +29,13 @@ export default function HomePage4() {
         <Header3 />
         <div id="wrapper" className="wrap">
           <Hero />
-          {/* <Brands /> */}
           <SalesforceBrands />
-
           <Facts />
           <Features />
           <ShopifyBento />
           <Cta />
-          {/* <Pricing /> */}
-          <Testimonials />
-          <Faq />
-          {/* <Team /> */}
-          {/* <Blogs /> */}
-          {/* <Cta2 /> */}
+          {/* <Testimonials /> */} {/* commented out testimonials section */}
+          <Faq faqData={shopifyFaq} />
         </div>
         <Footer1 />
       </div>

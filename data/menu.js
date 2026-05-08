@@ -558,42 +558,39 @@ export const homeLinks = [
 export const links = [
   {
     id: 1,
-    // href: "#",
     href: "/page-contact",
     label: "Hire an Expert",
     isInternal: true,
   },
-  {
-    id: 2,
-    href: "#",
-    label: "Customer stories",
-    isInternal: false,
-  },
-  {
-    id: 3,
-    href: "#",
-    label: "Ressources",
-    isInternal: false,
-  },
+  // {
+  //   id: 2,
+  //   href: "#",
+  //   label: "Customer stories",
+  //   isInternal: false,
+  // },
+  // {
+  //   id: 3,
+  //   href: "#",
+  //   label: "Ressources",
+  //   isInternal: false,
+  // },
   {
     id: 4,
-    // href: "/blog",
-    href: "#",
+    href: "/blog",
     label: "Blog",
     isInternal: true,
   },
-  {
-    id: 5,
-    // href: "#",
-    href: "#",
-    label: "Career",
-    isInternal: true,
-  },
+  // {
+  //   id: 5,
+  //   href: "#",
+  //   label: "Career",
+  //   isInternal: true,
+  // },
   {
     id: 6,
     // href: "/page-team",
-    href: "#",
-    label: "Team",
+    href: "/page-integrations",
+    label: "All Services",
     isInternal: true,
   },
   {

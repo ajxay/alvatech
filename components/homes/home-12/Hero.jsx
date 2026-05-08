@@ -143,7 +143,7 @@ export default function Hero() {
 
         <div className="hero-twelve__actions">
           <Link
-            href="/page-shopify"
+            href="/page-integrations"
             className="hero-twelve__btn hero-twelve__btn--primary"
           >
             <span>Explore Services</span>

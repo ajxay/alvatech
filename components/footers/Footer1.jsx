@@ -98,7 +98,7 @@ export default function Footer1() {
                 <p className="opacity-60" style={{ color: "#434243", marginBottom: 2 }}>
                   Alvatech © {new Date().getFullYear()}, All rights reserved.
                 </p>
-                <ul className="nav-x gap-2 fw-medium">
+                {/* <ul className="nav-x gap-2 fw-medium">
                   <li>
                     <a href="#" style={{ color: "#434243" }}>
                       Privacy notice
@@ -114,7 +114,7 @@ export default function Footer1() {
                       Cookie settings
                     </a>
                   </li>
-                </ul>
+                </ul> */}
               </div>
               <div className="hstack justify-center lg:justify-end gap-2 lg:gap-3">
                 <ul className="nav-x gap-2">

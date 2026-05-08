@@ -8,6 +8,7 @@ import SalesforceFacts from "@/components/services/SalesforceFacts";
 import SalesforceHero from "@/components/services/SalesforceHero";
 import SalesforceServices from "@/components/services/SalesforceServices";
 import React from "react";
+import { salesforceCrmFaq } from "@/data/faq";
 
 export const metadata = {
   title: "Salesforce Services || Alvatech - Website",
@@ -26,8 +27,8 @@ export default function SalesforcePage() {
           <SalesforceFacts />
           <SalesforceServices />
           <SalesforceCta />
-          <Testimonials />
-          <Faq />
+          {/* <Testimonials /> */}
+          <Faq faqData={salesforceCrmFaq} />
         </div>
         <Footer1 />
       </div>

@@ -37,7 +37,7 @@ export default function About2() {
               className="panel vstack text-center"
               data-anime="onview: -100; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});"
             >   
-              <h2 className="h3 lg:h2 mb-4">How Alvatech helps</h2>
+              <h2 className="h3 lg:h2 mb-4">How Alva Tech helps</h2>
               <p className="fs-5 xl:fs-4 text-dark dark:text-white text-opacity-70">
               Our solutions are designed to integrate seamlessly with your existing systems,
 ensuring a smooth transition and maximum ROI. We specialize in crafting tailored

@@ -121,6 +121,171 @@ export const shopifyFaq = [
   },
 ];
 
+export const customDevelopmentFaq = [
+  {
+    id: 1,
+    question: "What type of custom development services do you offer?",
+    answer:
+      "We build custom web applications, APIs, internal tools, portals, and scalable backend systems tailored to your business processes and growth goals.",
+  },
+  {
+    id: 2,
+    question: "Can you modernize our existing legacy application?",
+    answer:
+      "Yes. We can audit your current system, redesign architecture, migrate outdated codebases, and modernize the UI/UX while preserving critical business logic.",
+  },
+  {
+    id: 3,
+    question: "Which technologies do you use for custom projects?",
+    answer:
+      "Our team works with modern stacks such as React, Next.js, Node.js, and cloud-based infrastructure, selecting tools based on your performance, security, and scalability requirements.",
+  },
+  {
+    id: 4,
+    question: "How do you estimate project timeline and cost?",
+    answer:
+      "We start with a discovery phase, define scope and milestones, then provide a transparent estimate based on complexity, integrations, and delivery priorities.",
+  },
+  {
+    id: 5,
+    question: "Do you provide post-launch support and maintenance?",
+    answer:
+      "Absolutely. We offer ongoing maintenance, performance monitoring, security updates, and feature enhancements after launch.",
+  },
+];
+
+export const marketingFaq = [
+  {
+    id: 1,
+    question: "What marketing services does Alvatech provide?",
+    answer:
+      "We provide performance marketing, paid ads, SEO, social media strategy, content planning, and funnel optimization to improve lead quality and ROI.",
+  },
+  {
+    id: 2,
+    question: "How long does it take to see results from marketing?",
+    answer:
+      "Paid campaigns can generate early results in weeks, while SEO and organic growth typically require a few months of consistent execution and optimization.",
+  },
+  {
+    id: 3,
+    question: "Do you manage Meta and Google ad campaigns?",
+    answer:
+      "Yes, we plan, launch, and optimize campaigns across Meta and Google with audience targeting, creative testing, and conversion-focused tracking.",
+  },
+  {
+    id: 4,
+    question: "How do you track campaign performance?",
+    answer:
+      "We use clear KPIs like CPL, CAC, ROAS, conversion rate, and revenue impact, and share regular reports with strategic recommendations.",
+  },
+  {
+    id: 5,
+    question: "Can you align marketing with our sales process?",
+    answer:
+      "Yes. We align campaign goals with your sales funnel and CRM workflows to improve lead nurturing and conversion outcomes.",
+  },
+];
+
+export const salesforceCrmFaq = [
+  {
+    id: 1,
+    question: "Which Salesforce services do you offer?",
+    answer:
+      "We provide Salesforce consulting, CRM implementation, customization, automation, integrations, data migration, and user adoption support.",
+  },
+  {
+    id: 2,
+    question: "Can you customize Salesforce for our sales process?",
+    answer:
+      "Yes. We configure custom objects, fields, workflows, dashboards, and automations that match your exact sales and service operations.",
+  },
+  {
+    id: 3,
+    question: "Do you help with Salesforce data migration?",
+    answer:
+      "Yes, we handle secure data mapping, cleansing, migration, and validation from legacy systems or other CRMs into Salesforce.",
+  },
+  {
+    id: 4,
+    question: "Can Salesforce integrate with our existing tools?",
+    answer:
+      "Absolutely. We integrate Salesforce with ERP, marketing platforms, support tools, and third-party apps for seamless data flow.",
+  },
+  {
+    id: 5,
+    question: "Do you provide training after implementation?",
+    answer:
+      "Yes. We provide role-based training, documentation, and ongoing support to improve adoption and long-term CRM performance.",
+  },
+];
+
+export const erpSolutionsFaq = [
+  {
+    id: 1,
+    question: "What business areas can ERP solutions improve?",
+    answer:
+      "ERP systems unify finance, inventory, procurement, operations, and reporting so teams can work with one source of truth.",
+  },
+  {
+    id: 2,
+    question: "How do you choose the right ERP approach for a company?",
+    answer:
+      "We assess your workflows, pain points, and growth plans, then recommend a solution and implementation roadmap aligned with your goals.",
+  },
+  {
+    id: 3,
+    question: "Can you integrate ERP with our current software stack?",
+    answer:
+      "Yes. We integrate ERP with CRM, e-commerce, accounting, and operational systems to reduce manual work and improve visibility.",
+  },
+  {
+    id: 4,
+    question: "How long does ERP implementation usually take?",
+    answer:
+      "Timeline depends on modules, data complexity, and process changes. We deliver in phases to reduce risk and ensure adoption.",
+  },
+  {
+    id: 5,
+    question: "Do you support optimization after go-live?",
+    answer:
+      "Yes. We provide post-implementation support, workflow optimization, and reporting enhancements as your business evolves.",
+  },
+];
+
+export const zohoCrmFaq = [
+  {
+    id: 1,
+    question: "What can Zoho CRM do for our business?",
+    answer:
+      "Zoho CRM helps you manage leads, automate follow-ups, track deals, and improve pipeline visibility for faster and smarter sales execution.",
+  },
+  {
+    id: 2,
+    question: "Can you customize Zoho CRM based on our workflow?",
+    answer:
+      "Yes. We customize modules, fields, automations, blueprints, and dashboards to match your exact sales and customer lifecycle.",
+  },
+  {
+    id: 3,
+    question: "Do you provide Zoho CRM migration services?",
+    answer:
+      "Yes, we migrate data from spreadsheets or other CRMs into Zoho CRM with mapping, cleanup, and validation.",
+  },
+  {
+    id: 4,
+    question: "Can Zoho CRM integrate with email and other apps?",
+    answer:
+      "Absolutely. We integrate Zoho CRM with email, telephony, marketing tools, and third-party business applications.",
+  },
+  {
+    id: 5,
+    question: "Will my team receive onboarding and training?",
+    answer:
+      "Yes. We provide onboarding, role-based training, and support to ensure your team adopts Zoho CRM effectively.",
+  },
+];
+
 export const accordionItems2 = [
   {
     id: 23,

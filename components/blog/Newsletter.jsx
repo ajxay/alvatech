@@ -17,8 +17,7 @@ export default function Newsletter() {
                 <div className="vstack gap-2 max-w-500px xl:max-w-600px">
                   <h2 className="h4 md:h3 lg:h2 m-0">Get the latest updates</h2>
                   <p className="fs-6 lg:fs-5">
-                    Subscribe to get our most-popular proposal eBook and more
-                    top revenue content to help you send docs faster.
+                    Subscribe to get the latest updates from Alvatech.
                   </p>
                   <form
                     onSubmit={(e) => e.preventDefault()}
@@ -33,7 +32,7 @@ export default function Newsletter() {
                       />
                     </div>
                     <div className="col-12 sm:col-auto">
-                      <button className="btn btn-md h-48px xl:h-56px w-100 lg:min-w-150px xl:min-w-200px btn-primary text-white">
+                      <button style={{ backgroundColor: "#84BA41", borderColor: "#84BA41" }} className="btn btn-md h-48px xl:h-56px w-100 lg:min-w-150px xl:min-w-200px btn-primary text-white">
                         Subscribe
                       </button>
                     </div>

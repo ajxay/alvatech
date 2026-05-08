@@ -73,9 +73,11 @@ export default function Blogs1() {
                       <div>
                         <div className="vstack items-center gap-2 lg:gap-3">
                           <Link
-                            className="post-category text-primary fw-normal text-none fw-bold fs-7 bg-primary text-white py-narrow px-1 rounded"
+                            className="post-category text-primary fw-normal text-none fw-bold fs-7 text-white py-narrow px-1 rounded"
                             href={`/blog-category/${elm.category}`}
+                            style={{ backgroundColor: "#86BC40" }}
                           >
+                     
                             {elm.category}
                           </Link>
                           <h3 className="h4 xl:h2 m-0 text-center m-0 lg:w-500px lg:m-auto">
@@ -115,8 +117,9 @@ export default function Blogs1() {
                             {elm.desc}
                           </p>
                           <Link
-                            className="btn btn-text text-primary border-bottom d-inline-flex fs-7 lg:fs-6 sm:mt-2"
+                            className="btn btn-text border-bottom d-inline-flex fs-7 lg:fs-6 sm:mt-2"
                             href={`/blog-details/${elm.id}`}
+                            style={{ color: "#86BC40" }}
                           >
                             Continue reading
                           </Link>
@@ -130,9 +133,9 @@ export default function Blogs1() {
                 <div key={i}>
                   <article className="post type-post panel vstack gap-3 rounded-3 p-2 pb-3 bg-secondary dark:bg-gray-800">
                     <Link
-                      className="position-absolute top-0 ltr:start-0 rtl:end-0 m-3 fs-7 fw-bold text-none z-1 bg-primary text-white py-narrow px-1"
+                      className="position-absolute top-0 ltr:start-0 rtl:end-0 m-3 fs-7 fw-bold text-none z-1 text-white py-narrow px-1"
                       href={`/blog`}
-                      style={{ borderRadius: 8 }}
+                      style={{ borderRadius: 8, backgroundColor: "#86BC40" }}
                     >
                       {elm.category}
                     </Link>
@@ -194,7 +197,7 @@ export default function Blogs1() {
                 className="nav-x uc-pagination hstack gap-1 justify-center ft-secondary"
                 data-uc-margin=""
               >
-                <Pagination />
+                {/* <Pagination /> */}
               </ul>
             </div>
           </div>

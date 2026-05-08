@@ -1,9 +1,9 @@
 import React from "react";
 
 const salesforceFacts = [
-  { id: 1, value: "200+", description: "Live Shopify Stores" },
-  { id: 2, value: "90%", description: "Client Retention Rate" },
-  { id: 3, value: "8.2M+", description: "Orders Processed" },
+  { id: 1, value: "16+", description: "Years of Salesforce Experience" },
+  { id: 2, value: "400+", description: "Implementations In 23+ Countries" },
+  { id: 3, value: "15+", description: "Appexchane Apps Developed" },
 ];
 
 export default function SalesforceFacts() {
@@ -26,9 +26,8 @@ export default function SalesforceFacts() {
                 className="fs-6 xl:fs-5"
                 style={{ color: "rgba(67, 66, 67, 0.9)" }}
               >
-                We focus on helping you to make useful content more accessible
-                with an ultimate goal for a good sharing profit as a content
-                creator.
+                
+                Our flexible engagement model allows you to tailor your project to your preferences. You retain full control, and our team of Salesforce-certified developers ensures a beneficial outcome.
               </p>
             </div>
             <div

@@ -21,9 +21,8 @@ export default function IntegrationPage() {
 
         <div id="wrapper" className="wrap">
           <Integrations />
-          {/* <div className="pt-6 xl:pt-9"></div> */}
           <Faq />
-          <Testimonials />
+          {/* <Testimonials /> */} {/* commented out testimonials section */}
           <div
             id="clients_brands"
             className="clients-brands section panel overflow-hidden"
