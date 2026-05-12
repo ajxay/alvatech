@@ -8,7 +8,7 @@ import Features from "@/components/homes/home-13/Features";
 import Sections from "@/components/homes/home-13/Sections";
 
 export const metadata = {
-  title: "Home 13 || Alvatech - Website",
+  title: "Alvatech - Website",
   description:
     "Do More, Grow Faster with Smart Systems. We combine eCommerce development, performance marketing, and CRM automation to help brands launch quickly, scale efficiently, and manage operations without complexity.",
 };

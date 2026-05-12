@@ -11,7 +11,7 @@ import Cta from "@/components/homes/home-1/Cta";
 import Footer1 from "@/components/footers/Footer1";
 export const metadata = {
   title:
-    "Home 1 || Alvatech - Website",
+    "Alvatech - Website",
   description:
     "Alvatech - Website",
 };
