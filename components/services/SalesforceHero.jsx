@@ -1,8 +1,12 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 export default function SalesforceHero() {
+  const { t } = useTranslation("common");
+  const c = "servicePages.common";
+
   return (
     <div
       id="hero_header"
@@ -25,14 +29,13 @@ export default function SalesforceHero() {
                   data-anime="targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});"
                 >
                   <h1 className="h2 xl:display-5 mb-1 xl:mb-2 text-gray-900">
-                    Tailored solutions for{" "}
+                    {t("servicePages.salesforce.hero.title")}
                     <span style={{ color: "#84BA41" }}>
-                      higher revenue growth
+                      {t("servicePages.salesforce.hero.titleHighlight")}
                     </span>
                   </h1>
                   <p className="fs-6 lg:fs-5 text-dark text-opacity-70">
-                  From CRM implementation to custom automation and AI-driven insights,
-                  we help you get the most out of Salesforce so your sales, service, and operations run as one.
+                    {t("servicePages.salesforce.hero.subtitle")}
                   </p>
                   <form
                     onSubmit={(e) => e.preventDefault()}
@@ -43,7 +46,7 @@ export default function SalesforceHero() {
                         <input
                           type="email"
                           className="form-control rounded-default h-48px w-full bg-white"
-                          placeholder="Your email.."
+                          placeholder={t(`${c}.emailPlaceholder`)}
                           required
                         />
                         <span className="form-icon text-gray">
@@ -60,20 +63,20 @@ export default function SalesforceHero() {
                           borderColor: "#84BA41",
                         }}
                       >
-                        Contact Us
+                        {t(`${c}.contactUs`)}
                       </Link>
                     </div>
                   </form>
                   <p className="fs-7 text-dark text-opacity-70 mt-1">
-                    We care about your data in our{" "}
+                    {t(`${c}.privacyPrefix`)}
                     <Link
                       href={`/page-privacy`}
                       className="uc-link text-underline"
                       style={{ color: "#12715b" }}
                     >
-                      privacy policy
+                      {t(`${c}.privacyLink`)}
                     </Link>
-                    .
+                    {t(`${c}.privacySuffix`)}
                   </p>
                 </div>
               </div>

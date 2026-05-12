@@ -1,12 +1,18 @@
+"use client";
+
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const zohoFacts = [
-  { id: 1, value: "200K+", description: "Businesses Worldwide" },
-  { id: 2, value: "800+", description: "App Integrations" },
-  { id: 3, value: "9+", description: "Powerful CRM Features" },
+  { id: 1, value: "200K+", itemIndex: 0 },
+  { id: 2, value: "800+", itemIndex: 1 },
+  { id: 3, value: "9+", itemIndex: 2 },
 ];
 
 export default function ZohoFacts() {
+  const { t } = useTranslation("common");
+  const base = "servicePages.zoho.facts";
+
   return (
     <div
       id="facts_numbers"
@@ -19,13 +25,9 @@ export default function ZohoFacts() {
               className="panel vstack items-center gap-2 mb-4 lg:mb-8 max-w-800px mx-auto text-center"
               data-anime="onview: -200; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});"
             >
-              <h2 className="h4 md:h3 m-0">
-                Powering sales execution for businesses worldwide
-              </h2>
+              <h2 className="h4 md:h3 m-0">{t(`${base}.title`)}</h2>
               <p className="fs-6 xl:fs-5 text-dark dark:text-white text-opacity-70">
-                Hyper-manage operations with rich analytics. Zoho CRM connects
-                every part of your sales workflow so your team can focus on
-                closing deals.
+                {t(`${base}.subtitle`)}
               </p>
             </div>
             <div
@@ -45,7 +47,9 @@ export default function ZohoFacts() {
                       >
                         {fact.value}
                       </h5>
-                      <p className="fw-medium">{fact.description}</p>
+                      <p className="fw-medium">
+                        {t(`${base}.items.${fact.itemIndex}`)}
+                      </p>
                     </div>
                   </div>
                 ))}

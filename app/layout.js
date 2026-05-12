@@ -19,6 +19,8 @@ import { ParallaxProvider } from "react-scroll-parallax";
 import ContactModal from "@/components/modals/ContactModal";
 import NewsletterModal from "@/components/modals/NewsletterModal";
 import SearchModal from "@/components/modals/SearchModal";
+import I18nProvider from "@/components/providers/I18nProvider";
+import HtmlLang from "@/components/providers/HtmlLang";
 
 export default function RootLayout({ children }) {
   const pathname = usePathname();
@@ -104,11 +106,14 @@ export default function RootLayout({ children }) {
   }, [pathname]);
 
   return (
-    <html lang="en" dir="ltr">
+    <html lang="sv" dir="ltr" suppressHydrationWarning>
       <body>
         {" "}
         <Context>
-          <ParallaxProvider>{children}</ParallaxProvider>
+          <I18nProvider>
+            <HtmlLang />
+            <ParallaxProvider>{children}</ParallaxProvider>
+          </I18nProvider>
           <MobileMenu />
           <ContactModal />
           <NewsletterModal />

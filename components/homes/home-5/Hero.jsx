@@ -1,7 +1,13 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
+
 export default function Hero() {
+  const { t } = useTranslation("common");
+  const m = "servicePages.marketing.hero";
+  const c = "servicePages.common";
+
   return (
     <div
       id="hero_header"
@@ -18,11 +24,9 @@ export default function Hero() {
                   data-anime="targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});"
                 >
                   <h1 className="h2 sm:display-6 xl:display-4 fw-light mb-1 xl:mb-2">
-                  Stop Guessing  Start Growing. 
+                    {t(`${m}.title`)}
                   </h1>
-                  <p className="fs-6 xl:fs-4">
-                  From paid ads to SEO, social media to conversion optimization — we build and run performance-driven marketing strategies that turn traffic into revenue. No vanity metrics. Just measurable growth.
-                  </p>
+                  <p className="fs-6 xl:fs-4">{t(`${m}.subtitle`)}</p>
                   <div className="vstack gap-1 mt-2 xl:mt-4">
                     <form
                       onSubmit={(e) => e.preventDefault()}
@@ -33,26 +37,30 @@ export default function Hero() {
                           <input
                             type="email"
                             className="form-control rounded-default h-48px w-full text-black bg-white"
-                            placeholder="Enter your email"
+                            placeholder={t(`${m}.emailPlaceholder`)}
                             required
                           />
                         </div>
                       </div>
                       <div className="col-12 sm:col-auto">
-                        <button className="btn btn-md btn-primary rounded-default h-48px w-100 lg:min-w-150px text-white" style={{ backgroundColor: "#84BA41", borderColor: "#84BA41" }}>
-                          Get a Call
+                        <button
+                          type="submit"
+                          className="btn btn-md btn-primary rounded-default h-48px w-100 lg:min-w-150px text-white"
+                          style={{ backgroundColor: "#84BA41", borderColor: "#84BA41" }}
+                        >
+                          {t(`${m}.getCall`)}
                         </button>
                       </div>
                     </form>
                     <p className="fs-7 text-dark dark:text-white text-opacity-70">
-                      We care about your data in our { " " }
+                      {t(`${c}.privacyPrefix`)}
                       <Link
                         href={`/page-privacy`}
                         className="uc-link text-underline dark:text-secondary"
                       >
-                        privacy policy
+                        {t(`${c}.privacyLink`)}
                       </Link>
-                      .
+                      {t(`${c}.privacySuffix`)}
                     </p>
                   </div>
                   <div className="vstack md:hstack justify-center lg:justify-start gap-2 mt-2 xl:mt-4 fdr">
@@ -143,7 +151,7 @@ export default function Hero() {
                         </li>
                       </ul>
                       <span className="fs-7 fw-medium">
-                        Based on 200+ reviews
+                        {t(`${m}.reviewsNote`)}
                       </span>
                     </div>
                   </div>

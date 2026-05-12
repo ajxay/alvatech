@@ -1,7 +1,12 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 export default function About() {
+  const { t } = useTranslation("common");
+
   return (
     <div id="hero_header" className="hero-header section panel overflow-hidden">
       <div
@@ -43,15 +48,10 @@ export default function About() {
           >
             <div className="vstack items-center gap-4 mb-4 sm:mb-6 lg:mb-8 max-w-850px mx-auto text-center">
               <h1 className="h2 sm:h1 lg:display-6 xl:display-5 m-0">
-                About Alva Tech
+                {t("pages.about.heroTitle")}
               </h1>
               <p className="fs-6 md:fs-5 text-dark dark:text-white text-opacity-70">
-              At Alva Tech, we combine strategic consulting with advanced digital solutions to
-transform how modern enterprises operate and grow. Our expertise spans
-high performance e-commerce, custom web & app development, data driven marketing,
-and scalable CRM & ERP implementations.
-Built on Swedish engineering excellence, we help organizations unlock efficiency,
-accelerate innovation, and future ready their digital ecosystem.
+                {t("pages.about.heroBody")}
               </p>
             </div>
             <div className="panel row child-cols-12 col-match g-1 sm:g-2">

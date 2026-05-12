@@ -1,7 +1,14 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
+
 export default function Support() {
+  const { t } = useTranslation("common");
+  const s = "servicePages.marketing.support";
+
   return (
     <div id="support_cta" className="support-cta section panel overflow-hidden">
       <div className="section-outer panel py-4 sm:py-6 xl:py-9">
@@ -37,17 +44,16 @@ export default function Support() {
                   height="96"
                 />
               </div>
-              <h2 className="h5 lg:h4 m-0">Still have questions?</h2>
+              <h2 className="h5 lg:h4 m-0">{t(`${s}.title`)}</h2>
               <p className="fs-6 xl:fs-5 text-dark dark:text-white text-opacity-70">
-                Can’t find the answer you’re looking for? Please chat to our
-                friendly team.
+                {t(`${s}.subtitle`)}
               </p>
               <Link
                 href={`/page-contact`}
                 className="btn btn-md btn-primary rounded-default text-white shadow-xs mt-1 lg:mt-2"
                 style={{ backgroundColor: "#84BA41", borderColor: "#84BA41" }}
               >
-                Get in touch
+                {t(`${s}.cta`)}
               </Link>
             </div>
           </div>

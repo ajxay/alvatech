@@ -1,10 +1,12 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 import { openNewsletterModal } from "@/utlis/toggleNewsletterModal";
 import { features, homeLinks, links } from "@/data/menu";
 import { featuresMenu, services } from "@/data/services";
 export default function Nav3() {
+  const { t } = useTranslation("common");
   return (
     <>
       <li className="has-dd-menu ">
@@ -49,7 +51,7 @@ export default function Nav3() {
                         {features.map((feature, index) => (
                           <div key={index}>
                             <Link
-                              href={`/page-features`}
+                              href={feature.link}
                               className="hstack items-start gap-2 p-2 text-none rounded-1-5 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150"
                             >
                               <span className="icon">
@@ -59,10 +61,10 @@ export default function Nav3() {
                               </span>
                               <div className="panel">
                                 <h6 className="h6 fs-7 fw-medium mb-narrow">
-                                  {feature.title}
+                                  {t(feature.tTitleKey)}
                                 </h6>
                                 <p className="fs-8 text-muted">
-                                  {feature.description}
+                                  {t(feature.tDescKey)}
                                 </p>
                               </div>
                             </Link>
@@ -131,9 +133,9 @@ export default function Nav3() {
                         {links.map((link, index) => (
                           <li key={index}>
                             {link.isInternal ? (
-                              <Link href={link.href}>{link.label}</Link>
+                              <Link href={link.href}>{t(link.tKey)}</Link>
                             ) : (
-                              <a href={link.href}>{link.label}</a>
+                              <a href={link.href}>{t(link.tKey)}</a>
                             )}
                           </li>
                         ))}

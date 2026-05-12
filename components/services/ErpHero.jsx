@@ -1,8 +1,12 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 export default function ErpHero() {
+  const { t } = useTranslation("common");
+  const c = "servicePages.common";
+
   return (
     <div id="hero_header" className="hero-header section panel overflow-hidden">
       <div className="position-cover bg-secondary dark:bg-gray-800" />
@@ -16,13 +20,13 @@ export default function ErpHero() {
                   data-anime="targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});"
                 >
                   <h1 className="h2 xl:display-5 mb-1 xl:mb-2">
-                    <span style={{ color: "#84BA41" }}>All in one </span>
-                    Business Solution
+                    <span style={{ color: "#84BA41" }}>
+                      {t("servicePages.erp.hero.titleHighlight")}
+                    </span>
+                    {t("servicePages.erp.hero.titleRest")}
                   </h1>
                   <p className="fs-6 lg:fs-5 text-dark dark:text-white text-opacity-70">
-                    Centralize all core business functions in one platform to
-                    improve collaboration, streamline operations, and enhance
-                    overall productivity.
+                    {t("servicePages.erp.hero.subtitle")}
                   </p>
                   <form
                     onSubmit={(e) => e.preventDefault()}
@@ -33,7 +37,7 @@ export default function ErpHero() {
                         <input
                           type="email"
                           className="form-control rounded-default h-48px w-full bg-white dark:border-white dark:bg-opacity-10 dark:border-opacity-0 dark:text-white"
-                          placeholder="Your email.."
+                          placeholder={t(`${c}.emailPlaceholder`)}
                           required
                         />
                         <span className="form-icon text-gray dark:text-gray-300">
@@ -50,21 +54,21 @@ export default function ErpHero() {
                           borderColor: "#84BA41",
                         }}
                       >
-                        <span className="d-none md:d-block">Let's Talk</span>
-                        <span className="d-block md:d-none">Let's Talk</span>
+                        <span className="d-none md:d-block">{t(`${c}.letsTalk`)}</span>
+                        <span className="d-block md:d-none">{t(`${c}.letsTalk`)}</span>
                       </Link>
                     </div>
                   </form>
                   <p className="fs-7 text-dark dark:text-white text-opacity-70">
-                    We care about your data in our{" "}
+                    {t(`${c}.privacyPrefix`)}
                     <Link
                       href={`/page-privacy`}
                       className="uc-link text-underline dark:text-secondary"
                       style={{ color: "#84BA41" }}
                     >
-                      privacy policy
+                      {t(`${c}.privacyLink`)}
                     </Link>
-                    .
+                    {t(`${c}.privacySuffix`)}
                   </p>
                 </div>
               </div>

@@ -1,7 +1,12 @@
+"use client";
+
 import { factItemsShopify } from "@/data/facts";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Facts() {
+  const { t } = useTranslation("common");
+
   return (
     <div
       id="facts_numbers"
@@ -15,11 +20,10 @@ export default function Facts() {
               data-anime="onview: -200; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});"
             >
               <h2 className="h4 md:h3 m-0">
-                Everything you need is right at your fingertips
+                {t("servicePages.shopify.facts.title")}
               </h2>
               <p className="fs-6 xl:fs-5 text-dark dark:text-white text-opacity-70">
-                We deliver solutions that simplify your workflow and help your
-                business grow effortlessly.
+                {t("servicePages.shopify.facts.subtitle")}
               </p>
             </div>
             <div
@@ -39,8 +43,10 @@ export default function Facts() {
                       >
                         {fact.value}
                       </h5>
-                 
-                      <p className="fw-medium">{fact.description}</p>
+
+                      <p className="fw-medium">
+                        {t(`servicePages.shopify.facts.items.${index}`)}
+                      </p>
                     </div>
                   </div>
                 ))}

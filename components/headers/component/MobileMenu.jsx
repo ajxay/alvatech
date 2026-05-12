@@ -7,8 +7,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function MobileMenu() {
+  const { t } = useTranslation("common");
   const { isDark, handleToggle } = useContextElement();
   const pathname = usePathname();
   const [activeParent1, setActiveParent1] = useState(-1);
@@ -142,12 +144,12 @@ export default function MobileMenu() {
                   activeParent1 == index ? "active" : ""
                 }`}
               >
-                {item.href ? (
+                    {item.href ? (
                   <Link
                     className={isMenuActive(item) ? "menuActive" : ""}
                     href={item.href}
                   >
-                    {item.label}
+                    {item.tKey ? t(item.tKey) : item.label}
                   </Link>
                 ) : (
                   <>
@@ -157,7 +159,7 @@ export default function MobileMenu() {
                         setActiveParent1((pre) => (pre == index ? -1 : index))
                       }
                     >
-                      {item.label}
+                      {item.tKey ? t(item.tKey) : item.label}
                     </a>
                     {item.subItems && (
                       <ul
@@ -180,7 +182,7 @@ export default function MobileMenu() {
                                 }
                                 href={subItem.href}
                               >
-                                {subItem.label}
+                                {subItem.tKey ? t(subItem.tKey) : subItem.label}
                               </Link>
                             ) : (
                               <>
@@ -194,7 +196,7 @@ export default function MobileMenu() {
                                     )
                                   }
                                 >
-                                  {subItem.label}
+                                  {subItem.tKey ? t(subItem.tKey) : subItem.label}
                                 </a>
                                 {subItem.subItems && (
                                   <ul
@@ -219,7 +221,7 @@ export default function MobileMenu() {
                                             }
                                             href={subItem.href}
                                           >
-                                            {subItem.label}
+                                            {subItem.tKey ? t(subItem.tKey) : subItem.label}
                                           </Link>
                                         ) : (
                                           <></>
@@ -245,7 +247,7 @@ export default function MobileMenu() {
               className="btn btn-primary rounded-default text-white text-none w-100 justify-center"
               style={{ backgroundColor: "#84BA41", borderColor: "#84BA41" }}
             >
-              Schedule A Call
+              {t("header.scheduleCall")}
             </Link>
           </div>
           <ul className="social-icons nav-x mt-4">
@@ -264,7 +266,7 @@ export default function MobileMenu() {
             <div className="vstack gap-1">
               {/* Theme toggle disabled: always render light mode. */}
               <span className="fs-7 opacity-60" style={{ visibility: "hidden" }}>
-                Select theme:
+                {t("mobile.selectTheme")}
               </span>
             </div>
           </div>

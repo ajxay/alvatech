@@ -1,7 +1,12 @@
+"use client";
+
 import Accordion from "@/components/common/Accordion";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
-export default function Faq({ faqData }) {
+export default function Faq({ faqData, titleKey = "faq.defaultTitle" }) {
+  const { t } = useTranslation("common");
+
   return (
     <div id="faq" className="section panel overflow-hidden">
       <div className="section-outer panel py-4 md:py-6 xl:py-9">
@@ -15,7 +20,7 @@ export default function Faq({ faqData }) {
               style={{ transform: "translateY(0px)", opacity: 1 }}
             >
               <h2 className="h4 sm:h3 lg:h2 m-0 text-center">
-                Frequenlty asked questions:
+                {t(titleKey)}
               </h2>
               <div className="panel">
                 <ul
@@ -28,13 +33,6 @@ export default function Faq({ faqData }) {
                   />
                 </ul>
               </div>
-              {/* <a
-                href="#"
-                className="uc-link dark:text-secondary fw-bold d-inline-flex items-center gap-narrow mx-auto"
-              >
-                <span>Still have a question?</span>
-                <i className="icon icon-1 unicon-arrow-right rtl:rotate-180" />
-              </a> */}
             </div>
           </div>
         </div>

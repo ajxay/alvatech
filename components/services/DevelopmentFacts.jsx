@@ -1,12 +1,17 @@
+"use client";
+
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const developmentFacts = [
-  { id: 1, value: "150+", description: "Applications Delivered" },
-  { id: 2, value: "95%", description: "Client Satisfaction Rate" },
-  { id: 3, value: "5M+", description: "Users Served Across Apps" },
+  { id: 1, value: "150+" },
+  { id: 2, value: "95%" },
+  { id: 3, value: "5M+" },
 ];
 
 export default function DevelopmentFacts() {
+  const { t } = useTranslation("common");
+
   return (
     <div
       id="facts_numbers"
@@ -20,11 +25,10 @@ export default function DevelopmentFacts() {
               data-anime="onview: -200; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});"
             >
               <h2 className="h4 md:h3 m-0">
-                Everything you need to build and scale modern applications
+                {t("servicePages.customDevelopment.facts.title")}
               </h2>
               <p className="fs-6 xl:fs-5 text-dark dark:text-white text-opacity-70">
-                We deliver scalable solutions that streamline operations and
-                accelerate business growth.
+                {t("servicePages.customDevelopment.facts.subtitle")}
               </p>
             </div>
             <div
@@ -35,7 +39,7 @@ export default function DevelopmentFacts() {
                 className="row child-cols col-match items-center justify-center text-center gy-4 lg:gy-8"
                 data-anime="onview: -200; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 500});"
               >
-                {developmentFacts.map((fact) => (
+                {developmentFacts.map((fact, idx) => (
                   <div key={fact.id}>
                     <div className="fact-item panel vstack gap-1">
                       <h5
@@ -44,7 +48,9 @@ export default function DevelopmentFacts() {
                       >
                         {fact.value}
                       </h5>
-                      <p className="fw-medium">{fact.description}</p>
+                      <p className="fw-medium">
+                        {t(`servicePages.customDevelopment.facts.items.${idx}`)}
+                      </p>
                     </div>
                   </div>
                 ))}

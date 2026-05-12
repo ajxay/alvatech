@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 import "./Hero.css";
 
@@ -28,6 +31,8 @@ function DottedArrow() {
 }
 
 export default function Hero() {
+  const { t } = useTranslation("common");
+
   return (
     <div
       id="hero_header"
@@ -85,7 +90,7 @@ export default function Hero() {
               fill="#84BA41"
             />
           </svg>
-          <span>End-to-End Growth Partner</span>
+          <span>{t("home13.hero.badge")}</span>
         </span>
 
         <h1 className="hero-twelve__title" style={{ fontWeight: 300 }}>
@@ -93,16 +98,16 @@ export default function Hero() {
             className="hero-twelve__line hero-twelve__line-1"
             style={{ fontWeight: 300 }}
           >
-            Do More, Grow Faster
+            {t("home13.hero.titleLine1")}
           </span>
           <span
             className="hero-twelve__line hero-twelve__line-2"
             style={{ fontWeight: 300 }}
           >
             <span className="hero-twelve__text" style={{ fontWeight: 300 }}>
-              with{" "}
+              {t("home13.hero.titleWith")}{" "}
               <span className="hero-twelve__bold" style={{ fontWeight: 700 }}>
-                Smart Systems
+                {t("home13.hero.titleSmartSystems")}
               </span>
             </span>
             <span className="hero-twelve__icons" aria-hidden="true">
@@ -135,29 +140,25 @@ export default function Hero() {
           </span>
         </h1>
 
-        <p className="hero-twelve__desc">
-          We combine eCommerce development, performance marketing, and CRM
-          automation to help brands launch quickly, scale efficiently, and
-          manage operations without complexity.
-        </p>
+        <p className="hero-twelve__desc">{t("home13.hero.description")}</p>
 
         <div className="hero-twelve__actions">
           <Link
             href="/page-integrations"
             className="hero-twelve__btn hero-twelve__btn--primary"
           >
-            <span>Explore Services</span>
+            <span>{t("home13.hero.exploreServices")}</span>
           </Link>
           <Link
             href="/page-contact"
             className="hero-twelve__btn hero-twelve__btn--ghost"
           >
-            <span>Schedule a Call</span>
+            <span>{t("header.scheduleCall")}</span>
           </Link>
         </div>
 
         <div className="hero-twelve__scroll">
-          <span>Scroll for more</span>
+          <span>{t("home13.hero.scrollHint")}</span>
           <span className="hero-twelve__scroll-arrow">
             <svg
               width="12"

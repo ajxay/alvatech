@@ -1,9 +1,14 @@
+"use client";
+
 import { integrations } from "@/data/integrations";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 export default function Integrations() {
+  const { t } = useTranslation("common");
+
   return (
     <div id="hero_header" className="hero-header section panel overflow-hidden">
       <div
@@ -45,10 +50,10 @@ export default function Integrations() {
               data-anime="targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});"
             >
               <h1 className="h2 sm:h1 lg:display-6 xl:display-5 m-0">
-                Our Services
+                {t("pages.integrations.heroTitle")}
               </h1>
               <p className="fs-6 sm:fs-5 text-dark dark:text-white text-opacity-70">
-                We help you attract, engage, and convert your audience.
+                {t("pages.integrations.heroSubtitle")}
               </p>
             </div>
             <div className="panel">
@@ -56,17 +61,20 @@ export default function Integrations() {
                 className="row child-cols-12 sm:child-cols-6 lg:child-cols-4 col-match g-2 lg:g-4 justify-between"
                 data-anime="onview: -100; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});"
               >
-                {integrations.map((integration, index) => (
+                {integrations.map((integration, index) => {
+                  const base = `pages.integrations.services.${integration.slug}`;
+                  const name = t(`${base}.name`);
+                  return (
                   <div key={index}>
                     <div className="panel vstack justify-between gap-4 p-3 rounded lg:rounded-2 border">
                       <div className="vstack gap-3">
                         <div className="hstack justify-between items-center">
                           <div className="vstack">
                             <h5 className="h5 m-0 text-dark">
-                              {integration.name}
+                              {name}
                             </h5>
                             <span className="fs-7 opacity-70 dark:opacity-80">
-                              {integration.category}
+                              {t(`${base}.category`)}
                             </span>
                           </div>
                           <Image
@@ -74,23 +82,23 @@ export default function Integrations() {
                             src={integration.imageUrl}
                             width={40}
                             height={40}
-                            alt={integration.imageAlt}
+                            alt={integration.imageAlt || name}
                           />
                         </div>
                         <p className="fs-6 opacity-70 dark:opacity-80">
-                          {integration.description}
+                          {t(`${base}.description`)}
                         </p>
                       </div>
                       <Link
                         href={integration.link}
                         className="uc-link fw-bold fs-7 d-inline-flex items-center gap-narrow"
                       >
-                        <span>Explore</span>
+                        <span>{t("labels.explore")}</span>
                         <i className="icon icon-narrow unicon-arrow-right rtl:rotate-180" />
                       </Link>
                     </div>
                   </div>
-                ))}
+                );})}
               </div>
             </div>
           </div>

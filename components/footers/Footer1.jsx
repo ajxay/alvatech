@@ -1,11 +1,34 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 import { footerLinks, socialLinks } from "@/data/footer";
 
 export default function Footer1() {
+  const { t, i18n } = useTranslation("common");
+  const [langMenuOpen, setLangMenuOpen] = useState(false);
+  const langMenuRef = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (langMenuRef.current && !langMenuRef.current.contains(event.target)) {
+        setLangMenuOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const currentLanguageLabel =
+    i18n.language === "sv" ? t("footer.languageSwedish") : t("footer.languageEnglish");
+
   return (
-    <footer id="uc-footer" className="uc-footer panel overflow-hidden">
+    <footer
+      id="uc-footer"
+      className={`uc-footer panel ${langMenuOpen ? "overflow-visible" : "overflow-hidden"}`}
+    >
       <div
         className="footer-outer py-4 lg:py-6 xl:py-9 dark:bg-gray-900 dark:text-white"
         style={{ backgroundColor: "rgba(220, 234, 206, 0.5)", color: "#434243" }}
@@ -28,9 +51,7 @@ export default function Footer1() {
                         />
                       </Link>
                       <p style={{ maxWidth: 340, margin: 0, lineHeight: 1.5, fontSize: 16 }}>
-                        Alvatech is a leading digital transformation agency,
-                        delivering tailored ecommerce solutions to help businesses
-                        grow and thrive online.
+                        {t("footer.description")}
                       </p>
                     </div>
                   </div>
@@ -41,7 +62,7 @@ export default function Footer1() {
                       {section.links.map((link, i) => (
                         <li key={i}>
                           <Link href={link.href} style={{ color: "#434243" }}>
-                            {link.label}
+                            {t(`footer.links.${link.labelKey}`)}
                           </Link>
                         </li>
                       ))}
@@ -57,10 +78,10 @@ export default function Footer1() {
                 <div className="col-12 lg:col-6">
                   <div className="vstack gap-narrow">
                     <h4 className="h4 m-0" style={{ color: "#1c1f25" }}>
-                      Newsletter
+                      {t("footer.newsletterTitle")}
                     </h4>
                     <p className="m-0" style={{ color: "#434243", fontSize: 16 }}>
-                      Subscribe to get the latest updates and news.
+                      {t("footer.newsletterDesc")}
                     </p>
                   </div>
                 </div>
@@ -73,7 +94,7 @@ export default function Footer1() {
                       />
                       <input
                         type="email"
-                        placeholder="Enter your email"
+                        placeholder={t("footer.emailPlaceholder")}
                         className="form-control h-48px bg-white border-0"
                         style={{ paddingLeft: 40, color: "#434243" }}
                         required
@@ -84,7 +105,7 @@ export default function Footer1() {
                       className="btn btn-md text-dark fw-medium"
                       style={{ backgroundColor: "#84BA41", borderColor: "#84BA41", borderRadius: 8 }}
                     >
-                      Subscribe
+                      {t("footer.subscribe")}
                     </button>
                   </form>
                 </div>
@@ -96,25 +117,8 @@ export default function Footer1() {
             >
               <div className="vstack sm:hstack justify-center lg:justify-start items-center lg:items-start gap-1 lg:gap-2">
                 <p className="opacity-60" style={{ color: "#434243", marginBottom: 2 }}>
-                  Alvatech © {new Date().getFullYear()}, All rights reserved.
+                  {t("footer.rights", { year: new Date().getFullYear() })}
                 </p>
-                {/* <ul className="nav-x gap-2 fw-medium">
-                  <li>
-                    <a href="#" style={{ color: "#434243" }}>
-                      Privacy notice
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" style={{ color: "#434243" }}>
-                      Legal
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" style={{ color: "#434243" }}>
-                      Cookie settings
-                    </a>
-                  </li>
-                </ul> */}
               </div>
               <div className="hstack justify-center lg:justify-end gap-2 lg:gap-3">
                 <ul className="nav-x gap-2">
@@ -127,15 +131,60 @@ export default function Footer1() {
                   ))}
                 </ul>
                 <div className="vr" style={{ opacity: 0.25, borderColor: "#434243" }} />
-                <button
-                  type="button"
-                  className="hstack items-center gap-narrow border-0 bg-transparent p-0"
-                  style={{ color: "#434243" }}
-                >
-                  <i className="unicon-earth icon-1" />
-                  <span className="fw-medium">English</span>
-                  <i className="unicon-chevron-down icon-1 opacity-70" />
-                </button>
+                <div className="position-relative z-999" ref={langMenuRef}>
+                  <button
+                    type="button"
+                    className="hstack items-center gap-narrow border-0 bg-transparent p-0"
+                    style={{ color: "#434243" }}
+                    aria-expanded={langMenuOpen}
+                    aria-haspopup="listbox"
+                    onClick={() => setLangMenuOpen((open) => !open)}
+                  >
+                    <i className="unicon-earth icon-1" />
+                    <span className="fw-medium">{currentLanguageLabel}</span>
+                    <i className="unicon-chevron-down icon-1 opacity-70" />
+                  </button>
+                  {langMenuOpen ? (
+                    <ul
+                      className="position-absolute end-0 py-1 rounded-2 bg-white dark:bg-gray-800 shadow-xs border border-gray-100 dark:border-gray-700 list-unstyled m-0 z-999"
+                      style={{
+                        minWidth: 160,
+                        zIndex: 1000,
+                        bottom: "100%",
+                        top: "auto",
+                        marginBottom: 8,
+                      }}
+                      role="listbox"
+                    >
+                      <li>
+                        <button
+                          type="button"
+                          className="w-100 text-start border-0 bg-transparent py-2 px-3 small"
+                          style={{ color: "#434243" }}
+                          onClick={() => {
+                            void i18n.changeLanguage("en");
+                            setLangMenuOpen(false);
+                          }}
+                        >
+                          {t("footer.languageEnglish")}
+                        </button>
+                      </li>
+                      <li>
+                        <button
+                          type="button"
+                          className="w-100 text-start border-0 bg-transparent py-2 px-3 small"
+                          style={{ color: "#434243" }}
+                          onClick={() => {
+                            void i18n.changeLanguage("sv");
+                            setLangMenuOpen(false);
+                          }}
+                        >
+                          {t("footer.languageSwedish")}
+                        </button>
+                      </li>
+                    </ul>
+                  ) : null}
+                </div>
               </div>
             </div>
           </div>

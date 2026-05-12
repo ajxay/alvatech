@@ -1,8 +1,17 @@
-import { panelsData } from "@/data/facts";
+"use client";
+
 import React from "react";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 export default function About2() {
+  const { t } = useTranslation("common");
+  const panelsData = [
+    { value: 2014, textKey: "pages.about.stats.founded", animationData: "onview: -100; textContent: 2014; round: 1; easing: linear; duration: 1200;" },
+    { value: 50, textKey: "pages.about.stats.team", animationData: "onview: -100; textContent: [0, 50]; round: 1; easing: linear; duration: 1200;" },
+    { value: 100, textKey: "pages.about.stats.workflows", animationData: "onview: -100; textContent: [0, 100]; round: 1; easing: linear; duration: 1200;", suffix: "k" },
+  ];
+
   return (
     <div
       id="about_us"
@@ -37,13 +46,9 @@ export default function About2() {
               className="panel vstack text-center"
               data-anime="onview: -100; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});"
             >   
-              <h2 className="h3 lg:h2 mb-4">How Alva Tech helps</h2>
+              <h2 className="h3 lg:h2 mb-4">{t("pages.about.howTitle")}</h2>
               <p className="fs-5 xl:fs-4 text-dark dark:text-white text-opacity-70">
-              Our solutions are designed to integrate seamlessly with your existing systems,
-ensuring a smooth transition and maximum ROI. We specialize in crafting tailored
-digital strategies that align with your business goals and drive measurable growth.
-With a focus on user experience, security, and scalability, we deliver solutions
-that not only meet your immediate needs but also position you for long-term success.
+                {t("pages.about.howBody")}
               </p>
               {/* <p className="fs-5 xl:fs-4 text-dark dark:text-white text-opacity-70">
                 In 2014, Steven Smith have gotten so much of our time back that
@@ -65,7 +70,7 @@ that not only meet your immediate needs but also position you for long-term succ
                           {panel.suffix && panel.suffix}
                         </h4>
                         <p className="fs-6 lg:fs-5 text-dark dark:text-white text-opacity-70 text-nowrap">
-                          {panel.text}
+                          {t(panel.textKey)}
                         </p>
                       </div>
                     </div>

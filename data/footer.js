@@ -1,34 +1,32 @@
 export const footerLinks = [
   {
     links: [
-      { href: "/page-shopify", label: "Shopify Development" },
-      { href: "/page-development", label: "Custom Development" },
-      { href: "/page-marketing", label: "Marketing" },
-     ],
-  },
-  {
-    links: [
-      { href: "/page-salesforce", label: "Salesforce CRM" },
-      { href: "/page-erp", label: "ERP Solutions" },
-      { href: "/page-zoho", label: "ZOHO CRM" },
-    ],
-  },
- 
-  {
-    links: [
-      { href: "/page-integrations", label: " All Services" },
-      { href: "/page-about", label: "About" },
-      { href: "/page-contact", label: "Schedule A Call" },
+      { href: "/page-shopify", labelKey: "shopifyDevelopment" },
+      { href: "/page-development", labelKey: "customDevelopment" },
+      { href: "/page-marketing", labelKey: "marketing" },
     ],
   },
   {
     links: [
-      { href: "#", label: "Blog" },
-      { href: "/page-terms", label: "Terms of service" },
-      { href: "/page-privacy", label: "Privacy policy" },
+      { href: "/page-salesforce", labelKey: "salesforceCrm" },
+      { href: "/page-erp", labelKey: "erpSolutions" },
+      { href: "/page-zoho", labelKey: "zohoCrm" },
     ],
   },
-  
+  {
+    links: [
+      { href: "/page-integrations", labelKey: "allServices" },
+      { href: "/page-about", labelKey: "about" },
+      { href: "/page-contact", labelKey: "scheduleCall" },
+    ],
+  },
+  {
+    links: [
+      { href: "#", labelKey: "blog" },
+      { href: "/page-terms", labelKey: "termsOfService" },
+      { href: "/page-privacy", labelKey: "privacyPolicy" },
+    ],
+  },
 ];
 
 export const footerLinks2 = [

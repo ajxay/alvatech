@@ -1,8 +1,42 @@
-import { panelsData } from "@/data/plans";
+"use client";
+
 import React from "react";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 export default function AboutValues() {
+  const { t } = useTranslation("common");
+  const panelsData = [
+    {
+      id: 1,
+      lightImgSrc: "/assets/images/template/diamond.svg",
+      darkImgSrc: "/assets/images/template/diamond.svg",
+      altText: "impact-icon",
+      keyBase: "pages.about.values.impact",
+    },
+    {
+      id: 2,
+      lightImgSrc: "/assets/images/template/trophy.svg",
+      darkImgSrc: "/assets/images/template/trophy.svg",
+      altText: "learn-icon",
+      keyBase: "pages.about.values.learn",
+    },
+    {
+      id: 3,
+      lightImgSrc: "/assets/images/template/globe.svg",
+      darkImgSrc: "/assets/images/template/globe.svg",
+      altText: "fun-icon",
+      keyBase: "pages.about.values.fun",
+    },
+    {
+      id: 4,
+      lightImgSrc: "/assets/images/template/crown.svg",
+      darkImgSrc: "/assets/images/template/crown.svg",
+      altText: "client-first-icon",
+      keyBase: "pages.about.values.clientFirst",
+    },
+  ];
+
   return (
     <div
       id="about_values"
@@ -16,7 +50,7 @@ export default function AboutValues() {
                 className="h4 sm:h3 lg:h2 m-0 text-center"
                 data-anime="onview: -100; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: 100;"
               >
-                Our Values
+                {t("pages.about.values.sectionTitle")}
               </h2>
               <div
                 className="row child-cols-12 sm:child-cols-6 g-2 lg:g-4 justify-between"
@@ -39,9 +73,9 @@ export default function AboutValues() {
                         height={100}
                         alt={panel.altText}
                       />
-                      <h5 className="h5 lg:h4 m-0">{panel.title}</h5>
+                      <h5 className="h5 lg:h4 m-0">{t(`${panel.keyBase}.title`)}</h5>
                       <p className="fs-6 opacity-70 dark:opacity-80">
-                        {panel.description}
+                        {t(`${panel.keyBase}.description`)}
                       </p>
                     </div>
                   </div>

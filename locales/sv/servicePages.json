@@ -1,0 +1,495 @@
+{
+  "common": {
+    "emailPlaceholder": "Din e-postadress..",
+    "contactUs": "Kontakta oss",
+    "privacyPrefix": "Vi bryr oss om dina data i vår ",
+    "privacyLink": "integritetspolicy",
+    "privacySuffix": ".",
+    "letsFindOut": "Läs mer",
+    "scheduleCallCtaTitle": "Boka ett samtal.",
+    "scheduleCallCtaBody": "Över 500 företag växer redan med Alvatech.",
+    "letsTalk": "Prata med oss",
+    "getStarted": "Kom igång"
+  },
+  "shopify": {
+    "hero": {
+      "titleWe": "Vi",
+      "titleHighlight": "bygger, marknadsför och skalar ",
+      "titleRest": "er digitala närvaro",
+      "subtitle": "Från högpresterande Shopify-butiker till resultatinriktad marknadsföring och sociala strategier – vi hjälper er attrahera, engagera och konvertera er målgrupp."
+    },
+    "bento": {
+      "0": {
+        "title": "Publicera vackra butiker online",
+        "alt": "Publicera vackra butiker online"
+      },
+      "1": {
+        "title": "Lansera starka annonser",
+        "alt": "Lansera starka annonser"
+      },
+      "2": {
+        "title": "Väx ert varumärke i sociala medier",
+        "alt": "Väx ert varumärke i sociala medier"
+      },
+      "3": {
+        "title": "Förvandla besökare till kunder",
+        "alt": "Förvandla besökare till kunder"
+      }
+    },
+    "featuresSection": {
+      "title": "Vi bygger, marknadsför och skalar er digitala närvaro",
+      "subtitle": "Från högpresterande Shopify-butiker till resultatinriktad marknadsföring och sociala strategier – vi hjälper er attrahera, engagera och konvertera er målgrupp."
+    },
+    "features": {
+      "0": {
+        "title": "Skräddarsydd Shopify-utveckling",
+        "description": "Från idé till lansering skapar vi helt anpassade Shopify-butiker utifrån ert varumärke och era affärsmål.",
+        "linkText": "Läs mer",
+        "alt": "Skräddarsydd Shopify-utveckling"
+      },
+      "1": {
+        "title": "Temadesign och anpassning",
+        "description": "Vi designar butiksytor som konverterar eller anpassar befintliga premiumteman så att de speglar er identitet och förbättrar användarupplevelsen.",
+        "linkText": "Se teman",
+        "alt": "Temadesign och anpassning"
+      },
+      "2": {
+        "title": "Shopify-appar och integrationer",
+        "description": "Behöver ni avancerade funktioner? Vi integrerar och konfigurerar appar för betalning, prenumerationer, lager, marknadsföring med mera.",
+        "linkText": "Se appar och integrationer",
+        "alt": "Shopify-appar och integrationer"
+      },
+      "3": {
+        "title": "Butiksmigrering",
+        "description": "Byter ni plattform? Vi migrerar säkert till Shopify med minimal nedtid och utan dataförlust.",
+        "linkText": "Läs mer",
+        "alt": "Butiksmigrering"
+      }
+    },
+    "facts": {
+      "title": "Allt ni behöver finns nära till hands",
+      "subtitle": "Vi levererar lösningar som förenklar arbetsflöden och hjälper er verksamhet att växa smidigt.",
+      "items": {
+        "0": "Live Shopify-butiker",
+        "1": "Kundretention",
+        "2": "Behandlade ordrar"
+      }
+    },
+    "faq": {
+      "1": {
+        "question": "Hur lång tid tar det att bygga en Shopify-butik?",
+        "answer": "De flesta butiker tar 1–4 veckor beroende på omfattning, antal sidor och funktioner. Enklare butiker kan gå live snabbare."
+      },
+      "2": {
+        "question": "Erbjuder ni egen design eller färdiga teman?",
+        "answer": "Båda delar. Vi kan ta fram helt egen design eller anpassa premiumteman utifrån budget och tidplan."
+      },
+      "3": {
+        "question": "Kan ni designa om vår befintliga Shopify-butik?",
+        "answer": "Ja. Vi förbättrar design, UX och konvertering utan att riskera befintlig data."
+      },
+      "4": {
+        "question": "Blir butiken mobilanpassad?",
+        "answer": "Ja. Alla våra butiker är responsiva och optimerade för mobil, surfplatta och desktop."
+      },
+      "5": {
+        "question": "Hjälper ni till med appar och integrationer?",
+        "answer": "Ja. Vi integrerar betalningar, frakt, prenumerationer, marknadsföringsverktyg och andra avancerade funktioner."
+      },
+      "6": {
+        "question": "Kan ni migrera från annan plattform till Shopify?",
+        "answer": "Ja. Vi migrerar från bland annat WooCommerce, Magento och Wix med säker datahantering."
+      },
+      "7": {
+        "question": "Optimerar ni hastighet och SEO?",
+        "answer": "Ja. Vi följer best practices för prestanda och grundläggande on-page SEO."
+      },
+      "8": {
+        "question": "Får vi support efter lansering?",
+        "answer": "Ja. Vi erbjuder löpande support och underhåll för säkerhet och prestanda."
+      },
+      "9": {
+        "question": "Vad kostar Shopify-utveckling?",
+        "answer": "Priset beror på omfattning och funktioner. Vi lämnar offert utifrån era krav."
+      },
+      "10": {
+        "question": "Behöver vi teknisk kunskap för att sköta butiken?",
+        "answer": "Nej, Shopify är användarvänligt. Vi kan också utbilda er i produkter, ordrar och innehåll."
+      }
+    }
+  },
+  "customDevelopment": {
+    "hero": {
+      "titleWe": "Vi",
+      "titleHighlight": "bygger, lanserar och skalar ",
+      "titleRest": "era skräddarsydda webbapplikationer",
+      "subtitle": "Från skalbar MERN-arkitektur till högpresterande system – vi hjälper er att bygga, optimera och växa med precision."
+    },
+    "facts": {
+      "title": "Allt ni behöver för att bygga och skala moderna applikationer",
+      "subtitle": "Vi levererar skalbara lösningar som effektiviserar verksamheten och accelererar tillväxt.",
+      "items": {
+        "0": "Levererade applikationer",
+        "1": "Kundnöjdhet",
+        "2": "Användare i våra appar"
+      }
+    },
+    "service": {
+      "0": {
+        "title": "Skräddarsydd webbapplikationsutveckling",
+        "description": "Vi bygger webbapplikationer i MERN-stacken utifrån era processer, användare och mål.",
+        "linkText": "Bygg med oss",
+        "alt": "Skräddarsydd webbapplikationsutveckling"
+      },
+      "1": {
+        "title": "UI/UX och frontend",
+        "description": "Vi designar intuitiva gränssnitt i React som ökar engagemang och konvertering.",
+        "linkText": "Designa med oss",
+        "alt": "UI/UX och frontend"
+      },
+      "2": {
+        "title": "API:er och systemintegration",
+        "description": "Säkra, skalbara API:er och integrationer så att allt fungerar sömlöst över plattformar.",
+        "linkText": "Integrera",
+        "alt": "API:er och systemintegration"
+      },
+      "3": {
+        "title": "Migrering och modernisering",
+        "description": "Vi flyttar legacy till modern MERN-arkitektur med minimal störning och bättre prestanda.",
+        "linkText": "Uppgradera",
+        "alt": "Migrering och modernisering"
+      },
+      "title": "Vi bygger, skalar och optimerar era digitala produkter",
+      "subtitle": "Från idé till produktion – vi skapar robusta, skalbara applikationer anpassade efter era mål."
+    },
+    "faq": {
+      "1": {
+        "question": "Vilka typer av skräddarsydd utveckling erbjuder ni?",
+        "answer": "Webbapplikationer, API:er, interna verktyg, portaler och skalbara backends anpassade efter er verksamhet."
+      },
+      "2": {
+        "question": "Kan ni modernisera vårt legacy-system?",
+        "answer": "Ja. Vi granskar, omstrukturerar, migrerar kod och UX samtidigt som affärslogik bevaras."
+      },
+      "3": {
+        "question": "Vilka tekniker använder ni?",
+        "answer": "Bland annat React, Next.js, Node.js och moln – valda utifrån prestanda, säkerhet och skalbarhet."
+      },
+      "4": {
+        "question": "Hur uppskattar ni tid och kostnad?",
+        "answer": "Vi börjar med discovery, scope och milstolpar och ger en transparent uppskattning."
+      },
+      "5": {
+        "question": "Erbjuder ni drift efter lansering?",
+        "answer": "Ja. Underhåll, övervakning, säkerhetsuppdateringar och nya funktioner."
+      }
+    }
+  },
+  "salesforce": {
+    "hero": {
+      "title": "Skräddarsydda lösningar för ",
+      "titleHighlight": "högre intäktstillväxt",
+      "subtitle": "Från CRM-implementering till automation och insikter – vi maximerar värdet av Salesforce så sälj, service och drift arbetar som en enhet."
+    },
+    "facts": {
+      "title": "Smarta funktioner för er verksamhet",
+      "subtitle": "Ni behåller kontrollen medan våra Salesforce-certifierade utvecklärar säkerställer ett tydligt och värdeskapande resultat.",
+      "items": {
+        "0": "År med Salesforce-erfarenhet",
+        "1": "Implementationer i 23+ länder",
+        "2": "Utvecklade AppExchange-appar"
+      }
+    },
+    "features": {
+      "leads": {
+        "title": "Lead- och kontakthantering",
+        "description": "Samla, strukturera och följ upp leads och kontakter på ett ställe för starkare relationer."
+      },
+      "pipeline": {
+        "title": "Affärsmöjligheter och pipeline",
+        "description": "Visualisera pipelinen, följ affärer och prognostisera intäkter i realtid."
+      },
+      "reports": {
+        "title": "Rapporter och analys",
+        "description": "Få rapporter och insikter som stödjer snabbare beslut och tillväxt."
+      },
+      "workflow": {
+        "title": "Arbetsflöden och automation",
+        "description": "Automatisera repetitiva uppgifter så teamet kan fokusera på det som skapar värde."
+      },
+      "bottomTitle": "Er kompletta CRM-plattform för affärsframgång",
+      "bottomBody": "Salesforce samlar försäljning, kundservice och marknadsföring med kraftfulla verktyg och integrationer.",
+      "intro1Title": "Fördjupad analys",
+      "intro1Desc": "Förstå kunderna bättre och skapa personaliserade upplevelser som driver engagemang.",
+      "intro2Title": "Enkel livscykelhantering",
+      "intro2Desc": "Hantera hela kundresan från lead till support med tydliga processer."
+    },
+    "faq": {
+      "1": {
+        "question": "Vilka Salesforce-tjänster erbjuder ni?",
+        "answer": "Rådgivning, implementering, anpassning, automation, integrationer, datamigrering och adoption."
+      },
+      "2": {
+        "question": "Kan Salesforce anpassas till vår säljprocess?",
+        "answer": "Ja. Objekt, fält, flöden, dashboards och automationer efter er process."
+      },
+      "3": {
+        "question": "Hjälper ni med datamigrering?",
+        "answer": "Ja. Kartläggning, rensning, migrering och validering från legacy eller annan CRM."
+      },
+      "4": {
+        "question": "Kan Salesforce integreras med våra verktyg?",
+        "answer": "Ja. ERP, marknadsföring, support och tredjepartsappar."
+      },
+      "5": {
+        "question": "Utbildar ni efter go-live?",
+        "answer": "Ja. Rollbaserad utbildning, dokumentation och support."
+      }
+    }
+  },
+  "erp": {
+    "hero": {
+      "titleHighlight": "Allt-i-ett-",
+      "titleRest": "affärslösning",
+      "subtitle": "Samla kärnfunktioner på en plattform för bättre samarbete, effektivare drift och högre produktivitet."
+    },
+    "facts": {
+      "title": "En plattform för varje kärnfunktion",
+      "subtitle": "Ekonomi, drift, analys och automation i ett säkert molnbaserat ERP med en gemensam informationskälla.",
+      "items": {
+        "0": "Molnbaserad plattform",
+        "1": "Globala integrationer",
+        "2": "Snabbare processer"
+      }
+    },
+    "service": {
+      "0": {
+        "title": "Molnbaserat ERP",
+        "description": "Business Central i molnet med säker åtkomst, skalbarhet och samarbete i realtid.",
+        "linkText": "Till molnet",
+        "alt": "Molnbaserat ERP"
+      },
+      "1": {
+        "title": "Global drift",
+        "description": "Multi-valuta, språk och lokalisering för internationell verksamhet.",
+        "linkText": "Gå globalt",
+        "alt": "Global drift"
+      },
+      "2": {
+        "title": "Smart analys",
+        "description": "Dashboards och rapporter för snabbare, datadrivna beslut.",
+        "linkText": "Se insikter",
+        "alt": "Smart analys"
+      },
+      "3": {
+        "title": "Integration med Microsoft",
+        "description": "Koppla till Microsoft 365, Power BI och Teams.",
+        "linkText": "Utforska integrationer",
+        "alt": "Integration med Microsoft"
+      },
+      "4": {
+        "title": "Anpassade arbetsflöden",
+        "description": "Automatisera manuella moment och frigör tid för strategi.",
+        "linkText": "Automatisera",
+        "alt": "Anpassade arbetsflöden"
+      },
+      "badge": "Byggd för moderna företag",
+      "title": "Allt ert företag behöver på ett ställe",
+      "subtitle": "Från ekonomi och supply chain till analys och automation – ett enhetligt ERP för ert team."
+    },
+    "faq": {
+      "1": {
+        "question": "Vilka områden förbättrar ERP?",
+        "answer": "Ekonomi, lager, inköp, drift och rapportering i en gemensam bild."
+      },
+      "2": {
+        "question": "Hur väljer ni rätt ERP-approach?",
+        "answer": "Vi analyserar processer, smärtpunkter och mål och föreslår en färdplan."
+      },
+      "3": {
+        "question": "Kan ERP integreras med befintlig stack?",
+        "answer": "Ja. CRM, e-handel, bokföring och drift – mindre manuellt arbete."
+      },
+      "4": {
+        "question": "Hur lång tid tar implementation?",
+        "answer": "Beror på moduler och data. Vi levererar i faser för lägre risk."
+      },
+      "5": {
+        "question": "Stöttar ni efter go-live?",
+        "answer": "Ja. Optimering av flöden och rapporter när verksamheten utvecklas."
+      }
+    }
+  },
+  "zoho": {
+    "hero": {
+      "titleBefore": "Maximal ",
+      "titleHighlight": "produktivitet med minimal",
+      "titleAfter": " ansträngning",
+      "subtitle": "Zoho CRM ger fler leads, snabbare affärer och tydligare prestationsmätning – använt av över 200 000 företag."
+    },
+    "facts": {
+      "title": "Säljexekvering för företag världen över",
+      "subtitle": "Koppla ihop hela säljflödet med analys så teamet kan fokusera på att stänga affärer.",
+      "items": {
+        "0": "Företag världen över",
+        "1": "Appintegrationer",
+        "2": "Kraftfulla CRM-funktioner"
+      }
+    },
+    "service": {
+      "0": {
+        "title": "Leadhantering",
+        "description": "Fånga leads, poängsättning och uppföljning med tydlig kontaktinformation.",
+        "linkText": "Utforska leads",
+        "alt": "Leadhantering"
+      },
+      "1": {
+        "title": "Arbetsflödesautomation",
+        "description": "Automatisera uppföljning och fältuppdateringar så teamet sparar tid.",
+        "linkText": "Automatisera",
+        "alt": "Arbetsflödesautomation"
+      },
+      "2": {
+        "title": "Säljprocessbyggare",
+        "description": "Samma spelbok för varje rep i varje affärsstadium.",
+        "linkText": "Bygg processen",
+        "alt": "Säljprocessbyggare"
+      },
+      "3": {
+        "title": "Analys och prognoser",
+        "description": "Dashboards, trender, KPI:er och prognoser ni kan lita på.",
+        "linkText": "Se analys",
+        "alt": "Analys och prognoser"
+      },
+      "badge": "Funktioner som gör sälj enklare",
+      "title": "Styr verksamheten med rik analys",
+      "subtitle": "Öka leads, accelerera försäljning och mät resultat i alla kanaler med Zoho CRM."
+    },
+    "faq": {
+      "1": {
+        "question": "Vad kan Zoho CRM göra för oss?",
+        "answer": "Hantera leads, automation, affärer och pipeline för snabbare sälj."
+      },
+      "2": {
+        "question": "Kan Zoho anpassas till vårt arbetssätt?",
+        "answer": "Ja. Moduler, fält, automationer, blueprints och dashboards."
+      },
+      "3": {
+        "question": "Erbjuder ni migrering till Zoho?",
+        "answer": "Ja. Från kalkylblad eller annan CRM med mappning och validering."
+      },
+      "4": {
+        "question": "Integreras Zoho med e-post och appar?",
+        "answer": "Ja. E-post, telefoni, marknadsföring och tredjepartsappar."
+      },
+      "5": {
+        "question": "Får teamet onboarding och utbildning?",
+        "answer": "Ja. Introduktion, rollbaserad utbildning och support."
+      }
+    }
+  },
+  "marketing": {
+    "trustStrip": "Över 14 000 företag – stora som små – litar på oss i sin transformation",
+    "hero": {
+      "title": "Sluta gissa. Börja växa.",
+      "subtitle": "Från betalda annonser och SEO till sociala medier och konverteringsoptimering – vi bygger och driver marknadsstrategier som omvandlar trafik till intäkter.",
+      "emailPlaceholder": "Ange din e-post",
+      "getCall": "Boka samtal",
+      "reviewsNote": "Baserat på 200+ omdömen"
+    },
+    "featuresSection": {
+      "title": "Tjänster i nästa nivå",
+      "subtitle": "Vi lyfter ert varumärke med riktad annonsering, datadriven SEO och innehåll som engagerar."
+    },
+    "features": {
+      "social": {
+        "title": "Annonsering i sociala medier",
+        "description": "Kampanjer på bland annat Facebook och Google för större räckvidd.",
+        "p0": "PPC / SEM",
+        "p1": "Displayannonsering",
+        "p2": "Facebook- och Google-annonsering"
+      },
+      "seo": {
+        "title": "SEO-optimering",
+        "description": "Vi förbättrar synligheten med revisioner, strategi och hastighetsoptimering.",
+        "p0": "SEO-revisioner",
+        "p1": "SEO-strategi och coachning",
+        "p2": "Sidhastighetsoptimering"
+      },
+      "analytics": {
+        "title": "Avancerad analys",
+        "description": "Beteende, mål och heatmaps som finslipar strategin.",
+        "p0": "Mål och KPI-upplägg",
+        "p1": "Användaranalys",
+        "p2": "Heatmap-analys"
+      },
+      "funnel": {
+        "title": "Funneloptimering",
+        "description": "Revision av funnel och UX för högre konvertering.",
+        "p0": "UX-analys",
+        "p1": "Funnelrevision",
+        "p2": "CR-optimering"
+      },
+      "paid": {
+        "title": "Betald annonsering",
+        "description": "A/B-test, retargeting och konverteringsoptimering.",
+        "p0": "A/B-test av annonser",
+        "p1": "CR-optimering",
+        "p2": "Retargeting"
+      },
+      "content": {
+        "title": "Innehållsmarknadsföring",
+        "description": "Innehållsplan, produktion och community som bygger lojalitet.",
+        "p0": "Innehållsplan",
+        "p1": "Innehållsproduktion",
+        "p2": "Community-hantering"
+      }
+    },
+    "howworks": {
+      "title": "Kraftfullt och enkelt arbetssätt",
+      "subtitle": "Vi sätter tydliga mål, genomför strategin och levererar mätbara resultat tillsammans med er."
+    },
+    "faqIntro": "Allt ni behöver veta om tjänsten och fakturering.",
+    "accordion": {
+      "23": {
+        "title": "Låt oss ta fram en plan",
+        "content": "Vi definierar mål och KPI:er och kopplar strategin till era affärsmål."
+      },
+      "25": {
+        "title": "Lansera och genomför",
+        "content": "Vi sätter planen i verk och följer upp resultat kontinuerligt."
+      },
+      "27": {
+        "title": "Väx och skala",
+        "content": "Vi optimerar utifrån data för hållbar tillväxt."
+      }
+    },
+    "support": {
+      "title": "Fler frågor?",
+      "subtitle": "Hittar ni inte svaret? Chatta med vårt team.",
+      "cta": "Kontakta oss"
+    },
+    "faq": {
+      "1": {
+        "question": "Vilka marknadsföringstjänster erbjuder Alvatech?",
+        "answer": "Performance marketing, betalda annonser, SEO, social strategi, innehåll och funneloptimering."
+      },
+      "2": {
+        "question": "Hur snabbt ser vi resultat?",
+        "answer": "Betalt ger ofta signaler inom veckor; SEO och organisk tillväxt tar månader."
+      },
+      "3": {
+        "question": "Hanterar ni Meta och Google?",
+        "answer": "Ja. Planering, lansering och optimering med målgrupper, kreativitet och spårning."
+      },
+      "4": {
+        "question": "Hur följer ni upp kampanjer?",
+        "answer": "KPI:er som CPL, CAC, ROAS och konvertering med regelbunden rapportering."
+      },
+      "5": {
+        "question": "Kan ni koppla marknadsföring till sälj?",
+        "answer": "Ja. Vi synkar med er funnel och CRM för bättre nurturing."
+      }
+    }
+  }
+}

@@ -1,8 +1,14 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 import Accordion2 from "@/components/common/Accordion2";
 
 export default function Howworks() {
+  const { t } = useTranslation("common");
+  const hw = "servicePages.marketing.howworks";
+
   return (
     <div
       id="how_it_works"
@@ -31,12 +37,8 @@ export default function Howworks() {
                         className="panel vstack items-start gap-2 lg:gap-3 p-3 md:p-4 lg:p-6 xl:p-8 xl:px-9 my-2 lg:my-0"
                         data-anime="onview: -100; targets: >*; translateY: [16, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 500});"
                       >
-                        <h3 className="h3 lg:h2 m-0">
-                        Powerful and simple workflow
-                        </h3>
-                        <p className="fs-6 lg:fs-5">
-                        Our process is designed for clarity and impact. We work with you to define goals, execute strategies, and deliver measurable results.
-                        </p>
+                        <h3 className="h3 lg:h2 m-0">{t(`${hw}.title`)}</h3>
+                        <p className="fs-6 lg:fs-5">{t(`${hw}.subtitle`)}</p>
                         <div className="panel w-100 mt-2 lg:mt-4">
                           <ul
                             className="uc-accordion-divider uc-accordion-chevron gap-5 uc-accordion"

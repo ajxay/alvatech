@@ -1,11 +1,13 @@
 "use client";
 import { accordionItems } from "@/data/faq";
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Accordion({
   faqData = accordionItems,
   parentClass = "",
 }) {
+  const { t } = useTranslation("common");
   const parentRefs = useRef([]);
   const questionRefs = useRef([]);
   const answerRefs = useRef([]);
@@ -53,13 +55,13 @@ export default function Accordion({
             aria-disabled="false"
             ref={(el) => (questionRefs.current[index] = el)}
           >
-            {item.question}
+            {item.questionKey ? t(item.questionKey) : item.question}
           </a>
           <div
             className="uc-accordion-content"
             ref={(el) => (answerRefs.current[index] = el)}
           >
-            <p>{item.answer}</p>
+            <p>{item.answerKey ? t(item.answerKey) : item.answer}</p>
           </div>
         </li>
       ))}

@@ -1,19 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import { CONTACT_SERVICE_OPTIONS } from "@/data/contactServiceOptions";
 import "./Contact3.css";
 
-const services = [
-  { label: "Shopify Development", checked: false },
-  { label: "Custom Development", checked: false },
-  { label: "Marketing", checked: false },
-  { label: "Salesforce CRM", checked: false },
-  { label: "ERP Solutions", checked: false },
-  { label: "ZOHO CRM", checked: false },
-  { label: "Other", checked: false },
-];
-
 function ContactForm({ compact = false }) {
+  const { t } = useTranslation("common");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [toast, setToast] = useState({ show: false, type: "success", message: "" });
 
@@ -57,14 +50,14 @@ function ContactForm({ compact = false }) {
       setToast({
         show: true,
         type: "success",
-        message: "Message sent successfully.",
+        message: t("modal.contact.toastSuccess"),
       });
       form.reset();
     } catch (_error) {
       setToast({
         show: true,
         type: "error",
-        message: "Unable to send right now. Please try again.",
+        message: t("modal.contact.toastError"),
       });
     } finally {
       setIsSubmitting(false);
@@ -75,44 +68,59 @@ function ContactForm({ compact = false }) {
     <form className={`contact3-form${compact ? " is-compact" : ""}`} onSubmit={handleSubmit}>
       <div className="contact3-grid">
         <label>
-          <span>First name</span>
-          <input type="text" name="firstName" placeholder="First name" required />
+          <span>{t("modal.contact.firstName")}</span>
+          <input
+            type="text"
+            name="firstName"
+            placeholder={t("modal.contact.placeholderFirst")}
+            required
+          />
         </label>
         <label>
-          <span>Last name</span>
-          <input type="text" name="lastName" placeholder="Last name" required />
+          <span>{t("modal.contact.lastName")}</span>
+          <input
+            type="text"
+            name="lastName"
+            placeholder={t("modal.contact.placeholderLast")}
+            required
+          />
         </label>
       </div>
       <label>
-        <span>Email</span>
-        <input type="email" name="email" placeholder="you@company.com" required />
+        <span>{t("modal.contact.email")}</span>
+        <input
+          type="email"
+          name="email"
+          placeholder={t("modal.contact.placeholderEmail")}
+          required
+        />
       </label>
       <label>
-        <span>Phone number</span>
-        <input type="text" name="phone" placeholder="+46 70 496 45 69 " required />
+        <span>{t("modal.contact.phone")}</span>
+        <input
+          type="text"
+          name="phone"
+          placeholder={t("modal.contact.placeholderPhone")}
+          required
+        />
       </label>
       <label>
-        <span>Message</span>
-        <textarea name="message" placeholder="Leave us a message..." />
+        <span>{t("modal.contact.message")}</span>
+        <textarea name="message" placeholder={t("modal.contact.placeholderMessage")} />
       </label>
       <div className="contact3-services">
-        <span>Services</span>
+        <span>{t("modal.contact.services")}</span>
         <div className="contact3-services__grid">
-          {services.map((item) => (
-            <label key={item.label}>
-              <input
-                type="checkbox"
-                name="services[]"
-                value={item.label}
-                defaultChecked={item.checked}
-              />
-              <span>{item.label}</span>
+          {CONTACT_SERVICE_OPTIONS.map((item) => (
+            <label key={item.value}>
+              <input type="checkbox" name="services[]" value={item.value} />
+              <span>{t(item.tKey)}</span>
             </label>
           ))}
         </div>
       </div>
       <button type="submit" disabled={isSubmitting}>
-        {isSubmitting ? "Sending..." : "Send message"}
+        {isSubmitting ? t("modal.contact.submitting") : t("modal.contact.submit")}
       </button>
       {toast.show ? (
         <div
@@ -128,6 +136,8 @@ function ContactForm({ compact = false }) {
 }
 
 export default function Contact3() {
+  const { t } = useTranslation("common");
+
   return (
     <section className="contact3 section panel overflow-hidden">
       <div className="section-outer panel py-7 lg:py-9">
@@ -136,19 +146,15 @@ export default function Contact3() {
             <div className="contact3-browser">
               <div className="contact3-content">
                 <div className="contact3-intro">
-                  <h1>Contact our team</h1>
-                  <p>
-                    Got any questions about the product or scaling on our platform?
-                    We&apos;re here to help. Chat to our friendly team 24/7 and get onboard
-                    in less than 5 minutes.
-                  </p>
+                  <h1>{t("pages.contact3.introTitle")}</h1>
+                  <p>{t("pages.contact3.introBody")}</p>
                 </div>
 
                 <div className="contact3-layout">
                   <ContactForm />
                   <aside className="contact3-info">
-                    <h3>Chat with us</h3>
-                    <p>Speak to our friendly team via live chat.</p>
+                    <h3>{t("pages.contact3.chatTitle")}</h3>
+                    <p>{t("pages.contact3.chatBody")}</p>
                     <ul className="contact3-info__links">
                       <li>
                         <span className="contact3-info__icon" aria-hidden="true">
@@ -156,7 +162,7 @@ export default function Contact3() {
                             <path d="M4 12a8 8 0 0 1 8-8h.3A7.7 7.7 0 0 1 20 11.7a7.3 7.3 0 0 1-7.3 7.3H9l-4 3v-6A7.9 7.9 0 0 1 4 12Z" />
                           </svg>
                         </span>
-                        <a href="#">Start a live chat</a>
+                        <a href="#">{t("pages.contact3.liveChat")}</a>
                       </li>
                       <li>
                         <span className="contact3-info__icon" aria-hidden="true">
@@ -165,7 +171,7 @@ export default function Contact3() {
                             <path d="m22 2-7 20-4-9-9-4 20-7Z" />
                           </svg>
                         </span>
-                        <a href="mailto:sales@alvatech.se">Shoot us an email</a>
+                        <a href="mailto:sales@alvatech.se">{t("pages.contact3.emailLink")}</a>
                       </li>
                       <li>
                         <span className="contact3-info__icon" aria-hidden="true">
@@ -173,11 +179,11 @@ export default function Contact3() {
                             <path d="M4 3h4.7L14 9.7 18.9 3H22l-6.2 8 6.4 10h-4.8l-4.3-6.2L8.7 21H4l6.6-8.5L4 3Z" />
                           </svg>
                         </span>
-                        <a href="#">Message us on X</a>
+                        <a href="#">{t("pages.contact3.messageX")}</a>
                       </li>
                     </ul>
-                    <h3>Call us</h3>
-                    <p>Call our team Mon-Fri from 8am to 5pm.</p>
+                    <h3>{t("pages.contact3.callTitle")}</h3>
+                    <p>{t("pages.contact3.callBody")}</p>
                     <div className="contact3-info__contact-row">
                       <span className="contact3-info__icon" aria-hidden="true">
                         <svg viewBox="0 0 24 24">
@@ -186,8 +192,8 @@ export default function Contact3() {
                       </span>
                       <strong>+46 70 496 45 69 </strong>
                     </div>
-                    <h3>Visit us</h3>
-                    <p>Chat to us in person at our Melbourne HQ.</p>
+                    <h3>{t("pages.contact3.visitTitle")}</h3>
+                    <p>{t("pages.contact3.visitBody")}</p>
                     <div className="contact3-info__contact-row">
                       <span className="contact3-info__icon" aria-hidden="true">
                         <svg viewBox="0 0 24 24">
@@ -203,11 +209,8 @@ export default function Contact3() {
             </div>
 
             <aside className="contact3-mobile-card">
-              <h2>Contact our team</h2>
-              <p>
-                Got any questions about the product or scaling on our platform?
-                Chat to our friendly team 24/7 for help.
-              </p>
+              <h2>{t("pages.contact3.mobileIntroTitle")}</h2>
+              <p>{t("pages.contact3.mobileIntroBody")}</p>
               <ContactForm compact />
             </aside>
           </div>

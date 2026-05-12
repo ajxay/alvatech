@@ -1,8 +1,13 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 export default function Cta() {
+  const { t } = useTranslation("common");
+
   return (
     <div id="cta" className="cta section panel overflow-hidden">
       <div className="section-outer panel py-4 xl:py-9">
@@ -10,15 +15,15 @@ export default function Cta() {
           <div className="section-inner panel p-4 sm:p-6 xl:p-8 rounded-2 bg-secondary dark:bg-gray-800 overflow-hidden">
             <div className="vstack gap-2 max-w-550px items-center lg:items-start m-auto lg:m-0 text-center lg:text-start rtl:lg:text-end">
               <h2 className="h3 sm:h1 m-0">
-                Create stunning websites that fits your needs.
+                {t("pages.cta.title")}
               </h2>
               <div className="vstack sm:hstack justify-center lg:justify-start gap-1 lg:gap-2 mt-1 lg:mt-2">
                 <Link
-                  href={`/page-pricing`}
+                  href={`/page-contact`}
                   className="btn btn-md lg:btn-lg btn-primary text-white"
                   style={{ backgroundColor: "#84BA41", borderColor: "#84BA41" }}
                   >
-                    Try Alvatech today
+                    {t("pages.cta.button")}
                 </Link>
               </div>
               <p className="fs-7 text-dark dark:text-white text-opacity-70">

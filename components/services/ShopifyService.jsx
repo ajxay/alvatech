@@ -1,8 +1,13 @@
+"use client";
+
 import { featureItemsShopify } from "@/data/features";
 import React from "react";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 export default function Features() {
+  const { t } = useTranslation("common");
+
   return (
     <div
       id="main_features"
@@ -16,19 +21,20 @@ export default function Features() {
               data-anime="onview: -200; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});"
             >
               <h2 className="h3 lg:h2 xl:h1 m-0">
-                We build, market, and scale your digital presence
+                {t("servicePages.shopify.featuresSection.title")}
               </h2>
               <p className="fs-6 xl:fs-5 text-dark dark:text-white text-opacity-70">
-                From high-performing Shopify stores to result-driven marketing
-                and social media strategies—we help you attract, engage, and
-                convert your audience.
+                {t("servicePages.shopify.featuresSection.subtitle")}
               </p>
             </div>
             <div
               className="row child-cols-12 g-6 md:g-8 xl:g-6"
               data-uc-scrollspy="target: >*; delay: 500; cls: uc-animation-slide-bottom-medium"
             >
-              {featureItemsShopify.map((elm, i) => (
+              {featureItemsShopify.map((elm, i) => {
+                const base = `servicePages.shopify.features.${i}`;
+                const title = t(`${base}.title`);
+                return (
                 <div key={i}>
                   <div className="feature-item panel">
                     <div className="row child-cols items-center justify-between g-2 md:g-4">
@@ -46,7 +52,7 @@ export default function Features() {
                               src={elm.imageSrc}
                               width={1400}
                               height={1412}
-                              alt="Ensuring timely delivery and maximum efficiency"
+                              alt={t(`${base}.alt`)}
                             />
                           </figure>
                         </div>
@@ -69,16 +75,16 @@ export default function Features() {
                                   <i className={`icon-1 ${elm.icon}`} />
                                 </span>
                                 <h3 className="h4 sm:h3 xl:h2 m-0">
-                                  {elm.title}
+                                  {title}
                                 </h3>
                                 <p className="fs-6 lg:fs-5 opacity-70 dark:opacity-80">
-                                  {elm.description}
+                                  {t(`${base}.description`)}
                                 </p>
                                 <a
                                   href="#"
                                   className="uc-link dark:text-secondary fw-bold hstack gap-narrow sm:mt-1 lg:mt-2"
                                 >
-                                  <span>Let's find out</span>
+                                  <span>{t(`${base}.linkText`)}</span>
                                   <i className="position-relative icon icon-1 unicon-arrow-right rtl:rotate-180 translate-y-px" />
                                 </a>
                               </div>
@@ -89,7 +95,7 @@ export default function Features() {
                     </div>
                   </div>
                 </div>
-              ))}
+              );})}
             </div>
           </div>
         </div>

@@ -1,0 +1,393 @@
+{
+  "footer": {
+    "description": "Alvatech är en ledande digital transformationsbyrå som levererar skräddarsydda e-handelslösningar som hjälper företag att växa och trivas online.",
+    "newsletterTitle": "Nyhetsbrev",
+    "newsletterDesc": "Prenumerera för att få de senaste uppdateringarna och nyheterna.",
+    "emailPlaceholder": "Ange din e-postadress",
+    "subscribe": "Prenumerera",
+    "rights": "Alvatech © {{year}}, Alla rättigheter förbehållna.",
+    "languageEnglish": "Engelska",
+    "languageSwedish": "Svenska",
+    "links": {
+      "shopifyDevelopment": "Shopify-utveckling",
+      "customDevelopment": "Skräddarsydd utveckling",
+      "marketing": "Marknadsföring",
+      "salesforceCrm": "Salesforce CRM",
+      "erpSolutions": "ERP-lösningar",
+      "zohoCrm": "ZOHO CRM",
+      "allServices": "Alla tjänster",
+      "about": "Om oss",
+      "scheduleCall": "Boka ett samtal",
+      "blog": "Blogg",
+      "termsOfService": "Användarvillkor",
+      "privacyPolicy": "Integritetspolicy"
+    }
+  },
+  "header": {
+    "scheduleCall": "Boka ett samtal"
+  },
+  "nav": {
+    "menu": {
+      "whatWeOffer": "Vad vi erbjuder",
+      "resources": "Resurser",
+      "services": "Tjänster",
+      "aboutUs": "Om oss",
+      "contactUs": "Kontakta oss",
+      "hiring": "Vi rekryterar"
+    },
+    "dropdown": {
+      "discoverTitle": "Upptäck våra tjänster och lösningar",
+      "seeWhatsNew": "Se vad som är nytt",
+      "getStartedTitle": "Kom igång – det är enkelt!"
+    },
+    "resources": {
+      "blogTitle": "Blogg",
+      "blogDesc": "Hantera flera program och verktyg för olika uppgifter.",
+      "knowMoreTitle": "Lär känna oss",
+      "knowMoreDesc": "Läs mer om vårt företag, vårt uppdrag och våra värderingar.",
+      "newsletterTitle": "Nyhetsbrev",
+      "newsletterDesc": "De senaste branschrapporterna, uppdateringarna och informationen.",
+      "contactTitle": "Kontakta oss",
+      "contactDesc": "Hör av dig till oss vid frågor eller synpunkter."
+    },
+    "featureDesc": {
+      "shopify": "Stärk närvaron över flera kanaler",
+      "custom": "Bygg lösningar som möter verksamhetens behov",
+      "marketing": "Prestanda och tillväxt",
+      "salesforce": "Implementering och rådgivning",
+      "erp": "Verksamhetsoptimering",
+      "zoho": "CRM- och ERP-lösningar"
+    },
+    "links": {
+      "hireAnExpert": "Anlita en expert"
+    }
+  },
+  "blog": {
+    "home": "Hem",
+    "breadcrumbBlog": "Blogg",
+    "categories": {
+      "Strategy": "Strategi",
+      "Marketing": "Marknadsföring",
+      "Business": "Företag",
+      "Design": "Design",
+      "Product": "Produkt",
+      "Shopify": "Shopify",
+      "Salesforce": "Salesforce",
+      "MetaAds": "Meta-annonser",
+      "Ecommerce": "E-handel",
+      "SEO": "SEO",
+      "Boost": "Boost",
+      "Advertising": "Annonsering"
+    }
+  },
+  "modal": {
+    "contact": {
+      "title": "Kontakta oss",
+      "firstName": "Förnamn",
+      "lastName": "Efternamn",
+      "email": "E-post",
+      "phone": "Telefonnummer",
+      "message": "Meddelande",
+      "services": "Tjänster",
+      "placeholderFirst": "Förnamn",
+      "placeholderLast": "Efternamn",
+      "placeholderEmail": "du@foretag.se",
+      "placeholderPhone": "+46 70 496 45 69",
+      "placeholderMessage": "Lämna ett meddelande...",
+      "submit": "Skicka meddelande",
+      "submitting": "Skickar...",
+      "toastSuccess": "Meddelandet har skickats.",
+      "toastError": "Det gick inte att skicka just nu. Försök igen.",
+      "serviceOther": "Annat"
+    }
+  },
+  "faq": {
+    "defaultTitle": "Vanliga frågor:"
+  },
+  "labels": {
+    "explore": "Utforska",
+    "language": "Språk"
+  },
+  "home13": {
+    "hero": {
+      "badge": "Partner för hela tillväxtresan",
+      "titleLine1": "Gör mer, väx snabbare",
+      "titleWith": "med",
+      "titleSmartSystems": "smarta system",
+      "description": "Vi kombinerar e-handelsutveckling, performance marketing och CRM-automation så att varumärken kan lansera snabbt, skala effektivt och driva verksamheten utan onödig komplexitet.",
+      "exploreServices": "Utforska tjänster",
+      "scrollHint": "Scrolla för mer"
+    },
+    "features": {
+      "sectionTitle": "Smarta funktioner för ditt företag",
+      "sectionSubtitle": "Vi kombinerar strategisk rådgivning med avancerade digitala lösningar som förändrar hur moderna företag arbetar och växer.",
+      "cards": {
+        "ecommerce": {
+          "title": "Lansera högpresterande e-handelsbutiker",
+          "description": "Vi designar och utvecklar skalbara, konverteringsfokuserade e-handelsupplevelser med sömlösa integrationer, snabb prestanda och mobil först-UX så att ni kan gå live och växa snabbare.",
+          "alt": "Instrumentpanel för e-handelsbutik"
+        },
+        "marketing": {
+          "title": "Skala intäkter med performance marketing",
+          "description": "Driv jämn tillväxt med datadrivna kampanjer i Meta och Google med fokus på förvärv, konverteringsoptimering och maximal ROAS genom kontinuerlig testning och förbättring.",
+          "alt": "Instrumentpanel för performance marketing"
+        },
+        "systems": {
+          "title": "Effektivisera verksamheten med smarta system",
+          "description": "Bygg och integrera CRM-, ERP- och Salesforce-lösningar som automatiserar arbetsflöden, samlar data och ökar effektiviteten inom försäljning, marknadsföring och drift – för långsiktig skalbarhet.",
+          "alt": "Instrumentpanel för smarta system"
+        }
+      }
+    },
+    "trust": {
+      "title": "Betrodd för enkelhet i helheten",
+      "reviewsNote": "Baserat på 4 000+ omdömen med hög kundnöjdhet"
+    },
+    "integrations": {
+      "title": "Stärk verksamheten med teknik",
+      "subtitle": "Koppla ihop varje del av verksamheten med teknik som förenklar arbetsflödena."
+    },
+    "integrationCards": {
+      "shopify": {
+        "title": "Shopify",
+        "tag": "Produktivitet",
+        "description": "Bygg och skala er Shopify-butik med optimerade butiksytor, appintegrationer och kundupplevelser som driver konvertering."
+      },
+      "custom": {
+        "title": "Skräddarsydd utveckling",
+        "tag": "CRM",
+        "description": "Utveckla skräddarsydda webb- och mobillösningar med skalbar arkitektur, egna API:er och arbetsflöden anpassade till er drift."
+      },
+      "marketing": {
+        "title": "Marknadsföring",
+        "tag": "Betalning",
+        "description": "Starta datadrivna kampanjer, förbättra leadkvaliteten och optimera resultatet i sök, sociala medier och betalda kanaler."
+      },
+      "salesforce": {
+        "title": "Salesforce CRM",
+        "tag": "Betalning",
+        "description": "Optimera säljpipelines, automatisera kundresor och samla kundtjänst med skräddarsydda Salesforce CRM-lösningar."
+      },
+      "erp": {
+        "title": "ERP-lösningar",
+        "tag": "CRM",
+        "description": "Samla ekonomi, lager, inköp och drift i ett ERP-ekosystem för bättre överblick och skalbar verksamhet."
+      },
+      "zoho": {
+        "title": "ZOHO CRM",
+        "tag": "Integrationsplattformar",
+        "description": "Automatisera leadhantering, effektivisera uppföljning i sälj och stärk kundengagemang med skräddarsydda Zoho CRM-lösningar."
+      }
+    },
+    "seamless": {
+      "title": "Allt ni behöver för att växa",
+      "subtitle": "Koppla verktygen, automatisera arbetsflöden och skapa ett enhetligt system som skalas med er verksamhet.",
+      "previewAlt": "Förhandsvisning: {{title}}",
+      "cards": {
+        "discover": {
+          "title": "Upptäck",
+          "text": "Vi förstår era mål, målgrupp och krav för att bygga rätt strategi."
+        },
+        "design": {
+          "title": "Design",
+          "text": "Vi tar fram wireframes och UI/UX-design som är intuitiv, engagerande och följer ert varumärke."
+        },
+        "develop": {
+          "title": "Utveckla",
+          "text": "Vi bygger rena, skalbara och högpresterande lösningar med modern teknik."
+        },
+        "testLaunch": {
+          "title": "Testa och lansera",
+          "text": "Vi testar noggrant och lanserar smidigt så att allt fungerar som det ska."
+        }
+      }
+    },
+    "partners": {
+      "title": "Alvatechs partners"
+    },
+    "marketplaces": {
+      "title": "Anslut till ledande marknadsplatser",
+      "subtitle": "Allt ni behöver finns nära till hands",
+      "migrateTitle": "Migrera från befintlig e-handelsplattform",
+      "paymentTitle": "Integration av betalningslösningar",
+      "shippingTitle": "Fraktintegration",
+      "marketplaceTitle": "Marknadsplats"
+    },
+    "values": {
+      "sectionTitle": "Våra värderingar",
+      "impact": {
+        "title": "Göra skillnad",
+        "description": "Vi bygger skalbara digitala lösningar som hjälper företag att uppnå mätbar tillväxt i varje skede av den digitala resan."
+      },
+      "learn": {
+        "title": "Lära",
+        "description": "Tekniken utvecklas snabbt – det gör vi också. Teamet utforskar ständigt nya strategier, plattformar och innovationer för framtidssäkra lösningar."
+      },
+      "clientFirst": {
+        "title": "Kunden i centrum",
+        "description": "Vi tror att starka partnerskap skapar varaktig framgång. Genom att förstå kundernas mål och utmaningar levererar vi praktiska, personliga och resultatinriktade lösningar."
+      }
+    },
+    "stats": {
+      "experts": "Experter i interna teamets storlek.",
+      "support": "Stark support varje dag",
+      "implementations": "Implementationer",
+      "experience": "År av branscherfarenhet"
+    },
+    "posts": {
+      "title": "Senaste inlägg och uppdateringar",
+      "readAria": "Läs {{title}}"
+    },
+    "team": {
+      "title": "Vår ledningsgrupp",
+      "roles": {
+        "CEO": "VD",
+        "COO": "COO",
+        "CTO": "CTO",
+        "CFO": "CFO",
+        "techLead": "Tech lead",
+        "marketingLead": "Marknadsföringsansvarig",
+        "leadOfFun": "Lead of Fun",
+        "directorOfJoy": "Director of Joy"
+      }
+    },
+    "cta": {
+      "titleTop": "Förhindra dyra",
+      "titleBottom": "misstag",
+      "subtitle": "Låt oss bygga optimerade lösningar för er verksamhet.",
+      "button": "Kontakta oss nu"
+    }
+  },
+  "pages": {
+    "about": {
+      "heroTitle": "Om Alva Tech",
+      "heroBody": "På Alva Tech kombinerar vi strategisk rådgivning med avancerade digitala lösningar för att förändra hur moderna företag arbetar och växer. Vår expertis omfattar högpresterande e-handel, skräddarsydd webb- och apputveckling, datadriven marknadsföring samt skalbara CRM- och ERP-implementationer. Med svensk ingenjörskvalitet i grunden hjälper vi organisationer att öka effektiviteten, accelerera innovationen och framtidssäkra sitt digitala ekosystem.",
+      "howTitle": "Så hjälper Alva Tech",
+      "howBody": "Våra lösningar är utformade för att integreras sömlöst med era befintliga system, vilket säkerställer en smidig övergång och maximal avkastning. Vi specialiserar oss på att ta fram skräddarsydda digitala strategier som ligger i linje med era affärsmål och skapar mätbar tillväxt. Med fokus på användarupplevelse, säkerhet och skalbarhet levererar vi lösningar som både möter era omedelbara behov och positionerar er för långsiktig framgång.",
+      "stats": {
+        "founded": "Alvatech grundades.",
+        "team": "Hårt arbetande team.",
+        "workflows": "Dokumentarbetsflöden."
+      },
+      "values": {
+        "sectionTitle": "Våra värderingar",
+        "impact": {
+          "title": "Göra skillnad",
+          "description": "Vi bygger något stort. Något som kan förändra utvecklingen för företag i alla storlekar till det bättre."
+        },
+        "learn": {
+          "title": "Lära",
+          "description": "Teamet på Alvatech är mästare i sina områden. Även om vi alla är experter inom våra respektive fält tar vi alltid tid att utvecklas vidare."
+        },
+        "fun": {
+          "title": "Ha kul",
+          "description": "Vi jobbar hårt och firar ännu hårdare. Vi tror på vikten av att uppmärksamma framgångar, stora som små, för både företag och individer."
+        },
+        "clientFirst": {
+          "title": "Kunden i centrum",
+          "description": "Genom att förstå kundernas mål och utmaningar levererar vi lösningar som är praktiska, personliga och resultatinriktade."
+        }
+      },
+      "team": {
+        "title": "Vår ledningsgrupp",
+        "roles": {
+          "ceo": "VD",
+          "coo": "COO",
+          "cto": "CTO",
+          "cfo": "CFO",
+          "techLead": "Tech lead",
+          "marketingLead": "Marknadsföringsansvarig",
+          "leadOfFun": "Lead of Fun",
+          "directorOfJoy": "Director of Joy"
+        }
+      },
+      "cta": {
+        "title": "Vi söker människor som delar vår vision!",
+        "subtitle": "Har du vad som krävs för att bli en av oss?",
+        "button": "Se lediga tjänster"
+      }
+    },
+    "integrations": {
+      "heroTitle": "Våra tjänster",
+      "heroSubtitle": "Vi hjälper er att attrahera, engagera och konvertera er målgrupp.",
+      "trustedBrands": "Betrodda av välkända varumärken.",
+      "faqTitle": "Vanliga frågor:",
+      "services": {
+        "shopify": {
+          "name": "Shopify",
+          "category": "Shopify och skräddarsydda lösningar",
+          "description": "Design, bygg och skala högpresterande Shopify-butiker med integrationer, prestanda och konverteringsfokuserad UX."
+        },
+        "customDevelopment": {
+          "name": "Skräddarsydd utveckling",
+          "category": "Webb- och mobilapplikationer",
+          "description": "Skräddarsydda webb- och mobila plattformar, API:er och arbetsflöden anpassade till er produkt och drift."
+        },
+        "marketing": {
+          "name": "Marknadsföring",
+          "category": "Prestanda och tillväxt",
+          "description": "Datadriven förvärv och retention i betalda och organiska kanaler med testning och attribuering ni kan lita på."
+        },
+        "salesforce": {
+          "name": "Salesforce CRM",
+          "category": "Implementering och rådgivning",
+          "description": "Sälj- och serviceautomation i Salesforce – pipelines, resor och rapportering i linje med hur ni säljer."
+        },
+        "erp": {
+          "name": "ERP-lösningar",
+          "category": "Verksamhetsoptimering",
+          "description": "Koppla ekonomi, lager och drift i ett ERP-ekosystem för överblick och skalbara processer."
+        },
+        "zoho": {
+          "name": "ZOHO CRM",
+          "category": "CRM- och ERP-lösningar",
+          "description": "Zoho CRM konfigurerat för er funnel – leads, uppgifter och integrationer som håller sälj igång."
+        }
+      },
+      "faq": {
+        "1": {
+          "question": "Vilka tjänster erbjuder Alvatech?",
+          "answer": "Alvatech levererar digital handel, performance marketing samt CRM/ERP-automation – bland annat Shopify-byggen, skräddarsydd utveckling, Salesforce- och Zoho-implementationer och integrerade tillväxtprogram."
+        },
+        "2": {
+          "question": "Hur kan Alvatech hjälpa mitt företag att växa?",
+          "answer": "Vi kombinerar butiksutveckling, kampanjgenomförande och driftautomation så att ni kan få kunder snabbare, konvertera mer tillförlitligt och minska manuellt arbete i vardagen."
+        },
+        "3": {
+          "question": "Erbjuder ni skräddarsydda paket?",
+          "answer": "Ja. Vi anpassar uppdrag efter era mål, bransch, teknikstack och budget – oavsett om ni behöver ett fokuserat sprinter eller ett helhetsprogram."
+        },
+        "4": {
+          "question": "Hanterar ni sociala medier och betald annonsering?",
+          "answer": "Ja. Vi planerar, producerar och optimerar betalda och organiska satsningar på stora plattformar, med tydlig rapportering och kontinuerliga experiment."
+        },
+        "5": {
+          "question": "Hur kommer jag igång med Alvatech?",
+          "answer": "Hör av er via kontaktsidan eller boka ett samtal. Vi klargör krav, föreslår en färdplan och synkar tidslinjer och framgångsmått."
+        }
+      }
+    },
+    "cta": {
+      "title": "Skapa imponerande webbplatser som passar era behov.",
+      "button": "Prova Alvatech idag"
+    },
+    "contact3": {
+      "introTitle": "Kontakta vårt team",
+      "introBody": "Har ni frågor om produkten eller skalning på vår plattform? Vi finns här. Chatta med vårt trevliga team dygnet runt och kom igång på under fem minuter.",
+      "mobileIntroTitle": "Kontakta vårt team",
+      "mobileIntroBody": "Har ni frågor om produkten eller skalning på vår plattform? Chatta med vårt trevliga team dygnet runt för hjälp.",
+      "chatTitle": "Chatta med oss",
+      "chatBody": "Prata med vårt trevliga team via livechatt.",
+      "liveChat": "Starta livechatt",
+      "emailLink": "Skicka e-post till oss",
+      "messageX": "Skicka meddelande på X",
+      "callTitle": "Ring oss",
+      "callBody": "Ring vårt team mån–fre kl. 8–17.",
+      "visitTitle": "Besök oss",
+      "visitBody": "Prata med oss på plats på vårt huvudkontor i Melbourne."
+    }
+  },
+  "mobile": {
+    "selectTheme": "Välj tema:"
+  }
+}

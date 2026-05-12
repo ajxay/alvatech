@@ -1,8 +1,12 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 export default function DevelopmentHero() {
+  const { t } = useTranslation("common");
+  const c = "servicePages.common";
+
   return (
     <div id="hero_header" className="hero-header section panel overflow-hidden">
       <div className="position-cover bg-secondary dark:bg-gray-800" />
@@ -16,17 +20,15 @@ export default function DevelopmentHero() {
                   data-anime="targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});"
                 >
                   <h1 className="h2 xl:display-5 mb-1 xl:mb-2">
-                    We
+                    {t("servicePages.customDevelopment.hero.titleWe")}
                     <br />
                     <span style={{ color: "#84BA41" }}>
-                      build, launch, and scale{" "}
+                      {t("servicePages.customDevelopment.hero.titleHighlight")}
                     </span>
-                    your custom web applications
+                    {t("servicePages.customDevelopment.hero.titleRest")}
                   </h1>
                   <p className="fs-6 lg:fs-5 text-dark dark:text-white text-opacity-70">
-                    From scalable MERN stack applications to high-performance
-                    systems—we help you build, optimize, and grow your digital
-                    products with precision.
+                    {t("servicePages.customDevelopment.hero.subtitle")}
                   </p>
                   <form
                     onSubmit={(e) => e.preventDefault()}
@@ -37,7 +39,7 @@ export default function DevelopmentHero() {
                         <input
                           type="email"
                           className="form-control rounded-default h-48px w-full bg-white dark:border-white dark:bg-opacity-10 dark:border-opacity-0 dark:text-white"
-                          placeholder="Your email.."
+                          placeholder={t(`${c}.emailPlaceholder`)}
                           required
                         />
                         <span className="form-icon text-gray dark:text-gray-300">
@@ -54,21 +56,21 @@ export default function DevelopmentHero() {
                           borderColor: "#84BA41",
                         }}
                       >
-                        <span className="d-none md:d-block">Contact Us</span>
-                        <span className="d-block md:d-none">Contact Us</span>
+                        <span className="d-none md:d-block">{t(`${c}.contactUs`)}</span>
+                        <span className="d-block md:d-none">{t(`${c}.contactUs`)}</span>
                       </Link>
                     </div>
                   </form>
                   <p className="fs-7 text-dark dark:text-white text-opacity-70">
-                    We care about your data in our{" "}
+                    {t(`${c}.privacyPrefix`)}
                     <Link
                       href={`/page-privacy`}
                       className="uc-link text-underline dark:text-secondary"
                       style={{ color: "#84BA41" }}
                     >
-                      privacy policy
+                      {t(`${c}.privacyLink`)}
                     </Link>
-                    .
+                    {t(`${c}.privacySuffix`)}
                   </p>
                 </div>
               </div>
@@ -79,15 +81,15 @@ export default function DevelopmentHero() {
                 >
                   <Image
                     className="ltr:d-block rtl:d-none"
-                    alt="development-hero-mockup"
-                    src="/assets/images/services/custom/hero-custom-dev.png"
+                    alt="hero-mockup"
+                    src="/assets/images/template/hero-mockup-shopify.png"
                     width="1492"
                     height="1250"
                   />
                   <Image
                     className="ltr:d-none rtl:d-block"
-                    alt="development-hero-mockup-rtl"
-                    src="/assets/images/services/custom/hero-custom-dev.png"
+                    alt="hero-mockup-rtl"
+                    src="/assets/images/template/hero-mockup-shopify.png"
                     width="1492"
                     height="1250"
                   />

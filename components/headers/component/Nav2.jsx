@@ -1,20 +1,17 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 import { openNewsletterModal } from "@/utlis/toggleNewsletterModal";
-import { mainPages, othermenuItems } from "@/data/menu";
-import { usePathname } from "next/navigation";
-import { features, homeLinks, links } from "@/data/menu";
-import { featuresMenu, services } from "@/data/services";
-
+import { features, links } from "@/data/menu";
 
 export default function Nav2() {
-  const pathname = usePathname();
+  const { t, i18n } = useTranslation("common");
   return (
     <>
       <li className="has-dd-menu ">
         <a href="#" role="button" aria-haspopup="true">
-          What We Offer{" "}
+          {t("nav.menu.whatWeOffer")}{" "}
           <span
             data-uc-navbar-parent-icon=""
             className="uc-icon uc-navbar-parent-icon"
@@ -42,13 +39,13 @@ export default function Nav2() {
                     <div className="panel vstack gap-4">
                       <div className="hstack gap-4 justify-between">
                         <h5 className="h5 fw-medium m-0">
-                          Discover our Services &amp; Solutions
+                          {t("nav.dropdown.discoverTitle")}
                         </h5>
                         <Link
                           href={`/page-shopify`}
                           className="btn btn-sm dark:text-white"
                         >
-                          <span>See what's new</span>
+                          <span>{t("nav.dropdown.seeWhatsNew")}</span>
                           <span className="cstack w-32px h-32px rounded-circle bg-primary-100 dark:bg-primary">
                             <i className="icon-narrow unicon-arrow-right fw-bold rtl:rotate-180" />
                           </span>
@@ -68,10 +65,10 @@ export default function Nav2() {
                               </span>
                               <div className="panel">
                                 <h6 className="h6 fs-7 fw-medium mb-narrow">
-                                  {feature.title}
+                                  {t(feature.tTitleKey)}
                                 </h6>
                                 <p className="fs-8 text-muted">
-                                  {feature.description}
+                                  {t(feature.tDescKey)}
                                 </p>
                               </div>
                             </Link>
@@ -83,29 +80,17 @@ export default function Nav2() {
                 </div>
                 <div className="col-4">
                   <div className="panel vstack gap-4 p-5 bg-gray-25 dark:bg-gray-800">
-                    {/* <div className="panel category-section">
-                      <h6 className="h6 fs-8 text-uppercase">
-                        Professional solutions
-                      </h6>
-                      <ul className="uc-nav uc-navbar-dropdown-nav fs-7 fw-normal row child-cols-12">
-                        {services.map((service, index) => (
-                          <li key={index}>
-                            <a href="#">{service}</a>
-                          </li>
-                        ))}
-                      </ul>
-                    </div> */}
                     <div className="panel category-section">
                       <h6 className="h6 fs-8 text-uppercase">
-                        Get started is Easy!
+                        {t("nav.dropdown.getStartedTitle")}
                       </h6>
                       <ul className="uc-nav uc-navbar-dropdown-nav fs-7 fw-normal row child-cols-12">
                         {links.map((link, index) => (
                           <li key={index}>
                             {link.isInternal ? (
-                              <Link href={link.href}>{link.label}</Link>
+                              <Link href={link.href}>{t(link.tKey)}</Link>
                             ) : (
-                              <a href={link.href}>{link.label}</a>
+                              <a href={link.href}>{t(link.tKey)}</a>
                             )}
                           </li>
                         ))}
@@ -118,10 +103,10 @@ export default function Nav2() {
           </div>
         </div>
       </li>
-      
+
       <li className="has-dd-menu" style={{ position: "relative" }}>
         <a href="#" role="button" aria-haspopup="true">
-          Resources{" "}
+          {t("nav.menu.resources")}{" "}
           <span
             data-uc-navbar-parent-icon=""
             className="uc-icon uc-navbar-parent-icon"
@@ -153,29 +138,15 @@ export default function Nav2() {
                   >
                     <i className="icon-1 unicon-course fw-bold text-primary dark:text-secondary" />
                     <span className="vstack gap-narrow mt-nnarrow">
-                      <b className="fw-bold dark:text-white">Blog</b>
+                      <b className="fw-bold dark:text-white">
+                        {t("nav.resources.blogTitle")}
+                      </b>
                       <span className="fw-normal">
-                        Managing multiple software and tools for different
-                        tasks.
+                        {t("nav.resources.blogDesc")}
                       </span>
                     </span>
                   </Link>
                 </li>
-                {/* <li>
-                  <a
-                    className="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5"
-                    onClick={openNewsletterModal}
-                    role="button"
-                  >
-                    <i className="icon-1 unicon-email fw-bold text-primary dark:text-secondary" />
-                    <span className="vstack gap-narrow mt-nnarrow">
-                      <b className="fw-bold dark:text-white">Newsletter</b>
-                      <span className="fw-normal">
-                        The latest industry reports, updates and info.
-                      </span>
-                    </span>
-                  </a>
-                </li> */}
                 <li>
                   <Link
                     className="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5"
@@ -183,9 +154,11 @@ export default function Nav2() {
                   >
                     <i className="icon-1 unicon-play fw-bold text-primary dark:text-secondary" />
                     <span className="vstack gap-narrow mt-nnarrow">
-                      <b className="fw-bold dark:text-white">Know More About Us</b>
+                      <b className="fw-bold dark:text-white">
+                        {t("nav.resources.knowMoreTitle")}
+                      </b>
                       <span className="fw-normal">
-                        Learn more about our company, our mission, and our values.
+                        {t("nav.resources.knowMoreDesc")}
                       </span>
                     </span>
                   </Link>
@@ -194,22 +167,7 @@ export default function Nav2() {
             </div>
             <div>
               <ul className="uc-nav uc-navbar-dropdown-nav p-2 h-100 bg-gray-25 dark:bg-gray-300 dark:bg-opacity-5">
-                {/* <li>
-                  <Link
-                    className="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5"
-                    href={`#`}
-                  >
-                    <i className="icon-1 unicon-star fw-bold text-primary dark:text-secondary" />
-                    <span className="vstack gap-narrow mt-nnarrow">
-                      <b className="fw-bold dark:text-white">We're hiring</b>
-                      <span className="fw-normal">
-                        Managing multiple software and tools for different
-                        tasks.
-                      </span>
-                    </span>
-                  </Link>
-                </li> */}
-                 <li>
+                <li>
                   <a
                     className="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5"
                     onClick={openNewsletterModal}
@@ -217,9 +175,11 @@ export default function Nav2() {
                   >
                     <i className="icon-1 unicon-email fw-bold text-primary dark:text-secondary" />
                     <span className="vstack gap-narrow mt-nnarrow">
-                      <b className="fw-bold dark:text-white">Newsletter</b>
+                      <b className="fw-bold dark:text-white">
+                        {t("nav.resources.newsletterTitle")}
+                      </b>
                       <span className="fw-normal">
-                        The latest industry reports, updates and info.
+                        {t("nav.resources.newsletterDesc")}
                       </span>
                     </span>
                   </a>
@@ -231,9 +191,11 @@ export default function Nav2() {
                   >
                     <i className="icon-1 unicon-headset fw-bold text-primary dark:text-secondary" />
                     <span className="vstack gap-narrow mt-nnarrow">
-                      <b className="fw-bold dark:text-white">Contact Us</b>
+                      <b className="fw-bold dark:text-white">
+                        {t("nav.resources.contactTitle")}
+                      </b>
                       <span className="fw-normal">
-                        Get in touch with us for any inquiries or feedback.
+                        {t("nav.resources.contactDesc")}
                       </span>
                     </span>
                   </Link>
@@ -244,23 +206,64 @@ export default function Nav2() {
         </div>
       </li>
 
-     
       <li>
-        <a href="/page-integrations">
-          Services
-        </a>
+        <a href="/page-integrations">{t("nav.menu.services")}</a>
       </li>
       <li>
-        <a href="/page-about">
-          About Us
-        </a>
+        <a href="/page-about">{t("nav.menu.aboutUs")}</a>
       </li>
       <li>
-        <a href="/page-contact">
-          Contact Us
-        </a>
+        <a href="/page-contact">{t("nav.menu.contactUs")}</a>
       </li>
-      
+      <li className="has-dd-menu" style={{ position: "relative" }}>
+        <a href="#" role="button" aria-haspopup="true">
+          {t("labels.language")}{" "}
+          <span
+            data-uc-navbar-parent-icon=""
+            className="uc-icon uc-navbar-parent-icon"
+          >
+            <svg width={12} height={12} viewBox="0 0 12 12">
+              <polyline
+                fill="none"
+                stroke="#000"
+                strokeWidth="1.1"
+                points="1 3.5 6 8.5 11 3.5"
+              />
+            </svg>
+          </span>
+        </a>
+        <div
+          className="uc-navbar-dropdown w-180px ft-primary text-unset fs-7 fw-medium p-1 hide-scrollbar rounded-2 overflow-hidden uc-drop"
+          data-uc-drop="mode: click; offset: 0; boundary: !.uc-navbar; animation: uc-animation-slide-top-small; duration: 150;"
+        >
+          <ul className="uc-nav uc-navbar-dropdown-nav">
+            <li>
+              <a
+                href="#"
+                className={i18n.language === "en" ? "menuActive" : ""}
+                onClick={(e) => {
+                  e.preventDefault();
+                  void i18n.changeLanguage("en");
+                }}
+              >
+                {t("footer.languageEnglish")}
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className={i18n.language === "sv" ? "menuActive" : ""}
+                onClick={(e) => {
+                  e.preventDefault();
+                  void i18n.changeLanguage("sv");
+                }}
+              >
+                {t("footer.languageSwedish")}
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li>
     </>
   );
 }

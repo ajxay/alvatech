@@ -1,66 +1,66 @@
 export const menuItems = [
   {
     id: 1,
-    label: "What We Offer",
+    tKey: "nav.menu.whatWeOffer",
     subItems: [
       {
         href: "/page-shopify",
-        label: "Shopify Development",
+        tKey: "footer.links.shopifyDevelopment",
       },
       {
         href: "/page-development",
-        label: "Custom Development",
+        tKey: "footer.links.customDevelopment",
       },
       {
         href: "/page-marketing",
-        label: "Marketing",
+        tKey: "footer.links.marketing",
       },
       {
         href: "/page-salesforce",
-        label: "Salesforce CRM",
+        tKey: "footer.links.salesforceCrm",
       },
       {
         href: "/page-erp",
-        label: "ERP Solutions",
+        tKey: "footer.links.erpSolutions",
       },
       {
         href: "/page-zoho",
-        label: "ZOHO CRM",
+        tKey: "footer.links.zohoCrm",
       },
     ],
   },
   {
     id: 2,
-    label: "Resources",
+    tKey: "nav.menu.resources",
     subItems: [
       {
         href: "/#",
-        label: "Blog",
+        tKey: "footer.links.blog",
       },
       {
         href: "#",
-        label: "We're hiring",
+        tKey: "nav.menu.hiring",
       },
       {
         href: "/page-contact",
-        label: "Contact Us",
+        tKey: "nav.menu.contactUs",
       },
     ],
   },
   {
     id: 3,
     href: "/page-integrations",
-    label: "Services",
+    tKey: "nav.menu.services",
   },
   {
     id: 4,
     href: "/page-about",
-    label: "About Us",
+    tKey: "nav.menu.aboutUs",
   },
   {
     id: 5,
     href: "/page-contact",
-    label: "Contact Us",
+    tKey: "nav.menu.contactUs",
   },
 ];
 
@@ -477,44 +477,43 @@ export const features = [
   {
     id: 5,
     iconClass: "unicon-store",
-    title: "Shopify Development",
-    description: "Amplify the conversation across multiple channels",
+    tTitleKey: "footer.links.shopifyDevelopment",
+    tDescKey: "nav.featureDesc.shopify",
     link: "/page-shopify",
   },
   {
     id: 1,
     iconClass: "unicon-email",
-    title: "Custom Development",
-    description: "Build solutions to meet business needs",
+    tTitleKey: "footer.links.customDevelopment",
+    tDescKey: "nav.featureDesc.custom",
     link: "/page-development",
   },
   {
     id: 2,
     iconClass: "unicon-blog",
-    title: "Marketing",
-    description: "Perfomance & Growth ",
+    tTitleKey: "footer.links.marketing",
+    tDescKey: "nav.featureDesc.marketing",
     link: "/page-marketing",
   },
   {
     id: 3,
     iconClass: "unicon-increase-level",
-    title: "Salesforce CRM",
-    description: "Implementation & Consulting",
+    tTitleKey: "footer.links.salesforceCrm",
+    tDescKey: "nav.featureDesc.salesforce",
     link: "/page-salesforce",
   },
   {
     id: 4,
     iconClass: "unicon-magic-wand-filled",
-    title: "ERP Solutions",
-    description: "Business optimization",
+    tTitleKey: "footer.links.erpSolutions",
+    tDescKey: "nav.featureDesc.erp",
     link: "/page-erp",
   },
- 
   {
     id: 6,
     iconClass: "unicon-shopping-catalog",
-    title: "ZOHO CRM",
-    description: "CRM & ERP solutions",
+    tTitleKey: "footer.links.zohoCrm",
+    tDescKey: "nav.featureDesc.zoho",
     link: "/page-zoho",
   },
 ];
@@ -559,7 +558,7 @@ export const links = [
   {
     id: 1,
     href: "/page-contact",
-    label: "Hire an Expert",
+    tKey: "nav.links.hireAnExpert",
     isInternal: true,
   },
   // {
@@ -577,7 +576,7 @@ export const links = [
   {
     id: 4,
     href: "/blog",
-    label: "Blog",
+    tKey: "footer.links.blog",
     isInternal: true,
   },
   // {

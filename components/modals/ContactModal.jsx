@@ -1,10 +1,13 @@
 "use client";
 
+import { CONTACT_SERVICE_OPTIONS } from "@/data/contactServiceOptions";
 import { closeContactModal } from "@/utlis/toggleContactModal";
 import { usePathname } from "next/navigation";
 import { useEffect, useState, useRef } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function ContactModal() {
+  const { t } = useTranslation("common");
   const pathname = usePathname();
   const elementRef = useRef(null);
   const containerRef = useRef(null);
@@ -42,16 +45,6 @@ export default function ContactModal() {
     return () => clearTimeout(timer);
   }, [toast.show]);
 
-  const services = [
-    "Shopify Development",
-    "Custom Development",
-    "Marketing",
-    "Salesforce CRM",
-    "ERP Solutions",
-    "ZOHO CRM",
-    "Other",
-  ];
-
   async function handleSubmit(e) {
     e.preventDefault();
     if (isSubmitting) return;
@@ -84,7 +77,7 @@ export default function ContactModal() {
       setToast({
         show: true,
         type: "success",
-        message: "Message sent successfully.",
+        message: t("modal.contact.toastSuccess"),
       });
       form.reset();
       setTimeout(() => {
@@ -94,7 +87,7 @@ export default function ContactModal() {
       setToast({
         show: true,
         type: "error",
-        message: "Unable to send right now. Please try again.",
+        message: t("modal.contact.toastError"),
       });
     } finally {
       setIsSubmitting(false);
@@ -132,7 +125,7 @@ export default function ContactModal() {
         <div className="panel vstack gap-2 md:gap-4 text-center">
           <div className="panel cstack px-3 md:px-4 py-4 md:py-8 m-0 lg:mx-auto">
             <div className="panel vstack justify-center items-center gap-2 sm:gap-4 text-center">
-              <h4 className="h5 lg:h4 m-0">Contact Us</h4>
+              <h4 className="h5 lg:h4 m-0">{t("modal.contact.title")}</h4>
               <div className="panel w-100 mx-auto" style={{ maxWidth: 760 }}>
                 <form
                   onSubmit={handleSubmit}
@@ -140,55 +133,65 @@ export default function ContactModal() {
                 >
                   <div className="row g-2">
                     <div className="col-12 md:col-6">
-                      <label className="d-block fw-bold mb-1">First name</label>
+                      <label className="d-block fw-bold mb-1">
+                        {t("modal.contact.firstName")}
+                      </label>
                       <input
                         className="form-control h-48px w-100 bg-white dark:border-white dark:text-dark"
                         type="text"
                         name="firstName"
-                        placeholder="First name"
+                        placeholder={t("modal.contact.placeholderFirst")}
                         required
                       />
                     </div>
                     <div className="col-12 md:col-6">
-                      <label className="d-block fw-bold mb-1">Last name</label>
+                      <label className="d-block fw-bold mb-1">
+                        {t("modal.contact.lastName")}
+                      </label>
                       <input
                         className="form-control h-48px w-100 bg-white dark:border-white dark:text-dark"
                         type="text"
                         name="lastName"
-                        placeholder="Last name"
+                        placeholder={t("modal.contact.placeholderLast")}
                         required
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="d-block fw-bold mb-1">Email</label>
+                    <label className="d-block fw-bold mb-1">
+                      {t("modal.contact.email")}
+                    </label>
                     <input
                       className="form-control h-48px w-100 bg-white dark:border-white dark:text-dark"
                       type="email"
                       name="email"
-                      placeholder="you@company.com"
+                      placeholder={t("modal.contact.placeholderEmail")}
                       required
                     />
                   </div>
 
                   <div>
-                    <label className="d-block fw-bold mb-1">Phone number</label>
+                    <label className="d-block fw-bold mb-1">
+                      {t("modal.contact.phone")}
+                    </label>
                     <input
                       className="form-control h-48px w-100 rtl:text-end bg-white dark:border-white dark:text-dark"
                       type="tel"
                       name="phone"
-                      placeholder="+46 70 496 45 69 "
+                      placeholder={t("modal.contact.placeholderPhone")}
                       required
                     />
                   </div>
 
                   <div>
-                    <label className="d-block fw-bold mb-1">Message</label>
+                    <label className="d-block fw-bold mb-1">
+                      {t("modal.contact.message")}
+                    </label>
                     <textarea
                       className="form-control w-100 bg-white dark:border-white dark:text-dark"
                       name="message"
-                      placeholder="Leave us a message..."
+                      placeholder={t("modal.contact.placeholderMessage")}
                       rows={2}
                       style={{ minHeight: "70px" }}
                       defaultValue={""}
@@ -196,13 +199,19 @@ export default function ContactModal() {
                   </div>
 
                   <div>
-                    <label className="d-block fw-bold mb-1">Services</label>
+                    <label className="d-block fw-bold mb-1">
+                      {t("modal.contact.services")}
+                    </label>
                     <div className="row g-1">
-                      {services.map((service) => (
-                        <div key={service} className="col-12 md:col-6">
+                      {CONTACT_SERVICE_OPTIONS.map((service) => (
+                        <div key={service.value} className="col-12 md:col-6">
                           <label className="hstack items-center gap-1 m-0">
-                            <input type="checkbox" name="services[]" value={service} />
-                            <span className="fw-medium">{service}</span>
+                            <input
+                              type="checkbox"
+                              name="services[]"
+                              value={service.value}
+                            />
+                            <span className="fw-medium">{t(service.tKey)}</span>
                           </label>
                         </div>
                       ))}
@@ -220,7 +229,9 @@ export default function ContactModal() {
                       opacity: isSubmitting ? 0.75 : 1,
                     }}
                   >
-                    {isSubmitting ? "Sending..." : "Send message"}
+                    {isSubmitting
+                      ? t("modal.contact.submitting")
+                      : t("modal.contact.submit")}
                   </button>
                 </form>
               </div>

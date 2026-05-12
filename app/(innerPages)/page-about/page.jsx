@@ -5,13 +5,8 @@ import About from "@/components/innerpages/About";
 import Brands from "@/components/common/Brands2";
 import About2 from "@/components/innerpages/About2";
 import AboutValues from "@/components/innerpages/AboutValues";
-import Feedback from "@/components/homes/home-2/Feedback";
-import Timeline from "@/components/homes/home-1/Timeline";
-import Team from "@/components/homes/home-1/Team";
 import Cta from "@/components/innerpages/Cta";
-// import { team } from "@/components/homes/home-13/Sections";
-import Image from "next/image";
-import "@/components/homes/home-13/Sections.css";
+import AboutTeam from "@/components/innerpages/AboutTeam";
 
 export const metadata = {
   title:
@@ -19,17 +14,6 @@ export const metadata = {
   description:
     "Alva tech - Website",
 };
-
-export const team = [
-  { name: "MONICA LANDBERG", role: "CEO", image: "/assets/images/home-13/team/monica-landberg.png" },
-  { name: "ANDRES LANDBERG", role: "COO", image: "/assets/images/home-13/team/andres-landberg.png" },
-  { name: "NIKHIL KHETAN", role: "CTO", image: "/assets/images/home-13/team/nikhil-khetan.png" },
-  { name: "ANDRE RANDAHL", role: "CFO", image: "/assets/images/home-13/team/andre-randahl.png" },
-  { name: "MANISH KUMAR", role: "Tech Lead", image: "/assets/images/home-13/team/manish-kumar.png" },
-  { name: "ASHISH RANJAN", role: "Marketing Lead", image: "/assets/images/home-13/team/ashish-ranjan.png" },
-  { name: "LUICY", role: "Lead of Fun", image: "/assets/images/home-13/team/luicy.png" },
-  { name: "MOOLY", role: "Director of Joy", image: "/assets/images/home-13/team/mooly.png" },
-];
 
 export default function AboutPage() {
   return (
@@ -60,24 +44,7 @@ export default function AboutPage() {
           </div>
           <About2 />
           <AboutValues />
-          {/* <Feedback /> */}  {/* commented out feedback section */}
-          {/* <Timeline /> */}
-          <section className="home13-section home13-team">
-        <div className="container sm:max-w-lg xl:max-w-xl">
-          <header className="home13-header">
-            <h2>Our Executive Team</h2>
-          </header>
-          <div className="home13-team__grid">
-            {team.map((member) => (
-              <article key={member.name} className="home13-team__card">
-                <Image src={member.image} alt={member.name} width={180} height={180} />
-                <h3>{member.name}</h3>
-                <p>{member.role}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
+          <AboutTeam />
           <Cta />
         </div>
       </div>

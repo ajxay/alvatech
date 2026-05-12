@@ -1,0 +1,393 @@
+{
+  "footer": {
+    "description": "Alvatech is a leading digital transformation agency, delivering tailored ecommerce solutions to help businesses grow and thrive online.",
+    "newsletterTitle": "Newsletter",
+    "newsletterDesc": "Subscribe to get the latest updates and news.",
+    "emailPlaceholder": "Enter your email",
+    "subscribe": "Subscribe",
+    "rights": "Alvatech © {{year}}, All rights reserved.",
+    "languageEnglish": "English",
+    "languageSwedish": "Swedish",
+    "links": {
+      "shopifyDevelopment": "Shopify Development",
+      "customDevelopment": "Custom Development",
+      "marketing": "Marketing",
+      "salesforceCrm": "Salesforce CRM",
+      "erpSolutions": "ERP Solutions",
+      "zohoCrm": "ZOHO CRM",
+      "allServices": "All Services",
+      "about": "About",
+      "scheduleCall": "Schedule A Call",
+      "blog": "Blog",
+      "termsOfService": "Terms of service",
+      "privacyPolicy": "Privacy policy"
+    }
+  },
+  "header": {
+    "scheduleCall": "Schedule A Call"
+  },
+  "nav": {
+    "menu": {
+      "whatWeOffer": "What We Offer",
+      "resources": "Resources",
+      "services": "Services",
+      "aboutUs": "About Us",
+      "contactUs": "Contact Us",
+      "hiring": "We're hiring"
+    },
+    "dropdown": {
+      "discoverTitle": "Discover our Services & Solutions",
+      "seeWhatsNew": "See what's new",
+      "getStartedTitle": "Get started is Easy!"
+    },
+    "resources": {
+      "blogTitle": "Blog",
+      "blogDesc": "Managing multiple software and tools for different tasks.",
+      "knowMoreTitle": "Know More About Us",
+      "knowMoreDesc": "Learn more about our company, our mission, and our values.",
+      "newsletterTitle": "Newsletter",
+      "newsletterDesc": "The latest industry reports, updates and info.",
+      "contactTitle": "Contact Us",
+      "contactDesc": "Get in touch with us for any inquiries or feedback."
+    },
+    "featureDesc": {
+      "shopify": "Amplify the conversation across multiple channels",
+      "custom": "Build solutions to meet business needs",
+      "marketing": "Performance & growth",
+      "salesforce": "Implementation & consulting",
+      "erp": "Business optimization",
+      "zoho": "CRM & ERP solutions"
+    },
+    "links": {
+      "hireAnExpert": "Hire an Expert"
+    }
+  },
+  "blog": {
+    "home": "Home",
+    "breadcrumbBlog": "Blog",
+    "categories": {
+      "Strategy": "Strategy",
+      "Marketing": "Marketing",
+      "Business": "Business",
+      "Design": "Design",
+      "Product": "Product",
+      "Shopify": "Shopify",
+      "Salesforce": "Salesforce",
+      "MetaAds": "Meta Ads",
+      "Ecommerce": "Ecommerce",
+      "SEO": "SEO",
+      "Boost": "Boost",
+      "Advertising": "Advertising"
+    }
+  },
+  "modal": {
+    "contact": {
+      "title": "Contact Us",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email",
+      "phone": "Phone number",
+      "message": "Message",
+      "services": "Services",
+      "placeholderFirst": "First name",
+      "placeholderLast": "Last name",
+      "placeholderEmail": "you@company.com",
+      "placeholderPhone": "+46 70 496 45 69",
+      "placeholderMessage": "Leave us a message...",
+      "submit": "Send message",
+      "submitting": "Sending...",
+      "toastSuccess": "Message sent successfully.",
+      "toastError": "Unable to send right now. Please try again.",
+      "serviceOther": "Other"
+    }
+  },
+  "faq": {
+    "defaultTitle": "Frequently asked questions:"
+  },
+  "labels": {
+    "explore": "Explore",
+    "language": "Language"
+  },
+  "home13": {
+    "hero": {
+      "badge": "End-to-End Growth Partner",
+      "titleLine1": "Do More, Grow Faster",
+      "titleWith": "with",
+      "titleSmartSystems": "Smart Systems",
+      "description": "We combine eCommerce development, performance marketing, and CRM automation to help brands launch quickly, scale efficiently, and manage operations without complexity.",
+      "exploreServices": "Explore Services",
+      "scrollHint": "Scroll for more"
+    },
+    "features": {
+      "sectionTitle": "Smart features for your business",
+      "sectionSubtitle": "We combine strategic consulting with advanced digital solutions to transform how modern enterprises operate and grow.",
+      "cards": {
+        "ecommerce": {
+          "title": "Launch high-performing eCommerce stores",
+          "description": "We design and develop scalable, conversion-focused eCommerce experiences with seamless integrations, fast performance, and mobile-first UX to help you go live and grow faster.",
+          "alt": "eCommerce store dashboard"
+        },
+        "marketing": {
+          "title": "Scale revenue with performance marketing",
+          "description": "Drive consistent growth through data-driven campaigns across Meta and Google, focusing on acquisition, conversion optimization, and maximizing ROAS with continuous testing and optimization.",
+          "alt": "Performance marketing dashboard"
+        },
+        "systems": {
+          "title": "Streamline operations with smart systems",
+          "description": "Build and integrate CRM, ERP, and Salesforce solutions to automate workflows, centralize data, and improve efficiency across sales, marketing, and operations for long-term scalability.",
+          "alt": "Smart systems dashboard"
+        }
+      }
+    },
+    "trust": {
+      "title": "Trusted for overall simplicity",
+      "reviewsNote": "Based on 4,000+ reviews with customer satisfaction"
+    },
+    "integrations": {
+      "title": "Boost your business with technology",
+      "subtitle": "Connect every part of your business with technology that will simplify your workflow."
+    },
+    "integrationCards": {
+      "shopify": {
+        "title": "Shopify",
+        "tag": "Productivity",
+        "description": "Build and scale your Shopify store with optimized storefronts, app integrations, and conversion-focused customer experiences."
+      },
+      "custom": {
+        "title": "Custom Development",
+        "tag": "CRM",
+        "description": "Develop tailored web and mobile solutions with scalable architecture, custom APIs, and workflows built for your operations."
+      },
+      "marketing": {
+        "title": "Marketing",
+        "tag": "Payment",
+        "description": "Launch data-driven marketing campaigns, improve lead quality, and optimize performance across search, social, and paid channels."
+      },
+      "salesforce": {
+        "title": "Salesforce CRM",
+        "tag": "Payment",
+        "description": "Optimize sales pipelines, automate customer journeys, and unify service operations with customized Salesforce CRM solutions."
+      },
+      "erp": {
+        "title": "ERP Solutions",
+        "tag": "CRM",
+        "description": "Unify finance, inventory, procurement, and operations in one ERP ecosystem to improve visibility and business scalability."
+      },
+      "zoho": {
+        "title": "ZOHO CRM",
+        "tag": "Integration platforms",
+        "description": "Automate lead management, streamline sales follow-ups, and improve customer engagement with tailored Zoho CRM solutions."
+      }
+    },
+    "seamless": {
+      "title": "Everything You Need to Grow",
+      "subtitle": "Connect your tools, automate workflows, and create a unified system that scales effortlessly with your business.",
+      "previewAlt": "{{title}} preview",
+      "cards": {
+        "discover": {
+          "title": "Discover",
+          "text": "We understand your goals, audience, and requirements to build the right strategy."
+        },
+        "design": {
+          "title": "Design",
+          "text": "We create wireframes and UI/UX designs that are intuitive, engaging, and on-brand."
+        },
+        "develop": {
+          "title": "Develop",
+          "text": "We build clean, scalable, and high-performance solutions with the latest technologies."
+        },
+        "testLaunch": {
+          "title": "Test & Launch",
+          "text": "We test thoroughly and launch seamlessly, ensuring everything works perfectly."
+        }
+      }
+    },
+    "partners": {
+      "title": "Alvatech Partners"
+    },
+    "marketplaces": {
+      "title": "Connect with top marketing places",
+      "subtitle": "Everything you need is right at your fingertips",
+      "migrateTitle": "Migrate from existing Ecommerce platform",
+      "paymentTitle": "Payment gateway integration",
+      "shippingTitle": "Shipping integration",
+      "marketplaceTitle": "Marketplace"
+    },
+    "values": {
+      "sectionTitle": "Our Values",
+      "impact": {
+        "title": "Make an impact",
+        "description": "We build scalable digital solutions that help businesses achieve measurable growth across every stage of their digital journey."
+      },
+      "learn": {
+        "title": "Learn",
+        "description": "Technology evolves fast, and so do we. Our team constantly explores new strategies, platforms, and innovations to deliver future ready solutions."
+      },
+      "clientFirst": {
+        "title": "Client First Approach",
+        "description": "We believe strong partnerships create lasting success. By understanding our clients' goals and challenges, we deliver solutions that are practical, personalized, and results driven."
+      }
+    },
+    "stats": {
+      "experts": "Experts in-house team size.",
+      "support": "Strong Day to Day Support",
+      "implementations": "Implementations",
+      "experience": "Years of industry experience"
+    },
+    "posts": {
+      "title": "Latest Posts and Updates",
+      "readAria": "Read {{title}}"
+    },
+    "team": {
+      "title": "Our Executive Team",
+      "roles": {
+        "CEO": "CEO",
+        "COO": "COO",
+        "CTO": "CTO",
+        "CFO": "CFO",
+        "techLead": "Tech Lead",
+        "marketingLead": "Marketing Lead",
+        "leadOfFun": "Lead of Fun",
+        "directorOfJoy": "Director of Joy"
+      }
+    },
+    "cta": {
+      "titleTop": "Prevent costly",
+      "titleBottom": "mistakes",
+      "subtitle": "Lets build optimized solutions for your business.",
+      "button": "Reach Us Now"
+    }
+  },
+  "pages": {
+    "about": {
+      "heroTitle": "About Alva Tech",
+      "heroBody": "At Alva Tech, we combine strategic consulting with advanced digital solutions to transform how modern enterprises operate and grow. Our expertise spans high performance e-commerce, custom web and app development, data driven marketing, and scalable CRM and ERP implementations. Built on Swedish engineering excellence, we help organizations unlock efficiency, accelerate innovation, and future ready their digital ecosystem.",
+      "howTitle": "How Alva Tech helps",
+      "howBody": "Our solutions are designed to integrate seamlessly with your existing systems, ensuring a smooth transition and maximum ROI. We specialize in crafting tailored digital strategies that align with your business goals and drive measurable growth. With a focus on user experience, security, and scalability, we deliver solutions that not only meet your immediate needs but also position you for long-term success.",
+      "stats": {
+        "founded": "Alvatech founded.",
+        "team": "Hardworking group.",
+        "workflows": "Document workflows."
+      },
+      "values": {
+        "sectionTitle": "Our Values",
+        "impact": {
+          "title": "Make an impact",
+          "description": "We're building something big. Something that has the power to change the trajectory of any sized business for the better."
+        },
+        "learn": {
+          "title": "Learn",
+          "description": "Alvatech team are masters of their craft. Even though we're all experts in our respective fields, we always make time to expand our minds."
+        },
+        "fun": {
+          "title": "Have fun",
+          "description": "We work hard and play harder. We believe in the importance of celebrating wins big or small, for the business or individuals."
+        },
+        "clientFirst": {
+          "title": "Client First Approach",
+          "description": "By understanding our clients' goals and challenges, we deliver solutions that are practical, personalized, and results driven."
+        }
+      },
+      "team": {
+        "title": "Our Executive Team",
+        "roles": {
+          "ceo": "CEO",
+          "coo": "COO",
+          "cto": "CTO",
+          "cfo": "CFO",
+          "techLead": "Tech Lead",
+          "marketingLead": "Marketing Lead",
+          "leadOfFun": "Lead of Fun",
+          "directorOfJoy": "Director of Joy"
+        }
+      },
+      "cta": {
+        "title": "We're looking for people who share our vision!",
+        "subtitle": "Have what it takes to be one of us.",
+        "button": "View current openings"
+      }
+    },
+    "integrations": {
+      "heroTitle": "Our Services",
+      "heroSubtitle": "We help you attract, engage, and convert your audience.",
+      "trustedBrands": "Trusted by well-known brands.",
+      "faqTitle": "Frequently asked questions:",
+      "services": {
+        "shopify": {
+          "name": "Shopify",
+          "category": "Shopify & custom solutions",
+          "description": "Design, build, and scale high-performing Shopify storefronts with integrations, performance tuning, and conversion-focused UX."
+        },
+        "customDevelopment": {
+          "name": "Custom Development",
+          "category": "Web & mobile applications",
+          "description": "Tailored web and mobile platforms, APIs, and workflows engineered for your product and operations."
+        },
+        "marketing": {
+          "name": "Marketing",
+          "category": "Performance & growth",
+          "description": "Data-led acquisition and retention across paid and organic channels, with testing and attribution you can trust."
+        },
+        "salesforce": {
+          "name": "Salesforce CRM",
+          "category": "Implementation & consulting",
+          "description": "Sales and service automation on Salesforce—pipelines, journeys, and reporting aligned to how you sell."
+        },
+        "erp": {
+          "name": "ERP Solutions",
+          "category": "Business optimization",
+          "description": "Connect finance, inventory, and operations in one ERP ecosystem for visibility and scalable processes."
+        },
+        "zoho": {
+          "name": "ZOHO CRM",
+          "category": "CRM & ERP solutions",
+          "description": "Zoho CRM configured for your funnel—leads, tasks, and integrations that keep sales moving."
+        }
+      },
+      "faq": {
+        "1": {
+          "question": "What services does Alvatech offer?",
+          "answer": "Alvatech provides digital commerce, performance marketing, and CRM/ERP automation—including Shopify builds, custom development, Salesforce and Zoho implementations, and integrated growth programs."
+        },
+        "2": {
+          "question": "How can Alvatech help my business grow?",
+          "answer": "We combine storefront engineering, campaign execution, and operational automation so you acquire customers faster, convert more reliably, and run day-to-day work with less manual overhead."
+        },
+        "3": {
+          "question": "Do you offer customized packages?",
+          "answer": "Yes. We scope engagements around your goals, industry, stack, and budget—whether you need a focused sprint or an end-to-end program."
+        },
+        "4": {
+          "question": "Do you manage social media and paid advertising?",
+          "answer": "Yes. We plan, produce, and optimize paid and organic programs across major platforms, with clear reporting and continuous experimentation."
+        },
+        "5": {
+          "question": "How do I get started with Alvatech?",
+          "answer": "Reach out via our contact page or schedule a call. We will clarify requirements, propose a roadmap, and align on timelines and success metrics."
+        }
+      }
+    },
+    "cta": {
+      "title": "Let's build optimized solutions for your business.",
+      "button": "Contact Us"
+    },
+    "contact3": {
+      "introTitle": "Contact our team",
+      "introBody": "Got any questions about the product or scaling on our platform? We're here to help. Chat to our friendly team 24/7 and get onboard in less than 5 minutes.",
+      "mobileIntroTitle": "Contact our team",
+      "mobileIntroBody": "Got any questions about the product or scaling on our platform? Chat to our friendly team 24/7 for help.",
+      "chatTitle": "Chat with us",
+      "chatBody": "Speak to our friendly team via live chat.",
+      "liveChat": "Start a live chat",
+      "emailLink": "Shoot us an email",
+      "messageX": "Message us on X",
+      "callTitle": "Call us",
+      "callBody": "Call our team Mon-Fri from 8am to 5pm.",
+      "visitTitle": "Visit us",
+      "visitBody": "Chat to us in person at our Melbourne HQ."
+    }
+  },
+  "mobile": {
+    "selectTheme": "Select theme:"
+  }
+}

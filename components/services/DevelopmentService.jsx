@@ -1,50 +1,39 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 const developmentFeatures = [
   {
     imageSrc: "/assets/images/development/web-development.png",
-    altText: "Custom Web Application Development",
-    title: "Custom Web Application Development",
-    description:
-      "From concept to deployment, we build fully customized web applications using the MERN stack—designed to match your workflows, users, and business goals.",
-    linkText: "Let's build",
     icon: "unicon-cloud-download",
     reverseOrder: false,
+    i18nKey: "0",
   },
   {
     imageSrc: "/assets/images/development/ui-ux.png",
-    altText: "UI/UX Design & Frontend Development",
-    title: "UI/UX Design & Frontend Development",
-    description:
-      "We design intuitive, high-performing interfaces using React to ensure seamless user experiences that drive engagement and conversions.",
-    linkText: "Let's design",
     icon: "unicon-course",
     reverseOrder: true,
+    i18nKey: "1",
   },
   {
     imageSrc: "/assets/images/development/api-development.png",
-    altText: "API Development & System Integration",
-    title: "API Development & System Integration",
-    description:
-      "We build secure, scalable APIs and integrate third-party services to ensure your application works seamlessly across platforms.",
-    linkText: "Let's integrate",
     icon: "unicon-volume-block-storage",
     reverseOrder: false,
+    i18nKey: "2",
   },
   {
     imageSrc: "/assets/images/development/migration.png",
-    altText: "Application Migration & Modernization",
-    title: "Application Migration & Modernization",
-    description:
-      "Still using outdated systems? We migrate your legacy applications to modern MERN stack architecture with zero downtime and improved performance.",
-    linkText: "Let's upgrade",
     icon: "unicon-model",
     reverseOrder: true,
+    i18nKey: "3",
   },
 ];
 
 export default function DevelopmentService() {
+  const { t } = useTranslation("common");
+
   return (
     <div
       id="main_features"
@@ -58,18 +47,20 @@ export default function DevelopmentService() {
               data-anime="onview: -200; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});"
             >
               <h2 className="h3 lg:h2 xl:h1 m-0">
-                We build, scale, and optimize your digital products
+                {t("servicePages.customDevelopment.service.title")}
               </h2>
               <p className="fs-6 xl:fs-5 text-dark dark:text-white text-opacity-70">
-                From idea to deployment—we create robust, scalable applications
-                tailored to your business goals.
+                {t("servicePages.customDevelopment.service.subtitle")}
               </p>
             </div>
             <div
               className="row child-cols-12 g-6 md:g-8 xl:g-6"
               data-uc-scrollspy="target: >*; delay: 500; cls: uc-animation-slide-bottom-medium"
             >
-              {developmentFeatures.map((elm, i) => (
+              {developmentFeatures.map((elm, i) => {
+                const base = `servicePages.customDevelopment.service.${elm.i18nKey}`;
+                const title = t(`${base}.title`);
+                return (
                 <div key={i}>
                   <div className="feature-item panel">
                     <div className="row child-cols items-center justify-between g-2 md:g-4">
@@ -87,7 +78,7 @@ export default function DevelopmentService() {
                               src={elm.imageSrc}
                               width={1400}
                               height={1412}
-                              alt={elm.altText}
+                              alt={t(`${base}.alt`)}
                             />
                           </figure>
                         </div>
@@ -113,17 +104,17 @@ export default function DevelopmentService() {
                                   <i className={`icon-1 ${elm.icon}`} />
                                 </span>
                                 <h3 className="h4 sm:h3 xl:h2 m-0">
-                                  {elm.title}
+                                  {title}
                                 </h3>
                                 <p className="fs-6 lg:fs-5 opacity-70 dark:opacity-80">
-                                  {elm.description}
+                                  {t(`${base}.description`)}
                                 </p>
                                 <a
                                   href="#"
                                   className="uc-link dark:text-secondary fw-bold hstack gap-narrow sm:mt-1 lg:mt-2"
                                   style={{ color: "#84BA41" }}
                                 >
-                                  <span>{elm.linkText}</span>
+                                  <span>{t(`${base}.linkText`)}</span>
                                   <i className="position-relative icon icon-1 unicon-arrow-right rtl:rotate-180 translate-y-px" />
                                 </a>
                               </div>
@@ -134,7 +125,7 @@ export default function DevelopmentService() {
                     </div>
                   </div>
                 </div>
-              ))}
+              );})}
             </div>
           </div>
         </div>

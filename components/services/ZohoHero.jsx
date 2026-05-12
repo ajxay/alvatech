@@ -1,8 +1,13 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 export default function ZohoHero() {
+  const { t } = useTranslation("common");
+  const c = "servicePages.common";
+  const zh = "servicePages.zoho.hero";
+
   return (
     <div id="hero_header" className="hero-header section panel overflow-hidden">
       <div className="position-cover bg-secondary dark:bg-gray-800" />
@@ -16,16 +21,14 @@ export default function ZohoHero() {
                   data-anime="targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});"
                 >
                   <h1 className="h2 xl:display-5 mb-1 xl:mb-2">
-                    Maximum{" "}
+                    {t(`${zh}.titleBefore`)}
                     <span style={{ color: "#84BA41" }}>
-                      productivity with minimum
-                    </span>{" "}
-                    use
+                      {t(`${zh}.titleHighlight`)}
+                    </span>
+                    {t(`${zh}.titleAfter`)}
                   </h1>
                   <p className="fs-6 lg:fs-5 text-dark dark:text-white text-opacity-70">
-                    Zoho CRM offers everything you need to increase leads,
-                    accelerate sales, and measure sales performance—powering
-                    sales execution for 200,000+ businesses worldwide.
+                    {t(`${zh}.subtitle`)}
                   </p>
                   <form
                     onSubmit={(e) => e.preventDefault()}
@@ -36,7 +39,7 @@ export default function ZohoHero() {
                         <input
                           type="email"
                           className="form-control rounded-default h-48px w-full bg-white dark:border-white dark:bg-opacity-10 dark:border-opacity-0 dark:text-white"
-                          placeholder="Your email.."
+                          placeholder={t(`${c}.emailPlaceholder`)}
                           required
                         />
                         <span className="form-icon text-gray dark:text-gray-300">
@@ -53,21 +56,21 @@ export default function ZohoHero() {
                           borderColor: "#84BA41",
                         }}
                       >
-                        <span className="d-none md:d-block">Get Started</span>
-                        <span className="d-block md:d-none">Get Started</span>
+                        <span className="d-none md:d-block">{t(`${c}.getStarted`)}</span>
+                        <span className="d-block md:d-none">{t(`${c}.getStarted`)}</span>
                       </Link>
                     </div>
                   </form>
                   <p className="fs-7 text-dark dark:text-white text-opacity-70">
-                    We care about your data in our{" "}
+                    {t(`${c}.privacyPrefix`)}
                     <Link
                       href={`/page-privacy`}
                       className="uc-link text-underline dark:text-secondary"
                       style={{ color: "#84BA41" }}
                     >
-                      privacy policy
+                      {t(`${c}.privacyLink`)}
                     </Link>
-                    .
+                    {t(`${c}.privacySuffix`)}
                   </p>
                 </div>
               </div>

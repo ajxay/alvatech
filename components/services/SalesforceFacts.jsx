@@ -1,12 +1,17 @@
+"use client";
+
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const salesforceFacts = [
-  { id: 1, value: "16+", description: "Years of Salesforce Experience" },
-  { id: 2, value: "400+", description: "Implementations In 23+ Countries" },
-  { id: 3, value: "15+", description: "Appexchane Apps Developed" },
+  { id: 1, value: "16+" },
+  { id: 2, value: "400+" },
+  { id: 3, value: "15+" },
 ];
 
 export default function SalesforceFacts() {
+  const { t } = useTranslation("common");
+
   return (
     <div
       id="salesforce_facts"
@@ -20,14 +25,13 @@ export default function SalesforceFacts() {
               data-anime="onview: -200; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});"
             >
               <h2 className="h3 md:h2 m-0" style={{ color: "#434243" }}>
-                Smart features for your business
+                {t("servicePages.salesforce.facts.title")}
               </h2>
               <p
                 className="fs-6 xl:fs-5"
                 style={{ color: "rgba(67, 66, 67, 0.9)" }}
               >
-                
-                Our flexible engagement model allows you to tailor your project to your preferences. You retain full control, and our team of Salesforce-certified developers ensures a beneficial outcome.
+                {t("servicePages.salesforce.facts.subtitle")}
               </p>
             </div>
             <div
@@ -39,7 +43,7 @@ export default function SalesforceFacts() {
                 className="row child-cols col-match items-center justify-center text-center gy-3 lg:gy-0"
                 data-anime="onview: -200; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 500});"
               >
-                {salesforceFacts.map((fact) => (
+                {salesforceFacts.map((fact, idx) => (
                   <div key={fact.id}>
                     <div className="fact-item panel vstack gap-1 items-center">
                       <h5
@@ -52,7 +56,7 @@ export default function SalesforceFacts() {
                         className="fw-bold fs-6 m-0"
                         style={{ color: "#434243" }}
                       >
-                        {fact.description}
+                        {t(`servicePages.salesforce.facts.items.${idx}`)}
                       </p>
                     </div>
                   </div>

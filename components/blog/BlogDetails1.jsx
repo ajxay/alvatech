@@ -3,10 +3,12 @@ import Link from "next/link";
 import RelatedBlogs from "./RelatedBlogs";
 import Image from "next/image";
 import { Gallery, Item } from "react-photoswipe-gallery";
+import { useTranslation } from "react-i18next";
 import renderArticleIntro from "./renderArticleIntro";
 import { blogsPosts4 } from "@/data/blogs";
 
 export default function BlogDetails1({ blogItem }) {
+  const { t } = useTranslation("common");
   const articleId = Number(blogItem?.id);
   const bestAiForShopifyArticle = articleId === 26;
   const baseUrl = typeof window !== "undefined" ? window.location.origin : "";
@@ -30,6 +32,12 @@ export default function BlogDetails1({ blogItem }) {
   const nextBlog = hasBlogNavigation
     ? blogsPosts4[(currentBlogIndex + 1) % blogsPosts4.length]
     : null;
+  const categoryKey = blogItem?.category
+    ? blogItem.category.replace(/\s+/g, "")
+    : "Strategy";
+  const categoryLabel = t(`blog.categories.${categoryKey}`, {
+    defaultValue: blogItem?.category || "",
+  });
   const handleCopyLink = async (event) => {
     event.preventDefault();
     try {
@@ -57,19 +65,21 @@ export default function BlogDetails1({ blogItem }) {
               />
             </li>
             <li>
-              <Link href={`/`}>Home</Link>
+              <Link href={`/`}>{t("blog.home")}</Link>
             </li>
             <li>
               <i className="unicon-chevron-right fw-medium opacity-50 rtl:rotate-180" />
             </li>
             <li>
-              <Link href={`/blog`}>Blog</Link>
+              <Link href={`/blog`}>{t("blog.breadcrumbBlog")}</Link>
             </li>
             <li>
               <i className="unicon-chevron-right fw-medium opacity-50 rtl:rotate-180" />
             </li>
             <li>
-              <Link href={`/blog-category/Strategy`}>Strategy</Link>
+              <Link href={`/blog-category/${encodeURIComponent(blogItem?.category || "Strategy")}`}>
+                {categoryLabel}
+              </Link>
             </li>
             <li>
               <i className="unicon-chevron-right fw-medium opacity-50 rtl:rotate-180" />

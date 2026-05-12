@@ -2,8 +2,10 @@
 import { accordionItems2 } from "@/data/faq";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Accordion2() {
+  const { t } = useTranslation("common");
   const parentRefs = useRef([]);
 
   const answerRefs = useRef([]);
@@ -52,14 +54,14 @@ export default function Accordion2() {
                   height="24"
                 />
               </span>
-              <span>{item.title}</span>
+              <span>{item.titleKey ? t(item.titleKey) : item.title}</span>
             </span>
           </a>
           <div
             ref={(el) => (answerRefs.current[i] = el)}
             className="uc-accordion-content mt-1 lg:mt-2"
           >
-            {item.content}
+            {item.contentKey ? t(item.contentKey) : item.content}
           </div>
         </li>
       ))}

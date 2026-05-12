@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { Observer, ScrollTrigger } from "gsap/all";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 import { blogsPosts4 } from "@/data/blogs";
 import "./Sections.css";
 
@@ -19,55 +20,39 @@ const trustedLogos = [
   { src: "/assets/images/home-13/trust/logo-cox-kings.svg", alt: "Cox and Kings", width: 154, height: 40 },
 ];
 
-const integrationCards = [
+const integrationCardLayout = [
   {
-    title: "Shopify",
-    tag: "Productivity",
-    description:
-      "Build and scale your Shopify store with optimized storefronts, app integrations, and conversion-focused customer experiences.",
+    id: "shopify",
     icon: "/assets/images/integrations/shopify-2.png",
     iconWidth: 42,
     iconHeight: 42,
   },
   {
-    title: "Custom Development",
-    tag: "CRM",
-    description:
-      "Develop tailored web and mobile solutions with scalable architecture, custom APIs, and workflows built for your operations.",
+    id: "custom",
     icon: "/assets/images/home-13/integrations/custom-development.png",
     iconWidth: 48,
     iconHeight: 48,
   },
   {
-    title: "Marketing",
-    tag: "Payment",
-    description:
-      "Launch data-driven marketing campaigns, improve lead quality, and optimize performance across search, social, and paid channels.",
+    id: "marketing",
     icon: "/assets/images/home-13/integrations/marketing.png",
     iconWidth: 67,
     iconHeight: 40,
   },
   {
-    title: "Salesforce CRM",
-    tag: "Payment",
-    description:
-      "Optimize sales pipelines, automate customer journeys, and unify service operations with customized Salesforce CRM solutions.",
+    id: "salesforce",
     icon: "/assets/images/home-13/integrations/salesforce-crm.png",
     iconWidth: 51,
     iconHeight: 36,
   },
   {
-    title: "ERP Solutions",
-    tag: "CRM",
-    description: "Unify finance, inventory, procurement, and operations in one ERP ecosystem to improve visibility and business scalability.",
+    id: "erp",
     icon: "/assets/images/home-13/integrations/erp-solutions.png",
     iconWidth: 55,
     iconHeight: 55,
   },
   {
-    title: "ZOHO CRM",
-    tag: "Integration platforms",
-    description: "Automate lead management, streamline sales follow-ups, and improve customer engagement with tailored Zoho CRM solutions.",
+    id: "zoho",
     icon: "/assets/images/home-13/integrations/zoho-crm.png",
     iconWidth: 91,
     iconHeight: 40,
@@ -77,8 +62,7 @@ const integrationCards = [
 const seamlessCards = [
   {
     step: "01",
-    title: "Discover",
-    text: "We understand your goals, audience, and requirements to build the right strategy.",
+    i18nKey: "discover",
     iconAsset: "/assets/images/home-13/seamless/search-icon.svg",
     iconOffsetX: -52,
     iconOffsetY: -95,
@@ -87,8 +71,7 @@ const seamlessCards = [
   },
   {
     step: "02",
-    title: "Design",
-    text: "We create wireframes and UI/UX designs that are intuitive, engaging, and on-brand.",
+    i18nKey: "design",
     iconOffsetX: -114,
     iconOffsetY: -95,
     iconShiftX: -4,
@@ -97,16 +80,14 @@ const seamlessCards = [
   },
   {
     step: "03",
-    title: "Develop",
-    text: "We build clean, scalable, and high-performance solutions with the latest technologies.",
+    i18nKey: "develop",
     iconOffsetX: -184,
     iconOffsetY: -95,
     preview: "/assets/images/home-13/seamless/develop.png",
   },
   {
     step: "04",
-    title: "Test & Launch",
-    text: "We test thoroughly and launch seamlessly, ensuring everything works perfectly.",
+    i18nKey: "testLaunch",
     iconOffsetX: -250,
     iconOffsetY: -95,
     preview: "/assets/images/home-13/seamless/test-launch.png",
@@ -158,38 +139,32 @@ const marketplaceRows = [
   ],
 ];
 
-const valueCards = [
+const valueCardLayout = [
   {
-    title: "Make an impact",
-    description:
-      "We build scalable digital solutions that help businesses achieve measurable growth across every stage of their digital journey.",
+    id: "impact",
     icon: "/assets/images/home-13/values/impact.png",
     iconWidth: 100,
     iconHeight: 100,
   },
   {
-    title: "Learn",
-    description:
-      "Technology evolves fast, and so do we. Our team constantly explores new strategies, platforms, and innovations to deliver future ready solutions.",
+    id: "learn",
     icon: "/assets/images/home-13/values/learn.png",
     iconWidth: 73,
     iconHeight: 82,
   },
   {
-    title: "Client First Approach",
-    description:
-      "We believe strong partnerships create lasting success. By understanding our clients’ goals and challenges, we deliver solutions that are practical, personalized, and results driven.",
+    id: "clientFirst",
     icon: "/assets/images/home-13/values/empathy.png",
     iconWidth: 80,
     iconHeight: 64,
   },
 ];
 
-const stats = [
-  { label: "Experts in-house team size.", value: "70+ " },
-  { label: "Strong Day to Day Support", value: "24x7" },
-  { label: "Implementations", value: "400+" },
-  { label: "Years of industry experience", value: "16+" },
+const statsLayout = [
+  { labelKey: "home13.stats.experts", value: "70+ " },
+  { labelKey: "home13.stats.support", value: "24x7" },
+  { labelKey: "home13.stats.implementations", value: "400+" },
+  { labelKey: "home13.stats.experience", value: "16+" },
 ];
 
 const blogPosts = blogsPosts4.slice(0, 3).map((post) => ({
@@ -242,18 +217,20 @@ const timeline = [
   { year: "2026", title: "AI automation", icon: "/assets/images/template/fun.svg" },
 ];
 
- export const team = [
-  { name: "MONICA LANDBERG", role: "CEO", image: "/assets/images/home-13/team/monica-landberg.png" },
-  { name: "ANDRES LANDBERG", role: "COO", image: "/assets/images/home-13/team/andres-landberg.png" },
-  { name: "NIKHIL KHETAN", role: "CTO", image: "/assets/images/home-13/team/nikhil-khetan.png" },
-  { name: "ANDRE RANDAHL", role: "CFO", image: "/assets/images/home-13/team/andre-randahl.png" },
-  { name: "MANISH KUMAR", role: "Tech Lead", image: "/assets/images/home-13/team/manish-kumar.png" },
-  { name: "ASHISH RANJAN", role: "Marketing Lead", image: "/assets/images/home-13/team/ashish-ranjan.png" },
-  { name: "LUICY", role: "Lead of Fun", image: "/assets/images/home-13/team/luicy.png" },
-  { name: "MOOLY", role: "Director of Joy", image: "/assets/images/home-13/team/mooly.png" },
+export const team = [
+  { name: "MONICA LANDBERG", roleKey: "CEO", image: "/assets/images/home-13/team/monica-landberg.png" },
+  { name: "ANDRES LANDBERG", roleKey: "COO", image: "/assets/images/home-13/team/andres-landberg.png" },
+  { name: "NIKHIL KHETAN", roleKey: "CTO", image: "/assets/images/home-13/team/nikhil-khetan.png" },
+  { name: "ANDRE RANDAHL", roleKey: "CFO", image: "/assets/images/home-13/team/andre-randahl.png" },
+  { name: "MANISH KUMAR", roleKey: "techLead", image: "/assets/images/home-13/team/manish-kumar.png" },
+  { name: "ASHISH RANJAN", roleKey: "marketingLead", image: "/assets/images/home-13/team/ashish-ranjan.png" },
+  { name: "LUICY", roleKey: "leadOfFun", image: "/assets/images/home-13/team/luicy.png" },
+  { name: "MOOLY", roleKey: "directorOfJoy", image: "/assets/images/home-13/team/mooly.png" },
 ];
 
 export default function Sections() {
+  const { t } = useTranslation("common");
+
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger, Observer);
     const mm = gsap.matchMedia();
@@ -346,7 +323,7 @@ export default function Sections() {
   return (
     <>
       <section className="home13-trust">
-        <p className="home13-trust__title">Trusted for overall simplicity</p>
+        <p className="home13-trust__title">{t("home13.trust.title")}</p>
         <div className="home13-trust__rating">
           <span className="home13-trust__stars" aria-hidden="true">
             {Array.from({ length: 5 }).map((_, i) => (
@@ -359,7 +336,7 @@ export default function Sections() {
               />
             ))}
           </span>
-          <span>Based on 4,000+ reviews with customer satisfaction</span>
+          <span>{t("home13.trust.reviewsNote")}</span>
         </div>
         <div className="home13-trust__logos">
           {trustedLogos.map((logo) => (
@@ -378,35 +355,35 @@ export default function Sections() {
       <section id="integrations" className="home13-section home13-integrations">
         <div className="container sm:max-w-lg xl:max-w-xl">
           <header className="home13-header">
-            <h2>Boost your business with technology</h2>
-            <p>
-              Connect every part of your business with technology that will
-              simplify your workflow.
-            </p>
+            <h2>{t("home13.integrations.title")}</h2>
+            <p>{t("home13.integrations.subtitle")}</p>
           </header>
           <div className="home13-grid">
-            {integrationCards.map((item) => (
-              <article key={item.title} className="home13-card">
+            {integrationCardLayout.map((item) => {
+              const base = `home13.integrationCards.${item.id}`;
+              const title = t(`${base}.title`);
+              return (
+              <article key={item.id} className="home13-card">
                 <div className="home13-card__head">
                   <div>
-                    <h3>{item.title}</h3>
-                    <span>{item.tag}</span>
+                    <h3>{title}</h3>
+                    <span>{t(`${base}.tag`)}</span>
                   </div>
                   <Image
                     src={item.icon}
-                    alt={item.title}
+                    alt={title}
                     width={item.iconWidth}
                     height={item.iconHeight}
                     className="home13-card__logo"
                   />
                 </div>
-                <p>{item.description}</p>
+                <p>{t(`${base}.description`)}</p>
                 <Link href="/page-integrations" className="home13-card__explore">
-                  <span>Explore</span>
+                  <span>{t("labels.explore")}</span>
                   <span aria-hidden="true">→</span>
                 </Link>
               </article>
-            ))}
+            );})}
           </div>
         </div>
       </section>
@@ -414,15 +391,14 @@ export default function Sections() {
       <section className="home13-section home13-seamless">
         <div className="container sm:max-w-lg xl:max-w-xl">
           <header className="home13-header">
-            <h2>Everything You Need to Grow</h2>
-            <p>
-              Connect your tools, automate workflows, and create a unified
-              system that scales effortlessly with your business.
-            </p>
+            <h2>{t("home13.seamless.title")}</h2>
+            <p>{t("home13.seamless.subtitle")}</p>
           </header>
           <div className="home13-seamless__grid">
-            {seamlessCards.map((item) => (
-              <article key={item.title} className="home13-seamless__card">
+            {seamlessCards.map((item) => {
+              const cardTitle = t(`home13.seamless.cards.${item.i18nKey}.title`);
+              return (
+              <article key={item.i18nKey} className="home13-seamless__card">
                 <div className="home13-seamless__head">
                   <span className="home13-seamless__step">{item.step}</span>
                   <span
@@ -444,16 +420,21 @@ export default function Sections() {
                     )}
                   </span>
                 </div>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
+                <h3>{cardTitle}</h3>
+                <p>{t(`home13.seamless.cards.${item.i18nKey}.text`)}</p>
                 <div className="home13-seamless__preview">
-                  <Image src={item.preview} alt={`${item.title} preview`} width={262} height={126} />
+                  <Image
+                    src={item.preview}
+                    alt={t("home13.seamless.previewAlt", { title: cardTitle })}
+                    width={262}
+                    height={126}
+                  />
                 </div>
               </article>
-            ))}
+            );})}
           </div>
           <div className="home13-app-strip">
-            <h3>Alvatech Partners</h3>
+            <h3>{t("home13.partners.title")}</h3>
             <div className="home13-app-strip__logos">
               <Image
                 src="/assets/images/home-13/seamless/partner-salesforce.png"
@@ -528,12 +509,12 @@ export default function Sections() {
 
           <div id="marketplaces" className="home13-marketplaces">
             <header className="home13-marketplaces__header">
-              <h3>Connect with top marketing places</h3>
-              <p>Everything you need is right at your fingertips</p>
+              <h3>{t("home13.marketplaces.title")}</h3>
+              <p>{t("home13.marketplaces.subtitle")}</p>
             </header>
             <div className="home13-marketplaces__desktop">
               <article className="home13-marketplaces__block home13-marketplaces__block--top">
-                <h4>Migrate from existing Ecommerce platform</h4>
+                <h4>{t("home13.marketplaces.migrateTitle")}</h4>
                 <div className="home13-marketplaces__rows">
                   {marketplaceMigrationRows.map((row, rowIndex) => (
                     <div key={`migration-row-${rowIndex}`} className="home13-marketplaces__row">
@@ -550,7 +531,7 @@ export default function Sections() {
 
               <div className="home13-marketplaces__middle">
                 <article className="home13-marketplaces__block home13-marketplaces__block--side">
-                  <h4>Payment gateway integration</h4>
+                  <h4>{t("home13.marketplaces.paymentTitle")}</h4>
                   <div className="home13-marketplaces__list">
                     {marketplacePayment.map((item) => (
                       <div key={item.name} className="home13-marketplaces__list-item">
@@ -580,7 +561,7 @@ export default function Sections() {
                 </div>
 
                 <article className="home13-marketplaces__block home13-marketplaces__block--side">
-                  <h4>Shipping integration</h4>
+                  <h4>{t("home13.marketplaces.shippingTitle")}</h4>
                   <div className="home13-marketplaces__list">
                     {marketplaceShipping.map((item) => (
                       <div key={item.name} className="home13-marketplaces__list-item">
@@ -593,7 +574,7 @@ export default function Sections() {
               </div>
 
               <article className="home13-marketplaces__block home13-marketplaces__block--bottom">
-                <h4>Marketplace</h4>
+                <h4>{t("home13.marketplaces.marketplaceTitle")}</h4>
                 <div className="home13-marketplaces__rows">
                   {marketplaceRows.map((row, rowIndex) => (
                     <div key={`marketplace-row-${rowIndex}`} className="home13-marketplaces__row">
@@ -613,7 +594,7 @@ export default function Sections() {
               <div className="home13-marketplaces__cards-section">
                 <div className="home13-marketplaces__cards">
                   <article className="home13-marketplaces__block home13-marketplaces__block--top home13-mkt-card">
-                    <h4>Migrate from existing Ecommerce platform</h4>
+                    <h4>{t("home13.marketplaces.migrateTitle")}</h4>
                     <div className="home13-marketplaces__rows">
                       {marketplaceMigrationRows.map((row, rowIndex) => (
                         <div key={`migration-row-mobile-${rowIndex}`} className="home13-marketplaces__row">
@@ -629,7 +610,7 @@ export default function Sections() {
                   </article>
 
                   <article className="home13-marketplaces__block home13-marketplaces__block--side home13-mkt-card">
-                    <h4>Payment gateway integration</h4>
+                    <h4>{t("home13.marketplaces.paymentTitle")}</h4>
                     <div className="home13-marketplaces__list">
                       {marketplacePayment.map((item) => (
                         <div key={item.name} className="home13-marketplaces__list-item">
@@ -641,7 +622,7 @@ export default function Sections() {
                   </article>
 
                   <article className="home13-marketplaces__block home13-marketplaces__block--side home13-mkt-card">
-                    <h4>Shipping integration</h4>
+                    <h4>{t("home13.marketplaces.shippingTitle")}</h4>
                     <div className="home13-marketplaces__list">
                       {marketplaceShipping.map((item) => (
                         <div key={item.name} className="home13-marketplaces__list-item">
@@ -653,7 +634,7 @@ export default function Sections() {
                   </article>
 
                   <article className="home13-marketplaces__block home13-marketplaces__block--bottom home13-mkt-card">
-                    <h4>Marketplace</h4>
+                    <h4>{t("home13.marketplaces.marketplaceTitle")}</h4>
                     <div className="home13-marketplaces__rows">
                       {marketplaceRows.map((row, rowIndex) => (
                         <div key={`marketplace-row-mobile-${rowIndex}`} className="home13-marketplaces__row">
@@ -677,29 +658,31 @@ export default function Sections() {
       <section className="home13-section home13-stats">
         <div className="container sm:max-w-lg xl:max-w-xl">
           <header className="home13-header">
-            <h2>Our Values</h2>
+            <h2>{t("home13.values.sectionTitle")}</h2>
           </header>
           <div className="home13-values__grid">
-            {valueCards.map((item) => (
-              <article key={item.title} className="home13-values__card">
+            {valueCardLayout.map((item) => {
+              const title = t(`home13.values.${item.id}.title`);
+              return (
+              <article key={item.id} className="home13-values__card">
                 <Image
                   src={item.icon}
-                  alt={item.title}
+                  alt={title}
                   width={item.iconWidth}
                   height={item.iconHeight}
                   className="home13-values__icon"
                 />
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
+                <h3>{title}</h3>
+                <p>{t(`home13.values.${item.id}.description`)}</p>
               </article>
-            ))}
+            );})}
           </div>
           <div className="home13-stats__grid">
-            {stats.map((item, idx) => (
-              <div key={item.label} className="home13-stats__item">
+            {statsLayout.map((item, idx) => (
+              <div key={item.labelKey} className="home13-stats__item">
                 <strong>{item.value}</strong>
-                <span>{item.label}</span>
-                {idx !== stats.length - 1 ? (
+                <span>{t(item.labelKey)}</span>
+                {idx !== statsLayout.length - 1 ? (
                   <span className="home13-stats__divider" aria-hidden="true" />
                 ) : null}
               </div>
@@ -711,7 +694,7 @@ export default function Sections() {
       <section className="home13-section home13-posts">
         <div className="container sm:max-w-lg xl:max-w-xl">
           <header className="home13-header home13-posts__header">
-            <h2>Latest Posts and Updates</h2>
+            <h2>{t("home13.posts.title")}</h2>
           </header>
           <div className="home13-posts__grid">
             {blogPosts.map((post) => (
@@ -726,7 +709,10 @@ export default function Sections() {
                     <h3>
                       <Link href={`/blog-details/${post.id}`}>{post.title}</Link>
                     </h3>
-                    <Link href={`/blog-details/${post.id}`} aria-label={`Read ${post.title}`}>
+                    <Link
+                      href={`/blog-details/${post.id}`}
+                      aria-label={t("home13.posts.readAria", { title: post.title })}
+                    >
                       <Image
                         src="/assets/images/home-13/posts/post-arrow-icon.svg"
                         alt=""
@@ -809,14 +795,14 @@ export default function Sections() {
       <section className="home13-section home13-team">
         <div className="container sm:max-w-lg xl:max-w-xl">
           <header className="home13-header">
-            <h2>Our Executive Team</h2>
+            <h2>{t("home13.team.title")}</h2>
           </header>
           <div className="home13-team__grid">
             {team.map((member) => (
               <article key={member.name} className="home13-team__card">
                 <Image src={member.image} alt={member.name} width={180} height={180} />
                 <h3>{member.name}</h3>
-                <p>{member.role}</p>
+                <p>{t(`home13.team.roles.${member.roleKey}`)}</p>
               </article>
             ))}
           </div>
@@ -842,13 +828,13 @@ export default function Sections() {
             />
             <div className="home13-cta__content">
               <h2>
-                {"Prevent\u00A0costly"}
+                {t("home13.cta.titleTop")}
                 <br />
-                mistakes
+                {t("home13.cta.titleBottom")}
               </h2>
-              <p>Lets build optimized solutions for your business.</p>
+              <p>{t("home13.cta.subtitle")}</p>
               <Link href="/page-contact" className="home13-cta__button">
-                Reach Us Now
+                {t("home13.cta.button")}
               </Link>
             </div>
             <Image
