@@ -252,8 +252,14 @@ export default function MobileMenu() {
           </div>
           <ul className="social-icons nav-x mt-4">
             <li>
-              {socialLinks.slice(0, 4).map((icon, index) => (
-                <a key={index} href={icon.href}>
+              {socialLinks.map((icon, index) => (
+                <a
+                  key={index}
+                  href={icon.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={icon.label}
+                >
                   <i className={icon.iconClass} />
                 </a>
               ))}

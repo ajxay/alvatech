@@ -156,14 +156,14 @@ export default function Contact3() {
                     <h3>{t("pages.contact3.chatTitle")}</h3>
                     <p>{t("pages.contact3.chatBody")}</p>
                     <ul className="contact3-info__links">
-                      <li>
+                      {/* <li>
                         <span className="contact3-info__icon" aria-hidden="true">
                           <svg viewBox="0 0 24 24">
                             <path d="M4 12a8 8 0 0 1 8-8h.3A7.7 7.7 0 0 1 20 11.7a7.3 7.3 0 0 1-7.3 7.3H9l-4 3v-6A7.9 7.9 0 0 1 4 12Z" />
                           </svg>
                         </span>
                         <a href="#">{t("pages.contact3.liveChat")}</a>
-                      </li>
+                      </li> */}
                       <li>
                         <span className="contact3-info__icon" aria-hidden="true">
                           <svg viewBox="0 0 24 24">
@@ -173,14 +173,14 @@ export default function Contact3() {
                         </span>
                         <a href="mailto:sales@alvatech.se">{t("pages.contact3.emailLink")}</a>
                       </li>
-                      <li>
+                      {/* <li>
                         <span className="contact3-info__icon" aria-hidden="true">
                           <svg viewBox="0 0 24 24">
                             <path d="M4 3h4.7L14 9.7 18.9 3H22l-6.2 8 6.4 10h-4.8l-4.3-6.2L8.7 21H4l6.6-8.5L4 3Z" />
                           </svg>
                         </span>
                         <a href="#">{t("pages.contact3.messageX")}</a>
-                      </li>
+                      </li> */}
                     </ul>
                     <h3>{t("pages.contact3.callTitle")}</h3>
                     <p>{t("pages.contact3.callBody")}</p>
@@ -201,7 +201,8 @@ export default function Contact3() {
                           <circle cx="12" cy="10" r="3" />
                         </svg>
                       </span>
-                      <strong>100 Smith Street, Collingwood VIC 3066</strong>
+                      <strong>{t("pages.contact3.address", "Norra Oskarsgatan 12, Linköping")}</strong>
+                 
                     </div>
                   </aside>
                 </div>

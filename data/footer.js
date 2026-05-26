@@ -189,11 +189,21 @@ export const footerLinks4 = [
 ];
 
 export const socialLinks = [
-  { href: "#", iconClass: "unicon-logo-linkedin" },
-  { href: "#", iconClass: "unicon-logo-facebook" },
-  { href: "#", iconClass: "unicon-logo-x-filled" },
-  { href: "#", iconClass: "unicon-logo-instagram" },
-  { href: "#", iconClass: "unicon-logo-youtube" },
+  {
+    href: "https://www.linkedin.com/company/alvatechnordics/",
+    iconClass: "unicon-logo-linkedin",
+    label: "LinkedIn",
+  },
+  {
+    href: "https://www.facebook.com/alvatechnordics",
+    iconClass: "unicon-logo-facebook",
+    label: "Facebook",
+  },
+  {
+    href: "https://www.instagram.com/alvatechnordics",
+    iconClass: "unicon-logo-instagram",
+    label: "Instagram",
+  },
 ];
 
 export const footerLinks5 = [

@@ -122,9 +122,15 @@ export default function Footer1() {
               </div>
               <div className="hstack justify-center lg:justify-end gap-2 lg:gap-3">
                 <ul className="nav-x gap-2">
-                  {socialLinks.slice(0, 4).map((link, index) => (
+                  {socialLinks.map((link, index) => (
                     <li key={index}>
-                      <a href={link.href} style={{ color: "#434243" }}>
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={link.label}
+                        style={{ color: "#434243" }}
+                      >
                         <i className={`icon icon-2 ${link.iconClass}`} />
                       </a>
                     </li>
