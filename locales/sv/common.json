@@ -242,13 +242,13 @@
       "title": "Vår ledningsgrupp",
       "roles": {
         "CEO": "VD",
-        "COO": "COO",
-        "CTO": "CTO",
-        "CFO": "CFO",
-        "techLead": "Tech lead",
+        "COO": "Operativ chef",
+        "CTO": "Teknikchef",
+        "CFO": "Ekonomichef",
+        "techLead": "Teknisk ledare",
         "marketingLead": "Marknadsföringsansvarig",
-        "leadOfFun": "Lead of Fun",
-        "directorOfJoy": "Director of Joy"
+        "leadOfFun": "Ansvarig för kul",
+        "directorOfJoy": "Glädjedirektör"
       }
     },
     "cta": {
@@ -292,13 +292,13 @@
         "title": "Vår ledningsgrupp",
         "roles": {
           "ceo": "VD",
-          "coo": "COO",
-          "cto": "CTO",
-          "cfo": "CFO",
-          "techLead": "Tech lead",
+          "coo": "Operativ chef",
+          "cto": "Teknikchef",
+          "cfo": "Ekonomichef",
+          "techLead": "Teknisk ledare",
           "marketingLead": "Marknadsföringsansvarig",
-          "leadOfFun": "Lead of Fun",
-          "directorOfJoy": "Director of Joy"
+          "leadOfFun": "Ansvarig för kul",
+          "directorOfJoy": "Glädjedirektör"
         }
       },
       "cta": {
