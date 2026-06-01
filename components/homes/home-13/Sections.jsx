@@ -219,9 +219,9 @@ const timeline = [
 
 export const team = [
   { name: "MONICA LANDBERG", roleKey: "CEO", image: "/assets/images/home-13/team/monica-landberg.png" },
-  { name: "ANDRES LANDBERG", roleKey: "COO", image: "/assets/images/home-13/team/andres-landberg.png" },
+  { name: "ANDERS LANDBERG", roleKey: "COO", image: "/assets/images/home-13/team/andres-landberg.png" },
   { name: "NIKHIL KHETAN", roleKey: "CTO", image: "/assets/images/home-13/team/nikhil-khetan.png" },
-  { name: "ANDRE RANDAHL", roleKey: "CFO", image: "/assets/images/home-13/team/andre-randahl.png" },
+  { name: "ANTON RANDAHL", roleKey: "CFO", image: "/assets/images/home-13/team/andre-randahl.png" },
   { name: "MANISH KUMAR", roleKey: "techLead", image: "/assets/images/home-13/team/manish-kumar.png" },
   { name: "ASHISH RANJAN", roleKey: "marketingLead", image: "/assets/images/home-13/team/ashish-ranjan.png" },
   { name: "LUICY", roleKey: "leadOfFun", image: "/assets/images/home-13/team/luicy.png" },
