@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /page-contact
+Disallow: /shop-cart
+Disallow: /shop-checkout
+Disallow: /page-terms
+Disallow: /page-privacy
+Sitemap: https://alvatech.se/sitemap.xml
