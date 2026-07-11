@@ -1,4 +1,5 @@
 import React from "react";
+import renderArticleIntroSv from "./renderArticleIntroSv";
 
 function SalesforceArticleIntro() {
   return (
@@ -1143,6 +1144,115 @@ function GenerativeEngineOptimizationArticleIntro() {
     </>
   );
 }
+function ShopifyMigrationArticleIntro() {
+  return (
+    <>
+      <p className="mb-4">
+        We've done this enough times to see the patterns. Businesses that come to us for a <b>Shopify migration</b> have almost always reached the same inflection point: the platform they built their store on worked well at first, but no longer holds up.
+      </p>
+      <p className="mb-4">
+        It's not always a technical breakdown that triggers the decision. More often it's a gradual realisation — that every update requires a developer, that the mobile experience is lagging, that the integration with their business systems has never quite worked the way it should. Eventually, the cost of staying put is higher than the cost of switching.
+      </p>
+      <p className="mb-5">
+        This article is about when that decision is right — and what you need to consider when making it.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>What actually drives the decision to switch?</h4>
+      <p className="mb-4">
+        The most common reasons we see aren't the ones listed in Shopify's marketing material. It's rarely about Shopify being 'best in class' in an abstract sense. It's about specific problems that have become too expensive to ignore.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>WooCommerce — when flexibility becomes a trap</h4>
+      <p className="mb-3">
+        <b>WooCommerce</b> is an excellent starting platform. It's open source, affordable, and flexible. But that flexibility comes at a price: you own and are responsible for everything. Server infrastructure, security updates, plugin conflicts, performance optimisation — all of it is your problem.
+      </p>
+      <p className="mb-4">
+        Most WooCommerce stores we migrate have outgrown their original setup. Ten plugins that don't talk to each other. A server that can't handle traffic spikes during campaigns. A mobile experience that was never a priority. Manageable at small scale. Costly when sales grow.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Magento — powerful, but resource-intensive</h4>
+      <p className="mb-4">
+        <b>Magento</b> is a capable platform for complex e-commerce. But it requires a dedicated development resource to run well — and for most mid-sized Swedish businesses, that's a cost that's hard to justify when Shopify can handle the same business needs at a fraction of the maintenance overhead.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Custom-built systems — when bespoke becomes a liability</h4>
+      <p className="mb-4">
+        The most common scenario we see: a business built a custom system when Shopify didn't exist or didn't fit. The system was perfectly tailored for the needs of that time. Today, it's hard to find anyone who understands the codebase, expensive to add features, and impossible to integrate with modern tools.
+      </p>
+      <p className="mb-4 fst-italic fw-bold">
+        The most expensive platform isn't the one with the highest monthly fee. It's the one that requires a developer for every small change.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>What Shopify actually offers — and what it doesn't</h4>
+      <p className="mb-3">
+        Shopify is a managed platform. That means you pay a monthly fee and in return Shopify handles the infrastructure — hosting, security, updates, and uptime. You don't manage servers. You focus on what actually drives growth.
+      </p>
+      <p className="mb-3">
+        The platform also handles what's hard to build yourself: mobile-first performance, built-in payment solutions, multi-market and multi-currency support, and a broad ecosystem of integrations with CRM systems, ERP, and marketing automation.
+      </p>
+      <p className="mb-4">
+        What Shopify is not: a solution that fixes everything without effort. A well-built Shopify store still requires strategy, considered design, and the right technical setup. The platform gives you the tools — how you use them determines the result.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>What does migration cost — and what are the risks?</h4>
+      <p className="mb-3">
+        The question we always ask back: what does it cost <b>not</b> to migrate? If your current platform is costing you in maintenance and technical debt, the calculation looks different.
+      </p>
+      <p className="mb-3">
+        A well-planned migration manages three critical risks:
+      </p>
+      <p className="mb-3">
+        <b>SEO rankings</b>
+        <br />
+        The most common concern — and the most unnecessary one if handled properly. URL structure, redirects, and metadata migration are standard procedure for us. A well-planned migration should not lose rankings.
+      </p>
+      <p className="mb-3">
+        <b>Customer data and order history</b>
+        <br />
+        Customer accounts, order history, and subscription information need to be migrated carefully. It's not complicated, but it requires precision. We always map the data volume before setting a timeline.
+      </p>
+      <p className="mb-4">
+        <b>Downtime</b>
+        <br />
+        With the right planning, the critical cutover takes hours, not days. We always test in a staging environment before launch and verify that payment flows, product pages, and checkout work flawlessly.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>How long does it take?</h4>
+      <p className="mb-3">
+        A standard migration from WooCommerce or Magento to Shopify typically takes <b>4–8 weeks</b>. Custom-built systems with complex integrations can take <b>8–14 weeks</b>. It depends on data volume, number of integrations, and how well-defined the requirements are from the start.
+      </p>
+      <p className="mb-4">
+        We always set a realistic timeline — not one that looks good in a sales meeting and breaks down in production.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Frequently asked questions</h4>
+      <p className="mb-3">
+        <b>Will we lose our Google rankings?</b>
+        <br />
+        Not if the migration is planned properly. SEO preservation is a standard part of our migration work — URL redirects, metadata, and sitemaps are handled systematically.
+      </p>
+      <p className="mb-3">
+        <b>Can Shopify handle our product catalogue?</b>
+        <br />
+        In almost all cases, yes. Shopify Plus handles large catalogues, complex variants, and high transaction volumes. If you have specific requirements, we map them in advance.
+      </p>
+      <p className="mb-4">
+        <b>What happens to our customer accounts and order history?</b>
+        <br />
+        They migrate with you. It's a standard step in every migration we run — no customers should have to create new accounts or lose their history.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Is it the right decision for you?</h4>
+      <p className="mb-3">
+        It depends on where you are. If your current platform works, scales, and doesn't cost you disproportionately in maintenance — wait. If you recognise what we've described above, it's worth a conversation.
+      </p>
+      <p className="mb-4">
+        We always do an honest assessment before recommending a migration. Sometimes the answer is to wait. More often, it's that you should have done it a year ago.
+      </p>
+    </>
+  );
+}
+
 function DefaultArticleIntro() {
   return (
     <p>
@@ -1152,12 +1262,14 @@ function DefaultArticleIntro() {
   );
 }
 
-export default function renderArticleIntro(articleId) {
+export default function renderArticleIntro(articleId, language) {
+  if (language === "sv") return renderArticleIntroSv(articleId);
   if (articleId === 27) return <SalesforceArticleIntro />;
   if (articleId === 28) return <MetaAdsArticleIntro />;
   if (articleId === 29) return <EcommerceArticleIntro />;
   if (articleId === 30) return <AiSeoArticleIntro />;
   if (articleId === 31) return <InstagramHashtagsArticleIntro />;
   if (articleId === 32) return <GenerativeEngineOptimizationArticleIntro />;
+  if (articleId === 33) return <ShopifyMigrationArticleIntro />;
   return <DefaultArticleIntro />;
 }

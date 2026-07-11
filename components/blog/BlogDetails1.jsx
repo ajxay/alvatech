@@ -5,12 +5,14 @@ import Image from "next/image";
 import { Gallery, Item } from "react-photoswipe-gallery";
 import { useTranslation } from "react-i18next";
 import renderArticleIntro from "./renderArticleIntro";
-import { blogsPosts4 } from "@/data/blogs";
+import { blogsPosts4, localizePost } from "@/data/blogs";
 
-export default function BlogDetails1({ blogItem }) {
-  const { t } = useTranslation("common");
+export default function BlogDetails1({ blogItem: rawBlogItem }) {
+  const { t, i18n } = useTranslation("common");
+  const isSv = i18n.language === "sv";
+  const blogItem = localizePost(rawBlogItem, i18n.language);
   const articleId = Number(blogItem?.id);
-  const bestAiForShopifyArticle = articleId === 26;
+  const bestAiForShopifyArticle = articleId === 26 && !isSv;
   const baseUrl = typeof window !== "undefined" ? window.location.origin : "";
   const currentBlogUrl = `${baseUrl}/blog-details/${articleId}`;
   const encodedBlogUrl = encodeURIComponent(currentBlogUrl);
@@ -27,10 +29,13 @@ export default function BlogDetails1({ blogItem }) {
   const currentBlogIndex = blogsPosts4.findIndex((blog) => Number(blog.id) === articleId);
   const hasBlogNavigation = currentBlogIndex !== -1 && blogsPosts4.length > 1;
   const prevBlog = hasBlogNavigation
-    ? blogsPosts4[(currentBlogIndex - 1 + blogsPosts4.length) % blogsPosts4.length]
+    ? localizePost(
+        blogsPosts4[(currentBlogIndex - 1 + blogsPosts4.length) % blogsPosts4.length],
+        i18n.language
+      )
     : null;
   const nextBlog = hasBlogNavigation
-    ? blogsPosts4[(currentBlogIndex + 1) % blogsPosts4.length]
+    ? localizePost(blogsPosts4[(currentBlogIndex + 1) % blogsPosts4.length], i18n.language)
     : null;
   const categoryKey = blogItem?.category
     ? blogItem.category.replace(/\s+/g, "")
@@ -174,7 +179,7 @@ export default function BlogDetails1({ blogItem }) {
                 className="post-content panel fs-6 md:fs-5"
                 data-uc-lightbox="animation: scale"
               >
-                {renderArticleIntro(articleId)}
+                {renderArticleIntro(articleId, i18n.language)}
                 {bestAiForShopifyArticle && <div className="panel mt-3">
                   <figure className="float-end ms-3 mb-1">
                     <Item
@@ -367,7 +372,7 @@ export default function BlogDetails1({ blogItem }) {
               <ul className="nav-x gap-narrow text-primary">
                 <li>
                   <span className="text-black dark:text-white me-narrow">
-                    Tags:
+                    {t("blog.tags")}
                   </span>
                 </li>
                 <li>
@@ -395,7 +400,7 @@ export default function BlogDetails1({ blogItem }) {
               </ul>
               <ul className="post-share-icons nav-x gap-narrow">
                 <li className="me-1">
-                  <span className="text-black dark:text-white">Share:</span>
+                  <span className="text-black dark:text-white">{t("blog.share")}</span>
                 </li>
                 <li>
                   <a
@@ -493,7 +498,7 @@ export default function BlogDetails1({ blogItem }) {
                     </figure>
                   </div>
                   <div className="panel vstack justify-center px-2 gap-1 w-1/3">
-                    <span className="fs-7 opacity-60">Prev Article</span>
+                    <span className="fs-7 opacity-60">{t("blog.prevArticle")}</span>
                     <h6 className="h6 lg:h5 m-0">{prevBlog.title}</h6>
                   </div>
                   <Link
@@ -503,7 +508,7 @@ export default function BlogDetails1({ blogItem }) {
                 </div>
                 <div className="new-post panel hstack w-100 sm:w-1/2">
                   <div className="panel vstack justify-center px-2 gap-1 w-1/3 text-end rtl:text-start">
-                    <span className="fs-7 opacity-60">Next Article</span>
+                    <span className="fs-7 opacity-60">{t("blog.nextArticle")}</span>
                     <h6 className="h6 lg:h5 m-0">{nextBlog.title}</h6>
                   </div>
                   <div className="panel hstack justify-center w-100px h-100px">
@@ -530,7 +535,7 @@ export default function BlogDetails1({ blogItem }) {
               </div>
             )}
             <div className="post-related panel border-top pt-2 mt-8 xl:mt-9">
-              <h4 className="h5 xl:h4 mb-5 xl:mb-6">Related to this topic:</h4>
+              <h4 className="h5 xl:h4 mb-5 xl:mb-6">{t("blog.relatedTopic")}</h4>
               <div className="row child-cols-6 md:child-cols-4 gx-2 gy-4 sm:gx-3 sm:gy-6">
                 <RelatedBlogs />
               </div>

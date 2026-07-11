@@ -1,12 +1,16 @@
-import { blogsPosts4 } from "@/data/blogs";
+"use client";
+import { blogsPosts4, localizePost } from "@/data/blogs";
+import { useTranslation } from "react-i18next";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function RelatedBlogs() {
+  const { i18n } = useTranslation("common");
+  const localizedPosts = blogsPosts4.map((p) => localizePost(p, i18n.language));
   return (
     <>
-      {blogsPosts4.slice(2, 5).map((elm, i) => (
+      {localizedPosts.slice(2, 5).map((elm, i) => (
         <div key={i}>
           <article className="post type-post panel vstack gap-2">
             <figure className="featured-image m-0 rounded ratio ratio-4x3 uc-transition-toggle overflow-hidden">

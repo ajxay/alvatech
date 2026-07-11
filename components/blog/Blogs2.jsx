@@ -1,10 +1,14 @@
-import { blogsPosts4 } from "@/data/blogs";
+"use client";
+import { blogsPosts4, localizePost } from "@/data/blogs";
+import { useTranslation } from "react-i18next";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Pagination from "../common/Pagination";
 
 export default function Blogs2() {
+  const { i18n } = useTranslation("common");
+  const localizedPosts = blogsPosts4.map((p) => localizePost(p, i18n.language));
   return (
     <div className="section panel overflow-hidden">
       <div className="section-outer panel py-6 lg:py-9">
@@ -16,7 +20,7 @@ export default function Blogs2() {
               </h1>
             </header>
             <div className="row child-cols-12 sm:child-cols-4 col-match gy-4 gx-2 xl:gx-4">
-              {blogsPosts4.slice(0, 7).map((elm, i) => (
+              {localizedPosts.slice(0, 7).map((elm, i) => (
                 <div key={i} className="col-12">
                   <article className="post type-post panel rounded-3 p-2 md:p-4 bg-secondary dark:bg-gray-800">
                     <div className="panel row child-cols-12 sm:child-cols items-center g-3 md:g-4">

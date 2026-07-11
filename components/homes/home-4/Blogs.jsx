@@ -1,9 +1,13 @@
-import { blogPosts2 } from "@/data/blogs";
+"use client";
+import { blogsPosts4, localizePost } from "@/data/blogs";
+import { useTranslation } from "react-i18next";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Blogs() {
+  const { t, i18n } = useTranslation("common");
+  const localizedPosts = blogsPosts4.map((p) => localizePost(p, i18n.language));
   return (
     <div
       id="blog_posts"
@@ -22,10 +26,10 @@ export default function Blogs() {
               >
                 <div className="vstack gap-2">
                   <span className="fw-bold text-primary dark:text-secondary">
-                    Our insights
+                    {t("blog.ourInsights")}
                   </span>
                   <h2 className="title h3 lg:h2 xl:h1 m-0">
-                    Latest Posts and Updates
+                    {t("blog.latestPosts")}
                   </h2>
                 </div>
                 <div>
@@ -34,27 +38,27 @@ export default function Blogs() {
                     className="btn btn-sm lg:btn-md btn-primary rounded-default"
                     style={{ backgroundColor: "#84BA41", borderColor: "#84BA41" }}
                   >
-                    View all posts
+                    {t("blog.viewAllPosts")}
                   </Link>
                 </div>
               </div>
               <div className="content panel">
                 <div className="row child-cols-12 sm:child-cols-6 lg:child-cols-4 justify-center g-2 xl:g-4">
-                  {blogPosts2.map((post, index) => (
+                  {localizedPosts.slice(0, 3).map((post, index) => (
                     <div key={index}>
                       <article className="post type-post panel overflow-hidden vstack rounded-1-5 bg-white dark:bg-gray-800">
                         <figure className="featured-image m-0 rounded ratio ratio-16x9 rounded-0 uc-transition-toggle overflow-hidden">
                           <Image
                             className="media-cover image uc-transition-scale-up uc-transition-opaque"
-                            src={post.imageSrc}
+                            src={post.imgSrc}
                             width={1280}
                             height={853}
-                            alt={post.altText}
+                            alt={post.imgAlt}
                           />
                           <Link
                             href={`/blog-details/${post.id}`}
                             className="position-cover"
-                            data-caption={post.altText}
+                            data-caption={post.imgAlt}
                           ></Link>
                         </figure>
                         <div className="panel vstack gap-1 p-2 lg:p-3 lg:pt-2">
@@ -74,12 +78,12 @@ export default function Blogs() {
                             </h3>
                           </Link>
                           <p className="post-excrept fs-6 opacity-70">
-                            {post.excerpt}
+                            {post.desc}
                           </p>
                           <div className="post-meta hstack gap-1 panel overflow-hidden mt-2">
-                            <Link href={`/blog-author/Amir Khan`}>
+                            <Link href={`/blog-author/${post.authorName}`}>
                               <Image
-                                src={post.authorImage}
+                                src={post.authorImg}
                                 width={150}
                                 height={150}
                                 alt={post.authorName}
@@ -88,7 +92,7 @@ export default function Blogs() {
                             </Link>
                             <div className="vstack gap-0">
                               <Link
-                                href={`/blog-author/Amir Khan`}
+                                href={`/blog-author/${post.authorName}`}
                                 className="text-none fw-bold text-dark dark:text-white"
                               >
                                 {post.authorName}

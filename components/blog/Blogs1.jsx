@@ -1,10 +1,14 @@
-import { blogsPosts4 } from "@/data/blogs";
+"use client";
+import { blogsPosts4, localizePost } from "@/data/blogs";
+import { useTranslation } from "react-i18next";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Pagination from "../common/Pagination";
 
 export default function Blogs1() {
+  const { t, i18n } = useTranslation("common");
+  const localizedPosts = blogsPosts4.map((p) => localizePost(p, i18n.language));
   return (
     <div className="section panel overflow-hidden">
       <div className="section-outer panel py-6 lg:py-9">
@@ -46,11 +50,11 @@ export default function Blogs1() {
           >
             <header className="page-header vstack justify-center items-center gap-2 md:gap-4 text-center max-w-650px mx-auto">
               <h1 className="h2 sm:h1 lg:display-6 xl:display-5 m-0">
-                Insights
+                {t("blog.insights")}
               </h1>
             </header>
             <div className="row child-cols-12 sm:child-cols-4 col-match gy-4 sm:gy-6 xl:gy-8 gx-2 xl:gx-4">
-              {blogsPosts4.slice(0, 1).map((elm, i) => (
+              {localizedPosts.slice(0, 1).map((elm, i) => (
                 <div key={i} className="col-12">
                   <article className="post type-post panel rounded-3 p-3 bg-secondary dark:bg-gray-800">
                     <div className="panel row child-cols-12 md:child-cols-6 items-center g-3">
@@ -121,7 +125,7 @@ export default function Blogs1() {
                             href={`/blog-details/${elm.id}`}
                             style={{ color: "#86BC40" }}
                           >
-                            Continue reading
+                            {t("blog.continueReading")}
                           </Link>
                         </div>
                       </div>
@@ -129,7 +133,7 @@ export default function Blogs1() {
                   </article>
                 </div>
               ))}
-              {blogsPosts4.slice(1, 7).map((elm, i) => (
+              {localizedPosts.slice(1).map((elm, i) => (
                 <div key={i}>
                   <article className="post type-post panel vstack gap-3 rounded-3 p-2 pb-3 bg-secondary dark:bg-gray-800">
                     <Link

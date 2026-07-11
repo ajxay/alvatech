@@ -6,7 +6,7 @@ import { Observer, ScrollTrigger } from "gsap/all";
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
-import { blogsPosts4 } from "@/data/blogs";
+import { blogsPosts4, localizePost } from "@/data/blogs";
 import "./Sections.css";
 
 const trustedLogos = [
@@ -167,15 +167,19 @@ const statsLayout = [
   { labelKey: "home13.stats.experience", value: "16+" },
 ];
 
-const blogPosts = blogsPosts4.slice(0, 3).map((post) => ({
-  id: post.id,
-  title: post.title,
-  excerpt: post.desc,
-  date: post.date,
-  author: post.authorName,
-  image: post.imgSrc,
-  authorImageSrc: post.authorImg,
-}));
+const getBlogPosts = (language) =>
+  blogsPosts4.slice(0, 3).map((rawPost) => {
+    const post = localizePost(rawPost, language);
+    return {
+      id: post.id,
+      title: post.title,
+      excerpt: post.desc,
+      date: post.date,
+      author: post.authorName,
+      image: post.imgSrc,
+      authorImageSrc: post.authorImg,
+    };
+  });
 
 const testimonials = [
   {
@@ -229,7 +233,8 @@ export const team = [
 ];
 
 export default function Sections() {
-  const { t } = useTranslation("common");
+  const { t, i18n } = useTranslation("common");
+  const blogPosts = getBlogPosts(i18n.language);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger, Observer);

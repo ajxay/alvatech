@@ -1,17 +1,21 @@
-import { blogPosts7, posts2 } from "@/data/blogs";
+"use client";
+import { blogsPosts4, localizePost } from "@/data/blogs";
+import { useTranslation } from "react-i18next";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 export default function Sidebar() {
+  const { t, i18n } = useTranslation("common");
+  const localizedPosts = blogsPosts4.map((p) => localizePost(p, i18n.language));
   return (
     <div className="uc-sidebar panel vstack gap-2 ">
       <div className="widget featured-widget vstack gap-2 lg:gap-4 p-2 py-3 lg:p-4 lg:py-5 rounded-1-5 lg:rounded-2 bg-gray-25 dark:bg-gray-800">
         <div className="widget-title text-center">
-          <h5 className="fs-7 m-0">Featured post</h5>
+          <h5 className="fs-7 m-0">{t("blog.featuredPost")}</h5>
         </div>
         <div className="widget-content mt-2">
-          {blogPosts7.map((post, index) => (
+          {localizedPosts.slice(0, 1).map((post, index) => (
             <div className="panel text-center" key={index}>
               <div className="ratio ratio-16x9 rounded lg:rounded-1-5 uc-transition-toggle overflow-hidden">
                 <Image
@@ -32,12 +36,12 @@ export default function Sidebar() {
                   {post.title}
                 </Link>
               </h4>
-              <p className="fs-6">{post.description}</p>
+              <p className="fs-6">{post.desc}</p>
               <Link
                 className="btn btn-text text-primary dark:text-tertiary border-bottom mt-3"
                 href={`/blog-details/${post.id}`}
               >
-                Read more
+                {t("blog.readMore")}
               </Link>
             </div>
           ))}
@@ -45,11 +49,11 @@ export default function Sidebar() {
       </div>
       <div className="widget popular-widget vstack gap-2 p-2 py-3 lg:p-4 lg:py-5 rounded-1-5 lg:rounded-2 bg-gray-25 dark:bg-gray-800">
         <div className="widget-title text-center">
-          <h5 className="fs-7 m-0">Popular now</h5>
+          <h5 className="fs-7 m-0">{t("blog.popularNow")}</h5>
         </div>
         <div className="widget-content">
           <div className="row child-cols-12 gx-4 gy-3 sep-x">
-            {posts2.map((post, i) => (
+            {localizedPosts.slice(1, 5).map((post, i) => (
               <div key={post.id}>
                 <article className="post type-post panel">
                   <div className="row child-cols g-2 lg:g-3">
@@ -74,15 +78,6 @@ export default function Sidebar() {
                                   <div className="post-date hstack gap-narrow">
                                     <span>{post.date}</span>
                                   </div>
-                                </div>
-                                <div>
-                                  <a
-                                    href="#post_comment"
-                                    className="post-comments text-none hstack gap-narrow"
-                                  >
-                                    <i className="icon-narrow unicon-chat" />
-                                    <span>{post.comments}</span>
-                                  </a>
                                 </div>
                               </div>
                             </div>

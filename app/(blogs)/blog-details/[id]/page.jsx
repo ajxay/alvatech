@@ -10,8 +10,12 @@ export async function generateMetadata(props) {
   const blogItem = allBlogs.find((elm) => elm.id == id) || allBlogs[0];
 
   return {
-    title: blogItem.metaTitle || `${blogItem.title} || Alvatech - Website`,
-    description: blogItem.metaDescription || "Alvatech - Website",
+    title:
+      blogItem.metaTitleSv ||
+      blogItem.metaTitle ||
+      `${blogItem.titleSv || blogItem.title} || Alvatech - Website`,
+    description:
+      blogItem.metaDescriptionSv || blogItem.metaDescription || "Alvatech - Website",
   };
 }
 

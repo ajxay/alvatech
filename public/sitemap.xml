@@ -126,6 +126,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://alvatech.se/blog-details/33</loc>
+    <lastmod>2026-07-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://alvatech.se/blog-category/Salesforce</loc>
     <lastmod>2026-07-06</lastmod>
     <priority>0.8</priority>

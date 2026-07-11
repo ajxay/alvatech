@@ -78,7 +78,20 @@
       "SEO": "SEO",
       "Boost": "Boost",
       "Advertising": "Advertising"
-    }
+    },
+    "insights": "Insights",
+    "continueReading": "Continue reading",
+    "readMore": "Read more",
+    "ourInsights": "Our insights",
+    "latestPosts": "Latest Posts and Updates",
+    "viewAllPosts": "View all posts",
+    "featuredPost": "Featured post",
+    "popularNow": "Popular now",
+    "prevArticle": "Prev Article",
+    "nextArticle": "Next Article",
+    "relatedTopic": "Related to this topic:",
+    "tags": "Tags:",
+    "share": "Share:"
   },
   "modal": {
     "contact": {

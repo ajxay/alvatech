@@ -22,7 +22,7 @@ export const footerLinks = [
   },
   {
     links: [
-      { href: "#", labelKey: "blog" },
+      { href: "/blog", labelKey: "blog" },
       { href: "/page-terms", labelKey: "termsOfService" },
       { href: "/page-privacy", labelKey: "privacyPolicy" },
     ],

@@ -78,7 +78,20 @@
       "SEO": "SEO",
       "Boost": "Boost",
       "Advertising": "Annonsering"
-    }
+    },
+    "insights": "Insikter",
+    "continueReading": "Fortsätt läsa",
+    "readMore": "Läs mer",
+    "ourInsights": "Våra insikter",
+    "latestPosts": "Senaste inlägg och uppdateringar",
+    "viewAllPosts": "Visa alla inlägg",
+    "featuredPost": "Utvalt inlägg",
+    "popularNow": "Populärt just nu",
+    "prevArticle": "Föregående artikel",
+    "nextArticle": "Nästa artikel",
+    "relatedTopic": "Relaterat till detta ämne:",
+    "tags": "Taggar:",
+    "share": "Dela:"
   },
   "modal": {
     "contact": {

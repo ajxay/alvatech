@@ -1,11 +1,15 @@
+"use client";
 import React from "react";
 import Pagination from "../common/Pagination";
 import Sidebar from "./Sidebar";
-import { posts } from "@/data/blogs";
+import { blogsPosts4, localizePost } from "@/data/blogs";
+import { useTranslation } from "react-i18next";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function BlogSidebarRight() {
+  const { t, i18n } = useTranslation("common");
+  const localizedPosts = blogsPosts4.map((p) => localizePost(p, i18n.language));
   return (
     <div className="section panel">
       <div className="container">
@@ -14,7 +18,7 @@ export default function BlogSidebarRight() {
             <div className="md:col-8">
               <div className="uc-main panel" role="main">
                 <div className="row child-cols-12 sm:child-cols-4 col-match g-2 lg:g-4 xl:g-6">
-                  {posts.slice(0, 6).map((elm, i) => (
+                  {localizedPosts.slice(0, 6).map((elm, i) => (
                     <div key={i} className="col-12">
                       <article className="post type-post panel rounded-2 p-2 lg:p-4 bg-gray-25 dark:bg-gray-800">
                         <div className="panel row child-cols-12 lg:child-cols g-2 lg:g-4">
@@ -23,15 +27,15 @@ export default function BlogSidebarRight() {
                               <figure className="featured-image m-0 rounded ratio ratio-16x9 lg:ratio-1x1 rounded-1-5 uc-transition-toggle overflow-hidden">
                                 <Image
                                   className="media-cover image uc-transition-scale-up uc-transition-opaque"
-                                  alt="Unlock productivity potential with AI"
-                                  src={elm.image}
+                                  alt={elm.imgAlt}
+                                  src={elm.imgSrc}
                                   width="768"
                                   height="560"
                                 />
                                 <Link
                                   href={`/blog-details/${elm.id}`}
                                   className="position-cover"
-                                  data-caption="Unlock productivity potential with AI"
+                                  data-caption={elm.imgAlt}
                                 />
                               </figure>
                               <Link
@@ -53,13 +57,13 @@ export default function BlogSidebarRight() {
                                 </Link>
                               </h3>
                               <p className="fs-6 md:fs-5 text-truncate-3">
-                                {elm.excerpt}{" "}
+                                {elm.desc}{" "}
                               </p>
                               <Link
                                 className="btn btn-text text-primary border-bottom d-inline-flex fs-7 md:fs-6 mt-2 md:mt-4 dark:text-tertiary"
                                 href={`/blog-details/${elm.id}`}
                               >
-                                Read more
+                                {t("blog.readMore")}
                               </Link>
                             </div>
                           </div>

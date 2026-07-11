@@ -1,10 +1,14 @@
-import { blogsPosts4 } from "@/data/blogs";
+"use client";
+import { blogsPosts4, localizePost } from "@/data/blogs";
+import { useTranslation } from "react-i18next";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Pagination from "../common/Pagination";
 
 export default function Blogs5() {
+  const { i18n } = useTranslation("common");
+  const localizedPosts = blogsPosts4.map((p) => localizePost(p, i18n.language));
   return (
     <div className="section py-3 sm:py-6 lg:py-9">
       <div className="container max-w-xl">
@@ -20,7 +24,7 @@ export default function Blogs5() {
             <div className="col">
               <div className="panel text-center">
                 <div className="row child-cols-12 sm:child-cols-6 lg:child-cols-4 xl:child-cols-3 col-match gy-4 xl:gy-6 gx-2 sm:gx-4">
-                  {blogsPosts4.slice(0, 8).map((elm, i) => (
+                  {localizedPosts.slice(0, 8).map((elm, i) => (
                     <div key={i}>
                       <article className="post type-post panel vstack gap-3 rounded-3 p-2 pb-3 bg-secondary dark:bg-gray-800">
                         <Link
