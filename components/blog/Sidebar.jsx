@@ -28,18 +28,18 @@ export default function Sidebar() {
                 <Link
                   className="position-cover"
                   data-caption={post.imgAlt}
-                  href={`/blog-details/${post.id}`}
+                  href={`/blog/${post.slug}`}
                 />
               </div>
               <h4 className="h5 mt-3">
-                <Link className="text-none" href={`/blog-details/${post.id}`}>
+                <Link className="text-none" href={`/blog/${post.slug}`}>
                   {post.title}
                 </Link>
               </h4>
               <p className="fs-6">{post.desc}</p>
               <Link
                 className="btn btn-text text-primary dark:text-tertiary border-bottom mt-3"
-                href={`/blog-details/${post.id}`}
+                href={`/blog/${post.slug}`}
               >
                 {t("blog.readMore")}
               </Link>
@@ -66,7 +66,7 @@ export default function Sidebar() {
                           <h3 className="post-title h6 m-0">
                             <Link
                               className="text-none"
-                              href={`/blog-details/${post.id}`}
+                              href={`/blog/${post.slug}`}
                             >
                               {post.title}
                             </Link>

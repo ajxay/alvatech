@@ -7,13 +7,9 @@ import About2 from "@/components/innerpages/About2";
 import AboutValues from "@/components/innerpages/AboutValues";
 import Cta from "@/components/innerpages/Cta";
 import AboutTeam from "@/components/innerpages/AboutTeam";
+import { pageMetadataFor } from "@/data/pageMeta";
 
-export const metadata = {
-  title:
-    "About || Alva tech - Website",
-  description:
-    "Alva tech - Website",
-};
+export const metadata = pageMetadataFor("/page-about");
 
 export default function AboutPage() {
   return (

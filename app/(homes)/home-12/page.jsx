@@ -15,13 +15,10 @@ import Timeline from "@/components/homes/home-1/Timeline";
 import Team from "@/components/homes/home-1/Team";
 import Blogs from "@/components/homes/home-4/Blogs";
 import Cta from "@/components/homes/home-1/Cta";
+import { pageMetadataFor } from "@/data/pageMeta";
 
-export const metadata = {
-  title: "Home 12 || Alvatech - Website",
-  description:
-    "Do More, Grow Faster with Smart Systems. We combine eCommerce development, performance marketing, and CRM automation to help brands launch quickly, scale efficiently, and manage operations without complexity.",
-};
 
+export const metadata = pageMetadataFor("/home-12");
 export default function HomeTwelvePage() {
   return (
     <>

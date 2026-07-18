@@ -4,12 +4,16 @@ import Footer2 from "@/components/footers/Footer2";
 import Newsletter from "@/components/blog/Newsletter";
 import BreadCumb from "@/components/blog/BreadCumb";
 import Blogs4 from "@/components/blog/Blogs4";
-export const metadata = {
-  title:
-    "Blog Author || Alvatech - Website",
-  description:
-    "Alvatech - Website",
-};
+import { canonicalFor, defaultSiteMetadata } from "@/data/pageMeta";
+
+export async function generateMetadata(props) {
+  const params = await props.params;
+  return {
+    ...defaultSiteMetadata,
+    alternates: canonicalFor(`/blog-author/${params.author}`),
+  };
+}
+
 export default async function BlogAuthorPage(props) {
   const params = await props.params;
   const author = params.author.split("%20").join(" ");

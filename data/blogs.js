@@ -1,6 +1,7 @@
 export const blogsPosts4 = [
   {
     id: 33,
+    slug: "varfor-svenska-foretag-byter-till-shopify",
     category: "Shopify",
     imgSrc: "/assets/images/blog/Why-Swedish.jpeg",
     imgAlt: "Why Swedish Businesses Are Switching to Shopify — and When It's the Right Call",
@@ -25,6 +26,7 @@ export const blogsPosts4 = [
   },
   {
     id: 26,
+    slug: "basta-ai-verktygen-for-shopify-butiksagare",
     category: "Shopify",
     imgSrc: "/assets/images/blog/image-0.png",
     imgAlt: "The Best AI Tools for Shopify Store Owners",
@@ -41,6 +43,7 @@ export const blogsPosts4 = [
   },
   {
     id: 27,
+    slug: "toppfunktioner-salesforce-commerce-cloud-webbutiker",
     category: "Salesforce",
     imgSrc: "/assets/images/blog/image-1.png",
     imgAlt: "Top Features of Salesforce Commerce Cloud for Online Stores",
@@ -63,6 +66,7 @@ export const blogsPosts4 = [
   },
   {
     id: 28,
+    slug: "allt-om-andromeda-meta-annonser",
     category: "Meta Ads",
     imgSrc: "/assets/images/blog/image-2.png",
     imgAlt: "Everything You Need to Know About Andromeda Meta Ads",
@@ -85,6 +89,7 @@ export const blogsPosts4 = [
   },
   {
     id: 29,
+    slug: "darfor-behover-ditt-foretag-e-handelswebbplats-2026",
     category: "Ecommerce",
     imgSrc: "/assets/images/blog/image-3.png",
     imgAlt: "Why Your Business Needs an Ecommerce Website in 2026",
@@ -107,6 +112,7 @@ export const blogsPosts4 = [
   },
   {
     id: 30,
+    slug: "optimera-webbplats-for-ai-sokmotorer",
     category: "SEO",
     imgSrc: "/assets/images/blog/image-4.png",
     imgAlt: "How to Optimize Your Website for AI Search Engines",
@@ -123,6 +129,7 @@ export const blogsPosts4 = [
   },
   {
     id: 31,
+    slug: "ar-instagram-hashtags-doda-2026",
     category: "Marketing",
     imgSrc: "/assets/images/blog/image-5.png",
     imgAlt: "Are Instagram hashtags dead by 2026?",
@@ -139,6 +146,7 @@ export const blogsPosts4 = [
   },
   {
     id: 32,
+    slug: "vad-ar-generative-engine-optimization-geo",
     category: "Shopify",
     imgSrc: "/assets/images/blog/image-6.png",
     imgAlt: "What is Generative Engine Optimization (GEO)?",
@@ -155,7 +163,41 @@ export const blogsPosts4 = [
   },
 ];
 
+/**
+ * Every blog is authored by one of the six Alva Tech team members.
+ * Keyed by blog id -> team member name + photo.
+ */
+const BLOG_AUTHORS = {
+  33: { name: "Manish Kumar", img: "/assets/images/home-13/team/manish-kumar.png" },
+  26: { name: "Nikhil Khetan", img: "/assets/images/home-13/team/nikhil-khetan.png" },
+  27: { name: "Anders Landberg", img: "/assets/images/home-13/team/andres-landberg.png" },
+  28: { name: "Ashish Ranjan", img: "/assets/images/home-13/team/ashish-ranjan.png" },
+  29: { name: "Monica Landberg", img: "/assets/images/home-13/team/monica-landberg.png" },
+  30: { name: "Ashish Ranjan", img: "/assets/images/home-13/team/ashish-ranjan.png" },
+  31: { name: "Ashish Ranjan", img: "/assets/images/home-13/team/ashish-ranjan.png" },
+  32: { name: "Anton Randahl", img: "/assets/images/home-13/team/andre-randahl.png" },
+};
+
+for (const post of blogsPosts4) {
+  const author = BLOG_AUTHORS[post.id];
+  if (author) {
+    post.authorName = author.name;
+    post.authorAlt = author.name;
+    post.authorImg = author.img;
+  }
+}
+
 export const allBlogs = [...blogsPosts4];
+
+export function getBlogBySlug(slugOrLegacyId) {
+  const value = String(slugOrLegacyId ?? "");
+  const bySlug = allBlogs.find((b) => b.slug === value);
+  if (bySlug) return bySlug;
+  if (/^\d+$/.test(value)) {
+    return allBlogs.find((b) => String(b.id) === value) ?? null;
+  }
+  return null;
+}
 
 /** Returns the post with title/desc swapped to Swedish when the active language is Swedish. */
 export function localizePost(post, language) {

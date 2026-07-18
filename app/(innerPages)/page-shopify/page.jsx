@@ -16,12 +16,9 @@ import React from "react";
 import Footer1 from "@/components/footers/Footer1";
 import SalesforceBrands from "@/components/services/SalesforceBrands";
 import { shopifyFaq } from "@/data/faq";
-export const metadata = {
-  title:
-    "Home 4 || Alvatech - Website",
-  description:
-    "Alvatech - Website",
-};
+import { pageMetadataFor } from "@/data/pageMeta";
+
+export const metadata = pageMetadataFor("/page-shopify");
 export default function HomePage4() {
   return (
     <>

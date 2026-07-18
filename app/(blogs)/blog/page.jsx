@@ -3,12 +3,9 @@ import Header2 from "@/components/headers/Header2";
 import Footer2 from "@/components/footers/Footer2";
 import Newsletter from "@/components/blog/Newsletter";
 import Blogs1 from "@/components/blog/Blogs1";
-export const metadata = {
-  title:
-    "Blog 1 || Alvatech - Website",
-  description:
-    "Alvatech - Website",
-};
+import { pageMetadataFor } from "@/data/pageMeta";
+
+export const metadata = pageMetadataFor("/blog");
 export default function BlogPage1() {
   return (
     <>

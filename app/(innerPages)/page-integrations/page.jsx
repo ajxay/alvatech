@@ -7,12 +7,9 @@ import Cta from "@/components/innerpages/features/Cta";
 import Integrations from "@/components/innerpages/Integrations";
 import TrustedByBrands from "@/components/innerpages/integrations/TrustedByBrands";
 import { integrationsFaq } from "@/data/faq";
-export const metadata = {
-  title:
-    "Integrations || Alvatech - Website",
-  description:
-    "Alvatech - Website",
-};
+import { pageMetadataFor } from "@/data/pageMeta";
+
+export const metadata = pageMetadataFor("/page-integrations");
 export default function IntegrationPage() {
   return (
     <>

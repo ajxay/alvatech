@@ -6,12 +6,9 @@ import Footer1 from "@/components/footers/Footer1";
 import Hero from "@/components/homes/home-12/Hero";
 import Features from "@/components/homes/home-13/Features";
 import Sections from "@/components/homes/home-13/Sections";
+import { pageMetadataFor } from "@/data/pageMeta";
 
-export const metadata = {
-  title: "Alvatech - Website",
-  description:
-    "Do More, Grow Faster with Smart Systems. We combine eCommerce development, performance marketing, and CRM automation to help brands launch quickly, scale efficiently, and manage operations without complexity.",
-};
+export const metadata = pageMetadataFor("/");
 
 export default function HomeThirteenPage() {
   return (

@@ -33,7 +33,7 @@ export default function BlogSidebarLeft() {
                                   height="560"
                                 />
                                 <Link
-                                  href={`/blog-details/${elm.id}`}
+                                  href={`/blog/${elm.slug}`}
                                   className="position-cover"
                                   data-caption={elm.imgAlt}
                                 />
@@ -51,7 +51,7 @@ export default function BlogSidebarLeft() {
                               <h3 className="h4 sm:h5 md:h4 lh-lg m-0 xl:max-w-3/4 m-0">
                                 <Link
                                   className="text-none"
-                                  href={`/blog-details/${elm.id}`}
+                                  href={`/blog/${elm.slug}`}
                                 >
                                   {elm.title}
                                 </Link>
@@ -61,7 +61,7 @@ export default function BlogSidebarLeft() {
                               </p>
                               <Link
                                 className="btn btn-text text-primary border-bottom d-inline-flex fs-7 md:fs-6 mt-2 md:mt-4 dark:text-tertiary"
-                                href={`/blog-details/${elm.id}`}
+                                href={`/blog/${elm.slug}`}
                               >
                                 {t("blog.readMore")}
                               </Link>

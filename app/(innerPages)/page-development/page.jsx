@@ -10,11 +10,9 @@ import DevelopmentService from "@/components/services/DevelopmentService";
 import React from "react";
 import SalesforceBrands from "@/components/services/SalesforceBrands";
 import { customDevelopmentFaq } from "@/data/faq";
-export const metadata = {
-  title: "Custom Development || Alvatech - Website",
-  description:
-    "Alvatech custom development services — scalable MERN stack web applications, APIs, and system modernization.",
-};
+import { pageMetadataFor } from "@/data/pageMeta";
+
+export const metadata = pageMetadataFor("/page-development");
 
 export default function DevelopmentPage() {
   return (

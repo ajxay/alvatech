@@ -5,12 +5,9 @@ import Breadcumb from "@/components/otherPages/Breadcumb";
 import Notfound from "@/components/otherPages/404";
 import Header3 from "@/components/headers/Header3";
 import Footer1 from "@/components/footers/Footer1";
-export const metadata = {
-  title:
-    "Not Found || Alvatech - Website",
-  description:
-    "Alvatech - Website",
-};
+import { defaultSiteMetadata } from "@/data/pageMeta";
+
+export const metadata = defaultSiteMetadata;
 export default function NotFoundPage() {
   return (
     <>

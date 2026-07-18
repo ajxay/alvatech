@@ -9,12 +9,9 @@ import SalesforceHero from "@/components/services/SalesforceHero";
 import SalesforceServices from "@/components/services/SalesforceServices";
 import React from "react";
 import { salesforceCrmFaq } from "@/data/faq";
+import { pageMetadataFor } from "@/data/pageMeta";
 
-export const metadata = {
-  title: "Salesforce Services || Alvatech - Website",
-  description:
-    "Alvatech Salesforce services — tailored CRM solutions to accelerate your revenue growth.",
-};
+export const metadata = pageMetadataFor("/page-salesforce");
 
 export default function SalesforcePage() {
   return (

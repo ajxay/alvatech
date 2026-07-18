@@ -1,11 +1,9 @@
 import Footer1 from "@/components/footers/Footer1";
 import Contact3 from "@/components/innerpages/Contact3";
 import Header3 from "@/components/headers/Header3";
-export const metadata = {
-  title: "Contact 3 || Alvatech - Website",
-  description:
-    "Get in touch with our team using Contact page variant 3.",
-};
+import { pageMetadataFor } from "@/data/pageMeta";
+
+export const metadata = pageMetadataFor("/page-contact");
 
 export default function ContactPage3() {
   return (

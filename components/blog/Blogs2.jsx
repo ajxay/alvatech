@@ -35,7 +35,7 @@ export default function Blogs2() {
                               alt="Maximizing your reach with marketing strategies"
                             />
                             <Link
-                              href={`/blog-details/${elm.id}`}
+                              href={`/blog/${elm.slug}`}
                               className="position-cover"
                               data-caption="Maximizing your reach with marketing strategies"
                             ></Link>
@@ -61,7 +61,7 @@ export default function Blogs2() {
                                   className="w-24px h-24px rounded-circle me-narrow"
                                 />
                                 <Link
-                                  href={`/blog-author/Amir Khan`}
+                                  href={`/blog-author/${elm.authorName}`}
                                   className="text-none fw-bold text-dark dark:text-white"
                                 >
                                   {elm.authorName}
@@ -78,7 +78,7 @@ export default function Blogs2() {
                           <h3 className="h4 sm:h5 md:h4 lg:h3 m-0 m-0">
                             <Link
                               className="text-none"
-                              href={`/blog-details/${elm.id}`}
+                              href={`/blog/${elm.slug}`}
                             >
                               {elm.title}
                             </Link>
@@ -88,7 +88,7 @@ export default function Blogs2() {
                           </p>
                           <Link
                             className="btn btn-text text-primary border-bottom d-inline-flex fs-7 md:fs-6 my-1 md:my-2 d-none md:d-block"
-                            href={`/blog-details/${elm.id}`}
+                            href={`/blog/${elm.slug}`}
                           >
                             Continue reading
                           </Link>

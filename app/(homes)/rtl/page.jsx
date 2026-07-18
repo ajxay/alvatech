@@ -13,12 +13,9 @@ import Pricing from "@/components/homes/home-4/Pricing";
 import Team from "@/components/homes/home-4/Team";
 import Testimonials from "@/components/homes/home-4/Testimonials";
 import React from "react";
-export const metadata = {
-  title:
-    "Rtl Home Page || Alvatech - Website",
-  description:
-    "Alvatech - Website",
-};
+import { pageMetadataFor } from "@/data/pageMeta";
+
+export const metadata = pageMetadataFor("/rtl");
 export default function HomePageRtl() {
   return (
     <>

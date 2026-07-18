@@ -8,11 +8,9 @@ import Support from "@/components/homes/home-5/Support";
 import MarketingTrustStrip from "@/components/services/MarketingTrustStrip";
 import React from "react";
 import { marketingFaq } from "@/data/faq";
+import { pageMetadataFor } from "@/data/pageMeta";
 
-export const metadata = {
-  title: "Home 5 || Alvatech - Website",
-  description: "Alvatech - Website",
-};
+export const metadata = pageMetadataFor("/page-marketing");
 
 export default function HomePage5() {
   return (

@@ -4,12 +4,9 @@ import Breadcumb from "@/components/innerpages/Breadcumb";
 import Cta2 from "@/components/innerpages/Cta2";
 import Faq from "@/components/innerpages/Faq";
 import Team from "@/components/innerpages/Team";
-export const metadata = {
-  title:
-    "Team || Alvatech - Website",
-  description:
-    "Alvatech - Website",
-};
+import { pageMetadataFor } from "@/data/pageMeta";
+
+export const metadata = pageMetadataFor("/page-team");
 export default function TeamPage() {
   return (
     <>

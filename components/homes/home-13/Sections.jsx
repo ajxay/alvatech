@@ -172,6 +172,8 @@ const getBlogPosts = (language) =>
     const post = localizePost(rawPost, language);
     return {
       id: post.id,
+      slug: post.slug,
+      category: post.category,
       title: post.title,
       excerpt: post.desc,
       date: post.date,
@@ -701,46 +703,83 @@ export default function Sections() {
           <header className="home13-header home13-posts__header">
             <h2>{t("home13.posts.title")}</h2>
           </header>
-          <div className="home13-posts__grid">
+          <div className="row child-cols-12 sm:child-cols-4 col-match gy-4 sm:gy-6 gx-2 xl:gx-4">
             {blogPosts.map((post) => (
-              <article key={post.id} className="home13-posts__card">
-                <div
-                  className="home13-posts__media"
-                  style={{ backgroundImage: `url(${post.image})` }}
-                  aria-hidden="true"
-                />
-                <div className="home13-posts__body">
-                  <div className="home13-posts__title-row">
-                    <h3>
-                      <Link href={`/blog-details/${post.id}`}>{post.title}</Link>
-                    </h3>
-                    <Link
-                      href={`/blog-details/${post.id}`}
-                      aria-label={t("home13.posts.readAria", { title: post.title })}
-                    >
-                      <Image
-                        src="/assets/images/home-13/posts/post-arrow-icon.svg"
-                        alt=""
-                        width={24}
-                        height={24}
-                      />
-                    </Link>
-                  </div>
-                  <p className="home13-posts__excerpt">{post.excerpt}</p>
-                  <div className="home13-posts__author">
+              <div key={post.id}>
+                <article
+                  className="post type-post panel vstack gap-3 rounded-3 p-2 pb-3 bg-white dark:bg-gray-800"
+                  style={{ border: "1px solid #e9ecf1", boxShadow: "0 8px 24px rgba(17, 24, 39, 0.06)" }}
+                >
+                  <figure className="featured-image m-0 rounded ratio ratio-3x2 rounded-2 uc-transition-toggle overflow-hidden">
                     <Image
-                      src={post.authorImageSrc}
-                      alt={post.author}
-                      width={48}
-                      height={48}
+                      className="media-cover image uc-transition-scale-up uc-transition-opaque"
+                      src={post.image}
+                      width={1280}
+                      height={853}
+                      alt={post.title}
                     />
-                    <div>
-                      <span>{post.author}</span>
-                      <small>{post.date}</small>
-                    </div>
-                  </div>
-                </div>
-              </article>
+                    <Link
+                      href={`/blog/${post.slug}`}
+                      className="position-cover"
+                      data-caption={post.title}
+                    ></Link>
+                  </figure>
+                  <header
+                    className="panel vstack items-center gap-1 lg:gap-2 px-2"
+                    style={{ flex: "1 1 auto" }}
+                  >
+                    <Link
+                      className="fs-7 fw-bold text-none text-white py-narrow px-1"
+                      href={`/blog-category/${post.category}`}
+                      style={{ borderRadius: 8, backgroundColor: "#86BC40" }}
+                    >
+                      {post.category}
+                    </Link>
+                    <h3
+                      className="h5 xl:h4 m-0 text-center"
+                      style={{
+                        display: "-webkit-box",
+                        WebkitLineClamp: 2,
+                        WebkitBoxOrient: "vertical",
+                        overflow: "hidden",
+                        minHeight: "2.4em",
+                      }}
+                    >
+                      <Link className="text-none" href={`/blog/${post.slug}`}>
+                        {post.title}
+                      </Link>
+                    </h3>
+                    <ul
+                      className="post-meta nav-x ft-tertiary justify-center gap-1 fs-7 text-gray-400 dark:text-gray-300 d-none lg:d-flex"
+                      style={{ marginTop: "auto" }}
+                    >
+                      <li>
+                        <div className="hstack gap-narrow ft-tertiary">
+                          <Image
+                            src={post.authorImageSrc}
+                            width={150}
+                            height={150}
+                            alt={post.author}
+                            className="w-24px h-24px rounded-circle me-narrow"
+                          />
+                          <Link
+                            href={`/blog-author/${post.author}`}
+                            className="text-none fw-bold text-dark dark:text-white"
+                          >
+                            {post.author}
+                          </Link>
+                        </div>
+                      </li>
+                      <li className="opacity-50">•</li>
+                      <li>
+                        <div className="post-date hstack gap-narrow">
+                          <span>{post.date}</span>
+                        </div>
+                      </li>
+                    </ul>
+                  </header>
+                </article>
+              </div>
             ))}
           </div>
         </div>

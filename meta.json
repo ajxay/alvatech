@@ -1,0 +1,100 @@
+{
+  "what_we_offer": [
+    {
+      "url": "https://alvatech.se/page-shopify",
+      "meta_title": "Shopify-utveckling & e-handelslösningar | Alvatech",
+      "title_characters": 50,
+      "meta_description": "Som experter på Shopify-utveckling bygger vi snabba, konverteringsoptimerade och skalbara e-handelsbutiker med sömlösa API-integrationer. Öka din försäljning!",
+      "description_characters": 158
+    },
+    {
+      "url": "https://alvatech.se/page-development",
+      "meta_title": "Systemutveckling & skräddarsydda API:er | Alvatech",
+      "title_characters": 50,
+      "meta_description": "Vi erbjuder avancerad systemutveckling och skräddarsydda API-integrationer. Bygg skalbar systemarkitektur anpassad efter era unika affärsbehov. Läs mer!",
+      "description_characters": 152
+    },
+    {
+      "url": "https://alvatech.se/page-marketing",
+      "meta_title": "Digital marknadsföringsbyrå fylld av ROAS-experter | Alvatech",
+      "title_characters": 61,
+      "meta_description": "Välkommen till Alvatech – en datadriven digital marknadsföringsbyrå. Vi optimerar dina kampanjer på Meta och Google Ads för maximal ROAS och tillväxt.",
+      "description_characters": 150
+    },
+    {
+      "url": "https://alvatech.se/page-salesforce",
+      "meta_title": "Salesforce-konsult & CRM-integrationer | Alvatech",
+      "title_characters": 49,
+      "meta_description": "Maximera värdet av Salesforce. Vi erbjuder expertis inom CRM-integration, automation av arbetsflöden och skräddarsydd systemarkitektur för er verksamhet.",
+      "description_characters": 153
+    },
+    {
+      "url": "https://alvatech.se/page-erp",
+      "meta_title": "ERP-integration & smarta affärssystem | Alvatech",
+      "title_characters": 48,
+      "meta_description": "Optimera din e-handel med sömlös ERP-integration. Vi synkroniserar order, lager och finansiell data mellan dina affärssystem i realtid. Boka konsultation!",
+      "description_characters": 154
+    },
+    {
+      "url": "https://alvatech.se/page-zoho",
+      "meta_title": "Zoho partner & Zoho CRM-konsulter | Alvatech",
+      "title_characters": 44,
+      "meta_description": "Optimera er verksamhet med en certifierad Zoho partner. Vi anpassar Zoho CRM, automatiserar era arbetsflöden och integrerar era e-handelssystem i realtid.",
+      "description_characters": 154
+    }
+  ],
+  "home_page": [
+    {
+      "url": "https://alvatech.se/",
+      "meta_title": "Alvatech | Experter på e-handel och digital marknadsföring",
+      "title_characters": 58,
+      "meta_description": "Skala upp din verksamhet med Alvatech. Vi kombinerar högpresterande e-handelsutveckling, datadriven annonsering och CRM-automation för hållbar tillväxt.",
+      "description_characters": 152
+    }
+  ],
+  "our_services": [
+    {
+      "url": "https://alvatech.se/page-integrations",
+      "meta_title": "Digitala lösningar för tillväxt | Alvatechs tjänster",
+      "title_characters": 52,
+      "meta_description": "Driv tillväxt med vår datadrivna marknadsföring, högpresterande e-handelsbutiker och effektiva CRM/ERP-system. Se hur Alvatech kan optimera din pipeline.",
+      "description_characters": 153
+    }
+  ],
+  "about_us": [
+    {
+      "url": "https://alvatech.se/page-about",
+      "meta_title": "Om Alva Tech | Vi skapar framtidens digitala lösningar",
+      "title_characters": 54,
+      "meta_description": "Möt teamet bakom Alva Tech. Sedan 2014 har vi hjälpt varumärken att framtidssäkra sina digitala ekosystem med skräddarsydd webbutveckling, CRM och ERP-integrationer.",
+      "description_characters": 165
+    }
+  ],
+  "privacy_policy": [
+    {
+      "url": "https://alvatech.se/page-privacy",
+      "meta_title": "Integritetspolicy & GDPR-compliance för data | Alvatech",
+      "title_characters": 55,
+      "meta_description": "Läs vår integritetspolicy. Vi värnar om din datasäkerhet och beskriver hur vår personuppgiftsbehandling efterlever GDPR och gällande lagstiftning",
+      "description_characters": 145
+    }
+  ],
+  "contact_us": [
+    {
+      "url": "https://alvatech.se/page-contact",
+      "meta_title": "Kontakta AlvaTech | Webb-, AI & Digitala Lösningar",
+      "title_characters": 50,
+      "meta_description": "Kontakta AlvaTech för webbutveckling, AI-lösningar och digitala tjänster. Hör av dig idag för support, frågor eller en kostnadsfri konsultation.",
+      "description_characters": 144
+    }
+  ],
+  "terms_of_service": [
+    {
+      "url": "https://alvatech.se/page-terms",
+      "meta_title": "Allmänna användarvillkor & tjänsteavtal | Alvatech",
+      "title_characters": 50,
+      "meta_description": "Läs AlvaTechs villkor och bestämmelser för att förstå våra policyer, tjänster och användaransvar vid användning av vår webbplats",
+      "description_characters": 128
+    }
+  ]
+}

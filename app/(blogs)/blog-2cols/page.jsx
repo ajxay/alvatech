@@ -4,12 +4,9 @@ import Footer2 from "@/components/footers/Footer2";
 import Newsletter from "@/components/blog/Newsletter";
 import BreadCumb from "@/components/blog/BreadCumb";
 import Blogs7 from "@/components/blog/Blogs7";
-export const metadata = {
-  title:
-    "Blog 2 Col || Alvatech - Website",
-  description:
-    "Alvatech - Website",
-};
+import { pageMetadataFor } from "@/data/pageMeta";
+
+export const metadata = pageMetadataFor("/blog-2cols");
 export default function Blog2ColsPage() {
   return (
     <>

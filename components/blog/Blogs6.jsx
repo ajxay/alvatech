@@ -43,7 +43,7 @@ export default function Blogs6() {
                             alt="How can marketing help your business?"
                           />
                           <Link
-                            href={`/blog-details/${elm.id}`}
+                            href={`/blog/${elm.slug}`}
                             className="position-cover"
                             data-caption="How can marketing help your business?"
                           ></Link>
@@ -52,7 +52,7 @@ export default function Blogs6() {
                           <h3 className="h6 sm:h5 xl:h4 m-0 m-0">
                             <Link
                               className="text-none"
-                              href={`/blog-details/${elm.id}`}
+                              href={`/blog/${elm.slug}`}
                             >
                               {elm.title}
                             </Link>
@@ -68,7 +68,7 @@ export default function Blogs6() {
                                   className="w-24px h-24px rounded-circle me-narrow"
                                 />
                                 <Link
-                                  href={`/blog-author/Amir Khan`}
+                                  href={`/blog-author/${elm.authorName}`}
                                   className="text-none fw-bold text-dark dark:text-white"
                                 >
                                   {elm.authorName}

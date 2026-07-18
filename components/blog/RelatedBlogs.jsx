@@ -22,14 +22,14 @@ export default function RelatedBlogs() {
                 alt="How can marketing help your business?"
               />
               <Link
-                href={`/blog-details/${elm.id}`}
+                href={`/blog/${elm.slug}`}
                 className="position-cover"
                 data-caption="How can marketing help your business?"
               ></Link>
             </figure>
             <header className="panel vstack gap-1">
               <h5 className="h6 sm:h5 md:h4 m-0">
-                <Link className="text-none" href={`/blog-details/${elm.id}`}>
+                <Link className="text-none" href={`/blog/${elm.slug}`}>
                   {elm.title}
                 </Link>
               </h5>

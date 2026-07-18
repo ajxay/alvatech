@@ -10,11 +10,9 @@ import React from "react";
 import Footer1 from "@/components/footers/Footer1";
 import SalesforceBrands from "@/components/services/SalesforceBrands";
 import { erpSolutionsFaq } from "@/data/faq";
-export const metadata = {
-  title: "ERP Services || Alvatech - Website",
-  description:
-    "All in one Business Solution. Centralize all core business functions in one platform to improve collaboration, streamline operations, and enhance overall productivity.",
-};
+import { pageMetadataFor } from "@/data/pageMeta";
+
+export const metadata = pageMetadataFor("/page-erp");
 
 export default function ErpPage() {
   return (

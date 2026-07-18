@@ -56,7 +56,7 @@ export default function Blogs() {
                             alt={post.imgAlt}
                           />
                           <Link
-                            href={`/blog-details/${post.id}`}
+                            href={`/blog/${post.slug}`}
                             className="position-cover"
                             data-caption={post.imgAlt}
                           ></Link>
@@ -70,7 +70,7 @@ export default function Blogs() {
                           </Link>
                           <Link
                             className="text-none"
-                            href={`/blog-details/${post.id}`}
+                            href={`/blog/${post.slug}`}
                           >
                             <h3 className="post-title panel h5 lg:h4 m-0 ltr:pe-4 rtl:ps-4">
                               <span>{post.title}</span>

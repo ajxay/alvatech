@@ -68,7 +68,7 @@ export default function Blogs1() {
                             alt="Maximizing your reach with marketing strategies"
                           />
                           <Link
-                            href={`/blog-details/${elm.id}`}
+                            href={`/blog/${elm.slug}`}
                             className="position-cover"
                             data-caption="Maximizing your reach with marketing strategies"
                           ></Link>
@@ -87,7 +87,7 @@ export default function Blogs1() {
                           <h3 className="h4 xl:h2 m-0 text-center m-0 lg:w-500px lg:m-auto">
                             <Link
                               className="text-none"
-                              href={`/blog-details/${elm.id}`}
+                              href={`/blog/${elm.slug}`}
                             >
                               {elm.title}
                             </Link>
@@ -103,7 +103,7 @@ export default function Blogs1() {
                                   className="w-24px h-24px rounded-circle me-narrow"
                                 />
                                 <Link
-                                  href={`/blog-author/Amir Khan`}
+                                  href={`/blog-author/${elm.authorName}`}
                                   className="text-none fw-bold text-dark dark:text-white"
                                 >
                                   {elm.authorName}
@@ -122,7 +122,7 @@ export default function Blogs1() {
                           </p>
                           <Link
                             className="btn btn-text border-bottom d-inline-flex fs-7 lg:fs-6 sm:mt-2"
-                            href={`/blog-details/${elm.id}`}
+                            href={`/blog/${elm.slug}`}
                             style={{ color: "#86BC40" }}
                           >
                             {t("blog.continueReading")}
@@ -152,7 +152,7 @@ export default function Blogs1() {
                         alt="Top 5 reasons to invest in marketing"
                       />
                       <Link
-                        href={`/blog-details/${elm.id}`}
+                        href={`/blog/${elm.slug}`}
                         className="position-cover"
                         data-caption="Top 5 reasons to invest in marketing"
                       ></Link>
@@ -161,7 +161,7 @@ export default function Blogs1() {
                       <h3 className="h5 xl:h4 m-0 text-center m-0">
                         <Link
                           className="text-none"
-                          href={`/blog-details/${elm.id}`}
+                          href={`/blog/${elm.slug}`}
                         >
                           {elm.title}
                         </Link>
@@ -177,7 +177,7 @@ export default function Blogs1() {
                               className="w-24px h-24px rounded-circle me-narrow"
                             />
                             <Link
-                              href={`/blog-author/Amir Khan`}
+                              href={`/blog-author/${elm.authorName}`}
                               className="text-none fw-bold text-dark dark:text-white"
                             >
                               {elm.authorName}

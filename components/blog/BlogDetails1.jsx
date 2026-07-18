@@ -12,9 +12,10 @@ export default function BlogDetails1({ blogItem: rawBlogItem }) {
   const isSv = i18n.language === "sv";
   const blogItem = localizePost(rawBlogItem, i18n.language);
   const articleId = Number(blogItem?.id);
+  const articleSlug = rawBlogItem?.slug || blogItem?.slug;
   const bestAiForShopifyArticle = articleId === 26 && !isSv;
   const baseUrl = typeof window !== "undefined" ? window.location.origin : "";
-  const currentBlogUrl = `${baseUrl}/blog-details/${articleId}`;
+  const currentBlogUrl = `${baseUrl}/blog/${articleSlug}`;
   const encodedBlogUrl = encodeURIComponent(currentBlogUrl);
   const encodedBlogTitle = encodeURIComponent(blogItem?.title || "");
   const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodedBlogUrl}`;
@@ -491,7 +492,7 @@ export default function BlogDetails1({ blogItem: rawBlogItem }) {
                         height="853"
                       />
                       <Link
-                        href={`/blog-details/${prevBlog.id}`}
+                        href={`/blog/${prevBlog.slug}`}
                         className="position-cover"
                         data-caption={prevBlog.title}
                       ></Link>
@@ -502,7 +503,7 @@ export default function BlogDetails1({ blogItem: rawBlogItem }) {
                     <h6 className="h6 lg:h5 m-0">{prevBlog.title}</h6>
                   </div>
                   <Link
-                    href={`/blog-details/${prevBlog.id}`}
+                    href={`/blog/${prevBlog.slug}`}
                     className="position-cover"
                   ></Link>
                 </div>
@@ -521,14 +522,14 @@ export default function BlogDetails1({ blogItem: rawBlogItem }) {
                         height="853"
                       />
                       <Link
-                        href={`/blog-details/${nextBlog.id}`}
+                        href={`/blog/${nextBlog.slug}`}
                         className="position-cover"
                         data-caption={nextBlog.title}
                       ></Link>
                     </figure>
                   </div>
                   <Link
-                    href={`/blog-details/${nextBlog.id}`}
+                    href={`/blog/${nextBlog.slug}`}
                     className="position-cover"
                   ></Link>
                 </div>

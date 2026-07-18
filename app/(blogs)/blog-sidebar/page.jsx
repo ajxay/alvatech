@@ -5,12 +5,9 @@ import Header6 from "@/components/headers/Header6";
 import Topbar from "@/components/headers/Topbar";
 
 import React from "react";
-export const metadata = {
-  title:
-    "Blog Sidebar || Alvatech - Website",
-  description:
-    "Alvatech - Website",
-};
+import { pageMetadataFor } from "@/data/pageMeta";
+
+export const metadata = pageMetadataFor("/blog-sidebar");
 export default function page() {
   return (
     <>

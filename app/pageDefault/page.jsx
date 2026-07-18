@@ -1,12 +1,9 @@
 import Header2 from "@/components/headers/Header2";
 
 import Footer2 from "@/components/footers/Footer2";
-export const metadata = {
-  title:
-    "Home || Alvatech - Website",
-  description:
-    "Alvatech - Website",
-};
+import { pageMetadataFor } from "@/data/pageMeta";
+
+export const metadata = pageMetadataFor("/pageDefault");
 export default function page() {
   return (
     <>

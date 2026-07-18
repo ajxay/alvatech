@@ -8,12 +8,9 @@ import Testimonials from "@/components/homes/home-3/Testimonials";
 import Cta from "@/components/innerpages/features/Cta";
 import Brands2 from "@/components/common/Brands2";
 import Header3 from "@/components/headers/Header3";
-export const metadata = {
-  title:
-    "Features || Alvatech - Website",
-  description:
-    "Alvatech - Website",
-};
+import { pageMetadataFor } from "@/data/pageMeta";
+
+export const metadata = pageMetadataFor("/page-features");
 export default function FeaturesPage() {
   return (
     <>

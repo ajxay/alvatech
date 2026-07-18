@@ -4,12 +4,16 @@ import Footer2 from "@/components/footers/Footer2";
 import Newsletter from "@/components/blog/Newsletter";
 import BreadCumb from "@/components/blog/BreadCumb";
 import Blogs3 from "@/components/blog/Blogs3";
-export const metadata = {
-  title:
-    "Blog Category || Alvatech - Website",
-  description:
-    "Alvatech - Website",
-};
+import { canonicalFor, defaultSiteMetadata } from "@/data/pageMeta";
+
+export async function generateMetadata(props) {
+  const params = await props.params;
+  return {
+    ...defaultSiteMetadata,
+    alternates: canonicalFor(`/blog-category/${params.category}`),
+  };
+}
+
 export default async function BlogCategoryPage(props) {
   const params = await props.params;
   const category = params.category.split("%20").join(" ");

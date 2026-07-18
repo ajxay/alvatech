@@ -3,12 +3,9 @@ import Header2 from "@/components/headers/Header2";
 import Footer2 from "@/components/footers/Footer2";
 import Breadcumb from "@/components/otherPages/Breadcumb";
 import Terms from "@/components/otherPages/Terms";
-export const metadata = {
-  title:
-    "Terms || Alvatech - Website",
-  description:
-    "Alvatech - Website",
-};
+import { pageMetadataFor } from "@/data/pageMeta";
+
+export const metadata = pageMetadataFor("/page-terms");
 export default function TermsPage() {
   return (
     <>

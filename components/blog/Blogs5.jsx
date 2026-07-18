@@ -43,7 +43,7 @@ export default function Blogs5() {
                             alt="Top 5 reasons to invest in marketing"
                           />
                           <Link
-                            href={`/blog-details/${elm.id}`}
+                            href={`/blog/${elm.slug}`}
                             className="position-cover"
                             data-caption="Top 5 reasons to invest in marketing"
                           ></Link>
@@ -52,7 +52,7 @@ export default function Blogs5() {
                           <h3 className="h6 sm:h5 m-0 m-0">
                             <Link
                               className="text-none"
-                              href={`/blog-details/${elm.id}`}
+                              href={`/blog/${elm.slug}`}
                             >
                               {elm.title}
                             </Link>
@@ -68,7 +68,7 @@ export default function Blogs5() {
                                   className="w-24px h-24px rounded-circle me-narrow"
                                 />
                                 <Link
-                                  href={`/blog-author/Amir Khan`}
+                                  href={`/blog-author/${elm.authorName}`}
                                   className="text-none fw-bold text-dark dark:text-white"
                                 >
                                   {elm.authorName}

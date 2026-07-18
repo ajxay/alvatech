@@ -12,6 +12,12 @@ import {
   GoogleTagManagerBody,
   GoogleTagManagerHead,
 } from "@/components/analytics/GoogleTagManager";
+import { defaultSiteMetadata } from "@/data/pageMeta";
+
+export const metadata = {
+  metadataBase: new URL("https://alvatech.se"),
+  ...defaultSiteMetadata,
+};
 
 export default function RootLayout({ children }) {
   return (

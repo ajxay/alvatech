@@ -3,12 +3,16 @@ import Newsletter from "@/components/blog/Newsletter";
 import Footer1 from "@/components/footers/Footer1";
 import Header1 from "@/components/headers/Header1";
 import { allBlogs } from "@/data/blogs";
-export const metadata = {
-  title:
-    "Blog Details 3 || Alvatech - Website",
-  description:
-    "Alvatech - Website",
-};
+import { canonicalFor, defaultSiteMetadata } from "@/data/pageMeta";
+
+export async function generateMetadata(props) {
+  const params = await props.params;
+  return {
+    ...defaultSiteMetadata,
+    alternates: canonicalFor(`/blog-details-3/${params.id}`),
+  };
+}
+
 export default async function BlogDetailsPage3(props) {
   const params = await props.params;
   const id = params.id;

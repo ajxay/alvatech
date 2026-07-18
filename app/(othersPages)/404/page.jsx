@@ -3,12 +3,9 @@ import Header2 from "@/components/headers/Header2";
 import Footer2 from "@/components/footers/Footer2";
 import Breadcumb from "@/components/otherPages/Breadcumb";
 import Notfound from "@/components/otherPages/404";
-export const metadata = {
-  title:
-    "Not Found || Alvatech - Website",
-  description:
-    "Alvatech - Website",
-};
+import { pageMetadataFor } from "@/data/pageMeta";
+
+export const metadata = pageMetadataFor("/404");
 export default function page() {
   return (
     <>

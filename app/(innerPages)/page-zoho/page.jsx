@@ -10,11 +10,9 @@ import ZohoService from "@/components/services/ZohoService";
 import React from "react";
 import SalesforceBrands from "@/components/services/SalesforceBrands";
 import { zohoCrmFaq } from "@/data/faq";
-export const metadata = {
-  title: "Zoho CRM || Alvatech - Website",
-  description:
-    "Zoho CRM services by Alvatech — power your sales, automate workflows, and grow with a platform trusted by 200,000+ businesses worldwide.",
-};
+import { pageMetadataFor } from "@/data/pageMeta";
+
+export const metadata = pageMetadataFor("/page-zoho");
 
 export default function ZohoPage() {
   return (
