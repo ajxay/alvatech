@@ -11,6 +11,8 @@ import { ParallaxProvider } from "react-scroll-parallax";
 import ContactModal from "@/components/modals/ContactModal";
 import NewsletterModal from "@/components/modals/NewsletterModal";
 import SearchModal from "@/components/modals/SearchModal";
+import CookieConsentBanner from "@/components/common/CookieConsentBanner";
+import { GoogleTagManager } from "@/components/analytics/GoogleTagManager";
 import I18nProvider from "@/components/providers/I18nProvider";
 import HtmlLang from "@/components/providers/HtmlLang";
 
@@ -104,6 +106,8 @@ export default function ClientRootLayout({ children }) {
       <SearchModal />
       <Cart />
       <BacktoTop />
+      <CookieConsentBanner />
+      <GoogleTagManager />
     </Context>
   );
 }

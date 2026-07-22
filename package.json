@@ -6,7 +6,9 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test:cookies": "node scripts/test-cookie-consent.mjs",
+    "test:cookies:e2e": "node scripts/e2e-cookie-consent.mjs"
   },
   "dependencies": {
     "animejs": "^3.2.2",

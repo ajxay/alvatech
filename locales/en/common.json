@@ -20,8 +20,24 @@
       "scheduleCall": "Schedule A Call",
       "blog": "Blog",
       "termsOfService": "Terms of service",
-      "privacyPolicy": "Privacy policy"
+      "privacyPolicy": "Privacy policy",
+      "cookieSettings": "Cookie settings"
     }
+  },
+  "cookies": {
+    "title": "We value your privacy",
+    "description": "We use cookies to keep the site working and, with your consent, to measure traffic and improve our services. Necessary cookies are always active. You can accept all cookies, reject optional ones, or choose your preferences.",
+    "privacyLink": "Read our privacy policy",
+    "acceptAll": "Accept all",
+    "reject": "Reject optional",
+    "customize": "Customize",
+    "save": "Save preferences",
+    "necessaryTitle": "Necessary",
+    "necessaryDesc": "Required for basic site functions such as security, language, and remembering your cookie choice. These cannot be turned off.",
+    "analyticsTitle": "Analytics",
+    "analyticsDesc": "Helps us understand how visitors use the site (for example via Google Tag Manager / Google Analytics) so we can improve performance and content.",
+    "marketingTitle": "Marketing",
+    "marketingDesc": "Used to deliver more relevant ads and measure campaign performance across platforms."
   },
   "header": {
     "scheduleCall": "Schedule A Call"

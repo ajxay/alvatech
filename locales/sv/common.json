@@ -20,8 +20,24 @@
       "scheduleCall": "Boka ett samtal",
       "blog": "Blogg",
       "termsOfService": "Användarvillkor",
-      "privacyPolicy": "Integritetspolicy"
+      "privacyPolicy": "Integritetspolicy",
+      "cookieSettings": "Cookieinställningar"
     }
+  },
+  "cookies": {
+    "title": "Vi värnar om din integritet",
+    "description": "Vi använder cookies för att webbplatsen ska fungera och, med ditt samtycke, för att mäta trafik och förbättra våra tjänster. Nödvändiga cookies är alltid aktiva. Du kan acceptera alla cookies, avvisa valfria eller välja dina preferenser.",
+    "privacyLink": "Läs vår integritetspolicy",
+    "acceptAll": "Acceptera alla",
+    "reject": "Avvisa valfria",
+    "customize": "Anpassa",
+    "save": "Spara val",
+    "necessaryTitle": "Nödvändiga",
+    "necessaryDesc": "Krävs för grundläggande funktioner som säkerhet, språk och för att komma ihåg ditt cookieval. Dessa kan inte stängas av.",
+    "analyticsTitle": "Analys",
+    "analyticsDesc": "Hjälper oss att förstå hur besökare använder webbplatsen (till exempel via Google Tag Manager / Google Analytics) så att vi kan förbättra prestanda och innehåll.",
+    "marketingTitle": "Marknadsföring",
+    "marketingDesc": "Används för att visa mer relevanta annonser och mäta kampanjresultat på olika plattformar."
   },
   "header": {
     "scheduleCall": "Boka ett samtal"

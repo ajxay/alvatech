@@ -62,13 +62,15 @@ export default function Privacy() {
             </p>
             <p>Cookies may be used for:</p>
             <ul className="list list-bullets">
-              <li>Website analytics</li>
-              <li>Session management</li>
-              <li>Marketing and advertising</li>
+              <li>Necessary site functions (security, language, and remembering your cookie choice)</li>
+              <li>Website analytics (only with your consent)</li>
+              <li>Marketing and advertising (only with your consent)</li>
               <li>User preferences</li>
             </ul>
             <p>
-              You can disable cookies through your browser settings, though some features of the website may not function properly.
+              Non-essential cookies (analytics and marketing) are only set after you give consent through our cookie banner.
+              You can change or withdraw your consent at any time via Cookie settings in the website footer.
+              You can also control cookies through your browser settings, though some features of the website may not function properly.
             </p>
 
             <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">4. Sharing Your Information</h3>

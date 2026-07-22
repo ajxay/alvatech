@@ -8,10 +8,6 @@ import "photoswipe/dist/photoswipe.css";
 import "rc-slider/assets/index.css";
 
 import ClientRootLayout from "@/components/layout/ClientRootLayout";
-import {
-  GoogleTagManagerBody,
-  GoogleTagManagerHead,
-} from "@/components/analytics/GoogleTagManager";
 import { defaultSiteMetadata } from "@/data/pageMeta";
 
 export const metadata = {
@@ -22,11 +18,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="sv" dir="ltr" suppressHydrationWarning>
-      <head>
-        <GoogleTagManagerHead />
-      </head>
       <body>
-        <GoogleTagManagerBody />
         <ClientRootLayout>{children}</ClientRootLayout>
       </body>
     </html>

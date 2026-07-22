@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import { footerLinks, socialLinks } from "@/data/footer";
+import { openCookieSettings } from "@/utlis/cookieConsent";
 
 export default function Footer1() {
   const { t, i18n } = useTranslation("common");
@@ -119,6 +120,14 @@ export default function Footer1() {
                 <p className="opacity-60" style={{ color: "#434243", marginBottom: 2 }}>
                   {t("footer.rights", { year: new Date().getFullYear() })}
                 </p>
+                <button
+                  type="button"
+                  className="border-0 bg-transparent p-0 fw-medium"
+                  style={{ color: "#434243", textDecoration: "underline" }}
+                  onClick={openCookieSettings}
+                >
+                  {t("footer.links.cookieSettings")}
+                </button>
               </div>
               <div className="hstack justify-center lg:justify-end gap-2 lg:gap-3">
                 <ul className="nav-x gap-2">
