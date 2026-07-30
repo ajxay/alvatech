@@ -1,0 +1,35 @@
+.home13-faq__panel {
+  max-width: 920px;
+}
+
+.home13-faq__title {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #2d2f33;
+}
+
+.home13-faq__list > li {
+  cursor: pointer;
+}
+
+.home13-faq__list .uc-accordion-title {
+  display: block;
+  padding-right: 44px !important;
+  font-weight: 600;
+  line-height: 1.4;
+  white-space: normal;
+}
+
+.home13-faq__list .uc-accordion-content p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.65;
+  opacity: 0.75;
+}
+
+@media (min-width: 768px) {
+  .home13-faq__list .uc-accordion-content p {
+    font-size: 16px;
+  }
+}

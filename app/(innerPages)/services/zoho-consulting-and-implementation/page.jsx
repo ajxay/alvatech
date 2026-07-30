@@ -12,7 +12,7 @@ import SalesforceBrands from "@/components/services/SalesforceBrands";
 import { zohoCrmFaq } from "@/data/faq";
 import { pageMetadataFor } from "@/data/pageMeta";
 
-export const metadata = pageMetadataFor("/page-zoho");
+export const metadata = pageMetadataFor("/services/zoho-consulting-and-implementation");
 
 export default function ZohoPage() {
   return (

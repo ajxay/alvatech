@@ -1,0 +1,95 @@
+/* "Why Choose Us" / "Why Modern Businesses Trust Alva Tech" — horizontal
+   icon + text cards. Figma: 136x136 illustrated icons, a 0.25px green rule,
+   20px/28px title, 14px/24px description, 0.25px green card border, 8px
+   radius, 2x2 grid on a 1152px column. */
+
+.about-why-choose__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.about-why-choose .about-why-choose__eyebrow {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  letter-spacing: 2.52px;
+  text-transform: uppercase;
+  color: #84ba41;
+}
+
+.about-why-choose__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.about-why-choose__card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 20px;
+  border: 0.25px solid #84ba41;
+  border-radius: 8px;
+}
+
+.about-why-choose__icon {
+  flex: none;
+  width: 136px;
+  height: 136px;
+}
+
+.about-why-choose__icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.about-why-choose__rule {
+  flex: none;
+  align-self: stretch;
+  width: 1px;
+  background: #84ba41;
+}
+
+.about-why-choose__body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about-why-choose .about-why-choose__card-title {
+  margin: 0;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.about-why-choose .about-why-choose__card-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 24px;
+  color: #555555;
+}
+
+@media (max-width: 767.98px) {
+  .about-why-choose__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .about-why-choose__card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-why-choose__rule {
+    width: 100%;
+    height: 1px;
+    align-self: auto;
+  }
+}

@@ -49,7 +49,7 @@ export default function Support() {
                 {t(`${s}.subtitle`)}
               </p>
               <Link
-                href={`/page-contact`}
+                href={`/contact-us`}
                 className="btn btn-md btn-primary rounded-default text-white shadow-xs mt-1 lg:mt-2"
                 style={{ backgroundColor: "#84BA41", borderColor: "#84BA41" }}
               >

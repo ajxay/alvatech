@@ -242,13 +242,15 @@ export default function MobileMenu() {
             ))}
           </ul>
           <div className="mt-3">
-            <Link
-              href="/page-contact"
+            <a
+              href="https://calendly.com/nikhil-k-alvatech/30min"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn btn-primary rounded-default text-white text-none w-100 justify-center"
               style={{ backgroundColor: "#84BA41", borderColor: "#84BA41" }}
             >
               {t("header.scheduleCall")}
-            </Link>
+            </a>
           </div>
           <ul className="social-icons nav-x mt-4">
             <li>

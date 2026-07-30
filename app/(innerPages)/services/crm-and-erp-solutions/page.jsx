@@ -12,7 +12,7 @@ import SalesforceBrands from "@/components/services/SalesforceBrands";
 import { erpSolutionsFaq } from "@/data/faq";
 import { pageMetadataFor } from "@/data/pageMeta";
 
-export const metadata = pageMetadataFor("/page-erp");
+export const metadata = pageMetadataFor("/services/crm-and-erp-solutions");
 
 export default function ErpPage() {
   return (

@@ -10,7 +10,7 @@
 
 .home13-header h2 {
   margin: 0 0 12px;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.15;
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -32,31 +32,18 @@
 
 .home13-trust__title {
   margin: 0;
-  font-size: 40px;
+  font-size: 28px;
   line-height: 1.1;
   color: #2d2f33;
   font-weight: 700;
 }
 
-.home13-trust__rating {
-  display: inline-flex;
-  align-items: center;
-  gap: 16px;
-  margin-top: 16px;
-  margin-bottom: 40px;
-  font-size: 14px;
+.home13-trust__sub {
+  max-width: 760px;
+  margin: 16px auto 40px;
+  font-size: 18px;
+  line-height: 28px;
   color: #5f636b;
-}
-
-.home13-trust__stars {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.home13-trust__stars img {
-  width: 20px;
-  height: 20px;
 }
 
 .home13-trust__logos {
@@ -156,6 +143,34 @@
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 12px;
+}
+
+/* Carousel: five steps, four visible at desktop. */
+.home13-seamless__carousel {
+  padding-bottom: 44px;
+}
+
+/* Let slides stretch so every card matches the tallest in view. */
+.home13-seamless__carousel .swiper-slide {
+  height: auto;
+}
+
+.home13-seamless__carousel .swiper-slide > .home13-seamless__card {
+  height: 100%;
+}
+
+.home13-seamless__carousel .swiper-pagination {
+  bottom: 0;
+}
+
+.home13-seamless__carousel .swiper-pagination-bullet {
+  background: #434243;
+  opacity: 0.25;
+}
+
+.home13-seamless__carousel .swiper-pagination-bullet-active {
+  background: #84ba41;
+  opacity: 1;
 }
 
 .home13-seamless__card {
@@ -273,6 +288,7 @@
 
 .home13-marketplaces {
   margin-top: 48px;
+  margin-bottom: 64px;
   border-radius: 16px;
   padding: 80px 48px 56px;
   background: linear-gradient(180deg, #f1f4ee 26.68%, #d6e9bf 149.01%);
@@ -1066,7 +1082,7 @@
   }
 
   .home13-header h2 {
-    font-size: 30px;
+    font-size: 28px;
   }
 
   .home13-grid,
@@ -1276,16 +1292,11 @@
   }
 
   .home13-trust__title {
-    font-size: 30px;
+    font-size: 28px;
   }
 
-  .home13-trust__rating {
-    flex-direction: column;
-    gap: 6px;
-  }
-
-  .home13-trust__rating span:last-child {
+  .home13-trust__sub {
     font-size: 16px;
-    line-height: 1.35;
+    line-height: 1.5;
   }
 }

@@ -24,7 +24,7 @@ export default function Team() {
                   We’re a 100% remote team spread all across the world. Join us!
                 </p>
                 <Link
-                  href={`/page-about`}
+                  href={`/about-us`}
                   className="btn btn-md btn-primary rounded-default mt-1 lg:mt-2 d-none sm:d-block"
                 >
                   About us
@@ -58,7 +58,7 @@ export default function Team() {
               </div>
               <div className="sm:d-none">
                 <Link
-                  href={`/page-about`}
+                  href={`/about-us`}
                   className="btn btn-md btn-primary rounded-default mt-1 lg:mt-2"
                 >
                   About us

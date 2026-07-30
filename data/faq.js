@@ -53,6 +53,7 @@ export const marketingFaq = serviceFaqKeys("servicePages.marketing.faq", 5);
 export const salesforceCrmFaq = serviceFaqKeys("servicePages.salesforce.faq", 5);
 export const erpSolutionsFaq = serviceFaqKeys("servicePages.erp.faq", 5);
 export const zohoCrmFaq = serviceFaqKeys("servicePages.zoho.faq", 5);
+export const home13Faq = serviceFaqKeys("home13.faq.items", 13);
 
 export const integrationsFaq = [
   { id: 1, questionKey: "pages.integrations.faq.1.question", answerKey: "pages.integrations.faq.1.answer" },

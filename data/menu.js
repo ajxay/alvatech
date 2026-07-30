@@ -4,27 +4,27 @@ export const menuItems = [
     tKey: "nav.menu.whatWeOffer",
     subItems: [
       {
-        href: "/page-shopify",
+        href: "/services/custom-shopify-development-services",
         tKey: "footer.links.shopifyDevelopment",
       },
       {
-        href: "/page-development",
+        href: "/services/custom-ecommerce-development-services",
         tKey: "footer.links.customDevelopment",
       },
       {
-        href: "/page-marketing",
+        href: "/services/digital-marketing-services",
         tKey: "footer.links.marketing",
       },
       {
-        href: "/page-salesforce",
+        href: "/services/Salesforce-consulting-and-implementation",
         tKey: "footer.links.salesforceCrm",
       },
       {
-        href: "/page-erp",
+        href: "/services/crm-and-erp-solutions",
         tKey: "footer.links.erpSolutions",
       },
       {
-        href: "/page-zoho",
+        href: "/services/zoho-consulting-and-implementation",
         tKey: "footer.links.zohoCrm",
       },
     ],
@@ -42,24 +42,24 @@ export const menuItems = [
         tKey: "nav.menu.hiring",
       },
       {
-        href: "/page-contact",
+        href: "/contact-us",
         tKey: "nav.menu.contactUs",
       },
     ],
   },
   {
     id: 3,
-    href: "/page-integrations",
+    href: "/services",
     tKey: "nav.menu.services",
   },
   {
     id: 4,
-    href: "/page-about",
+    href: "/about-us",
     tKey: "nav.menu.aboutUs",
   },
   {
     id: 5,
-    href: "/page-contact",
+    href: "/contact-us",
     tKey: "nav.menu.contactUs",
   },
 ];
@@ -168,11 +168,11 @@ export const pagesData = [
         },
       },
       {
-        href: "/page-integrations",
+        href: "/services",
         label: "Integrations",
       },
       {
-        href: "/page-about",
+        href: "/about-us",
         label: "About",
       },
       {
@@ -192,7 +192,7 @@ export const pagesData = [
         label: "Job details",
       },
       {
-        href: "/page-contact",
+        href: "/contact-us",
         label: "Contact",
       },
       {
@@ -420,13 +420,13 @@ export const mainPages = [
     title: "Pricing",
   },
   {
-    href: "/page-integrations",
+    href: "/services",
     alt: "Integrations",
     src: "/assets/images/demos/screenshots/page-integrations.jpg",
     title: "Integrations",
   },
   {
-    href: "/page-about",
+    href: "/about-us",
     alt: "About",
     src: "/assets/images/demos/screenshots/page-about.jpg",
     title: "About",
@@ -436,7 +436,7 @@ export const mainPages = [
 export const othermenuItems = [
   { href: "#", icon: "unicon-wikis", title: "Career" },
   { href: "#-detail/2", icon: "unicon-wikis", title: "Job details" },
-  { href: "/page-contact", icon: "unicon-wikis", title: "Contact" },
+  { href: "/contact-us", icon: "unicon-wikis", title: "Contact" },
   { href: "/page-contact-2", icon: "unicon-wikis", title: "Contact v2" },
   { href: "/blog", icon: "unicon-course", title: "Blog" },
   { href: "/blog-details/1", icon: "unicon-course", title: "Blog details" },
@@ -479,42 +479,42 @@ export const features = [
     iconClass: "unicon-store",
     tTitleKey: "footer.links.shopifyDevelopment",
     tDescKey: "nav.featureDesc.shopify",
-    link: "/page-shopify",
+    link: "/services/custom-shopify-development-services",
   },
   {
     id: 1,
     iconClass: "unicon-email",
     tTitleKey: "footer.links.customDevelopment",
     tDescKey: "nav.featureDesc.custom",
-    link: "/page-development",
+    link: "/services/custom-ecommerce-development-services",
   },
   {
     id: 2,
     iconClass: "unicon-blog",
     tTitleKey: "footer.links.marketing",
     tDescKey: "nav.featureDesc.marketing",
-    link: "/page-marketing",
+    link: "/services/digital-marketing-services",
   },
   {
     id: 3,
     iconClass: "unicon-increase-level",
     tTitleKey: "footer.links.salesforceCrm",
     tDescKey: "nav.featureDesc.salesforce",
-    link: "/page-salesforce",
+    link: "/services/Salesforce-consulting-and-implementation",
   },
   {
     id: 4,
     iconClass: "unicon-magic-wand-filled",
     tTitleKey: "footer.links.erpSolutions",
     tDescKey: "nav.featureDesc.erp",
-    link: "/page-erp",
+    link: "/services/crm-and-erp-solutions",
   },
   {
     id: 6,
     iconClass: "unicon-shopping-catalog",
     tTitleKey: "footer.links.zohoCrm",
     tDescKey: "nav.featureDesc.zoho",
-    link: "/page-zoho",
+    link: "/services/zoho-consulting-and-implementation",
   },
 ];
 export const homeLinks = [
@@ -557,7 +557,7 @@ export const homeLinks = [
 export const links = [
   {
     id: 1,
-    href: "/page-contact",
+    href: "/contact-us",
     tKey: "nav.links.hireAnExpert",
     isInternal: true,
   },
@@ -588,13 +588,13 @@ export const links = [
   {
     id: 6,
     // href: "/page-team",
-    href: "/page-integrations",
+    href: "/services",
     label: "All Services",
     isInternal: true,
   },
   {
     id: 7,
-    href: "/page-contact",
+    href: "/contact-us",
     label: "Get in touch",
     isInternal: true,
   },
@@ -660,12 +660,12 @@ export const sections = [
   {
     title: "Get started is Easy!",
     links: [
-      { href: "/page-contact", text: "Hire an Expert" },
+      { href: "/contact-us", text: "Hire an Expert" },
       { href: "#", text: "Customer stories" },
       { href: "#", text: "Resources" },
       { href: "/blog-sidebar", text: "Blog" },
       { href: "#", text: "Career" },
-      { href: "/page-contact", text: "Help Center" },
+      { href: "/contact-us", text: "Help Center" },
     ],
   },
   {
@@ -903,12 +903,12 @@ export const categories = [
   {
     title: "Get started is Easy!",
     links: [
-      { text: "Hire an Expert", href: "/page-contact" },
+      { text: "Hire an Expert", href: "/contact-us" },
       { text: "Customer stories", href: "#" },
       { text: "Resources", href: "#" },
       { text: "Blog", href: "/blog-sidebar" },
       { text: "Career", href: "#" },
-      { text: "Help Center", href: "/page-contact" },
+      { text: "Help Center", href: "/contact-us" },
     ],
   },
   {

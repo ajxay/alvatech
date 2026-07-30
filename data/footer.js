@@ -1,30 +1,39 @@
 export const footerLinks = [
   {
+    headingKey: "services",
+    headingHref: "/services",
+    colClass: "col-12 md:col-6 lg:col-6",
     links: [
-      { href: "/page-shopify", labelKey: "shopifyDevelopment" },
-      { href: "/page-development", labelKey: "customDevelopment" },
-      { href: "/page-marketing", labelKey: "marketing" },
+      {
+        href: "/services/custom-ecommerce-development-services",
+        labelKey: "ecommerceDevelopment",
+      },
+      {
+        href: "/services/custom-shopify-development-services",
+        labelKey: "shopifyDevelopment",
+      },
+      {
+        href: "/services/Salesforce-consulting-and-implementation",
+        labelKey: "salesforceConsulting",
+      },
+      {
+        href: "/services/zoho-consulting-and-implementation",
+        labelKey: "zohoConsulting",
+      },
+      { href: "/services/crm-and-erp-solutions", labelKey: "crmErpSolutions" },
+      { href: "/services/digital-marketing-services", labelKey: "digitalMarketing" },
     ],
   },
   {
+    headingKey: "company",
+    colClass: "col-12 md:col-6 lg:col-3",
     links: [
-      { href: "/page-salesforce", labelKey: "salesforceCrm" },
-      { href: "/page-erp", labelKey: "erpSolutions" },
-      { href: "/page-zoho", labelKey: "zohoCrm" },
-    ],
-  },
-  {
-    links: [
-      { href: "/page-integrations", labelKey: "allServices" },
-      { href: "/page-about", labelKey: "about" },
-      { href: "/page-contact", labelKey: "scheduleCall" },
-    ],
-  },
-  {
-    links: [
-      { href: "/blog", labelKey: "blog" },
+      { href: "/about-us", labelKey: "about" },
+      { href: "/contact-us", labelKey: "contactUs" },
+      { href: "/blog", labelKey: "blogs" },
       { href: "/page-terms", labelKey: "termsOfService" },
       { href: "/page-privacy", labelKey: "privacyPolicy" },
+      { href: "/contact-us", labelKey: "scheduleCall" },
     ],
   },
 ];
@@ -35,9 +44,9 @@ export const footerLinks2 = [
     links: [
       { href: "/page-features", label: "Features" },
       { href: "/page-pricing", label: "Pricing" },
-      { href: "/page-about", label: "About" },
+      { href: "/about-us", label: "About" },
       { href: "#", label: "Career" },
-      { href: "/page-contact", label: "Contact" },
+      { href: "/contact-us", label: "Contact" },
       { href: "/page-contact-2", label: "Contact v2" },
     ],
   },
@@ -91,12 +100,12 @@ export const footerLinks3 = [
   {
     title: "Product",
     links: [
-      { href: "/page-about", label: "Product" },
+      { href: "/about-us", label: "Product" },
       { href: "/page-pricing", label: "Overview" },
       { href: "/page-features", label: "Features" },
-      { href: "/page-integrations", label: "Solutions" },
+      { href: "/services", label: "Solutions" },
       { href: "#", label: "Tutorials" },
-      { href: "/page-contact", label: "Pricing" },
+      { href: "/contact-us", label: "Pricing" },
       { href: "/page-contact-2", label: "Releases" },
     ],
   },
@@ -166,7 +175,7 @@ export const footerLinks4 = [
   {
     title: "Company",
     links: [
-      { text: "About us", href: "/page-about", isLink: true },
+      { text: "About us", href: "/about-us", isLink: true },
       { text: "Careers", href: "#", isLink: true },
       { text: "Press", href: "#" },
       { text: "News", href: "/blog", isLink: true },
@@ -220,11 +229,11 @@ export const footerLinks5 = [
   {
     title: "Company",
     links: [
-      { text: "About us", href: "/page-about" },
+      { text: "About us", href: "/about-us" },
       { text: "Careers", href: "#" },
       { text: "Press", href: "/blog-sidebar" },
       { text: "News", href: "/blog-sidebar" },
-      { text: "Contact", href: "/page-contact" },
+      { text: "Contact", href: "/contact-us" },
     ],
   },
   {
@@ -253,7 +262,7 @@ export const footerLinks6 = [
   },
   {
     links: [
-      { text: "About us", href: "/page-about", isLink: true },
+      { text: "About us", href: "/about-us", isLink: true },
       { text: "Careers", href: "#", isLink: true },
       { text: "Press", href: "#", isLink: false },
       { text: "News", href: "/blog", isLink: true },

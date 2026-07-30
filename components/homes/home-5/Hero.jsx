@@ -1,12 +1,10 @@
 "use client";
-import Link from "next/link";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 
 export default function Hero() {
   const { t } = useTranslation("common");
   const m = "servicePages.marketing.hero";
-  const c = "servicePages.common";
 
   return (
     <div
@@ -30,130 +28,19 @@ export default function Hero() {
                   <div className="vstack gap-1 mt-2 xl:mt-4">
                     <form
                       onSubmit={(e) => e.preventDefault()}
-                      className="row child-cols g-1"
+                      className="row child-cols g-1 mt-1 sm:mt-2"
                     >
-                      <div>
-                        <div className="form-group inline-block">
-                          <input
-                            type="email"
-                            className="form-control rounded-default h-48px w-full text-black bg-white"
-                            placeholder={t(`${m}.emailPlaceholder`)}
-                            required
-                          />
-                        </div>
-                      </div>
                       <div className="col-12 sm:col-auto">
-                        <button
-                          type="submit"
-                          className="btn btn-md btn-primary rounded-default h-48px w-100 lg:min-w-150px text-white"
-                          style={{ backgroundColor: "#84BA41", borderColor: "#84BA41" }}
+                        <a
+                          href="https://calendly.com/nikhil-k-alvatech/30min"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="about-hero__button"
                         >
-                          {t(`${m}.getCall`)}
-                        </button>
+                          {t("pages.about.heroButton")}
+                        </a>
                       </div>
                     </form>
-                    <p className="fs-7 text-dark dark:text-white text-opacity-70">
-                      {t(`${c}.privacyPrefix`)}
-                      <Link
-                        href={`/page-privacy`}
-                        className="uc-link text-underline dark:text-secondary"
-                      >
-                        {t(`${c}.privacyLink`)}
-                      </Link>
-                      {t(`${c}.privacySuffix`)}
-                    </p>
-                  </div>
-                  <div className="vstack md:hstack justify-center lg:justify-start gap-2 mt-2 xl:mt-4 fdr">
-                    <div className="hstack justify-center gap-0">
-                      <Image
-                        alt="Avatar-image"
-                        className="w-40px h-40px rounded-circle border border-1 border-secondary dark:border-gray-900"
-                        src="/assets/images/avatars/02.jpg"
-                        width="96"
-                        height="96"
-                      />
-                      <Image
-                        alt="Avatar-image"
-                        className="w-40px h-40px rounded-circle border border-1 border-secondary dark:border-gray-900 ms-n2"
-                        src="/assets/images/avatars/05.png"
-                        width="150"
-                        height="150"
-                      />
-                      <Image
-                        alt="Avatar-image"
-                        className="w-40px h-40px rounded-circle border border-1 border-secondary dark:border-gray-900 ms-n2"
-                        src="/assets/images/avatars/02.png"
-                        width="150"
-                        height="150"
-                      />
-                      <Image
-                        alt="Avatar-image"
-                        className="w-40px h-40px rounded-circle border border-1 border-secondary dark:border-gray-900 ms-n2"
-                        src="/assets/images/avatars/01.jpg"
-                        width="96"
-                        height="96"
-                      />
-                    </div>
-                    <div className="panel ">
-                      <ul className="nav-x justify-center md:justify-start gap-0">
-                        <li>
-                          <Image
-                            alt="star-rating"
-                            className="w-20px text-yellow"
-                            data-uc-svg=""
-                            src="/assets/images/common/star-rating.svg"
-                            width="20"
-                            height="20"
-                          />
-                        </li>
-                        <li>
-                          <Image
-                            alt="star-rating"
-                            className="w-20px text-yellow"
-                            data-uc-svg=""
-                            src="/assets/images/common/star-rating.svg"
-                            width="20"
-                            height="20"
-                          />
-                        </li>
-                        <li>
-                          <Image
-                            alt="star-rating"
-                            className="w-20px text-yellow"
-                            data-uc-svg=""
-                            src="/assets/images/common/star-rating.svg"
-                            width="20"
-                            height="20"
-                          />
-                        </li>
-                        <li>
-                          <Image
-                            alt="star-rating"
-                            className="w-20px text-yellow"
-                            data-uc-svg=""
-                            src="/assets/images/common/star-rating.svg"
-                            width="20"
-                            height="20"
-                          />
-                        </li>
-                        <li>
-                          <Image
-                            alt="star-rating"
-                            className="w-20px text-yellow"
-                            data-uc-svg=""
-                            src="/assets/images/common/star-rating.svg"
-                            width="20"
-                            height="20"
-                          />
-                        </li>
-                        <li>
-                          <span className="fs-8 fw-medium ms-narrow">4.7</span>
-                        </li>
-                      </ul>
-                      <span className="fs-7 fw-medium">
-                        {t(`${m}.reviewsNote`)}
-                      </span>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -179,7 +66,7 @@ export default function Hero() {
                     <Image
                       alt="Countries"
                       data-anime="onscroll: .hero-scroll-scene; onscroll-offset: -200; onscroll-trigger: 0; onscroll-duration: 400%; translateY: [-100, 0];"
-                     src="/assets/images/marketing/hero-market.png"
+                      src="/assets/images/marketing/hero-market.png"
                       width="710"
                       height="854"
                     />

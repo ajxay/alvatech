@@ -1,0 +1,143 @@
+/* "Why Choose Us" band.
+   Figma: 1152px content column — 4 x 264px cards with 32px gaps — a centred
+   48/60 heading, and a 32x1px green rule under the eyebrow. */
+
+.home13-why {
+  background: #fff;
+  padding: 56px 24px;
+}
+
+.home13-why__inner {
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+.home13-why__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.home13-why .home13-why__eyebrow {
+  margin: 0 0 12px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  letter-spacing: 2.16px;
+  text-transform: uppercase;
+  color: #99a1af;
+}
+
+.home13-why__rule {
+  display: block;
+  width: 32px;
+  height: 1px;
+  margin-bottom: 24px;
+  background: #84ba41;
+}
+
+.home13-why .home13-why__title {
+  margin: 0;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 500;
+  letter-spacing: -0.4px;
+  color: #434243;
+}
+
+.home13-why__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.home13-why__card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.home13-why__meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.home13-why__number {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  color: #84ba41;
+}
+
+.home13-why__line {
+  flex: 1 1 auto;
+  height: 1px;
+  background: #e5e7eb;
+}
+
+/* Figma reserves a 48px-tall box with 4px of lead-in above the 44px glyph. */
+.home13-why__icon {
+  height: 48px;
+  padding-top: 4px;
+}
+
+/* Each glyph keeps its own exported box (three are 44x44, the growth icon is
+   44x45), so no shared height is forced here. */
+.home13-why__icon img {
+  display: block;
+  width: auto;
+  height: auto;
+}
+
+.home13-why .home13-why__card-title {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+  color: #434243;
+}
+
+.home13-why .home13-why__card-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 22.75px;
+  color: #434243;
+}
+
+@media (max-width: 991px) {
+  .home13-why {
+    padding: 48px 24px;
+  }
+
+  .home13-why__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px 32px;
+  }
+
+  .home13-why .home13-why__title {
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: -0.4px;
+  }
+}
+
+@media (max-width: 575px) {
+  .home13-why {
+    padding: 56px 20px;
+  }
+
+  .home13-why__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 36px;
+  }
+
+  .home13-why .home13-why__title {
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: -0.4px;
+  }
+}

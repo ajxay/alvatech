@@ -12,7 +12,7 @@ import SalesforceBrands from "@/components/services/SalesforceBrands";
 import { customDevelopmentFaq } from "@/data/faq";
 import { pageMetadataFor } from "@/data/pageMeta";
 
-export const metadata = pageMetadataFor("/page-development");
+export const metadata = pageMetadataFor("/services/custom-ecommerce-development-services");
 
 export default function DevelopmentPage() {
   return (

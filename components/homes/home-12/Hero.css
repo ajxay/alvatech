@@ -2,9 +2,9 @@
    CSS payload and there's no flash of unstyled content. */
 
 .hero-twelve {
-  padding: 96px 16px 140px;
+  padding: 96px 16px 64px;
   isolation: isolate;
-  min-height: 760px;
+  min-height: 0;
   display: flex;
   align-items: center;
 }
@@ -129,7 +129,10 @@
      differences actually render. */
   font-family: "Inter", "Helvetica Neue", system-ui, sans-serif !important;
   font-weight: 300 !important;
-  font-size: 96px;
+  /* Fluid so the single-line (nowrap) title always fits the viewport — the
+     widest line is ~18x the font-size, so ~4.9vw leaves side margins. Caps at
+     90px on large screens. */
+  font-size: min(4.9vw, 90px);
   line-height: 1;
   letter-spacing: -2.88px;
   text-align: center;
@@ -372,33 +375,11 @@
     inset 0 -3px 0 #e9e9e9;
 }
 
-.hero-twelve__scroll {
-  display: inline-flex;
-  align-items: center;
-  gap: 16px;
-  margin-top: 72px;
-  color: #09090b;
-  font-family: "Urbanist", "Inter", system-ui, sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 24px;
-}
-.hero-twelve__scroll-arrow {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 8px 2px;
-  border: 1px solid #d4d4d8;
-  border-radius: 100px;
-  width: 20px;
-  height: 32px;
-}
-
 /* Tablet */
 @media (max-width: 1199.98px) {
   .hero-twelve .hero-twelve__title {
-    font-size: 72px;
-    line-height: 76px;
+    /* font-size stays fluid (min(4.9vw, 90px)) so the longer title keeps
+       fitting; only the letter-spacing is eased here. */
     letter-spacing: -2px;
   }
   .hero-twelve__icons {
@@ -432,7 +413,7 @@
     display: none;
   }
   .hero-twelve {
-    padding: 72px 16px 96px;
+    padding: 72px 16px 48px;
     min-height: 0;
   }
   .hero-twelve__inner {
@@ -496,9 +477,5 @@
   }
   .hero-twelve__actions {
     margin-top: 8px;
-  }
-  .hero-twelve__scroll {
-    margin-top: 40px;
-    font-size: 14px;
   }
 }

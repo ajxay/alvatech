@@ -1,0 +1,173 @@
+/* "About Alva Tech" band.
+   Figma: full-bleed #faf9f8 strip 1440x653, 560px copy column at x=100, and a
+   776x653 illustration flush to the right edge with a 164px logo disc on top. */
+
+.home13-about {
+  background: #faf9f8;
+  overflow: hidden;
+}
+
+.home13-about__grid {
+  display: grid;
+  /* 776 / 1440 of the frame */
+  grid-template-columns: minmax(0, 1fr) 53.888%;
+  align-items: center;
+}
+
+.home13-about__body {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-right: 48px;
+  /* Line the copy up with the site container used by the other sections. */
+  padding-left: max(24px, calc((100vw - 1280px) / 2 + 16px));
+}
+
+.home13-about__content {
+  max-width: 560px;
+}
+
+.home13-about .home13-about__eyebrow {
+  margin: 0;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  color: #84ba41;
+}
+
+.home13-about .home13-about__title {
+  margin: 24px 0 0;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 500;
+  color: #434243;
+}
+
+.home13-about__copy {
+  margin-top: 24px;
+}
+
+/* Figma runs the three paragraphs as one 246px block with no gap between
+   them, so the theme's `p + p` top margin is cleared here. */
+.home13-about .home13-about__copy p {
+  margin: 0;
+  font-size: 15.6px;
+  line-height: 27.3px;
+  color: #434243;
+}
+
+.home13-about__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.home13-about .home13-about__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  border-radius: 999px;
+  background: #84ba41;
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  letter-spacing: 0.35px;
+  text-decoration: none;
+}
+
+.home13-about .home13-about__button:hover,
+.home13-about .home13-about__button:focus-visible {
+  background: #78a93a;
+  color: #fff;
+}
+
+.home13-about .home13-about__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #84ba41;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  letter-spacing: 0.35px;
+  text-decoration: none;
+}
+
+.home13-about .home13-about__link:hover span,
+.home13-about .home13-about__link:focus-visible span {
+  text-decoration: underline;
+}
+
+.home13-about__link svg {
+  flex: 0 0 auto;
+}
+
+/* Section runs 20% shorter than the 653px Figma band (653 -> 522). The media
+   box keeps a locked aspect ratio so the badge's percentage offsets stay
+   aligned at every width; `cover` trims 65.5px of the artwork's spare margin
+   off the top and bottom. */
+.home13-about__media {
+  position: relative;
+  aspect-ratio: 776 / 522;
+}
+
+.home13-about__illustration {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home13-about__badge {
+  position: absolute;
+  /* Figma: disc at 328,269 within the 776x653 artwork; 164px across.
+     Top is restated against the cropped box: (269 - 65.5) / 522. */
+  left: 42.268%;
+  top: 38.985%;
+  width: 21.134%;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #eff2e6;
+}
+
+.home13-about__badge img {
+  width: 98%;
+  height: auto;
+}
+
+@media (max-width: 991px) {
+  .home13-about__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .home13-about__body {
+    padding: 56px 24px 40px;
+  }
+
+  .home13-about__content {
+    max-width: none;
+  }
+
+  .home13-about__media {
+    width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .home13-about__title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .home13-about__body {
+    padding: 44px 20px 32px;
+  }
+}

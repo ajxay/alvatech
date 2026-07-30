@@ -1,6 +1,6 @@
 {
   "footer": {
-    "description": "Alvatech är en ledande digital transformationsbyrå som levererar skräddarsydda e-handelslösningar som hjälper företag att växa och trivas online.",
+    "description": "Lösningar för digital handel och transformation för växande företag",
     "newsletterTitle": "Nyhetsbrev",
     "newsletterDesc": "Prenumerera för att få de senaste uppdateringarna och nyheterna.",
     "emailPlaceholder": "Ange din e-postadress",
@@ -19,9 +19,20 @@
       "about": "Om oss",
       "scheduleCall": "Boka ett samtal",
       "blog": "Blogg",
-      "termsOfService": "Användarvillkor",
+      "termsOfService": "Allmänna villkor",
       "privacyPolicy": "Integritetspolicy",
-      "cookieSettings": "Cookieinställningar"
+      "cookieSettings": "Cookieinställningar",
+      "ecommerceDevelopment": "E-handelsutveckling",
+      "salesforceConsulting": "Salesforce-konsultation & implementation",
+      "zohoConsulting": "Zoho-konsultation & implementation",
+      "crmErpSolutions": "CRM- & ERP-lösningar",
+      "digitalMarketing": "Digital marknadsföring",
+      "contactUs": "Kontakta oss",
+      "blogs": "Blogg"
+    },
+    "groups": {
+      "services": "Tjänster",
+      "company": "Företag"
     }
   },
   "cookies": {
@@ -140,10 +151,10 @@
   "home13": {
     "hero": {
       "badge": "Partner för hela tillväxtresan",
-      "titleLine1": "Gör mer, väx snabbare",
-      "titleWith": "med",
-      "titleSmartSystems": "smarta system",
-      "description": "Vi kombinerar e-handelsutveckling, performance marketing och CRM-automation så att varumärken kan lansera snabbt, skala effektivt och driva verksamheten utan onödig komplexitet.",
+      "titleLine1": "Digitala transformationslösningar",
+      "titleWith": "som driver",
+      "titleSmartSystems": "modern handel",
+      "description": "Vi hjälper ambitiösa företag över hela världen att lansera, modernisera, automatisera och skala sin digitala verksamhet genom e-handelsutveckling i världsklass, CRM- & ERP-implementation, AI-driven automatisering och datadriven marknadsföring.",
       "exploreServices": "Utforska tjänster",
       "scrollHint": "Scrolla för mer"
     },
@@ -169,8 +180,7 @@
       }
     },
     "trust": {
-      "title": "Betrodd för enkelhet i helheten",
-      "reviewsNote": "Baserat på 4 000+ omdömen med hög kundnöjdhet"
+      "title": "Varför moderna företag litar på"
     },
     "integrations": {
       "title": "Stärk verksamheten med teknik",
@@ -209,7 +219,7 @@
       }
     },
     "seamless": {
-      "title": "Allt ni behöver för att växa",
+      "title": "Sömlösa integrationer som driver er tillväxt",
       "subtitle": "Koppla verktygen, automatisera arbetsflöden och skapa ett enhetligt system som skalas med er verksamhet.",
       "previewAlt": "Förhandsvisning: {{title}}",
       "cards": {
@@ -228,6 +238,10 @@
         "testLaunch": {
           "title": "Testa och lansera",
           "text": "Vi testar noggrant och lanserar smidigt så att allt fungerar som det ska."
+        },
+        "integrate": {
+          "title": "Integrera",
+          "text": "Vi kopplar samman betallösningar, affärssystem, CRM, lager, marketing automation och tredjepartsverktyg."
         }
       }
     },
@@ -235,12 +249,12 @@
       "title": "Alvatechs partners"
     },
     "marketplaces": {
-      "title": "Anslut till ledande marknadsplatser",
-      "subtitle": "Allt ni behöver finns nära till hands",
-      "migrateTitle": "Migrera från befintlig e-handelsplattform",
-      "paymentTitle": "Integration av betalningslösningar",
-      "shippingTitle": "Fraktintegration",
-      "marketplaceTitle": "Marknadsplats"
+      "title": "En butik. Oändliga möjligheter.",
+      "subtitle": "Integrera systemen ni förlitar er på och skapa ett sammankopplat e-handelsekosystem.",
+      "migrateTitle": "Migrera från befintliga e-handelsplattformar",
+      "paymentTitle": "Integrationer för betallösningar",
+      "shippingTitle": "Fraktintegrationer",
+      "marketplaceTitle": "Marknadsplatsintegrationer"
     },
     "values": {
       "sectionTitle": "Våra värderingar",
@@ -280,19 +294,259 @@
         "directorOfJoy": "Glädjedirektör"
       }
     },
+    "faq": {
+      "title": "Vanliga frågor:",
+      "items": {
+        "1": {
+          "question": "Vad är digital transformation, och hur kan det hjälpa mitt företag?",
+          "answer": "Digital transformation är processen att använda teknik, automation, data och digitala upplevelser för att förbättra affärsprocesser, kundengagemang och tillväxt. Det kan hjälpa företag att effektivisera arbetsflöden, sänka driftskostnader, förbättra kundupplevelser och skapa nya intäktsmöjligheter genom e-handel, CRM-system, ERP-lösningar och digital marknadsföring."
+        },
+        "2": {
+          "question": "Varför ska jag välja Shopify för mitt e-handelsföretag?",
+          "answer": "Shopify är en av världens ledande e-handelsplattformar tack vare skalbarhet, säkerhet, enkel hantering och ett starkt ekosystem av appar och integrationer. Plattformen passar startups, växande bolag och enterprise-varumärken som vill lansera, driva och skala sina webbutiker effektivt."
+        },
+        "3": {
+          "question": "Kan ni migrera min befintliga webbplats till Shopify?",
+          "answer": "Ja. Vi erbjuder kompletta Shopify-migreringar från plattformar som WooCommerce, Magento, OpenCart, PrestaShop, BigCommerce och skräddarsydda e-handelslösningar. Vår process säkerställer att produkter, kunder, ordrar, SEO-data och funktionalitet överförs säkert med minimal störning."
+        },
+        "4": {
+          "question": "Hur lång tid tar det att bygga en Shopify-butik?",
+          "answer": "Tidsplanen beror på projektets komplexitet. En vanlig Shopify-butik kan ofta lanseras inom 4–8 veckor, medan Shopify Plus eller skräddarsydd e-handel med avancerade integrationer kan ta längre tid. Vi ger en detaljerad projektplan innan utvecklingen startar."
+        },
+        "5": {
+          "question": "Vad är skillnaden mellan Shopify och skräddarsydd e-handelsutveckling?",
+          "answer": "Shopify är en snabb, skalbar och kostnadseffektiv e-handelsplattform med inbyggd hosting och underhåll. Skräddarsydd e-handelsutveckling ger större flexibilitet och anpassning för verksamheter med unika processer, komplexa integrationer eller specialiserade kundupplevelser."
+        },
+        "6": {
+          "question": "Varför behöver mitt företag ett CRM som Salesforce eller Zoho CRM?",
+          "answer": "CRM-plattformar hjälper företag att hantera kundrelationer, säljpipelines, marknadsföring och kundservice i ett centralt system. Lösningar som Salesforce och Zoho CRM ökar produktivitet, kundengagemang, rapporteringskvalitet och intäktstillväxt."
+        },
+        "7": {
+          "question": "Vilka är fördelarna med Salesforce-implementation?",
+          "answer": "Salesforce hjälper företag att automatisera säljprocesser, förbättra kundrelationer, skapa handlingsbara insikter och effektivisera kommunikationen mellan team. En väl genomförd Salesforce-lösning kan öka säljffektiviteten, förbättra prognoser och stärka kundupplevelsen."
+        },
+        "8": {
+          "question": "Hur förbättrar ERP-system verksamheten?",
+          "answer": "ERP-system integrerar viktiga affärsfunktioner som lager, ekonomi, inköp, logistik, kundhantering och rapportering i en plattform. Det ger bättre överblick, minskar manuellt arbete och möjliggör bättre beslut baserade på realtidsdata."
+        },
+        "9": {
+          "question": "Erbjuder ni skräddarsydd ERP-utveckling och integrationer?",
+          "answer": "Ja. Vi utvecklar och integrerar ERP-lösningar anpassade efter specifika affärsbehov. Vi hjälper företag att automatisera arbetsflöden, koppla ihop system och skapa centraliserade plattformar som ökar effektivitet och skalbarhet."
+        },
+        "10": {
+          "question": "Vilka digitala marknadsföringstjänster erbjuder ni för e-handelsföretag?",
+          "answer": "Vi erbjuder ett komplett utbud av e-handelsmarknadsföring, inklusive sökmotoroptimering (SEO), performance marketing, Google Ads, sociala medier, konverteringsoptimering (CRO), content marketing och analysrapportering för att hjälpa företag att attrahera, konvertera och behålla kunder."
+        },
+        "11": {
+          "question": "Arbetar ni med företag utanför Sverige?",
+          "answer": "Ja. Även om Alva Tech har bas i Sverige arbetar vi med företag i Norden, Europa, Storbritannien och andra internationella marknader. Vi stöttar kunder på distans och levererar skalbara lösningar för digital transformation globalt."
+        },
+        "12": {
+          "question": "Varför välja Alva Tech som partner för digital transformation?",
+          "answer": "Alva Tech samlar teknik, design, automation och marknadsföring under ett tak. Vi hjälper företag att lansera e-handelsplattformar, implementera CRM och ERP, automatisera verksamheten och driva tillväxt med datadriven marknadsföring. Vårt fokus är mätbara affärsresultat – inte bara teknikimplementationer."
+        },
+        "13": {
+          "question": "Hur vet jag om mitt företag behöver tjänster för digital transformation?",
+          "answer": "Om ni har fristående system, manuella processer, ineffektiv drift, begränsad digital tillväxt, dålig kundöverblick eller svårt att skala kan digital transformation hjälpa. Genom modern teknik, automatiserade arbetsflöden och bättre kundupplevelser blir verksamheten mer effektiv, konkurrenskraftig och framtidssäker."
+        }
+      }
+    },
     "cta": {
       "titleTop": "Förhindra dyra",
       "titleBottom": "misstag",
       "subtitle": "Låt oss bygga optimerade lösningar för din verksamhet",
       "button": "Kontakta oss nu"
+    },
+    "heroStats": {
+      "title": "Resultat som talar för sig själva",
+      "shopifyStores": "Skräddarsydda Shopify-butiker levererade",
+      "storeMigrations": "Genomförda e-handelsmigreringar",
+      "salesforceImplementations": "Genomförda Salesforce-implementationer",
+      "ecommerceWebsites": "Skräddarsydda e-handelswebbplatser levererade"
+    },
+    "about": {
+      "eyebrow": "Om Alva Tech",
+      "title": "Din tillväxtpartner bortom tekniken",
+      "paragraph1": "Digital transformation handlar inte om att införa ny programvara – det handlar om att skapa bättre kundupplevelser, effektivisera verksamheten och öppna nya intäktsmöjligheter.",
+      "paragraph2": "På Alva Tech kombinerar vi strategi, teknik, design och marknadsföring för att hjälpa företag att anpassa sig till förändrade kundförväntningar och snabbrörliga digitala marknader.",
+      "paragraph3": "Oavsett om ni lanserar en befintlig butik, implementerar Salesforce eller något annat CRM, eller skalar internationellt, bygger vi lösningar för hållbar tillväxt.",
+      "learnMore": "Läs mer",
+      "ourServices": "Våra tjänster"
+    },
+    "whyChoose": {
+      "eyebrow": "Varför välja oss",
+      "title": "Varför moderna företag litar på Alva Tech",
+      "items": {
+        "strategy": {
+          "title": "Strategi före teknik",
+          "text": "Inga tekniska implementationer i blindo. Vi föreslår och implementerar lösningar som passar era affärsbehov bäst."
+        },
+        "custom": {
+          "title": "Skräddarsydda lösningar",
+          "text": "Inga mallar, inga genvägar. På Alva Tech utformas varje lösning specifikt för att nå era affärsmål."
+        },
+        "growth": {
+          "title": "Tillväxtfokuserat arbetssätt",
+          "text": "Vi mäter inte framgång i antal levererade projekt. Vi mäter den i intäktstillväxt, kundanskaffning, förbättrad konvertering och effektivare verksamhet."
+        },
+        "partnership": {
+          "title": "Långsiktigt partnerskap",
+          "text": "Från lansering till skalning fortsätter vi optimera ert digitala ekosystem i takt med att verksamheten växer."
+        }
+      }
+    },
+    "services": {
+      "title": "Heltäckande tjänster för digital transformation",
+      "subtitle": "Koppla samman varje del av verksamheten med integrationer som förenklar era arbetsflöden.",
+      "items": {
+        "shopify": {
+          "title": "Shopify-utveckling",
+          "text": "Lansera högkonverterande Shopify-butiker byggda för prestanda, flexibilitet och långsiktig tillväxt.",
+          "features": {
+            "a": "Shopify-butiksutveckling",
+            "b": "Shopify Plus-utveckling",
+            "c": "Shopify-migrering",
+            "d": "Shopify-apputveckling",
+            "e": "Shopify-anpassningar"
+          }
+        },
+        "ecommerce": {
+          "title": "E-handelsutveckling",
+          "text": "Bygg kraftfulla e-handelsupplevelser anpassade efter era affärsmål med modern teknik och skalbar arkitektur.",
+          "features": {
+            "a": "Skräddarsydd e-handelsutveckling",
+            "b": "Headless commerce",
+            "c": "Marknadsplatsintegration",
+            "d": "Mobil handel",
+            "e": "Shopify-utveckling"
+          }
+        },
+        "salesforce": {
+          "title": "Salesforce-konsultation",
+          "text": "Förbättra kundrelationer och effektivisera verksamheten med skräddarsydda Salesforce-lösningar byggda för tillväxt.",
+          "features": {
+            "a": "Salesforce-konsultation",
+            "b": "Salesforce-implementation",
+            "c": "Salesforce-anpassning",
+            "d": "Salesforce-integration",
+            "e": "Salesforce-support & optimering"
+          }
+        },
+        "zoho": {
+          "title": "Zoho CRM-lösningar",
+          "text": "Förenkla försäljning, marknadsföring och kundhantering med skalbara Zoho CRM-lösningar anpassade efter era behov.",
+          "features": {
+            "a": "Zoho CRM-konsultation",
+            "b": "Zoho CRM-implementation",
+            "c": "Zoho CRM-anpassning",
+            "d": "Zoho CRM-integration",
+            "e": "Zoho CRM-automatisering"
+          }
+        },
+        "crmErp": {
+          "title": "CRM- & ERP-lösningar",
+          "text": "Digitalisera verksamheten med integrerade affärssystem som förbättrar produktivitet, överblick och effektivitet.",
+          "features": {
+            "a": "Skräddarsydd ERP-utveckling",
+            "b": "ERP-integrationstjänster",
+            "c": "Automatisering av affärsprocesser",
+            "d": "Optimering av arbetsflöden",
+            "e": "Digital marknadsföring"
+          }
+        },
+        "marketing": {
+          "title": "Digital marknadsföring",
+          "text": "Förvandla er webbplats till en intäktsdrivande motor med datadriven marknadsföring.",
+          "features": {
+            "a": "Performance marketing",
+            "b": "Sökmotoroptimering (SEO)",
+            "c": "Marknadsföring i sociala medier",
+            "d": "Konverteringsoptimering (CRO)",
+            "e": "Analys & tillväxtrapportering"
+          }
+        },
+        "customDevelopment": {
+          "title": "Skräddarsydd Utveckling",
+          "text": "Förvandla dina idéer till kraftfulla applikationer med vår expertis inom MERN-stack-utveckling. Vi bygger skalbara, säkra och högpresterande lösningar för långsiktig tillväxt.",
+          "features": {
+            "a": "Skräddarsydda Webb-/Mobilapplikationer",
+            "b": "Företagsdashboards",
+            "c": "SaaS-produktutveckling",
+            "d": "API- & Systemintegrationer",
+            "e": "Prestandaoptimering"
+          }
+        }
+      }
+    },
+    "techStack": {
+      "techEyebrow": "Vårt teknikekosystem",
+      "techTitle": "Tekniker vi arbetar med",
+      "marketingEyebrow": "Vårt marknadsföringsekosystem",
+      "marketingTitle": "Marknadsföringsplattformar vi arbetar med",
+      "trustTitle": "Betrodd partner för digital transformation",
+      "trustReviews": "Organisationer över hela världen förlitar sig på Alva Tech för att modernisera handeln, effektivisera verksamheten och skapa hållbar tillväxt genom teknik och marknadsföring i toppklass."
+    },
+    "caseStudies": {
+      "eyebrow": "Fallstudier",
+      "title": "Byggt för att lösa. Designat för att skala.",
+      "badge": "Shopify Plus",
+      "viewCase": "Se fallstudie",
+      "close": "Stäng fallstudie",
+      "openExternal": "Öppna i ny flik",
+      "items": {
+        "geggamoja": {
+          "name": "Geggamoja",
+          "desc": "Byggde en högpresterande Shopify-butik som förbättrade användarupplevelsen och ökade onlineförsäljningen med 65 %."
+        },
+        "bonbelle": {
+          "name": "Bonbelle",
+          "desc": "Byggde en högpresterande Shopify-butik som förbättrade användarupplevelsen och ökade onlineförsäljningen med 65 %."
+        },
+        "reirei": {
+          "name": "ReiRei",
+          "desc": "Byggde en högpresterande Shopify-butik som förbättrade användarupplevelsen och ökade onlineförsäljningen med 65 %."
+        }
+      }
+    },
+    "process": {
+      "eyebrow": "Vår process",
+      "title": "Så här arbetar vi",
+      "consultBtn": "Boka Kostnadsfri Konsultation",
+      "chatBtn": "Chatta Med Rådgivare",
+      "steps": {
+        "discover": {
+          "title": "Upptäck",
+          "text": "Vi sätter oss in i din verksamhet, dina kunder, system och tillväxtmöjligheter. Vi identifierar utmaningar och synliggör möjligheter som driver långsiktig digital framgång."
+        },
+        "strategy": {
+          "title": "Strategi",
+          "text": "Vi skapar en digital färdplan i linje med era affärsmål. Vi definierar rätt teknik, processer och prioriteringar för hållbar tillväxt."
+        },
+        "design": {
+          "title": "Design",
+          "text": "Vi skapar intuitiva användarupplevelser som kunderna älskar. Vi designar sömlösa digitala resor som förbättrar engagemang och konvertering."
+        },
+        "develop": {
+          "title": "Utveckling",
+          "text": "Vi bygger skalbara e-handelsplattformar, CRM-system och affärsapplikationer. Vi utvecklar säkra, högpresterande lösningar anpassade efter era unika behov."
+        },
+        "integrate": {
+          "title": "Integration",
+          "text": "Vi kopplar samman betalningslösningar, ERP, CRM, lager, marknadsföringsautomation och tredjepartsverktyg. Vi säkerställer att alla era system samverkar effektivt."
+        },
+        "grow": {
+          "title": "Tillväxt",
+          "text": "Kontinuerlig optimering genom analys, SEO, betald marknadsföring och konverteringsförbättringar. Vi använder datadrivna insikter för att öka prestanda, intäkter och kundlojalitet."
+        }
+      },
+      "stepLabel": "STEG {{number}}"
     }
   },
   "pages": {
     "about": {
-      "heroTitle": "Om Alva Tech",
-      "heroBody": "På Alva Tech kombinerar vi strategisk rådgivning med avancerade digitala lösningar för att förändra hur moderna företag arbetar och växer. Vår expertis omfattar högpresterande e-handel, skräddarsydd webb- och apputveckling, datadriven marknadsföring samt skalbara CRM- och ERP-implementationer. Med svensk ingenjörskvalitet i grunden hjälper vi organisationer att öka effektiviteten, accelerera innovationen och framtidssäkra sitt digitala ekosystem.",
-      "howTitle": "Så hjälper Alva Tech",
-      "howBody": "Våra lösningar är utformade för att integreras sömlöst med era befintliga system, vilket säkerställer en smidig övergång och maximal avkastning. Vi specialiserar oss på att ta fram skräddarsydda digitala strategier som ligger i linje med era affärsmål och skapar mätbar tillväxt. Med fokus på användarupplevelse, säkerhet och skalbarhet levererar vi lösningar som både möter era omedelbara behov och positionerar er för långsiktig framgång.",
+      "heroBody": "Vi kombinerar strategi, teknik, design och marknadsföring för att hjälpa företag att anpassa sig, innovera och växa i en snabbrörlig digital värld.",
+      "howTitle": "Din pålitliga partner för digital handel och digital transformation",
+      "howBody": "Digital transformation är inte längre ett val – den är avgörande för tillväxt, effektivitet och långsiktig konkurrenskraft. Alva Tech grundades med ett tydligt uppdrag: att hjälpa företag att dra nytta av teknik, automatisering och digitala upplevelser för att skapa hållbar tillväxt. Idag samarbetar vi med startups, växande varumärken och etablerade företag i Sverige, Norden och övriga Europa för att bygga skalbara digitala ekosystem som sammanför e-handel, affärsprocesser, kundupplevelser och marknadsföring. Oavsett om du lanserar en e-handelsverksamhet, migrerar till Shopify, implementerar Salesforce, moderniserar dina affärsprocesser eller skalar upp din kundanskaffning, erbjuder vi den expertis som krävs för att omvandla idéer till mätbara resultat.",
       "stats": {
         "founded": "Alvatech grundades.",
         "team": "Hårt arbetande team.",
@@ -334,6 +588,26 @@
         "title": "Vi söker människor som delar vår vision!",
         "subtitle": "Har du vad som krävs för att bli en av oss?",
         "button": "Se lediga tjänster"
+      },
+      "heroEyebrow": "Om oss",
+      "heroTitleLine1": "Vi bygger digitala lösningar",
+      "heroTitleThat": "som driver",
+      "heroAccent": "verklig tillväxt",
+      "heroButton": "Boka ett digitalt möte",
+      "trustTitle": "Varför moderna företag litar på",
+      "mission": {
+        "mission": {
+          "title": "Vårt uppdrag",
+          "text": "Att hjälpa företag förenkla komplexitet, accelerera tillväxt och skapa exceptionella kundupplevelser genom teknik, automatisering och datadriven innovation."
+        },
+        "vision": {
+          "title": "Vår vision",
+          "text": "Att bli Europas mest betrodda partner för digital transformation för företag som vill modernisera, automatisera och skala sin verksamhet i den digitala ekonomin."
+        }
+      },
+      "techStack": {
+        "eyebrow": "Vårt teknikekosystem",
+        "title": "Teknologier vi arbetar med"
       }
     },
     "integrations": {
@@ -401,19 +675,36 @@
       "button": "Prova Alvatech idag"
     },
     "contact3": {
-      "introTitle": "Kontakta vårt team",
-      "introBody": "Har ni frågor om produkten eller skalning på vår plattform? Vi finns här. Chatta med vårt trevliga team dygnet runt och kom igång på under fem minuter.",
-      "mobileIntroTitle": "Kontakta vårt team",
-      "mobileIntroBody": "Har ni frågor om produkten eller skalning på vår plattform? Chatta med vårt trevliga team dygnet runt för hjälp.",
-      "chatTitle": "Chatta med oss",
-      "chatBody": "Prata med vårt trevliga team via livechatt.",
-      "liveChat": "Starta livechatt",
-      "emailLink": "Skicka e-post till oss",
-      "messageX": "Skicka meddelande på X",
-      "callTitle": "Ring oss",
-      "callBody": "Ring vårt team mån–fre kl. 8–17.",
-      "visitTitle": "Besök oss",
-      "visitBody": "Prata med oss på plats på vårt huvudkontor i Linköping."
+      "heroTitle": "Boka en konsultation",
+      "heroSubtitle": "Vårt team finns här för att hjälpa er växa.",
+      "callUs": "Ring oss",
+      "emailUs": "Maila oss",
+      "title": "Kontakta oss",
+      "subtitle": "Vi finns här för att hjälpa till! Skicka ett meddelande så återkommer vi så snart som möjligt.",
+      "form": {
+        "name": "Namn",
+        "namePlaceholder": "Ange ditt fullständiga namn",
+        "phone": "Telefonnummer",
+        "phonePlaceholder": "+46 70 496 45 69",
+        "email": "E-post",
+        "emailPlaceholder": "Ange din e-postadress",
+        "subject": "Ämne",
+        "subjectPlaceholder": "Välj ett ämne",
+        "message": "Meddelande",
+        "messagePlaceholder": "Skriv ditt meddelande här...",
+        "submit": "Skicka meddelande",
+        "submitting": "Skickar...",
+        "privacyNote": "Din information är säker hos oss. Vi delar aldrig dina uppgifter.",
+        "toastSuccess": "Meddelandet har skickats.",
+        "toastError": "Det gick inte att skicka just nu. Försök igen."
+      },
+      "detailsTitle": "Kontaktuppgifter",
+      "callWhatsapp": "Ring & WhatsApp oss",
+      "emailUsLabel": "Maila oss",
+      "ourAddress": "Vår adress",
+      "connectLinkedin": "Anslut på LinkedIn",
+      "visitProfile": "Besök profil",
+      "virtualMeet": "Digitalt möte"
     }
   },
   "mobile": {

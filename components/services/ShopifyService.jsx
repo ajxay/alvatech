@@ -35,58 +35,55 @@ export default function Features() {
                 const base = `servicePages.shopify.features.${i}`;
                 const title = t(`${base}.title`);
                 return (
-                <div key={i}>
-                  <div className="feature-item panel">
-                    <div className="row child-cols items-center justify-between g-2 md:g-4">
-                      <div
-                        className={
-                          elm.reverseOrder
-                            ? "col-12 md:col-6 lg:col-5 md:order-2"
-                            : "col-12 md:col-6 lg:col-5"
-                        }
-                      >
-                        <div className="panel overflow-hidden rounded-1-5 lg:rounded-2">
-                          <figure className="featured-image m-0 rounded ratio ratio-1x1 rounded-2 overflow-hidden">
-                            <Image
-                              className="media-cover image"
-                              src={elm.imageSrc}
-                              width={1400}
-                              height={1412}
-                              alt={t(`${base}.alt`)}
-                            />
-                          </figure>
+                  <div key={i}>
+                    <div className="feature-item panel">
+                      <div className="row child-cols items-center justify-between g-2 md:g-4">
+                        <div
+                          className={
+                            elm.reverseOrder
+                              ? "col-12 md:col-6 lg:col-5 md:order-2"
+                              : "col-12 md:col-6 lg:col-5"
+                          }
+                        >
+                          <div className="panel overflow-hidden rounded-1-5 lg:rounded-2">
+                            <figure className="featured-image m-0 rounded ratio ratio-1x1 rounded-2 overflow-hidden">
+                              <Image
+                                className="media-cover image"
+                                src={elm.imageSrc}
+                                width={1400}
+                                height={1412}
+                                alt={t(`${base}.alt`)}
+                              />
+                            </figure>
+                          </div>
                         </div>
-                      </div>
-                      <div
-                        className={
-                          elm.reverseOrder
-                            ? "col-12 md:col-6 lg:col-6 md:order-1"
-                            : "col-12 md:col-6 lg:col-6"
-                        }
-                      >
-                        <div className="panel">
-                          <div className="panel vstack justify-center gap-4 h-100 sm:p-3 lg:p-4">
-                            <div>
-                              <div className="panel vstack gap-2">
-                                <span
-                                  className="cstack w-48px h-48px rounded-1-5 mb-2 d-none lg:d-inline-flex"
-                                  style={{ backgroundColor: "#84BA41", color: "#ffffff" }}
-                                >
-                                  <i className={`icon-1 ${elm.icon}`} />
-                                </span>
-                                <h3 className="h4 sm:h3 xl:h2 m-0">
-                                  {title}
-                                </h3>
-                                <p className="fs-6 lg:fs-5 opacity-70 dark:opacity-80">
-                                  {t(`${base}.description`)}
-                                </p>
-                                <a
-                                  href="#"
-                                  className="uc-link dark:text-secondary fw-bold hstack gap-narrow sm:mt-1 lg:mt-2"
-                                >
-                                  <span>{t(`${base}.linkText`)}</span>
-                                  <i className="position-relative icon icon-1 unicon-arrow-right rtl:rotate-180 translate-y-px" />
-                                </a>
+                        <div
+                          className={
+                            elm.reverseOrder
+                              ? "col-12 md:col-6 lg:col-6 md:order-1"
+                              : "col-12 md:col-6 lg:col-6"
+                          }
+                        >
+                          <div className="panel">
+                            <div className="panel vstack justify-center gap-4 h-100 sm:p-3 lg:p-4">
+                              <div>
+                                <div className="panel vstack gap-2">
+                                  <span
+                                    className="cstack w-48px h-48px rounded-1-5 mb-2 d-none lg:d-inline-flex"
+                                    style={{
+                                      backgroundColor: "#84BA41",
+                                      color: "#ffffff",
+                                    }}
+                                  >
+                                    <i className={`icon-1 ${elm.icon}`} />
+                                  </span>
+                                  <h3 className="h4 sm:h3 xl:h2 m-0">
+                                    {title}
+                                  </h3>
+                                  <p className="fs-6 lg:fs-5 opacity-70 dark:opacity-80">
+                                    {t(`${base}.description`)}
+                                  </p>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -94,8 +91,8 @@ export default function Features() {
                       </div>
                     </div>
                   </div>
-                </div>
-              );})}
+                );
+              })}
             </div>
           </div>
         </div>

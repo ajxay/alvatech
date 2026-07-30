@@ -42,7 +42,7 @@ export default function Nav2() {
                           {t("nav.dropdown.discoverTitle")}
                         </h5>
                         <Link
-                          href={`/page-shopify`}
+                          href={`/services/custom-shopify-development-services`}
                           className="btn btn-sm dark:text-white"
                         >
                           <span>{t("nav.dropdown.seeWhatsNew")}</span>
@@ -150,7 +150,7 @@ export default function Nav2() {
                 <li>
                   <Link
                     className="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5"
-                    href={`/page-about`}
+                    href={`/about-us`}
                   >
                     <i className="icon-1 unicon-play fw-bold text-primary dark:text-secondary" />
                     <span className="vstack gap-narrow mt-nnarrow">
@@ -187,7 +187,7 @@ export default function Nav2() {
                 <li>
                   <Link
                     className="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5"
-                    href={`/page-contact`}
+                    href={`/contact-us`}
                   >
                     <i className="icon-1 unicon-headset fw-bold text-primary dark:text-secondary" />
                     <span className="vstack gap-narrow mt-nnarrow">
@@ -207,13 +207,13 @@ export default function Nav2() {
       </li>
 
       <li>
-        <a href="/page-integrations">{t("nav.menu.services")}</a>
+        <a href="/services">{t("nav.menu.services")}</a>
       </li>
       <li>
-        <a href="/page-about">{t("nav.menu.aboutUs")}</a>
+        <a href="/about-us">{t("nav.menu.aboutUs")}</a>
       </li>
       <li>
-        <a href="/page-contact">{t("nav.menu.contactUs")}</a>
+        <a href="/contact-us">{t("nav.menu.contactUs")}</a>
       </li>
       <li className="has-dd-menu" style={{ position: "relative" }}>
         <a href="#" role="button" aria-haspopup="true">

@@ -19,7 +19,7 @@ export default function Cta() {
               </h2>
               <div className="vstack sm:hstack justify-center lg:justify-start gap-1 lg:gap-2 mt-1 lg:mt-2">
                 <Link
-                  href={`/page-contact`}
+                  href={`/contact-us`}
                   className="btn btn-md lg:btn-lg btn-primary text-white"
                   style={{ backgroundColor: "#84BA41", borderColor: "#84BA41" }}
                   >

@@ -402,3 +402,25 @@ html:not(.uc-dark) {
   will-change: transform, opacity;
   backface-visibility: hidden;
 }
+
+/* Shared Calendly CTA used across About + service heroes (must be global so styles exist on first paint). */
+.about-hero__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #84ba41;
+  color: #f5f9fb;
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.about-hero__button:hover,
+.about-hero__button:focus-visible {
+  background: #78a93a;
+  color: #f5f9fb;
+}

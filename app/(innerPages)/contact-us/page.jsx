@@ -3,7 +3,7 @@ import Contact3 from "@/components/innerpages/Contact3";
 import Header3 from "@/components/headers/Header3";
 import { pageMetadataFor } from "@/data/pageMeta";
 
-export const metadata = pageMetadataFor("/page-contact");
+export const metadata = pageMetadataFor("/contact-us");
 
 export default function ContactPage3() {
   return (

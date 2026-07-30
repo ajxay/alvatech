@@ -144,39 +144,17 @@ export default function Hero() {
 
         <div className="hero-twelve__actions">
           <Link
-            href="/page-integrations"
+            href="/services"
             className="hero-twelve__btn hero-twelve__btn--primary"
           >
             <span>{t("home13.hero.exploreServices")}</span>
           </Link>
           <Link
-            href="/page-contact"
+            href="/contact-us"
             className="hero-twelve__btn hero-twelve__btn--ghost"
           >
             <span>{t("header.scheduleCall")}</span>
           </Link>
-        </div>
-
-        <div className="hero-twelve__scroll">
-          <span>{t("home13.hero.scrollHint")}</span>
-          <span className="hero-twelve__scroll-arrow">
-            <svg
-              width="12"
-              height="12"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-            >
-              <path
-                d="M12 4v14M6 12l6 6 6-6"
-                stroke="#09090B"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </span>
         </div>
       </div>
     </div>

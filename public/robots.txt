@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Disallow: /page-contact
+Disallow: /contact-us
 Disallow: /shop-cart
 Disallow: /shop-checkout
 Disallow: /page-terms

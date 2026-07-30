@@ -11,7 +11,7 @@ import React from "react";
 import { salesforceCrmFaq } from "@/data/faq";
 import { pageMetadataFor } from "@/data/pageMeta";
 
-export const metadata = pageMetadataFor("/page-salesforce");
+export const metadata = pageMetadataFor("/services/Salesforce-consulting-and-implementation");
 
 export default function SalesforcePage() {
   return (

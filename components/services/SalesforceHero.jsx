@@ -1,17 +1,12 @@
 "use client";
-import Link from "next/link";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 
 export default function SalesforceHero() {
   const { t } = useTranslation("common");
-  const c = "servicePages.common";
 
   return (
-    <div
-      id="hero_header"
-      className="hero-header section panel overflow-hidden"
-    >
+    <div id="hero_header" className="hero-header section panel overflow-hidden">
       <div
         className="position-cover"
         style={{
@@ -41,43 +36,18 @@ export default function SalesforceHero() {
                     onSubmit={(e) => e.preventDefault()}
                     className="row child-cols g-1 mt-1 sm:mt-2"
                   >
-                    <div>
-                      <div className="form-icon-group inline-block">
-                        <input
-                          type="email"
-                          className="form-control rounded-default h-48px w-full bg-white"
-                          placeholder={t(`${c}.emailPlaceholder`)}
-                          required
-                        />
-                        <span className="form-icon text-gray">
-                          <i className="unicon-email icon-1" />
-                        </span>
-                      </div>
-                    </div>
                     <div className="col-12 sm:col-auto">
-                      <Link
-                        href={`/page-pricing`}
-                        className="btn btn-md rounded-default h-48px w-100 lg:min-w-150px text-white"
-                        style={{
-                          backgroundColor: "#84BA41",
-                          borderColor: "#84BA41",
-                        }}
+                      <a
+                        href="https://calendly.com/nikhil-k-alvatech/30min"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="about-hero__button"
                       >
-                        {t(`${c}.contactUs`)}
-                      </Link>
+                        {t("pages.about.heroButton")}
+                      </a>
                     </div>
                   </form>
-                  <p className="fs-7 text-dark text-opacity-70 mt-1">
-                    {t(`${c}.privacyPrefix`)}
-                    <Link
-                      href={`/page-privacy`}
-                      className="uc-link text-underline"
-                      style={{ color: "#12715b" }}
-                    >
-                      {t(`${c}.privacyLink`)}
-                    </Link>
-                    {t(`${c}.privacySuffix`)}
-                  </p>
+                  <p className="fs-7 text-dark text-opacity-70 mt-1"></p>
                 </div>
               </div>
               <div className="col-12 lg:col-6">

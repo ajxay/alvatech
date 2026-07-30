@@ -59,7 +59,7 @@ export default function Faqs({ ctaParentClass = "section-outer panel" }) {
                     </div>
                   </div>
                   <Link
-                    href={`/page-contact`}
+                    href={`/contact-us`}
                     className="btn btn-md btn-primary text-tertiary dark:bg-tertiary dark:text-primary fw-bold rounded-pill px-3 lg:px-5 mt-1 lg:mt-2"
                   >
                     Get in touch

@@ -10,7 +10,7 @@ import React from "react";
 import { marketingFaq } from "@/data/faq";
 import { pageMetadataFor } from "@/data/pageMeta";
 
-export const metadata = pageMetadataFor("/page-marketing");
+export const metadata = pageMetadataFor("/services/digital-marketing-services");
 
 export default function HomePage5() {
   return (

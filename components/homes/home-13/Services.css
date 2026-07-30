@@ -1,0 +1,126 @@
+/* Services grid — Figma: 3x2 of 358x529 white cards on a green->white
+   gradient band; each card is a 358x239 illustration over title, blurb and
+   five green-checked features. */
+
+.home13-services {
+  /* Full-bleed: it renders inside the seamless section's max-width container,
+     but the gradient band spans the viewport (page wrapper is overflow-x
+     hidden, so 100vw introduces no horizontal scroll). */
+  width: 100vw;
+  margin-inline: calc(50% - 50vw);
+  padding: 56px 0;
+  background: linear-gradient(180deg, #d9ead0 0%, #f5f9f1 42%, #fff 100%);
+}
+
+.home13-services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.home13-services__card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(16, 24, 40, 0.06), 0 1px 2px rgba(16, 24, 40, 0.04);
+}
+
+.home13-services__media {
+  display: block;
+  aspect-ratio: 358 / 239;
+  overflow: hidden;
+}
+
+.home13-services__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home13-services__body {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 16px 24px;
+}
+
+.home13-services .home13-services__card-title {
+  margin: 0;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+  color: #0a0a0a;
+}
+
+.home13-services .home13-services__card-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.home13-services .home13-services__card-title a:hover,
+.home13-services .home13-services__card-title a:focus-visible {
+  color: #84ba41;
+}
+
+.home13-services .home13-services__card-text {
+  margin: 8px 0 0;
+  font-size: 14px;
+  line-height: 22px;
+  color: #364153;
+}
+
+/* Scoped with the section class (0,2,0) to beat `.theme-3 ul` (0,1,1), which
+   otherwise adds a 2rem indent and 1rem bottom margin. */
+.home13-services .home13-services__features {
+  list-style: none;
+  margin: 20px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.home13-services .home13-services__features li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: #364153;
+}
+
+.home13-services__check {
+  flex: 0 0 auto;
+}
+
+/* The theme fills any svg child lacking fill="none"; keep the check hollow. */
+.home13-services .home13-services__check path {
+  fill: none;
+  stroke: #84ba41;
+}
+
+@media (max-width: 991px) {
+  .home13-services {
+    padding: 48px 0;
+  }
+
+  .home13-services__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 575px) {
+  .home13-services {
+    padding: 48px 0 56px;
+  }
+
+  .home13-services__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+}

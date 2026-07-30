@@ -50,13 +50,6 @@ function FeatureText({ icon, title, description, linkLabel }) {
       <p className="fs-6 m-0" style={{ color: INK_MUTED, lineHeight: 1.6 }}>
         {description}
       </p>
-      <a
-        href="#"
-        className="d-inline-flex items-center fw-bold gap-narrow text-decoration-none"
-        style={{ color: GREEN_DARK }}
-      >
-        {linkLabel} <span aria-hidden>→</span>
-      </a>
     </div>
   );
 }
@@ -82,7 +75,10 @@ function LeadsMockup() {
 
 function PipelineMockup() {
   return (
-    <div className="panel" style={{ maxWidth: 520, borderRadius: 14, overflow: "hidden" }}>
+    <div
+      className="panel"
+      style={{ maxWidth: 520, borderRadius: 14, overflow: "hidden" }}
+    >
       <img
         src="/assets/images/services/salesforce/pipeline-management.png"
         alt=""
@@ -94,7 +90,10 @@ function PipelineMockup() {
 
 function ReportsMockup() {
   return (
-    <div className="panel" style={{ maxWidth: 520, borderRadius: 14, overflow: "hidden" }}>
+    <div
+      className="panel"
+      style={{ maxWidth: 520, borderRadius: 14, overflow: "hidden" }}
+    >
       <img
         src="/assets/images/services/salesforce/reports-analytics.png"
         alt=""
@@ -106,7 +105,10 @@ function ReportsMockup() {
 
 function WorkflowMockup() {
   return (
-    <div className="panel" style={{ maxWidth: 520, borderRadius: 14, overflow: "hidden" }}>
+    <div
+      className="panel"
+      style={{ maxWidth: 520, borderRadius: 14, overflow: "hidden" }}
+    >
       <img
         src="/assets/images/services/salesforce/workflow-automation.png"
         alt=""
@@ -178,7 +180,9 @@ export default function SalesforceServices() {
                       <M />
                     </div>
                   </div>
-                  <div className={`col-12 md:col-6 ${f.reverse ? "md:order-1" : ""}`}>
+                  <div
+                    className={`col-12 md:col-6 ${f.reverse ? "md:order-1" : ""}`}
+                  >
                     <FeatureText
                       icon={
                         <img
@@ -189,7 +193,6 @@ export default function SalesforceServices() {
                       }
                       title={t(`${base}.title`)}
                       description={t(`${base}.description`)}
-                      linkLabel={linkLabel}
                     />
                   </div>
                 </div>
@@ -223,7 +226,10 @@ export default function SalesforceServices() {
                 >
                   {t("servicePages.salesforce.features.bottomTitle")}
                 </h2>
-                <p className="fs-6 lg:fs-5 m-0" style={{ color: INK_MUTED, lineHeight: 1.55 }}>
+                <p
+                  className="fs-6 lg:fs-5 m-0"
+                  style={{ color: INK_MUTED, lineHeight: 1.55 }}
+                >
                   {t("servicePages.salesforce.features.bottomBody")}
                 </p>
 
@@ -232,14 +238,18 @@ export default function SalesforceServices() {
                     <IntroFeature
                       icon={<span style={{ fontSize: 22 }}>📈</span>}
                       title={t("servicePages.salesforce.features.intro1Title")}
-                      description={t("servicePages.salesforce.features.intro1Desc")}
+                      description={t(
+                        "servicePages.salesforce.features.intro1Desc",
+                      )}
                     />
                   </div>
                   <div>
                     <IntroFeature
                       icon={<span style={{ fontSize: 22 }}>👥</span>}
                       title={t("servicePages.salesforce.features.intro2Title")}
-                      description={t("servicePages.salesforce.features.intro2Desc")}
+                      description={t(
+                        "servicePages.salesforce.features.intro2Desc",
+                      )}
                     />
                   </div>
                 </div>

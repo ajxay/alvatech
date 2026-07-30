@@ -43,7 +43,7 @@ export function canonicalFor(pathname) {
   return { canonical: normalizePathname(pathname) };
 }
 
-/** Next.js metadata object for a route path (e.g. `/page-about`), including a canonical URL. */
+/** Next.js metadata object for a route path (e.g. `/about-us`), including a canonical URL. */
 export function pageMetadataFor(pathname) {
   const key = normalizePathname(pathname);
   const entry = PAGE_META_BY_PATH.get(key);

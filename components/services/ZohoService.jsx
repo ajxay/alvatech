@@ -113,14 +113,6 @@ export default function ZohoService() {
                                   <p className="fs-6 lg:fs-5 opacity-70 dark:opacity-80">
                                     {t(`${row}.description`)}
                                   </p>
-                                  <a
-                                    href="#"
-                                    className="uc-link dark:text-secondary fw-bold hstack gap-narrow sm:mt-1 lg:mt-2"
-                                    style={{ color: "#84BA41" }}
-                                  >
-                                    <span>{t(`${row}.linkText`)}</span>
-                                    <i className="position-relative icon icon-1 unicon-arrow-right rtl:rotate-180 translate-y-px" />
-                                  </a>
                                 </div>
                               </div>
                             </div>

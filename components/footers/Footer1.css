@@ -1,0 +1,113 @@
+/* The template's `lg:hstack` / `sm:hstack` utilities only apply under a
+   `html.bp-lg` ancestor, but the bp-* classes sit on the page wrapper instead,
+   so they never match. These rules lay the bottom bar out on their own. */
+
+.uc-footer-bottom {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* `.row.col-match > * > *` gives every column child `flex: 1 1 0%`, which
+   stretches the heading to half the column height and leaves a dead gap
+   beneath its text. Keep these at their natural height instead. */
+#uc-footer .uc-footer-heading,
+#uc-footer .uc-footer-links {
+  flex: 0 0 auto;
+}
+
+.uc-footer-heading {
+  margin: 0 0 0.75rem;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.uc-footer-heading a {
+  text-decoration: none;
+}
+
+.uc-footer-heading a:hover,
+.uc-footer-heading a:focus-visible {
+  text-decoration: underline;
+}
+
+/* Link lists sit in two balanced sub-columns; normal weight so they read as
+   links rather than headings. */
+.uc-footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  column-count: 2;
+  column-gap: 1rem;
+}
+
+.uc-footer-links li {
+  break-inside: avoid;
+  margin-bottom: 0.9rem;
+}
+
+.uc-footer-links a {
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.uc-footer-links a:hover,
+.uc-footer-links a:focus-visible {
+  text-decoration: underline;
+}
+
+@media (max-width: 575px) {
+  .uc-footer-links {
+    column-count: 1;
+  }
+}
+
+.uc-footer-contact {
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  line-height: 1.5;
+}
+
+.uc-footer-contact a {
+  text-decoration: none;
+}
+
+.uc-footer-contact a:hover,
+.uc-footer-contact a:focus-visible {
+  text-decoration: underline;
+}
+
+.uc-footer-bottom__start {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 1rem;
+}
+
+.uc-footer-bottom__end {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+@media (max-width: 575px) {
+  .uc-footer-bottom,
+  .uc-footer-bottom__start {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}

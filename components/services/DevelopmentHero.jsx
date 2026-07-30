@@ -1,11 +1,9 @@
 "use client";
-import Link from "next/link";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 
 export default function DevelopmentHero() {
   const { t } = useTranslation("common");
-  const c = "servicePages.common";
 
   return (
     <div id="hero_header" className="hero-header section panel overflow-hidden">
@@ -34,44 +32,18 @@ export default function DevelopmentHero() {
                     onSubmit={(e) => e.preventDefault()}
                     className="row child-cols g-1 mt-1 sm:mt-2"
                   >
-                    <div>
-                      <div className="form-icon-group inline-block">
-                        <input
-                          type="email"
-                          className="form-control rounded-default h-48px w-full bg-white dark:border-white dark:bg-opacity-10 dark:border-opacity-0 dark:text-white"
-                          placeholder={t(`${c}.emailPlaceholder`)}
-                          required
-                        />
-                        <span className="form-icon text-gray dark:text-gray-300">
-                          <i className="unicon-email icon-1" />
-                        </span>
-                      </div>
-                    </div>
                     <div className="col-12 sm:col-auto">
-                      <Link
-                        href={`/page-pricing`}
-                        className="btn btn-md btn-primary rounded-default h-48px w-100 lg:min-w-150px text-white"
-                        style={{
-                          backgroundColor: "#84BA41",
-                          borderColor: "#84BA41",
-                        }}
+                      <a
+                        href="https://calendly.com/nikhil-k-alvatech/30min"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="about-hero__button"
                       >
-                        <span className="d-none md:d-block">{t(`${c}.contactUs`)}</span>
-                        <span className="d-block md:d-none">{t(`${c}.contactUs`)}</span>
-                      </Link>
+                        {t("pages.about.heroButton")}
+                      </a>
                     </div>
                   </form>
-                  <p className="fs-7 text-dark dark:text-white text-opacity-70">
-                    {t(`${c}.privacyPrefix`)}
-                    <Link
-                      href={`/page-privacy`}
-                      className="uc-link text-underline dark:text-secondary"
-                      style={{ color: "#84BA41" }}
-                    >
-                      {t(`${c}.privacyLink`)}
-                    </Link>
-                    {t(`${c}.privacySuffix`)}
-                  </p>
+                  <p className="fs-7 text-dark dark:text-white text-opacity-70"></p>
                 </div>
               </div>
               <div className="col-12 lg:col-6">
@@ -82,14 +54,14 @@ export default function DevelopmentHero() {
                   <Image
                     className="ltr:d-block rtl:d-none"
                     alt="hero-mockup"
-                    src="/assets/images/template/hero-mockup-shopify.png"
+                    src="/assets/images/template/hero-mockup-custom.png"
                     width="1492"
                     height="1250"
                   />
                   <Image
                     className="ltr:d-none rtl:d-block"
                     alt="hero-mockup-rtl"
-                    src="/assets/images/template/hero-mockup-shopify.png"
+                    src="/assets/images/template/hero-mockup-custom.png"
                     width="1492"
                     height="1250"
                   />

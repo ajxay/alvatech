@@ -17,8 +17,12 @@ import Footer1 from "@/components/footers/Footer1";
 import SalesforceBrands from "@/components/services/SalesforceBrands";
 import { shopifyFaq } from "@/data/faq";
 import { pageMetadataFor } from "@/data/pageMeta";
+import CaseStudies from "@/components/homes/home-13/CaseStudies";
+// import CaseStudies from "./CaseStudies";
 
-export const metadata = pageMetadataFor("/page-shopify");
+export const metadata = pageMetadataFor(
+  "/services/custom-shopify-development-services",
+);
 export default function HomePage4() {
   return (
     <>
@@ -30,6 +34,7 @@ export default function HomePage4() {
           <Facts />
           <Features />
           <ShopifyBento />
+          <CaseStudies />
           <Cta />
           {/* <Testimonials /> */} {/* commented out testimonials section */}
           <Faq faqData={shopifyFaq} />

@@ -19,10 +19,10 @@ export default function Nav() {
         <Link href={`/blog`}>Insights</Link>
       </li>
       <li>
-        <Link href={`/page-about`}>About</Link>
+        <Link href={`/about-us`}>About</Link>
       </li>
       <li>
-        <Link href={`/page-contact`}>Contact</Link>
+        <Link href={`/contact-us`}>Contact</Link>
       </li>
       <li className="has-dd-menu">
         <a role="button" aria-haspopup="true">

@@ -8,7 +8,7 @@ export const integrations = [
       "Design, build, and scale high-performing Shopify storefronts with integrations, performance tuning, and conversion-focused UX.",
     imageUrl: "/assets/images/template/tool-shopify.svg",
     imageAlt: "Shopify",
-    link: "/page-shopify",
+    link: "/services/custom-shopify-development-services",
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ export const integrations = [
       "Tailored web and mobile platforms, APIs, and workflows engineered for your product and operations.",
     imageUrl: "/assets/images/template/tool-custom.svg",
     imageAlt: "Custom development",
-    link: "/page-development",
+    link: "/services/custom-ecommerce-development-services",
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ export const integrations = [
       "Data-led acquisition and retention across paid and organic channels, with testing and attribution you can trust.",
     imageUrl: "/assets/images/template/tool-marketing.svg",
     imageAlt: "Marketing",
-    link: "/page-marketing",
+    link: "/services/digital-marketing-services",
   },
   {
     id: 4,
@@ -41,7 +41,7 @@ export const integrations = [
       "Sales and service automation on Salesforce—pipelines, journeys, and reporting aligned to how you sell.",
     imageUrl: "/assets/images/template/tool-salesforce.svg",
     imageAlt: "Salesforce",
-    link: "/page-salesforce",
+    link: "/services/Salesforce-consulting-and-implementation",
   },
   {
     id: 5,
@@ -52,7 +52,7 @@ export const integrations = [
       "Connect finance, inventory, and operations in one ERP ecosystem for visibility and scalable processes.",
     imageUrl: "/assets/images/template/tool-erp.svg",
     imageAlt: "ERP",
-    link: "/page-erp",
+    link: "/services/crm-and-erp-solutions",
   },
   {
     id: 6,
@@ -63,6 +63,6 @@ export const integrations = [
       "Zoho CRM configured for your funnel—leads, tasks, and integrations that keep sales moving.",
     imageUrl: "/assets/images/template/tool-zoho.svg",
     imageAlt: "Zoho",
-    link: "/page-zoho",
+    link: "/services/zoho-consulting-and-implementation",
   },
 ];

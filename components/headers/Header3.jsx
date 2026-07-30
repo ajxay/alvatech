@@ -74,13 +74,15 @@ export default function Header3() {
               </ul>
             </div>
             <div className="uc-navbar-right">
-              <Link
+              <a
                 className="btn btn-sm btn-primary rounded-default text-white text-none d-none lg:d-inline-flex"
-                href={`/page-contact`}
+                href="https://calendly.com/nikhil-k-alvatech/30min"
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{ backgroundColor: "#84BA41", borderColor: "#84BA41" }}
               >
              {t("header.scheduleCall")}
-              </Link>
+              </a>
               <a
                 className="d-block lg:d-none uc-icon uc-navbar-toggle-icon"
                 onClick={openMobileMenu}

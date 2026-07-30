@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import { footerLinks, socialLinks } from "@/data/footer";
+import "./Footer1.css";
 import { openCookieSettings } from "@/utlis/cookieConsent";
 
 export default function Footer1() {
@@ -38,7 +39,7 @@ export default function Footer1() {
           <div className="footer-inner vstack gap-4 lg:gap-6 xl:gap-8" style={{ paddingTop: 26 }}>
             <div className="uc-footer-widgets panel">
               <div className="row child-cols-6 md:child-cols col-match g-4" style={{ rowGap: 20 }}>
-                <div className="col-12 lg:col-4">
+                <div className="col-12 lg:col-3">
                   <div className="panel vstack items-start gap-4 ltr:md:pe-8 rtl:md:ps-8">
                     <div className="vstack gap-2">
                       <Link href={`/`}>
@@ -54,12 +55,45 @@ export default function Footer1() {
                       <p style={{ maxWidth: 340, margin: 0, lineHeight: 1.5, fontSize: 16 }}>
                         {t("footer.description")}
                       </p>
+                      <ul
+                        className="uc-footer-contact"
+                        style={{ maxWidth: 340, color: "#434243", fontSize: 16 }}
+                      >
+                        <li>
+                          <a href="tel:+46704964569" style={{ color: "#434243" }}>
+                            +46 70 496 45 69
+                          </a>
+                        </li>
+                        <li>Norra Oskarsgatan 12, Linköping</li>
+                        <li>
+                          <a href="mailto:info@alvatech.se" style={{ color: "#434243" }}>
+                            info@alvatech.se
+                          </a>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
                 {footerLinks.map((section, index) => (
-                  <div key={index}>
-                    <ul className="nav-y gap-1 fw-medium" style={{ fontSize: 17 }}>
+                  <div key={index} className={section.colClass}>
+                    {section.headingKey ? (
+                      <h4 className="uc-footer-heading">
+                        {section.headingHref ? (
+                          <Link href={section.headingHref} style={{ color: "#1c1f25" }}>
+                            {t(`footer.groups.${section.headingKey}`)}
+                          </Link>
+                        ) : (
+                          t(`footer.groups.${section.headingKey}`)
+                        )}
+                      </h4>
+                    ) : (
+                      // Keeps headingless columns' links aligned with the ones
+                      // sitting under a heading.
+                      <div className="uc-footer-heading" aria-hidden="true">
+                        &nbsp;
+                      </div>
+                    )}
+                    <ul className="uc-footer-links">
                       {section.links.map((link, i) => (
                         <li key={i}>
                           <Link href={link.href} style={{ color: "#434243" }}>
@@ -71,52 +105,12 @@ export default function Footer1() {
                   </div>
                 ))}
               </div>
-
-              <div
-                className="row items-center g-3 lg:g-5 mt-4 lg:mt-6"
-                style={{ paddingTop: 12 }}
-              >
-                <div className="col-12 lg:col-6">
-                  <div className="vstack gap-narrow">
-                    <h4 className="h4 m-0" style={{ color: "#1c1f25" }}>
-                      {t("footer.newsletterTitle")}
-                    </h4>
-                    <p className="m-0" style={{ color: "#434243", fontSize: 16 }}>
-                      {t("footer.newsletterDesc")}
-                    </p>
-                  </div>
-                </div>
-                <div className="col-12 lg:col-6">
-                  <form className="vstack gap-1" action="#">
-                    <label className="position-relative">
-                      <i
-                        className="unicon-email position-absolute"
-                        style={{ left: 14, top: "50%", transform: "translateY(-50%)", opacity: 0.6 }}
-                      />
-                      <input
-                        type="email"
-                        placeholder={t("footer.emailPlaceholder")}
-                        className="form-control h-48px bg-white border-0"
-                        style={{ paddingLeft: 40, color: "#434243" }}
-                        required
-                      />
-                    </label>
-                    <button
-                      type="submit"
-                      className="btn btn-md text-dark fw-medium"
-                      style={{ backgroundColor: "#84BA41", borderColor: "#84BA41", borderRadius: 8 }}
-                    >
-                      {t("footer.subscribe")}
-                    </button>
-                  </form>
-                </div>
-              </div>
             </div>
             <div
-              className="uc-footer-bottom panel vstack lg:hstack gap-4 justify-center lg:justify-between pt-4 lg:pt-6 border-top dark:text-white"
+              className="uc-footer-bottom panel pt-4 lg:pt-6 border-top dark:text-white"
               style={{ borderTopColor: "#babbbd", marginTop: 10 }}
             >
-              <div className="vstack sm:hstack justify-center lg:justify-start items-center lg:items-start gap-1 lg:gap-2">
+              <div className="uc-footer-bottom__start">
                 <p className="opacity-60" style={{ color: "#434243", marginBottom: 2 }}>
                   {t("footer.rights", { year: new Date().getFullYear() })}
                 </p>
@@ -129,7 +123,7 @@ export default function Footer1() {
                   {t("footer.links.cookieSettings")}
                 </button>
               </div>
-              <div className="hstack justify-center lg:justify-end gap-2 lg:gap-3">
+              <div className="uc-footer-bottom__end">
                 <ul className="nav-x gap-2">
                   {socialLinks.map((link, index) => (
                     <li key={index}>

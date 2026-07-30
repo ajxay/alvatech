@@ -1,0 +1,284 @@
+/* "Case Studies" — centred eyebrow/rule/title, then a row of case-study cards
+   (image, Shopify Plus badge, name, blurb, View Case Study link). */
+
+.home13-cases {
+  background: #fff;
+  padding: 56px 24px;
+}
+
+.home13-cases__inner {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.home13-cases__head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.home13-cases .home13-cases__eyebrow {
+  margin: 0 0 12px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  letter-spacing: 2.16px;
+  text-transform: uppercase;
+  color: #99a1af;
+}
+
+.home13-cases__rule {
+  display: block;
+  width: 32px;
+  height: 1px;
+  margin-bottom: 24px;
+  background: #84ba41;
+}
+
+.home13-cases .home13-cases__title {
+  margin: 0;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 500;
+  letter-spacing: -0.4px;
+  color: #1c1f25;
+}
+
+.home13-cases__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px;
+  margin-top: 48px;
+}
+
+.home13-cases__card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(16, 24, 40, 0.08), 0 1px 2px rgba(16, 24, 40, 0.04);
+}
+
+.home13-cases__media {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  aspect-ratio: 300 / 197;
+  overflow: hidden;
+}
+
+.home13-cases__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home13-cases__body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+}
+
+.home13-cases__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #f0f7ed 0%, #fff 100%);
+}
+
+.home13-cases__badge img {
+  width: 16px;
+  height: 14px;
+  object-fit: contain;
+}
+
+.home13-cases__badge span {
+  font-size: 10px;
+  line-height: 14px;
+  color: #84ba41;
+}
+
+.home13-cases .home13-cases__name {
+  margin: 0;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #434243;
+}
+
+.home13-cases .home13-cases__desc {
+  margin: 0;
+  font-size: 14px;
+  line-height: 21px;
+  color: #434243;
+}
+
+.home13-cases .home13-cases__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #84ba41;
+  text-decoration: none;
+}
+
+.home13-cases .home13-cases__link:hover span,
+.home13-cases .home13-cases__link:focus-visible span {
+  text-decoration: underline;
+}
+
+.home13-cases__link svg {
+  flex: 0 0 auto;
+}
+
+.home13-cases .home13-cases__link svg path {
+  fill: none;
+  stroke: #84ba41;
+}
+
+.home13-cases-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(17, 24, 39, 0.72);
+  backdrop-filter: blur(2px);
+}
+
+.home13-cases-lightbox__dialog {
+  display: flex;
+  flex-direction: column;
+  width: min(1080px, 100%);
+  height: min(860px, calc(100vh - 48px));
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(15, 23, 42, 0.28);
+}
+
+.home13-cases-lightbox__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 18px;
+  border-bottom: 1px solid #e8ecf1;
+  background: #fff;
+}
+
+.home13-cases-lightbox__title {
+  margin: 0;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 600;
+  color: #1c1f25;
+}
+
+.home13-cases-lightbox__actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex: 0 0 auto;
+}
+
+.home13-cases-lightbox__open {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #84ba41;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.home13-cases-lightbox__open:hover {
+  text-decoration: underline;
+}
+
+.home13-cases-lightbox__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: #f3f5f7;
+  color: #434243;
+  cursor: pointer;
+}
+
+.home13-cases-lightbox__close:hover {
+  background: #e8ecf1;
+}
+
+.home13-cases-lightbox__body {
+  flex: 1 1 auto;
+  min-height: 0;
+  background: #f7f8fa;
+}
+
+.home13-cases-lightbox__frame {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #f7f8fa;
+}
+
+@media (max-width: 767px) {
+  .home13-cases {
+    padding: 48px 20px;
+  }
+
+  .home13-cases__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    max-width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home13-cases .home13-cases__title {
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: -0.4px;
+  }
+
+  .home13-cases-lightbox {
+    padding: 12px;
+  }
+
+  .home13-cases-lightbox__dialog {
+    height: calc(100vh - 24px);
+    border-radius: 12px;
+  }
+
+  .home13-cases-lightbox__header {
+    padding: 12px 14px;
+  }
+
+  .home13-cases-lightbox__title {
+    font-size: 16px;
+  }
+}

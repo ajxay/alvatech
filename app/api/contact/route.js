@@ -13,7 +13,7 @@ export async function POST(request) {
       console.error("[contact-api] Missing RESEND_API_KEY");
       return NextResponse.json(
         { error: "RESEND_API_KEY is not configured" },
-        { status: 500 }
+        { status: 500 },
       );
     }
 
@@ -28,7 +28,7 @@ export async function POST(request) {
       source = "contact-form",
     } = body || {};
 
-    if (!firstName || !lastName || !email || !phone) {
+    if (!firstName || !email || !phone) {
       console.warn("[contact-api] Missing required fields", {
         hasFirstName: Boolean(firstName),
         hasLastName: Boolean(lastName),
@@ -37,7 +37,7 @@ export async function POST(request) {
       });
       return NextResponse.json(
         { error: "Missing required fields" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -49,6 +49,7 @@ export async function POST(request) {
       source,
       fromEmail,
       toEmail,
+
       submitterEmail: email,
       servicesCount: safeServices.length,
       messageLength: message.length,
@@ -70,6 +71,7 @@ export async function POST(request) {
     const resendResponse = await resend.emails.send({
       from: fromEmail,
       to: [toEmail],
+      // cc: "manish@thevictorymantra.com",
       subject: `New contact form submission - ${submitterName} - (${source})`,
       replyTo: email,
       html,
@@ -81,7 +83,7 @@ export async function POST(request) {
       console.error("[contact-api] Resend send failed", resendResponse.error);
       return NextResponse.json(
         { error: resendResponse.error.message || "Resend failed to send" },
-        { status: 502 }
+        { status: 502 },
       );
     }
 
@@ -94,7 +96,7 @@ export async function POST(request) {
     console.error("[contact-api] Unexpected error", error);
     return NextResponse.json(
       { error: error?.message || "Failed to send contact email" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

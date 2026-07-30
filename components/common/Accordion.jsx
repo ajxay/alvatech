@@ -7,7 +7,7 @@ export default function Accordion({
   faqData = accordionItems,
   parentClass = "",
 }) {
-  const { t } = useTranslation("common");
+  const { t, i18n } = useTranslation("common");
   const parentRefs = useRef([]);
   const questionRefs = useRef([]);
   const answerRefs = useRef([]);
@@ -34,7 +34,7 @@ export default function Accordion({
       element.style.transition = "all 0.5s ease-in-out";
       element.style.marginTop = "20px";
     }
-  }, [currentIndex]);
+  }, [currentIndex, i18n.language, faqData]);
 
   return (
     <>

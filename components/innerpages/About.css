@@ -1,0 +1,47 @@
+/* About Us page hero — Figma: green eyebrow + rule, two-line heading with a
+   green accent phrase, and a dark teal "Our Story" button (sampled directly
+   from the design: #304946). Everything else uses the theme's own utility
+   classes (h1/h2 sizing, row/child-cols grid) to match this file's existing
+   conventions. */
+
+.about-hero__eyebrow {
+  margin: 0;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  color: #84ba41;
+}
+
+.about-hero__rule {
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: #84ba41;
+}
+
+.about-hero__accent {
+  color: #84ba41;
+}
+
+.about-hero__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #84ba41;
+  color: #f5f9fb;
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.about-hero__button:hover,
+.about-hero__button:focus-visible {
+  background: #78a93a;
+  color: #f5f9fb;
+}

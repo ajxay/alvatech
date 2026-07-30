@@ -1,6 +1,6 @@
 {
   "footer": {
-    "description": "Alvatech is a leading digital transformation agency, delivering tailored ecommerce solutions to help businesses grow and thrive online.",
+    "description": "Digital Commerce & Transformation Solutions for Growing Businesses",
     "newsletterTitle": "Newsletter",
     "newsletterDesc": "Subscribe to get the latest updates and news.",
     "emailPlaceholder": "Enter your email",
@@ -16,12 +16,23 @@
       "erpSolutions": "ERP Solutions",
       "zohoCrm": "ZOHO CRM",
       "allServices": "All Services",
-      "about": "About",
+      "about": "About Us",
       "scheduleCall": "Schedule A Call",
       "blog": "Blog",
-      "termsOfService": "Terms of service",
-      "privacyPolicy": "Privacy policy",
-      "cookieSettings": "Cookie settings"
+      "termsOfService": "Terms & Conditions",
+      "privacyPolicy": "Privacy Policy",
+      "cookieSettings": "Cookie settings",
+      "ecommerceDevelopment": "Ecommerce Development",
+      "salesforceConsulting": "Salesforce Consulting & Implementation",
+      "zohoConsulting": "Zoho Consulting & Implementation",
+      "crmErpSolutions": "CRM & ERP Solutions",
+      "digitalMarketing": "Digital Marketing",
+      "contactUs": "Contact Us",
+      "blogs": "Blogs"
+    },
+    "groups": {
+      "services": "Services",
+      "company": "Company"
     }
   },
   "cookies": {
@@ -140,10 +151,10 @@
   "home13": {
     "hero": {
       "badge": "End-to-End Growth Partner",
-      "titleLine1": "Do More, Grow Faster",
-      "titleWith": "with",
-      "titleSmartSystems": "Smart Systems",
-      "description": "We combine eCommerce development, performance marketing, and CRM automation to help brands launch quickly, scale efficiently, and manage operations without complexity.",
+      "titleLine1": "Digital Transformation Solutions",
+      "titleWith": "That Power",
+      "titleSmartSystems": "Modern Commerce",
+      "description": "We help ambitious businesses across the globe to launch, modernize, automate, and scale their digital operations through world-class ecommerce development, CRM & ERP implementation, AI-powered automation, and data-driven marketing.",
       "exploreServices": "Explore Services",
       "scrollHint": "Scroll for more"
     },
@@ -169,8 +180,7 @@
       }
     },
     "trust": {
-      "title": "Trusted for overall simplicity",
-      "reviewsNote": "Based on 4,000+ reviews with customer satisfaction"
+      "title": "Why Modern Businesses Trust"
     },
     "integrations": {
       "title": "Boost your business with technology",
@@ -209,7 +219,7 @@
       }
     },
     "seamless": {
-      "title": "Everything You Need to Grow",
+      "title": "Seamless Integrations That Power Your Growth",
       "subtitle": "Connect your tools, automate workflows, and create a unified system that scales effortlessly with your business.",
       "previewAlt": "{{title}} preview",
       "cards": {
@@ -228,6 +238,10 @@
         "testLaunch": {
           "title": "Test & Launch",
           "text": "We test thoroughly and launch seamlessly, ensuring everything works perfectly."
+        },
+        "integrate": {
+          "title": "Integrate",
+          "text": "Connecting payment gateways, ERP, CRM, inventory, marketing automation, and third-party tools."
         }
       }
     },
@@ -235,12 +249,12 @@
       "title": "Alvatech Partners"
     },
     "marketplaces": {
-      "title": "Connect with top marketing places",
-      "subtitle": "Everything you need is right at your fingertips",
-      "migrateTitle": "Migrate from existing Ecommerce platform",
-      "paymentTitle": "Payment gateway integration",
-      "shippingTitle": "Shipping integration",
-      "marketplaceTitle": "Marketplace"
+      "title": "One Store. Endless Possibilities.",
+      "subtitle": "Integrate the systems you rely on and create a connected commerce ecosystem.",
+      "migrateTitle": "Migrate From Existing Ecommerce Platforms",
+      "paymentTitle": "Payment Gateway Integrations",
+      "shippingTitle": "Shipping Integrations",
+      "marketplaceTitle": "Marketplace Integrations"
     },
     "values": {
       "sectionTitle": "Our Values",
@@ -268,7 +282,7 @@
       "readAria": "Read {{title}}"
     },
     "team": {
-      "title": "Our Executive Team",
+      "title": "Our Team",
       "roles": {
         "CEO": "CEO",
         "COO": "COO",
@@ -280,19 +294,259 @@
         "directorOfJoy": "Director of Joy"
       }
     },
+    "faq": {
+      "title": "Frequently asked questions:",
+      "items": {
+        "1": {
+          "question": "What is digital transformation, and how can it help my business?",
+          "answer": "Digital transformation is the process of using technology, automation, data, and digital experiences to improve business operations, customer engagement, and overall growth. It can help businesses streamline workflows, reduce operational costs, improve customer experiences, and create new revenue opportunities through ecommerce, CRM systems, ERP solutions, and digital marketing."
+        },
+        "2": {
+          "question": "Why should I choose Shopify for my ecommerce business?",
+          "answer": "Shopify is one of the world's leading ecommerce platforms because it offers scalability, security, ease of management, and a robust ecosystem of apps and integrations. It is suitable for startups, growing businesses, and enterprise brands looking to launch, manage, and scale their online stores efficiently."
+        },
+        "3": {
+          "question": "Can you migrate my existing website to Shopify?",
+          "answer": "Yes. We provide complete Shopify migration services from platforms such as WooCommerce, Magento, OpenCart, PrestaShop, BigCommerce, and custom-built ecommerce websites. Our migration process ensures that products, customers, orders, SEO data, and website functionality are transferred securely with minimal disruption."
+        },
+        "4": {
+          "question": "How long does it take to build a Shopify store?",
+          "answer": "The timeline depends on the complexity of the project. A standard Shopify store can typically be launched within 4–8 weeks, while Shopify Plus or custom ecommerce solutions with advanced integrations may require additional time. We provide a detailed project roadmap before development begins."
+        },
+        "5": {
+          "question": "What is the difference between Shopify and custom ecommerce development?",
+          "answer": "Shopify offers a fast, scalable, and cost-effective ecommerce platform with built-in hosting and maintenance. Custom ecommerce development provides greater flexibility and customization for businesses with unique operational requirements, complex integrations, or specialized customer experiences."
+        },
+        "6": {
+          "question": "Why does my business need a CRM solution like Salesforce or Zoho CRM?",
+          "answer": "CRM platforms help businesses manage customer relationships, sales pipelines, marketing activities, and customer service interactions from a centralized system. Solutions like Salesforce and Zoho CRM improve team productivity, customer engagement, reporting accuracy, and revenue growth."
+        },
+        "7": {
+          "question": "What are the benefits of Salesforce implementation?",
+          "answer": "Salesforce helps businesses automate sales processes, improve customer relationship management, generate actionable insights, and streamline communication across teams. A properly implemented Salesforce solution can increase sales efficiency, improve forecasting, and enhance customer experiences."
+        },
+        "8": {
+          "question": "How do ERP systems improve business operations?",
+          "answer": "ERP systems integrate key business functions such as inventory management, finance, procurement, logistics, customer management, and reporting into a single platform. This improves operational visibility, reduces manual work, and enables better decision-making through real-time data."
+        },
+        "9": {
+          "question": "Do you provide custom ERP development and integrations?",
+          "answer": "Yes. We develop and integrate ERP solutions tailored to specific business requirements. Our team helps businesses automate workflows, connect multiple systems, and create centralized operational platforms that improve efficiency and scalability."
+        },
+        "10": {
+          "question": "What digital marketing services do you offer for ecommerce businesses?",
+          "answer": "We provide a complete range of ecommerce marketing services, including Search Engine Optimization (SEO), Performance Marketing, Google Ads, Social Media Marketing, Conversion Rate Optimization (CRO), content marketing, and analytics reporting to help businesses attract, convert, and retain customers."
+        },
+        "11": {
+          "question": "Do you work with businesses outside Sweden?",
+          "answer": "Yes. While Alva Tech is based in Sweden, we work with businesses across the Nordics, Europe, the United Kingdom, and other international markets. Our team supports clients remotely and delivers scalable digital transformation solutions globally."
+        },
+        "12": {
+          "question": "Why choose Alva Tech as your digital transformation partner?",
+          "answer": "Alva Tech combines technology, design, automation, and marketing expertise under one roof. We help businesses launch ecommerce platforms, implement CRM and ERP solutions, automate operations, and drive growth through data-driven marketing strategies. Our focus is on delivering measurable business outcomes, not just technology implementations."
+        },
+        "13": {
+          "question": "How do I know if my business needs digital transformation services?",
+          "answer": "If your business is experiencing disconnected systems, manual processes, operational inefficiencies, limited online growth, poor customer visibility, or difficulty scaling, digital transformation can help. By modernizing technology, automating workflows, and improving customer experiences, businesses can become more efficient, competitive, and future-ready."
+        }
+      }
+    },
     "cta": {
       "titleTop": "Prevent costly",
       "titleBottom": "mistakes",
       "subtitle": "Lets build optimized solutions for your business.",
       "button": "Reach Us Now"
+    },
+    "heroStats": {
+      "title": "Results That Speak for Themselves",
+      "shopifyStores": "Custom Shopify Stores Delivered",
+      "storeMigrations": "Ecommerce Store Migration Handled",
+      "salesforceImplementations": "Salesforce Implementations Handled",
+      "ecommerceWebsites": "Custom Ecommerce Websites Delivered"
+    },
+    "about": {
+      "eyebrow": "About Alva Tech",
+      "title": "Your Growth Partner Beyond Technology",
+      "paragraph1": "Digital transformation isn't about adopting new software, it's about creating better customer experiences, improving operational efficiency, and unlocking new revenue opportunities.",
+      "paragraph2": "At Alva Tech, we combine strategy, technology, design, and marketing to help businesses adapt to changing customer expectations and rapidly evolving digital markets.",
+      "paragraph3": "Whether you're launching an existing store, implementing Salesforce or any other CRM, or scaling internationally, we build solutions designed for sustainable growth.",
+      "learnMore": "Learn More",
+      "ourServices": "Our Services"
+    },
+    "whyChoose": {
+      "eyebrow": "Why Choose Us",
+      "title": "Why Modern Businesses Trusts Alva Tech ",
+      "items": {
+        "strategy": {
+          "title": "Strategy Before Technology",
+          "text": "No blindfolded technology implementations. We offer and implement solutions that are best fit for your business needs."
+        },
+        "custom": {
+          "title": "Custom-Built Solutions",
+          "text": "No templates, no shortcuts. At Alva Tech every solution is designed specifically to achieve your business goals."
+        },
+        "growth": {
+          "title": "Growth-Focused Approach",
+          "text": "We don't measure success by projects completed. We measure it by Revenue Growth, Customer Acquisition, Conversion Improvements and Operational Efficiency."
+        },
+        "partnership": {
+          "title": "Long-Term Partnership",
+          "text": "From launch to scale, we continue optimizing your digital ecosystem as your business grows."
+        }
+      }
+    },
+    "services": {
+      "title": "End-to-End Digital Transformation Services",
+      "subtitle": "Connect every part of your business with integrations that will simplify your workflow.",
+      "items": {
+        "shopify": {
+          "title": "Shopify Development",
+          "text": "Launch high-converting Shopify stores designed for performance, flexibility, and long-term growth.",
+          "features": {
+            "a": "Shopify Store Development",
+            "b": "Shopify Plus Development",
+            "c": "Shopify Migration Services",
+            "d": "Shopify App Development",
+            "e": "Shopify Customizations"
+          }
+        },
+        "ecommerce": {
+          "title": "Ecommerce Development",
+          "text": "Build powerful ecommerce experiences tailored to your business goals using modern technologies and scalable architecture.",
+          "features": {
+            "a": "Custom Ecommerce Development",
+            "b": "Headless Commerce",
+            "c": "Marketplace Integration",
+            "d": "Mobile Commerce",
+            "e": "Shopify Development"
+          }
+        },
+        "salesforce": {
+          "title": "Salesforce Consulting",
+          "text": "Transform customer relationships and streamline business operations with tailored Salesforce solutions designed for growth.",
+          "features": {
+            "a": "Salesforce Consulting",
+            "b": "Salesforce Implementation",
+            "c": "Salesforce Customization",
+            "d": "Salesforce Integration",
+            "e": "Salesforce Support & Optimization"
+          }
+        },
+        "zoho": {
+          "title": "Zoho CRM Solutions",
+          "text": "Simplify sales, marketing, and customer management with scalable Zoho CRM solutions customized to your business needs.",
+          "features": {
+            "a": "Zoho CRM Consulting",
+            "b": "Zoho CRM Implementation",
+            "c": "Zoho CRM Customization",
+            "d": "Zoho CRM Integration",
+            "e": "Zoho CRM Automation"
+          }
+        },
+        "crmErp": {
+          "title": "CRM & ERP Solutions",
+          "text": "Digitize operations with integrated business management solutions that improve productivity, visibility, and efficiency.",
+          "features": {
+            "a": "Custom ERP Development",
+            "b": "ERP Integration Services",
+            "c": "Business Process Automation",
+            "d": "Workflow Optimization",
+            "e": "Digital Marketing"
+          }
+        },
+        "marketing": {
+          "title": "Digital Marketing",
+          "text": "Turn your website into a revenue-generating machine with data-driven marketing strategies.",
+          "features": {
+            "a": "Performance Marketing",
+            "b": "Search Engine Optimization (SEO)",
+            "c": "Social Media Marketing",
+            "d": "Conversion Rate Optimization (CRO)",
+            "e": "Analytics & Growth Reporting"
+          }
+        },
+        "customDevelopment": {
+          "title": "Custom Development",
+          "text": "Transform your ideas into powerful applications with our expert MERN stack development services. We build scalable, secure, & high-performing solutions designed for long-term growth.",
+          "features": {
+            "a": "Custom Web/Mobile Applications",
+            "b": "Enterprise Dashboards",
+            "c": "SaaS Product Development",
+            "d": "API & System Integrations",
+            "e": "Performance Optimization"
+          }
+        }
+      }
+    },
+    "techStack": {
+      "techEyebrow": "Our Technology Ecosystem",
+      "techTitle": "Technologies We Work With",
+      "marketingEyebrow": "Our Marketing Ecosystem",
+      "marketingTitle": "Marketing Platforms We Work With",
+      "trustTitle": "Trusted Digital Transformation Partner",
+      "trustReviews": "Organizations across the globe rely on Alva Tech to modernize commerce, streamline operations, and create sustainable growth through technology and marketing excellence."
+    },
+    "caseStudies": {
+      "eyebrow": "Case Studies",
+      "title": "Built to Solve. Designed to Scale.",
+      "badge": "Shopify Plus",
+      "viewCase": "View Case Study",
+      "close": "Close case study",
+      "openExternal": "Open in new tab",
+      "items": {
+        "geggamoja": {
+          "name": "Geggamoja",
+          "desc": "Built a high-performing Shopify store that enhanced user experience and increased online sales by 65%."
+        },
+        "bonbelle": {
+          "name": "Bonbelle",
+          "desc": "Built a high-performing Shopify store that enhanced user experience and increased online sales by 65%."
+        },
+        "reirei": {
+          "name": "ReiRei",
+          "desc": "Built a high-performing Shopify store that enhanced user experience and increased online sales by 65%."
+        }
+      }
+    },
+    "process": {
+      "eyebrow": "Our Process",
+      "title": "How We Work",
+      "consultBtn": "Get Free Consultation",
+      "chatBtn": "Chat with Advisor",
+      "steps": {
+        "discover": {
+          "title": "Discover",
+          "text": "Understanding your business, customers, systems, and growth opportunities. Identifying challenges and uncovering opportunities that drive long-term digital success."
+        },
+        "strategy": {
+          "title": "Strategy",
+          "text": "Creating a digital roadmap aligned with your business objectives. Defining the right technology, processes, and priorities for sustainable growth."
+        },
+        "design": {
+          "title": "Design",
+          "text": "Crafting intuitive user experiences that customers love. Designing seamless digital journeys that improve engagement and conversions."
+        },
+        "develop": {
+          "title": "Develop",
+          "text": "Building scalable ecommerce platforms, CRM systems, and business applications. Developing secure, high-performance solutions tailored to your unique business needs."
+        },
+        "integrate": {
+          "title": "Integrate",
+          "text": "Connecting payment gateways, ERP, CRM, inventory, marketing automation, and third-party tools. Ensuring all your systems work together for efficient and streamlined operations."
+        },
+        "grow": {
+          "title": "Grow",
+          "text": "Continuous optimization through analytics, SEO, paid marketing, and conversion improvements. Using data-driven insights to increase performance, revenue, and customer retention."
+        }
+      },
+      "stepLabel": "STEP {{number}}"
     }
   },
   "pages": {
     "about": {
-      "heroTitle": "About Alva Tech",
-      "heroBody": "At Alva Tech, we combine strategic consulting with advanced digital solutions to transform how modern enterprises operate and grow. Our expertise spans high performance e-commerce, custom web and app development, data driven marketing, and scalable CRM and ERP implementations. Built on Swedish engineering excellence, we help organizations unlock efficiency, accelerate innovation, and future ready their digital ecosystem.",
-      "howTitle": "How Alva Tech helps",
-      "howBody": "Our solutions are designed to integrate seamlessly with your existing systems, ensuring a smooth transition and maximum ROI. We specialize in crafting tailored digital strategies that align with your business goals and drive measurable growth. With a focus on user experience, security, and scalability, we deliver solutions that not only meet your immediate needs but also position you for long-term success.",
+      "heroBody": "We combine strategy, technology, design, and marketing to help businesses adapt, innovate, and thrive in a rapidly evolving digital world.",
+      "howTitle": "Your Trusted Digital Commerce & Transformation Partner ",
+      "howBody": "Digital transformation is no longer optional—it's essential for growth, efficiency, and long-term competitiveness.  Alva Tech was founded with a simple mission: to help businesses leverage technology, automation, and digital experiences to unlock sustainable growth. Today, we partner with startups, growing brands, and established enterprises across Sweden, the Nordics, and Europe to build scalable digital ecosystems that connect commerce, operations, customer experiences, and marketing. Whether you're launching an ecommerce business, migrating to Shopify, implementing Salesforce, modernizing business operations, or scaling customer acquisition efforts, we provide the expertise needed to transform ideas into measurable outcomes. ",
       "stats": {
         "founded": "Alvatech founded.",
         "team": "Hardworking group.",
@@ -318,7 +572,7 @@
         }
       },
       "team": {
-        "title": "Our Executive Team",
+        "title": "Our Team",
         "roles": {
           "ceo": "CEO",
           "coo": "COO",
@@ -334,6 +588,26 @@
         "title": "We're looking for people who share our vision!",
         "subtitle": "Have what it takes to be one of us.",
         "button": "View current openings"
+      },
+      "heroEyebrow": "About Us",
+      "heroTitleLine1": "Driving  Digital Solutions",
+      "heroTitleThat": "That Drive",
+      "heroAccent": "Real Growth",
+      "heroButton": "Schedule A Virtual Call",
+      "trustTitle": "Why Modern Businesses Trust",
+      "mission": {
+        "mission": {
+          "title": "Our Mission",
+          "text": "To help businesses simplify complexity, accelerate growth, and create exceptional customer experiences through technology, automation, and data-driven innovation."
+        },
+        "vision": {
+          "title": "Our Vision",
+          "text": "To become Europe's most trusted digital transformation partner for businesses seeking to modernize, automate, and scale their operations in the digital economy."
+        }
+      },
+      "techStack": {
+        "eyebrow": "Our Technology Ecosystem",
+        "title": "Technologies We Work With"
       }
     },
     "integrations": {
@@ -401,19 +675,36 @@
       "button": "Contact Us"
     },
     "contact3": {
-      "introTitle": "Contact our team",
-      "introBody": "Got any questions about the product or scaling on our platform? We're here to help. Chat to our friendly team 24/7 and get onboard in less than 5 minutes.",
-      "mobileIntroTitle": "Contact our team",
-      "mobileIntroBody": "Got any questions about the product or scaling on our platform? Chat to our friendly team 24/7 for help.",
-      "chatTitle": "Chat with us",
-      "chatBody": "Speak to our friendly team via live chat.",
-      "liveChat": "Start a live chat",
-      "emailLink": "Shoot us an email",
-      "messageX": "Message us on X",
-      "callTitle": "Call us",
-      "callBody": "Call our team Mon-Fri from 8am to 5pm.",
-      "visitTitle": "Visit us",
-      "visitBody": "Chat to us in person at our Melbourne HQ."
+      "heroTitle": "Schedule A Consultation",
+      "heroSubtitle": "Our team is here to help you scale.",
+      "callUs": "Call Us",
+      "emailUs": "Email Us",
+      "title": "Contact Us",
+      "subtitle": "We're here to help! Send us a message and we'll get back to you as soon as possible.",
+      "form": {
+        "name": "Name",
+        "namePlaceholder": "Enter your full name",
+        "phone": "Phone Number",
+        "phonePlaceholder": "+46 70 496 45 69",
+        "email": "E-mail",
+        "emailPlaceholder": "Enter your email address",
+        "subject": "Subject",
+        "subjectPlaceholder": "Select a subject",
+        "message": "Message",
+        "messagePlaceholder": "Write your message here...",
+        "submit": "Send Message",
+        "submitting": "Sending...",
+        "privacyNote": "Your information is safe with us. We never share your details.",
+        "toastSuccess": "Message sent successfully.",
+        "toastError": "Unable to send right now. Please try again."
+      },
+      "detailsTitle": "Contact Details",
+      "callWhatsapp": "Call & WhatsApp Us",
+      "emailUsLabel": "Email Us",
+      "ourAddress": "Our Address",
+      "connectLinkedin": "Connect on LinkedIn",
+      "visitProfile": "Visit Profile",
+      "virtualMeet": "Virtual Meet"
     }
   },
   "mobile": {

@@ -9,7 +9,7 @@ import TrustedByBrands from "@/components/innerpages/integrations/TrustedByBrand
 import { integrationsFaq } from "@/data/faq";
 import { pageMetadataFor } from "@/data/pageMeta";
 
-export const metadata = pageMetadataFor("/page-integrations");
+export const metadata = pageMetadataFor("/services");
 export default function IntegrationPage() {
   return (
     <>
