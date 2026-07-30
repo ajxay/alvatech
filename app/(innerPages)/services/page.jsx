@@ -8,7 +8,7 @@ import Integrations from "@/components/innerpages/Integrations";
 import TrustedByBrands from "@/components/innerpages/integrations/TrustedByBrands";
 import { integrationsFaq } from "@/data/faq";
 import { pageMetadataFor } from "@/data/pageMeta";
-import Services from "@/components/homes/home-13/Services";
+
 export const metadata = pageMetadataFor("/services");
 export default function IntegrationPage() {
   return (
@@ -17,13 +17,11 @@ export default function IntegrationPage() {
         <Header3 />
 
         <div id="wrapper" className="wrap">
-          {/* <Services /> */}
           <Integrations />
           <Faq
             faqData={integrationsFaq}
             titleKey="pages.integrations.faqTitle"
           />
-          {/* <Testimonials /> */} {/* commented out testimonials section */}
           <TrustedByBrands />
           <Cta />
         </div>

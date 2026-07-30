@@ -399,6 +399,7 @@
     "services": {
       "title": "End-to-End Digital Transformation Services",
       "subtitle": "Connect every part of your business with integrations that will simplify your workflow.",
+      "learnMore": "Learn more",
       "items": {
         "shopify": {
           "title": "Shopify Development",

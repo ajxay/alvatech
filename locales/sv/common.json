@@ -399,6 +399,7 @@
     "services": {
       "title": "Heltäckande tjänster för digital transformation",
       "subtitle": "Koppla samman varje del av verksamheten med integrationer som förenklar era arbetsflöden.",
+      "learnMore": "Läs mer",
       "items": {
         "shopify": {
           "title": "Shopify-utveckling",

@@ -1,15 +1,23 @@
-/* Services grid — Figma: 3x2 of 358x529 white cards on a green->white
-   gradient band; each card is a 358x239 illustration over title, blurb and
+/* Services grid — Figma: 3x2 of white cards on a green->white
+   gradient band; each card is an illustration over title, blurb and
    five green-checked features. */
 
 .home13-services {
-  /* Full-bleed: it renders inside the seamless section's max-width container,
-     but the gradient band spans the viewport (page wrapper is overflow-x
-     hidden, so 100vw introduces no horizontal scroll). */
-  width: 100vw;
-  margin-inline: calc(50% - 50vw);
+  width: 100%;
   padding: 56px 0;
   background: linear-gradient(180deg, #d9ead0 0%, #f5f9f1 42%, #fff 100%);
+}
+
+.home13-services__inner {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.home13-services .home13-header {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 760px;
 }
 
 .home13-services__grid {
@@ -44,6 +52,7 @@
 .home13-services__body {
   display: flex;
   flex-direction: column;
+  flex: 1 1 auto;
   padding: 20px 16px 24px;
 }
 
@@ -94,6 +103,33 @@
   color: #364153;
 }
 
+.home13-services .home13-services__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 20px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #84ba41;
+  text-decoration: none;
+}
+
+.home13-services .home13-services__cta:hover span,
+.home13-services .home13-services__cta:focus-visible span {
+  text-decoration: underline;
+}
+
+.home13-services .home13-services__cta svg {
+  flex: 0 0 auto;
+}
+
+.home13-services .home13-services__cta svg path {
+  fill: none;
+  stroke: #84ba41;
+}
+
 .home13-services__check {
   flex: 0 0 auto;
 }
@@ -117,6 +153,10 @@
 @media (max-width: 575px) {
   .home13-services {
     padding: 48px 0 56px;
+  }
+
+  .home13-services__inner {
+    padding: 0 16px;
   }
 
   .home13-services__grid {

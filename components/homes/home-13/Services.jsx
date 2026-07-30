@@ -22,7 +22,7 @@ const services = [
   {
     id: "customDevelopment",
     image: "/assets/images/home-13/services/updated/Custom-Development-Alvatech.png",
-    href: "/services",
+    href: "/services/custom-ecommerce-development-services",
     features: ["a", "b", "c", "d", "e"],
   },
 
@@ -87,7 +87,7 @@ export default function Services() {
 
   return (
     <section className="home13-services">
-      <div className="container sm:max-w-lg xl:max-w-xl">
+      <div className="home13-services__inner">
         <header className="home13-header">
           <h2>{t("home13.services.title")}</h2>
           <p>{t("home13.services.subtitle")}</p>
@@ -129,6 +129,19 @@ export default function Services() {
                       </li>
                     ))}
                   </ul>
+                  <Link href={service.href} className="home13-services__cta">
+                    <span>{t("home13.services.learnMore")}</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                      <path
+                        d="M3 8H13M9 12L13 8L9 4"
+                        fill="none"
+                        stroke="#84BA41"
+                        strokeWidth="1.6"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </Link>
                 </div>
               </article>
             );
