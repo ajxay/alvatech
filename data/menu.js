@@ -48,11 +48,6 @@ export const menuItems = [
     ],
   },
   {
-    id: 3,
-    href: "/services",
-    tKey: "nav.menu.services",
-  },
-  {
     id: 4,
     href: "/about-us",
     tKey: "nav.menu.aboutUs",

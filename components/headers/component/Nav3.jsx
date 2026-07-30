@@ -32,23 +32,12 @@ export default function Nav3() {
               <div className="row gx-5 col-match justify-between">
                 <div className="col-8">
                   <div className="panel vstack gap-4 py-4">
-                    <div className="panel vstack gap-4">
-                      <div className="hstack gap-4 justify-between">
+                      <div className="panel vstack gap-4">
                         <h5 className="h5 fw-medium m-0">
                           Discover our Products &amp; Solutions
                         </h5>
-                        <Link
-                          href={`/page-features`}
-                          className="btn btn-sm dark:text-white"
-                        >
-                          <span>See what's new</span>
-                          <span className="cstack w-32px h-32px rounded-circle bg-primary-100 dark:bg-primary">
-                            <i className="icon-narrow unicon-arrow-right fw-bold rtl:rotate-180" />
-                          </span>
-                        </Link>
-                      </div>
-                      <div className="row child-cols-4 g-3">
-                        {features.map((feature, index) => (
+                        <div className="row child-cols-4 g-3">
+                          {features.map((feature, index) => (
                           <div key={index}>
                             <Link
                               href={feature.link}

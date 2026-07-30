@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import { openNewsletterModal } from "@/utlis/toggleNewsletterModal";
-import { features, links } from "@/data/menu";
+import { features } from "@/data/menu";
 
 export default function Nav2() {
   const { t, i18n } = useTranslation("common");
@@ -29,74 +29,37 @@ export default function Nav2() {
         <div
           className="uc-navbar-dropdown uc-products p-0 ft-primary text-unset fs-6 fw-normal hide-scrollbar border-top border-dark dark:border-white border-opacity-5 rounded-2 overflow-hidden shadow-xl bg-white dark:bg-gray-900 uc-drop"
           data-uc-drop="mode: click; pos: bottom-center; offset: 0; boundary: !.uc-navbar; animation: uc-animation-slide-top-small; duration: 150;"
-          style={{ width: "min(1120px, 96vw)" }}
+          style={{ width: "min(860px, 96vw)" }}
         >
           <div className="container max-w-none px-3 lg:px-4">
-            <div className="uc-dropbar-inner after-bg ">
-              <div className="row gx-5 col-match justify-between ">
-                <div className="col-8">
-                  <div className="panel vstack gap-4 py-4">
-                    <div className="panel vstack gap-4">
-                      <div className="hstack gap-4 justify-between">
-                        <h5 className="h5 fw-medium m-0">
-                          {t("nav.dropdown.discoverTitle")}
-                        </h5>
-                        <Link
-                          href={`/services/custom-shopify-development-services`}
-                          className="btn btn-sm dark:text-white"
-                        >
-                          <span>{t("nav.dropdown.seeWhatsNew")}</span>
-                          <span className="cstack w-32px h-32px rounded-circle bg-primary-100 dark:bg-primary">
-                            <i className="icon-narrow unicon-arrow-right fw-bold rtl:rotate-180" />
-                          </span>
-                        </Link>
-                      </div>
-                      <div className="row child-cols-4 g-3">
-                        {features.map((feature, index) => (
-                          <div key={index}>
-                            <Link
-                              href={feature.link}
-                              className="hstack items-start gap-2 p-2 text-none rounded-1-5 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150"
-                            >
-                              <span className="icon">
-                                <i
-                                  className={`icon-2 ${feature.iconClass} text-gray-900 dark:text-white`}
-                                />
-                              </span>
-                              <div className="panel">
-                                <h6 className="h6 fs-7 fw-medium mb-narrow">
-                                  {t(feature.tTitleKey)}
-                                </h6>
-                                <p className="fs-8 text-muted">
-                                  {t(feature.tDescKey)}
-                                </p>
-                              </div>
-                            </Link>
-                          </div>
-                        ))}
-                      </div>
+            <div className="uc-dropbar-inner">
+              <div className="panel vstack gap-4 py-4">
+                <h5 className="h5 fw-medium m-0">
+                  {t("nav.dropdown.discoverTitle")}
+                </h5>
+                <div className="row child-cols-4 g-3">
+                  {features.map((feature, index) => (
+                    <div key={index}>
+                      <Link
+                        href={feature.link}
+                        className="hstack items-start gap-2 p-2 text-none rounded-1-5 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150"
+                      >
+                        <span className="icon">
+                          <i
+                            className={`icon-2 ${feature.iconClass} text-gray-900 dark:text-white`}
+                          />
+                        </span>
+                        <div className="panel">
+                          <h6 className="h6 fs-7 fw-medium mb-narrow">
+                            {t(feature.tTitleKey)}
+                          </h6>
+                          <p className="fs-8 text-muted">
+                            {t(feature.tDescKey)}
+                          </p>
+                        </div>
+                      </Link>
                     </div>
-                  </div>
-                </div>
-                <div className="col-4">
-                  <div className="panel vstack gap-4 p-5 bg-gray-25 dark:bg-gray-800">
-                    <div className="panel category-section">
-                      <h6 className="h6 fs-8 text-uppercase">
-                        {t("nav.dropdown.getStartedTitle")}
-                      </h6>
-                      <ul className="uc-nav uc-navbar-dropdown-nav fs-7 fw-normal row child-cols-12">
-                        {links.map((link, index) => (
-                          <li key={index}>
-                            {link.isInternal ? (
-                              <Link href={link.href}>{t(link.tKey)}</Link>
-                            ) : (
-                              <a href={link.href}>{t(link.tKey)}</a>
-                            )}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -206,9 +169,6 @@ export default function Nav2() {
         </div>
       </li>
 
-      <li>
-        <a href="/services">{t("nav.menu.services")}</a>
-      </li>
       <li>
         <a href="/about-us">{t("nav.menu.aboutUs")}</a>
       </li>

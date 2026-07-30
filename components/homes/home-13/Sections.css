@@ -266,7 +266,7 @@
 
 .home13-app-strip h3 {
   margin: 0;
-  font-size: 32px;
+  font-size: 28px;
   line-height: 1.25;
   color: #434243;
   font-weight: 500;
@@ -307,7 +307,7 @@
 
 .home13-marketplaces__header h3 {
   margin: 0;
-  font-size: 44px;
+  font-size: 28px;
   line-height: 1.2;
   color: #434243;
   font-weight: 500;
@@ -951,7 +951,7 @@
   }
 
   .home13-marketplaces__header h3 {
-    font-size: 36px;
+    font-size: 28px;
   }
 
   .home13-marketplaces__middle {
@@ -1154,8 +1154,8 @@
   }
 
   .home13-marketplaces__header h3 {
-    font-size: 32px;
-    line-height: 40px;
+    font-size: 28px;
+    line-height: 36px;
   }
 
   .home13-marketplaces__header p {
