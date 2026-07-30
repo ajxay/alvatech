@@ -12,60 +12,10 @@ import { blogsPosts4, localizePost } from "@/data/blogs";
 import Services from "./Services";
 import TechStack from "./TechStack";
 import CaseStudies from "./CaseStudies";
+import TrustedClients from "./TrustedClients";
 import "swiper/css/pagination";
 import "./Sections.css";
 import Faq from "./Faq";
-
-const trustedLogos = [
-  {
-    src: "/assets/images/home-13/trust/logo-smile.svg",
-    alt: "Smile",
-    width: 132,
-    height: 29,
-  },
-  {
-    src: "/assets/images/home-13/trust/logo-who.svg",
-    alt: "World Health Organization",
-    width: 129,
-    height: 40,
-  },
-  {
-    src: "/assets/images/home-13/trust/logo-geggamoja.svg",
-    alt: "Geggamoja",
-    width: 273,
-    height: 24,
-  },
-  {
-    src: "/assets/images/home-13/trust/logo-reirei.svg",
-    alt: "reirei",
-    width: 104,
-    height: 36,
-  },
-  {
-    src: "/assets/images/home-13/trust/logo-haier.svg",
-    alt: "Haier",
-    width: 104,
-    height: 40,
-  },
-  {
-    src: "/assets/images/home-13/trust/logo-smile-boutique.svg",
-    alt: "Smile Boutique",
-    width: 89,
-    height: 40,
-  },
-  {
-    src: "/assets/images/home-13/trust/logo-home-therapy.svg",
-    alt: "Home Therapy",
-    width: 91,
-    height: 41,
-  },
-  {
-    src: "/assets/images/home-13/trust/logo-cox-kings.svg",
-    alt: "Cox and Kings",
-    width: 154,
-    height: 40,
-  },
-];
 
 const integrationCardLayout = [
   {
@@ -360,51 +310,6 @@ const getBlogPosts = (language) =>
       authorImageSrc: post.authorImg,
     };
   });
-
-const trustLogos = [
-  {
-    src: "/assets/images/home-13/trust/review-1563.png",
-    alt: "Bonbelle",
-    w: 211,
-    h: 37,
-  },
-  {
-    src: "/assets/images/home-13/trust/review-asset18.png",
-    alt: "Smile",
-    w: 127,
-    h: 28,
-  },
-  {
-    src: "/assets/images/home-13/trust/review-asset4.png",
-    alt: "Tincleton Solar and Nera Electrical",
-    w: 401,
-    h: 48,
-  },
-  {
-    src: "/assets/images/home-13/trust/review-asset11.png",
-    alt: "Geggamoja",
-    w: 264,
-    h: 23,
-  },
-  {
-    src: "/assets/images/home-13/trust/review-1564.png",
-    alt: "Kit & Kin",
-    w: 161,
-    h: 28,
-  },
-  {
-    src: "/assets/images/home-13/trust/review-1561.png",
-    alt: "Morning Owl",
-    w: 84,
-    h: 45,
-  },
-  {
-    src: "/assets/images/home-13/trust/review-asset12.png",
-    alt: "reirei",
-    w: 96,
-    h: 33,
-  },
-];
 
 export const team = [
   {
@@ -873,30 +778,7 @@ export default function Sections() {
             </div>
           </div>
 
-          <div className="home13-techstack__trust">
-            <div className="home13-techstack__trust-head">
-              <h3>{t("home13.techStack.trustTitle")}</h3>
-              <p className="home13-techstack__trust-sub">
-                {t("home13.techStack.trustReviews")}
-              </p>
-            </div>
-            <div className="home13-techstack__trust-logos">
-              {trustLogos.map((logo) => (
-                <span
-                  key={logo.src}
-                  className="home13-techstack__trust-logo"
-                  style={{ width: `${logo.w}px` }}
-                >
-                  <Image
-                    src={logo.src}
-                    alt={logo.alt}
-                    width={logo.w}
-                    height={logo.h}
-                  />
-                </span>
-              ))}
-            </div>
-          </div>
+          <TrustedClients />
           <TechStack />
           <CaseStudies />
         </div>

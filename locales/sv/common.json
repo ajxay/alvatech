@@ -486,7 +486,7 @@
       "marketingEyebrow": "Vårt marknadsföringsekosystem",
       "marketingTitle": "Marknadsföringsplattformar vi arbetar med",
       "trustTitle": "Betrodd partner för digital transformation",
-      "trustReviews": "Organisationer över hela världen förlitar sig på Alva Tech för att modernisera handeln, effektivisera verksamheten och skapa hållbar tillväxt genom teknik och marknadsföring i toppklass."
+      "trustReviews": "Organisationer över hela världen förlitar sig på oss för att modernisera handeln, effektivisera verksamheten och skapa hållbar tillväxt genom teknik och marknadsföring i toppklass."
     },
     "caseStudies": {
       "eyebrow": "Fallstudier",
@@ -608,6 +608,43 @@
       "techStack": {
         "eyebrow": "Vårt teknikekosystem",
         "title": "Teknologier vi arbetar med"
+      },
+      "faq": {
+        "title": "Vanliga frågor:",
+        "items": {
+          "1": {
+            "question": "Vad specialiserar sig Alva Tech på?",
+            "answer": "Alva Tech är ett bolag inom digital commerce och digital transformation som hjälper företag att modernisera, automatisera och skala genom e-handelsutveckling, Shopify-lösningar, Salesforce-konsultation, Zoho CRM-implementation, ERP-utveckling och digital marknadsföring. Vi arbetar med företag i Sverige, Norden, Europa och på globala marknader för att skapa skalbara digitala ekosystem som driver mätbar tillväxt."
+          },
+          "2": {
+            "question": "Vilka branscher arbetar Alva Tech med?",
+            "answer": "Vi arbetar med företag inom en mängd olika branscher, bland annat e-handel, detaljhandel, mode, möbler, tillverkning, hälso- och sjukvård, utbildning, partihandel, professionella tjänster, livsmedel och dryck samt B2B-handel. Vår erfarenhet från flera branscher gör att vi kan förstå unika affärsutmaningar och leverera skräddarsydda lösningar för digital transformation."
+          },
+          "3": {
+            "question": "Hur skiljer sig Alva Tech från en traditionell webbutvecklingsbyrå?",
+            "answer": "Till skillnad från traditionella webbutvecklingsbyråer som främst fokuserar på att bygga webbplatser levererar Alva Tech heltäckande lösningar för digital transformation. Vi kombinerar teknikrådgivning, e-handelsutveckling, CRM- och ERP-implementation, automatisering, integrationer och tillväxtmarknadsföring för att hjälpa företag förbättra verksamheten, stärka kundupplevelser och uppnå långsiktig tillväxt."
+          },
+          "4": {
+            "question": "Varför väljer företag Alva Tech som partner för digital transformation?",
+            "answer": "Företag väljer Alva Tech eftersom vi samlar strategi, teknik och marknadsföring under ett och samma tak. Vi börjar med att förstå affärsmålen och rekommenderar sedan lösningar som förbättrar effektiviteten, ökar intäkterna och stödjer framtida tillväxt. Vår långsiktiga partnerskapsmodell säkerställer att kunderna får fortsatt stöd och optimering även efter leverans."
+          },
+          "5": {
+            "question": "Arbetar Alva Tech med företag utanför Sverige?",
+            "answer": "Ja. Även om Alva Tech har sitt huvudkontor i Sverige arbetar vi med företag i Norden, Europa, Storbritannien och på internationella marknader. Vår remote-first-samarbetsmodell gör att vi framgångsrikt kan leverera projekt inom digital transformation för kunder världen över."
+          },
+          "6": {
+            "question": "Hur arbetar Alva Tech med projekt inom digital transformation?",
+            "answer": "Vårt arbetssätt börjar med att förstå kundens affärsmål, utmaningar och tillväxtmöjligheter. Därefter tar vi fram en skräddarsydd strategi, designar skalbara lösningar, implementerar rätt teknik, integrerar nyckelsystem och optimerar prestandan kontinuerligt. Denna strukturerade process säkerställer att varje lösning skapar mätbart affärsvärde."
+          },
+          "7": {
+            "question": "Kan Alva Tech stödja företag efter att projektet är avslutat?",
+            "answer": "Ja. Vi ser framgångsrik digital transformation som en pågående resa snarare än ett engångsprojekt. Vi erbjuder kontinuerligt stöd, underhåll, optimering, marknadsföring och strategisk rådgivning för att hjälpa företag anpassa sig till förändrade marknadsförhållanden och uppnå hållbar tillväxt."
+          },
+          "8": {
+            "question": "Vad kännetecknar en bra partner för digital transformation?",
+            "answer": "En bra partner för digital transformation bör kombinera affärsförståelse, teknisk expertis, branscherfarenhet och ett långsiktigt tillväxttänk. Rätt partner implementerar inte bara teknik utan hjälper också till att koppla digitala initiativ till affärsmål, förbättra den operativa effektiviteten och skapa mätbara resultat. På Alva Tech fokuserar vi på lösningar som ger verklig affärsnytta – inte bara på att driftsätta programvara eller plattformar."
+          }
+        }
       }
     },
     "integrations": {
