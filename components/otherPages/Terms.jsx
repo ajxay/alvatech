@@ -19,24 +19,26 @@ export default function Terms() {
               &quot;our&quot;, or &quot;us&quot;).
             </p>
             <p>
-              These Terms &amp; Conditions (&quot;Terms&quot;) govern your access to
-              and use of our website, products, services, consultations, software
-              solutions, and digital platforms.
+              These Terms &amp; Conditions (&quot;Terms&quot;) govern your
+              access to and use of our website, products, services,
+              consultations, software solutions, and digital platforms.
             </p>
             <p>
-              By accessing or using this website, you acknowledge that you have read,
-              understood, and agreed to be bound by these Terms.
+              By accessing or using this website, you acknowledge that you have
+              read, understood, and agreed to be bound by these Terms.
             </p>
             <p>
-              If you do not agree with these Terms, please refrain from using our
-              website or services.
+              If you do not agree with these Terms, please refrain from using
+              our website or services.
             </p>
 
-            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">1. Company Information</h3>
+            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">
+              1. Company Information
+            </h3>
             <p>
-              Alva Tech is a Digital Commerce &amp; Transformation Solutions Company
-              providing services across Sweden, the Nordics, Europe, and international
-              markets.
+              Alva Tech is a Digital Commerce &amp; Transformation Solutions
+              Company providing services across Sweden, the Nordics, Europe, and
+              international markets.
             </p>
             <p>Our services include:</p>
             <ul className="list list-bullets">
@@ -57,19 +59,26 @@ export default function Terms() {
             </p>
             <p>
               Website:{" "}
-              <a href="https://www.alvatech.se" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.alvatech.se"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 www.alvatech.se
               </a>
             </p>
 
-            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">2. Acceptance of Terms</h3>
+            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">
+              2. Acceptance of Terms
+            </h3>
             <p>
-              By using this website or engaging our services, you agree to comply with
-              these Terms and all applicable laws and regulations.
+              By using this website or engaging our services, you agree to
+              comply with these Terms and all applicable laws and regulations.
             </p>
             <p>
-              If you are using our services on behalf of an organization, you confirm
-              that you have the authority to bind that organization to these Terms.
+              If you are using our services on behalf of an organization, you
+              confirm that you have the authority to bind that organization to
+              these Terms.
             </p>
 
             <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">3. Our Services</h3>
@@ -92,9 +101,9 @@ export default function Terms() {
               <li>Maintenance &amp; support</li>
             </ul>
             <p>
-              The scope of work for each project will be defined separately through
-              proposals, quotations, Statements of Work (SOW), Master Service
-              Agreements (MSA), or signed contracts.
+              The scope of work for each project will be defined separately
+              through proposals, quotations, Statements of Work (SOW), Master
+              Service Agreements (MSA), or signed contracts.
             </p>
 
             <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">4. Website Use</h3>
@@ -113,9 +122,12 @@ export default function Terms() {
               detected.
             </p>
 
-            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">5. Intellectual Property</h3>
+            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">
+              5. Intellectual Property
+            </h3>
             <p>
-              Unless otherwise stated, all website content is owned by Alva Tech.
+              Unless otherwise stated, all website content is owned by Alva
+              Tech.
             </p>
             <p>This includes:</p>
             <ul className="list list-bullets">
@@ -134,12 +146,14 @@ export default function Terms() {
               <li>Marketing materials</li>
             </ul>
             <p>
-              Nothing contained on this website grants permission to copy, reproduce,
-              distribute, modify, or commercially exploit our intellectual property
-              without written permission.
+              Nothing contained on this website grants permission to copy,
+              reproduce, distribute, modify, or commercially exploit our
+              intellectual property without written permission.
             </p>
 
-            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">6. Client Responsibilities</h3>
+            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">
+              6. Client Responsibilities
+            </h3>
             <p>Clients agree to:</p>
             <ul className="list list-bullets">
               <li>Provide accurate information</li>
@@ -147,51 +161,59 @@ export default function Terms() {
               <li>Review deliverables promptly</li>
               <li>Provide necessary approvals</li>
               <li>Cooperate during implementation</li>
-              <li>Maintain licenses for third-party software where applicable</li>
+              <li>
+                Maintain licenses for third-party software where applicable
+              </li>
             </ul>
             <p>
-              Project timelines may be affected if required information or approvals are
-              delayed.
+              Project timelines may be affected if required information or
+              approvals are delayed.
             </p>
 
-            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">7. Quotations &amp; Project Proposals</h3>
+            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">
+              7. Quotations &amp; Project Proposals
+            </h3>
             <p>Unless otherwise stated:</p>
             <ul className="list list-bullets">
               <li>Quotations remain valid for 30 days</li>
               <li>Pricing excludes applicable taxes unless specified</li>
               <li>Scope changes may require revised pricing</li>
-              <li>Additional work outside the agreed scope will be quoted separately</li>
+              <li>
+                Additional work outside the agreed scope will be quoted
+                separately
+              </li>
             </ul>
             <p>
-              Any changes requested after project approval may impact cost and delivery
-              timelines.
+              Any changes requested after project approval may impact cost and
+              delivery timelines.
             </p>
 
             <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">8. Payment Terms</h3>
             <p>
-              Payment terms will be specified within project agreements or invoices.
+              Payment terms will be specified within project agreements or
+              invoices.
             </p>
             <p>Unless otherwise agreed:</p>
             <ul className="list list-bullets">
               <li>Invoices must be paid by the stated due date.</li>
               <li>
-                Late payments may incur applicable interest or collection costs where
-                permitted by law.
+                Late payments may incur applicable interest or collection costs
+                where permitted by law.
               </li>
               <li>
-                Ongoing services may be suspended if invoices remain unpaid after
-                reasonable notice.
+                Ongoing services may be suspended if invoices remain unpaid
+                after reasonable notice.
               </li>
             </ul>
             <p>
-              Ownership of project deliverables may remain with Alva Tech until all
-              agreed payments have been received.
+              Ownership of project deliverables may remain with Alva Tech until
+              all agreed payments have been received.
             </p>
 
             <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">9. Project Delivery</h3>
             <p>
-              Estimated delivery dates are based on information available at the time of
-              project planning.
+              Estimated delivery dates are based on information available at the
+              time of project planning.
             </p>
             <p>Delivery schedules may change due to:</p>
             <ul className="list list-bullets">
@@ -202,14 +224,16 @@ export default function Terms() {
               <li>Force Majeure events</li>
             </ul>
             <p>
-              We will make reasonable efforts to communicate any significant schedule
-              changes.
+              We will make reasonable efforts to communicate any significant
+              schedule changes.
             </p>
 
-            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">10. Third-Party Platforms</h3>
+            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">
+              10. Third-Party Platforms
+            </h3>
             <p>
-              Many projects involve third-party software and services, including but not
-              limited to:
+              Many projects involve third-party software and services, including
+              but not limited to:
             </p>
             <ul className="list list-bullets">
               <li>Shopify</li>
@@ -222,16 +246,19 @@ export default function Terms() {
               <li>Stripe</li>
               <li>Mailchimp</li>
             </ul>
-            <p>These services operate under their own terms and privacy policies.</p>
             <p>
-              Alva Tech is not responsible for changes, outages, pricing updates,
-              service interruptions, or decisions made by third-party providers.
+              These services operate under their own terms and privacy policies.
+            </p>
+            <p>
+              Alva Tech is not responsible for changes, outages, pricing
+              updates, service interruptions, or decisions made by third-party
+              providers.
             </p>
 
             <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">11. Confidentiality</h3>
             <p>
-              Both parties agree to protect confidential business information exchanged
-              during the course of a project.
+              Both parties agree to protect confidential business information
+              exchanged during the course of a project.
             </p>
             <p>Confidential information includes:</p>
             <ul className="list list-bullets">
@@ -244,19 +271,20 @@ export default function Terms() {
               <li>Commercial proposals</li>
             </ul>
             <p>
-              Confidential information will not be disclosed without prior written
-              consent unless required by law.
+              Confidential information will not be disclosed without prior
+              written consent unless required by law.
             </p>
 
             <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">12. Data Protection</h3>
             <p>
-              We process personal information in accordance with our Privacy Policy and
-              applicable data protection laws, including the General Data Protection
-              Regulation (GDPR).
+              We process personal information in accordance with our Privacy
+              Policy and applicable data protection laws, including the General
+              Data Protection Regulation (GDPR).
             </p>
             <p>
-              Where Alva Tech processes personal data on behalf of a client, the parties
-              may enter into a separate Data Processing Agreement (DPA), where required.
+              Where Alva Tech processes personal data on behalf of a client, the
+              parties may enter into a separate Data Processing Agreement (DPA),
+              where required.
             </p>
 
             <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">13. Client Content</h3>
@@ -271,12 +299,12 @@ export default function Terms() {
               <li>Marketing materials</li>
             </ul>
             <p>
-              Clients confirm they have the necessary rights to use and provide such
-              content.
+              Clients confirm they have the necessary rights to use and provide
+              such content.
             </p>
             <p>
-              Alva Tech is not responsible for copyright infringements arising from
-              materials supplied by clients.
+              Alva Tech is not responsible for copyright infringements arising
+              from materials supplied by clients.
             </p>
 
             <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">
@@ -285,33 +313,42 @@ export default function Terms() {
             <p>Unless otherwise agreed in writing:</p>
             <ul className="list list-bullets">
               <li>
-                Clients receive the rights to the final deliverables specifically
-                developed for them upon full payment.
+                Clients receive the rights to the final deliverables
+                specifically developed for them upon full payment.
               </li>
               <li>
-                Alva Tech retains ownership of pre-existing intellectual property,
-                reusable frameworks, proprietary tools, methodologies, templates,
-                internal libraries, and know-how used during project delivery.
+                Alva Tech retains ownership of pre-existing intellectual
+                property, reusable frameworks, proprietary tools, methodologies,
+                templates, internal libraries, and know-how used during project
+                delivery.
               </li>
             </ul>
             <p>
-              Open-source software and licensed third-party components remain subject to
-              their respective licenses.
+              Open-source software and licensed third-party components remain
+              subject to their respective licenses.
             </p>
 
-            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">15. Marketing &amp; Portfolio Rights</h3>
+            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">
+              15. Marketing &amp; Portfolio Rights
+            </h3>
             <p>
-              Unless prohibited by a written agreement, Alva Tech may reference completed
-              projects in its portfolio, case studies, website, proposals, and marketing
-              materials.
+              Unless prohibited by a written agreement, Alva Tech may reference
+              completed projects in its portfolio, case studies, website,
+              proposals, and marketing materials.
             </p>
-            <p>No confidential information will be disclosed without prior approval.</p>
-            <p>Clients may request confidentiality where commercially appropriate.</p>
+            <p>
+              No confidential information will be disclosed without prior
+              approval.
+            </p>
+            <p>
+              Clients may request confidentiality where commercially
+              appropriate.
+            </p>
 
             <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">16. Warranties</h3>
             <p>
-              We warrant that services will be performed with reasonable skill and care
-              consistent with industry standards.
+              We warrant that services will be performed with reasonable skill
+              and care consistent with industry standards.
             </p>
             <p>Except where required by law, we do not guarantee:</p>
             <ul className="list list-bullets">
@@ -322,9 +359,13 @@ export default function Terms() {
               <li>Platform availability</li>
               <li>Third-party software performance</li>
             </ul>
-            <p>Business outcomes depend on multiple factors beyond our control.</p>
+            <p>
+              Business outcomes depend on multiple factors beyond our control.
+            </p>
 
-            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">17. Limitation of Liability</h3>
+            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">
+              17. Limitation of Liability
+            </h3>
             <p>To the maximum extent permitted by applicable law:</p>
             <p>Alva Tech shall not be liable for:</p>
             <ul className="list list-bullets">
@@ -337,18 +378,20 @@ export default function Terms() {
               <li>Business interruption</li>
             </ul>
             <p>
-              Our total liability for claims arising from a specific project will not
-              exceed the amount paid to Alva Tech for the services directly giving rise
-              to the claim, unless otherwise required by law.
+              Our total liability for claims arising from a specific project
+              will not exceed the amount paid to Alva Tech for the services
+              directly giving rise to the claim, unless otherwise required by
+              law.
             </p>
             <p>
-              Nothing in these Terms excludes liability that cannot legally be excluded.
+              Nothing in these Terms excludes liability that cannot legally be
+              excluded.
             </p>
 
             <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">18. Force Majeure</h3>
             <p>
-              Neither party shall be liable for delays or failures resulting from events
-              beyond reasonable control.
+              Neither party shall be liable for delays or failures resulting
+              from events beyond reasonable control.
             </p>
             <p>Examples include:</p>
             <ul className="list list-bullets">
@@ -361,9 +404,14 @@ export default function Terms() {
               <li>Labor disputes</li>
               <li>Power failures</li>
             </ul>
-            <p>Affected obligations will be suspended for the duration of the event.</p>
+            <p>
+              Affected obligations will be suspended for the duration of the
+              event.
+            </p>
 
-            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">19. Service Availability</h3>
+            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">
+              19. Service Availability
+            </h3>
             <p>We strive to keep our website available at all times.</p>
             <p>However, availability cannot be guaranteed due to:</p>
             <ul className="list list-bullets">
@@ -373,30 +421,32 @@ export default function Terms() {
               <li>Third-party service interruptions</li>
             </ul>
             <p>
-              We reserve the right to modify or discontinue any part of the website
-              without prior notice.
+              We reserve the right to modify or discontinue any part of the
+              website without prior notice.
             </p>
 
             <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">20. External Links</h3>
             <p>Our website may include links to third-party websites.</p>
             <p>These links are provided for convenience only.</p>
             <p>
-              We do not endorse or assume responsibility for the content, security,
-              availability, or privacy practices of external websites.
+              We do not endorse or assume responsibility for the content,
+              security, availability, or privacy practices of external websites.
             </p>
 
             <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">21. Termination</h3>
             <p>
-              Either party may terminate a project or service in accordance with the
-              applicable agreement.
+              Either party may terminate a project or service in accordance with
+              the applicable agreement.
             </p>
             <p>Upon termination:</p>
             <ul className="list list-bullets">
               <li>Outstanding fees remain payable.</li>
-              <li>Completed work up to the termination date may be invoiced.</li>
               <li>
-                Each party must return or securely destroy confidential information
-                where appropriate.
+                Completed work up to the termination date may be invoiced.
+              </li>
+              <li>
+                Each party must return or securely destroy confidential
+                information where appropriate.
               </li>
             </ul>
             <p>
@@ -405,15 +455,19 @@ export default function Terms() {
             </p>
 
             <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">22. Governing Law</h3>
-            <p>These Terms are governed by the laws of the Kingdom of Sweden.</p>
             <p>
-              Subject to mandatory provisions of applicable law, disputes arising out of
-              or relating to these Terms shall be subject to the jurisdiction of the
-              competent courts of Sweden, unless the parties agree to an alternative
-              dispute resolution mechanism.
+              These Terms are governed by the laws of the Kingdom of Sweden.
+            </p>
+            <p>
+              Subject to mandatory provisions of applicable law, disputes
+              arising out of or relating to these Terms shall be subject to the
+              jurisdiction of the competent courts of Sweden, unless the parties
+              agree to an alternative dispute resolution mechanism.
             </p>
 
-            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">23. Changes to These Terms</h3>
+            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">
+              23. Changes to These Terms
+            </h3>
             <p>We may update these Terms from time to time.</p>
             <p>Changes become effective upon publication on this page.</p>
             <p>
@@ -422,20 +476,27 @@ export default function Terms() {
             </p>
             <p>We encourage users to review this page periodically.</p>
 
-            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">24. Contact Information</h3>
+            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">
+              24. Contact Information
+            </h3>
             <p>
-              If you have questions regarding these Terms &amp; Conditions, please
-              contact us.
+              If you have questions regarding these Terms &amp; Conditions,
+              please contact us.
             </p>
             <p>Company Name: Alva Tech AB</p>
             <p>
               Website:{" "}
-              <a href="https://www.alvatech.se" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.alvatech.se"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 www.alvatech.se
               </a>
             </p>
             <p>
-              Email: <a href="mailto:monica@alvatech.se">monica@alvatech.se</a>
+              Email:{" "}
+              <a href="mailto:anders.l@alvatech.se">anders.l@alvatech.se</a>
             </p>
             <p>
               General Enquiries:{" "}
@@ -445,11 +506,12 @@ export default function Terms() {
 
             <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">25. Entire Agreement</h3>
             <p>
-              These Terms, together with our Privacy Policy, Cookie Policy, applicable
-              proposals, Statements of Work, Master Service Agreements, Data Processing
-              Agreements, and any written project agreements, constitute the entire
-              understanding between Alva Tech and the client regarding the use of our
-              website and the services provided.
+              These Terms, together with our Privacy Policy, Cookie Policy,
+              applicable proposals, Statements of Work, Master Service
+              Agreements, Data Processing Agreements, and any written project
+              agreements, constitute the entire understanding between Alva Tech
+              and the client regarding the use of our website and the services
+              provided.
             </p>
           </div>
           <div className="page-footer panel">

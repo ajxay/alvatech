@@ -110,7 +110,7 @@
     "continueReading": "Fortsätt läsa",
     "readMore": "Läs mer",
     "ourInsights": "Våra insikter",
-    "latestPosts": "Senaste inlägg och uppdateringar",
+    "latestPosts": "Bloggar & artiklar",
     "viewAllPosts": "Visa alla inlägg",
     "featuredPost": "Utvalt inlägg",
     "popularNow": "Populärt just nu",
@@ -219,7 +219,8 @@
       }
     },
     "seamless": {
-      "title": "Sömlösa integrationer som driver er tillväxt",
+      "title": "Vår beprövade process för digital transformation",
+      "eyebrow": "Digital transform process",
       "subtitle": "Koppla verktygen, automatisera arbetsflöden och skapa ett enhetligt system som skalas med er verksamhet.",
       "previewAlt": "Förhandsvisning: {{title}}",
       "cards": {
@@ -278,7 +279,7 @@
       "experience": "År av branscherfarenhet"
     },
     "posts": {
-      "title": "Senaste inlägg och uppdateringar",
+      "title": "Bloggar & artiklar",
       "readAria": "Läs {{title}}"
     },
     "team": {
@@ -414,11 +415,11 @@
           "title": "E-handelsutveckling",
           "text": "Bygg kraftfulla e-handelsupplevelser anpassade efter era affärsmål med modern teknik och skalbar arkitektur.",
           "features": {
-            "a": "Skräddarsydd e-handelsutveckling",
-            "b": "Headless commerce",
-            "c": "Marknadsplatsintegration",
-            "d": "Mobil handel",
-            "e": "Shopify-utveckling"
+            "a": "Design & utveckling av Shopify-butik",
+            "b": "Migrering av e-handelsplattform",
+            "c": "Utveckling av e-handelsappar och teman",
+            "d": "Tredjepartsintegration & automatisering",
+            "e": "B2B-handelsutveckling"
           }
         },
         "salesforce": {
@@ -451,7 +452,7 @@
             "b": "ERP-integrationstjänster",
             "c": "Automatisering av affärsprocesser",
             "d": "Optimering av arbetsflöden",
-            "e": "Digital marknadsföring"
+            "e": "Modernisering av företagssystem"
           }
         },
         "marketing": {
@@ -467,13 +468,13 @@
         },
         "customDevelopment": {
           "title": "Skräddarsydd Utveckling",
-          "text": "Förvandla dina idéer till kraftfulla applikationer med vår expertis inom MERN-stack-utveckling. Vi bygger skalbara, säkra och högpresterande lösningar för långsiktig tillväxt.",
+          "text": "Vi utvecklar skräddarsydda webb-, mobil- och affärsapplikationer som är säkra, skalbara och anpassade efter ditt företags behov.",
           "features": {
             "a": "Skräddarsydda Webb-/Mobilapplikationer",
-            "b": "Företagsdashboards",
+            "b": "UI/UX-design",
             "c": "SaaS-produktutveckling",
             "d": "API- & Systemintegrationer",
-            "e": "Prestandaoptimering"
+            "e": "AI-lösningar & automatisering"
           }
         }
       }
@@ -496,15 +497,15 @@
       "items": {
         "geggamoja": {
           "name": "Geggamoja",
-          "desc": "Byggde en högpresterande Shopify-butik som förbättrade användarupplevelsen och ökade onlineförsäljningen med 65 %."
+          "desc": "30 % ökning av genomsnittligt ordervärde."
         },
         "bonbelle": {
           "name": "Bonbelle",
-          "desc": "Byggde en högpresterande Shopify-butik som förbättrade användarupplevelsen och ökade onlineförsäljningen med 65 %."
+          "desc": "105 % organisk trafikökning"
         },
         "reirei": {
           "name": "ReiRei",
-          "desc": "Byggde en högpresterande Shopify-butik som förbättrade användarupplevelsen och ökade onlineförsäljningen med 65 %."
+          "desc": "210 % ökning av konverteringsgrad"
         }
       }
     },
@@ -544,7 +545,7 @@
   },
   "pages": {
     "about": {
-      "heroBody": "Vi kombinerar strategi, teknik, design och marknadsföring för att hjälpa företag att anpassa sig, innovera och växa i en snabbrörlig digital värld.",
+      "heroBody": "På Alva Tech hjälper vi företag att omfamna digital transformation genom innovativ teknik, intelligent automatisering och tillväxtfokuserade marknadsföringslösningar. Från e-handelsutveckling och Shopify-lösningar till CRM-implementation, ERP-modernisering och digital marknadsföring ger vi organisationer möjlighet att skala med självförtroende i en allt mer digital värld.",
       "howTitle": "Din pålitliga partner för digital handel och digital transformation",
       "howBody": "Digital transformation är inte längre ett val – den är avgörande för tillväxt, effektivitet och långsiktig konkurrenskraft. Alva Tech grundades med ett tydligt uppdrag: att hjälpa företag att dra nytta av teknik, automatisering och digitala upplevelser för att skapa hållbar tillväxt. Idag samarbetar vi med startups, växande varumärken och etablerade företag i Sverige, Norden och övriga Europa för att bygga skalbara digitala ekosystem som sammanför e-handel, affärsprocesser, kundupplevelser och marknadsföring. Oavsett om du lanserar en e-handelsverksamhet, migrerar till Shopify, implementerar Salesforce, moderniserar dina affärsprocesser eller skalar upp din kundanskaffning, erbjuder vi den expertis som krävs för att omvandla idéer till mätbara resultat.",
       "stats": {
@@ -590,9 +591,7 @@
         "button": "Se lediga tjänster"
       },
       "heroEyebrow": "Om oss",
-      "heroTitleLine1": "Vi bygger digitala lösningar",
-      "heroTitleThat": "som driver",
-      "heroAccent": "verklig tillväxt",
+      "heroTitle": "Driver digital transformation för moderna företag",
       "heroButton": "Boka ett digitalt möte",
       "trustTitle": "Varför moderna företag litar på",
       "mission": {

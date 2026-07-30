@@ -22,11 +22,7 @@ export default function About() {
                   <p className="about-hero__eyebrow">{t("pages.about.heroEyebrow")}</p>
                   <span className="about-hero__rule" aria-hidden="true" />
                   <h1 className="h2 sm:h1 lg:display-6 m-0">
-                    {t("pages.about.heroTitleLine1")}{" "}
-                    {t("pages.about.heroTitleThat")}{" "}
-                    <span className="about-hero__accent">
-                      {t("pages.about.heroAccent")}
-                    </span>
+                    {t("pages.about.heroTitle")}
                   </h1>
                   <p className="fs-6 md:fs-5 text-dark dark:text-white text-opacity-70">
                     {t("pages.about.heroBody")}

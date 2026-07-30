@@ -16,21 +16,22 @@ export default function Privacy() {
           <div className="page-content panel fs-6 md:fs-5">
             <p>
               Welcome to Alva Tech AB (&quot;Alva Tech,&quot; &quot;we,&quot;
-              &quot;our,&quot; or &quot;us&quot;). We respect your privacy and are
-              committed to protecting your personal data. This Privacy Policy explains
-              how we collect, use, store, disclose, and protect your personal
-              information when you visit our website, use our services, or interact
-              with us.
+              &quot;our,&quot; or &quot;us&quot;). We respect your privacy and
+              are committed to protecting your personal data. This Privacy
+              Policy explains how we collect, use, store, disclose, and protect
+              your personal information when you visit our website, use our
+              services, or interact with us.
             </p>
             <p>
-              This Privacy Policy applies to all visitors, customers, prospective
-              customers, partners, suppliers, and users of our website.
+              This Privacy Policy applies to all visitors, customers,
+              prospective customers, partners, suppliers, and users of our
+              website.
             </p>
 
             <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">1. Who We Are</h3>
             <p>
-              Alva Tech is a Digital Commerce &amp; Transformation Solutions Company
-              providing services including:
+              Alva Tech is a Digital Commerce &amp; Transformation Solutions
+              Company providing services including:
             </p>
             <ul className="list list-bullets">
               <li>Custom Ecommerce Development</li>
@@ -49,19 +50,26 @@ export default function Privacy() {
             <p>Company Name: Alva Tech AB</p>
             <p>Registered Address: Norra Oskarsgatan 12, Linköping</p>
             <p>
-              Email: <a href="mailto:monica@alvatech.se">monica@alvatech.se</a>
+              Email:{" "}
+              <a href="mailto:anders.l@alvatech.se">anders.l@alvatech.se</a>
             </p>
             <p>
               Website:{" "}
-              <a href="https://www.alvatech.se" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.alvatech.se"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 https://www.alvatech.se
               </a>
             </p>
 
-            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">2. Scope of This Privacy Policy</h3>
+            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">
+              2. Scope of This Privacy Policy
+            </h3>
             <p>
-              This Privacy Policy explains how we process personal data collected
-              through:
+              This Privacy Policy explains how we process personal data
+              collected through:
             </p>
             <ul className="list list-bullets">
               <li>Our website</li>
@@ -75,10 +83,12 @@ export default function Privacy() {
               <li>Business communications</li>
             </ul>
 
-            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">3. What Personal Data We Collect</h3>
+            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">
+              3. What Personal Data We Collect
+            </h3>
             <p>
-              Depending on how you interact with us, we may collect the following
-              categories of personal information.
+              Depending on how you interact with us, we may collect the
+              following categories of personal information.
             </p>
             <p>
               <b>Identity Information</b>
@@ -122,8 +132,8 @@ export default function Privacy() {
               <b>Usage Information</b>
             </p>
             <p>
-              We collect information about how visitors interact with our website,
-              including:
+              We collect information about how visitors interact with our
+              website, including:
             </p>
             <ul className="list list-bullets">
               <li>Pages visited</li>
@@ -143,7 +153,9 @@ export default function Privacy() {
               <li>Form submissions</li>
             </ul>
 
-            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">4. How We Collect Personal Data</h3>
+            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">
+              4. How We Collect Personal Data
+            </h3>
             <p>We collect information in several ways.</p>
             <p>
               <b>Information You Provide</b>
@@ -183,8 +195,12 @@ export default function Privacy() {
               <li>Public business directories</li>
             </ul>
 
-            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">5. Why We Process Your Data</h3>
-            <p>We process personal information for legitimate business purposes.</p>
+            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">
+              5. Why We Process Your Data
+            </h3>
+            <p>
+              We process personal information for legitimate business purposes.
+            </p>
             <p>These include:</p>
             <ul className="list list-bullets">
               <li>Responding to enquiries</li>
@@ -200,10 +216,12 @@ export default function Privacy() {
               <li>Meeting legal obligations</li>
             </ul>
 
-            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">6. Legal Basis for Processing</h3>
+            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">
+              6. Legal Basis for Processing
+            </h3>
             <p>
-              Under the General Data Protection Regulation (GDPR), we process personal
-              data based on one or more of the following legal grounds:
+              Under the General Data Protection Regulation (GDPR), we process
+              personal data based on one or more of the following legal grounds:
             </p>
             <ul className="list list-bullets">
               <li>Your consent</li>
@@ -229,7 +247,10 @@ export default function Privacy() {
             <p>
               <b>Analytics Cookies</b>
             </p>
-            <p>Help us understand visitor behavior and improve website performance.</p>
+            <p>
+              Help us understand visitor behavior and improve website
+              performance.
+            </p>
             <p>Examples include:</p>
             <ul className="list list-bullets">
               <li>Google Analytics</li>
@@ -246,16 +267,16 @@ export default function Privacy() {
               <li>LinkedIn Insight Tag</li>
             </ul>
             <p>
-              Marketing cookies are only activated where required after obtaining your
-              consent through our cookie banner.
+              Marketing cookies are only activated where required after
+              obtaining your consent through our cookie banner.
             </p>
 
             <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">
               8. Google Ads &amp; Meta Advertising
             </h3>
             <p>
-              To measure campaign effectiveness and improve our advertising, we may use
-              services such as:
+              To measure campaign effectiveness and improve our advertising, we
+              may use services such as:
             </p>
             <ul className="list list-bullets">
               <li>Google Ads</li>
@@ -280,7 +301,9 @@ export default function Privacy() {
             </ul>
             <p>We do not sell your personal information to advertisers.</p>
 
-            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">9. How We Use Your Information</h3>
+            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">
+              9. How We Use Your Information
+            </h3>
             <p>Your information may be used to:</p>
             <ul className="list list-bullets">
               <li>Deliver requested services</li>
@@ -296,7 +319,9 @@ export default function Privacy() {
               <li>Comply with legal obligations</li>
             </ul>
 
-            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">10. Sharing Personal Data</h3>
+            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">
+              10. Sharing Personal Data
+            </h3>
             <p>We only share personal information where necessary.</p>
             <p>Recipients may include:</p>
             <ul className="list list-bullets">
@@ -309,18 +334,20 @@ export default function Privacy() {
               <li>Legal authorities where required</li>
             </ul>
             <p>
-              All third-party service providers are expected to process data securely
-              and in accordance with GDPR.
+              All third-party service providers are expected to process data
+              securely and in accordance with GDPR.
             </p>
 
-            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">11. International Data Transfers</h3>
+            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">
+              11. International Data Transfers
+            </h3>
             <p>
-              Some of our service providers may process data outside the European
-              Economic Area (EEA).
+              Some of our service providers may process data outside the
+              European Economic Area (EEA).
             </p>
             <p>
-              Where international transfers occur, we implement appropriate safeguards,
-              including:
+              Where international transfers occur, we implement appropriate
+              safeguards, including:
             </p>
             <ul className="list list-bullets">
               <li>European Commission Standard Contractual Clauses (SCCs)</li>
@@ -330,8 +357,8 @@ export default function Privacy() {
 
             <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">12. Data Security</h3>
             <p>
-              We implement appropriate technical and organizational measures to protect
-              personal data.
+              We implement appropriate technical and organizational measures to
+              protect personal data.
             </p>
             <p>These include:</p>
             <ul className="list list-bullets">
@@ -345,8 +372,8 @@ export default function Privacy() {
               <li>Security monitoring</li>
             </ul>
             <p>
-              While we strive to protect your information, no method of transmission
-              over the internet is completely secure.
+              While we strive to protect your information, no method of
+              transmission over the internet is completely secure.
             </p>
 
             <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">13. Data Retention</h3>
@@ -359,8 +386,8 @@ export default function Privacy() {
               <li>Enforce agreements</li>
             </ul>
             <p>
-              Retention periods may vary depending on the nature of the information and
-              applicable legal obligations.
+              Retention periods may vary depending on the nature of the
+              information and applicable legal obligations.
             </p>
 
             <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">14. Your GDPR Rights</h3>
@@ -375,31 +402,42 @@ export default function Privacy() {
               <li>Withdraw consent</li>
               <li>Lodge a complaint with a supervisory authority</li>
             </ul>
-            <p>To exercise these rights, please contact us using the details below.</p>
-
-            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">15. Children&apos;s Privacy</h3>
             <p>
-              Our website and services are intended for businesses and individuals aged
-              18 years or older.
-            </p>
-            <p>We do not knowingly collect personal information from children.</p>
-            <p>
-              If you believe a child has submitted personal information, please contact
-              us immediately so we can remove it.
+              To exercise these rights, please contact us using the details
+              below.
             </p>
 
-            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">16. Third-Party Websites</h3>
+            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">
+              15. Children&apos;s Privacy
+            </h3>
+            <p>
+              Our website and services are intended for businesses and
+              individuals aged 18 years or older.
+            </p>
+            <p>
+              We do not knowingly collect personal information from children.
+            </p>
+            <p>
+              If you believe a child has submitted personal information, please
+              contact us immediately so we can remove it.
+            </p>
+
+            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">
+              16. Third-Party Websites
+            </h3>
             <p>Our website may contain links to third-party websites.</p>
             <p>
-              We are not responsible for the privacy practices, policies, or content of
-              external websites.
+              We are not responsible for the privacy practices, policies, or
+              content of external websites.
             </p>
             <p>
-              We encourage you to review the privacy policies of any third-party sites
-              you visit.
+              We encourage you to review the privacy policies of any third-party
+              sites you visit.
             </p>
 
-            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">17. Email Communications</h3>
+            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">
+              17. Email Communications
+            </h3>
             <p>If you subscribe to our communications, we may send:</p>
             <ul className="list list-bullets">
               <li>Company news</li>
@@ -409,24 +447,29 @@ export default function Privacy() {
               <li>Event invitations</li>
             </ul>
             <p>
-              You may unsubscribe at any time using the unsubscribe link included in our
-              emails or by contacting us directly.
+              You may unsubscribe at any time using the unsubscribe link
+              included in our emails or by contacting us directly.
             </p>
 
-            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">18. Automated Decision-Making</h3>
+            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">
+              18. Automated Decision-Making
+            </h3>
             <p>
-              We do not make decisions that produce legal or similarly significant
-              effects based solely on automated processing of personal data.
+              We do not make decisions that produce legal or similarly
+              significant effects based solely on automated processing of
+              personal data.
             </p>
             <p>
-              Where automation is used for marketing personalization or analytics, it
-              does not replace human decision-making.
+              Where automation is used for marketing personalization or
+              analytics, it does not replace human decision-making.
             </p>
 
             <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">
               19. Changes to This Privacy Policy
             </h3>
-            <p>We may update this Privacy Policy from time to time to reflect:</p>
+            <p>
+              We may update this Privacy Policy from time to time to reflect:
+            </p>
             <ul className="list list-bullets">
               <li>Changes in legislation</li>
               <li>New services</li>
@@ -434,14 +477,14 @@ export default function Privacy() {
               <li>Business practices</li>
             </ul>
             <p>
-              The latest version will always be published on this page with the updated
-              revision date.
+              The latest version will always be published on this page with the
+              updated revision date.
             </p>
 
             <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">20. Contact Us</h3>
             <p>
-              If you have any questions regarding this Privacy Policy or how we process
-              your personal information, please contact us.
+              If you have any questions regarding this Privacy Policy or how we
+              process your personal information, please contact us.
             </p>
             <p>Company Name: Alva Tech AB</p>
             <p>Registered Address: Norra Oskarsgatan 12, Linköping</p>
@@ -450,16 +493,23 @@ export default function Privacy() {
             </p>
             <p>
               Website:{" "}
-              <a href="https://www.alvatech.se" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.alvatech.se"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 https://www.alvatech.se
               </a>
             </p>
 
-            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">21. Supervisory Authority</h3>
+            <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">
+              21. Supervisory Authority
+            </h3>
             <p>
-              If you believe your personal data has not been handled in accordance with
-              applicable laws, you have the right to lodge a complaint with Swedish
-              Authority for Privacy Protection (Integritetsskyddsmyndigheten – IMY).
+              If you believe your personal data has not been handled in
+              accordance with applicable laws, you have the right to lodge a
+              complaint with Swedish Authority for Privacy Protection
+              (Integritetsskyddsmyndigheten – IMY).
             </p>
           </div>
           <div className="page-footer panel">

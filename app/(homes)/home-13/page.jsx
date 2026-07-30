@@ -26,7 +26,6 @@ export default function HomeThirteenPage() {
             <About />
             {/* <WhyChoose /> */}
             <AboutWhyChoose />
-
             {/* <Features /> */}
             <Sections />
           </div>

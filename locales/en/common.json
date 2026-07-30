@@ -110,7 +110,7 @@
     "continueReading": "Continue reading",
     "readMore": "Read more",
     "ourInsights": "Our insights",
-    "latestPosts": "Latest Posts and Updates",
+    "latestPosts": "Blogs & Articles",
     "viewAllPosts": "View all posts",
     "featuredPost": "Featured post",
     "popularNow": "Popular now",
@@ -219,7 +219,8 @@
       }
     },
     "seamless": {
-      "title": "Seamless Integrations That Power Your Growth",
+      "title": "Our Proven Digital Transformation Process",
+      "eyebrow": "Digital Transform Process",
       "subtitle": "Connect your tools, automate workflows, and create a unified system that scales effortlessly with your business.",
       "previewAlt": "{{title}} preview",
       "cards": {
@@ -278,7 +279,7 @@
       "experience": "Years of industry experience"
     },
     "posts": {
-      "title": "Latest Posts and Updates",
+      "title": "Blogs & Articles",
       "readAria": "Read {{title}}"
     },
     "team": {
@@ -414,11 +415,11 @@
           "title": "Ecommerce Development",
           "text": "Build powerful ecommerce experiences tailored to your business goals using modern technologies and scalable architecture.",
           "features": {
-            "a": "Custom Ecommerce Development",
-            "b": "Headless Commerce",
-            "c": "Marketplace Integration",
-            "d": "Mobile Commerce",
-            "e": "Shopify Development"
+            "a": "Shopify Store Designing & Development",
+            "b": "E-Commerce Platform Migration",
+            "c": "E-Commerce App & Theme Development",
+            "d": "Third Party Integration & Automation",
+            "e": "B2B Commerce Development"
           }
         },
         "salesforce": {
@@ -451,7 +452,7 @@
             "b": "ERP Integration Services",
             "c": "Business Process Automation",
             "d": "Workflow Optimization",
-            "e": "Digital Marketing"
+            "e": "Enterprise System Modernization"
           }
         },
         "marketing": {
@@ -467,13 +468,13 @@
         },
         "customDevelopment": {
           "title": "Custom Development",
-          "text": "Transform your ideas into powerful applications with our expert MERN stack development services. We build scalable, secure, & high-performing solutions designed for long-term growth.",
+          "text": "We build custom web, mobile, and business applications that are secure, scalable, and tailored to your business needs.",
           "features": {
             "a": "Custom Web/Mobile Applications",
-            "b": "Enterprise Dashboards",
+            "b": "UI/UX Designing",
             "c": "SaaS Product Development",
             "d": "API & System Integrations",
-            "e": "Performance Optimization"
+            "e": "AI Solution & Automation"
           }
         }
       }
@@ -496,15 +497,15 @@
       "items": {
         "geggamoja": {
           "name": "Geggamoja",
-          "desc": "Built a high-performing Shopify store that enhanced user experience and increased online sales by 65%."
+          "desc": "30% Increase in Average Order Value."
         },
         "bonbelle": {
           "name": "Bonbelle",
-          "desc": "Built a high-performing Shopify store that enhanced user experience and increased online sales by 65%."
+          "desc": "105% Organic Traffic Growth"
         },
         "reirei": {
           "name": "ReiRei",
-          "desc": "Built a high-performing Shopify store that enhanced user experience and increased online sales by 65%."
+          "desc": "210% Increase in Conversion Rate"
         }
       }
     },
@@ -544,7 +545,7 @@
   },
   "pages": {
     "about": {
-      "heroBody": "We combine strategy, technology, design, and marketing to help businesses adapt, innovate, and thrive in a rapidly evolving digital world.",
+      "heroBody": "At Alva Tech, we help businesses embrace digital transformation through innovative technology, intelligent automation, and growth-focused marketing solutions. From ecommerce development and Shopify solutions to CRM implementation, ERP modernization, and digital marketing, we empower organizations to scale with confidence in an increasingly digital world.",
       "howTitle": "Your Trusted Digital Commerce & Transformation Partner ",
       "howBody": "Digital transformation is no longer optional—it's essential for growth, efficiency, and long-term competitiveness.  Alva Tech was founded with a simple mission: to help businesses leverage technology, automation, and digital experiences to unlock sustainable growth. Today, we partner with startups, growing brands, and established enterprises across Sweden, the Nordics, and Europe to build scalable digital ecosystems that connect commerce, operations, customer experiences, and marketing. Whether you're launching an ecommerce business, migrating to Shopify, implementing Salesforce, modernizing business operations, or scaling customer acquisition efforts, we provide the expertise needed to transform ideas into measurable outcomes. ",
       "stats": {
@@ -590,9 +591,7 @@
         "button": "View current openings"
       },
       "heroEyebrow": "About Us",
-      "heroTitleLine1": "Driving  Digital Solutions",
-      "heroTitleThat": "That Drive",
-      "heroAccent": "Real Growth",
+      "heroTitle": "Driving Digital Transformation for Modern Businesses",
       "heroButton": "Schedule A Virtual Call",
       "trustTitle": "Why Modern Businesses Trust",
       "mission": {

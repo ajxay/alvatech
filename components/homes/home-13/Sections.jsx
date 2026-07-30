@@ -555,9 +555,11 @@ export default function Sections() {
     <>
       <section className="home13-section home13-seamless">
         <div className="container sm:max-w-lg xl:max-w-xl">
-          <header className="home13-header">
+          <header className="home13-header home13-seamless__header">
+            <p className="home13-seamless__eyebrow">
+              {t("home13.seamless.eyebrow")}
+            </p>
             <h2>{t("home13.seamless.title")}</h2>
-            <p>{t("home13.seamless.subtitle")}</p>
           </header>
           <Swiper
             className="home13-seamless__carousel"
@@ -905,17 +907,13 @@ export default function Sections() {
           <header className="home13-header home13-posts__header">
             <h2>{t("home13.posts.title")}</h2>
           </header>
-          <div className="row child-cols-12 sm:child-cols-4 col-match gy-4 sm:gy-6 gx-2 xl:gx-4">
+          <div className="home13-posts__row">
             {blogPosts.map((post) => (
-              <div key={post.id}>
-                <article
-                  className="post type-post panel vstack gap-3 rounded-3 p-2 pb-3 bg-white dark:bg-gray-800"
-                  style={{
-                    border: "1px solid #e9ecf1",
-                    boxShadow: "0 8px 24px rgba(17, 24, 39, 0.06)",
-                  }}
-                >
-                  <figure className="featured-image m-0 rounded ratio ratio-3x2 rounded-2 uc-transition-toggle overflow-hidden">
+              <article
+                key={post.id}
+                className="home13-posts__item post type-post panel vstack gap-2 rounded-2 p-2 pb-2 bg-white dark:bg-gray-800"
+              >
+                  <figure className="home13-posts__item-media featured-image m-0 rounded ratio ratio-16x9 rounded-1-5 uc-transition-toggle overflow-hidden">
                     <Image
                       className="media-cover image uc-transition-scale-up uc-transition-opaque"
                       src={post.image}
@@ -929,10 +927,7 @@ export default function Sections() {
                       data-caption={post.title}
                     ></Link>
                   </figure>
-                  <header
-                    className="panel vstack items-center gap-1 lg:gap-2 px-2"
-                    style={{ flex: "1 1 auto" }}
-                  >
+                  <header className="home13-posts__item-body panel vstack items-center gap-1 px-1">
                     <Link
                       className="fs-7 fw-bold text-none text-white py-narrow px-1"
                       href={`/blog-category/${post.category}`}
@@ -940,24 +935,12 @@ export default function Sections() {
                     >
                       {post.category}
                     </Link>
-                    <h3
-                      className="h5 xl:h4 m-0 text-center"
-                      style={{
-                        display: "-webkit-box",
-                        WebkitLineClamp: 2,
-                        WebkitBoxOrient: "vertical",
-                        overflow: "hidden",
-                        minHeight: "2.4em",
-                      }}
-                    >
+                    <h3 className="home13-posts__item-title m-0 text-center">
                       <Link className="text-none" href={`/blog/${post.slug}`}>
                         {post.title}
                       </Link>
                     </h3>
-                    <ul
-                      className="post-meta nav-x ft-tertiary justify-center gap-1 fs-7 text-gray-400 dark:text-gray-300 d-none lg:d-flex"
-                      style={{ marginTop: "auto" }}
-                    >
+                    <ul className="home13-posts__item-meta post-meta nav-x ft-tertiary justify-center gap-1 fs-7 text-gray-400 dark:text-gray-300 d-none lg:d-flex">
                       <li>
                         <div className="hstack gap-narrow ft-tertiary">
                           <Image
@@ -983,8 +966,7 @@ export default function Sections() {
                       </li>
                     </ul>
                   </header>
-                </article>
-              </div>
+              </article>
             ))}
           </div>
         </div>
