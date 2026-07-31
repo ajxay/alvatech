@@ -33,3 +33,10 @@
     font-size: 16px;
   }
 }
+
+@media (max-width: 767px) {
+  .home13-faq__title {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}

@@ -1,17 +1,16 @@
 /* "About Alva Tech" band.
    Figma: full-bleed #faf9f8 strip 1440x653, 560px copy column at x=100, and a
-   776x653 illustration flush to the right edge with a 164px logo disc on top. */
+   776x653 illustration flush to the right edge with a 164px logo disc on top.
+   Mobile: illustration sits between the heading and paragraph copy. */
 
 .home13-about {
+  position: relative;
   background: #faf9f8;
   overflow: hidden;
 }
 
 .home13-about__grid {
-  display: grid;
-  /* 776 / 1440 of the frame */
-  grid-template-columns: minmax(0, 1fr) 53.888%;
-  align-items: center;
+  display: block;
 }
 
 .home13-about__body {
@@ -143,11 +142,40 @@
   height: auto;
 }
 
-@media (max-width: 991px) {
-  .home13-about__grid {
-    grid-template-columns: minmax(0, 1fr);
+/* Desktop: pull illustration to the right side of the band. */
+@media (min-width: 992px) {
+  .home13-about {
+    min-height: calc(522 / 1440 * 100vw);
   }
 
+  .home13-about__grid {
+    display: flex;
+    align-items: center;
+    min-height: inherit;
+  }
+
+  .home13-about__body {
+    width: 46.112%;
+    flex: 0 0 46.112%;
+    box-sizing: border-box;
+  }
+
+  .home13-about__media {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 53.888%;
+    height: 100%;
+    aspect-ratio: auto;
+    margin: 0;
+  }
+
+  .home13-about__illustration {
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 991px) {
   .home13-about__body {
     padding: 56px 24px 40px;
   }
@@ -158,16 +186,21 @@
 
   .home13-about__media {
     width: 100%;
+    margin: 28px 0 4px;
   }
 }
 
 @media (max-width: 575px) {
   .home13-about__title {
-    font-size: 28px;
-    line-height: 36px;
+    font-size: 22px;
+    line-height: 28px;
   }
 
   .home13-about__body {
     padding: 44px 20px 32px;
+  }
+
+  .home13-about__media {
+    margin: 24px 0 0;
   }
 }

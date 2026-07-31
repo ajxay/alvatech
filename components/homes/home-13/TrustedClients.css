@@ -112,6 +112,11 @@
 }
 
 @media (max-width: 767px) {
+  .home13-clients .home13-clients__title {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
   .home13-clients__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     border-radius: 12px;

@@ -116,6 +116,11 @@
   .about-tech-stack__grid {
     grid-template-columns: repeat(3, minmax(0, 160px));
   }
+
+  .about-tech-stack .about-tech-stack__title {
+    font-size: 22px;
+    line-height: 28px;
+  }
 }
 
 @media (max-width: 575px) {

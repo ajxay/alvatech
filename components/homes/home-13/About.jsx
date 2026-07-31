@@ -16,6 +16,27 @@ export default function About() {
           <div className="home13-about__content">
             <p className="home13-about__eyebrow">{t("home13.about.eyebrow")}</p>
             <h2 className="home13-about__title">{t("home13.about.title")}</h2>
+
+            <div className="home13-about__media">
+              <Image
+                src="/assets/images/home-13/about-alvatech.png"
+                alt={t("home13.about.title")}
+                width={776}
+                height={653}
+                className="home13-about__illustration"
+              />
+              {/* Figma overlays a #EFF2E6 disc plus the Alvatech wordmark on top of
+                  the illustration's own centre mark. */}
+              <span className="home13-about__badge" aria-hidden="true">
+                <Image
+                  src="/assets/images/common/main-logo.svg"
+                  alt=""
+                  width={161}
+                  height={24}
+                />
+              </span>
+            </div>
+
             <div className="home13-about__copy">
               <p>{t("home13.about.paragraph1")}</p>
               <p>{t("home13.about.paragraph2")}</p>
@@ -45,26 +66,6 @@ export default function About() {
               </Link>
             </div>
           </div>
-        </div>
-
-        <div className="home13-about__media">
-          <Image
-            src="/assets/images/home-13/about-alvatech.png"
-            alt={t("home13.about.title")}
-            width={776}
-            height={653}
-            className="home13-about__illustration"
-          />
-          {/* Figma overlays a #EFF2E6 disc plus the Alvatech wordmark on top of
-              the illustration's own centre mark. */}
-          <span className="home13-about__badge" aria-hidden="true">
-            <Image
-              src="/assets/images/common/main-logo.svg"
-              alt=""
-              width={161}
-              height={24}
-            />
-          </span>
         </div>
       </div>
     </section>

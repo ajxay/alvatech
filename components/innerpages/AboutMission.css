@@ -85,3 +85,10 @@
     padding: 32px 24px;
   }
 }
+
+@media (max-width: 767px) {
+  .about-trust__title {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}

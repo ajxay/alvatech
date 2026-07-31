@@ -1156,7 +1156,8 @@
   }
 
   .home13-header h2 {
-    font-size: 28px;
+    font-size: 22px;
+    line-height: 28px;
   }
 
   .home13-grid,
@@ -1208,7 +1209,8 @@
   }
 
   .home13-app-strip h3 {
-    font-size: 28px;
+    font-size: 22px;
+    line-height: 28px;
   }
 
   .home13-app-strip {
@@ -1228,8 +1230,8 @@
   }
 
   .home13-marketplaces__header h3 {
-    font-size: 28px;
-    line-height: 36px;
+    font-size: 22px;
+    line-height: 28px;
   }
 
   .home13-marketplaces__header p {
@@ -1366,7 +1368,8 @@
   }
 
   .home13-trust__title {
-    font-size: 28px;
+    font-size: 22px;
+    line-height: 28px;
   }
 
   .home13-trust__sub {

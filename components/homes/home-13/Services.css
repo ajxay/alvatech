@@ -200,6 +200,13 @@
   }
 }
 
+@media (max-width: 767px) {
+  .home13-services .home13-header h2 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
+
 @media (max-width: 575px) {
   .home13-services {
     padding: 48px 0 56px;
