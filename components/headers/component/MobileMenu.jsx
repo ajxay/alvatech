@@ -10,16 +10,24 @@ import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 export default function MobileMenu() {
-  const { t } = useTranslation("common");
+  const { t, i18n } = useTranslation("common");
   const { isDark, handleToggle } = useContextElement();
   const pathname = usePathname();
   const [activeParent1, setActiveParent1] = useState(-1);
   const [activeParent2, setActiveParent2] = useState(-1);
+  const [langMenuOpen, setLangMenuOpen] = useState(false);
   const elementRef = useRef(null);
   const containerRef = useRef(null);
+  const langMenuRef = useRef(null);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
+      if (
+        langMenuRef.current &&
+        !langMenuRef.current.contains(event.target)
+      ) {
+        setLangMenuOpen(false);
+      }
       if (
         containerRef.current && // Check if click is inside #mobileMenu
         containerRef.current.contains(event.target) &&
@@ -40,6 +48,11 @@ export default function MobileMenu() {
   useEffect(() => {
     closeMobileMenu();
   }, [pathname]);
+
+  const currentLanguageLabel =
+    i18n.language === "sv"
+      ? t("footer.languageSwedish")
+      : t("footer.languageEnglish");
 
   const isMenuActive = (menu) => {
     let isActive = false;
@@ -252,21 +265,78 @@ export default function MobileMenu() {
               {t("header.scheduleCall")}
             </a>
           </div>
-          <ul className="social-icons nav-x mt-4">
-            <li>
-              {socialLinks.map((icon, index) => (
-                <a
-                  key={index}
-                  href={icon.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={icon.label}
+          <div className="hstack justify-between items-center gap-2 mt-4">
+            <ul className="social-icons nav-x m-0">
+              <li>
+                {socialLinks.map((icon, index) => (
+                  <a
+                    key={index}
+                    href={icon.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={icon.label}
+                  >
+                    <i className={icon.iconClass} />
+                  </a>
+                ))}
+              </li>
+            </ul>
+            <div className="position-relative z-999" ref={langMenuRef}>
+              <button
+                type="button"
+                className="hstack items-center gap-narrow border-0 bg-transparent p-0"
+                style={{ color: "#434243" }}
+                aria-expanded={langMenuOpen}
+                aria-haspopup="listbox"
+                aria-label={t("labels.language")}
+                onClick={() => setLangMenuOpen((open) => !open)}
+              >
+                <i className="unicon-earth icon-1" />
+                <span className="fw-medium fs-7">{currentLanguageLabel}</span>
+                <i className="unicon-chevron-down icon-1 opacity-70" />
+              </button>
+              {langMenuOpen ? (
+                <ul
+                  className="position-absolute end-0 py-1 rounded-2 bg-white dark:bg-gray-800 shadow-xs border border-gray-100 dark:border-gray-700 list-unstyled m-0"
+                  style={{
+                    minWidth: 160,
+                    zIndex: 1000,
+                    bottom: "100%",
+                    top: "auto",
+                    marginBottom: 8,
+                  }}
+                  role="listbox"
                 >
-                  <i className={icon.iconClass} />
-                </a>
-              ))}
-            </li>
-          </ul>
+                  <li>
+                    <button
+                      type="button"
+                      className="w-100 text-start border-0 bg-transparent py-2 px-3 small"
+                      style={{ color: "#434243" }}
+                      onClick={() => {
+                        void i18n.changeLanguage("en");
+                        setLangMenuOpen(false);
+                      }}
+                    >
+                      {t("footer.languageEnglish")}
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      className="w-100 text-start border-0 bg-transparent py-2 px-3 small"
+                      style={{ color: "#434243" }}
+                      onClick={() => {
+                        void i18n.changeLanguage("sv");
+                        setLangMenuOpen(false);
+                      }}
+                    >
+                      {t("footer.languageSwedish")}
+                    </button>
+                  </li>
+                </ul>
+              ) : null}
+            </div>
+          </div>
           <div
             className="py-2 hstack gap-2 mt-4 bg-white dark:bg-gray-900 uc-sticky uc-active uc-sticky-fixed"
             data-uc-sticky="position: bottom"

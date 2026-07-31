@@ -761,13 +761,14 @@ export default function Sections() {
               className="home13-cta__sparkle home13-cta__sparkle--left"
             />
             <div className="home13-cta__content">
-              <h2>
-                {t("home13.cta.titleTop")}
-                <br />
-                {t("home13.cta.titleBottom")}
-              </h2>
+              <h2>{t("home13.cta.title")}</h2>
               <p>{t("home13.cta.subtitle")}</p>
-              <Link href="/contact-us" className="home13-cta__button">
+              <Link
+                href="https://calendly.com/nikhil-k-alvatech/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="home13-cta__button"
+              >
                 {t("home13.cta.button")}
               </Link>
             </div>

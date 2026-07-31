@@ -129,12 +129,9 @@
      differences actually render. */
   font-family: "Inter", "Helvetica Neue", system-ui, sans-serif !important;
   font-weight: 300 !important;
-  /* Fluid so the single-line (nowrap) title always fits the viewport — the
-     widest line is ~18x the font-size, so ~4.9vw leaves side margins. Caps at
-     90px on large screens. */
-  font-size: min(4.9vw, 90px);
+  font-size: 66px;
   line-height: 1;
-  letter-spacing: -2.88px;
+  letter-spacing: -2.1px;
   text-align: center;
   color: #2d3135;
   display: block;
@@ -378,9 +375,7 @@
 /* Tablet */
 @media (max-width: 1199.98px) {
   .hero-twelve .hero-twelve__title {
-    /* font-size stays fluid (min(4.9vw, 90px)) so the longer title keeps
-       fitting; only the letter-spacing is eased here. */
-    letter-spacing: -2px;
+    letter-spacing: -1.8px;
   }
   .hero-twelve__icons {
     width: 210px;
@@ -421,8 +416,8 @@
     gap: 40px;
   }
   .hero-twelve .hero-twelve__title {
-    font-size: 36px;
-    line-height: 42px;
+    font-size: 32px;
+    line-height: 38px;
     letter-spacing: -1px;
     max-width: 100%;
   }

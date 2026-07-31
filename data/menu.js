@@ -34,12 +34,8 @@ export const menuItems = [
     tKey: "nav.menu.resources",
     subItems: [
       {
-        href: "/#",
+        href: "/blog",
         tKey: "footer.links.blog",
-      },
-      {
-        href: "#",
-        tKey: "nav.menu.hiring",
       },
       {
         href: "/contact-us",

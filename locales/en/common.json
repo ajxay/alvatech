@@ -354,10 +354,9 @@
       }
     },
     "cta": {
-      "titleTop": "Prevent costly",
-      "titleBottom": "mistakes",
-      "subtitle": "Lets build optimized solutions for your business.",
-      "button": "Reach Us Now"
+      "title": "Ready to Transform Your Business?",
+      "subtitle": "Whether you're launching an ecommerce store, migrating to Shopify, implementing Salesforce, or looking to accelerate online growth, our experts are ready to help.",
+      "button": "Schedule Consultation"
     },
     "heroStats": {
       "title": "Results That Speak for Themselves",

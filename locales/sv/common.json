@@ -354,10 +354,9 @@
       }
     },
     "cta": {
-      "titleTop": "Förhindra dyra",
-      "titleBottom": "misstag",
-      "subtitle": "Låt oss bygga optimerade lösningar för din verksamhet",
-      "button": "Kontakta oss nu"
+      "title": "Redo att transformera er verksamhet?",
+      "subtitle": "Oavsett om ni lanserar en e-handelsbutik, migrerar till Shopify, implementerar Salesforce eller vill accelerera er tillväxt online, är våra experter redo att hjälpa er.",
+      "button": "Boka konsultation"
     },
     "heroStats": {
       "title": "Resultat som talar för sig själva",
