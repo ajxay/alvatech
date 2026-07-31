@@ -64,10 +64,10 @@ export default function Footer1() {
                             +46 70 496 45 69
                           </a>
                         </li>
-                        <li>Norra Oskarsgatan 12, Linköping</li>
+                        <li>{t("footer.address")}</li>
                         <li>
-                          <a href="mailto:info@alvatech.se" style={{ color: "#434243" }}>
-                            info@alvatech.se
+                          <a href="mailto:sales@alvatech.se" style={{ color: "#434243" }}>
+                            sales@alvatech.se
                           </a>
                         </li>
                       </ul>

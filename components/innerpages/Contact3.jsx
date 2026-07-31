@@ -195,7 +195,7 @@ export default function Contact3() {
               <a href="tel:+46704964569" className="contact3-quick-btn">
                 {t("pages.contact3.callUs")}
               </a>
-              <a href="mailto:info@alvatech.se" className="contact3-quick-btn">
+              <a href="mailto:sales@alvatech.se" className="contact3-quick-btn">
                 {t("pages.contact3.emailUs")}
               </a>
             </div>
@@ -241,7 +241,7 @@ export default function Contact3() {
                   </span>
                   <div>
                     <strong>{t("pages.contact3.emailUsLabel")}</strong>
-                    <a href="mailto:info@alvatech.se">info@alvatech.se</a>
+                    <a href="mailto:sales@alvatech.se">sales@alvatech.se</a>
                   </div>
                 </li>
                 <li>
@@ -250,7 +250,7 @@ export default function Contact3() {
                   </span>
                   <div>
                     <strong>{t("pages.contact3.ourAddress")}</strong>
-                    <span>Norra Oskarsgatan 12, Linköping</span>
+                    <span>{t("footer.address")}</span>
                   </div>
                 </li>
                 <li>

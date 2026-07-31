@@ -48,7 +48,7 @@ export default function Privacy() {
               <b>Data Controller</b>
             </p>
             <p>Company Name: Alva Tech AB</p>
-            <p>Registered Address: Norra Oskarsgatan 12, Linköping</p>
+            <p>Registered Address: Norra Oskarsgatan 12, Linköping, Sweden</p>
             <p>
               Email:{" "}
               <a href="mailto:anders.l@alvatech.se">anders.l@alvatech.se</a>
@@ -487,7 +487,7 @@ export default function Privacy() {
               process your personal information, please contact us.
             </p>
             <p>Company Name: Alva Tech AB</p>
-            <p>Registered Address: Norra Oskarsgatan 12, Linköping</p>
+            <p>Registered Address: Norra Oskarsgatan 12, Linköping, Sweden</p>
             <p>
               Email: <a href="mailto:monica@alvatech.se">monica@alvatech.se</a>
             </p>

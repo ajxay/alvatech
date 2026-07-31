@@ -500,9 +500,9 @@ export default function Terms() {
             </p>
             <p>
               General Enquiries:{" "}
-              <a href="mailto:info@alvatech.se">info@alvatech.se</a>
+              <a href="mailto:sales@alvatech.se">sales@alvatech.se</a>
             </p>
-            <p>Registered Address: Norra Oskarsgatan 12, Linköping</p>
+            <p>Registered Address: Norra Oskarsgatan 12, Linköping, Sweden</p>
 
             <h3 className="h4 md:h3 mt-3 lg:mt-6 mb-2">25. Entire Agreement</h3>
             <p>
