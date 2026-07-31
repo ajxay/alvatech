@@ -1,11 +1,8 @@
-/* "How We Work" — 6-step process. Figma: 1240px cards, 396px tall, a soft
-   grey-to-white diagonal gradient, a pill "STEP 0X" badge, 32px/40px title,
-   16px/26px body copy, two pill CTAs, and an empty placeholder panel on the
-   right (Figma leaves this block un-illustrated). */
+/* "How We Work" — Figma 577:302 process cards with GSAP scroll stack. */
 
 .home13-process {
-  background: #fff;
-  padding: 56px 24px;
+  background: #f7f7f7;
+  padding: 72px 24px 160px;
 }
 
 .home13-process__inner {
@@ -18,60 +15,70 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin-bottom: 48px;
 }
 
 .home13-process .home13-process__eyebrow {
   margin: 0 0 12px;
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 14px;
+  line-height: 20px;
   font-weight: 600;
-  letter-spacing: 2.16px;
+  letter-spacing: 2.52px;
   text-transform: uppercase;
-  color: #99a1af;
-}
-
-.home13-process__rule {
-  display: block;
-  width: 32px;
-  height: 1px;
-  margin-bottom: 24px;
-  background: #84ba41;
+  color: #84ba41;
 }
 
 .home13-process .home13-process__title {
   margin: 0;
   font-size: 28px;
   line-height: 36px;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: -0.4px;
   color: #434243;
 }
 
-.home13-process__list {
+.home13-process__stack {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  margin-top: 40px;
+  gap: 32px;
+  position: relative;
+}
+
+.home13-process__stack-item {
+  position: relative;
 }
 
 .home13-process__card {
   display: flex;
   align-items: stretch;
   min-height: 396px;
-  border-radius: 8px;
+  border-radius: 16px;
   overflow: hidden;
   background: linear-gradient(95.97deg, #f6f6f6 9.86%, #ffffff 98.38%);
-  box-shadow: 0 1px 4px 0 rgba(76, 175, 80, 0.15);
+  box-shadow:
+    0 1px 4px rgba(76, 175, 80, 0.15),
+    0 16px 40px rgba(17, 24, 39, 0.08);
+  transform-origin: center top;
+  will-change: transform, opacity;
 }
 
 .home13-process__content {
+  position: relative;
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 24px;
+  gap: 16px;
   padding: 40px;
   min-width: 0;
+}
+
+.home13-process__meta {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 32px;
 }
 
 .home13-process__badge {
@@ -84,6 +91,19 @@
   font-size: 14px;
   line-height: 20px;
   font-weight: 600;
+  z-index: 1;
+}
+
+.home13-process__number {
+  position: absolute;
+  top: -8px;
+  right: 0;
+  font-size: 80px;
+  line-height: 100px;
+  font-weight: 700;
+  color: rgba(132, 186, 65, 0.12);
+  pointer-events: none;
+  user-select: none;
 }
 
 .home13-process .home13-process__card-title {
@@ -102,10 +122,31 @@
   color: #434243;
 }
 
+.home13-process__note {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  border-radius: 27px;
+  border: 0.25px solid #84ba41;
+  background: rgba(132, 186, 65, 0.1);
+  color: #84ba41;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.home13-process__note img {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+}
+
 .home13-process__actions {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
+  margin-top: auto;
+  padding-top: 24px;
 }
 
 .home13-process__btn {
@@ -120,6 +161,13 @@
   font-weight: 600;
   text-decoration: none;
   white-space: nowrap;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.home13-process__btn img {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
 }
 
 .home13-process__btn--solid {
@@ -127,9 +175,18 @@
   color: #fff;
 }
 
+.home13-process__btn--solid:hover {
+  background: #74a838;
+  border-color: #74a838;
+}
+
 .home13-process__btn--outline {
   background: transparent;
   color: #84ba41;
+}
+
+.home13-process__btn--outline:hover {
+  background: rgba(132, 186, 65, 0.08);
 }
 
 .home13-process__media {
@@ -137,53 +194,73 @@
   width: 542px;
   max-width: 44%;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #f8f8f8;
+  padding: 28px;
 }
 
-.home13-process__number {
-  position: absolute;
-  top: 18px;
-  left: 40px;
-  font-size: 80px;
-  line-height: 100px;
-  font-weight: 700;
-  color: rgba(132, 186, 65, 0.1);
+.home13-process__image {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  object-fit: contain;
 }
 
 @media (max-width: 991px) {
+  .home13-process {
+    padding: 56px 20px 140px;
+  }
+
+  .home13-process__stack {
+    gap: 24px;
+  }
+
   .home13-process .home13-process__title {
     font-size: 28px;
     line-height: 36px;
-    letter-spacing: -0.4px;
+  }
+
+  .home13-process .home13-process__card-title {
+    font-size: 28px;
+    line-height: 36px;
   }
 
   .home13-process__card {
-    flex-direction: column;
+    flex-direction: column-reverse;
     min-height: 0;
   }
 
   .home13-process__media {
     width: 100%;
     max-width: 100%;
-    height: 160px;
+    min-height: 200px;
+    padding: 20px;
+  }
+
+  .home13-process__image {
+    max-width: 260px;
   }
 
   .home13-process__content {
-    padding: 32px 24px;
+    padding: 24px 20px 28px;
+  }
+
+  .home13-process__number {
+    font-size: 56px;
+    line-height: 64px;
+    top: -4px;
+  }
+
+  .home13-process__btn {
+    padding: 12px 20px;
+    font-size: 15px;
   }
 }
 
 @media (max-width: 575px) {
-  .home13-process {
-    padding: 56px 20px;
-  }
-
-  .home13-process .home13-process__title {
-    font-size: 28px;
-    line-height: 38px;
-    letter-spacing: -0.4px;
-  }
-
   .home13-process__actions {
     flex-direction: column;
     align-items: stretch;
@@ -191,5 +268,9 @@
 
   .home13-process__btn {
     justify-content: center;
+  }
+
+  .home13-process__media {
+    min-height: 180px;
   }
 }

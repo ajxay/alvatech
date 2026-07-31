@@ -1,0 +1,17 @@
+.about-who__eyebrow {
+  margin: 0;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  color: #84ba41;
+}
+
+.about-who__rule {
+  display: block;
+  width: 32px;
+  height: 1px;
+  margin: 12px auto 24px;
+  background: #84ba41;
+}

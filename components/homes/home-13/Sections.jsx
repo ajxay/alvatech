@@ -6,14 +6,11 @@ import { Observer, ScrollTrigger } from "gsap/all";
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
 import { blogsPosts4, localizePost } from "@/data/blogs";
 import Services from "./Services";
 import TechStack from "./TechStack";
 import CaseStudies from "./CaseStudies";
 import TrustedClients from "./TrustedClients";
-import "swiper/css/pagination";
 import "./Sections.css";
 import Faq from "./Faq";
 
@@ -53,47 +50,6 @@ const integrationCardLayout = [
     icon: "/assets/images/home-13/integrations/zoho-crm.png",
     iconWidth: 91,
     iconHeight: 40,
-  },
-];
-
-const seamlessCards = [
-  {
-    step: "01",
-    i18nKey: "discover",
-    iconAsset: "/assets/images/home-13/seamless/search-icon.svg",
-    iconOffsetX: -52,
-    iconOffsetY: -95,
-    iconBgDark: true,
-    preview: "/assets/images/home-13/seamless/discover.png",
-  },
-  {
-    step: "02",
-    i18nKey: "design",
-    iconOffsetX: -114,
-    iconOffsetY: -95,
-    iconShiftX: -4,
-    iconShiftY: 3,
-    preview: "/assets/images/home-13/seamless/design.png",
-  },
-  {
-    step: "03",
-    i18nKey: "develop",
-    iconOffsetX: -184,
-    iconOffsetY: -95,
-    preview: "/assets/images/home-13/seamless/develop.png",
-  },
-  {
-    step: "04",
-    i18nKey: "testLaunch",
-    iconOffsetX: -250,
-    iconOffsetY: -95,
-    preview: "/assets/images/home-13/seamless/test-launch.png",
-  },
-  {
-    step: "05",
-    i18nKey: "integrate",
-    iconAsset: "/assets/images/home-13/seamless/integrate-icon.png",
-    preview: "/assets/images/home-13/seamless/integrate.png",
   },
 ];
 
@@ -458,77 +414,8 @@ export default function Sections() {
 
   return (
     <>
-      <section className="home13-section home13-seamless">
+      <section className="home13-section">
         <div className="container sm:max-w-lg xl:max-w-xl">
-          <header className="home13-header home13-seamless__header">
-            <p className="home13-seamless__eyebrow">
-              {t("home13.seamless.eyebrow")}
-            </p>
-            <h2>{t("home13.seamless.title")}</h2>
-          </header>
-          <Swiper
-            className="home13-seamless__carousel"
-            modules={[Pagination]}
-            spaceBetween={12}
-            slidesPerView={1.1}
-            pagination={{ clickable: true }}
-            breakpoints={{
-              576: { slidesPerView: 2, spaceBetween: 12 },
-              992: { slidesPerView: 3, spaceBetween: 12 },
-              1200: { slidesPerView: 4, spaceBetween: 12 },
-            }}
-          >
-            {seamlessCards.map((item) => {
-              const cardTitle = t(
-                `home13.seamless.cards.${item.i18nKey}.title`,
-              );
-              return (
-                <SwiperSlide key={item.i18nKey}>
-                  <article className="home13-seamless__card">
-                    <div className="home13-seamless__head">
-                      <span className="home13-seamless__step">{item.step}</span>
-                      <span
-                        className={`home13-seamless__icon-wrap${
-                          item.iconBgDark ? " is-dark" : ""
-                        }`}
-                      >
-                        {item.iconAsset ? (
-                          <Image
-                            src={item.iconAsset}
-                            alt=""
-                            width={24}
-                            height={24}
-                            aria-hidden="true"
-                          />
-                        ) : (
-                          <span
-                            className="home13-seamless__icon-sprite"
-                            style={{
-                              backgroundPosition: `${item.iconOffsetX}px ${item.iconOffsetY}px`,
-                              transform: `translate(${item.iconShiftX || 0}px, ${item.iconShiftY || 0}px)`,
-                            }}
-                            aria-hidden="true"
-                          />
-                        )}
-                      </span>
-                    </div>
-                    <h3>{cardTitle}</h3>
-                    <p>{t(`home13.seamless.cards.${item.i18nKey}.text`)}</p>
-                    <div className="home13-seamless__preview">
-                      <Image
-                        src={item.preview}
-                        alt={t("home13.seamless.previewAlt", {
-                          title: cardTitle,
-                        })}
-                        width={262}
-                        height={126}
-                      />
-                    </div>
-                  </article>
-                </SwiperSlide>
-              );
-            })}
-          </Swiper>
           <Services />
           <div id="marketplaces" className="home13-marketplaces">
             <header className="home13-marketplaces__header">

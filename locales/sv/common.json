@@ -485,6 +485,7 @@
       "techTitle": "Tekniker vi arbetar med",
       "marketingEyebrow": "Vårt marknadsföringsekosystem",
       "marketingTitle": "Marknadsföringsplattformar vi arbetar med",
+      "trustEyebrow": "Klientel",
       "trustTitle": "Betrodd partner för digital transformation",
       "trustReviews": "Organisationer över hela världen förlitar sig på oss för att modernisera handeln, effektivisera verksamheten och skapa hållbar tillväxt genom teknik och marknadsföring i toppklass."
     },
@@ -515,6 +516,7 @@
       "title": "Så här arbetar vi",
       "consultBtn": "Boka Kostnadsfri Konsultation",
       "chatBtn": "Chatta Med Rådgivare",
+      "takesLess": "Tar mindre än 2 minuter",
       "steps": {
         "discover": {
           "title": "Upptäck",
@@ -547,6 +549,7 @@
   "pages": {
     "about": {
       "heroBody": "På Alva Tech hjälper vi företag att omfamna digital transformation genom innovativ teknik, intelligent automatisering och tillväxtfokuserade marknadsföringslösningar. Från e-handelsutveckling och Shopify-lösningar till CRM-implementation, ERP-modernisering och digital marknadsföring ger vi organisationer möjlighet att skala med självförtroende i en allt mer digital värld.",
+      "howEyebrow": "Vilka vi är",
       "howTitle": "Din pålitliga partner för digital handel och digital transformation",
       "howBody": "Digital transformation är inte längre ett val – den är avgörande för tillväxt, effektivitet och långsiktig konkurrenskraft. Alva Tech grundades med ett tydligt uppdrag: att hjälpa företag att dra nytta av teknik, automatisering och digitala upplevelser för att skapa hållbar tillväxt. Idag samarbetar vi med startups, växande varumärken och etablerade företag i Sverige, Norden och övriga Europa för att bygga skalbara digitala ekosystem som sammanför e-handel, affärsprocesser, kundupplevelser och marknadsföring. Oavsett om du lanserar en e-handelsverksamhet, migrerar till Shopify, implementerar Salesforce, moderniserar dina affärsprocesser eller skalar upp din kundanskaffning, erbjuder vi den expertis som krävs för att omvandla idéer till mätbara resultat.",
       "stats": {
@@ -596,6 +599,7 @@
       "heroButton": "Boka ett digitalt möte",
       "trustTitle": "Varför moderna företag litar på",
       "mission": {
+        "sectionTitle": "Vårt uppdrag & vår vision",
         "mission": {
           "title": "Vårt uppdrag",
           "text": "Att hjälpa företag förenkla komplexitet, accelerera tillväxt och skapa exceptionella kundupplevelser genom teknik, automatisering och datadriven innovation."

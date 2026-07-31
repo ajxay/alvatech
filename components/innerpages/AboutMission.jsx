@@ -29,8 +29,7 @@ export default function AboutMission() {
                 className="about-trust__title m-0"
                 data-anime="onview: -100; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: 100;"
               >
-                {t("pages.about.trustTitle")}{" "}
-                <span className="about-trust__accent">Alva Tech</span>
+                {t("pages.about.mission.sectionTitle")}
               </h2>
               <div
                 className="about-mission__grid"

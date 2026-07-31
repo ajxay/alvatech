@@ -21,6 +21,24 @@
   margin: 0 auto 40px;
 }
 
+.home13-clients .home13-clients__eyebrow {
+  margin: 0;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  color: #84ba41;
+}
+
+.home13-clients__eyebrow-rule {
+  display: block;
+  width: 32px;
+  height: 1px;
+  margin: 12px 0 24px;
+  background: #84ba41;
+}
+
 .home13-clients .home13-clients__title {
   margin: 0;
   font-size: 28px;

@@ -34,6 +34,9 @@
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 1px 3px rgba(16, 24, 40, 0.06), 0 1px 2px rgba(16, 24, 40, 0.04);
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .home13-services__media {
@@ -47,6 +50,32 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .home13-services__card:hover {
+    transform: translateY(-6px);
+    box-shadow:
+      0 12px 28px rgba(16, 24, 40, 0.1),
+      0 4px 10px rgba(16, 24, 40, 0.06);
+  }
+
+  .home13-services__card:hover .home13-services__media img {
+    transform: scale(1.05);
+  }
+
+  .home13-services__card:hover .home13-services__card-title a {
+    color: #84ba41;
+  }
+
+  .home13-services__card:hover .home13-services__cta svg {
+    transform: translateX(4px);
+  }
+
+  .home13-services__card:hover .home13-services__check {
+    transform: scale(1.08);
+  }
 }
 
 .home13-services__body {
@@ -123,6 +152,7 @@
 
 .home13-services .home13-services__cta svg {
   flex: 0 0 auto;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .home13-services .home13-services__cta svg path {
@@ -132,6 +162,26 @@
 
 .home13-services__check {
   flex: 0 0 auto;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home13-services__card,
+  .home13-services__media img,
+  .home13-services .home13-services__cta svg,
+  .home13-services__check {
+    transition: none;
+  }
+
+  .home13-services__card:hover {
+    transform: none;
+  }
+
+  .home13-services__card:hover .home13-services__media img,
+  .home13-services__card:hover .home13-services__cta svg,
+  .home13-services__card:hover .home13-services__check {
+    transform: none;
+  }
 }
 
 /* The theme fills any svg child lacking fill="none"; keep the check hollow. */

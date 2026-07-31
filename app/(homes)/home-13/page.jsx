@@ -8,6 +8,7 @@ import HeroStats from "@/components/homes/home-13/HeroStats";
 import About from "@/components/homes/home-13/About";
 import WhyChoose from "@/components/homes/home-13/WhyChoose";
 import Features from "@/components/homes/home-13/Features";
+import ProcessSteps from "@/components/homes/home-13/ProcessSteps";
 import Sections from "@/components/homes/home-13/Sections";
 import { pageMetadataFor } from "@/data/pageMeta";
 import AboutWhyChoose from "@/components/innerpages/AboutWhyChoose";
@@ -26,6 +27,7 @@ export default function HomeThirteenPage() {
             <About />
             {/* <WhyChoose /> */}
             <AboutWhyChoose />
+            <ProcessSteps />
             {/* <Features /> */}
             <Sections />
           </div>

@@ -63,6 +63,10 @@ export default function TrustedClients() {
     <section className="home13-clients">
       <div className="home13-clients__inner">
         <header className="home13-clients__head">
+          <p className="home13-clients__eyebrow">
+            {t("home13.techStack.trustEyebrow")}
+          </p>
+          <span className="home13-clients__eyebrow-rule" aria-hidden="true" />
           <h2 className="home13-clients__title">
             {t("home13.techStack.trustTitle")}
           </h2>

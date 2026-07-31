@@ -485,6 +485,7 @@
       "techTitle": "Technologies We Work With",
       "marketingEyebrow": "Our Marketing Ecosystem",
       "marketingTitle": "Marketing Platforms We Work With",
+      "trustEyebrow": "Clientele",
       "trustTitle": "Trusted Digital Transformation Partner",
       "trustReviews": "Organizations across the globe rely on us to modernize commerce, streamline operations, and create sustainable growth through technology and marketing excellence."
     },
@@ -515,6 +516,7 @@
       "title": "How We Work",
       "consultBtn": "Get Free Consultation",
       "chatBtn": "Chat with Advisor",
+      "takesLess": "Takes less than 2 minutes",
       "steps": {
         "discover": {
           "title": "Discover",
@@ -547,6 +549,7 @@
   "pages": {
     "about": {
       "heroBody": "At Alva Tech, we help businesses embrace digital transformation through innovative technology, intelligent automation, and growth-focused marketing solutions. From ecommerce development and Shopify solutions to CRM implementation, ERP modernization, and digital marketing, we empower organizations to scale with confidence in an increasingly digital world.",
+      "howEyebrow": "Who We Are",
       "howTitle": "Your Trusted Digital Commerce & Transformation Partner ",
       "howBody": "Digital transformation is no longer optional—it's essential for growth, efficiency, and long-term competitiveness.  Alva Tech was founded with a simple mission: to help businesses leverage technology, automation, and digital experiences to unlock sustainable growth. Today, we partner with startups, growing brands, and established enterprises across Sweden, the Nordics, and Europe to build scalable digital ecosystems that connect commerce, operations, customer experiences, and marketing. Whether you're launching an ecommerce business, migrating to Shopify, implementing Salesforce, modernizing business operations, or scaling customer acquisition efforts, we provide the expertise needed to transform ideas into measurable outcomes. ",
       "stats": {
@@ -596,6 +599,7 @@
       "heroButton": "Schedule A Virtual Call",
       "trustTitle": "Why Modern Businesses Trust",
       "mission": {
+        "sectionTitle": "Our Mission & Vision",
         "mission": {
           "title": "Our Mission",
           "text": "To help businesses simplify complexity, accelerate growth, and create exceptional customer experiences through technology, automation, and data-driven innovation."
