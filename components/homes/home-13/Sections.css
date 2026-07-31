@@ -2,6 +2,11 @@
   padding: 72px 0;
 }
 
+/* Homepage headings use medium weight; hero keeps its own 300/700 styling. */
+.home-13 .wrap :is(h1, h2, h3, h4):not(.hero-twelve__title) {
+  font-weight: 500 !important;
+}
+
 .home13-header {
   text-align: center;
   margin: 0 auto 36px;
@@ -12,7 +17,7 @@
   margin: 0 0 12px;
   font-size: 28px;
   line-height: 1.15;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: -0.02em;
   color: #2d2f33;
 }
@@ -35,7 +40,7 @@
   font-size: 28px;
   line-height: 1.1;
   color: #2d2f33;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .home13-trust__sub {
@@ -723,7 +728,7 @@
   min-height: 2.5em;
   font-size: 20px;
   line-height: 1.25;
-  font-weight: 600;
+  font-weight: 500;
   color: #2d2f33;
 }
 
@@ -971,6 +976,7 @@
   margin: 0 auto 20px;
   font-size: 40px;
   line-height: 48px;
+  font-weight: 500;
   color: #434243;
   max-width: 620px;
   letter-spacing: 0;
@@ -1356,7 +1362,28 @@
   }
 
   .home13-posts__title-row h3 {
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .home13-posts__item-title {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+  .home13-card h3 {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .home13-marketplaces__block h4 {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .home13-team__card h3 {
+    font-size: 18px;
+    line-height: 24px;
   }
 
   .home13-seamless__card {

@@ -105,11 +105,14 @@
     height: 1px;
     align-self: auto;
   }
-}
 
-@media (max-width: 767px) {
   .about-why-choose .about-trust__title {
     font-size: 22px;
     line-height: 28px;
+  }
+
+  .about-why-choose .about-why-choose__card-title {
+    font-size: 18px;
+    line-height: 26px;
   }
 }

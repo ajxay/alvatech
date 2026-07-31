@@ -32,7 +32,7 @@
   margin: 0;
   font-size: 28px;
   line-height: 36px;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: -0.4px;
   color: #434243;
 }
@@ -224,8 +224,8 @@
   }
 
   .home13-process .home13-process__card-title {
-    font-size: 28px;
-    line-height: 36px;
+    font-size: 18px;
+    line-height: 26px;
   }
 
   .home13-process__card {

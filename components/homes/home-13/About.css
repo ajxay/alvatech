@@ -190,12 +190,14 @@
   }
 }
 
-@media (max-width: 575px) {
-  .home13-about__title {
+@media (max-width: 767px) {
+  .home13-about .home13-about__title {
     font-size: 22px;
     line-height: 28px;
   }
+}
 
+@media (max-width: 575px) {
   .home13-about__body {
     padding: 44px 20px 32px;
   }

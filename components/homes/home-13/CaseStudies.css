@@ -190,7 +190,7 @@
   margin: 0;
   font-size: 18px;
   line-height: 24px;
-  font-weight: 600;
+  font-weight: 500;
   color: #1c1f25;
 }
 
@@ -263,6 +263,11 @@
     font-size: 22px;
     line-height: 28px;
     letter-spacing: -0.4px;
+  }
+
+  .home13-cases .home13-cases__name {
+    font-size: 18px;
+    line-height: 24px;
   }
 
   .home13-cases-lightbox {

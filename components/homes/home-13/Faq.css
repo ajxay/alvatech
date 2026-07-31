@@ -5,7 +5,7 @@
 .home13-faq__title {
   font-size: 28px;
   line-height: 36px;
-  font-weight: 700;
+  font-weight: 500;
   color: #2d2f33;
 }
 
@@ -16,7 +16,7 @@
 .home13-faq__list .uc-accordion-title {
   display: block;
   padding-right: 44px !important;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.4;
   white-space: normal;
 }

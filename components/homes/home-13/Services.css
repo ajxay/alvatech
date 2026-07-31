@@ -205,6 +205,11 @@
     font-size: 22px;
     line-height: 28px;
   }
+
+  .home13-services .home13-services__card-title {
+    font-size: 18px;
+    line-height: 26px;
+  }
 }
 
 @media (max-width: 575px) {
