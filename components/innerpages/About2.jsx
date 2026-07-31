@@ -44,7 +44,7 @@ export default function About2() {
             >
               <p className="about-who__eyebrow">{t("pages.about.howEyebrow")}</p>
               <span className="about-who__rule" aria-hidden="true" />
-              <h2 className="h3 lg:h2 mb-4">{t("pages.about.howTitle")}</h2>
+              <h2 className="about-who__title mb-4">{t("pages.about.howTitle")}</h2>
               <p className="fs-5 xl:fs-4 text-dark dark:text-white text-opacity-70">
                 {t("pages.about.howBody")}
               </p>

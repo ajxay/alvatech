@@ -34,9 +34,20 @@ export default function Nav2() {
           <div className="container max-w-none px-3 lg:px-4">
             <div className="uc-dropbar-inner">
               <div className="panel vstack gap-4 py-4">
-                <h5 className="h5 fw-medium m-0">
-                  {t("nav.dropdown.discoverTitle")}
-                </h5>
+                <div className="hstack gap-4 justify-between items-center">
+                  <h5 className="h5 fw-medium m-0">
+                    {t("nav.dropdown.discoverTitle")}
+                  </h5>
+                  <Link
+                    href="/services"
+                    className="btn btn-sm dark:text-white"
+                  >
+                    <span>{t("footer.links.allServices")}</span>
+                    <span className="cstack w-32px h-32px rounded-circle bg-primary-100 dark:bg-primary">
+                      <i className="icon-narrow unicon-arrow-right fw-bold rtl:rotate-180" />
+                    </span>
+                  </Link>
+                </div>
                 <div className="row child-cols-4 g-3">
                   {features.map((feature, index) => (
                     <div key={index}>

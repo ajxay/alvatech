@@ -143,7 +143,7 @@
     }
   },
   "faq": {
-    "defaultTitle": "Frequently asked questions:"
+    "defaultTitle": "Frequently Asked Questions"
   },
   "labels": {
     "explore": "Explore",
@@ -297,7 +297,7 @@
       }
     },
     "faq": {
-      "title": "Frequently asked questions:",
+      "title": "Frequently Asked Questions",
       "items": {
         "1": {
           "question": "What is digital transformation, and how can it help my business?",
@@ -424,7 +424,7 @@
           }
         },
         "salesforce": {
-          "title": "Salesforce Consulting",
+          "title": "Salesforce Solutions",
           "text": "Transform customer relationships and streamline business operations with tailored Salesforce solutions designed for growth.",
           "features": {
             "a": "Salesforce Consulting",
@@ -496,6 +496,23 @@
       "viewCase": "View Case Study",
       "close": "Close case study",
       "openExternal": "Open in new tab",
+      "gate": {
+        "title": "Unlock this case study",
+        "subtitle": "Share your details to view the full case study. If you've already contacted us, this will open right away.",
+        "name": "Full name",
+        "namePlaceholder": "Enter your full name",
+        "email": "Email",
+        "emailPlaceholder": "Enter your email address",
+        "phone": "Phone",
+        "phonePlaceholder": "Phone number",
+        "countryCode": "Country code",
+        "otherCustom": "Other / Custom",
+        "customCode": "Custom code",
+        "customCodePlaceholder": "+XX",
+        "submit": "View case study",
+        "submitting": "Submitting...",
+        "error": "Unable to submit right now. Please try again."
+      },
       "items": {
         "geggamoja": {
           "name": "Geggamoja",
@@ -590,9 +607,10 @@
         }
       },
       "cta": {
-        "title": "We're looking for people who share our vision!",
-        "subtitle": "Have what it takes to be one of us.",
-        "button": "View current openings"
+        "title": "Let's Build What's Next",
+        "subtitle": "Whether you're launching a new ecommerce venture, modernizing legacy systems, implementing CRM solutions, or accelerating growth through digital marketing, we're ready to help you navigate your digital transformation journey.",
+        "talkToExpert": "Talk to an Expert",
+        "scheduleConsultation": "Schedule a Free Consultation"
       },
       "heroEyebrow": "About Us",
       "heroTitle": "Driving Digital Transformation for Modern Businesses",
@@ -614,7 +632,7 @@
         "title": "Technologies We Work With"
       },
       "faq": {
-        "title": "Frequently asked questions:",
+        "title": "Frequently Asked Questions",
         "items": {
           "1": {
             "question": "What does Alva Tech specialize in?",
@@ -655,7 +673,7 @@
       "heroTitle": "Our Services",
       "heroSubtitle": "We help you attract, engage, and convert your audience.",
       "trustedBrands": "Trusted by well-known brands.",
-      "faqTitle": "Frequently asked questions:",
+      "faqTitle": "Frequently Asked Questions",
       "services": {
         "shopify": {
           "name": "Shopify",

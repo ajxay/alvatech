@@ -86,7 +86,7 @@ export default function Cta() {
         <div className="container max-w-xl">
           <div className="section-inner panel">
             <div
-              className="vstack items-center gap-2 sm:gap-3 max-w-550px mx-auto text-center"
+              className="vstack items-center gap-2 sm:gap-3 max-w-750px mx-auto text-center"
               data-anime="onview:-100; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});"
             >
               <h2 className="h3 sm:h1 m-0">
@@ -95,13 +95,28 @@ export default function Cta() {
               <p className="fs-5 xl:fs-4 text-dark dark:text-white text-opacity-70">
                 {t("pages.about.cta.subtitle")}
               </p>
-              <Link
-                href={`#`}
-                className="btn btn-md lg:btn-lg btn-primary text-white mt-1 xl:mt-2"
-                style={{ backgroundColor: "#84BA41", borderColor: "#84BA41" }}
-              >
-                {t("pages.about.cta.button")}
-              </Link>
+              <div className="hstack flex-wrap justify-center gap-2 mt-1 xl:mt-2">
+                <Link
+                  href="/contact-us"
+                  className="btn btn-md lg:btn-lg btn-primary text-white"
+                  style={{ backgroundColor: "#84BA41", borderColor: "#84BA41" }}
+                >
+                  {t("pages.about.cta.talkToExpert")}
+                </Link>
+                <a
+                  href="https://calendly.com/nikhil-k-alvatech/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-md lg:btn-lg border"
+                  style={{
+                    borderColor: "#84BA41",
+                    color: "#84BA41",
+                    backgroundColor: "transparent",
+                  }}
+                >
+                  {t("pages.about.cta.scheduleConsultation")}
+                </a>
+              </div>
             </div>
           </div>
         </div>

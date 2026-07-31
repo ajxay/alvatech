@@ -143,7 +143,7 @@
     }
   },
   "faq": {
-    "defaultTitle": "Vanliga frågor:"
+    "defaultTitle": "Vanliga frågor"
   },
   "labels": {
     "explore": "Utforska",
@@ -297,7 +297,7 @@
       }
     },
     "faq": {
-      "title": "Vanliga frågor:",
+      "title": "Vanliga frågor",
       "items": {
         "1": {
           "question": "Vad är digital transformation, och hur kan det hjälpa mitt företag?",
@@ -424,7 +424,7 @@
           }
         },
         "salesforce": {
-          "title": "Salesforce-konsultation",
+          "title": "Salesforce-lösningar",
           "text": "Förbättra kundrelationer och effektivisera verksamheten med skräddarsydda Salesforce-lösningar byggda för tillväxt.",
           "features": {
             "a": "Salesforce-konsultation",
@@ -496,6 +496,23 @@
       "viewCase": "Se fallstudie",
       "close": "Stäng fallstudie",
       "openExternal": "Öppna i ny flik",
+      "gate": {
+        "title": "Lås upp den här fallstudien",
+        "subtitle": "Dela dina uppgifter för att se hela fallstudien. Om du redan har kontaktat oss öppnas den direkt.",
+        "name": "Fullständigt namn",
+        "namePlaceholder": "Ange ditt fullständiga namn",
+        "email": "E-post",
+        "emailPlaceholder": "Ange din e-postadress",
+        "phone": "Telefon",
+        "phonePlaceholder": "Telefonnummer",
+        "countryCode": "Landskod",
+        "otherCustom": "Annat / Anpassad",
+        "customCode": "Anpassad kod",
+        "customCodePlaceholder": "+XX",
+        "submit": "Visa fallstudie",
+        "submitting": "Skickar...",
+        "error": "Kunde inte skicka just nu. Försök igen."
+      },
       "items": {
         "geggamoja": {
           "name": "Geggamoja",
@@ -590,9 +607,10 @@
         }
       },
       "cta": {
-        "title": "Vi söker människor som delar vår vision!",
-        "subtitle": "Har du vad som krävs för att bli en av oss?",
-        "button": "Se lediga tjänster"
+        "title": "Låt oss bygga det som kommer härnäst",
+        "subtitle": "Oavsett om ni lanserar en ny e-handelssatsning, moderniserar äldre system, implementerar CRM-lösningar eller accelererar tillväxten med digital marknadsföring, är vi redo att hjälpa er genom er resa mot digital transformation.",
+        "talkToExpert": "Prata med en expert",
+        "scheduleConsultation": "Boka en kostnadsfri konsultation"
       },
       "heroEyebrow": "Om oss",
       "heroTitle": "Driver digital transformation för moderna företag",
@@ -614,7 +632,7 @@
         "title": "Teknologier vi arbetar med"
       },
       "faq": {
-        "title": "Vanliga frågor:",
+        "title": "Vanliga frågor",
         "items": {
           "1": {
             "question": "Vad specialiserar sig Alva Tech på?",
@@ -655,7 +673,7 @@
       "heroTitle": "Våra tjänster",
       "heroSubtitle": "Vi hjälper er att attrahera, engagera och konvertera er målgrupp.",
       "trustedBrands": "Betrodda av välkända varumärken.",
-      "faqTitle": "Vanliga frågor:",
+      "faqTitle": "Vanliga frågor",
       "services": {
         "shopify": {
           "name": "Shopify",

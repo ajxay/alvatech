@@ -48,8 +48,8 @@
 
 .about-mission .about-mission__title {
   margin: 0;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 20px;
+  line-height: 28px;
   font-weight: 500;
   color: #84ba41;
 }
@@ -84,11 +84,14 @@
   .about-mission__card {
     padding: 32px 24px;
   }
-}
 
-@media (max-width: 767px) {
   .about-trust__title {
     font-size: 22px;
     line-height: 28px;
+  }
+
+  .about-mission .about-mission__title {
+    font-size: 18px;
+    line-height: 26px;
   }
 }

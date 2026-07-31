@@ -39,4 +39,9 @@
     font-size: 22px;
     line-height: 28px;
   }
+
+  .home13-faq__list .uc-accordion-title {
+    font-size: 18px;
+    line-height: 26px;
+  }
 }

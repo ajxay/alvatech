@@ -246,6 +246,126 @@
   background: #f7f8fa;
 }
 
+.home13-cases-gate {
+  width: min(480px, 100%);
+  padding: 28px 24px 24px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 24px 64px rgba(15, 23, 42, 0.28);
+}
+
+.home13-cases-gate__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.home13-cases-gate__title {
+  margin: 0 0 8px;
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 500;
+  color: #1c1f25;
+}
+
+.home13-cases-gate__subtitle {
+  margin: 0;
+  font-size: 14px;
+  line-height: 22px;
+  color: #5f636b;
+}
+
+.home13-cases-gate__form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.home13-cases-gate__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #434243;
+}
+
+.home13-cases-gate__field input,
+.home13-cases-gate__field select {
+  width: 100%;
+  height: 44px;
+  padding: 0 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #fff;
+  color: #1c1f25;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.home13-cases-gate__field input:focus,
+.home13-cases-gate__field select:focus {
+  outline: none;
+  border-color: #84ba41;
+  box-shadow: 0 0 0 3px rgba(132, 186, 65, 0.15);
+}
+
+.home13-cases-gate__phone {
+  display: grid;
+  grid-template-columns: 132px minmax(0, 1fr);
+  gap: 10px;
+}
+
+.home13-cases-gate__phone--custom {
+  grid-template-columns: 132px 110px minmax(0, 1fr);
+}
+
+.home13-cases-gate__field--grow {
+  min-width: 0;
+}
+
+.home13-cases-gate__error {
+  margin: 0;
+  font-size: 13px;
+  line-height: 18px;
+  color: #c0392b;
+}
+
+.home13-cases-gate__submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  margin-top: 4px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: 8px;
+  background: #84ba41;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.home13-cases-gate__submit:hover:not(:disabled) {
+  background: #78a93a;
+}
+
+.home13-cases-gate__submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+@media (max-width: 575px) {
+  .home13-cases-gate__phone {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 767px) {
   .home13-cases {
     padding: 48px 20px;

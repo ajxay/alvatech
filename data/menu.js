@@ -5,27 +5,27 @@ export const menuItems = [
     subItems: [
       {
         href: "/services/custom-shopify-development-services",
-        tKey: "footer.links.shopifyDevelopment",
+        tKey: "home13.services.items.ecommerce.title",
       },
       {
         href: "/services/custom-ecommerce-development-services",
-        tKey: "footer.links.customDevelopment",
-      },
-      {
-        href: "/services/digital-marketing-services",
-        tKey: "footer.links.marketing",
-      },
-      {
-        href: "/services/Salesforce-consulting-and-implementation",
-        tKey: "footer.links.salesforceCrm",
+        tKey: "home13.services.items.customDevelopment.title",
       },
       {
         href: "/services/crm-and-erp-solutions",
-        tKey: "footer.links.erpSolutions",
+        tKey: "home13.services.items.crmErp.title",
+      },
+      {
+        href: "/services/Salesforce-consulting-and-implementation",
+        tKey: "home13.services.items.salesforce.title",
       },
       {
         href: "/services/zoho-consulting-and-implementation",
-        tKey: "footer.links.zohoCrm",
+        tKey: "home13.services.items.zoho.title",
+      },
+      {
+        href: "/services/digital-marketing-services",
+        tKey: "home13.services.items.marketing.title",
       },
     ],
   },
@@ -466,46 +466,46 @@ export const icons = [
 ];
 export const features = [
   {
-    id: 5,
+    id: 1,
     iconClass: "unicon-store",
-    tTitleKey: "footer.links.shopifyDevelopment",
+    tTitleKey: "home13.services.items.ecommerce.title",
     tDescKey: "nav.featureDesc.shopify",
     link: "/services/custom-shopify-development-services",
   },
   {
-    id: 1,
+    id: 2,
     iconClass: "unicon-email",
-    tTitleKey: "footer.links.customDevelopment",
+    tTitleKey: "home13.services.items.customDevelopment.title",
     tDescKey: "nav.featureDesc.custom",
     link: "/services/custom-ecommerce-development-services",
   },
   {
-    id: 2,
-    iconClass: "unicon-blog",
-    tTitleKey: "footer.links.marketing",
-    tDescKey: "nav.featureDesc.marketing",
-    link: "/services/digital-marketing-services",
-  },
-  {
     id: 3,
-    iconClass: "unicon-increase-level",
-    tTitleKey: "footer.links.salesforceCrm",
-    tDescKey: "nav.featureDesc.salesforce",
-    link: "/services/Salesforce-consulting-and-implementation",
-  },
-  {
-    id: 4,
     iconClass: "unicon-magic-wand-filled",
-    tTitleKey: "footer.links.erpSolutions",
+    tTitleKey: "home13.services.items.crmErp.title",
     tDescKey: "nav.featureDesc.erp",
     link: "/services/crm-and-erp-solutions",
   },
   {
-    id: 6,
+    id: 4,
+    iconClass: "unicon-increase-level",
+    tTitleKey: "home13.services.items.salesforce.title",
+    tDescKey: "nav.featureDesc.salesforce",
+    link: "/services/Salesforce-consulting-and-implementation",
+  },
+  {
+    id: 5,
     iconClass: "unicon-shopping-catalog",
-    tTitleKey: "footer.links.zohoCrm",
+    tTitleKey: "home13.services.items.zoho.title",
     tDescKey: "nav.featureDesc.zoho",
     link: "/services/zoho-consulting-and-implementation",
+  },
+  {
+    id: 6,
+    iconClass: "unicon-blog",
+    tTitleKey: "home13.services.items.marketing.title",
+    tDescKey: "nav.featureDesc.marketing",
+    link: "/services/digital-marketing-services",
   },
 ];
 export const homeLinks = [

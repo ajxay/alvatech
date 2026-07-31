@@ -16,7 +16,7 @@ const services = [
   {
     id: "ecommerce",
     image: "/assets/images/home-13/services/updated/ecom-development.png",
-    href: "/services/custom-ecommerce-development-services",
+    href: "/services/custom-shopify-development-services",
     features: ["a", "b", "c", "d", "e"],
   },
   {

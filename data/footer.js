@@ -5,23 +5,29 @@ export const footerLinks = [
     colClass: "col-12 md:col-6 lg:col-6",
     links: [
       {
-        href: "/services/custom-ecommerce-development-services",
-        labelKey: "ecommerceDevelopment",
+        href: "/services/custom-shopify-development-services",
+        titleKey: "home13.services.items.ecommerce.title",
       },
       {
-        href: "/services/custom-shopify-development-services",
-        labelKey: "shopifyDevelopment",
+        href: "/services/custom-ecommerce-development-services",
+        titleKey: "home13.services.items.customDevelopment.title",
+      },
+      {
+        href: "/services/crm-and-erp-solutions",
+        titleKey: "home13.services.items.crmErp.title",
       },
       {
         href: "/services/Salesforce-consulting-and-implementation",
-        labelKey: "salesforceConsulting",
+        titleKey: "home13.services.items.salesforce.title",
       },
       {
         href: "/services/zoho-consulting-and-implementation",
-        labelKey: "zohoConsulting",
+        titleKey: "home13.services.items.zoho.title",
       },
-      { href: "/services/crm-and-erp-solutions", labelKey: "crmErpSolutions" },
-      { href: "/services/digital-marketing-services", labelKey: "digitalMarketing" },
+      {
+        href: "/services/digital-marketing-services",
+        titleKey: "home13.services.items.marketing.title",
+      },
     ],
   },
   {

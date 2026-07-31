@@ -1,0 +1,50 @@
+/* About page typography — aligned with homepage:
+   section headings 28px desktop / 22px mobile, weight 500;
+   inner/card headings 20px desktop / 18px mobile, weight 500. */
+
+.about-page #wrapper :is(h1, h2, h3, h4) {
+  font-weight: 500 !important;
+}
+
+.about-page #wrapper .about-hero__copy h1,
+.about-page #wrapper .about-us h2,
+.about-page #wrapper .about-trust__title,
+.about-page #wrapper .about-tech-stack__title,
+.about-page #wrapper .home13-header h2,
+.about-page #wrapper .home13-faq__title,
+.about-page #wrapper .home13-clients__title,
+.about-page #wrapper #cta h2 {
+  font-size: 28px !important;
+  line-height: 36px !important;
+  letter-spacing: -0.4px;
+}
+
+.about-page #wrapper .about-mission__title,
+.about-page #wrapper .about-why-choose__card-title,
+.about-page #wrapper .home13-team__card h3,
+.about-page #wrapper .home13-faq__list .uc-accordion-title {
+  font-size: 20px !important;
+  line-height: 28px !important;
+}
+
+@media (max-width: 767px) {
+  .about-page #wrapper .about-hero__copy h1,
+  .about-page #wrapper .about-us h2,
+  .about-page #wrapper .about-trust__title,
+  .about-page #wrapper .about-tech-stack__title,
+  .about-page #wrapper .home13-header h2,
+  .about-page #wrapper .home13-faq__title,
+  .about-page #wrapper .home13-clients__title,
+  .about-page #wrapper #cta h2 {
+    font-size: 22px !important;
+    line-height: 28px !important;
+  }
+
+  .about-page #wrapper .about-mission__title,
+  .about-page #wrapper .about-why-choose__card-title,
+  .about-page #wrapper .home13-team__card h3,
+  .about-page #wrapper .home13-faq__list .uc-accordion-title {
+    font-size: 18px !important;
+    line-height: 26px !important;
+  }
+}

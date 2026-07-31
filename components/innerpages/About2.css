@@ -15,3 +15,19 @@
   margin: 12px auto 24px;
   background: #84ba41;
 }
+
+.about-who__title {
+  margin: 0;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 500;
+  letter-spacing: -0.4px;
+  color: #0e0e0f;
+}
+
+@media (max-width: 767px) {
+  .about-who__title {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}

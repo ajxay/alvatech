@@ -97,7 +97,7 @@ export default function Footer1() {
                       {section.links.map((link, i) => (
                         <li key={i}>
                           <Link href={link.href} style={{ color: "#434243" }}>
-                            {t(`footer.links.${link.labelKey}`)}
+                            {t(link.titleKey || `footer.links.${link.labelKey}`)}
                           </Link>
                         </li>
                       ))}
