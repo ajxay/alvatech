@@ -107,7 +107,7 @@
       "Boost": "Boost",
       "Advertising": "Annonsering"
     },
-    "insights": "Insikter",
+    "insights": "Bloggar",
     "continueReading": "Fortsätt läsa",
     "readMore": "Läs mer",
     "ourInsights": "Våra insikter",
@@ -496,23 +496,6 @@
       "viewCase": "Se fallstudie",
       "close": "Stäng fallstudie",
       "openExternal": "Öppna i ny flik",
-      "gate": {
-        "title": "Lås upp den här fallstudien",
-        "subtitle": "Dela dina uppgifter för att se hela fallstudien. Om du redan har kontaktat oss öppnas den direkt.",
-        "name": "Fullständigt namn",
-        "namePlaceholder": "Ange ditt fullständiga namn",
-        "email": "E-post",
-        "emailPlaceholder": "Ange din e-postadress",
-        "phone": "Telefon",
-        "phonePlaceholder": "Telefonnummer",
-        "countryCode": "Landskod",
-        "otherCustom": "Annat / Anpassad",
-        "customCode": "Anpassad kod",
-        "customCodePlaceholder": "+XX",
-        "submit": "Visa fallstudie",
-        "submitting": "Skickar...",
-        "error": "Kunde inte skicka just nu. Försök igen."
-      },
       "items": {
         "geggamoja": {
           "name": "Geggamoja",

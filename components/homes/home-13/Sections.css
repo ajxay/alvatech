@@ -684,40 +684,95 @@
 
 .home13-posts {
   background: #fff6ee;
+  padding: 56px 24px;
+}
+
+.home13-posts__inner {
+  max-width: 1080px;
+  margin: 0 auto;
 }
 
 .home13-posts__header {
-  margin-bottom: 40px;
+  margin-bottom: 48px;
 }
 
 .home13-posts__row {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 300px));
-  justify-content: center;
-  gap: 20px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px;
   margin-left: auto;
   margin-right: auto;
+  align-items: stretch;
 }
 
 @media (max-width: 991px) {
   .home13-posts__row {
-    grid-template-columns: repeat(2, minmax(0, 300px));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
   }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 767px) {
+  .home13-posts {
+    padding: 48px 20px;
+  }
+
   .home13-posts__row {
-    grid-template-columns: minmax(0, 300px);
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    max-width: 380px;
   }
 }
 
 .home13-posts__item {
-  border: 1px solid #e9ecf1;
-  box-shadow: 0 6px 16px rgba(17, 24, 39, 0.05);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 420px;
+  padding: 0 !important;
+  border: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(16, 24, 40, 0.08), 0 1px 2px rgba(16, 24, 40, 0.04);
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.home13-posts__item-media {
+  position: relative;
+  flex: 0 0 auto;
+  width: 100%;
+  margin: 0 !important;
+  aspect-ratio: 300 / 197;
+  border-radius: 0 !important;
+  overflow: hidden;
+  background: #f3f4f6;
+}
+
+.home13-posts__item-media img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .home13-posts__item-body {
+  position: relative;
+  z-index: 1;
   flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  text-align: left;
+  background: #fff;
+  min-height: 168px;
 }
 
 .home13-posts__item-title {
@@ -725,19 +780,94 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  min-height: 2.5em;
+  width: 100%;
+  min-height: 48px;
   font-size: 20px;
-  line-height: 1.25;
+  line-height: 24px;
   font-weight: 500;
-  color: #2d2f33;
+  color: #434243;
+  text-align: left;
+}
+
+.home13-posts__item-excerpt {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: 0;
+  width: 100%;
+  font-size: 14px;
+  line-height: 21px;
+  color: #434243;
 }
 
 .home13-posts__item-title a {
   color: inherit;
+  transition: color 0.25s ease;
 }
 
 .home13-posts__item-meta {
+  display: flex !important;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
   margin-top: auto;
+  width: 100%;
+}
+
+.home13-posts__item-meta li {
+  display: inline-flex;
+  align-items: center;
+}
+
+.home13-posts__item-meta img {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.home13-posts__item-meta .post-date {
+  color: #99a1af;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .home13-posts__item:hover {
+    transform: translateY(-6px);
+    box-shadow:
+      0 12px 28px rgba(16, 24, 40, 0.1),
+      0 4px 10px rgba(16, 24, 40, 0.06);
+  }
+
+  .home13-posts__item:hover .home13-posts__item-media img {
+    transform: scale(1.05);
+  }
+
+  .home13-posts__item:hover .home13-posts__item-title a {
+    color: #84ba41;
+  }
+
+  .home13-posts__item:hover .home13-posts__item-meta img {
+    transform: scale(1.08);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home13-posts__item,
+  .home13-posts__item-media img,
+  .home13-posts__item-title a,
+  .home13-posts__item-meta img {
+    transition: none;
+  }
+
+  .home13-posts__item:hover {
+    transform: none;
+  }
+
+  .home13-posts__item:hover .home13-posts__item-media img,
+  .home13-posts__item:hover .home13-posts__item-meta img {
+    transform: none;
+  }
 }
 
 .home13-posts__media {

@@ -671,8 +671,8 @@ export default function Sections() {
         </div>
       </section>
 
-      <section className="home13-section home13-posts">
-        <div className="container sm:max-w-lg xl:max-w-xl">
+      <section className="home13-posts">
+        <div className="home13-posts__inner">
           <header className="home13-header home13-posts__header">
             <h2>{t("home13.posts.title")}</h2>
           </header>
@@ -680,14 +680,14 @@ export default function Sections() {
             {blogPosts.map((post) => (
               <article
                 key={post.id}
-                className="home13-posts__item post type-post panel vstack gap-2 rounded-2 p-2 pb-2 bg-white dark:bg-gray-800"
+                className="home13-posts__item post type-post panel bg-white dark:bg-gray-800"
               >
-                  <figure className="home13-posts__item-media featured-image m-0 rounded ratio ratio-16x9 rounded-1-5 uc-transition-toggle overflow-hidden">
+                  <figure className="home13-posts__item-media featured-image m-0 uc-transition-toggle overflow-hidden">
                     <Image
                       className="media-cover image uc-transition-scale-up uc-transition-opaque"
                       src={post.image}
-                      width={1280}
-                      height={853}
+                      width={618}
+                      height={394}
                       alt={post.title}
                     />
                     <Link
@@ -696,20 +696,16 @@ export default function Sections() {
                       data-caption={post.title}
                     ></Link>
                   </figure>
-                  <header className="home13-posts__item-body panel vstack items-center gap-1 px-1">
-                    <Link
-                      className="fs-7 fw-bold text-none text-white py-narrow px-1"
-                      href={`/blog-category/${post.category}`}
-                      style={{ borderRadius: 8, backgroundColor: "#86BC40" }}
-                    >
-                      {post.category}
-                    </Link>
-                    <h3 className="home13-posts__item-title m-0 text-center">
+                  <header className="home13-posts__item-body">
+                    <h3 className="home13-posts__item-title m-0">
                       <Link className="text-none" href={`/blog/${post.slug}`}>
                         {post.title}
                       </Link>
                     </h3>
-                    <ul className="home13-posts__item-meta post-meta nav-x ft-tertiary justify-center gap-1 fs-7 text-gray-400 dark:text-gray-300 d-none lg:d-flex">
+                    <p className="home13-posts__item-excerpt">
+                      {post.excerpt}
+                    </p>
+                    <ul className="home13-posts__item-meta post-meta nav-x ft-tertiary fs-7">
                       <li>
                         <div className="hstack gap-narrow ft-tertiary">
                           <Image
@@ -720,14 +716,16 @@ export default function Sections() {
                             className="w-24px h-24px rounded-circle me-narrow"
                           />
                           <Link
-                            href={`/blog-author/${post.author}`}
+                            href={`/blog-author/${encodeURIComponent(post.author)}`}
                             className="text-none fw-bold text-dark dark:text-white"
                           >
                             {post.author}
                           </Link>
                         </div>
                       </li>
-                      <li className="opacity-50">•</li>
+                      <li className="opacity-50" aria-hidden="true">
+                        •
+                      </li>
                       <li>
                         <div className="post-date hstack gap-narrow">
                           <span>{post.date}</span>

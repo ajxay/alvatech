@@ -5,11 +5,11 @@ export const footerLinks = [
     colClass: "col-12 md:col-6 lg:col-6",
     links: [
       {
-        href: "/services/custom-shopify-development-services",
+        href: "/services/custom-ecommerce-shopify-development-services",
         titleKey: "home13.services.items.ecommerce.title",
       },
       {
-        href: "/services/custom-ecommerce-development-services",
+        href: "/services/custom-development-services",
         titleKey: "home13.services.items.customDevelopment.title",
       },
       {

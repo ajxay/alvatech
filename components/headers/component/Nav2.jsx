@@ -1,14 +1,17 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
 import { useTranslation } from "react-i18next";
-import { openNewsletterModal } from "@/utlis/toggleNewsletterModal";
+// import { openNewsletterModal } from "@/utlis/toggleNewsletterModal";
 import { features } from "@/data/menu";
 
 export default function Nav2() {
   const { t, i18n } = useTranslation("common");
   return (
     <>
+      <li>
+        <a href="/about-us">{t("nav.menu.aboutUs")}</a>
+      </li>
+
       <li className="has-dd-menu ">
         <a href="#" role="button" aria-haspopup="true">
           {t("nav.menu.whatWeOffer")}{" "}
@@ -78,6 +81,11 @@ export default function Nav2() {
         </div>
       </li>
 
+      <li>
+        <Link href="/blog">{t("footer.links.blog")}</Link>
+      </li>
+
+      {/* Resources dropdown — commented out; Blog is a top-level link instead
       <li className="has-dd-menu" style={{ position: "relative" }}>
         <a href="#" role="button" aria-haspopup="true">
           {t("nav.menu.resources")}{" "}
@@ -179,10 +187,8 @@ export default function Nav2() {
           </div>
         </div>
       </li>
+      */}
 
-      <li>
-        <a href="/about-us">{t("nav.menu.aboutUs")}</a>
-      </li>
       <li>
         <a href="/contact-us">{t("nav.menu.contactUs")}</a>
       </li>

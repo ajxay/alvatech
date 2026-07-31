@@ -7,8 +7,6 @@ import { ScrollTrigger } from "gsap/all";
 import { useTranslation } from "react-i18next";
 import "./ProcessSteps.css";
 
-const CALENDLY_URL = "https://calendly.com/nikhil-k-alvatech/30min";
-
 const steps = [
   { id: "discover", image: "/assets/images/home-13/process/discover.png" },
   { id: "strategy", image: "/assets/images/home-13/process/strategy.png" },
@@ -17,22 +15,6 @@ const steps = [
   { id: "integrate", image: "/assets/images/home-13/process/integrate.png" },
   { id: "grow", image: "/assets/images/home-13/process/grow.png" },
 ];
-
-function ArrowIcon({ variant = "white" }) {
-  return (
-    <Image
-      src={
-        variant === "green"
-          ? "/assets/images/home-13/process/arrow-green.svg"
-          : "/assets/images/home-13/process/arrow-white.svg"
-      }
-      alt=""
-      width={16}
-      height={16}
-      aria-hidden="true"
-    />
-  );
-}
 
 export default function ProcessSteps() {
   const { t } = useTranslation("common");
@@ -154,24 +136,6 @@ export default function ProcessSteps() {
                         {t("home13.process.takesLess")}
                       </span>
                     ) : null}
-                    <div className="home13-process__actions">
-                      <a
-                        href={CALENDLY_URL}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="home13-process__btn home13-process__btn--solid"
-                      >
-                        {t("home13.process.consultBtn")}
-                        <ArrowIcon variant="white" />
-                      </a>
-                      <a
-                        href="/contact-us"
-                        className="home13-process__btn home13-process__btn--outline"
-                      >
-                        {t("home13.process.chatBtn")}
-                        <ArrowIcon variant="green" />
-                      </a>
-                    </div>
                   </div>
                   <div className="home13-process__media">
                     <Image

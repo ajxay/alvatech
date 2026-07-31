@@ -1,7 +1,6 @@
 "use client";
 
 import { CONTACT_SERVICE_OPTIONS } from "@/data/contactServiceOptions";
-import { markLeadSubmitted } from "@/utlis/leadUnlock";
 import { closeContactModal } from "@/utlis/toggleContactModal";
 import { usePathname } from "next/navigation";
 import { useEffect, useState, useRef } from "react";
@@ -75,7 +74,6 @@ export default function ContactModal() {
         throw new Error("Failed to send message");
       }
 
-      markLeadSubmitted();
       setToast({
         show: true,
         type: "success",

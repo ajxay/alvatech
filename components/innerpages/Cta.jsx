@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 
@@ -96,23 +95,12 @@ export default function Cta() {
                 {t("pages.about.cta.subtitle")}
               </p>
               <div className="hstack flex-wrap justify-center gap-2 mt-1 xl:mt-2">
-                <Link
-                  href="/contact-us"
-                  className="btn btn-md lg:btn-lg btn-primary text-white"
-                  style={{ backgroundColor: "#84BA41", borderColor: "#84BA41" }}
-                >
-                  {t("pages.about.cta.talkToExpert")}
-                </Link>
                 <a
                   href="https://calendly.com/nikhil-k-alvatech/30min"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-md lg:btn-lg border"
-                  style={{
-                    borderColor: "#84BA41",
-                    color: "#84BA41",
-                    backgroundColor: "transparent",
-                  }}
+                  className="btn btn-md lg:btn-lg btn-primary text-white"
+                  style={{ backgroundColor: "#84BA41", borderColor: "#84BA41" }}
                 >
                   {t("pages.about.cta.scheduleConsultation")}
                 </a>

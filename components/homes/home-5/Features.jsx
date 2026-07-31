@@ -22,7 +22,7 @@ export default function Features() {
       id="main_features"
       className="main-features section panel overflow-hidden"
     >
-      <div className="section-outer panel py-4 md:py-6 xl:py-9">
+      <div className="section-outer panel pt-3 md:pt-4 xl:pt-5 pb-4 md:pb-6 xl:pb-9">
         <div className="container sm:max-w-lg xl:max-w-xl">
           <div className="section-inner panel">
             <div

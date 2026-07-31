@@ -8,7 +8,7 @@ export const integrations = [
       "Design, build, and scale high-performing Shopify storefronts with integrations, performance tuning, and conversion-focused UX.",
     imageUrl: "/assets/images/template/tool-shopify.svg",
     imageAlt: "Shopify",
-    link: "/services/custom-shopify-development-services",
+    link: "/services/custom-ecommerce-shopify-development-services",
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ export const integrations = [
       "Tailored web and mobile platforms, APIs, and workflows engineered for your product and operations.",
     imageUrl: "/assets/images/template/tool-custom.svg",
     imageAlt: "Custom development",
-    link: "/services/custom-ecommerce-development-services",
+    link: "/services/custom-development-services",
   },
   {
     id: 3,

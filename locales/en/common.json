@@ -107,7 +107,7 @@
       "Boost": "Boost",
       "Advertising": "Advertising"
     },
-    "insights": "Insights",
+    "insights": "Blogs",
     "continueReading": "Continue reading",
     "readMore": "Read more",
     "ourInsights": "Our insights",
@@ -496,23 +496,6 @@
       "viewCase": "View Case Study",
       "close": "Close case study",
       "openExternal": "Open in new tab",
-      "gate": {
-        "title": "Unlock this case study",
-        "subtitle": "Share your details to view the full case study. If you've already contacted us, this will open right away.",
-        "name": "Full name",
-        "namePlaceholder": "Enter your full name",
-        "email": "Email",
-        "emailPlaceholder": "Enter your email address",
-        "phone": "Phone",
-        "phonePlaceholder": "Phone number",
-        "countryCode": "Country code",
-        "otherCustom": "Other / Custom",
-        "customCode": "Custom code",
-        "customCodePlaceholder": "+XX",
-        "submit": "View case study",
-        "submitting": "Submitting...",
-        "error": "Unable to submit right now. Please try again."
-      },
       "items": {
         "geggamoja": {
           "name": "Geggamoja",

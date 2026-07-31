@@ -10,19 +10,19 @@ const services = [
   // {
   //   id: "shopify",
   //   image: "/assets/images/home-13/services/shopify.png",
-  //   href: "/services/custom-shopify-development-services",
+  //   href: "/services/custom-ecommerce-shopify-development-services",
   //   features: ["a", "b", "c", "d", "e"],
   // },
   {
     id: "ecommerce",
     image: "/assets/images/home-13/services/updated/ecom-development.png",
-    href: "/services/custom-shopify-development-services",
+    href: "/services/custom-ecommerce-shopify-development-services",
     features: ["a", "b", "c", "d", "e"],
   },
   {
     id: "customDevelopment",
     image: "/assets/images/home-13/services/updated/Custom-Development-Alvatech.png",
-    href: "/services/custom-ecommerce-development-services",
+    href: "/services/custom-development-services",
     features: ["a", "b", "c", "d", "e"],
   },
 

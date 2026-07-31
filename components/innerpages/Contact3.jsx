@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { CONTACT_SERVICE_OPTIONS } from "@/data/contactServiceOptions";
-import { markLeadSubmitted } from "@/utlis/leadUnlock";
 import "./Contact3.css";
 
 /** Splits a single "full name" input into the firstName/lastName pair the
@@ -62,7 +61,6 @@ function ContactForm() {
         throw new Error("Failed to send message");
       }
 
-      markLeadSubmitted();
       setToast({
         show: true,
         type: "success",

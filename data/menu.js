@@ -1,14 +1,19 @@
 export const menuItems = [
   {
+    id: 4,
+    href: "/about-us",
+    tKey: "nav.menu.aboutUs",
+  },
+  {
     id: 1,
     tKey: "nav.menu.whatWeOffer",
     subItems: [
       {
-        href: "/services/custom-shopify-development-services",
+        href: "/services/custom-ecommerce-shopify-development-services",
         tKey: "home13.services.items.ecommerce.title",
       },
       {
-        href: "/services/custom-ecommerce-development-services",
+        href: "/services/custom-development-services",
         tKey: "home13.services.items.customDevelopment.title",
       },
       {
@@ -30,24 +35,25 @@ export const menuItems = [
     ],
   },
   {
-    id: 2,
-    tKey: "nav.menu.resources",
-    subItems: [
-      {
-        href: "/blog",
-        tKey: "footer.links.blog",
-      },
-      {
-        href: "/contact-us",
-        tKey: "nav.menu.contactUs",
-      },
-    ],
+    id: 3,
+    href: "/blog",
+    tKey: "footer.links.blog",
   },
-  {
-    id: 4,
-    href: "/about-us",
-    tKey: "nav.menu.aboutUs",
-  },
+  // Resources dropdown — commented out; Blog is a top-level link instead
+  // {
+  //   id: 2,
+  //   tKey: "nav.menu.resources",
+  //   subItems: [
+  //     {
+  //       href: "/blog",
+  //       tKey: "footer.links.blog",
+  //     },
+  //     {
+  //       href: "/contact-us",
+  //       tKey: "nav.menu.contactUs",
+  //     },
+  //   ],
+  // },
   {
     id: 5,
     href: "/contact-us",
@@ -470,14 +476,14 @@ export const features = [
     iconClass: "unicon-store",
     tTitleKey: "home13.services.items.ecommerce.title",
     tDescKey: "nav.featureDesc.shopify",
-    link: "/services/custom-shopify-development-services",
+    link: "/services/custom-ecommerce-shopify-development-services",
   },
   {
     id: 2,
     iconClass: "unicon-email",
     tTitleKey: "home13.services.items.customDevelopment.title",
     tDescKey: "nav.featureDesc.custom",
-    link: "/services/custom-ecommerce-development-services",
+    link: "/services/custom-development-services",
   },
   {
     id: 3,

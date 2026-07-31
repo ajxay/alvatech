@@ -149,12 +149,14 @@ export default function Hero() {
           >
             <span>{t("home13.hero.exploreServices")}</span>
           </Link>
-          <Link
-            href="/contact-us"
+          <a
+            href="https://calendly.com/nikhil-k-alvatech/30min"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hero-twelve__btn hero-twelve__btn--ghost"
           >
             <span>{t("header.scheduleCall")}</span>
-          </Link>
+          </a>
         </div>
       </div>
     </div>

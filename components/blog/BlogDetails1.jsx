@@ -184,8 +184,12 @@ export default function BlogDetails1({ blogItem: rawBlogItem }) {
                 {bestAiForShopifyArticle && <div className="panel mt-3">
                   <figure className="float-end ms-3 mb-1">
                     <Item
-                      original="/assets/images/blog/image-0.png"
-                      thumbnail="/assets/images/blog/image-0.png"
+                      original={encodeURI(
+                        "/assets/images/blog/The Best AI Tools for Shopify Store Owners.jpg",
+                      )}
+                      thumbnail={encodeURI(
+                        "/assets/images/blog/The Best AI Tools for Shopify Store Owners.jpg",
+                      )}
                       width="1280"
                       height="853"
                     >
@@ -193,8 +197,10 @@ export default function BlogDetails1({ blogItem: rawBlogItem }) {
                         <figure className="featured-image m-0 rounded ratio ratio-1x1 sm:w-300px uc-transition-toggle overflow-hidden">
                           <Image
                             className="media-cover image uc-transition-scale-up uc-transition-opaque"
-                            alt="Holding flower, by Anthony Tran"
-                            src="/assets/images/blog/image-0.png"
+                            alt="The Best AI Tools for Shopify Store Owners"
+                            src={encodeURI(
+                              "/assets/images/blog/The Best AI Tools for Shopify Store Owners.jpg",
+                            )}
                             width="1280"
                             height="853"
                             ref={ref}
@@ -202,7 +208,7 @@ export default function BlogDetails1({ blogItem: rawBlogItem }) {
                           <a
                             onClick={open}
                             className="position-cover"
-                            data-caption="Holding flower, by Anthony Tran"
+                            data-caption="The Best AI Tools for Shopify Store Owners"
                           ></a>
                         </figure>
                       )}

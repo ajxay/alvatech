@@ -13,12 +13,22 @@ const nextConfig = {
       { source: "/page-integrations", destination: "/services", permanent: true },
       {
         source: "/page-development",
-        destination: "/services/custom-ecommerce-development-services",
+        destination: "/services/custom-development-services",
+        permanent: true,
+      },
+      {
+        source: "/services/custom-ecommerce-development-services",
+        destination: "/services/custom-development-services",
         permanent: true,
       },
       {
         source: "/page-shopify",
-        destination: "/services/custom-shopify-development-services",
+        destination: "/services/custom-ecommerce-shopify-development-services",
+        permanent: true,
+      },
+      {
+        source: "/services/custom-shopify-development-services",
+        destination: "/services/custom-ecommerce-shopify-development-services",
         permanent: true,
       },
       {
