@@ -1,0 +1,827 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
+import "./shopify-landing.css";
+
+const CALENDLY_URL = "https://calendly.com/nikhil-k-alvatech/30min";
+
+function ArrowIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+      <path
+        d="M3 8h10M9 4l4 4-4 4"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        fill="none"
+      />
+    </svg>
+  );
+}
+
+function useReveal() {
+  useEffect(() => {
+    const els = document.querySelectorAll(".shopify-lp .reveal");
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in");
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 },
+    );
+    els.forEach((el) => io.observe(el));
+    return () => io.disconnect();
+  }, []);
+}
+
+function useStickyHeader() {
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+  return scrolled;
+}
+
+function useCounters() {
+  useEffect(() => {
+    const counters = document.querySelectorAll(".shopify-lp .result b");
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const el = entry.target;
+          const target = parseFloat(el.dataset.target);
+          const suffix = el.dataset.suffix || "";
+          let cur = 0;
+          const step = Math.max(target / 40, 0.5);
+          const timer = setInterval(() => {
+            cur += step;
+            if (cur >= target) {
+              cur = target;
+              clearInterval(timer);
+            }
+            el.textContent = Math.round(cur) + suffix;
+          }, 25);
+          io.unobserve(el);
+        });
+      },
+      { threshold: 0.4 },
+    );
+    counters.forEach((c) => io.observe(c));
+    return () => io.disconnect();
+  }, []);
+}
+
+const whyCards = [
+  {
+    title: "Conversion-Focused Design",
+    text: "Every page is built with user psychology and buying behavior in mind — not just aesthetics.",
+    footer: "Signal → Trust → Purchase",
+    icon: (
+      <path d="M3 12l6 6L21 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+    ),
+  },
+  {
+    title: "Custom Shopify Development",
+    text: "Tailored designs and functionality, built specifically for your business.",
+    icon: (
+      <path d="M4 6h16M4 12h10M4 18h16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none" />
+    ),
+  },
+  {
+    title: "SEO-Optimized Architecture",
+    text: "Structured for search visibility from day one.",
+    icon: (
+      <>
+        <circle cx="11" cy="11" r="7" stroke="currentColor" strokeWidth="2" fill="none" />
+        <path d="M20 20l-3.5-3.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none" />
+      </>
+    ),
+  },
+  {
+    title: "Mobile-First Development",
+    text: "Designed to perform flawlessly across smartphones and tablets — where most of your traffic lives.",
+    icon: (
+      <>
+        <rect x="5" y="2" width="14" height="20" rx="3" stroke="currentColor" strokeWidth="2" fill="none" />
+        <path d="M10 18h4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none" />
+      </>
+    ),
+  },
+  {
+    title: "Transparent Communication",
+    text: "A dedicated project manager keeps you informed at every stage.",
+    icon: (
+      <path d="M8 12h8M8 8h8M8 16h5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none" />
+    ),
+  },
+  {
+    title: "Post-Launch Support",
+    text: "Ongoing maintenance, improvements, and technical assistance whenever you need it.",
+    icon: (
+      <path
+        d="M12 2l3 6 6 1-4.5 4.4L17.5 20 12 17l-5.5 3 1-6.6L3 9l6-1 3-6z"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinejoin="round"
+        fill="none"
+      />
+    ),
+  },
+];
+
+const pillars = [
+  {
+    title: "Better Images",
+    text: "High-quality visuals that showcase products in their best light.",
+    photo: "/assets/images/case/bonbelle-en/hero-photo.png",
+    icon: (
+      <>
+        <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" strokeWidth="2" fill="none" />
+        <circle cx="9" cy="11" r="1.6" stroke="currentColor" strokeWidth="1.6" fill="none" />
+        <path d="M21 16l-5-4-9 7" stroke="currentColor" strokeWidth="1.6" fill="none" />
+      </>
+    ),
+  },
+  {
+    title: "Clear Navigation",
+    text: "Easy-to-find products and information for a smooth experience.",
+    icon: <path d="M4 6h16M4 12h10M4 18h7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none" />,
+  },
+  {
+    title: "Reviews",
+    text: "Real reviews and ratings that build confidence before they even look.",
+    icon: (
+      <path
+        d="M12 3l2.6 5.6 6 .7-4.5 4.2 1.2 6-5.3-3-5.3 3 1.2-6L3.4 9.3l6-.7L12 3z"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinejoin="round"
+        fill="none"
+      />
+    ),
+  },
+  {
+    title: "Fast Loading",
+    text: "Slow sites lose customers — fast loading reduces friction, lifts conversions.",
+    icon: (
+      <path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" fill="none" />
+    ),
+  },
+  {
+    title: "Clean Checkout",
+    text: "A simple, secure checkout process reduces friction and cart abandonment.",
+    icon: (
+      <>
+        <rect x="4" y="9" width="16" height="11" rx="2" stroke="currentColor" strokeWidth="1.6" fill="none" />
+        <path d="M8 9V6a4 4 0 018 0v3" stroke="currentColor" strokeWidth="1.6" fill="none" />
+      </>
+    ),
+  },
+  {
+    title: "Branding",
+    text: "Consistent branding creates recognition, connection, and trust.",
+    icon: (
+      <>
+        <circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="1.6" fill="none" />
+        <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+      </>
+    ),
+  },
+];
+
+const services = [
+  { tag: "Core Build", title: "Shopify Store Development", text: "Custom Shopify stores designed around your brand, customers, and business objectives — from first wireframe to launch day.", big: true },
+  { tag: "Enterprise", title: "Shopify Plus Development", text: "Enterprise ecommerce solutions built for high-growth businesses requiring advanced capability and automation." },
+  { tag: "Move Platforms", title: "Shopify Migration Services", text: "Migrate from WooCommerce, Magento, BigCommerce, OpenCart, PrestaShop, or custom platforms with minimal downtime." },
+  { tag: "Design", title: "Shopify Theme Development", text: "Fast, responsive, conversion-focused themes that deliver exceptional shopping experiences." },
+  { tag: "Extend", title: "Shopify Customizations", text: "Custom features, checkout enhancements, and tailored customer experiences beyond Shopify's defaults." },
+  { tag: "Automate", title: "Shopify App Development", text: "Custom apps that automate business processes and add unique storefront functionality." },
+  { tag: "Ongoing", title: "Maintenance & Support", text: "Keep your store secure, optimized, and continuously improving with ongoing technical support." },
+];
+
+const migrationFrom = ["Vendre", "Norce", "Abicart", "Kodmyran", "Litium", "Centra", "Askås", "Quickbutik"];
+
+const paymentLogos = ["klarna", "swish", "qliro", "vipps", "paypal"];
+const shippingLogos = ["postnord", "dhl", "budbee", "instabox", "nshift"];
+const marketplaceLogos = ["zalando", "amazon", "cdon", "asos", "bol", "ellos"];
+const marqueeLogos = [...paymentLogos, ...shippingLogos, ...marketplaceLogos];
+
+const smallCases = [
+  {
+    id: "geggamoja",
+    image: "/assets/images/home-13/case-studies/geggamoja.png",
+    tag: "Kids & Home",
+    metric: "+30%",
+    title: "Geggamoja average order value lift",
+    text: "Redesigned product discovery and merchandising to increase average order value across the Geggamoja Shopify store.",
+    tags: ["Shopify", "Merchandising", "AOV Growth"],
+    href: "/assets/pdfs/Geggamoja English.pdf",
+  },
+  {
+    id: "reirei",
+    image: "/assets/images/home-13/case-studies/reirei.png",
+    tag: "Beauty & Wellness",
+    metric: "+210%",
+    title: "ReiRei conversion rate breakthrough",
+    text: "Rebuilt product pages and checkout flow around trust signals to more than triple ReiRei's on-site conversion rate.",
+    tags: ["Conversion Design", "Checkout UX", "Shopify"],
+    href: "/assets/pdfs/ReiRei English.pdf",
+  },
+];
+
+const faqs = [
+  { q: "How long does Shopify website development take?", a: "Most Shopify projects are completed within 4 to 8 weeks, depending on complexity." },
+  { q: "Can you redesign my existing Shopify store?", a: "Yes. We can redesign, optimize, and modernize your current Shopify website without disrupting your business." },
+  { q: "Do you provide custom Shopify development?", a: "Absolutely. Every business has unique requirements, and we build custom solutions tailored to your goals." },
+  { q: "Will my Shopify website be mobile responsive?", a: "Yes. Every Shopify website we develop is fully responsive and optimized for mobile shopping." },
+  { q: "Can you migrate my existing ecommerce website?", a: "Yes. We migrate websites from WooCommerce, Magento, Wix, BigCommerce, OpenCart, and other ecommerce platforms." },
+  { q: "Do you provide SEO services?", a: "Yes. We build SEO-friendly Shopify websites and also offer ongoing SEO optimization services." },
+  { q: "Will I be able to manage the website myself?", a: "Definitely. Shopify's intuitive dashboard makes it easy to manage products, inventory, and orders." },
+  { q: "Do you provide maintenance after launch?", a: "Yes. We offer ongoing support, maintenance, performance optimization, and feature enhancements." },
+];
+
+function LogoRow({ ids }) {
+  return (
+    <div className="integ-logos">
+      {ids.map((id) => (
+        <span key={id} className="integ-logo">
+          <Image
+            src={`/assets/images/home-13/marketplaces/${id}.png`}
+            alt={id}
+            width={72}
+            height={22}
+          />
+        </span>
+      ))}
+    </div>
+  );
+}
+
+function scrollToId(id) {
+  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+}
+
+export default function ShopifyLandingClient() {
+  const scrolled = useStickyHeader();
+  useReveal();
+  useCounters();
+
+  const [sessions, setSessions] = useState(579000);
+  const [conv, setConv] = useState(4.2);
+  const [aov, setAov] = useState(50);
+  const [openFaq, setOpenFaq] = useState(null);
+
+  const lift = Math.round(sessions * (conv / 100) * aov * 0.2);
+  const fmt = (n) => Number(n).toLocaleString("en-US");
+
+  return (
+    <div className="shopify-lp">
+      <header id="shopifyLpHeader" className={scrolled ? "scrolled" : ""}>
+        <div className="wrap">
+          <nav>
+            <div className="logo">
+              <Image src="/assets/images/common/main-logo.svg" alt="Alvatech" width={130} height={26} />
+            </div>
+            <div className="nav-links">
+              <a onClick={() => scrollToId("why")}>Why Us</a>
+              <a onClick={() => scrollToId("services")}>Services</a>
+              <a onClick={() => scrollToId("migration")}>Migration</a>
+              <a onClick={() => scrollToId("roi")}>ROI</a>
+              <a onClick={() => scrollToId("cases")}>Case Studies</a>
+              <a onClick={() => scrollToId("faq")}>FAQ</a>
+            </div>
+            <div className="nav-cta">
+              <a
+                href={CALENDLY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary btn-sm"
+              >
+                Get Free Consultation
+              </a>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      {/* HERO */}
+      <section className="hero">
+        <div className="wrap hero-grid">
+          <div>
+            <span className="eyebrow">Shopify Development Partner</span>
+            <h1>
+              Build a Shopify Store That Doesn&apos;t Just Look Great.
+              <br />
+              <span className="accent">It Sells.</span>
+            </h1>
+            <p className="lead">
+              We design and build Shopify stores around customer psychology, so
+              every page turns a visitor into a buyer — not just a browser.
+            </p>
+            <div className="hero-ctas">
+              <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+                Get a Free Shopify Consultation
+                <ArrowIcon />
+              </a>
+              <a onClick={() => scrollToId("cases")} className="btn btn-ghost" style={{ cursor: "pointer" }}>
+                View Our Portfolio
+              </a>
+            </div>
+            <div className="hero-stats">
+              <div className="stat"><b>150+</b><span>Websites Delivered</span></div>
+              <div className="stat"><b>50+</b><span>Shopify Projects</span></div>
+              <div className="stat"><b>Mobile-First</b><span>Development</span></div>
+              <div className="stat"><b>Global</b><span>Clientele</span></div>
+            </div>
+          </div>
+          <div style={{ position: "relative" }}>
+            <div className="mock">
+              <div className="mock-bar">
+                <span></span><span></span><span></span>
+                <div className="url">yourstore.com</div>
+              </div>
+              <div className="mock-body">
+                <Image
+                  src="/assets/images/case/bonbelle-en/preview1-browser.png"
+                  alt="Example Shopify storefront built by Alvatech"
+                  width={720}
+                  height={570}
+                />
+              </div>
+            </div>
+            <div className="float-chip c1"><span className="dot-green"></span> Organic traffic +105%</div>
+            <div className="float-chip c2"><span className="dot-green"></span> Load time 1.2s</div>
+          </div>
+        </div>
+      </section>
+
+      {/* WHY CHOOSE */}
+      <section id="why">
+        <div className="wrap">
+          <div className="sec-head reveal">
+            <span className="eyebrow">Why Choose Alvatech</span>
+            <h2>More than Shopify developers. We&apos;re growth partners.</h2>
+            <p>
+              Our approach goes beyond code. Every store is strategically built
+              to improve customer experience, increase conversions, and support
+              long-term growth.
+            </p>
+          </div>
+          <div className="bento reveal">
+            {whyCards.map((card) => (
+              <div key={card.title} className={`card${card.variant ? ` ${card.variant}` : ""}`}>
+                <div>
+                  <div className="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none">{card.icon}</svg>
+                  </div>
+                  <h3>{card.title}</h3>
+                  <p>{card.text}</p>
+                </div>
+                {card.footer ? <div className="logic" style={{ marginTop: 24 }}>{card.footer}</div> : null}
+              </div>
+            ))}
+          </div>
+          <div className="cta-row reveal">
+            <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+              Talk to Shopify Experts
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* TRUST */}
+      <section>
+        <div className="trust reveal">
+          <span className="eyebrow">Customer Psychology First</span>
+          <h2>
+            We don&apos;t just build Shopify stores.
+            <br />
+            We design buying decisions.
+          </h2>
+          <div className="flow">
+            <div className="flow-step"><span className="num">01</span><p>People don&apos;t buy because you have Shopify.</p></div>
+            <div className="flow-arrow">→</div>
+            <div className="flow-step"><span className="num">02</span><p>People buy because they trust you.</p></div>
+            <div className="flow-arrow">→</div>
+            <div className="flow-step"><span className="num">03</span><p>Trust comes from the buying experience you provide.</p></div>
+          </div>
+          <span className="eyebrow" style={{ marginBottom: 20, display: "block" }}>The Six Pillars That Build Trust</span>
+          <div className="pillars">
+            {pillars.map((pillar) => (
+              <div
+                key={pillar.title}
+                className="pillar"
+                style={pillar.photo ? { paddingBottom: 0, overflow: "hidden" } : undefined}
+              >
+                <div className="p-icon">
+                  <svg viewBox="0 0 24 24" fill="none">{pillar.icon}</svg>
+                </div>
+                <h4>{pillar.title}</h4>
+                <p>{pillar.text}</p>
+                {pillar.photo ? (
+                  <div style={{ height: 90, borderRadius: 10, margin: "16px -22px 0", overflow: "hidden", position: "relative" }}>
+                    <Image src={pillar.photo} alt="" width={400} height={200} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                  </div>
+                ) : null}
+              </div>
+            ))}
+          </div>
+          <div className="cta-row">
+            <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn btn-light">
+              Let&apos;s Build a Store Customers Love to Buy From
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* SERVICES */}
+      <section id="services">
+        <div className="wrap">
+          <div className="sec-head reveal">
+            <span className="eyebrow">Our Shopify Services</span>
+            <h2>End-to-end Shopify development services.</h2>
+          </div>
+          <div className="services-grid reveal">
+            {services.map((svc) => (
+              <div key={svc.title} className={`svc${svc.big ? " big" : ""}`}>
+                <div>
+                  <span className="tag">{svc.tag}</span>
+                  <h3>{svc.title}</h3>
+                  <p>{svc.text}</p>
+                </div>
+                {svc.big ? (
+                  <div className="card-icon" style={{ width: 64, height: 64, margin: "0 0 0 auto" }}>
+                    <svg viewBox="0 0 24 24" fill="none" width="28" height="28">
+                      <path d="M4 8l8-5 8 5-8 5-8-5z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" fill="none" />
+                      <path d="M4 8v8l8 5 8-5V8" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" fill="none" />
+                    </svg>
+                  </div>
+                ) : null}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* AUDIT BANNER */}
+      <section style={{ padding: "0 0 100px" }}>
+        <div className="audit reveal">
+          <h3>Get your FREE Shopify store audit today.</h3>
+          <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+            Claim Free Audit
+          </a>
+        </div>
+      </section>
+
+      {/* MIGRATION */}
+      <section id="migration">
+        <div className="wrap">
+          <div className="migrate-panel reveal">
+            <span className="eyebrow">Shopify Migration</span>
+            <h2 style={{ color: "var(--paper)", marginTop: 16 }}>Seamlessly migrate to Shopify.</h2>
+            <p style={{ color: "rgba(255,246,238,.65)", maxWidth: 520, marginTop: 12 }}>
+              Move your store from your current platform to Shopify with zero
+              disruption. We handle everything — you focus on growth.
+            </p>
+            <div className="migrate-flow">
+              <div className="migrate-from">
+                {migrationFrom.map((p) => (
+                  <span key={p} className="chip">{p}</span>
+                ))}
+              </div>
+              <div className="migrate-to">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                  <path d="M16 3l3 3-9 9-4 1 1-4 9-9z" stroke="currentColor" strokeWidth="1.6" fill="none" />
+                </svg>
+                Shopify
+              </div>
+            </div>
+            <div className="migrate-feats">
+              <div><h5>Secure Migration</h5><p>Your data is safe with us, every step of the way.</p></div>
+              <div><h5>SEO Protection</h5><p>URLs, rankings, and traffic stay intact.</p></div>
+              <div><h5>Better Performance</h5><p>Faster store, better conversions.</p></div>
+              <div><h5>Expert Support</h5><p>We&apos;re with you every step.</p></div>
+            </div>
+            <div className="cta-row" style={{ justifyContent: "flex-start", marginTop: 36 }}>
+              <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn btn-light">
+                Plan Your Migration Today
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ROI CALCULATOR */}
+      <section id="roi">
+        <div className="wrap">
+          <div className="sec-head reveal">
+            <span className="eyebrow">You Do The Math</span>
+            <h2>Your visitors are already there. What if more of them bought?</h2>
+            <p>
+              Our Shopify projects have delivered conversion rate increases of
+              up to 210%. Plug in your numbers to see what even a conservative
+              20% lift could mean for your store.
+            </p>
+          </div>
+          <div className="ledger reveal">
+            <div className="ledger-controls">
+              <div className="slider-row">
+                <label>Monthly sessions <output>{fmt(sessions)}</output></label>
+                <input
+                  type="range"
+                  min={50000}
+                  max={2000000}
+                  step={1000}
+                  value={sessions}
+                  onChange={(e) => setSessions(Number(e.target.value))}
+                />
+              </div>
+              <div className="slider-row">
+                <label>Current conversion rate <output>{conv}%</output></label>
+                <input
+                  type="range"
+                  min={0.5}
+                  max={10}
+                  step={0.1}
+                  value={conv}
+                  onChange={(e) => setConv(Number(e.target.value))}
+                />
+              </div>
+              <div className="slider-row">
+                <label>Average order value <output>${fmt(aov)}</output></label>
+                <input
+                  type="range"
+                  min={10}
+                  max={300}
+                  step={1}
+                  value={aov}
+                  onChange={(e) => setAov(Number(e.target.value))}
+                />
+              </div>
+            </div>
+            <div className="ledger-result">
+              <span className="eyebrow">Estimated Monthly Revenue Lift</span>
+              <div className="lift-val">${fmt(lift)}</div>
+              <p className="fine">
+                Based on a conservative 20% conversion rate lift applied to
+                your current revenue. Actual results vary by industry, traffic
+                quality, product offering, and implementation.
+              </p>
+              <div className="logic">Logic: Revenue = Visitors × Conversion Rate × AOV</div>
+            </div>
+          </div>
+          <div className="cta-row">
+            <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+              Optimise Your Store Today
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* CASE STUDIES */}
+      <section id="cases">
+        <div className="wrap">
+          <div className="sec-head reveal">
+            <span className="eyebrow">Case Studies</span>
+            <h2>Every store has a story. Every story has results.</h2>
+            <p>
+              Behind every successful Shopify store is a strategy built around
+              customer behavior, seamless experiences, and continuous
+              optimization.
+            </p>
+          </div>
+
+          <div className="case-featured reveal">
+            <div className="photo">
+              <Image
+                src="/assets/images/home-13/case-studies/bonbelle.png"
+                alt="Bonbelle Shopify storefront"
+                width={618}
+                height={394}
+              />
+            </div>
+            <div className="cf-body">
+              <span className="tag">Featured · Beauty &amp; Skincare</span>
+              <h3>How Bonbelle grew organic traffic 105% and revenue 3.9x after a full Shopify redesign</h3>
+              <p className="desc">
+                Redesigned Bonbelle&apos;s B2B &amp; D2C Shopify experience
+                end-to-end — new UX/UI, a rebuilt design system, and a
+                streamlined checkout — to fix the visual hierarchy, discovery,
+                and trust issues holding back conversion.
+              </p>
+              <div className="cf-stats">
+                <div><b>+105%</b><span>Organic Traffic</span></div>
+                <div><b>3.9x</b><span>Revenue Growth</span></div>
+                <div><b>-68%</b><span>Cart Abandonment</span></div>
+              </div>
+              <p className="cf-quote">
+                &quot;Since switching over, I&apos;ve noticed a huge
+                difference in how easy it is to browse and buy. The whole
+                experience feels seamless — I actually look forward to
+                shopping here now.&quot;
+              </p>
+              <div className="cf-person">
+                <span className="avatar" style={{ width: 40, height: 40, borderRadius: "50%", overflow: "hidden", display: "block", flex: "none" }}>
+                  <Image src="/assets/images/case/bonbelle-en/avatar.png" alt="" width={40} height={40} />
+                </span>
+                <div className="who"><b>Mr. Albin Johansson</b><span>Bonbelle</span></div>
+              </div>
+              <a
+                href={encodeURI("/assets/pdfs/Bonbelle English.pdf")}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary"
+                style={{ alignSelf: "flex-start" }}
+              >
+                Download Case Study
+              </a>
+            </div>
+          </div>
+
+          <div className="cases reveal">
+            {smallCases.map((item) => (
+              <div key={item.id} className="case">
+                <div className="case-top">
+                  <Image src={item.image} alt={item.title} width={700} height={500} />
+                  <span className="tag">{item.tag}</span>
+                  <div className="case-metric">{item.metric}</div>
+                </div>
+                <div className="case-body">
+                  <h4>{item.title}</h4>
+                  <p>{item.text}</p>
+                  <div className="case-tags">
+                    {item.tags.map((t) => <span key={t}>{t}</span>)}
+                  </div>
+                  <a href={encodeURI(item.href)} target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
+                    Download Case Study
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* INTEGRATIONS */}
+      <section>
+        <div className="wrap">
+          <div className="sec-head reveal">
+            <span className="eyebrow">One Store, Endless Possibilities</span>
+            <h2>Integrate the systems you already rely on.</h2>
+            <p>Create a connected ecommerce ecosystem around payments, shipping, and marketplaces.</p>
+          </div>
+          <div className="integ-grid reveal">
+            <div className="integ-col">
+              <h5>Payment Integrations</h5>
+              <LogoRow ids={paymentLogos} />
+            </div>
+            <div className="integ-col">
+              <h5>Shipping Integrations</h5>
+              <LogoRow ids={shippingLogos} />
+            </div>
+            <div className="integ-col">
+              <h5>Marketplace Integrations</h5>
+              <LogoRow ids={marketplaceLogos} />
+            </div>
+          </div>
+          <div className="marquee reveal">
+            <div className="marquee-track">
+              {[...marqueeLogos, ...marqueeLogos].map((id, i) => (
+                <span key={`${id}-${i}`} className="chip" style={{ display: "inline-flex", alignItems: "center" }}>
+                  <Image
+                    src={`/assets/images/home-13/marketplaces/${id}.png`}
+                    alt={id}
+                    width={60}
+                    height={18}
+                    style={{ height: 16, width: "auto", objectFit: "contain" }}
+                  />
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* RESULTS */}
+      <section>
+        <div className="wrap">
+          <div className="sec-head center reveal">
+            <span className="eyebrow">Results That Matter</span>
+            <h2>Numbers our clients feel every day.</h2>
+          </div>
+          <div className="results reveal">
+            <div className="result"><b data-target="150" data-suffix="+">0</b><span>Websites Delivered</span></div>
+            <div className="result"><b data-target="50" data-suffix="+">0</b><span>Shopify Stores</span></div>
+            <div className="result"><b data-target="98" data-suffix="%">0</b><span>Client Satisfaction</span></div>
+            <div className="result"><b data-target="30" data-suffix="%">0</b><span>Avg. Speed Improvement</span></div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section id="faq">
+        <div className="wrap">
+          <div className="sec-head center reveal">
+            <span className="eyebrow">FAQ</span>
+            <h2>Frequently asked questions.</h2>
+          </div>
+          <div className="faq reveal">
+            {faqs.map((item, index) => (
+              <div key={item.q} className={`faq-item${openFaq === index ? " open" : ""}`}>
+                <button
+                  type="button"
+                  className="faq-q"
+                  onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                >
+                  {item.q}<span className="plus">+</span>
+                </button>
+                <div className="faq-a">{item.a}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FINAL CTA */}
+      <section id="contact" style={{ paddingTop: 0 }}>
+        <div className="wrap">
+          <div className="trust reveal" style={{ textAlign: "center" }}>
+            <span className="eyebrow center" style={{ justifyContent: "center" }}>Ready When You Are</span>
+            <h2 style={{ margin: "16px auto 14px", maxWidth: 600 }}>
+              Let&apos;s build a Shopify store customers actually trust.
+            </h2>
+            <p style={{ color: "rgba(255,246,238,.7)", maxWidth: 480, margin: "0 auto 34px" }}>
+              Book a free, no-pressure consultation. We&apos;ll audit your
+              current store or scope your new one — no obligation.
+            </p>
+            <div className="cta-row" style={{ gap: 14 }}>
+              <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn btn-light">
+                Get a Free Shopify Consultation
+              </a>
+              <a
+                onClick={() => scrollToId("cases")}
+                className="btn btn-ghost"
+                style={{ borderColor: "rgba(255,246,238,.3)", color: "var(--paper)", cursor: "pointer" }}
+              >
+                View Our Portfolio
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div className="wrap">
+          <div className="foot-top">
+            <div>
+              <div className="logo foot-logo">
+                <Image src="/assets/images/common/main-logo.svg" alt="Alvatech" width={130} height={26} style={{ filter: "brightness(0) invert(1)" }} />
+              </div>
+              <p style={{ maxWidth: 260, fontSize: 13.5 }}>Shopify development partner for growing ecommerce brands.</p>
+            </div>
+            <div className="foot-cols">
+              <div>
+                <h6>Services</h6>
+                <ul>
+                  <li><a onClick={() => scrollToId("services")}>Store Development</a></li>
+                  <li><a onClick={() => scrollToId("services")}>Shopify Plus</a></li>
+                  <li><a onClick={() => scrollToId("migration")}>Migration</a></li>
+                  <li><a href="/services/custom-ecommerce-shopify-development-services">Theme Development</a></li>
+                </ul>
+              </div>
+              <div>
+                <h6>Company</h6>
+                <ul>
+                  <li><a onClick={() => scrollToId("why")}>Why Us</a></li>
+                  <li><a onClick={() => scrollToId("cases")}>Case Studies</a></li>
+                  <li><a onClick={() => scrollToId("faq")}>FAQ</a></li>
+                  <li><a href="/contact-us">Contact</a></li>
+                </ul>
+              </div>
+              <div>
+                <h6>Get Started</h6>
+                <ul>
+                  <li><a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">Free Consultation</a></li>
+                  <li><a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">Free Store Audit</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div className="foot-bottom">
+            <span>© 2026 Alvatech. All rights reserved.</span>
+            <span>Norra Oskarsgatan 12, Linköping · +46 704964569</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
