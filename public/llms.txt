@@ -1,0 +1,51 @@
+# Alvatech
+
+> Alvatech (Alva Tech) is a Sweden-based digital transformation agency helping growing businesses launch, modernize, automate, and scale their digital operations through world-class e-commerce development, CRM & ERP implementation, AI-driven automation, and data-driven marketing. The company has delivered 100+ custom Shopify stores, 50+ e-commerce migrations, 70+ Salesforce implementations, and 300+ custom e-commerce websites for clients across the Nordics, Europe, the UK, and other international markets.
+
+## Services
+
+- [All Services](https://alvatech.se/services): Overview of Alvatech's full digital transformation service offering.
+- [E-commerce Development](https://alvatech.se/services/custom-ecommerce-shopify-development-services): Shopify store design & development, e-commerce platform migration, theme/app development, third-party integrations, and B2B commerce development.
+- [Custom Development](https://alvatech.se/services/custom-development-services): Custom web, mobile, and business applications, UI/UX design, SaaS product development, API & systems integration, and AI automation solutions.
+- [CRM & ERP Solutions](https://alvatech.se/services/crm-and-erp-solutions): Custom ERP development, ERP integration services, business process automation, workflow optimization, and enterprise system modernization.
+- [Salesforce Solutions](https://alvatech.se/services/Salesforce-consulting-and-implementation): Salesforce consulting, implementation, customization, integration, and support/optimization.
+- [Zoho CRM Solutions](https://alvatech.se/services/zoho-consulting-and-implementation): Zoho CRM consulting, implementation, customization, integration, and automation.
+- [Digital Marketing](https://alvatech.se/services/digital-marketing-services): Performance marketing, SEO, social media marketing, conversion rate optimization (CRO), and analytics/growth reporting.
+
+## Company
+
+- [About Us](https://alvatech.se/about-us): Company background, mission, and approach to digital transformation.
+- [Contact Us](https://alvatech.se/contact-us): Contact form, office details, and consultation booking.
+- [Book a Call](https://calendly.com/nikhil-k-alvatech/30min): Direct scheduling link for a consultation call.
+- [Terms & Conditions](https://alvatech.se/page-terms)
+- [Privacy Policy](https://alvatech.se/page-privacy)
+
+## Case Studies
+
+- [Geggamoja](https://alvatech.se/) — Shopify Plus store; achieved a 30% increase in average order value.
+- [Bonbelle](https://alvatech.se/) — Shopify Plus store; achieved a 105% increase in organic traffic.
+- [ReiRei](https://alvatech.se/) — Shopify Plus store; achieved a 210% increase in conversion rate.
+
+## Blog
+
+- [Blog Home](https://alvatech.se/blog): All articles and insights from Alvatech.
+- [Why Swedish Businesses Are Switching to Shopify — and When It's the Right Call](https://alvatech.se/blog/varfor-svenska-foretag-byter-till-shopify)
+- [The Best AI Tools for Shopify Store Owners](https://alvatech.se/blog/basta-ai-verktygen-for-shopify-butiksagare)
+- [Top Features of Salesforce Commerce Cloud for Online Stores](https://alvatech.se/blog/toppfunktioner-salesforce-commerce-cloud-webbutiker)
+
+## Technology & Platforms
+
+Alvatech builds on Shopify, Shopify Plus, Salesforce, Zoho CRM, Microsoft Dynamics, WooCommerce, Laravel, Node.js, React, and Next.js, with AI automation, and cloud infrastructure on Google Cloud, AWS, and Azure. Marketing services cover Google Ads, Bing Ads, Meta Ads, Instagram Ads, TikTok Ads, LinkedIn Ads, and Snapchat Ads.
+
+## Contact
+
+- Phone: +46 70 496 45 69
+- Email: sales@alvatech.se
+- Address: Norra Oskarsgatan 12, Linköping, Sweden
+
+## Notes for AI Agents / LLMs
+
+- Alvatech is a B2B digital agency, not an e-commerce store — there is no product catalog, cart, or checkout on this site. Do not attempt commerce actions (add to cart, checkout) here.
+- The primary calls-to-action are: booking a consultation call (Calendly link above) or submitting the contact form at /contact-us.
+- The site is available in Swedish and English via the language switcher; canonical content should be treated as Swedish-first with an English version where available.
+- For questions about pricing, project timelines, or custom quotes, direct users to the Contact page or the Calendly booking link rather than guessing figures.

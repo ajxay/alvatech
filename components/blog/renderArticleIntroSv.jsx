@@ -1417,6 +1417,422 @@ function ShopifyMigrationArticleIntroSv() {
   );
 }
 
+function VendreShopifyPlusMigrationArticleIntroSv() {
+  return (
+    <>
+      <p className="mb-4 fst-italic">
+        Så flyttade vi en svensk barnmodehandlares hela e-handelsstack —
+        tusentals produkter, gott och väl över hundra tusen kunder,
+        hundratusentals historiska ordrar — till Shopify Plus, utan att
+        förlora en enda försäljning, sökranking eller teamets förtroende.
+      </p>
+      <p className="mb-4 fst-italic fw-bold">
+        &quot;Den bästa migreringen är den kunderna aldrig märker av — bara
+        verksamheten gör det.&quot;
+      </p>
+      <p className="mb-4">
+        Ett plattformsbyte är aldrig bara ett plattformsbyte. För en växande
+        handlare påverkar det allt: hur teamet merchandisar, hur marknad
+        skickar kampanjer, hur supporten löser en tre år gammal order, och
+        hur sökmotorer överhuvudtaget hittar butiken. De flesta
+        migreringsberättelser hoppar rakt till &quot;efter&quot;-bilden. Vi
+        vill visa det som händer mittemellan — API-anropen, datastädningen,
+        rate limit-felen klockan två på natten — för det är där en
+        migrering faktiskt vinns eller förloras.
+      </p>
+      <p className="mb-5">
+        Det här är den tekniska berättelsen bakom flytten av ett etablerat
+        svenskt barnmodesvarumärke från Vendre till Shopify Plus: vad vi
+        byggde, vad som gick sönder, och hur vi fixade det — skrivet som vi
+        skulle förklara det för ett annat utvecklingsteam, inte för en
+        säljpresentation.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Uppdraget</h4>
+      <p className="mb-4">
+        Flytta en etablerad e-handelsverksamhet från Vendre till Shopify
+        Plus samtidigt som produktrelationer, orderhistorik, kunddata,
+        organisk söktrafik och driftteamets trygghet skyddas — utan
+        oplanerade driftstopp.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Skalan bakom butiken</h4>
+      <p className="mb-3">
+        Innan vi skrev en enda rad migreringskod kartlade vi exakt vad som
+        behövde flyttas. Skala förändrar strategin — en butik med 200
+        produkter klarar en enkel CSV-import; en katalog av den här
+        storleken gör inte det.
+      </p>
+      <p className="mb-3">
+        <b>Katalog — tusentals produkter, tusentals varianter och bilder.</b>
+        <br />
+        Varje storlek, färg, SKU och merchandisingdetalj behövde förbli
+        användbar, inte bara finnas kvar.
+      </p>
+      <p className="mb-3">
+        <b>Kollektioner — över 100 kollektioner.</b>
+        <br />
+        Navigation och säsongsmerchandising behövde byggas om, inte
+        klistras in.
+      </p>
+      <p className="mb-3">
+        <b>Kunder — gott och väl över 100 000 kundposter.</b>
+        <br />
+        Livscykelmarknadsföring och support är beroende av ren, korrekt
+        kunddata.
+      </p>
+      <p className="mb-3">
+        <b>Ordrar — hundratusentals historiska ordrar.</b>
+        <br />
+        Returer, rapportering och återköpslogik bygger alla på
+        tillförlitlig orderhistorik.
+      </p>
+      <p className="mb-4">
+        <b>SEO — år av äldre URL:er och metadata.</b>
+        <br />
+        Åratal av organisk synlighet behövde överleva flytten utan döda
+        länkar.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Varför Shopify Plus, och varför nu?</h4>
+      <p className="mb-4">
+        Vendre hade genuint tjänat verksamheten väl i flera år — det handlade
+        inte om en &quot;trasig&quot; plattform. Det handlade om en
+        plattform som blivit dyr i tid: varje kampanj krävde
+        utvecklarstöd, sök- och innehållsflöden var mer rigida än vad det
+        kommersiella teamet behövde, och att koppla in nya verktyg tog mer
+        utvecklingsarbete än det borde.
+      </p>
+      <p className="mb-3">
+        <b>Före:</b> kampanj- och innehållsändringar krävde ofta
+        utvecklarstöd; produktrelationer var knutna till en äldre,
+        skräddarsydd datamodell; sök, prestanda och integrationer var
+        långsamma att förbättra.
+      </p>
+      <p className="mb-4">
+        <b>Efter:</b> merchandising- och kampanjteam arbetar i en
+        självbetjäningsmodell; produktdata är formad nativt för Shopifys
+        katalog- och storefront-API:er; en modern plattformsgrund gör
+        riktad optimering och integrationer enkla.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Den verkliga utmaningen: affärslogik, inte CSV-export</h4>
+      <p className="mb-4">
+        Vem som helst kan exportera en produktlista. Det svåra är att tolka
+        reglerna som gömmer sig i åratal av katalogarbete. I Vendre var
+        färgvarianter och relaterade produkter representerade genom
+        skräddarsydda interna relationer som saknade en direkt
+        Shopify-motsvarighet. En naiv, fält-för-fält-import hade splittrat
+        en jacka i fem färger till fem orelaterade produkter — förvirrande
+        för kunder, jobbigt att merchandisa och direkt skadligt för SEO,
+        eftersom det fragmenterar auktoriteten över nästan identiska sidor
+        istället för att samla den på en stark produktfamilj.
+      </p>
+      <p className="mb-4">
+        Vi behandlade det här som ett översättningsproblem, inte ett
+        överföringsproblem. Först kartlade vi varje källstruktur och dess
+        undantag. Sedan omvandlade vi det till Shopify-native produkt- och
+        variantrelationer — och bevarade lager, media, handles och
+        merchandisingavsikt längs vägen. Fem Vendre-sidiga färgposter
+        blev en Shopify-produktfamilj med färg- och storleksvarianter,
+        istället för fem separata produktsidor som konkurrerade med
+        varandra i sökresultaten.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Under huven: en skräddarsydd migreringsmotor, inte ett CSV-verktyg</h4>
+      <p className="mb-4">
+        En CSV-import fungerar bra för några hundra enkla produkter. Den har
+        ingen uppfattning om dubblettkunder, inget koncept för att göra om
+        en enskild misslyckad post i en sexsiffrig orderbatch, och inget
+        sätt att validera relationer innan de skrivs. Så istället för att
+        sy ihop kalkylexporter byggde vi en egen migreringsapplikation —
+        vår egen brygg-app — som pratade direkt med båda plattformarna:
+        hämtade från Vendres API på ena sidan och skrev till Shopify via
+        Admin GraphQL-API:et och Bulk Operations på den andra.
+      </p>
+      <p className="mb-3">
+        <b>Extrahera</b> — hämtade strukturerad källdata från Vendres API i
+        kontrollerade, återupptagbara batcher — aldrig en enda
+        allt-eller-inget-dump.
+      </p>
+      <p className="mb-3">
+        <b>Normalisera</b> — standardiserade e-post, telefonnummer, adresser,
+        SKU:er och landskoder till konsekventa, Shopify-klara format.
+      </p>
+      <p className="mb-3">
+        <b>Transformera</b> — mappade produktfamiljer, varianter,
+        kollektioner, SEO-fält och mediareferenser till Shopifys datamodell.
+      </p>
+      <p className="mb-3">
+        <b>Validera</b> — körde kontroller på postnivå (obligatoriska fält,
+        relationsintegritet, dubblettdetektering) innan någon
+        skrivoperation.
+      </p>
+      <p className="mb-3">
+        <b>Ladda</b> — skrev till Shopify via Admin GraphQL-API:et, och
+        växlade till Bulk Operations för högvolymskrivningar.
+      </p>
+      <p className="mb-4">
+        <b>Verifiera &amp; försök igen</b> — loggade varje fel individuellt,
+        gjorde säkra omförsök, och stämde av totaler mot källan innan
+        release.
+      </p>
+      <p className="mb-4">
+        Varje skrivning följde samma disciplin: validera först, skriv en
+        gång, köa resten asynkront. För backfillen av historiska ordrar
+        använde vi Shopifys Bulk Operations-API istället för att skicka en
+        mutation per order — bulk-operationer körs asynkront på Shopifys
+        sida, tar emot stora JSONL-payloads och rapporterar tillbaka en
+        nedladdningsbar resultatfil, vilket gjorde att vi kunde köa tiotusentals
+        historiska ordrar, gå därifrån, och stämma av resultatet istället
+        för att hålla tusentals enskilda HTTP-anslutningar öppna.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>De väsentliga API:erna och plattformsfunktionerna vi använde</h4>
+      <p className="mb-3">
+        Vi försöker undvika att API-namndroppa för sakens skull — men för
+        läsare som utvärderar sin egen migrering betyder de specifika
+        verktygen mer än marknadsspråket runt dem:
+      </p>
+      <ul>
+        <li><b>Shopify Admin GraphQL API</b> — ryggraden i migreringen; användes för produkt-, variant-, kollektions-, kund- och metadataskrivningar med precis fältkontroll.</li>
+        <li><b>Bulk Operations (GraphQL)</b> — asynkron import/export med hög volym för backfillen av order och kunder, vilket undvek flaskhalsar i request-hastigheten vid sexsiffriga postantal.</li>
+        <li><b>Metafields och metaobjects</b> — användes för att bära merchandising- och innehållsstrukturer som inte mappar till Shopifys nativa produktschema, så inget från Vendres datamodell tappades bort i tysthet.</li>
+        <li><b>Shopify Flow</b> — automatiserade operativa arbetsflöden efter migreringen (taggning, notiser, lagervarningar) som tidigare krävde manuell utvecklarinsats i Vendre.</li>
+        <li><b>Shopify Search &amp; Discovery</b> — omkonfigurerade merchandisingregler och filter mot den nyligen normaliserade katalogen för att stödja söksynlighetsvinsterna efter lansering.</li>
+        <li><b>Webhooks och idempotenta skrivmönster</b> — varje skrivning bar en käll-ID-referens, så ett omförsök eller dubblettanrop blev en säker no-op istället för en dubblettpost.</li>
+        <li><b>Vendres REST-endpoints</b> — vid extraktion arbetade vi sida för sida mot Vendres produkt-, kund- och order-endpoints, och respekterade dess egen paginering och rate limits istället för att anta Shopify-liknande bulksemantik på källsidan.</li>
+      </ul>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Datakvalitet var en del av leveransen, inte en eftertanke</h4>
+      <p className="mb-4">
+        Äldre e-handelsdata bär alltid med sig historia — dubbla
+        e-postadresser, ofullständiga adresser, inkonsekventa
+        telefonformat, utgångna produkter, trasiga mediauppsättningar och
+        det udda specialfallet som skapades av någons manuella lösning för
+        tre år sedan. Att migrera varje post orörd bevarar inte historiken;
+        det flyttar bara gårdagens problem in i ett nyare, dyrare system.
+      </p>
+      <p className="mb-4 fst-italic fw-bold">
+        Arbetsprincip: behandla inte datastädning som ett förlanseringsjobb.
+        Behandla det som ett eget migreringsspår, med egna undantagsregler,
+        granskningsloggar och godkännande från intressenter.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Utmaningar vi stötte på, och hur vi hanterade dem</h4>
+      <p className="mb-4">
+        Varje migrering av den här storleken skapar sina egna krigshistorier.
+        Här är de värda att dela — skrivna som de scenarier de faktiskt
+        var, inte som sanerade punktlistor.
+      </p>
+      <p className="mb-3">
+        <b>Scenario 1 — kunden som fanns fyra gånger.</b> Mitt under
+        normaliseringen hittade vi samma kund representerad av fyra
+        separata Vendre-kundposter: en från en gästkassa, en från en
+        nyhetsbrevsanmälan, och två från kontoregistreringar med lite olika
+        skiftläge i e-postadressen. En blind import hade antingen
+        slagit ihop dem felaktigt (blandat orderhistorik mellan två olika
+        personer som råkade dela efternamn) eller behållit alla fyra och
+        splittrat lojalitetshistoriken och stört supportens möjlighet att
+        se en fullständig kundbild. Vi byggde ett normaliserings- och
+        undantagskö-steg: e-postadresser gjordes små bokstäver och
+        validerades, nästan-dubbletter flaggades istället för att
+        auto-slås ihop, och varje genuint tvetydigt fall skickades till en
+        granskare istället för att tyst kastas eller tyst slås samman.
+      </p>
+      <p className="mb-3">
+        <b>Scenario 2 — Shopify började kasta throttling-fel klockan
+        två på natten.</b> Under en nattlig batch av variantskapande-anrop
+        började migreringsmotorn ta emot 429 THROTTLED-svar från Admin
+        GraphQL-API:et när vi närmade oss den tillgängliga
+        query-kostnadsbudgeten. Obehandlat hade det antingen kraschat
+        batchen mitt i (och lämnat en halvmigrerad katalog) eller tyst
+        tappat poster om vi hade loggat fel slarvigt. Motorn spårade redan
+        Shopifys leaky-bucket-kostnadsbudget per anrop och tillämpade
+        exponentiell backoff med jitter på 429:orna. Varje skrivning var
+        idempotent och nyckelbunden till ett käll-ID, så ett omförsök
+        kunde aldrig skapa en dubblett — batchen saktade helt enkelt ner
+        och tog upp sig själv igen utan att någon människa behövde vakna
+        och starta om den.
+      </p>
+      <p className="mb-3">
+        <b>Scenario 3 — lagersiffrorna gick inte ihop på
+        repetitionskörningen.</b> En repetitionsmigrering till en
+        Shopify-stagingmiljö visade ett litet men verkligt gap mellan
+        Vendres rapporterade lagernivåer och det som landade i Shopify för
+        en delmängd SKU:er. Att lansera på overifierade lagersiffror är ett
+        av de snabbaste sätten att sälja slut på en produkt dag ett —
+        precis den typen av synligt fel en migrering ska förhindra. Vi
+        lade till en avstämningspunkt som jämförde SKU-totaler mellan
+        källa och destination innan någon övergång tilläts fortsätta, och
+        spårade gapet till en handfull Vendre-poster med föråldrade
+        lagersynkroniseringstider, som rättades till vid källan innan den
+        riktiga migreringen kördes.
+      </p>
+      <p className="mb-4">
+        <b>Scenario 4 — en jacka i fem färger blev nästan fem olika
+        produkter.</b> Som nämnts ovan saknade Vendres färgrelationer en
+        native Shopify-motsvarighet, och en tidig mappningsomgång grupperade
+        felaktigt ett fåtal artiklar och delade en produktfamilj mellan
+        två poster. Delade produktfamiljer späder ut recensioner,
+        sökranking och merchandisingkontroll — precis motsatsen till vad en
+        enterprise-omplattformering ska leverera. Vi införde
+        familjenivå-mappningsregler validerade mot stickprovsvis QA och
+        visuella produktdetaljjämförelser innan någon massskrivning,
+        vilket fångade felgrupperingar medan de fortfarande var billiga att
+        åtgärda.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Vendre-specifika utmaningar, och hur vi löste dem</h4>
+      <p className="mb-3">
+        Varje källplattform har sin egen personlighet. Det här var de
+        Vendre-specifika verkligheter som formade vårt tillvägagångssätt:
+      </p>
+      <p className="mb-3">
+        <b>Skräddarsydd färg-/relationsmodell utan direkt
+        Shopify-motsvarighet.</b> Byggde ett explicit mappningslager som
+        översatte Vendres relationstabeller till Shopifys
+        produkt-variant-struktur, istället för en fält-för-fält-kopia.
+      </p>
+      <p className="mb-3">
+        <b>Paginering och rate limits vid bulkuttag av data.</b> Extraherade
+        i kontrollerade, återupptagbara batcher med backoff, så en
+        nätverksstörning mitt i extraktionen aldrig innebar att man
+        behövde börja om från noll.
+      </p>
+      <p className="mb-3">
+        <b>Inkonsekvent historisk datainmatning över år av manuella
+        redigeringar.</b> Behandlade normalisering som ett eget arbetsspår
+        med definierade undantagsregler, istället för att bulta på
+        städning i importskriptet.
+      </p>
+      <p className="mb-3">
+        <b>Media- och tillgångsreferenser som inte alltid gick att lösa
+        upp.</b> Verifierade medialänkar under extraktionen och köade
+        trasiga referenser för granskning istället för att importera döda
+        länkar.
+      </p>
+      <p className="mb-4">
+        <b>Äldre URL-strukturer knutna till Vendres routing.</b> Byggde en
+        omdirigeringskarta från prioriterade äldre URL:er till deras
+        Shopify-destinationer, testad före lansering istället för
+        reaktion efter ett trafikfall.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Vanliga misstag att se upp för i en Vendre → Shopify-migrering</h4>
+      <p className="mb-3">
+        Om du planerar din egen flytt är det här de vanligaste misstagen vi
+        ser — några av dem nästan fångade oss också:
+      </p>
+      <ul>
+        <li>Att behandla export/import som hela strategin. Mappnings-, datakvalitets- och valideringsarbetet är den faktiska migreringen — filöverföringen är de enkla 10 procenten.</li>
+        <li>Att lämna SEO-omdirigeringar till efter lanseringen. När den organiska trafiken har fallit är skadan redan indexerad. Planera 301:or före övergången, inte efter.</li>
+        <li>Att kopiera variantstrukturer bokstavligt istället för att modellera dem för destinationsplattformen. Det som fungerade som en relationstabell i det gamla systemet kan behöva bli en riktig variantfamilj i Shopify.</li>
+        <li>Att hoppa över en repetitionsmigrering till en stagingmiljö. Avstämningsproblem är mycket billigare att fånga innan den riktiga övergången än under den.</li>
+        <li>Ingen rollback- eller avstämningsplan. Lanseringstrygghet kommer från att veta exakt hur man upptäcker och hanterar ett undantag — inte från att anta att det inte blir några.</li>
+        <li>Att underskatta testning av hela kundresor — sök, kollektioner, produktdetalj, kassa, kontoåtkomst och transaktionsmejl — istället för bara admin-sidans data.</li>
+        <li>Att ignorera API-rate limits och kostnadsbudgetar tills de orsakar ett fel i produktion, istället för att designa batchning och backoff från start.</li>
+      </ul>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Att skydda den redan intjänade SEO-auktoriteten</h4>
+      <p className="mb-4">
+        För ett svenskt varumärke med åratal av indexerade produkt- och
+        kategorisidor var SEO inte en uppgift för efter lanseringen — det
+        var en del av migreringsdesignen från dag ett. Vi identifierade
+        prioriterade äldre URL:er, mappade var och en till sin avsedda
+        Shopify-destination, och planerade 301-omdirigeringar före
+        lanseringen. Metadata, kollektionskontext, kanoniska beslut och
+        strukturerat innehåll granskades tillsammans med själva
+        produktimporten, inte bultat på i efterhand.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Prestanda är en kommersiell funktion, inte en teknisk eftertanke</h4>
+      <p className="mb-4">
+        En migrering är också ett tillfälle att ta bort ansamlad
+        frontend-tyngd. Den nya butiken byggdes kring praktiskt
+        prestandaarbete: responsiv media, medveten skriptladdning,
+        effektiva kollektionsmallar, snabbare upptäcktsresor och
+        mobil-först-QA — det som faktiskt flyttar Core Web Vitals snarare
+        än bara en plattformsbricka. I det här projektet gav det arbetet
+        en märkbart snabbare butik och upp till 150 procents tillväxt i
+        organisk söksynlighet, tillsammans med tydliga förbättringar av
+        Largest Contentful Paint, Interaction to Next Paint och Cumulative
+        Layout Shift. Som med alla migreringar rekommenderar vi att
+        behandla siffror som dessa som en riktningsindikation snarare än
+        ett garanterat utfall — mät alltid ert eget före/efter med samma
+        datum, marknader och mätkälla.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Vad som förändrades efter lansering</h4>
+      <p className="mb-3">
+        Den nya Shopify Plus-grunden gav kunden en enklare plattform att
+        driva och förbättra. Marknad kunde röra sig snabbare, merchandising
+        fick mer direkt kontroll, och butiken kunde finjusteras medvetet
+        för mobil och sök.
+      </p>
+      <p className="mb-3">
+        <b>Mer flexibel merchandising.</b> Team svarar snabbare på
+        lanseringar, kampanjer och säsongskollektioner utan att vänta på
+        utvecklartid.
+      </p>
+      <p className="mb-3">
+        <b>Bättre datagrund.</b> Produkt- och kundstrukturer är enklare att
+        underhålla och återanvända över marknadsförings- och
+        supportverktyg.
+      </p>
+      <p className="mb-3">
+        <b>Starkare sök och upptäckt.</b> Renare informationsarkitektur och
+        prestandafokuserade sidor gör butiken lättare att hitta.
+      </p>
+      <p className="mb-4">
+        <b>Skalbar drift.</b> Shopify Plus ger en grund för automation,
+        internationell tillväxt och framtida integrationer.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Migreringslärdomar värda att spara</h4>
+      <ul>
+        <li>Förväxla inte export/import med en migreringsstrategi — det svåra arbetet är mappning, datakvalitet och validering.</li>
+        <li>Planera omdirigeringar före lansering, inte efter att trafiken fallit. SEO är ett system som berör innehåll, katalog och URL-arkitektur tillsammans.</li>
+        <li>Modellera produktrelationer medvetet. Variantlogik är lika mycket ett kundupplevelsebeslut som ett databeslut.</li>
+        <li>Testa hela resor: sök, kollektioner, produktdetalj, kassa, kontoåtkomst, serviceflöden och transaktionsmejl.</li>
+        <li>Definiera en rollback- och avstämningsplan. Lanseringstrygghet kommer från att veta hur man upptäcker och hanterar undantag.</li>
+      </ul>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>En modern e-handelsgrund för Sverige och bortom</h4>
+      <p className="mb-4">
+        För skandinaviska handlare måste en e-handelsplattform stödja både
+        tydlighet och tillväxt: ren merchandising, trovärdig
+        mobilprestanda, internationell marknadsberedskap och friheten att
+        driva kampanjer utan onödig teknisk friktion. Oavsett om man kallar
+        det en Shopify Plus-migrering, ett byte av e-handelsplattform,
+        eller helt enkelt en flytt från Vendre till Shopify — den
+        underliggande tekniska disciplinen är densamma: skydda datan,
+        skydda SEO:n, och skydda teamets förmåga att fortsätta sälja på
+        lanseringsdagen. För svensk e-handel och nordiska handlare som
+        överväger en enterprise-migrering är det den disciplinen som
+        skiljer en smidig Shopify Plus-implementation från en riskabel.
+      </p>
+      <p className="mb-4 fst-italic fw-bold">
+        Planerar ni en migrering från Vendre till Shopify? En lyckad flytt
+        börjar med en förstudie: en genomgång av källdatan, målarkitektur,
+        produktrelationsmappning, en SEO-plan, en integrationsplan, en
+        repetitionsmigrering och en avvägd övergång. Alva Tech hjälper
+        handlare — i Sverige, i övriga Skandinavien och bortom — att byta
+        plattform med trygghet.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Redo att modernisera er e-handelsplattform?</h4>
+      <p className="mb-4">
+        Låt oss kartlägga migreringen som skyddar dagens verksamhet och
+        låser upp morgondagens tillväxt. Alva Tech arbetar med växande
+        handlare kring Shopify Plus-migreringar, skräddarsydd
+        apputveckling och e-handelsteknik från förstudie till optimering
+        efter lansering.
+      </p>
+    </>
+  );
+}
+
 function DefaultArticleIntroSv() {
   return (
     <p>
@@ -1435,5 +1851,6 @@ export default function renderArticleIntroSv(articleId) {
   if (articleId === 31) return <InstagramHashtagsArticleIntroSv />;
   if (articleId === 32) return <GenerativeEngineOptimizationArticleIntroSv />;
   if (articleId === 33) return <ShopifyMigrationArticleIntroSv />;
+  if (articleId === 34) return <VendreShopifyPlusMigrationArticleIntroSv />;
   return <DefaultArticleIntroSv />;
 }

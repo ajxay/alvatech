@@ -1,5 +1,30 @@
 export const blogsPosts4 = [
   {
+    id: 34,
+    slug: "fran-vendre-till-shopify-plus-migrering",
+    category: "Shopify",
+    imgSrc: encodeURI(
+      "/assets/images/blog/From Vendre to Shopify Plus Migration.jpg",
+    ),
+    imgAlt: "From Vendre to Shopify Plus: Engineering a Zero-Downtime Enterprise Migration",
+    imgCaption: "From Vendre to Shopify Plus: Engineering a Zero-Downtime Enterprise Migration",
+    title: "From Vendre to Shopify Plus: Engineering a Zero-Downtime Enterprise Migration",
+    titleSv: "Från Vendre till Shopify Plus: En nollstopps-migrering i praktiken",
+    authorImg: "/assets/images/avatars/01.png",
+    authorAlt: "Alva Tech",
+    desc: "How we moved a Swedish kids-fashion retailer's entire commerce stack — thousands of products, over a hundred thousand customers, hundreds of thousands of historical orders — onto Shopify Plus, without losing a sale, a search ranking, or the team's confidence.",
+    descSv:
+      "Så flyttade vi en svensk barnmodehandlares hela e-handelsstack — tusentals produkter, över hundra tusen kunder, hundratusentals historiska ordrar — till Shopify Plus, utan att förlora en enda försäljning, sökranking eller teamets förtroende.",
+    authorName: "Alva Tech",
+    date: "Aug 6, 2026",
+    metaTitle: "From Vendre to Shopify Plus — A Zero-Downtime Migration Case Study | Alvatech",
+    metaTitleSv: "Från Vendre till Shopify Plus — En nollstopps-migrering | Alvatech",
+    metaDescription:
+      "How we moved a Swedish kids-fashion retailer's entire commerce stack onto Shopify Plus, without losing a sale, a search ranking, or the team's confidence.",
+    metaDescriptionSv:
+      "Så flyttade vi en svensk barnmodehandlares hela e-handelsstack till Shopify Plus, utan att förlora en enda försäljning, sökranking eller teamets förtroende.",
+  },
+  {
     id: 33,
     slug: "varfor-svenska-foretag-byter-till-shopify",
     category: "Shopify",
@@ -182,6 +207,7 @@ export const blogsPosts4 = [
  * Keyed by blog id -> team member name + photo.
  */
 const BLOG_AUTHORS = {
+  34: { name: "Manish Kumar", img: "/assets/images/home-13/team/manish-kumar.png" },
   33: { name: "Manish Kumar", img: "/assets/images/home-13/team/manish-kumar.png" },
   26: { name: "Nikhil Khetan", img: "/assets/images/home-13/team/nikhil-khetan.png" },
   27: { name: "Anders Landberg", img: "/assets/images/home-13/team/andres-landberg.png" },
