@@ -1719,11 +1719,13 @@
   }
 }
 
-/* ---------------- OUR PROCESS (stacking cards) ---------------- */
+/* ---------------- OUR PROCESS (stacking cards) ----------------
+   Same card shape/behaviour as home13's ProcessSteps: a pinned stack of
+   badge+title+text cards with an image panel on the right. */
 
 .shopify-lp .process-stack {
   background: #f7f7f7;
-  padding: 100px 0 220px;
+  padding: 72px 0 160px;
 }
 
 .shopify-lp .process-stack__list {
@@ -1731,7 +1733,7 @@
   flex-direction: column;
   gap: 32px;
   position: relative;
-  margin-top: 56px;
+  margin-top: 48px;
 }
 
 .shopify-lp .process-stack__item {
@@ -1740,46 +1742,61 @@
 
 .shopify-lp .process-stack__card {
   display: flex;
-  align-items: center;
-  gap: 40px;
-  min-height: 280px;
-  padding: 48px;
-  border-radius: 24px;
-  background: linear-gradient(95.97deg, #ffffff 9.86%, #f6f6f6 98.38%);
+  align-items: stretch;
+  min-height: 396px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(95.97deg, #f6f6f6 9.86%, #ffffff 98.38%);
   box-shadow: 0 1px 4px rgba(76, 175, 80, 0.15), 0 16px 40px rgba(17, 24, 39, 0.08);
   transform-origin: center top;
   will-change: transform, opacity;
 }
 
-.shopify-lp .process-stack__icon {
-  flex: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 140px;
-  height: 140px;
-  border-radius: 20px;
-  background: var(--paper-soft);
-}
-
-.shopify-lp .process-stack__icon svg {
-  width: 56px;
-  height: 56px;
-  color: var(--brand);
-}
-
 .shopify-lp .process-stack__content {
   position: relative;
   flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 16px;
+  padding: 40px;
   min-width: 0;
+}
+
+.shopify-lp .process-stack__badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: var(--brand);
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+}
+
+.shopify-lp .process-stack .process-stack__title {
+  margin: 0;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 500;
+}
+
+.shopify-lp .process-stack .process-stack__text {
+  margin: 0;
+  max-width: 480px;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--ink-soft);
 }
 
 .shopify-lp .process-stack__number {
   position: absolute;
-  top: -12px;
-  right: 0;
+  top: 24px;
+  right: 40px;
   font-family: var(--disp);
-  font-size: 88px;
+  font-size: 80px;
   font-weight: 700;
   line-height: 1;
   color: rgba(132, 186, 65, 0.12);
@@ -1787,49 +1804,60 @@
   user-select: none;
 }
 
-.shopify-lp .process-stack .process-stack__title {
-  font-size: 28px;
-  margin-bottom: 12px;
+.shopify-lp .process-stack__media {
+  flex: none;
+  width: 542px;
+  max-width: 44%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f8f8;
+  padding: 28px;
 }
 
-.shopify-lp .process-stack .process-stack__text {
-  max-width: 600px;
-  font-size: 16px;
-  line-height: 26px;
-  color: var(--ink-soft);
-  margin: 0;
+.shopify-lp .process-stack__image {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  object-fit: contain;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 991px) {
   .shopify-lp .process-stack {
-    padding: 72px 0 160px;
-  }
-
-  .shopify-lp .process-stack__card {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
-    padding: 32px 24px;
-    min-height: 0;
-  }
-
-  .shopify-lp .process-stack__icon {
-    width: 100px;
-    height: 100px;
-  }
-
-  .shopify-lp .process-stack__icon svg {
-    width: 42px;
-    height: 42px;
+    padding: 56px 0 140px;
   }
 
   .shopify-lp .process-stack .process-stack__title {
     font-size: 22px;
+    line-height: 28px;
+  }
+
+  .shopify-lp .process-stack__card {
+    flex-direction: column-reverse;
+    min-height: 0;
+  }
+
+  .shopify-lp .process-stack__media {
+    width: 100%;
+    max-width: 100%;
+    min-height: 200px;
+    padding: 20px;
+  }
+
+  .shopify-lp .process-stack__image {
+    max-width: 260px;
+  }
+
+  .shopify-lp .process-stack__content {
+    padding: 24px 20px 28px;
   }
 
   .shopify-lp .process-stack__number {
     font-size: 56px;
-    top: -6px;
+    top: 12px;
+    right: 20px;
   }
 }
 
