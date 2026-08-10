@@ -1859,6 +1859,223 @@
   }
 }
 
+/* ---------------- TRUST SIGNALS (Why Us, from Figma) ---------------- */
+
+.shopify-lp .trust-signals {
+  background: #ffffff;
+}
+
+.shopify-lp .trust-signals__flow {
+  display: flex;
+  align-items: center;
+  margin: 48px 0 56px;
+}
+
+.shopify-lp .trust-signals__flow-item {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.shopify-lp .trust-signals__step {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  background: #f7faf0;
+  border-radius: 12px;
+  padding: 18px 22px;
+}
+
+.shopify-lp .trust-signals__icon {
+  flex: none;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 4px 14px rgba(26, 26, 26, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shopify-lp .trust-signals__icon img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+.shopify-lp .trust-signals__divider {
+  flex: none;
+  width: 1px;
+  align-self: stretch;
+  background: rgba(132, 186, 65, 0.35);
+}
+
+.shopify-lp .trust-signals__step p {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--brand-dark);
+}
+
+.shopify-lp .trust-signals__connector {
+  flex: none;
+  width: 40px;
+  height: 0;
+  border-top: 2px dashed rgba(132, 186, 65, 0.45);
+  margin: 0 -1px;
+}
+
+@media (max-width: 900px) {
+  .shopify-lp .trust-signals__flow {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .shopify-lp .trust-signals__flow-item {
+    flex-direction: column;
+  }
+
+  .shopify-lp .trust-signals__connector {
+    width: 0;
+    height: 24px;
+    border-top: none;
+    border-left: 2px dashed rgba(132, 186, 65, 0.45);
+    align-self: center;
+  }
+}
+
+.shopify-lp .trust-signals__subhead {
+  text-align: center;
+  font-size: clamp(20px, 2.4vw, 24px);
+  color: var(--ink);
+  margin: 0;
+}
+
+.shopify-lp .trust-signals__bento {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.shopify-lp .trust-signals__card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: var(--paper-soft);
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: 0 0 16px rgba(26, 26, 26, 0.06);
+}
+
+.shopify-lp .trust-signals__card-image {
+  position: relative;
+  flex: 1;
+  min-height: 130px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 3px solid #ffffff;
+  box-shadow: 0 1px 3px rgba(26, 26, 26, 0.08);
+  background: #fff;
+}
+
+.shopify-lp .trust-signals__card-label {
+  margin: 0;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.shopify-lp .trust-signals__card--mobile {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+
+.shopify-lp .trust-signals__card--uiux {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.shopify-lp .trust-signals__card--uiux .trust-signals__card-image,
+.shopify-lp .trust-signals__card--brand .trust-signals__card-image {
+  aspect-ratio: 292 / 220;
+}
+
+.shopify-lp .trust-signals__card--brand {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.shopify-lp .trust-signals__card--integrations {
+  grid-column: 2 / span 2;
+  grid-row: 2;
+}
+
+.shopify-lp .trust-signals__card--integrations .trust-signals__card-image {
+  aspect-ratio: 608 / 150;
+}
+
+.shopify-lp .trust-signals__card--checkout {
+  grid-column: 4;
+  grid-row: 1 / span 2;
+}
+
+@media (max-width: 992px) {
+  .shopify-lp .trust-signals__bento {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .shopify-lp .trust-signals__card--mobile,
+  .shopify-lp .trust-signals__card--integrations,
+  .shopify-lp .trust-signals__card--checkout {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+
+  .shopify-lp .trust-signals__card--uiux,
+  .shopify-lp .trust-signals__card--brand {
+    grid-column: span 1;
+    grid-row: auto;
+  }
+
+  .shopify-lp .trust-signals__card--mobile .trust-signals__card-image,
+  .shopify-lp .trust-signals__card--checkout .trust-signals__card-image {
+    aspect-ratio: 16 / 9;
+  }
+
+  .shopify-lp .trust-signals__card--uiux .trust-signals__card-image,
+  .shopify-lp .trust-signals__card--brand .trust-signals__card-image {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+@media (max-width: 640px) {
+  .shopify-lp .trust-signals__bento {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .shopify-lp .trust-signals__card--uiux,
+  .shopify-lp .trust-signals__card--brand,
+  .shopify-lp .trust-signals__card--integrations,
+  .shopify-lp .trust-signals__card--checkout,
+  .shopify-lp .trust-signals__card--mobile {
+    grid-column: 1 / -1;
+  }
+
+  .shopify-lp .trust-signals__card--uiux .trust-signals__card-image,
+  .shopify-lp .trust-signals__card--brand .trust-signals__card-image,
+  .shopify-lp .trust-signals__card--integrations .trust-signals__card-image {
+    aspect-ratio: 16 / 10;
+  }
+}
+
 /* ---------------- RESULTS ---------------- */
 
 .shopify-lp .results {

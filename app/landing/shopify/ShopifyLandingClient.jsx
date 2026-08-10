@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import ProcessStack from "./ProcessStack";
+import TrustSignals from "./TrustSignals";
 import "./shopify-landing.css";
 
 const CALENDLY_URL = "https://calendly.com/nikhil-k-alvatech/30min";
@@ -617,6 +618,9 @@ export default function ShopifyLandingClient() {
 
       {/* OUR PROCESS */}
       <ProcessStack />
+
+      {/* WHY US — trust signals (from Figma) */}
+      <TrustSignals />
 
       {/* AUDIT BANNER */}
       <section>
