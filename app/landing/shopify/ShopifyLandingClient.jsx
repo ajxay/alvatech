@@ -81,64 +81,6 @@ function useCounters() {
   }, []);
 }
 
-const whyCards = [
-  {
-    title: "Conversion-Focused Design",
-    text: "Every page is built with user psychology and buying behavior in mind — not just aesthetics.",
-    footer: "Signal → Trust → Purchase",
-    icon: (
-      <path d="M3 12l6 6L21 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-    ),
-  },
-  {
-    title: "Custom Shopify Development",
-    text: "Tailored designs and functionality, built specifically for your business.",
-    icon: (
-      <path d="M4 6h16M4 12h10M4 18h16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none" />
-    ),
-  },
-  {
-    title: "SEO-Optimized Architecture",
-    text: "Structured for search visibility from day one.",
-    icon: (
-      <>
-        <circle cx="11" cy="11" r="7" stroke="currentColor" strokeWidth="2" fill="none" />
-        <path d="M20 20l-3.5-3.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none" />
-      </>
-    ),
-  },
-  {
-    title: "Mobile-First Development",
-    text: "Designed to perform flawlessly across smartphones and tablets — where most of your traffic lives.",
-    icon: (
-      <>
-        <rect x="5" y="2" width="14" height="20" rx="3" stroke="currentColor" strokeWidth="2" fill="none" />
-        <path d="M10 18h4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none" />
-      </>
-    ),
-  },
-  {
-    title: "Transparent Communication",
-    text: "A dedicated project manager keeps you informed at every stage.",
-    icon: (
-      <path d="M8 12h8M8 8h8M8 16h5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none" />
-    ),
-  },
-  {
-    title: "Post-Launch Support",
-    text: "Ongoing maintenance, improvements, and technical assistance whenever you need it.",
-    icon: (
-      <path
-        d="M12 2l3 6 6 1-4.5 4.4L17.5 20 12 17l-5.5 3 1-6.6L3 9l6-1 3-6z"
-        stroke="currentColor"
-        strokeWidth="1.6"
-        strokeLinejoin="round"
-        fill="none"
-      />
-    ),
-  },
-];
-
 const pillars = [
   {
     title: "Better Images",
@@ -446,20 +388,6 @@ export default function ShopifyLandingClient() {
               presence and provide a seamless shopping experience for their
               customers.
             </p>
-          </div>
-          <div className="bento reveal">
-            {whyCards.map((card) => (
-              <div key={card.title} className={`card${card.variant ? ` ${card.variant}` : ""}`}>
-                <div>
-                  <div className="card-icon">
-                    <svg viewBox="0 0 24 24" fill="none">{card.icon}</svg>
-                  </div>
-                  <h3>{card.title}</h3>
-                  <p>{card.text}</p>
-                </div>
-                {card.footer ? <div className="logic" style={{ marginTop: 24 }}>{card.footer}</div> : null}
-              </div>
-            ))}
           </div>
           <div className="cta-row reveal">
             <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
