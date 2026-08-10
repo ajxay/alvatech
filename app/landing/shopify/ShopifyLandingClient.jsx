@@ -681,6 +681,11 @@ export default function ShopifyLandingClient() {
               </article>
             </div>
           </div>
+          <div className="cta-row reveal">
+            <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+              Schedule a Call
+            </a>
+          </div>
         </div>
       </section>
 

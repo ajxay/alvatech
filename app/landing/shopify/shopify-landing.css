@@ -1543,6 +1543,103 @@
     justify-content: center;
     align-items: center;
   }
+
+  .home13-marketplaces {
+    margin-top: 24px;
+    padding: 36px 12px 24px;
+    border-radius: 12px;
+  }
+
+  .home13-marketplaces__header {
+    margin-bottom: 24px;
+  }
+
+  .home13-marketplaces__header h3 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .home13-marketplaces__header p {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .home13-marketplaces__block {
+    border-radius: 12px;
+    padding: 18px 12px;
+  }
+
+  .home13-marketplaces__block h4 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .home13-marketplaces__block--top,
+  .home13-marketplaces__block--bottom {
+    padding-inline: 12px;
+  }
+
+  .home13-marketplaces__rows {
+    gap: 10px;
+  }
+
+  .home13-marketplaces__row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 8px 6px;
+    gap: 8px 10px;
+  }
+
+  .home13-marketplaces__block--top .home13-marketplaces__row:last-child {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 8px 6px;
+  }
+
+  .home13-marketplaces__row-item,
+  .home13-marketplaces__list-item {
+    justify-content: flex-start;
+    padding: 2px 10px;
+  }
+
+  .home13-marketplaces__row-item span,
+  .home13-marketplaces__list-item span {
+    font-size: 16px;
+  }
+
+  .home13-marketplaces__middle {
+    margin-top: 20px;
+    gap: 16px;
+  }
+
+  .home13-marketplaces__block--bottom {
+    margin-top: 20px;
+  }
+
+  .home13-marketplaces__hub {
+    --ring-size: 170px;
+    --dot-size: 16px;
+    height: 220px;
+  }
+
+  .home13-marketplaces__hub-ring {
+    width: 170px;
+    height: 170px;
+  }
+
+  .home13-marketplaces__hub-core {
+    width: 82px;
+    height: 82px;
+  }
+
+  .home13-marketplaces__hub-core img {
+    width: 52px;
+    height: 52px;
+  }
+
+  .home13-marketplaces__axis--horizontal {
+    left: 10px;
+    right: 10px;
+  }
 }
 
 /* ---------------- INTEGRATIONS ---------------- */
