@@ -383,13 +383,24 @@ export default function ShopifyLandingClient() {
       {/* WHY CHOOSE */}
       <section id="why">
         <div className="wrap">
-          <div className="sec-head reveal">
-            <span className="eyebrow">Why Choose Alvatech</span>
-            <h2>More than Shopify developers. We&apos;re growth partners.</h2>
+          <div className="sec-head reveal" style={{ maxWidth: 780 }}>
+            <span className="eyebrow">About Alva Tech</span>
+            <h2>Custom Shopify Solutions for Ambitious Brands.</h2>
             <p>
-              Our approach goes beyond code. Every store is strategically built
-              to improve customer experience, increase conversions, and support
-              long-term growth.
+              Our Shopify store development services are designed to help
+              businesses launch, grow, and scale online. Whether you&apos;re
+              starting a new store or migrating from another platform. Our
+              Shopify development services include custom theme &amp; store
+              development, migrating commerce store to shopify, theme and app
+              development etc. Every store is built with clean code, mobile
+              first design, SEO best practices, and a smooth shopping
+              experience.
+            </p>
+            <p>
+              We&apos;ve delivered Shopify websites for businesses across
+              multiple industries, helping brands create a strong online
+              presence and provide a seamless shopping experience for their
+              customers.
             </p>
           </div>
           <div className="bento reveal">
@@ -408,7 +419,7 @@ export default function ShopifyLandingClient() {
           </div>
           <div className="cta-row reveal">
             <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-              Talk to Shopify Experts
+              Schedule A Consultation
             </a>
           </div>
         </div>
