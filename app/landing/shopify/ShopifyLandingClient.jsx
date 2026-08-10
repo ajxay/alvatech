@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import ProcessStack from "./ProcessStack";
 import "./shopify-landing.css";
 
 const CALENDLY_URL = "https://calendly.com/nikhil-k-alvatech/30min";
@@ -688,6 +689,9 @@ export default function ShopifyLandingClient() {
           </div>
         </div>
       </section>
+
+      {/* OUR PROCESS */}
+      <ProcessStack />
 
       {/* AUDIT BANNER */}
       <section style={{ padding: "0 0 100px" }}>

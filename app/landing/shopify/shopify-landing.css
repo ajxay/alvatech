@@ -1719,6 +1719,120 @@
   }
 }
 
+/* ---------------- OUR PROCESS (stacking cards) ---------------- */
+
+.shopify-lp .process-stack {
+  background: #f7f7f7;
+  padding: 100px 0 220px;
+}
+
+.shopify-lp .process-stack__list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  position: relative;
+  margin-top: 56px;
+}
+
+.shopify-lp .process-stack__item {
+  position: relative;
+}
+
+.shopify-lp .process-stack__card {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  min-height: 280px;
+  padding: 48px;
+  border-radius: 24px;
+  background: linear-gradient(95.97deg, #ffffff 9.86%, #f6f6f6 98.38%);
+  box-shadow: 0 1px 4px rgba(76, 175, 80, 0.15), 0 16px 40px rgba(17, 24, 39, 0.08);
+  transform-origin: center top;
+  will-change: transform, opacity;
+}
+
+.shopify-lp .process-stack__icon {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 140px;
+  border-radius: 20px;
+  background: var(--paper-soft);
+}
+
+.shopify-lp .process-stack__icon svg {
+  width: 56px;
+  height: 56px;
+  color: var(--brand);
+}
+
+.shopify-lp .process-stack__content {
+  position: relative;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.shopify-lp .process-stack__number {
+  position: absolute;
+  top: -12px;
+  right: 0;
+  font-family: var(--disp);
+  font-size: 88px;
+  font-weight: 700;
+  line-height: 1;
+  color: rgba(132, 186, 65, 0.12);
+  pointer-events: none;
+  user-select: none;
+}
+
+.shopify-lp .process-stack .process-stack__title {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.shopify-lp .process-stack .process-stack__text {
+  max-width: 600px;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .shopify-lp .process-stack {
+    padding: 72px 0 160px;
+  }
+
+  .shopify-lp .process-stack__card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 32px 24px;
+    min-height: 0;
+  }
+
+  .shopify-lp .process-stack__icon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .shopify-lp .process-stack__icon svg {
+    width: 42px;
+    height: 42px;
+  }
+
+  .shopify-lp .process-stack .process-stack__title {
+    font-size: 22px;
+  }
+
+  .shopify-lp .process-stack__number {
+    font-size: 56px;
+    top: -6px;
+  }
+}
+
 /* ---------------- RESULTS ---------------- */
 
 .shopify-lp .results {
