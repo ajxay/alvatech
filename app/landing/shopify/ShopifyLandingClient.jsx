@@ -377,9 +377,6 @@ export default function ShopifyLandingClient() {
                 Schedule a Free Consultation
                 <ArrowIcon />
               </a>
-              <a onClick={() => scrollToId("cases")} className="btn btn-ghost" style={{ cursor: "pointer" }}>
-                View Our Portfolio
-              </a>
             </div>
             <div className="hero-features">
               {[
