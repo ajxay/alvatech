@@ -353,10 +353,10 @@ export default function ShopifyLandingClient() {
               </div>
               <div className="mock-body">
                 <Image
-                  src="/assets/images/case/bonbelle-en/preview1-browser.png"
+                  src="/assets/images/case/landing-hero/nexton-hero-mockup.png"
                   alt="Example Shopify storefront built by Alvatech"
                   width={720}
-                  height={570}
+                  height={422}
                 />
               </div>
             </div>
