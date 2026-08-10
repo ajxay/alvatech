@@ -199,13 +199,12 @@ const pillars = [
 ];
 
 const services = [
-  { tag: "Core Build", title: "Shopify Store Development", text: "Custom Shopify stores designed around your brand, customers, and business objectives — from first wireframe to launch day.", big: true },
-  { tag: "Enterprise", title: "Shopify Plus Development", text: "Enterprise ecommerce solutions built for high-growth businesses requiring advanced capability and automation." },
-  { tag: "Move Platforms", title: "Shopify Migration Services", text: "Migrate from WooCommerce, Magento, BigCommerce, OpenCart, PrestaShop, or custom platforms with minimal downtime." },
-  { tag: "Design", title: "Shopify Theme Development", text: "Fast, responsive, conversion-focused themes that deliver exceptional shopping experiences." },
-  { tag: "Extend", title: "Shopify Customizations", text: "Custom features, checkout enhancements, and tailored customer experiences beyond Shopify's defaults." },
-  { tag: "Automate", title: "Shopify App Development", text: "Custom apps that automate business processes and add unique storefront functionality." },
-  { tag: "Ongoing", title: "Maintenance & Support", text: "Keep your store secure, optimized, and continuously improving with ongoing technical support." },
+  { tag: "Core Build", title: "Shopify Store Design & Development", text: "Custom Shopify stores with modern UI/UX, mobile-first design, and fast performance—built to reflect your brand and deliver a better shopping experience." },
+  { tag: "Move Platforms", title: "Ecommerce Store Migration To Shopify", text: "Migrate your ecommerce website from WooCommerce, Magento, BigCommerce, OpenCart, PrestaShop, or custom platforms with minimal downtime." },
+  { tag: "Design & Build", title: "Shopify Theme & App Development", text: "Create fast, responsive, and conversion-focused Shopify themes and apps that deliver exceptional shopping experiences." },
+  { tag: "Integrate", title: "Third-Party Integration & Automation", text: "Integrate payment gateways, shipping providers, marketplaces, ERP, CRM, inventory systems, and marketing tools." },
+  { tag: "B2B", title: "B2B Store Development", text: "Develop Shopify B2B stores with wholesale pricing, customer-specific catalogs, bulk ordering, custom pricing, account management, and other features." },
+  { tag: "Ongoing", title: "Shopify Maintenance & Support", text: "Keep your store secure, optimized, and continuously improving with ongoing technical support and enhancements." },
 ];
 
 const migrationFrom = ["Vendre", "Norce", "Abicart", "Kodmyran", "Litium", "Centra", "Askås", "Quickbutik"];
@@ -475,26 +474,23 @@ export default function ShopifyLandingClient() {
         <div className="wrap">
           <div className="sec-head reveal">
             <span className="eyebrow">Our Shopify Services</span>
-            <h2>End-to-end Shopify development services.</h2>
+            <h2>Shopify Solutions That Alva Tech Offers</h2>
           </div>
           <div className="services-grid reveal">
             {services.map((svc) => (
-              <div key={svc.title} className={`svc${svc.big ? " big" : ""}`}>
+              <div key={svc.title} className="svc">
                 <div>
                   <span className="tag">{svc.tag}</span>
                   <h3>{svc.title}</h3>
                   <p>{svc.text}</p>
                 </div>
-                {svc.big ? (
-                  <div className="card-icon" style={{ width: 64, height: 64, margin: "0 0 0 auto" }}>
-                    <svg viewBox="0 0 24 24" fill="none" width="28" height="28">
-                      <path d="M4 8l8-5 8 5-8 5-8-5z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" fill="none" />
-                      <path d="M4 8v8l8 5 8-5V8" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" fill="none" />
-                    </svg>
-                  </div>
-                ) : null}
               </div>
             ))}
+          </div>
+          <div className="cta-row reveal">
+            <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+              Schedule A Meeting
+            </a>
           </div>
         </div>
       </section>
