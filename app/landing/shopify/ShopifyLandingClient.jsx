@@ -619,12 +619,14 @@ export default function ShopifyLandingClient() {
       <ProcessStack />
 
       {/* AUDIT BANNER */}
-      <section style={{ padding: "0 0 100px" }}>
-        <div className="audit reveal">
-          <h3>Get your FREE Shopify store audit today.</h3>
-          <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-            Claim Free Audit
-          </a>
+      <section>
+        <div className="wrap">
+          <div className="audit reveal">
+            <h3>Get your FREE Shopify store audit today.</h3>
+            <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+              Claim Free Audit
+            </a>
+          </div>
         </div>
       </section>
 

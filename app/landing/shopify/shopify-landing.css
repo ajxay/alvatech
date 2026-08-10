@@ -763,7 +763,6 @@
 .shopify-lp .audit {
   background: var(--brand);
   border-radius: 28px;
-  margin: 0 32px;
   padding: 50px 48px;
   display: flex;
   align-items: center;
@@ -776,7 +775,6 @@
 
 @media (max-width: 640px) {
   .shopify-lp .audit {
-    margin: 0 16px;
     padding: 36px 26px;
   }
 }
