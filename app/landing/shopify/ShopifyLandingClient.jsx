@@ -82,66 +82,6 @@ function useCounters() {
   }, []);
 }
 
-const pillars = [
-  {
-    title: "Better Images",
-    text: "High-quality visuals that showcase products in their best light.",
-    photo: "/assets/images/case/bonbelle-en/hero-photo.png",
-    icon: (
-      <>
-        <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" strokeWidth="2" fill="none" />
-        <circle cx="9" cy="11" r="1.6" stroke="currentColor" strokeWidth="1.6" fill="none" />
-        <path d="M21 16l-5-4-9 7" stroke="currentColor" strokeWidth="1.6" fill="none" />
-      </>
-    ),
-  },
-  {
-    title: "Clear Navigation",
-    text: "Easy-to-find products and information for a smooth experience.",
-    icon: <path d="M4 6h16M4 12h10M4 18h7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none" />,
-  },
-  {
-    title: "Reviews",
-    text: "Real reviews and ratings that build confidence before they even look.",
-    icon: (
-      <path
-        d="M12 3l2.6 5.6 6 .7-4.5 4.2 1.2 6-5.3-3-5.3 3 1.2-6L3.4 9.3l6-.7L12 3z"
-        stroke="currentColor"
-        strokeWidth="1.6"
-        strokeLinejoin="round"
-        fill="none"
-      />
-    ),
-  },
-  {
-    title: "Fast Loading",
-    text: "Slow sites lose customers — fast loading reduces friction, lifts conversions.",
-    icon: (
-      <path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" fill="none" />
-    ),
-  },
-  {
-    title: "Clean Checkout",
-    text: "A simple, secure checkout process reduces friction and cart abandonment.",
-    icon: (
-      <>
-        <rect x="4" y="9" width="16" height="11" rx="2" stroke="currentColor" strokeWidth="1.6" fill="none" />
-        <path d="M8 9V6a4 4 0 018 0v3" stroke="currentColor" strokeWidth="1.6" fill="none" />
-      </>
-    ),
-  },
-  {
-    title: "Branding",
-    text: "Consistent branding creates recognition, connection, and trust.",
-    icon: (
-      <>
-        <circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="1.6" fill="none" />
-        <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-      </>
-    ),
-  },
-];
-
 const services = [
   { tag: "Core Build", title: "Shopify Store Design & Development", text: "Custom Shopify stores with modern UI/UX, mobile-first design, and fast performance—built to reflect your brand and deliver a better shopping experience." },
   { tag: "Move Platforms", title: "Ecommerce Store Migration To Shopify", text: "Migrate your ecommerce website from WooCommerce, Magento, BigCommerce, OpenCart, PrestaShop, or custom platforms with minimal downtime." },
@@ -393,51 +333,6 @@ export default function ShopifyLandingClient() {
           <div className="cta-row reveal">
             <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
               Schedule A Consultation
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* TRUST */}
-      <section>
-        <div className="trust reveal">
-          <span className="eyebrow">Customer Psychology First</span>
-          <h2>
-            We don&apos;t just build Shopify stores.
-            <br />
-            We design buying decisions.
-          </h2>
-          <div className="flow">
-            <div className="flow-step"><span className="num">01</span><p>People don&apos;t buy because you have Shopify.</p></div>
-            <div className="flow-arrow">→</div>
-            <div className="flow-step"><span className="num">02</span><p>People buy because they trust you.</p></div>
-            <div className="flow-arrow">→</div>
-            <div className="flow-step"><span className="num">03</span><p>Trust comes from the buying experience you provide.</p></div>
-          </div>
-          <span className="eyebrow" style={{ marginBottom: 20, display: "block" }}>The Six Pillars That Build Trust</span>
-          <div className="pillars">
-            {pillars.map((pillar) => (
-              <div
-                key={pillar.title}
-                className="pillar"
-                style={pillar.photo ? { paddingBottom: 0, overflow: "hidden" } : undefined}
-              >
-                <div className="p-icon">
-                  <svg viewBox="0 0 24 24" fill="none">{pillar.icon}</svg>
-                </div>
-                <h4>{pillar.title}</h4>
-                <p>{pillar.text}</p>
-                {pillar.photo ? (
-                  <div style={{ height: 90, borderRadius: 10, margin: "16px -22px 0", overflow: "hidden", position: "relative" }}>
-                    <Image src={pillar.photo} alt="" width={400} height={200} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-                  </div>
-                ) : null}
-              </div>
-            ))}
-          </div>
-          <div className="cta-row">
-            <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn btn-light">
-              Let&apos;s Build a Store Customers Love to Buy From
             </a>
           </div>
         </div>
