@@ -214,6 +214,53 @@ const shippingLogos = ["postnord", "dhl", "budbee", "instabox", "nshift"];
 const marketplaceLogos = ["zalando", "amazon", "cdon", "asos", "bol", "ellos"];
 const marqueeLogos = [...paymentLogos, ...shippingLogos, ...marketplaceLogos];
 
+const ecosystemMigratePlatforms = ["vendre", "norce", "kodmyran", "magento", "centra", "abicart", "woocommerce"];
+const ecosystemMarketplaces = ["zalando", "amazon", "cdon", "asos", "bol", "elkjop", "ellos"];
+const logoLabels = {
+  vendre: "Vendre",
+  norce: "Norce",
+  kodmyran: "Kodmyran",
+  magento: "Magento",
+  centra: "Centra",
+  abicart: "Abicart",
+  woocommerce: "Woocommerce",
+  qliro: "Qliro",
+  klarna: "Klarna",
+  swish: "Swish",
+  vipps: "Vipps",
+  paypal: "Paypal",
+  postnord: "PostNord",
+  dhl: "DHL",
+  budbee: "Budbee",
+  instabox: "Instabox",
+  nshift: "Nshift",
+  zalando: "Zalando",
+  amazon: "Amazon",
+  cdon: "CDON",
+  asos: "ASOS",
+  bol: "Bol",
+  elkjop: "Elkjop",
+  ellos: "Ellos",
+};
+
+function EcosystemLogoRow({ ids }) {
+  return (
+    <div className="ecosystem__row">
+      {ids.map((id) => (
+        <span key={id} className="ecosystem__pill">
+          <Image
+            src={`/assets/images/home-13/marketplaces/${id}.png`}
+            alt={logoLabels[id] || id}
+            width={20}
+            height={20}
+          />
+          {logoLabels[id] || id}
+        </span>
+      ))}
+    </div>
+  );
+}
+
 const smallCases = [
   {
     id: "geggamoja",
@@ -491,6 +538,45 @@ export default function ShopifyLandingClient() {
             <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
               Schedule A Meeting
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* CONNECTED COMMERCE ECOSYSTEM */}
+      <section>
+        <div className="wrap">
+          <div className="sec-head center reveal">
+            <span className="eyebrow center" style={{ justifyContent: "center" }}>Your Connected Commerce Ecosystem</span>
+            <h2>Connect Your Store with payment gateways, shipping partners, marketplaces to create a seamless, automated commerce experience.</h2>
+          </div>
+          <div className="ecosystem reveal">
+            <div className="ecosystem__panel ecosystem__panel--top">
+              <h3>Migrate From Existing Ecommerce Platforms</h3>
+              <EcosystemLogoRow ids={ecosystemMigratePlatforms} />
+            </div>
+            <div className="ecosystem__middle">
+              <div className="ecosystem__panel ecosystem__panel--side">
+                <h3>Payment Gateway Integrations</h3>
+                <EcosystemLogoRow ids={paymentLogos} />
+              </div>
+              <div className="ecosystem__hub">
+                <span className="ecosystem__hub-arrow ecosystem__hub-arrow--up" aria-hidden="true" />
+                <span className="ecosystem__hub-arrow ecosystem__hub-arrow--down" aria-hidden="true" />
+                <span className="ecosystem__hub-arrow ecosystem__hub-arrow--left" aria-hidden="true" />
+                <span className="ecosystem__hub-arrow ecosystem__hub-arrow--right" aria-hidden="true" />
+                <span className="ecosystem__hub-badge">
+                  <Image src="/assets/images/template/tool-shopify.svg" alt="Shopify" width={36} height={36} />
+                </span>
+              </div>
+              <div className="ecosystem__panel ecosystem__panel--side">
+                <h3>Shipping Integrations</h3>
+                <EcosystemLogoRow ids={shippingLogos} />
+              </div>
+            </div>
+            <div className="ecosystem__panel ecosystem__panel--bottom">
+              <h3>Marketplace Integrations</h3>
+              <EcosystemLogoRow ids={ecosystemMarketplaces} />
+            </div>
           </div>
         </div>
       </section>
