@@ -317,11 +317,9 @@ export default function ShopifyLandingClient() {
       <section className="hero">
         <div className="wrap hero-grid">
           <div>
-            <span className="eyebrow">Shopify Development Partner</span>
+            <span className="eyebrow">Shopify Store Development Services</span>
             <h1>
-              Build a Shopify Store That Doesn&apos;t Just Look Great.
-              <br />
-              <span className="accent">It Sells.</span>
+              Modern Commerce Stores Tailored for Your Business.
             </h1>
             <p className="lead">
               We design and build Shopify stores around customer psychology, so
@@ -329,7 +327,7 @@ export default function ShopifyLandingClient() {
             </p>
             <div className="hero-ctas">
               <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-                Get a Free Shopify Consultation
+                Schedule a Free Consultation
                 <ArrowIcon />
               </a>
               <a onClick={() => scrollToId("cases")} className="btn btn-ghost" style={{ cursor: "pointer" }}>
