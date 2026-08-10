@@ -334,11 +334,29 @@ export default function ShopifyLandingClient() {
                 View Our Portfolio
               </a>
             </div>
-            <div className="hero-stats">
-              <div className="stat"><b>150+</b><span>Websites Delivered</span></div>
-              <div className="stat"><b>50+</b><span>Shopify Projects</span></div>
-              <div className="stat"><b>Mobile-First</b><span>Development</span></div>
-              <div className="stat"><b>Global</b><span>Clientele</span></div>
+            <div className="hero-features">
+              {[
+                "Custom Ecommerce Solutions",
+                "UI/UX Designs",
+                "Mobile-First Development",
+                "Timely Delivery",
+                "Custom Features",
+                "Post-Launch Support",
+              ].map((item) => (
+                <div key={item} className="hero-features__item">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path
+                      d="M3 8.5L6.2 11.5L13 4.5"
+                      stroke="currentColor"
+                      strokeWidth="1.8"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  <span>{item}</span>
+                </div>
+              ))}
             </div>
           </div>
           <div style={{ position: "relative" }}>
