@@ -318,7 +318,7 @@ export default function ShopifyLandingClient() {
       </section>
 
       {/* SERVICES */}
-      <section id="services" style={{ paddingTop: 40 }}>
+      <section id="services" style={{ paddingTop: 40, paddingBottom: 40 }}>
         <div className="wrap">
           <div className="sec-head reveal">
             <span className="eyebrow">Our Shopify Services</span>
@@ -344,7 +344,7 @@ export default function ShopifyLandingClient() {
       </section>
 
       {/* CONNECTED COMMERCE ECOSYSTEM — reused verbatim from home13 Sections.jsx */}
-      <section>
+      <section style={{ paddingTop: 40 }}>
         <div className="wrap">
           <div id="marketplaces" className="home13-marketplaces">
             <div className="home13-marketplaces__header">
