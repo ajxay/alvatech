@@ -62,6 +62,7 @@ function useCounters() {
           if (!entry.isIntersecting) return;
           const el = entry.target;
           const target = parseFloat(el.dataset.target);
+          const prefix = el.dataset.prefix || "";
           const suffix = el.dataset.suffix || "";
           let cur = 0;
           const step = Math.max(target / 40, 0.5);
@@ -71,7 +72,7 @@ function useCounters() {
               cur = target;
               clearInterval(timer);
             }
-            el.textContent = Math.round(cur) + suffix;
+            el.textContent = prefix + Math.round(cur) + suffix;
           }, 25);
           io.unobserve(el);
         });
@@ -669,10 +670,11 @@ export default function ShopifyLandingClient() {
             <h2>Numbers our clients feel every day.</h2>
           </div>
           <div className="results reveal">
-            <div className="result"><b data-target="150" data-suffix="+">0</b><span>Websites Delivered</span></div>
-            <div className="result"><b data-target="50" data-suffix="+">0</b><span>Shopify Stores</span></div>
-            <div className="result"><b data-target="98" data-suffix="%">0</b><span>Client Satisfaction</span></div>
-            <div className="result"><b data-target="30" data-suffix="%">0</b><span>Avg. Speed Improvement</span></div>
+            <div className="result"><b data-target="50" data-suffix="+">0</b><span>Successful Store Migrations</span></div>
+            <div className="result"><b data-target="150" data-suffix="+">0</b><span>Shopify Stores Developed</span></div>
+            <div className="result"><b data-target="15" data-suffix="+">0</b><span>Industries Served</span></div>
+            <div className="result"><b data-target="2" data-prefix="<" data-suffix="s">0</b><span>Average Page Load Time</span></div>
+            <div className="result"><b data-target="22" data-suffix="%">0</b><span>Average Conversion Rate Improvement</span></div>
           </div>
         </div>
       </section>
