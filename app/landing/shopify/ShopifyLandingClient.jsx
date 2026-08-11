@@ -164,7 +164,7 @@ const smallCases = [
 ];
 
 const faqs = [
-  { q: "How long does Shopify website development take?", a: "Most Shopify projects are completed within 4 to 8 weeks, depending on complexity." },
+  { q: "How long does Shopify website development take?", a: "Most Shopify projects are completed within 4 to 8 weeks depending on complexity." },
   { q: "Can you redesign my existing Shopify store?", a: "Yes. We can redesign, optimize, and modernize your current Shopify website without disrupting your business." },
   { q: "Do you provide custom Shopify development?", a: "Absolutely. Every business has unique requirements, and we build custom solutions tailored to your goals." },
   { q: "Will my Shopify website be mobile responsive?", a: "Yes. Every Shopify website we develop is fully responsive and optimized for mobile shopping." },
@@ -682,7 +682,7 @@ export default function ShopifyLandingClient() {
         <div className="wrap">
           <div className="sec-head center reveal">
             <span className="eyebrow">FAQ</span>
-            <h2>Frequently asked questions.</h2>
+            <h2>Frequently Asked Questions</h2>
           </div>
           <div className="faq reveal">
             {faqs.map((item, index) => (
