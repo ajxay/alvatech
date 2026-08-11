@@ -287,7 +287,7 @@ export default function ShopifyLandingClient() {
       </section>
 
       {/* WHY CHOOSE */}
-      <section id="why">
+      <section id="why" style={{ paddingBottom: 40 }}>
         <div className="wrap">
           <div className="sec-head reveal" style={{ maxWidth: 780 }}>
             <span className="eyebrow">About Alva Tech</span>
@@ -318,7 +318,7 @@ export default function ShopifyLandingClient() {
       </section>
 
       {/* SERVICES */}
-      <section id="services">
+      <section id="services" style={{ paddingTop: 40 }}>
         <div className="wrap">
           <div className="sec-head reveal">
             <span className="eyebrow">Our Shopify Services</span>
