@@ -93,11 +93,6 @@ const services = [
 ];
 
 
-const paymentLogos = ["klarna", "swish", "qliro", "vipps", "paypal"];
-const shippingLogos = ["postnord", "dhl", "budbee", "instabox", "nshift"];
-const marketplaceLogos = ["zalando", "amazon", "cdon", "asos", "bol", "ellos"];
-const marqueeLogos = [...paymentLogos, ...shippingLogos, ...marketplaceLogos];
-
 // Exact data/markup reused from components/homes/home-13/Sections.jsx so this
 // section matches the live homepage hub-and-spoke diagram pixel-for-pixel.
 const marketplaceMigrationRows = [
@@ -178,23 +173,6 @@ const faqs = [
   { q: "Will I be able to manage the website myself?", a: "Definitely. Shopify's intuitive dashboard makes it easy to manage products, inventory, and orders." },
   { q: "Do you provide maintenance after launch?", a: "Yes. We offer ongoing support, maintenance, performance optimization, and feature enhancements." },
 ];
-
-function LogoRow({ ids }) {
-  return (
-    <div className="integ-logos">
-      {ids.map((id) => (
-        <span key={id} className="integ-logo">
-          <Image
-            src={`/assets/images/home-13/marketplaces/${id}.png`}
-            alt={id}
-            width={72}
-            height={22}
-          />
-        </span>
-      ))}
-    </div>
-  );
-}
 
 function scrollToId(id) {
   document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -679,46 +657,6 @@ export default function ShopifyLandingClient() {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* INTEGRATIONS */}
-      <section>
-        <div className="wrap">
-          <div className="sec-head reveal">
-            <span className="eyebrow">One Store, Endless Possibilities</span>
-            <h2>Integrate the systems you already rely on.</h2>
-            <p>Create a connected ecommerce ecosystem around payments, shipping, and marketplaces.</p>
-          </div>
-          <div className="integ-grid reveal">
-            <div className="integ-col">
-              <h5>Payment Integrations</h5>
-              <LogoRow ids={paymentLogos} />
-            </div>
-            <div className="integ-col">
-              <h5>Shipping Integrations</h5>
-              <LogoRow ids={shippingLogos} />
-            </div>
-            <div className="integ-col">
-              <h5>Marketplace Integrations</h5>
-              <LogoRow ids={marketplaceLogos} />
-            </div>
-          </div>
-          <div className="marquee reveal">
-            <div className="marquee-track">
-              {[...marqueeLogos, ...marqueeLogos].map((id, i) => (
-                <span key={`${id}-${i}`} className="chip" style={{ display: "inline-flex", alignItems: "center" }}>
-                  <Image
-                    src={`/assets/images/home-13/marketplaces/${id}.png`}
-                    alt={id}
-                    width={60}
-                    height={18}
-                    style={{ height: 16, width: "auto", objectFit: "contain" }}
-                  />
-                </span>
-              ))}
-            </div>
           </div>
         </div>
       </section>
