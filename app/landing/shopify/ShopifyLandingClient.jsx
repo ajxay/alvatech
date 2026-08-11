@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import ProcessStack from "./ProcessStack";
 import TrustSignals from "./TrustSignals";
+import MigrationShowcase from "./MigrationShowcase";
 import "./shopify-landing.css";
 
 const CALENDLY_URL = "https://calendly.com/nikhil-k-alvatech/30min";
@@ -91,7 +92,6 @@ const services = [
   { tag: "Ongoing", title: "Shopify Maintenance & Support", text: "Keep your store secure, optimized, and continuously improving with ongoing technical support and enhancements." },
 ];
 
-const migrationFrom = ["Vendre", "Norce", "Abicart", "Kodmyran", "Litium", "Centra", "Askås", "Quickbutik"];
 
 const paymentLogos = ["klarna", "swish", "qliro", "vipps", "paypal"];
 const shippingLogos = ["postnord", "dhl", "budbee", "instabox", "nshift"];
@@ -530,42 +530,7 @@ export default function ShopifyLandingClient() {
       </section>
 
       {/* MIGRATION */}
-      <section id="migration">
-        <div className="wrap">
-          <div className="migrate-panel reveal">
-            <span className="eyebrow">Shopify Migration</span>
-            <h2 style={{ color: "var(--paper)", marginTop: 16 }}>Seamlessly migrate to Shopify.</h2>
-            <p style={{ color: "rgba(255,246,238,.65)", maxWidth: 520, marginTop: 12 }}>
-              Move your store from your current platform to Shopify with zero
-              disruption. We handle everything — you focus on growth.
-            </p>
-            <div className="migrate-flow">
-              <div className="migrate-from">
-                {migrationFrom.map((p) => (
-                  <span key={p} className="chip">{p}</span>
-                ))}
-              </div>
-              <div className="migrate-to">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                  <path d="M16 3l3 3-9 9-4 1 1-4 9-9z" stroke="currentColor" strokeWidth="1.6" fill="none" />
-                </svg>
-                Shopify
-              </div>
-            </div>
-            <div className="migrate-feats">
-              <div><h5>Secure Migration</h5><p>Your data is safe with us, every step of the way.</p></div>
-              <div><h5>SEO Protection</h5><p>URLs, rankings, and traffic stay intact.</p></div>
-              <div><h5>Better Performance</h5><p>Faster store, better conversions.</p></div>
-              <div><h5>Expert Support</h5><p>We&apos;re with you every step.</p></div>
-            </div>
-            <div className="cta-row" style={{ justifyContent: "flex-start", marginTop: 36 }}>
-              <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn btn-light">
-                Plan Your Migration Today
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <MigrationShowcase calendlyUrl={CALENDLY_URL} />
 
       {/* ROI CALCULATOR */}
       <section id="roi">
