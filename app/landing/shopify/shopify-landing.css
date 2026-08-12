@@ -235,8 +235,10 @@
 
 /* ---------------- HERO ---------------- */
 
+/* The band ends the hero flush; the whitespace beneath it belongs to the
+   stats section's own top padding (see .stats). */
 .shopify-lp .hero {
-  padding: 104px 0 72px;
+  padding: 104px 0 0;
   position: relative;
 }
 
@@ -2144,6 +2146,11 @@
 }
 
 /* ---------------- RESULTS / STATS (from Figma) ---------------- */
+
+/* Figma leaves ~97px between the hero band's bottom edge and the eyebrow. */
+.shopify-lp .stats {
+  padding-top: 96px;
+}
 
 /* This section's eyebrow follows the hero's treatment (16px, regular, brand
    green) rather than the page-wide small-caps one. */
