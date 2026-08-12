@@ -2235,6 +2235,64 @@
   }
 }
 
+/* ---------------- CAPABILITIES TICKER (from Figma) ----------------
+   Full-bleed 64px band: 2px #FFF6EE rules top and bottom over a 25% tint of
+   the same beige (which resolves to #FFFCFA on white), 20px vertical padding
+   around a 20px line, and 36px between every label and dot. */
+
+.shopify-lp .ticker {
+  overflow: hidden;
+  padding: 20px 0;
+  background: rgba(255, 246, 238, 0.25);
+  border-top: 2px solid #fff6ee;
+  border-bottom: 2px solid #fff6ee;
+}
+
+.shopify-lp .ticker__track {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  width: max-content;
+  animation: shopify-lp-ticker 45s linear infinite;
+}
+
+.shopify-lp .ticker__item {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  flex: none;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #000;
+  white-space: nowrap;
+}
+
+.shopify-lp .ticker__dot {
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--brand);
+}
+
+/* One quarter of the track is exactly one copy of the list, so the loop is
+   seamless. */
+@keyframes shopify-lp-ticker {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-25%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shopify-lp .ticker__track {
+    animation: none;
+  }
+}
+
 /* ---------------- FINAL CTA ---------------- */
 
 .shopify-lp .final-cta {

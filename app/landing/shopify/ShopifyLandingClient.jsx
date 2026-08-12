@@ -95,6 +95,15 @@ const services = [
 ];
 
 
+const tickerItems = [
+  "Custom Ecommerce Solutions",
+  "Mobile - First Development",
+  "UI/UX Design",
+  "Timely Delivery",
+  "Custom Features",
+  "Post-Launch Support",
+];
+
 // Exact data/markup reused from components/homes/home-13/Sections.jsx so this
 // section matches the live homepage hub-and-spoke diagram pixel-for-pixel.
 const marketplaceMigrationRows = [
@@ -284,6 +293,22 @@ export default function ShopifyLandingClient() {
           </div>
         </div>
       </section>
+
+      {/* SCROLLING CAPABILITIES BAND */}
+      <div className="ticker" aria-hidden="true">
+        {/* Four copies so the track always outruns the viewport before the
+            animation loops back to its start. */}
+        <div className="ticker__track">
+          {Array.from({ length: 4 }).flatMap((_, copy) =>
+            tickerItems.map((label) => (
+              <span key={`${copy}-${label}`} className="ticker__item">
+                {label}
+                <span className="ticker__dot" />
+              </span>
+            )),
+          )}
+        </div>
+      </div>
 
       {/* WHY CHOOSE */}
       <section id="why" style={{ paddingBottom: 40 }}>
