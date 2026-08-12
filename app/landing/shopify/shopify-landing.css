@@ -239,19 +239,7 @@
   padding: 170px 0 90px;
   position: relative;
   overflow: hidden;
-}
-
-.shopify-lp .hero::before {
-  content: "";
-  position: absolute;
-  top: -220px;
-  right: -160px;
-  width: 640px;
-  height: 640px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 40% 40%, rgba(132, 186, 65, 0.35), rgba(132, 186, 65, 0) 70%);
-  filter: blur(10px);
-  pointer-events: none;
+  background: linear-gradient(90deg, rgba(186, 187, 189, 0.1), rgba(152, 196, 94, 0.1));
 }
 
 .shopify-lp .hero-grid {
@@ -322,111 +310,87 @@
   }
 }
 
-/* browser mockup */
+/* phone collage (from Figma) */
 
-.shopify-lp .mock {
-  background: var(--card);
-  border-radius: 22px;
-  box-shadow: var(--shadow);
-  border: 1px solid var(--line);
-  overflow: hidden;
-  transform: rotate(1.2deg);
-  animation: shopify-lp-float 7s ease-in-out infinite;
-}
-
-@keyframes shopify-lp-float {
-  0%,
-  100% {
-    transform: rotate(1.2deg) translateY(0);
-  }
-  50% {
-    transform: rotate(1.2deg) translateY(-10px);
-  }
-}
-
-.shopify-lp .mock-bar {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 13px 16px;
-  border-bottom: 1px solid var(--line);
-  background: var(--paper-soft);
-}
-
-.shopify-lp .mock-bar span {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: var(--line);
-}
-
-.shopify-lp .mock-bar .url {
-  margin-left: 10px;
-  font-size: 11.5px;
-  color: var(--ink-soft);
-  background: var(--card);
-  padding: 5px 12px;
-  border-radius: 6px;
-  flex: 1;
-}
-
-.shopify-lp .mock-body img {
+.shopify-lp .hero-collage {
+  position: relative;
   width: 100%;
-  height: auto;
-  display: block;
+  aspect-ratio: 999 / 620;
 }
 
-.shopify-lp .float-chip {
+.shopify-lp .hero-collage__blob {
   position: absolute;
-  background: var(--card);
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow);
-  border-radius: 14px;
-  padding: 10px 14px;
-  font-size: 12px;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  z-index: 0;
+  pointer-events: none;
 }
 
-.shopify-lp .float-chip.c1 {
-  top: 10%;
-  right: -6%;
-  animation: shopify-lp-float2 6s ease-in-out infinite;
+.shopify-lp .hero-collage__blob--1 {
+  left: 10.4%;
+  top: -22.4%;
+  width: 79%;
+  height: 127%;
+  opacity: 0.21;
 }
 
-.shopify-lp .float-chip.c2 {
-  bottom: 8%;
-  left: -8%;
-  animation: shopify-lp-float2 6s ease-in-out infinite 1.2s;
+.shopify-lp .hero-collage__blob--2 {
+  left: 26.6%;
+  top: -22.4%;
+  width: 79%;
+  height: 127%;
+  opacity: 0.25;
 }
 
-@keyframes shopify-lp-float2 {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
+.shopify-lp .hero-collage__phone {
+  position: absolute;
+  width: 42.1%;
+  height: 47.6%;
+  filter: drop-shadow(0 20px 30px rgba(26, 26, 26, 0.14));
 }
 
-.shopify-lp .dot-green {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--brand);
-  flex: none;
+.shopify-lp .hero-collage__phone img {
+  object-fit: contain;
+}
+
+.shopify-lp .hero-collage__phone--p4 {
+  left: 0.9%;
+  top: 0%;
+  z-index: 3;
+}
+
+.shopify-lp .hero-collage__phone--p3 {
+  left: 30.6%;
+  top: 0%;
+  z-index: 4;
+}
+
+.shopify-lp .hero-collage__phone--p2 {
+  left: 0%;
+  top: 27.3%;
+  z-index: 6;
+}
+
+.shopify-lp .hero-collage__phone--p6 {
+  left: 57.9%;
+  top: 25.6%;
+  z-index: 5;
+}
+
+.shopify-lp .hero-collage__phone--p5 {
+  left: 27.4%;
+  top: 56.3%;
+  z-index: 2;
+}
+
+.shopify-lp .hero-collage__phone--p7 {
+  left: 53.3%;
+  top: 52.4%;
+  z-index: 1;
 }
 
 @media (max-width: 960px) {
-  .shopify-lp .mock {
-    transform: none;
-  }
-
-  .shopify-lp .float-chip {
-    display: none;
+  .shopify-lp .hero-collage {
+    max-width: 560px;
+    margin: 0 auto;
   }
 }
 

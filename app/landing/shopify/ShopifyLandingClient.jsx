@@ -227,13 +227,13 @@ export default function ShopifyLandingClient() {
       <section className="hero">
         <div className="wrap hero-grid">
           <div>
-            <span className="eyebrow">Shopify Store Development Services</span>
+            <span className="eyebrow">Ecommerce Store Development Services</span>
             <h1>
               Modern Commerce Stores Tailored for Your Business.
             </h1>
             <p className="lead">
-              We design and build Shopify stores around customer psychology, so
-              every page turns a visitor into a buyer — not just a browser.
+              We design and build Ecommerce stores around customer psychology,
+              so every page turns a visitor into a buyer, not just a browser.
             </p>
             <div className="hero-ctas">
               <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
@@ -266,23 +266,42 @@ export default function ShopifyLandingClient() {
               ))}
             </div>
           </div>
-          <div style={{ position: "relative" }}>
-            <div className="mock">
-              <div className="mock-bar">
-                <span></span><span></span><span></span>
-                <div className="url">yourstore.com</div>
-              </div>
-              <div className="mock-body">
-                <Image
-                  src="/assets/images/case/landing-hero/nexton-hero-mockup.png"
-                  alt="Example Shopify storefront built by Alvatech"
-                  width={720}
-                  height={422}
-                />
-              </div>
+          <div className="hero-collage" aria-hidden="true">
+            <div className="hero-collage__blob hero-collage__blob--1">
+              <Image src="/assets/images/case/landing-hero/hero-blob-1.png" alt="" fill sizes="60vw" />
             </div>
-            <div className="float-chip c1"><span className="dot-green"></span> Organic traffic +105%</div>
-            <div className="float-chip c2"><span className="dot-green"></span> Load time 1.2s</div>
+            <div className="hero-collage__blob hero-collage__blob--2">
+              <Image src="/assets/images/case/landing-hero/hero-blob-2.png" alt="" fill sizes="60vw" />
+            </div>
+            {[
+              { src: "hero-phone-4.png", mod: "p4" },
+              { src: "hero-phone-3.png", mod: "p3" },
+              { src: "hero-phone-2.png", mod: "p2" },
+              { src: "hero-phone-6.png", mod: "p6" },
+              { src: "hero-phone-5.png", mod: "p5" },
+              { src: "hero-phone-7.png", mod: "p7" },
+            ].map((phone) => (
+              <div key={phone.mod} className={`hero-collage__phone hero-collage__phone--${phone.mod}`}>
+                <Image src={`/assets/images/case/landing-hero/${phone.src}`} alt="" fill sizes="30vw" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* RESULTS */}
+      <section>
+        <div className="wrap">
+          <div className="sec-head center reveal">
+            <span className="eyebrow">Results That Matter</span>
+            <h2>Numbers our clients feel every day.</h2>
+          </div>
+          <div className="results reveal">
+            <div className="result"><b data-target="50" data-suffix="+">0</b><span>Successful Store Migrations</span></div>
+            <div className="result"><b data-target="150" data-suffix="+">0</b><span>Shopify Stores Developed</span></div>
+            <div className="result"><b data-target="15" data-suffix="+">0</b><span>Industries Served</span></div>
+            <div className="result"><b data-target="2" data-prefix="<" data-suffix="s">0</b><span>Average Page Load Time</span></div>
+            <div className="result"><b data-target="22" data-suffix="%">0</b><span>Average Conversion Rate Improvement</span></div>
           </div>
         </div>
       </section>
@@ -665,23 +684,6 @@ export default function ShopifyLandingClient() {
 
       {/* WEBSITE SHOWCASE */}
       <WebsiteShowcase />
-
-      {/* RESULTS */}
-      <section>
-        <div className="wrap">
-          <div className="sec-head center reveal">
-            <span className="eyebrow">Results That Matter</span>
-            <h2>Numbers our clients feel every day.</h2>
-          </div>
-          <div className="results reveal">
-            <div className="result"><b data-target="50" data-suffix="+">0</b><span>Successful Store Migrations</span></div>
-            <div className="result"><b data-target="150" data-suffix="+">0</b><span>Shopify Stores Developed</span></div>
-            <div className="result"><b data-target="15" data-suffix="+">0</b><span>Industries Served</span></div>
-            <div className="result"><b data-target="2" data-prefix="<" data-suffix="s">0</b><span>Average Page Load Time</span></div>
-            <div className="result"><b data-target="22" data-suffix="%">0</b><span>Average Conversion Rate Improvement</span></div>
-          </div>
-        </div>
-      </section>
 
       {/* FAQ */}
       <section id="faq">
