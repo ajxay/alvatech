@@ -710,7 +710,7 @@ export default function ShopifyLandingClient() {
       {/* FINAL CTA */}
       <section id="contact" style={{ paddingTop: 0 }}>
         <div className="wrap">
-          <div className="trust reveal" style={{ textAlign: "center" }}>
+          <div className="final-cta reveal" style={{ textAlign: "center" }}>
             <span className="eyebrow center" style={{ justifyContent: "center" }}>Ready When You Are</span>
             <h2 style={{ margin: "16px auto 14px", maxWidth: 600 }}>
               Let&apos;s build a Shopify store customers actually trust.
