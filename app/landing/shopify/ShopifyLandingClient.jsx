@@ -311,32 +311,41 @@ export default function ShopifyLandingClient() {
       </div>
 
       {/* WHY CHOOSE */}
-      <section id="why" style={{ paddingBottom: 40 }}>
-        <div className="wrap">
-          <div className="sec-head reveal" style={{ maxWidth: 780 }}>
+      <section id="why" className="about">
+        <div className="wrap about__grid">
+          <div className="about__media reveal">
+            <Image
+              src="/assets/images/case/landing-about/about-showcase.png"
+              alt="Mattress storefront and product-finder screens built by Alva Tech"
+              width={428}
+              height={524}
+            />
+          </div>
+          <div className="about__copy reveal">
             <span className="eyebrow">About Alva Tech</span>
-            <h2>Custom Shopify Solutions for Ambitious Brands.</h2>
+            <h2>Custom Ecommerce Solutions for Ambitious Brands.</h2>
             <p>
-              Our Shopify store development services are designed to help
+              Our Ecommerce store development services are designed to help
               businesses launch, grow, and scale online. Whether you&apos;re
               starting a new store or migrating from another platform. Our
-              Shopify development services include custom theme &amp; store
-              development, migrating commerce store to shopify, theme and app
+              Ecommerce development services include custom theme &amp; store
+              development, migrating commerce store to Shopify, theme and app
               development etc. Every store is built with clean code, mobile
               first design, SEO best practices, and a smooth shopping
               experience.
             </p>
             <p>
-              We&apos;ve delivered Shopify websites for businesses across
+              We&apos;ve delivered Ecommerce websites for businesses across
               multiple industries, helping brands create a strong online
               presence and provide a seamless shopping experience for their
               customers.
             </p>
-          </div>
-          <div className="cta-row reveal">
-            <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-              Schedule A Consultation
-            </a>
+            <div className="about__cta">
+              <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+                Schedule a Free Consultation
+                <ArrowIcon />
+              </a>
+            </div>
           </div>
         </div>
       </section>

@@ -469,6 +469,76 @@
   transform: translateY(0);
 }
 
+/* ---------------- ABOUT (from Figma) ----------------
+   Two columns on the 1240px Figma grid: 428px of imagery, a 40px gutter and
+   772px of copy, both top-aligned. */
+
+.shopify-lp .about {
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+.shopify-lp .about__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 428fr) minmax(0, 772fr);
+  gap: 40px;
+  align-items: start;
+}
+
+.shopify-lp .about__media img {
+  width: 100%;
+  height: auto;
+}
+
+.shopify-lp .about .eyebrow {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: normal;
+  color: var(--brand);
+}
+
+.shopify-lp .about .eyebrow::before {
+  width: 20px;
+}
+
+.shopify-lp .about h2 {
+  font-size: clamp(26px, 3.4vw, 40px);
+  line-height: 1.2;
+  color: var(--ink-soft);
+  margin: 8px 0 0;
+}
+
+.shopify-lp .about__copy p {
+  font-size: clamp(17px, 1.5vw, 20px);
+  line-height: 1.5;
+  color: var(--ink-soft);
+  margin: 8px 0 0;
+}
+
+.shopify-lp .about__copy p + p {
+  margin-top: 30px;
+}
+
+.shopify-lp .about__cta {
+  margin-top: 40px;
+}
+
+.shopify-lp .about__cta .btn {
+  font-weight: 400;
+  font-size: 16px;
+  padding: 12px 24px;
+}
+
+@media (max-width: 900px) {
+  .shopify-lp .about__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .shopify-lp .about__media {
+    max-width: 428px;
+  }
+}
+
 /* ---------------- BENTO: WHY CHOOSE ---------------- */
 
 .shopify-lp .bento {
