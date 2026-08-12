@@ -116,7 +116,7 @@ export default function MigrationShowcase({ calendlyUrl }) {
       <div className="wrap">
         <div className="sec-head center reveal">
           <span className="eyebrow center" style={{ justifyContent: "center" }}>Shopify Migration</span>
-          <h2>Migrate Your ECommerce Store to Shopify</h2>
+          <h2>Migrate Your E-Commerce Store to Shopify</h2>
           <p>
             Migrate your store from any Ecommerce platform to Shopify while
             preserving store data, search rankings, integrations, and

@@ -738,6 +738,40 @@
   background: #ffffff;
 }
 
+/* The heading is one 32px line in the design, so it needs more than the
+   shared .sec-head 640px cap. */
+.shopify-lp .migration-show .sec-head {
+  max-width: none;
+}
+
+/* This section's eyebrow is 14px semibold with wide tracking and, unlike the
+   others on the page, carries no leading rule. */
+.shopify-lp .migration-show .eyebrow {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2.52px;
+  color: var(--brand);
+}
+
+.shopify-lp .migration-show .eyebrow::before {
+  display: none;
+}
+
+.shopify-lp .migration-show h2 {
+  font-size: clamp(24px, 2.6vw, 32px);
+  line-height: 1.25;
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+
+.shopify-lp .migration-show .sec-head p {
+  max-width: 728px;
+  margin: 16px auto 0;
+  font-size: clamp(17px, 1.5vw, 20px);
+  line-height: 28px;
+  color: var(--ink-soft);
+}
+
 .shopify-lp .migration-show__flow {
   display: flex;
   align-items: stretch;
