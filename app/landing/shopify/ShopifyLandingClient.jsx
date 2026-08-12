@@ -225,68 +225,71 @@ export default function ShopifyLandingClient() {
 
       {/* HERO */}
       <section className="hero">
-        <div className="wrap hero-grid">
-          <div>
-            <span className="eyebrow">Ecommerce Store Development Services</span>
-            <h1>
-              Modern Commerce Stores Tailored for Your Business.
-            </h1>
-            <p className="lead">
-              We design and build Ecommerce stores around customer psychology,
-              so every page turns a visitor into a buyer, not just a browser.
-            </p>
-            <div className="hero-ctas">
-              <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-                Schedule a Free Consultation
-                <ArrowIcon />
-              </a>
+        <div className="hero-band">
+          <div className="hero-collage" aria-hidden="true">
+            <div className="hero-collage__blob hero-collage__blob--1">
+              <Image src="/assets/images/case/landing-hero/hero-blob-1.png" alt="" fill sizes="70vw" />
             </div>
-            <div className="hero-features">
-              {[
-                "Custom Ecommerce Solutions",
-                "UI/UX Designs",
-                "Mobile-First Development",
-                "Timely Delivery",
-                "Custom Features",
-                "Post-Launch Support",
-              ].map((item) => (
-                <div key={item} className="hero-features__item">
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                    <path
-                      d="M3 8.5L6.2 11.5L13 4.5"
-                      stroke="currentColor"
-                      strokeWidth="1.8"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      fill="none"
-                    />
-                  </svg>
-                  <span>{item}</span>
-                </div>
-              ))}
+            <div className="hero-collage__blob hero-collage__blob--2">
+              <Image src="/assets/images/case/landing-hero/hero-blob-2.png" alt="" fill sizes="70vw" />
+            </div>
+            {[
+              { src: "hero-phone-4.png", mod: "p4" },
+              { src: "hero-phone-3.png", mod: "p3" },
+              { src: "hero-phone-2.png", mod: "p2" },
+              { src: "hero-phone-6.png", mod: "p6" },
+              { src: "hero-phone-5.png", mod: "p5" },
+              { src: "hero-phone-7.png", mod: "p7" },
+            ].map((phone) => (
+              <div key={phone.mod} className={`hero-collage__phone hero-collage__phone--${phone.mod}`}>
+                <Image src={`/assets/images/case/landing-hero/${phone.src}`} alt="" fill sizes="30vw" />
+              </div>
+            ))}
+          </div>
+          <div className="wrap">
+            <div className="hero-copy">
+              <span className="eyebrow">Ecommerce Store Development Services</span>
+              <h1>
+                Modern Commerce Stores Tailored for Your Business.
+              </h1>
+              <p className="lead">
+                We design and build Ecommerce stores around customer psychology,
+                so every page turns a visitor into a buyer, not just a browser.
+              </p>
+              <div className="hero-ctas">
+                <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+                  Schedule a Free Consultation
+                  <ArrowIcon />
+                </a>
+              </div>
             </div>
           </div>
-          <div className="hero-collage" aria-hidden="true">
-            <div className="hero-collage__canvas">
-              <div className="hero-collage__blob hero-collage__blob--1">
-                <Image src="/assets/images/case/landing-hero/hero-blob-1.png" alt="" fill sizes="60vw" />
+        </div>
+
+        <div className="wrap">
+          <div className="hero-features">
+            {[
+              "Custom Ecommerce Solutions",
+              "UI/UX Designs",
+              "Mobile-First Development",
+              "Timely Delivery",
+              "Custom Features",
+              "Post-Launch Support",
+            ].map((item) => (
+              <div key={item} className="hero-features__item">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path
+                    d="M3 8.5L6.2 11.5L13 4.5"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    fill="none"
+                  />
+                </svg>
+                <span>{item}</span>
               </div>
-              <div className="hero-collage__blob hero-collage__blob--2">
-                <Image src="/assets/images/case/landing-hero/hero-blob-2.png" alt="" fill sizes="60vw" />
-              </div>
-              {[
-                { src: "hero-phone-4.png", mod: "p4" },
-                { src: "hero-phone-3.png", mod: "p3" },
-                { src: "hero-phone-2.png", mod: "p2" },
-                { src: "hero-phone-6.png", mod: "p6" },
-                { src: "hero-phone-5.png", mod: "p5" },
-                { src: "hero-phone-7.png", mod: "p7" },
-              ].map((phone) => (
-                <div key={phone.mod} className={`hero-collage__phone hero-collage__phone--${phone.mod}`}>
-                  <Image src={`/assets/images/case/landing-hero/${phone.src}`} alt="" fill sizes="30vw" />
-                </div>
-              ))}
-            </div>
+            ))}
           </div>
         </div>
       </section>
