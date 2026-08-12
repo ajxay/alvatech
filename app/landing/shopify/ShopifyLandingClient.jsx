@@ -526,6 +526,9 @@ export default function ShopifyLandingClient() {
       {/* OUR DEVELOPMENT SERVICES (stacking cards) */}
       <ServicesStack calendlyUrl={CALENDLY_URL} />
 
+      {/* MIGRATION */}
+      <MigrationShowcase calendlyUrl={CALENDLY_URL} />
+
       {/* WHY US — trust signals (from Figma) */}
       <TrustSignals />
 
@@ -540,9 +543,6 @@ export default function ShopifyLandingClient() {
           </div>
         </div>
       </section>
-
-      {/* MIGRATION */}
-      <MigrationShowcase calendlyUrl={CALENDLY_URL} />
 
       {/* ROI CALCULATOR */}
       <section id="roi">
