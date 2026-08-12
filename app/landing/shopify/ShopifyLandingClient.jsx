@@ -266,32 +266,6 @@ export default function ShopifyLandingClient() {
           </div>
         </div>
 
-        <div className="wrap">
-          <div className="hero-features">
-            {[
-              "Custom Ecommerce Solutions",
-              "UI/UX Designs",
-              "Mobile-First Development",
-              "Timely Delivery",
-              "Custom Features",
-              "Post-Launch Support",
-            ].map((item) => (
-              <div key={item} className="hero-features__item">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                  <path
-                    d="M3 8.5L6.2 11.5L13 4.5"
-                    stroke="currentColor"
-                    strokeWidth="1.8"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    fill="none"
-                  />
-                </svg>
-                <span>{item}</span>
-              </div>
-            ))}
-          </div>
-        </div>
       </section>
 
       {/* RESULTS */}

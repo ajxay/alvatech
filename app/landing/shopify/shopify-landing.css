@@ -303,37 +303,6 @@
   margin-top: 40px;
 }
 
-.shopify-lp .hero-features {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  column-gap: 28px;
-  row-gap: 14px;
-  max-width: 720px;
-  margin-top: 48px;
-  padding-top: 28px;
-  border-top: 1px solid var(--line);
-}
-
-.shopify-lp .hero-features__item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--ink);
-  font-size: 14.5px;
-  font-weight: 600;
-}
-
-.shopify-lp .hero-features__item svg {
-  flex: none;
-  color: var(--brand);
-}
-
-@media (max-width: 480px) {
-  .shopify-lp .hero-features {
-    grid-template-columns: 1fr;
-  }
-}
-
 /* Phone collage — positioned against the full-width band exactly as in the
    Figma frame: the 999x644 cluster starts at x=607 of 1440 and overruns the
    band's top, bottom and right edges, which clip it. Percentages below are
