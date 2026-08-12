@@ -339,13 +339,21 @@
    band's top, bottom and right edges, which clip it. Percentages below are
    Figma units over the 999x644 cluster box. */
 
+/* Figma places the cluster at left 42.153% / width 69.375%, which works there
+   because its copy starts at x=100. This page's .wrap starts it at 152, so the
+   text would run into the phones. Instead of a fixed offset, anchor the cluster
+   to the copy's right edge so a constant ~40px gap survives every width.
+   Each phone PNG carries 9% transparent padding, so its visible edge sits a
+   further 9% of the phone's width (2.422vw at this scale) inward — hence the
+   px/vw mix. The first term tracks the centred wrap (>=1200px) and the second
+   the full-bleed wrap (<1200px); the two cross exactly at 1200px. */
 .shopify-lp .hero-collage {
   position: absolute;
-  left: 42.153%;
-  width: 69.375%;
+  left: max(calc(47.578vw + 18px), calc(618px - 2.422vw));
+  width: 64vw;
   aspect-ratio: 999 / 644;
   top: 50%;
-  /* cluster centre sits 47px (7.298% of its height) below the band centre */
+  /* cluster centre sits 7.298% of its height below the band centre */
   transform: translateY(calc(-50% + 7.298%));
   z-index: 1;
   pointer-events: none;
@@ -419,9 +427,10 @@
   z-index: 1;
 }
 
-/* Below the two-column breakpoint the collage stops overlapping the copy and
-   simply stacks underneath it at full width. */
-@media (max-width: 960px) {
+/* Below ~1080px the copy still needs its full 546px, leaving too little room
+   beside it for the phones to read, so the collage stops sitting alongside the
+   copy and simply stacks underneath it at full width. */
+@media (max-width: 1080px) {
   .shopify-lp .hero-band {
     flex-direction: column;
     align-items: stretch;
