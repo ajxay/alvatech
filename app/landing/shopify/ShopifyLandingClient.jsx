@@ -722,7 +722,7 @@ export default function ShopifyLandingClient() {
             <h2 style={{ margin: "16px auto 14px", maxWidth: 600 }}>
               Let&apos;s build a Shopify store customers actually trust.
             </h2>
-            <p style={{ color: "rgba(255,246,238,.7)", maxWidth: 480, margin: "0 auto 34px" }}>
+            <p style={{ color: "rgba(255,255,255,.7)", maxWidth: 480, margin: "0 auto 34px" }}>
               Book a free, no-pressure consultation. We&apos;ll audit your
               current store or scope your new one — no obligation.
             </p>
@@ -733,7 +733,7 @@ export default function ShopifyLandingClient() {
               <a
                 onClick={() => scrollToId("cases")}
                 className="btn btn-ghost"
-                style={{ borderColor: "rgba(255,246,238,.3)", color: "var(--paper)", cursor: "pointer" }}
+                style={{ borderColor: "rgba(255,255,255,.3)", color: "var(--paper)", cursor: "pointer" }}
               >
                 View Our Portfolio
               </a>
