@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import ProcessStack from "./ProcessStack";
+import ServicesStack from "./ServicesStack";
 import TrustSignals from "./TrustSignals";
 import MigrationShowcase from "./MigrationShowcase";
 import WebsiteShowcase from "./WebsiteShowcase";
@@ -523,8 +523,8 @@ export default function ShopifyLandingClient() {
         </div>
       </section>
 
-      {/* OUR PROCESS */}
-      <ProcessStack />
+      {/* OUR DEVELOPMENT SERVICES (stacking cards) */}
+      <ServicesStack calendlyUrl={CALENDLY_URL} />
 
       {/* WHY US — trust signals (from Figma) */}
       <TrustSignals />

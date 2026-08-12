@@ -1856,145 +1856,135 @@
   }
 }
 
-/* ---------------- OUR PROCESS (stacking cards) ----------------
-   Same card shape/behaviour as home13's ProcessSteps: a pinned stack of
-   badge+title+text cards with an image panel on the right. */
+/* ---------------- DEVELOPMENT SERVICES (stacking cards, from Figma) ----------
+   A pinned stack of 1240x396 cards: copy, tag pills and a CTA on the left over
+   a subtle left-to-right gradient, with a 542px illustration flush right. */
 
-.shopify-lp .process-stack {
-  background: #f7f7f7;
-  padding: 72px 0 160px;
+.shopify-lp .services-stack {
+  padding: 80px 0 160px;
 }
 
-.shopify-lp .process-stack__list {
+.shopify-lp .services-stack__list {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 40px;
   position: relative;
   margin-top: 48px;
 }
 
-.shopify-lp .process-stack__item {
+.shopify-lp .services-stack__item {
   position: relative;
 }
 
-.shopify-lp .process-stack__card {
+.shopify-lp .services-stack__card {
   display: flex;
   align-items: stretch;
   min-height: 396px;
-  border-radius: 16px;
+  border-radius: 12px;
   overflow: hidden;
-  background: linear-gradient(95.97deg, #f6f6f6 9.86%, #ffffff 98.38%);
-  box-shadow: 0 1px 4px rgba(76, 175, 80, 0.15), 0 16px 40px rgba(17, 24, 39, 0.08);
+  background: linear-gradient(90deg, #f7f7f7, #fbfbfb);
   transform-origin: center top;
   will-change: transform, opacity;
 }
 
-.shopify-lp .process-stack__content {
-  position: relative;
+.shopify-lp .services-stack__content {
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  gap: 16px;
-  padding: 40px;
+  padding: 40px 40px 40px 41px;
   min-width: 0;
 }
 
-.shopify-lp .process-stack__badge {
-  display: inline-flex;
-  align-items: center;
-  padding: 6px 16px;
-  border-radius: 999px;
-  background: var(--brand);
-  color: #fff;
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 600;
-}
-
-.shopify-lp .process-stack .process-stack__title {
+.shopify-lp .services-stack__content h3 {
   margin: 0;
-  font-size: 28px;
-  line-height: 36px;
+  max-width: 578px;
+  font-size: clamp(24px, 2.4vw, 32px);
+  line-height: 1.25;
   font-weight: 500;
+  color: var(--ink-soft);
 }
 
-.shopify-lp .process-stack .process-stack__text {
-  margin: 0;
-  max-width: 480px;
+.shopify-lp .services-stack__content p {
+  margin: 8px 0 0;
+  max-width: 578px;
   font-size: 16px;
   line-height: 26px;
   color: var(--ink-soft);
 }
 
-.shopify-lp .process-stack__number {
-  position: absolute;
-  top: 24px;
-  right: 40px;
-  font-family: var(--disp);
-  font-size: 80px;
-  font-weight: 700;
-  line-height: 1;
-  color: rgba(132, 186, 65, 0.12);
-  pointer-events: none;
-  user-select: none;
+.shopify-lp .services-stack__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
 }
 
-.shopify-lp .process-stack__media {
+.shopify-lp .services-stack__tags li {
+  display: inline-flex;
+  align-items: center;
+  height: 25px;
+  padding: 0 16px;
+  border: 1px solid #b7d593;
+  border-radius: 999px;
+  background: #ebf1e5;
+  color: var(--brand);
+  font-size: 12px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.shopify-lp .services-stack__cta {
+  margin-top: 40px;
+  height: 52px;
+  padding: 0 26px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.shopify-lp .services-stack__media {
   flex: none;
   width: 542px;
   max-width: 44%;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background: #f8f8f8;
-  padding: 28px;
 }
 
-.shopify-lp .process-stack__image {
+.shopify-lp .services-stack__media img {
   display: block;
   width: 100%;
-  max-width: 420px;
-  height: auto;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 @media (max-width: 991px) {
-  .shopify-lp .process-stack {
+  .shopify-lp .services-stack {
     padding: 56px 0 140px;
   }
 
-  .shopify-lp .process-stack .process-stack__title {
-    font-size: 22px;
-    line-height: 28px;
-  }
-
-  .shopify-lp .process-stack__card {
+  .shopify-lp .services-stack__card {
     flex-direction: column-reverse;
     min-height: 0;
   }
 
-  .shopify-lp .process-stack__media {
+  .shopify-lp .services-stack__media {
     width: 100%;
     max-width: 100%;
-    min-height: 200px;
-    padding: 20px;
   }
 
-  .shopify-lp .process-stack__image {
-    max-width: 260px;
+  .shopify-lp .services-stack__media img {
+    height: auto;
   }
 
-  .shopify-lp .process-stack__content {
+  .shopify-lp .services-stack__content {
     padding: 24px 20px 28px;
   }
 
-  .shopify-lp .process-stack__number {
-    font-size: 56px;
-    top: 12px;
-    right: 20px;
+  .shopify-lp .services-stack__cta {
+    margin-top: 28px;
   }
 }
 
