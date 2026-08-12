@@ -257,10 +257,23 @@
   }
 }
 
+.shopify-lp .hero .eyebrow {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: normal;
+  text-transform: none;
+  color: var(--brand);
+}
+
+.shopify-lp .hero .eyebrow::before {
+  width: 20px;
+}
+
 .shopify-lp .hero h1 {
-  font-size: clamp(34px, 5vw, 54px);
-  line-height: 1.08;
-  margin: 20px 0 22px;
+  font-size: clamp(34px, 5vw, 40px);
+  line-height: 1.2;
+  color: var(--ink-soft);
+  margin: 16px 0 8px;
 }
 
 .shopify-lp .hero h1 .accent {
@@ -268,10 +281,17 @@
 }
 
 .shopify-lp .hero p.lead {
-  font-size: 18px;
+  font-size: 20px;
+  line-height: 1.5;
   color: var(--ink-soft);
-  max-width: 480px;
-  margin-bottom: 32px;
+  max-width: 546px;
+  margin-bottom: 40px;
+}
+
+.shopify-lp .hero-ctas .btn {
+  font-weight: 400;
+  font-size: 16px;
+  padding: 12px 24px;
 }
 
 .shopify-lp .hero-ctas {
@@ -310,11 +330,22 @@
   }
 }
 
-/* phone collage (from Figma) */
+/* phone collage (from Figma) — the collage canvas (999x620 units) is
+   larger than the visible window (833x460 units) and shifted up, so it
+   bleeds off the top/right edges exactly like the Figma frame crops it. */
 
 .shopify-lp .hero-collage {
   position: relative;
+  overflow: hidden;
   width: 100%;
+  aspect-ratio: 833 / 460;
+}
+
+.shopify-lp .hero-collage__canvas {
+  position: absolute;
+  left: 0;
+  top: -9.79%;
+  width: 119.93%;
   aspect-ratio: 999 / 620;
 }
 
@@ -390,7 +421,15 @@
 @media (max-width: 960px) {
   .shopify-lp .hero-collage {
     max-width: 560px;
+    aspect-ratio: 999 / 620;
+    overflow: visible;
     margin: 0 auto;
+  }
+
+  .shopify-lp .hero-collage__canvas {
+    position: static;
+    width: 100%;
+    aspect-ratio: auto;
   }
 }
 

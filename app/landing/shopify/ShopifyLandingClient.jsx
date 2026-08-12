@@ -267,24 +267,26 @@ export default function ShopifyLandingClient() {
             </div>
           </div>
           <div className="hero-collage" aria-hidden="true">
-            <div className="hero-collage__blob hero-collage__blob--1">
-              <Image src="/assets/images/case/landing-hero/hero-blob-1.png" alt="" fill sizes="60vw" />
-            </div>
-            <div className="hero-collage__blob hero-collage__blob--2">
-              <Image src="/assets/images/case/landing-hero/hero-blob-2.png" alt="" fill sizes="60vw" />
-            </div>
-            {[
-              { src: "hero-phone-4.png", mod: "p4" },
-              { src: "hero-phone-3.png", mod: "p3" },
-              { src: "hero-phone-2.png", mod: "p2" },
-              { src: "hero-phone-6.png", mod: "p6" },
-              { src: "hero-phone-5.png", mod: "p5" },
-              { src: "hero-phone-7.png", mod: "p7" },
-            ].map((phone) => (
-              <div key={phone.mod} className={`hero-collage__phone hero-collage__phone--${phone.mod}`}>
-                <Image src={`/assets/images/case/landing-hero/${phone.src}`} alt="" fill sizes="30vw" />
+            <div className="hero-collage__canvas">
+              <div className="hero-collage__blob hero-collage__blob--1">
+                <Image src="/assets/images/case/landing-hero/hero-blob-1.png" alt="" fill sizes="60vw" />
               </div>
-            ))}
+              <div className="hero-collage__blob hero-collage__blob--2">
+                <Image src="/assets/images/case/landing-hero/hero-blob-2.png" alt="" fill sizes="60vw" />
+              </div>
+              {[
+                { src: "hero-phone-4.png", mod: "p4" },
+                { src: "hero-phone-3.png", mod: "p3" },
+                { src: "hero-phone-2.png", mod: "p2" },
+                { src: "hero-phone-6.png", mod: "p6" },
+                { src: "hero-phone-5.png", mod: "p5" },
+                { src: "hero-phone-7.png", mod: "p7" },
+              ].map((phone) => (
+                <div key={phone.mod} className={`hero-collage__phone hero-collage__phone--${phone.mod}`}>
+                  <Image src={`/assets/images/case/landing-hero/${phone.src}`} alt="" fill sizes="30vw" />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
