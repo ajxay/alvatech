@@ -2143,40 +2143,89 @@
   }
 }
 
-/* ---------------- RESULTS ---------------- */
+/* ---------------- RESULTS / STATS (from Figma) ---------------- */
+
+/* This section's eyebrow follows the hero's treatment (16px, regular, brand
+   green) rather than the page-wide small-caps one. */
+.shopify-lp .stats .eyebrow {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: normal;
+  color: var(--brand);
+}
+
+.shopify-lp .stats .eyebrow::before {
+  width: 20px;
+}
+
+/* The heading is a single line in the design, so it needs the full wrap. */
+.shopify-lp .stats .sec-head {
+  max-width: none;
+  margin-bottom: 48px;
+}
+
+.shopify-lp .stats h2 {
+  font-size: clamp(26px, 3.4vw, 40px);
+  line-height: 1.2;
+  color: var(--ink-soft);
+  margin-top: 12px;
+}
 
 .shopify-lp .results {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 20px;
   text-align: center;
 }
 
-@media (max-width: 900px) {
+.shopify-lp .result {
+  padding: 16px;
+  border-left: 1px solid var(--ink-soft);
+}
+
+.shopify-lp .result:first-child {
+  border-left: none;
+}
+
+.shopify-lp .result b {
+  display: block;
+  font-family: var(--disp);
+  font-size: clamp(32px, 3.6vw, 48px);
+  font-weight: 500;
+  line-height: 1.1;
+  color: var(--brand);
+  margin-bottom: 16px;
+}
+
+/* Capped so every label wraps onto two lines, as in the design. */
+.shopify-lp .result span {
+  display: block;
+  max-width: 190px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+@media (min-width: 761px) and (max-width: 900px) {
   .shopify-lp .results {
     grid-template-columns: repeat(3, 1fr);
+    row-gap: 32px;
+  }
+
+  .shopify-lp .result:nth-child(3n + 1) {
+    border-left: none;
   }
 }
 
 @media (max-width: 760px) {
   .shopify-lp .results {
     grid-template-columns: repeat(2, 1fr);
+    row-gap: 32px;
   }
-}
 
-.shopify-lp .result b {
-  display: block;
-  font-family: var(--disp);
-  font-size: clamp(32px, 4.2vw, 46px);
-  font-weight: 700;
-  color: var(--brand-dark);
-}
-
-.shopify-lp .result span {
-  font-size: 12.5px;
-  color: var(--ink-soft);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  .shopify-lp .result:nth-child(2n + 1) {
+    border-left: none;
+  }
 }
 
 /* ---------------- FINAL CTA ---------------- */

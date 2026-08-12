@@ -269,18 +269,18 @@ export default function ShopifyLandingClient() {
       </section>
 
       {/* RESULTS */}
-      <section>
+      <section className="stats">
         <div className="wrap">
           <div className="sec-head center reveal">
-            <span className="eyebrow">Results That Matter</span>
-            <h2>Numbers our clients feel every day.</h2>
+            <span className="eyebrow">What Our Numbers Say</span>
+            <h2>This Is What Our Experience Looks Like</h2>
           </div>
           <div className="results reveal">
-            <div className="result"><b data-target="50" data-suffix="+">0</b><span>Successful Store Migrations</span></div>
-            <div className="result"><b data-target="150" data-suffix="+">0</b><span>Shopify Stores Developed</span></div>
-            <div className="result"><b data-target="15" data-suffix="+">0</b><span>Industries Served</span></div>
+            <div className="result"><b data-target="250" data-suffix="+">0</b><span>Ecommerce Websites Delivered</span></div>
+            <div className="result"><b data-target="50" data-suffix="+">0</b><span>Ecommerce Store Migrated</span></div>
+            <div className="result"><b data-target="100" data-suffix="+">0</b><span>Custom Shopify Stores Delivered</span></div>
             <div className="result"><b data-target="2" data-prefix="<" data-suffix="s">0</b><span>Average Page Load Time</span></div>
-            <div className="result"><b data-target="22" data-suffix="%">0</b><span>Average Conversion Rate Improvement</span></div>
+            <div className="result"><b data-target="22" data-prefix="↑" data-suffix="%">0</b><span>Increase in Conversion Rate</span></div>
           </div>
         </div>
       </section>
