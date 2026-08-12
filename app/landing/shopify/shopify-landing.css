@@ -1988,6 +1988,110 @@
   }
 }
 
+/* ---------------- OUR PROCESS timeline (from Figma) ----------------
+   Five steps on a single brand-green rule that runs through the centre of the
+   48px icon discs; the discs are opaque so they break the line. */
+
+.shopify-lp .process-line {
+  padding: 100px 0;
+}
+
+.shopify-lp .process-line__head {
+  text-align: center;
+}
+
+.shopify-lp .process-line__eyebrow {
+  display: block;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: var(--brand);
+}
+
+.shopify-lp .process-line h2 {
+  margin: 16px 0 0;
+  font-size: clamp(26px, 3.4vw, 40px);
+  line-height: 1.2;
+  color: var(--ink-soft);
+}
+
+.shopify-lp .process-line__head p {
+  max-width: 750px;
+  margin: 16px auto 0;
+  font-size: clamp(17px, 1.5vw, 20px);
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+.shopify-lp .process-line__steps {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin: 48px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.shopify-lp .process-line__steps::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 24px;
+  height: 1px;
+  background: var(--brand);
+}
+
+/* positioned, so each step paints over the rule behind it */
+.shopify-lp .process-line__step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-right: 24px;
+}
+
+.shopify-lp .process-line__icon,
+.shopify-lp .process-line__icon img {
+  display: block;
+  width: 48px;
+  height: 48px;
+}
+
+.shopify-lp .process-line__num {
+  margin-top: 24px;
+  font-family: var(--disp);
+  font-size: 32px;
+  line-height: 40px;
+  color: var(--brand);
+}
+
+.shopify-lp .process-line__label {
+  margin-top: 8px;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--ink-soft);
+}
+
+/* Once the steps wrap, a single full-width rule would no longer line up with
+   them, so it is dropped. */
+@media (max-width: 900px) {
+  .shopify-lp .process-line__steps {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 40px;
+  }
+
+  .shopify-lp .process-line__steps::before {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .shopify-lp .process-line__steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* ---------------- TRUST SIGNALS (Why Us, from Figma) ---------------- */
 
 .shopify-lp .trust-signals {

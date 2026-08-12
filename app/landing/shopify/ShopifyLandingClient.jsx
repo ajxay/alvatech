@@ -5,6 +5,7 @@ import Image from "next/image";
 import ServicesStack from "./ServicesStack";
 import TrustSignals from "./TrustSignals";
 import MigrationShowcase from "./MigrationShowcase";
+import ProcessTimeline from "./ProcessTimeline";
 import WebsiteShowcase from "./WebsiteShowcase";
 import "./shopify-landing.css";
 
@@ -528,6 +529,9 @@ export default function ShopifyLandingClient() {
 
       {/* MIGRATION */}
       <MigrationShowcase calendlyUrl={CALENDLY_URL} />
+
+      {/* OUR PROCESS timeline */}
+      <ProcessTimeline />
 
       {/* WHY US — trust signals (from Figma) */}
       <TrustSignals />
