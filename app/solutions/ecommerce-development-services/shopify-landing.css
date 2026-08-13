@@ -420,6 +420,15 @@
   z-index: 6;
 }
 
+/* Centre of the cluster. Shares the middle row with p6 (Figma y=114) and sits
+   above the rest, matching the layer order in the design. */
+.shopify-lp .hero-collage__phone--p1 {
+  left: 28.829%;
+  top: 24.689%;
+  width: 42.142%;
+  z-index: 7;
+}
+
 .shopify-lp .hero-collage__phone--p6 {
   left: 57.858%;
   top: 24.689%;

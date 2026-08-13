@@ -152,6 +152,7 @@ export default function ShopifyLandingClient() {
               { src: "hero-phone-4.png", mod: "p4" },
               { src: "hero-phone-3.png", mod: "p3" },
               { src: "hero-phone-2.png", mod: "p2" },
+              { src: "hero-phone-1.png", mod: "p1" },
               { src: "hero-phone-6.png", mod: "p6" },
               { src: "hero-phone-5.png", mod: "p5" },
               { src: "hero-phone-7.png", mod: "p7" },
