@@ -270,9 +270,126 @@
   gap: 18px;
 }
 
+/* ---------------- MOBILE NAV ----------------
+   Below 900px the links, language switch and CTA move into a drawer; the bar
+   keeps only the logo and the toggle, which is the one thing that fits. */
+
+.shopify-lp .nav-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  margin-right: -10px;
+  padding: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.shopify-lp .nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--ink);
+  transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.2s ease;
+}
+
+.shopify-lp .nav-toggle.is-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.shopify-lp .nav-toggle.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.shopify-lp .nav-toggle.is-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.shopify-lp .nav-drawer {
+  display: none;
+  border-top: 1px solid var(--line);
+  background: var(--paper);
+  padding: 8px 32px 26px;
+}
+
+.shopify-lp .nav-drawer__links {
+  display: flex;
+  flex-direction: column;
+}
+
+.shopify-lp .nav-drawer__links a {
+  padding: 15px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+
+.shopify-lp .nav-drawer__foot {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 22px;
+}
+
+.shopify-lp .nav-drawer__foot .btn {
+  flex: 1;
+  justify-content: center;
+}
+
+/* Catches taps outside the open drawer. */
+.shopify-lp .nav-scrim {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  padding: 0;
+  border: none;
+  background: rgba(26, 26, 26, 0.4);
+  cursor: default;
+}
+
 @media (max-width: 900px) {
-  .shopify-lp .nav-links {
+  .shopify-lp .nav-links,
+  .shopify-lp .nav-cta {
     display: none;
+  }
+
+  .shopify-lp .nav-toggle {
+    display: flex;
+  }
+
+  /* The bar is opaque whenever the drawer hangs off it, scrolled or not. */
+  .shopify-lp #shopifyLpHeader.menu-open {
+    background: var(--paper);
+  }
+
+  .shopify-lp .nav-drawer.is-open {
+    display: block;
+  }
+
+  .shopify-lp .nav-scrim.is-open {
+    display: block;
+  }
+
+  /* Holds the page still behind the drawer. Doing this here rather than from
+     JS ties the lock to the same query that shows the drawer, so widening the
+     viewport can never strand the page unscrollable. */
+  body:has(.shopify-lp .nav-drawer.is-open) {
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 640px) {
+  .shopify-lp .nav-drawer {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
@@ -1012,6 +1129,14 @@
 @media (max-width: 640px) {
   .shopify-lp .migration-show__features {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Two columns leave ~160px per card, which breaks the headings over three
+   lines and squeezes the body copy; one column reads far better. */
+@media (max-width: 520px) {
+  .shopify-lp .migration-show__features {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1981,6 +2106,31 @@
   font-size: 12.5px;
   flex-wrap: wrap;
   gap: 10px;
+}
+
+@media (max-width: 640px) {
+  .shopify-lp footer {
+    padding-top: 48px;
+    /* Clears the floating scroll-to-top control that overlaps the last line. */
+    padding-bottom: 76px;
+  }
+
+  .shopify-lp .foot-top {
+    gap: 32px;
+    padding-bottom: 32px;
+  }
+
+  .shopify-lp .foot-cols {
+    gap: 28px 40px;
+  }
+
+  /* Wrapping the row leaves the copyright orphaned beside the switcher, so
+     below this width the three items simply stack. */
+  .shopify-lp .foot-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
 }
 
 /* focus */

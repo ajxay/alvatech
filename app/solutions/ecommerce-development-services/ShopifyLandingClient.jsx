@@ -18,6 +18,15 @@ import "./shopify-landing.css";
 
 const CALENDLY_URL = "https://calendly.com/nikhil-k-alvatech/30min";
 
+// Shared by the desktop bar and the mobile drawer so the two can't drift.
+const NAV_SECTIONS = [
+  { id: "why", key: "whyUs" },
+  { id: "services", key: "services" },
+  { id: "migration", key: "migration" },
+  { id: "cases", key: "caseStudies" },
+  { id: "faq", key: "faq" },
+];
+
 function ArrowIcon() {
   return (
     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
@@ -104,6 +113,41 @@ export default function ShopifyLandingClient() {
 
   const { t } = useTranslation("common");
   const [openFaq, setOpenFaq] = useState(null);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  // The page behind the drawer is held still by CSS rather than from here, so
+  // the lock can't outlive the drawer: it is scoped to the same media query, and
+  // a viewport that grows past the breakpoint releases it on its own.
+  useEffect(() => {
+    if (!menuOpen) return undefined;
+    const onKey = (e) => {
+      if (e.key === "Escape") setMenuOpen(false);
+    };
+    // Above the breakpoint the links are back in the bar, so the drawer state
+    // should reset too — otherwise it would reappear on the way back down.
+    const mq = window.matchMedia("(min-width: 901px)");
+    const onChange = (e) => {
+      if (e.matches) setMenuOpen(false);
+    };
+    document.addEventListener("keydown", onKey);
+    mq.addEventListener("change", onChange);
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      mq.removeEventListener("change", onChange);
+    };
+  }, [menuOpen]);
+
+  // Both run while the drawer's scroll lock is still on; programmatic scrolling
+  // ignores it, so there's no need to wait for the effect to lift it.
+  const goTo = (id) => {
+    setMenuOpen(false);
+    scrollToId(id);
+  };
+
+  const goToBooking = (event) => {
+    setMenuOpen(false);
+    scrollToBooking(event);
+  };
 
   const L = (k, opts) => t(`shopifyLanding.${k}`, opts);
   const tickerItems = L("ticker.items", { returnObjects: true });
@@ -111,32 +155,67 @@ export default function ShopifyLandingClient() {
 
   return (
     <div className="shopify-lp">
-      <header id="shopifyLpHeader" className={scrolled ? "scrolled" : ""}>
+      <header
+        id="shopifyLpHeader"
+        className={`${scrolled ? "scrolled" : ""}${menuOpen ? " menu-open" : ""}`.trim()}
+      >
         <div className="wrap">
           <nav>
             <div className="logo">
               <Image src="/assets/images/common/main-logo.svg" alt="Alvatech" width={130} height={26} />
             </div>
             <div className="nav-links">
-              <a onClick={() => scrollToId("why")}>{L("nav.whyUs")}</a>
-              <a onClick={() => scrollToId("services")}>{L("nav.services")}</a>
-              <a onClick={() => scrollToId("migration")}>{L("nav.migration")}</a>
-              <a onClick={() => scrollToId("cases")}>{L("nav.caseStudies")}</a>
-              <a onClick={() => scrollToId("faq")}>{L("nav.faq")}</a>
+              {NAV_SECTIONS.map(({ id, key }) => (
+                <a key={id} onClick={() => goTo(id)}>{L(`nav.${key}`)}</a>
+              ))}
             </div>
             <div className="nav-cta">
               <LandingLanguageSwitcher />
               <a
                 href={BOOKING_ANCHOR}
-                onClick={scrollToBooking}
+                onClick={goToBooking}
                 className="btn btn-primary btn-sm"
               >
                 {L("nav.cta")}
               </a>
             </div>
+            <button
+              type="button"
+              className={`nav-toggle${menuOpen ? " is-open" : ""}`}
+              aria-label={menuOpen ? L("nav.closeMenu") : L("nav.openMenu")}
+              aria-expanded={menuOpen}
+              aria-controls="shopifyLpMenu"
+              onClick={() => setMenuOpen((open) => !open)}
+            >
+              <span aria-hidden="true" />
+              <span aria-hidden="true" />
+              <span aria-hidden="true" />
+            </button>
           </nav>
         </div>
+
+        <div id="shopifyLpMenu" className={`nav-drawer${menuOpen ? " is-open" : ""}`}>
+          <div className="nav-drawer__links">
+            {NAV_SECTIONS.map(({ id, key }) => (
+              <a key={id} onClick={() => goTo(id)}>{L(`nav.${key}`)}</a>
+            ))}
+          </div>
+          <div className="nav-drawer__foot">
+            <LandingLanguageSwitcher />
+            <a href={BOOKING_ANCHOR} onClick={goToBooking} className="btn btn-primary">
+              {L("nav.cta")}
+            </a>
+          </div>
+        </div>
       </header>
+
+      <button
+        type="button"
+        className={`nav-scrim${menuOpen ? " is-open" : ""}`}
+        aria-hidden="true"
+        tabIndex={-1}
+        onClick={() => setMenuOpen(false)}
+      />
 
       {/* HERO */}
       <section className="hero">

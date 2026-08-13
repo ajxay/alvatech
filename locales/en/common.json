@@ -759,7 +759,9 @@
       "migration": "Migration",
       "caseStudies": "Case Studies",
       "faq": "FAQ",
-      "cta": "Get Free Consultation"
+      "cta": "Get Free Consultation",
+      "openMenu": "Open menu",
+      "closeMenu": "Close menu"
     },
     "hero": {
       "eyebrow": "Ecommerce Store Development Services",

@@ -759,7 +759,9 @@
       "migration": "Migrering",
       "caseStudies": "Fallstudier",
       "faq": "Vanliga frågor",
-      "cta": "Boka kostnadsfri rådgivning"
+      "cta": "Boka kostnadsfri rådgivning",
+      "openMenu": "Öppna menyn",
+      "closeMenu": "Stäng menyn"
     },
     "hero": {
       "eyebrow": "Utveckling av e-handelsbutiker",
