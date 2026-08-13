@@ -2013,9 +2013,12 @@
 /* ---------------- FAQ ---------------- */
 
 /* The case-studies section is reused from the homepage and brings its own
-   100px bottom padding, which stacked with the FAQ's top padding. Scoped to
-   .shopify-lp so the homepage keeps its original spacing. */
+   100px of padding top and bottom. The bottom stacked with the FAQ's top
+   padding; the top stacked with the uplift band's 90px, opening a ~200px gap
+   against the page's ~125px rhythm. Scoped to .shopify-lp so the homepage
+   keeps its original spacing. */
 .shopify-lp .home13-cases {
+  padding-top: 24px;
   padding-bottom: 0;
 }
 
