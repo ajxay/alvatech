@@ -7,7 +7,6 @@ import TrustSignals from "./TrustSignals";
 import MigrationShowcase from "./MigrationShowcase";
 import ProcessTimeline from "./ProcessTimeline";
 import ConversionUplift from "./ConversionUplift";
-import WebsiteShowcase from "./WebsiteShowcase";
 import LandingCaseStudies from "./LandingCaseStudies";
 import "./shopify-landing.css";
 
@@ -359,9 +358,6 @@ export default function ShopifyLandingClient() {
       <div id="cases">
         <LandingCaseStudies />
       </div>
-
-      {/* WEBSITE SHOWCASE */}
-      <WebsiteShowcase />
 
       {/* FAQ */}
       <section id="faq">
