@@ -622,6 +622,132 @@
   justify-content: center;
 }
 
+/* ---------------- CONVERSION UPLIFT BAND (from Figma) ----------------
+   Full-bleed band: copy and CTA on the left, an oversized 22% figure over two
+   comparison bars on the right, split on the design's 663/487 columns. */
+
+.shopify-lp .uplift {
+  background: #fffcfc;
+  padding: 90px 0;
+}
+
+.shopify-lp .uplift__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 663fr) minmax(0, 487fr);
+  gap: 72px;
+  align-items: center;
+}
+
+.shopify-lp .uplift .eyebrow {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: normal;
+  color: var(--brand);
+}
+
+.shopify-lp .uplift .eyebrow::before {
+  width: 20px;
+}
+
+.shopify-lp .uplift h2 {
+  margin: 16px 0 0;
+  font-size: clamp(24px, 2.6vw, 32px);
+  line-height: 1.25;
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+
+.shopify-lp .uplift__copy p {
+  margin: 16px 0 0;
+  font-size: clamp(17px, 1.5vw, 20px);
+  line-height: 30px;
+  color: var(--ink-soft);
+}
+
+.shopify-lp .uplift__cta {
+  margin-top: 40px;
+  height: 48px;
+  padding: 0 24px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* the rule under the figure is the design's divider */
+.shopify-lp .uplift__figure {
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--ink-soft);
+}
+
+.shopify-lp .uplift__arrow {
+  font-size: clamp(34px, 4.4vw, 62px);
+  line-height: 1;
+  color: var(--brand);
+  margin-bottom: 8px;
+}
+
+.shopify-lp .uplift__value {
+  font-family: var(--disp);
+  font-size: clamp(60px, 8.6vw, 124px);
+  line-height: 0.82;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--ink-soft);
+}
+
+.shopify-lp .uplift__caption {
+  margin-bottom: 8px;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.shopify-lp .uplift__bars {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  margin-top: 26px;
+}
+
+.shopify-lp .uplift__bar-label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 14px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.shopify-lp .uplift__track {
+  height: 5px;
+  border-radius: 999px;
+  background: #babbbd;
+}
+
+.shopify-lp .uplift__fill {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+}
+
+.shopify-lp .uplift__fill--before {
+  background: var(--ink-soft);
+}
+
+.shopify-lp .uplift__fill--after {
+  background: var(--brand);
+}
+
+@media (max-width: 900px) {
+  .shopify-lp .uplift__grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
 /* ---------------- AUDIT BANNER ---------------- */
 
 .shopify-lp .audit {

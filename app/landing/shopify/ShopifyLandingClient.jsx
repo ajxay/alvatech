@@ -6,6 +6,7 @@ import ServicesStack from "./ServicesStack";
 import TrustSignals from "./TrustSignals";
 import MigrationShowcase from "./MigrationShowcase";
 import ProcessTimeline from "./ProcessTimeline";
+import ConversionUplift from "./ConversionUplift";
 import WebsiteShowcase from "./WebsiteShowcase";
 import "./shopify-landing.css";
 
@@ -305,6 +306,9 @@ export default function ShopifyLandingClient() {
 
       {/* WHY US — trust signals (from Figma) */}
       <TrustSignals />
+
+      {/* CONVERSION UPLIFT BAND */}
+      <ConversionUplift calendlyUrl={CALENDLY_URL} />
 
       {/* AUDIT BANNER */}
       <section>

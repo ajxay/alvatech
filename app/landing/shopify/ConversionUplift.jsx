@@ -1,0 +1,70 @@
+"use client";
+
+function ArrowIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+      <path
+        d="M3 8h10M9 4l4 4-4 4"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        fill="none"
+      />
+    </svg>
+  );
+}
+
+export default function ConversionUplift({ calendlyUrl }) {
+  return (
+    <section className="uplift">
+      <div className="wrap uplift__grid">
+        <div className="uplift__copy reveal">
+          <span className="eyebrow">Conversion-Focused Design</span>
+          <h2>A Better Shopping Experience Can Lead to Better Results</h2>
+          <p>
+            Our customers see estimated Conversion Rate Lift Up to 22%. Actual
+            results vary by industry, traffic quality, product offering, and
+            implementation
+          </p>
+          <a
+            href={calendlyUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary uplift__cta"
+          >
+            Optimise Your Store Today
+            <ArrowIcon />
+          </a>
+        </div>
+
+        <div className="uplift__chart reveal">
+          <div className="uplift__figure">
+            <span className="uplift__arrow" aria-hidden="true">↑</span>
+            <span className="uplift__value">22%</span>
+            <span className="uplift__caption">
+              Conversion
+              <br />
+              Rate
+            </span>
+          </div>
+
+          <div className="uplift__bars">
+            <div className="uplift__bar">
+              <span className="uplift__bar-label">Before Redesign</span>
+              <div className="uplift__track">
+                <span className="uplift__fill uplift__fill--before" style={{ width: "45%" }} />
+              </div>
+            </div>
+            <div className="uplift__bar">
+              <span className="uplift__bar-label">After Redesign</span>
+              <div className="uplift__track">
+                <span className="uplift__fill uplift__fill--after" style={{ width: "59%" }} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
