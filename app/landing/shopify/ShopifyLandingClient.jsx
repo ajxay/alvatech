@@ -8,6 +8,7 @@ import MigrationShowcase from "./MigrationShowcase";
 import ProcessTimeline from "./ProcessTimeline";
 import ConversionUplift from "./ConversionUplift";
 import WebsiteShowcase from "./WebsiteShowcase";
+import LandingCaseStudies from "./LandingCaseStudies";
 import "./shopify-landing.css";
 
 const CALENDLY_URL = "https://calendly.com/nikhil-k-alvatech/30min";
@@ -94,29 +95,6 @@ const tickerItems = [
   "Timely Delivery",
   "Custom Features",
   "Post-Launch Support",
-];
-
-const smallCases = [
-  {
-    id: "geggamoja",
-    image: "/assets/images/home-13/case-studies/geggamoja.png",
-    tag: "Kids & Home",
-    metric: "+30%",
-    title: "Geggamoja average order value lift",
-    text: "Redesigned product discovery and merchandising to increase average order value across the Geggamoja Shopify store.",
-    tags: ["Shopify", "Merchandising", "AOV Growth"],
-    href: "/assets/pdfs/Geggamoja English.pdf",
-  },
-  {
-    id: "reirei",
-    image: "/assets/images/home-13/case-studies/reirei.png",
-    tag: "Beauty & Wellness",
-    metric: "+210%",
-    title: "ReiRei conversion rate breakthrough",
-    text: "Rebuilt product pages and checkout flow around trust signals to more than triple ReiRei's on-site conversion rate.",
-    tags: ["Conversion Design", "Checkout UX", "Shopify"],
-    href: "/assets/pdfs/ReiRei English.pdf",
-  },
 ];
 
 const faqs = [
@@ -377,89 +355,10 @@ export default function ShopifyLandingClient() {
         </div>
       </section>
 
-      {/* CASE STUDIES */}
-      <section id="cases">
-        <div className="wrap">
-          <div className="sec-head reveal">
-            <span className="eyebrow">Case Studies</span>
-            <h2>Every store has a story. Every story has results.</h2>
-            <p>
-              Behind every successful Shopify store is a strategy built around
-              customer behavior, seamless experiences, and continuous
-              optimization.
-            </p>
-          </div>
-
-          <div className="case-featured reveal">
-            <div className="photo">
-              <Image
-                src="/assets/images/home-13/case-studies/bonbelle.png"
-                alt="Bonbelle Shopify storefront"
-                width={618}
-                height={394}
-              />
-            </div>
-            <div className="cf-body">
-              <span className="tag">Featured · Beauty &amp; Skincare</span>
-              <h3>How Bonbelle grew organic traffic 105% and revenue 3.9x after a full Shopify redesign</h3>
-              <p className="desc">
-                Redesigned Bonbelle&apos;s B2B &amp; D2C Shopify experience
-                end-to-end — new UX/UI, a rebuilt design system, and a
-                streamlined checkout — to fix the visual hierarchy, discovery,
-                and trust issues holding back conversion.
-              </p>
-              <div className="cf-stats">
-                <div><b>+105%</b><span>Organic Traffic</span></div>
-                <div><b>3.9x</b><span>Revenue Growth</span></div>
-                <div><b>-68%</b><span>Cart Abandonment</span></div>
-              </div>
-              <p className="cf-quote">
-                &quot;Since switching over, I&apos;ve noticed a huge
-                difference in how easy it is to browse and buy. The whole
-                experience feels seamless — I actually look forward to
-                shopping here now.&quot;
-              </p>
-              <div className="cf-person">
-                <span className="avatar" style={{ width: 40, height: 40, borderRadius: "50%", overflow: "hidden", display: "block", flex: "none" }}>
-                  <Image src="/assets/images/case/bonbelle-en/avatar.png" alt="" width={40} height={40} />
-                </span>
-                <div className="who"><b>Mr. Albin Johansson</b><span>Bonbelle</span></div>
-              </div>
-              <a
-                href={encodeURI("/assets/pdfs/Bonbelle English.pdf")}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-primary"
-                style={{ alignSelf: "flex-start" }}
-              >
-                Download Case Study
-              </a>
-            </div>
-          </div>
-
-          <div className="cases reveal">
-            {smallCases.map((item) => (
-              <div key={item.id} className="case">
-                <div className="case-top">
-                  <Image src={item.image} alt={item.title} width={700} height={500} />
-                  <span className="tag">{item.tag}</span>
-                  <div className="case-metric">{item.metric}</div>
-                </div>
-                <div className="case-body">
-                  <h4>{item.title}</h4>
-                  <p>{item.text}</p>
-                  <div className="case-tags">
-                    {item.tags.map((t) => <span key={t}>{t}</span>)}
-                  </div>
-                  <a href={encodeURI(item.href)} target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
-                    Download Case Study
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* CASE STUDIES — reused from the homepage */}
+      <div id="cases">
+        <LandingCaseStudies />
+      </div>
 
       {/* WEBSITE SHOWCASE */}
       <WebsiteShowcase />
