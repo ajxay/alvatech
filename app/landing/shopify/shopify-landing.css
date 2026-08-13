@@ -129,6 +129,65 @@
   font-size: 13.5px;
 }
 
+/* ---------------- LANGUAGE SWITCHER ---------------- */
+
+.shopify-lp .lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 2px;
+  border: 1px solid var(--line);
+  border-radius: 100px;
+}
+
+.shopify-lp .lang-switch__opt {
+  padding: 5px 12px;
+  border: none;
+  border-radius: 100px;
+  background: none;
+  font-family: var(--body);
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.shopify-lp .lang-switch__opt:hover {
+  color: var(--ink);
+}
+
+.shopify-lp .lang-switch__opt.is-active {
+  background: var(--brand);
+  color: #fff;
+}
+
+/* footer sits on the dark panel */
+.shopify-lp .lang-switch--dark {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.shopify-lp .lang-switch--dark .lang-switch__opt {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.shopify-lp .lang-switch--dark .lang-switch__opt:hover {
+  color: #fff;
+}
+
+.shopify-lp .lang-switch--dark .lang-switch__opt.is-active {
+  background: var(--brand);
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .shopify-lp .lang-switch__opt {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+}
+
 /* ---------------- NAV ----------------
    Scoped to the page's own nav bar by id: a bare `header` selector also
    catches the semantic <header> inside reused components (the case-studies

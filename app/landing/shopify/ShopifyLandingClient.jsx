@@ -9,8 +9,10 @@ import MigrationShowcase from "./MigrationShowcase";
 import ProcessTimeline from "./ProcessTimeline";
 import ConversionUplift from "./ConversionUplift";
 import WebsiteShowcase from "./WebsiteShowcase";
-import LandingCaseStudies from "./LandingCaseStudies";
+import CaseStudies from "@/components/homes/home-13/CaseStudies";
+import { useTranslation } from "react-i18next";
 import { openCookieSettings } from "@/utlis/cookieConsent";
+import LandingLanguageSwitcher from "./LandingLanguageSwitcher";
 import "./shopify-landing.css";
 
 const CALENDLY_URL = "https://calendly.com/nikhil-k-alvatech/30min";
@@ -90,66 +92,6 @@ function useCounters() {
   }, []);
 }
 
-const tickerItems = [
-  "Custom Ecommerce Solutions",
-  "Mobile - First Development",
-  "UI/UX Design",
-  "Timely Delivery",
-  "Custom Features",
-  "Post-Launch Support",
-];
-
-const faqs = [
-  {
-    q: "What is custom ecommerce development?",
-    a: "Custom ecommerce development means building an online store specifically around your business model, customer journey, products and operational requirements. Unlike a standard template-based store, a custom ecommerce solution can include tailored features, integrations, workflows, APIs, product logic and user experiences. Alva Tech develops scalable, high-performance ecommerce solutions designed to support long-term business growth.",
-  },
-  {
-    q: "How much does custom ecommerce development cost?",
-    a: "The cost of custom ecommerce development depends on factors such as the number of products, required features, integrations, design complexity, payment and shipping systems, and whether you need a custom backend or API integrations. Alva Tech first evaluates your business requirements and technical needs before recommending the most suitable ecommerce architecture and development approach.",
-  },
-  {
-    q: "How long does it take to develop a custom ecommerce website?",
-    a: "A custom ecommerce website can take anywhere from several weeks to several months, depending on its complexity. A relatively straightforward store can be launched faster, while projects involving custom functionality, ERP/CRM integrations, marketplaces, advanced product configurations or complex workflows require more development time. Alva Tech follows a structured process covering discovery, design, development, testing and launch.",
-  },
-  {
-    q: "Can you integrate a custom ecommerce website with ERP, CRM, payment and shipping systems?",
-    a: "Yes. Custom ecommerce websites can be integrated with ERP, CRM, payment gateways, shipping platforms, marketing automation tools and other business systems. Alva Tech builds API-based and custom integrations to connect ecommerce operations with systems such as CRM, ERP, payment, logistics and marketing platforms, helping businesses reduce manual work and create connected workflows.",
-  },
-  {
-    q: "What is custom Shopify development?",
-    a: "Custom Shopify development involves creating and modifying a Shopify store beyond standard themes and apps. This can include custom Shopify themes, sections, features, integrations, product functionality, checkout-related solutions, APIs and automated workflows. Alva Tech helps businesses build and scale Shopify stores with conversion-focused experiences, optimized storefronts and business-specific integrations.",
-  },
-  {
-    q: "Can you build a fully custom Shopify store?",
-    a: "Yes. Shopify can be customized extensively to create a branded and highly optimized ecommerce experience. Alva Tech can develop custom Shopify storefronts, tailor the user experience, build custom functionality, integrate third-party systems and optimize the store for performance, mobile users and conversions.",
-  },
-  {
-    q: "Can you integrate Shopify with ERP, CRM, payment and shipping systems?",
-    a: "Yes. Shopify can be connected with a wide range of business and ecommerce systems. Alva Tech can integrate Shopify with ERP and CRM platforms, payment providers, shipping and logistics systems, marketing tools and other third-party applications. The goal is to synchronize relevant data and automate workflows across your ecommerce ecosystem.",
-  },
-  {
-    q: "Is Shopify suitable for a growing or large ecommerce business?",
-    a: "Yes. Shopify can support growing ecommerce businesses, while Shopify Plus provides additional capabilities for businesses with more complex requirements, higher volumes and multiple markets. The right Shopify setup depends on your catalogue, traffic, integrations, markets, workflows and growth plans. Alva Tech helps businesses select and build an architecture that can scale with their operations.",
-  },
-  {
-    q: "Can you migrate my existing ecommerce website to Shopify?",
-    a: "Yes. Alva Tech can help businesses migrate from existing ecommerce platforms to Shopify. This can include migrations from platforms such as WooCommerce, Magento, Vendre, Norce, Kodmyran, Centra and Abicart. The migration process can cover products, customer data, order history, content, SEO elements, redirects and integrations, depending on the source platform and requirements.",
-  },
-  {
-    q: "Will I lose my SEO rankings when migrating from another ecommerce platform to Shopify?",
-    a: "A properly planned Shopify migration should be designed to preserve your existing SEO value as much as possible. Alva Tech can plan URL redirects, metadata migration, sitemap handling and other SEO-critical elements as part of the migration process. The objective is to transition to Shopify without unnecessarily disrupting your organic search visibility.",
-  },
-  {
-    q: "What ecommerce platform is best for my business: Shopify or custom development?",
-    a: "The right platform depends on your business requirements. Shopify is often a strong choice for businesses that want a scalable, managed ecommerce platform with a broad ecosystem of integrations. Custom development may be more suitable when your business requires highly specialized workflows, unique functionality, custom architecture or complex integrations. Alva Tech can assess your requirements and recommend Shopify, Shopify Plus or a custom ecommerce solution based on your specific needs.",
-  },
-  {
-    q: "How can Alva Tech help improve my ecommerce website's performance and conversions?",
-    a: "Alva Tech combines ecommerce development, mobile-first UX, performance optimization, integrations and conversion-focused design to help businesses build better online stores. The approach focuses on creating fast, scalable and easy-to-use ecommerce experiences while connecting the store with the systems needed to operate and grow the business.",
-  },
-];
-
 function scrollToId(id) {
   document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 }
@@ -159,7 +101,12 @@ export default function ShopifyLandingClient() {
   useReveal();
   useCounters();
 
+  const { t } = useTranslation("common");
   const [openFaq, setOpenFaq] = useState(null);
+
+  const L = (k, opts) => t(`shopifyLanding.${k}`, opts);
+  const tickerItems = L("ticker.items", { returnObjects: true });
+  const faqs = L("faq.items", { returnObjects: true });
 
   return (
     <div className="shopify-lp">
@@ -170,20 +117,21 @@ export default function ShopifyLandingClient() {
               <Image src="/assets/images/common/main-logo.svg" alt="Alvatech" width={130} height={26} />
             </div>
             <div className="nav-links">
-              <a onClick={() => scrollToId("why")}>Why Us</a>
-              <a onClick={() => scrollToId("services")}>Services</a>
-              <a onClick={() => scrollToId("migration")}>Migration</a>
-              <a onClick={() => scrollToId("cases")}>Case Studies</a>
-              <a onClick={() => scrollToId("faq")}>FAQ</a>
+              <a onClick={() => scrollToId("why")}>{L("nav.whyUs")}</a>
+              <a onClick={() => scrollToId("services")}>{L("nav.services")}</a>
+              <a onClick={() => scrollToId("migration")}>{L("nav.migration")}</a>
+              <a onClick={() => scrollToId("cases")}>{L("nav.caseStudies")}</a>
+              <a onClick={() => scrollToId("faq")}>{L("nav.faq")}</a>
             </div>
             <div className="nav-cta">
+              <LandingLanguageSwitcher />
               <a
                 href={CALENDLY_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-primary btn-sm"
               >
-                Get Free Consultation
+                {L("nav.cta")}
               </a>
             </div>
           </nav>
@@ -215,17 +163,12 @@ export default function ShopifyLandingClient() {
           </div>
           <div className="wrap">
             <div className="hero-copy">
-              <span className="eyebrow">Ecommerce Store Development Services</span>
-              <h1>
-                Modern Commerce Stores Tailored for Your Business.
-              </h1>
-              <p className="lead">
-                We design and build Ecommerce stores around customer psychology,
-                so every page turns a visitor into a buyer, not just a browser.
-              </p>
+              <span className="eyebrow">{L("hero.eyebrow")}</span>
+              <h1>{L("hero.title")}</h1>
+              <p className="lead">{L("hero.lead")}</p>
               <div className="hero-ctas">
                 <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-                  Schedule a Free Consultation
+                  {L("hero.cta")}
                   <ArrowIcon />
                 </a>
               </div>
@@ -239,15 +182,15 @@ export default function ShopifyLandingClient() {
       <section className="stats">
         <div className="wrap">
           <div className="sec-head center reveal">
-            <span className="eyebrow">What Our Numbers Say</span>
-            <h2>This Is What Our Experience Looks Like</h2>
+            <span className="eyebrow">{L("stats.eyebrow")}</span>
+            <h2>{L("stats.title")}</h2>
           </div>
           <div className="results reveal">
-            <div className="result"><b data-target="250" data-suffix="+">0</b><span>Ecommerce Websites Delivered</span></div>
-            <div className="result"><b data-target="50" data-suffix="+">0</b><span>Ecommerce Store Migrated</span></div>
-            <div className="result"><b data-target="100" data-suffix="+">0</b><span>Custom Shopify Stores Delivered</span></div>
-            <div className="result"><b data-target="2" data-prefix="<" data-suffix="s">0</b><span>Average Page Load Time</span></div>
-            <div className="result"><b data-target="22" data-prefix="↑" data-suffix="%">0</b><span>Increase in Conversion Rate</span></div>
+            <div className="result"><b data-target="250" data-suffix="+">0</b><span>{L("stats.websites")}</span></div>
+            <div className="result"><b data-target="50" data-suffix="+">0</b><span>{L("stats.migrated")}</span></div>
+            <div className="result"><b data-target="100" data-suffix="+">0</b><span>{L("stats.customStores")}</span></div>
+            <div className="result"><b data-target="2" data-prefix="<" data-suffix="s">0</b><span>{L("stats.loadTime")}</span></div>
+            <div className="result"><b data-target="22" data-prefix="↑" data-suffix="%">0</b><span>{L("stats.conversion")}</span></div>
           </div>
         </div>
       </section>
@@ -274,33 +217,19 @@ export default function ShopifyLandingClient() {
           <div className="about__media reveal">
             <Image
               src="/assets/images/case/landing-about/about-showcase.png"
-              alt="Mattress storefront and product-finder screens built by Alva Tech"
+              alt={L("about.imageAlt")}
               width={428}
               height={524}
             />
           </div>
           <div className="about__copy reveal">
-            <span className="eyebrow">About Alva Tech</span>
-            <h2>Custom Ecommerce Solutions for Ambitious Brands.</h2>
-            <p>
-              Our Ecommerce store development services are designed to help
-              businesses launch, grow, and scale online. Whether you&apos;re
-              starting a new store or migrating from another platform. Our
-              Ecommerce development services include custom theme &amp; store
-              development, migrating commerce store to Shopify, theme and app
-              development etc. Every store is built with clean code, mobile
-              first design, SEO best practices, and a smooth shopping
-              experience.
-            </p>
-            <p>
-              We&apos;ve delivered Ecommerce websites for businesses across
-              multiple industries, helping brands create a strong online
-              presence and provide a seamless shopping experience for their
-              customers.
-            </p>
+            <span className="eyebrow">{L("about.eyebrow")}</span>
+            <h2>{L("about.title")}</h2>
+            <p>{L("about.p1")}</p>
+            <p>{L("about.p2")}</p>
             <div className="about__cta">
               <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-                Schedule a Free Consultation
+                {L("about.cta")}
                 <ArrowIcon />
               </a>
             </div>
@@ -328,15 +257,15 @@ export default function ShopifyLandingClient() {
 
       {/* CASE STUDIES — reused from the homepage */}
       <div id="cases">
-        <LandingCaseStudies />
+        <CaseStudies />
       </div>
 
       {/* FAQ */}
       <section id="faq">
         <div className="wrap">
           <div className="sec-head center reveal">
-            <span className="eyebrow">FAQ</span>
-            <h2>Frequently Asked Questions</h2>
+            <span className="eyebrow">{L("faq.eyebrow")}</span>
+            <h2>{L("faq.title")}</h2>
           </div>
           <div className="faq reveal">
             {faqs.map((item, index) => (
@@ -359,12 +288,9 @@ export default function ShopifyLandingClient() {
       <section id="contact" style={{ paddingTop: 0 }}>
         <div className="wrap">
           <div className="final-cta reveal">
-            <span className="eyebrow center" style={{ justifyContent: "center" }}>Ready When You Are</span>
-            <h2>Let&apos;s build a Shopify store customers actually trust.</h2>
-            <p>
-              Book a free, no-pressure consultation. We&apos;ll audit your
-              current store or scope your new one — no obligation.
-            </p>
+            <span className="eyebrow center" style={{ justifyContent: "center" }}>{L("finalCta.eyebrow")}</span>
+            <h2>{L("finalCta.title")}</h2>
+            <p>{L("finalCta.lead")}</p>
             {/* Calendly inline widget */}
             <div
               className="calendly-inline-widget final-cta__calendly"
@@ -382,42 +308,43 @@ export default function ShopifyLandingClient() {
               <div className="logo foot-logo">
                 <Image src="/assets/images/common/main-logo.svg" alt="Alvatech" width={130} height={26} style={{ filter: "brightness(0) invert(1)" }} />
               </div>
-              <p style={{ maxWidth: 260, fontSize: 13.5 }}>Shopify development partner for growing ecommerce brands.</p>
+              <p style={{ maxWidth: 260, fontSize: 13.5 }}>{L("footer.tagline")}</p>
             </div>
             <div className="foot-cols">
               <div>
-                <h6>Legal</h6>
+                <h6>{L("footer.legal")}</h6>
                 <ul>
-                  <li><a href="/page-privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
-                  <li><a href="/page-terms" target="_blank" rel="noopener noreferrer">Terms &amp; Conditions</a></li>
+                  <li><a href="/page-privacy" target="_blank" rel="noopener noreferrer">{L("footer.privacy")}</a></li>
+                  <li><a href="/page-terms" target="_blank" rel="noopener noreferrer">{L("footer.terms")}</a></li>
                   <li>
                     <button type="button" className="foot-linkbtn" onClick={openCookieSettings}>
-                      Cookie Settings
+                      {L("footer.cookies")}
                     </button>
                   </li>
                 </ul>
               </div>
               <div>
-                <h6>Company</h6>
+                <h6>{L("footer.company")}</h6>
                 <ul>
-                  <li><a onClick={() => scrollToId("why")}>Why Us</a></li>
-                  <li><a onClick={() => scrollToId("cases")}>Case Studies</a></li>
-                  <li><a onClick={() => scrollToId("faq")}>FAQ</a></li>
-                  <li><a href="/contact-us" target="_blank" rel="noopener noreferrer">Contact</a></li>
+                  <li><a onClick={() => scrollToId("why")}>{L("footer.whyUs")}</a></li>
+                  <li><a onClick={() => scrollToId("cases")}>{L("footer.caseStudies")}</a></li>
+                  <li><a onClick={() => scrollToId("faq")}>{L("footer.faq")}</a></li>
+                  <li><a href="/contact-us" target="_blank" rel="noopener noreferrer">{L("footer.contact")}</a></li>
                 </ul>
               </div>
               <div>
-                <h6>Get Started</h6>
+                <h6>{L("footer.getStarted")}</h6>
                 <ul>
-                  <li><a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">Free Consultation</a></li>
-                  <li><a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">Free Store Audit</a></li>
+                  <li><a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">{L("footer.freeConsultation")}</a></li>
+                  <li><a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">{L("footer.freeAudit")}</a></li>
                 </ul>
               </div>
             </div>
           </div>
           <div className="foot-bottom">
-            <span>© 2026 Alvatech. All rights reserved.</span>
-            <span>Norra Oskarsgatan 12, Linköping · +46 704964569</span>
+            <LandingLanguageSwitcher className="lang-switch--dark" />
+            <span>{L("footer.rights")}</span>
+            <span>{L("footer.address")}</span>
           </div>
         </div>
       </footer>

@@ -1,27 +1,28 @@
 "use client";
 
+import { useTranslation } from "react-i18next";
+
 import Image from "next/image";
 
 const steps = [
-  { num: "01", label: "Discovery & Strategy", icon: "/assets/images/case/landing-process/step-1-discovery.png" },
-  { num: "02", label: "Design & Development", icon: "/assets/images/case/landing-process/step-2-design.png" },
-  { num: "03", label: "Integration & Migration", icon: "/assets/images/case/landing-process/step-3-integration.png" },
-  { num: "04", label: "Testing & QC", icon: "/assets/images/case/landing-process/step-4-testing.png" },
-  { num: "05", label: "Launch & Support", icon: "/assets/images/case/landing-process/step-5-launch.png" },
+  { id: "discovery", num: "01", icon: "/assets/images/case/landing-process/step-1-discovery.png" },
+  { id: "design", num: "02", icon: "/assets/images/case/landing-process/step-2-design.png" },
+  { id: "integration", num: "03", icon: "/assets/images/case/landing-process/step-3-integration.png" },
+  { id: "testing", num: "04", icon: "/assets/images/case/landing-process/step-4-testing.png" },
+  { id: "launch", num: "05", icon: "/assets/images/case/landing-process/step-5-launch.png" },
 ];
 
 export default function ProcessTimeline() {
+  const { t } = useTranslation("common");
+  const L = (k) => t(`shopifyLanding.process.${k}`);
+
   return (
     <section className="process-line">
       <div className="wrap">
         <div className="process-line__head reveal">
-          <span className="process-line__eyebrow">Our Process</span>
-          <h2>Every Ecommerce Starts with a Clear Plan</h2>
-          <p>
-            We follow a structured ecommerce development process that keeps your
-            project on schedule, your feedback involved, and your store ready
-            for launch.
-          </p>
+          <span className="process-line__eyebrow">{L("eyebrow")}</span>
+          <h2>{L("title")}</h2>
+          <p>{L("lead")}</p>
         </div>
 
         <ol className="process-line__steps reveal">
@@ -31,7 +32,7 @@ export default function ProcessTimeline() {
                 <Image src={step.icon} alt="" width={48} height={48} aria-hidden="true" />
               </span>
               <span className="process-line__num">{step.num}</span>
-              <span className="process-line__label">{step.label}</span>
+              <span className="process-line__label">{L(`steps.${step.id}`)}</span>
             </li>
           ))}
         </ol>

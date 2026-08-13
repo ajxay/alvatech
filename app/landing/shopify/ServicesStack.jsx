@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslation } from "react-i18next";
+
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import gsap from "gsap";
@@ -8,51 +10,30 @@ import { ScrollTrigger } from "gsap/all";
 const services = [
   {
     id: "custom-ecommerce",
-    title: "Custom Ecommerce Development",
-    text: "Custom ecommerce website development with modern UI/UX, mobile-first design, and fast performance, built to deliver a better shopping experience.",
-    tags: ["Modern UI/UX", "Custom Tech Stack", "Mobile First Design"],
     image: "/assets/images/case/landing-services/service-1-custom-ecommerce.png",
   },
   {
     id: "shopify-design",
-    title: "Shopify Store Design & Development",
-    text: "Fully custom Shopify development services. We don't use templates or drag and drop shortcuts. Built for speed, engineered for revenue.",
-    tags: ["Custom UI/UX", "Build From Scratch", "Mobile First Design"],
     image: "/assets/images/case/landing-services/service-2-shopify-design.png",
   },
   {
     id: "migration",
-    title: "Ecommerce Store Migration To Shopify",
-    text: "Migrate your ecommerce website from WooCommerce, Magento, Vendre, Norce, Centra, or custom platforms with minimal downtime.",
-    tags: ["Full Data Migration", "Preserve On Page SEO", "Minimal Downtime"],
     image: "/assets/images/case/landing-services/service-3-migration.png",
   },
   {
     id: "functionality",
-    title: "Functionality & Application Development",
-    text: "Create fast, responsive, and conversion-focused functionality and application that deliver exceptional shopping experiences.",
-    tags: ["Fully Scalable", "Lightning Fast", "Secure"],
     image: "/assets/images/case/landing-services/service-4-functionality.png",
   },
   {
     id: "integrations",
-    title: "Third-Party Integration & Automation",
-    text: "Integrate payment gateways, shipping providers, marketplaces, ERP, CRM, inventory systems, and marketing tools.",
-    tags: ["API Integration", "Process Automation", "Sales Automation"],
     image: "/assets/images/case/landing-services/service-5-integrations.png",
   },
   {
     id: "b2b",
-    title: "B2B Store Development",
-    text: "Develop B2B stores with wholesale pricing, customer-specific catalogs, bulk ordering, custom pricing, account management, and other features.",
-    tags: ["Data Migration", "Store Migration", "Custom Solutions"],
     image: "/assets/images/case/landing-services/service-6-b2b.png",
   },
   {
     id: "maintenance",
-    title: "Website Maintenance & Support",
-    text: "Keep your store secure, optimized, and continuously improving with ongoing technical support and enhancements.",
-    tags: ["Minimal Downtime", "Dedicated Support", "Regular Monitoring"],
     image: "/assets/images/case/landing-services/service-7-maintenance.png",
   },
 ];
@@ -73,6 +54,8 @@ function ArrowIcon() {
 }
 
 export default function ServicesStack({ calendlyUrl }) {
+  const { t } = useTranslation("common");
+  const L = (k, o) => t(`shopifyLanding.services.${k}`, o);
   const stackRef = useRef(null);
 
   useEffect(() => {
@@ -152,8 +135,8 @@ export default function ServicesStack({ calendlyUrl }) {
     <section id="services" className="services-stack">
       <div className="wrap">
         <div className="sec-head center reveal">
-          <span className="eyebrow">Our Development Services</span>
-          <h2>Ecommerce Solutions That Alva Tech Offers</h2>
+          <span className="eyebrow">{L("eyebrow")}</span>
+          <h2>{L("title")}</h2>
         </div>
 
         <div className="services-stack__list" ref={stackRef}>
@@ -161,10 +144,10 @@ export default function ServicesStack({ calendlyUrl }) {
             <div key={service.id} className="services-stack__item">
               <article className="services-stack__card">
                 <div className="services-stack__content">
-                  <h3>{service.title}</h3>
-                  <p>{service.text}</p>
+                  <h3>{L(`items.${service.id}.title`)}</h3>
+                  <p>{L(`items.${service.id}.text`)}</p>
                   <ul className="services-stack__tags">
-                    {service.tags.map((tag) => (
+                    {L(`items.${service.id}.tags`, { returnObjects: true }).map((tag) => (
                       <li key={tag}>{tag}</li>
                     ))}
                   </ul>
@@ -174,7 +157,7 @@ export default function ServicesStack({ calendlyUrl }) {
                     rel="noopener noreferrer"
                     className="btn btn-primary services-stack__cta"
                   >
-                    Schedule Free Consultation
+                    {L("cta")}
                     <ArrowIcon />
                   </a>
                 </div>

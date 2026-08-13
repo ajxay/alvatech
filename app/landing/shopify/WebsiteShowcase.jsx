@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslation } from "react-i18next";
+
 import Image from "next/image";
 
 const showcaseImages = [
@@ -25,13 +27,16 @@ const columns = [
 ];
 
 export default function WebsiteShowcase() {
+  const { t } = useTranslation("common");
+  const L = (k) => t(`shopifyLanding.showcase.${k}`);
+
   return (
     <section className="site-showcase">
       <div className="wrap">
         <div className="sec-head center reveal">
-          <span className="eyebrow center" style={{ justifyContent: "center" }}>Our Work</span>
-          <h2>Real Shopify Stores We&apos;ve Built.</h2>
-          <p>A look inside storefronts we&apos;ve designed and shipped for brands like yours.</p>
+          <span className="eyebrow center" style={{ justifyContent: "center" }}>{L("eyebrow")}</span>
+          <h2>{L("title")}</h2>
+          <p>{L("lead")}</p>
         </div>
       </div>
 

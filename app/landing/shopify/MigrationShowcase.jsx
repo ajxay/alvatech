@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslation } from "react-i18next";
+
 import Image from "next/image";
 
 const platformLogos = [
@@ -81,52 +83,41 @@ const migrationFeatures = [
   {
     id: "data",
     Icon: DataMigrationIcon,
-    title: "Complete Data Migration",
-    text: "Transfer products, customers, orders, pages, blogs etc. Securely",
   },
   {
     id: "seo",
     Icon: SeoIcon,
-    title: "Keep Your SEO Intact",
-    text: "Preserve your URLs, metadata, and search rankings",
   },
   {
     id: "integrations",
     Icon: IntegrationsIcon,
-    title: "Integrations Reconnected",
-    text: "Reconnect payment gateways, shipping providers, ERP, CRM, and third-party apps",
   },
   {
     id: "downtime",
     Icon: DowntimeIcon,
-    title: "Minimal Downtime",
-    text: "Every migration is planned to minimise downtime, so your customers can continue shopping.",
   },
   {
     id: "support",
     Icon: SupportIcon,
-    title: "Post Migration Assistance",
-    text: "We monitor your store after launch, resolve issues quickly",
   },
 ];
 
 export default function MigrationShowcase({ calendlyUrl }) {
+  const { t } = useTranslation("common");
+  const L = (k) => t(`shopifyLanding.migration.${k}`);
+
   return (
     <section id="migration" className="migration-show">
       <div className="wrap">
         <div className="sec-head center reveal">
-          <span className="eyebrow center" style={{ justifyContent: "center" }}>Shopify Migration</span>
-          <h2>Migrate Your E-Commerce Store to Shopify</h2>
-          <p>
-            Migrate your store from any Ecommerce platform to Shopify while
-            preserving store data, search rankings, integrations, and
-            business continuity.
-          </p>
+          <span className="eyebrow center" style={{ justifyContent: "center" }}>{L("eyebrow")}</span>
+          <h2>{L("title")}</h2>
+          <p>{L("lead")}</p>
         </div>
 
         <div className="migration-show__flow reveal">
           <div className="migration-show__flow-col">
-            <span className="migration-show__flow-label">Platform We Migrated From</span>
+            <span className="migration-show__flow-label">{L("fromLabel")}</span>
             <div className="migration-show__logos">
               {platformLogos.map((logo) => (
                 <div key={logo.name} className="migration-show__logo-box">
@@ -143,7 +134,7 @@ export default function MigrationShowcase({ calendlyUrl }) {
           </div>
 
           <div className="migration-show__flow-col migration-show__flow-col--to">
-            <span className="migration-show__flow-label">Your New Store</span>
+            <span className="migration-show__flow-label">{L("toLabel")}</span>
             <div className="migration-show__shopify-box">
               <Image
                 src="/assets/images/case/landing-migration/icon-shopify.png"
@@ -156,13 +147,13 @@ export default function MigrationShowcase({ calendlyUrl }) {
         </div>
 
         <div className="migration-show__features reveal">
-          {migrationFeatures.map(({ id, Icon, title, text }) => (
+          {migrationFeatures.map(({ id, Icon }) => (
             <div key={id} className="migration-show__feature">
               <span className="migration-show__feature-icon">
                 <Icon />
               </span>
-              <h4>{title}</h4>
-              <p>{text}</p>
+              <h4>{L(`features.${id}.title`)}</h4>
+              <p>{L(`features.${id}.text`)}</p>
             </div>
           ))}
         </div>
@@ -172,11 +163,11 @@ export default function MigrationShowcase({ calendlyUrl }) {
             <RocketIcon />
           </span>
           <div className="migration-show__cta-copy">
-            <h4>Ready to Make the Move</h4>
-            <p>Migrate to Shopify and unlock a better way to grow</p>
+            <h4>{L("ctaTitle")}</h4>
+            <p>{L("ctaText")}</p>
           </div>
           <a href={calendlyUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-            Plan Your Migration Today
+            {L("ctaButton")}
           </a>
         </div>
       </div>

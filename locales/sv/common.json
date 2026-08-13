@@ -751,5 +751,269 @@
   },
   "mobile": {
     "selectTheme": "Välj tema:"
+  },
+  "shopifyLanding": {
+    "nav": {
+      "whyUs": "Varför oss",
+      "services": "Tjänster",
+      "migration": "Migrering",
+      "caseStudies": "Fallstudier",
+      "faq": "Vanliga frågor",
+      "cta": "Boka kostnadsfri rådgivning"
+    },
+    "hero": {
+      "eyebrow": "Utveckling av e-handelsbutiker",
+      "title": "Moderna e-handelsbutiker skräddarsydda för din verksamhet.",
+      "lead": "Vi designar och bygger e-handelsbutiker utifrån kundpsykologi, så att varje sida gör besökaren till en köpare – inte bara någon som tittar.",
+      "cta": "Boka kostnadsfri rådgivning"
+    },
+    "stats": {
+      "eyebrow": "Vad våra siffror säger",
+      "title": "Så här ser vår erfarenhet ut",
+      "websites": "Levererade e-handelswebbplatser",
+      "migrated": "Migrerade e-handelsbutiker",
+      "customStores": "Levererade skräddarsydda Shopify-butiker",
+      "loadTime": "Genomsnittlig laddningstid",
+      "conversion": "Ökning av konverteringsgrad"
+    },
+    "ticker": {
+      "items": [
+        "Skräddarsydda e-handelslösningar",
+        "Mobile first-utveckling",
+        "UI/UX-design",
+        "Leverans i tid",
+        "Skräddarsydda funktioner",
+        "Support efter lansering"
+      ]
+    },
+    "about": {
+      "eyebrow": "Om Alva Tech",
+      "title": "Skräddarsydda e-handelslösningar för ambitiösa varumärken.",
+      "imageAlt": "Butiks- och produktguidevyer för madrasser byggda av Alva Tech",
+      "p1": "Våra tjänster inom utveckling av e-handelsbutiker är utformade för att hjälpa företag att lansera, växa och skala upp online. Oavsett om du startar en ny butik eller migrerar från en annan plattform. Våra e-handelstjänster omfattar skräddarsydd tema- och butiksutveckling, migrering av e-handel till Shopify, tema- och apputveckling med mera. Varje butik byggs med ren kod, mobile first-design, SEO enligt bästa praxis och en smidig köpupplevelse.",
+      "p2": "Vi har levererat e-handelswebbplatser till företag inom flera branscher och hjälpt varumärken att bygga en stark närvaro online och ge sina kunder en sömlös köpupplevelse.",
+      "cta": "Boka kostnadsfri rådgivning"
+    },
+    "services": {
+      "eyebrow": "Våra utvecklingstjänster",
+      "title": "E-handelslösningar som Alva Tech erbjuder",
+      "cta": "Boka kostnadsfri rådgivning",
+      "items": {
+        "custom-ecommerce": {
+          "title": "Skräddarsydd e-handelsutveckling",
+          "text": "Skräddarsydd utveckling av e-handelswebbplatser med modern UI/UX, mobile first-design och snabb prestanda, byggd för att ge en bättre köpupplevelse.",
+          "tags": [
+            "Modern UI/UX",
+            "Skräddarsydd teknikstack",
+            "Mobile first-design"
+          ]
+        },
+        "shopify-design": {
+          "title": "Design och utveckling av Shopify-butiker",
+          "text": "Helt skräddarsydd Shopify-utveckling. Vi använder varken mallar eller drag-och-släpp-genvägar. Byggd för snabbhet, konstruerad för intäkter.",
+          "tags": [
+            "Skräddarsydd UI/UX",
+            "Byggd från grunden",
+            "Mobile first-design"
+          ]
+        },
+        "migration": {
+          "title": "Migrering av e-handelsbutik till Shopify",
+          "text": "Migrera din e-handelswebbplats från WooCommerce, Magento, Vendre, Norce, Centra eller egna plattformar med minimal driftstopp.",
+          "tags": [
+            "Fullständig datamigrering",
+            "Bevarad on page-SEO",
+            "Minimal driftstopp"
+          ]
+        },
+        "functionality": {
+          "title": "Funktions- och applikationsutveckling",
+          "text": "Skapa snabb, responsiv och konverteringsfokuserad funktionalitet och applikationer som ger exceptionella köpupplevelser.",
+          "tags": [
+            "Fullt skalbar",
+            "Blixtsnabb",
+            "Säker"
+          ]
+        },
+        "integrations": {
+          "title": "Tredjepartsintegration och automatisering",
+          "text": "Integrera betallösningar, fraktleverantörer, marknadsplatser, ERP, CRM, lagersystem och marknadsföringsverktyg.",
+          "tags": [
+            "API-integration",
+            "Processautomatisering",
+            "Säljautomatisering"
+          ]
+        },
+        "b2b": {
+          "title": "Utveckling av B2B-butiker",
+          "text": "Utveckla B2B-butiker med grossistpriser, kundspecifika sortiment, orderläggning i bulk, egna prismodeller, kontohantering och andra funktioner.",
+          "tags": [
+            "Datamigrering",
+            "Butiksmigrering",
+            "Skräddarsydda lösningar"
+          ]
+        },
+        "maintenance": {
+          "title": "Underhåll och support av webbplats",
+          "text": "Håll din butik säker, optimerad och i ständig förbättring med löpande teknisk support och vidareutveckling.",
+          "tags": [
+            "Minimal driftstopp",
+            "Dedikerad support",
+            "Löpande övervakning"
+          ]
+        }
+      }
+    },
+    "migration": {
+      "eyebrow": "Shopify-migrering",
+      "title": "Migrera din e-handelsbutik till Shopify",
+      "lead": "Migrera din butik från valfri e-handelsplattform till Shopify och behåll butiksdata, sökrankning, integrationer och verksamhetens kontinuitet.",
+      "fromLabel": "Plattformar vi migrerat från",
+      "toLabel": "Din nya butik",
+      "features": {
+        "data": {
+          "title": "Fullständig datamigrering",
+          "text": "Överför produkter, kunder, ordrar, sidor, bloggar med mera på ett säkert sätt"
+        },
+        "seo": {
+          "title": "Behåll din SEO",
+          "text": "Bevara dina URL:er, metadata och sökrankning"
+        },
+        "integrations": {
+          "title": "Återkopplade integrationer",
+          "text": "Återanslut betallösningar, fraktleverantörer, ERP, CRM och tredjepartsappar"
+        },
+        "downtime": {
+          "title": "Minimal driftstopp",
+          "text": "Varje migrering planeras för minimal driftstopp, så att dina kunder kan fortsätta handla."
+        },
+        "support": {
+          "title": "Stöd efter migrering",
+          "text": "Vi övervakar din butik efter lansering och löser problem snabbt"
+        }
+      },
+      "ctaTitle": "Redo att ta steget",
+      "ctaText": "Migrera till Shopify och få bättre förutsättningar att växa",
+      "ctaButton": "Planera din migrering idag"
+    },
+    "showcase": {
+      "eyebrow": "Vårt arbete",
+      "title": "Riktiga Shopify-butiker vi har byggt.",
+      "lead": "En inblick i butiker vi designat och lanserat för varumärken som ditt."
+    },
+    "process": {
+      "eyebrow": "Vår process",
+      "title": "All e-handel börjar med en tydlig plan",
+      "lead": "Vi följer en strukturerad utvecklingsprocess som håller ditt projekt i tid, dig delaktig och din butik redo för lansering.",
+      "steps": {
+        "discovery": "Analys och strategi",
+        "design": "Design och utveckling",
+        "integration": "Integration och migrering",
+        "testing": "Test och kvalitetskontroll",
+        "launch": "Lansering och support"
+      }
+    },
+    "trust": {
+      "eyebrow": "Varför oss",
+      "title": "Vi bygger inte bara e-handelsbutiker. Vi designar köpbeslut.",
+      "flow": {
+        "store": "Människor köper inte för att du har en butik",
+        "trust": "Människor köper för att de litar på dig.",
+        "experience": "Förtroende kommer från köpupplevelsen du erbjuder"
+      },
+      "subhead": "Vi utvecklar de förtroendesignalerna",
+      "cards": {
+        "mobile": "Mobil köpupplevelse",
+        "uiux": "Premium UI/UX-design",
+        "brand": "Konsekvent varumärkesidentitet",
+        "integrations": "Tredjepartsintegrationer",
+        "checkout": "Friktionsfri kassa"
+      }
+    },
+    "uplift": {
+      "eyebrow": "Konverteringsfokuserad design",
+      "title": "En bättre köpupplevelse kan ge bättre resultat",
+      "lead": "Våra kunder ser en uppskattad ökning av konverteringsgraden på upp till 22 %. Faktiska resultat varierar beroende på bransch, trafikkvalitet, produktutbud och implementation",
+      "cta": "Optimera din butik idag",
+      "caption": "Konverteringsgrad",
+      "before": "Före redesign",
+      "after": "Efter redesign"
+    },
+    "faq": {
+      "eyebrow": "Vanliga frågor",
+      "title": "Vanliga frågor",
+      "items": [
+        {
+          "q": "Vad är skräddarsydd e-handelsutveckling?",
+          "a": "Skräddarsydd e-handelsutveckling innebär att bygga en webbutik specifikt utifrån din affärsmodell, kundresa, dina produkter och operativa krav. Till skillnad från en standardbutik baserad på mall kan en skräddarsydd e-handelslösning omfatta anpassade funktioner, integrationer, arbetsflöden, API:er, produktlogik och användarupplevelser. Alva Tech utvecklar skalbara e-handelslösningar med hög prestanda, utformade för att stödja långsiktig tillväxt."
+        },
+        {
+          "q": "Vad kostar skräddarsydd e-handelsutveckling?",
+          "a": "Kostnaden för skräddarsydd e-handelsutveckling beror på faktorer som antalet produkter, önskade funktioner, integrationer, designens komplexitet, betal- och fraktsystem samt om du behöver en egen backend eller API-integrationer. Alva Tech utvärderar först dina affärsmässiga och tekniska behov innan vi rekommenderar den mest lämpliga e-handelsarkitekturen och utvecklingsansatsen."
+        },
+        {
+          "q": "Hur lång tid tar det att utveckla en skräddarsydd e-handelswebbplats?",
+          "a": "En skräddarsydd e-handelswebbplats kan ta allt från några veckor till flera månader, beroende på komplexiteten. En relativt okomplicerad butik kan lanseras snabbare, medan projekt med skräddarsydd funktionalitet, ERP/CRM-integrationer, marknadsplatser, avancerade produktkonfigurationer eller komplexa arbetsflöden kräver mer utvecklingstid. Alva Tech följer en strukturerad process som omfattar analys, design, utveckling, test och lansering."
+        },
+        {
+          "q": "Kan ni integrera en skräddarsydd e-handelswebbplats med ERP, CRM, betal- och fraktsystem?",
+          "a": "Ja. Skräddarsydda e-handelswebbplatser kan integreras med ERP, CRM, betallösningar, fraktplattformar, verktyg för marknadsföringsautomatisering och andra affärssystem. Alva Tech bygger API-baserade och skräddarsydda integrationer som kopplar e-handelsverksamheten till system som CRM, ERP, betalning, logistik och marknadsföringsplattformar, vilket hjälper företag att minska manuellt arbete och skapa sammankopplade arbetsflöden."
+        },
+        {
+          "q": "Vad är skräddarsydd Shopify-utveckling?",
+          "a": "Skräddarsydd Shopify-utveckling innebär att skapa och anpassa en Shopify-butik bortom standardteman och appar. Det kan omfatta skräddarsydda Shopify-teman, sektioner, funktioner, integrationer, produktfunktionalitet, kassarelaterade lösningar, API:er och automatiserade arbetsflöden. Alva Tech hjälper företag att bygga och skala Shopify-butiker med konverteringsfokuserade upplevelser, optimerade butiker och verksamhetsspecifika integrationer."
+        },
+        {
+          "q": "Kan ni bygga en helt skräddarsydd Shopify-butik?",
+          "a": "Ja. Shopify kan anpassas i stor utsträckning för att skapa en varumärkesanpassad och högt optimerad e-handelsupplevelse. Alva Tech kan utveckla skräddarsydda Shopify-butiker, anpassa användarupplevelsen, bygga egen funktionalitet, integrera tredjepartssystem och optimera butiken för prestanda, mobila användare och konvertering."
+        },
+        {
+          "q": "Kan ni integrera Shopify med ERP, CRM, betal- och fraktsystem?",
+          "a": "Ja. Shopify kan kopplas samman med ett brett utbud av affärs- och e-handelssystem. Alva Tech kan integrera Shopify med ERP- och CRM-plattformar, betalleverantörer, frakt- och logistiksystem, marknadsföringsverktyg och andra tredjepartsapplikationer. Målet är att synkronisera relevant data och automatisera arbetsflöden i hela ditt e-handelsekosystem."
+        },
+        {
+          "q": "Passar Shopify för ett växande eller stort e-handelsföretag?",
+          "a": "Ja. Shopify kan stödja växande e-handelsföretag, medan Shopify Plus ger ytterligare möjligheter för verksamheter med mer komplexa krav, högre volymer och flera marknader. Rätt Shopify-uppsättning beror på ditt sortiment, din trafik, dina integrationer, marknader, arbetsflöden och tillväxtplaner. Alva Tech hjälper företag att välja och bygga en arkitektur som kan skala med verksamheten."
+        },
+        {
+          "q": "Kan ni migrera min befintliga e-handelswebbplats till Shopify?",
+          "a": "Ja. Alva Tech kan hjälpa företag att migrera från befintliga e-handelsplattformar till Shopify. Det kan omfatta migreringar från plattformar som WooCommerce, Magento, Vendre, Norce, Kodmyran, Centra och Abicart. Migreringsprocessen kan omfatta produkter, kunddata, orderhistorik, innehåll, SEO-element, omdirigeringar och integrationer, beroende på källplattform och krav."
+        },
+        {
+          "q": "Förlorar jag min SEO-rankning när jag migrerar från en annan e-handelsplattform till Shopify?",
+          "a": "En väl planerad Shopify-migrering ska utformas för att bevara ditt befintliga SEO-värde i så hög grad som möjligt. Alva Tech kan planera URL-omdirigeringar, migrering av metadata, hantering av webbplatskartor och andra SEO-kritiska delar som en del av migreringsprocessen. Målet är att gå över till Shopify utan att i onödan störa din organiska synlighet i sök."
+        },
+        {
+          "q": "Vilken e-handelsplattform passar mitt företag bäst: Shopify eller skräddarsydd utveckling?",
+          "a": "Rätt plattform beror på dina affärsbehov. Shopify är ofta ett starkt val för företag som vill ha en skalbar, hanterad e-handelsplattform med ett brett ekosystem av integrationer. Skräddarsydd utveckling kan passa bättre när verksamheten kräver mycket specialiserade arbetsflöden, unik funktionalitet, egen arkitektur eller komplexa integrationer. Alva Tech kan bedöma dina behov och rekommendera Shopify, Shopify Plus eller en skräddarsydd e-handelslösning utifrån dina specifika förutsättningar."
+        },
+        {
+          "q": "Hur kan Alva Tech hjälpa mig att förbättra min e-handelswebbplats prestanda och konvertering?",
+          "a": "Alva Tech kombinerar e-handelsutveckling, mobile first-UX, prestandaoptimering, integrationer och konverteringsfokuserad design för att hjälpa företag att bygga bättre webbutiker. Arbetssättet fokuserar på att skapa snabba, skalbara och lättanvända e-handelsupplevelser samtidigt som butiken kopplas till de system som krävs för att driva och växa verksamheten."
+        }
+      ]
+    },
+    "finalCta": {
+      "eyebrow": "Redo när du är",
+      "title": "Låt oss bygga en Shopify-butik som kunderna verkligen litar på.",
+      "lead": "Boka en kostnadsfri rådgivning utan press. Vi granskar din nuvarande butik eller kartlägger din nya – helt förutsättningslöst."
+    },
+    "footer": {
+      "tagline": "Shopify-utvecklingspartner för växande e-handelsvarumärken.",
+      "legal": "Juridiskt",
+      "privacy": "Integritetspolicy",
+      "terms": "Villkor",
+      "cookies": "Cookieinställningar",
+      "company": "Företag",
+      "whyUs": "Varför oss",
+      "caseStudies": "Fallstudier",
+      "faq": "Vanliga frågor",
+      "contact": "Kontakt",
+      "getStarted": "Kom igång",
+      "freeConsultation": "Kostnadsfri rådgivning",
+      "freeAudit": "Kostnadsfri butiksanalys",
+      "rights": "© 2026 Alvatech. Alla rättigheter förbehållna.",
+      "address": "Norra Oskarsgatan 12, Linköping · +46 704964569"
+    }
   }
 }

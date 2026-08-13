@@ -1,22 +1,21 @@
 "use client";
 
+import { useTranslation } from "react-i18next";
+
 import Image from "next/image";
 
 const flowSteps = [
   {
     id: "store",
     icon: "/assets/images/case/landing-trust/trust-icon-store.png",
-    text: "People don't buy because you have a store",
   },
   {
     id: "trust",
     icon: "/assets/images/case/landing-trust/trust-icon-people.png",
-    text: "People buy because they trust you.",
   },
   {
     id: "experience",
     icon: "/assets/images/case/landing-trust/trust-icon-shield.png",
-    text: "Trust comes from the buying experience you provide",
   },
 ];
 
@@ -25,41 +24,39 @@ const bentoCards = [
     id: "mobile",
     modifier: "mobile",
     image: "/assets/images/case/landing-trust/card-mobile-shopping.png",
-    label: "Mobile Shopping Experience",
   },
   {
     id: "uiux",
     modifier: "uiux",
     image: "/assets/images/case/landing-trust/card-ui-ux-design.png",
-    label: "Premium UI/UX Design",
   },
   {
     id: "brand",
     modifier: "brand",
     image: "/assets/images/case/landing-trust/card-brand-identity.png",
-    label: "Consistent Brand Identity",
   },
   {
     id: "integrations",
     modifier: "integrations",
     image: "/assets/images/case/landing-trust/card-integrations.png",
-    label: "Third-Party Integrations",
   },
   {
     id: "checkout",
     modifier: "checkout",
     image: "/assets/images/case/landing-trust/card-checkout.png",
-    label: "Frictionless Checkout",
   },
 ];
 
 export default function TrustSignals() {
+  const { t } = useTranslation("common");
+  const L = (k) => t(`shopifyLanding.trust.${k}`);
+
   return (
     <section className="trust-signals">
       <div className="wrap">
         <div className="sec-head center reveal">
-          <span className="eyebrow center" style={{ justifyContent: "center" }}>Why Us</span>
-          <h2>We Don&apos;t Just Build Ecommerce Stores. We Design Buying Decisions.</h2>
+          <span className="eyebrow center" style={{ justifyContent: "center" }}>{L("eyebrow")}</span>
+          <h2>{L("title")}</h2>
         </div>
 
         <div className="trust-signals__flow reveal">
@@ -70,7 +67,7 @@ export default function TrustSignals() {
                   <Image src={step.icon} alt="" width={40} height={40} aria-hidden="true" />
                 </span>
                 <span className="trust-signals__divider" aria-hidden="true" />
-                <p>{step.text}</p>
+                <p>{L(`flow.${step.id}`)}</p>
               </div>
               {index < flowSteps.length - 1 ? (
                 <span className="trust-signals__connector" aria-hidden="true" />
@@ -79,7 +76,7 @@ export default function TrustSignals() {
           ))}
         </div>
 
-        <h3 className="trust-signals__subhead reveal">We Develop Those Trust Signals</h3>
+        <h3 className="trust-signals__subhead reveal">{L("subhead")}</h3>
 
         <div className="trust-signals__bento reveal">
           {bentoCards.map((card) => (
@@ -87,7 +84,7 @@ export default function TrustSignals() {
               <div className="trust-signals__card-image">
                 <Image src={card.image} alt="" fill sizes="(max-width: 640px) 90vw, (max-width: 992px) 45vw, 22vw" style={{ objectFit: "cover" }} />
               </div>
-              <p className="trust-signals__card-label">{card.label}</p>
+              <p className="trust-signals__card-label">{L(`cards.${card.id}`)}</p>
             </div>
           ))}
         </div>

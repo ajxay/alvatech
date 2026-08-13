@@ -751,5 +751,269 @@
   },
   "mobile": {
     "selectTheme": "Select theme:"
+  },
+  "shopifyLanding": {
+    "nav": {
+      "whyUs": "Why Us",
+      "services": "Services",
+      "migration": "Migration",
+      "caseStudies": "Case Studies",
+      "faq": "FAQ",
+      "cta": "Get Free Consultation"
+    },
+    "hero": {
+      "eyebrow": "Ecommerce Store Development Services",
+      "title": "Modern Commerce Stores Tailored for Your Business.",
+      "lead": "We design and build Ecommerce stores around customer psychology, so every page turns a visitor into a buyer, not just a browser.",
+      "cta": "Schedule a Free Consultation"
+    },
+    "stats": {
+      "eyebrow": "What Our Numbers Say",
+      "title": "This Is What Our Experience Looks Like",
+      "websites": "Ecommerce Websites Delivered",
+      "migrated": "Ecommerce Store Migrated",
+      "customStores": "Custom Shopify Stores Delivered",
+      "loadTime": "Average Page Load Time",
+      "conversion": "Increase in Conversion Rate"
+    },
+    "ticker": {
+      "items": [
+        "Custom Ecommerce Solutions",
+        "Mobile - First Development",
+        "UI/UX Design",
+        "Timely Delivery",
+        "Custom Features",
+        "Post-Launch Support"
+      ]
+    },
+    "about": {
+      "eyebrow": "About Alva Tech",
+      "title": "Custom Ecommerce Solutions for Ambitious Brands.",
+      "imageAlt": "Mattress storefront and product-finder screens built by Alva Tech",
+      "p1": "Our Ecommerce store development services are designed to help businesses launch, grow, and scale online. Whether you're starting a new store or migrating from another platform. Our Ecommerce development services include custom theme & store development, migrating commerce store to Shopify, theme and app development etc. Every store is built with clean code, mobile first design, SEO best practices, and a smooth shopping experience.",
+      "p2": "We've delivered Ecommerce websites for businesses across multiple industries, helping brands create a strong online presence and provide a seamless shopping experience for their customers.",
+      "cta": "Schedule a Free Consultation"
+    },
+    "services": {
+      "eyebrow": "Our Development Services",
+      "title": "Ecommerce Solutions That Alva Tech Offers",
+      "cta": "Schedule Free Consultation",
+      "items": {
+        "custom-ecommerce": {
+          "title": "Custom Ecommerce Development",
+          "text": "Custom ecommerce website development with modern UI/UX, mobile-first design, and fast performance, built to deliver a better shopping experience.",
+          "tags": [
+            "Modern UI/UX",
+            "Custom Tech Stack",
+            "Mobile First Design"
+          ]
+        },
+        "shopify-design": {
+          "title": "Shopify Store Design & Development",
+          "text": "Fully custom Shopify development services. We don't use templates or drag and drop shortcuts. Built for speed, engineered for revenue.",
+          "tags": [
+            "Custom UI/UX",
+            "Build From Scratch",
+            "Mobile First Design"
+          ]
+        },
+        "migration": {
+          "title": "Ecommerce Store Migration To Shopify",
+          "text": "Migrate your ecommerce website from WooCommerce, Magento, Vendre, Norce, Centra, or custom platforms with minimal downtime.",
+          "tags": [
+            "Full Data Migration",
+            "Preserve On Page SEO",
+            "Minimal Downtime"
+          ]
+        },
+        "functionality": {
+          "title": "Functionality & Application Development",
+          "text": "Create fast, responsive, and conversion-focused functionality and application that deliver exceptional shopping experiences.",
+          "tags": [
+            "Fully Scalable",
+            "Lightning Fast",
+            "Secure"
+          ]
+        },
+        "integrations": {
+          "title": "Third-Party Integration & Automation",
+          "text": "Integrate payment gateways, shipping providers, marketplaces, ERP, CRM, inventory systems, and marketing tools.",
+          "tags": [
+            "API Integration",
+            "Process Automation",
+            "Sales Automation"
+          ]
+        },
+        "b2b": {
+          "title": "B2B Store Development",
+          "text": "Develop B2B stores with wholesale pricing, customer-specific catalogs, bulk ordering, custom pricing, account management, and other features.",
+          "tags": [
+            "Data Migration",
+            "Store Migration",
+            "Custom Solutions"
+          ]
+        },
+        "maintenance": {
+          "title": "Website Maintenance & Support",
+          "text": "Keep your store secure, optimized, and continuously improving with ongoing technical support and enhancements.",
+          "tags": [
+            "Minimal Downtime",
+            "Dedicated Support",
+            "Regular Monitoring"
+          ]
+        }
+      }
+    },
+    "migration": {
+      "eyebrow": "Shopify Migration",
+      "title": "Migrate Your E-Commerce Store to Shopify",
+      "lead": "Migrate your store from any Ecommerce platform to Shopify while preserving store data, search rankings, integrations, and business continuity.",
+      "fromLabel": "Platform We Migrated From",
+      "toLabel": "Your New Store",
+      "features": {
+        "data": {
+          "title": "Complete Data Migration",
+          "text": "Transfer products, customers, orders, pages, blogs etc. Securely"
+        },
+        "seo": {
+          "title": "Keep Your SEO Intact",
+          "text": "Preserve your URLs, metadata, and search rankings"
+        },
+        "integrations": {
+          "title": "Integrations Reconnected",
+          "text": "Reconnect payment gateways, shipping providers, ERP, CRM, and third-party apps"
+        },
+        "downtime": {
+          "title": "Minimal Downtime",
+          "text": "Every migration is planned to minimise downtime, so your customers can continue shopping."
+        },
+        "support": {
+          "title": "Post Migration Assistance",
+          "text": "We monitor your store after launch, resolve issues quickly"
+        }
+      },
+      "ctaTitle": "Ready to Make the Move",
+      "ctaText": "Migrate to Shopify and unlock a better way to grow",
+      "ctaButton": "Plan Your Migration Today"
+    },
+    "showcase": {
+      "eyebrow": "Our Work",
+      "title": "Real Shopify Stores We've Built.",
+      "lead": "A look inside storefronts we've designed and shipped for brands like yours."
+    },
+    "process": {
+      "eyebrow": "Our Process",
+      "title": "Every Ecommerce Starts with a Clear Plan",
+      "lead": "We follow a structured ecommerce development process that keeps your project on schedule, your feedback involved, and your store ready for launch.",
+      "steps": {
+        "discovery": "Discovery & Strategy",
+        "design": "Design & Development",
+        "integration": "Integration & Migration",
+        "testing": "Testing & QC",
+        "launch": "Launch & Support"
+      }
+    },
+    "trust": {
+      "eyebrow": "Why Us",
+      "title": "We Don't Just Build Ecommerce Stores. We Design Buying Decisions.",
+      "flow": {
+        "store": "People don't buy because you have a store",
+        "trust": "People buy because they trust you.",
+        "experience": "Trust comes from the buying experience you provide"
+      },
+      "subhead": "We Develop Those Trust Signals",
+      "cards": {
+        "mobile": "Mobile Shopping Experience",
+        "uiux": "Premium UI/UX Design",
+        "brand": "Consistent Brand Identity",
+        "integrations": "Third-Party Integrations",
+        "checkout": "Frictionless Checkout"
+      }
+    },
+    "uplift": {
+      "eyebrow": "Conversion-Focused Design",
+      "title": "A Better Shopping Experience Can Lead to Better Results",
+      "lead": "Our customers see estimated Conversion Rate Lift Up to 22%. Actual results vary by industry, traffic quality, product offering, and implementation",
+      "cta": "Optimise Your Store Today",
+      "caption": "Conversion Rate",
+      "before": "Before Redesign",
+      "after": "After Redesign"
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "q": "What is custom ecommerce development?",
+          "a": "Custom ecommerce development means building an online store specifically around your business model, customer journey, products and operational requirements. Unlike a standard template-based store, a custom ecommerce solution can include tailored features, integrations, workflows, APIs, product logic and user experiences. Alva Tech develops scalable, high-performance ecommerce solutions designed to support long-term business growth."
+        },
+        {
+          "q": "How much does custom ecommerce development cost?",
+          "a": "The cost of custom ecommerce development depends on factors such as the number of products, required features, integrations, design complexity, payment and shipping systems, and whether you need a custom backend or API integrations. Alva Tech first evaluates your business requirements and technical needs before recommending the most suitable ecommerce architecture and development approach."
+        },
+        {
+          "q": "How long does it take to develop a custom ecommerce website?",
+          "a": "A custom ecommerce website can take anywhere from several weeks to several months, depending on its complexity. A relatively straightforward store can be launched faster, while projects involving custom functionality, ERP/CRM integrations, marketplaces, advanced product configurations or complex workflows require more development time. Alva Tech follows a structured process covering discovery, design, development, testing and launch."
+        },
+        {
+          "q": "Can you integrate a custom ecommerce website with ERP, CRM, payment and shipping systems?",
+          "a": "Yes. Custom ecommerce websites can be integrated with ERP, CRM, payment gateways, shipping platforms, marketing automation tools and other business systems. Alva Tech builds API-based and custom integrations to connect ecommerce operations with systems such as CRM, ERP, payment, logistics and marketing platforms, helping businesses reduce manual work and create connected workflows."
+        },
+        {
+          "q": "What is custom Shopify development?",
+          "a": "Custom Shopify development involves creating and modifying a Shopify store beyond standard themes and apps. This can include custom Shopify themes, sections, features, integrations, product functionality, checkout-related solutions, APIs and automated workflows. Alva Tech helps businesses build and scale Shopify stores with conversion-focused experiences, optimized storefronts and business-specific integrations."
+        },
+        {
+          "q": "Can you build a fully custom Shopify store?",
+          "a": "Yes. Shopify can be customized extensively to create a branded and highly optimized ecommerce experience. Alva Tech can develop custom Shopify storefronts, tailor the user experience, build custom functionality, integrate third-party systems and optimize the store for performance, mobile users and conversions."
+        },
+        {
+          "q": "Can you integrate Shopify with ERP, CRM, payment and shipping systems?",
+          "a": "Yes. Shopify can be connected with a wide range of business and ecommerce systems. Alva Tech can integrate Shopify with ERP and CRM platforms, payment providers, shipping and logistics systems, marketing tools and other third-party applications. The goal is to synchronize relevant data and automate workflows across your ecommerce ecosystem."
+        },
+        {
+          "q": "Is Shopify suitable for a growing or large ecommerce business?",
+          "a": "Yes. Shopify can support growing ecommerce businesses, while Shopify Plus provides additional capabilities for businesses with more complex requirements, higher volumes and multiple markets. The right Shopify setup depends on your catalogue, traffic, integrations, markets, workflows and growth plans. Alva Tech helps businesses select and build an architecture that can scale with their operations."
+        },
+        {
+          "q": "Can you migrate my existing ecommerce website to Shopify?",
+          "a": "Yes. Alva Tech can help businesses migrate from existing ecommerce platforms to Shopify. This can include migrations from platforms such as WooCommerce, Magento, Vendre, Norce, Kodmyran, Centra and Abicart. The migration process can cover products, customer data, order history, content, SEO elements, redirects and integrations, depending on the source platform and requirements."
+        },
+        {
+          "q": "Will I lose my SEO rankings when migrating from another ecommerce platform to Shopify?",
+          "a": "A properly planned Shopify migration should be designed to preserve your existing SEO value as much as possible. Alva Tech can plan URL redirects, metadata migration, sitemap handling and other SEO-critical elements as part of the migration process. The objective is to transition to Shopify without unnecessarily disrupting your organic search visibility."
+        },
+        {
+          "q": "What ecommerce platform is best for my business: Shopify or custom development?",
+          "a": "The right platform depends on your business requirements. Shopify is often a strong choice for businesses that want a scalable, managed ecommerce platform with a broad ecosystem of integrations. Custom development may be more suitable when your business requires highly specialized workflows, unique functionality, custom architecture or complex integrations. Alva Tech can assess your requirements and recommend Shopify, Shopify Plus or a custom ecommerce solution based on your specific needs."
+        },
+        {
+          "q": "How can Alva Tech help improve my ecommerce website's performance and conversions?",
+          "a": "Alva Tech combines ecommerce development, mobile-first UX, performance optimization, integrations and conversion-focused design to help businesses build better online stores. The approach focuses on creating fast, scalable and easy-to-use ecommerce experiences while connecting the store with the systems needed to operate and grow the business."
+        }
+      ]
+    },
+    "finalCta": {
+      "eyebrow": "Ready When You Are",
+      "title": "Let's build a Shopify store customers actually trust.",
+      "lead": "Book a free, no-pressure consultation. We'll audit your current store or scope your new one — no obligation."
+    },
+    "footer": {
+      "tagline": "Shopify development partner for growing ecommerce brands.",
+      "legal": "Legal",
+      "privacy": "Privacy Policy",
+      "terms": "Terms & Conditions",
+      "cookies": "Cookie Settings",
+      "company": "Company",
+      "whyUs": "Why Us",
+      "caseStudies": "Case Studies",
+      "faq": "FAQ",
+      "contact": "Contact",
+      "getStarted": "Get Started",
+      "freeConsultation": "Free Consultation",
+      "freeAudit": "Free Store Audit",
+      "rights": "© 2026 Alvatech. All rights reserved.",
+      "address": "Norra Oskarsgatan 12, Linköping · +46 704964569"
+    }
   }
 }
