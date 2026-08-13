@@ -8,6 +8,7 @@ import TrustSignals from "./TrustSignals";
 import MigrationShowcase from "./MigrationShowcase";
 import ProcessTimeline from "./ProcessTimeline";
 import ConversionUplift from "./ConversionUplift";
+import WebsiteShowcase from "./WebsiteShowcase";
 import LandingCaseStudies from "./LandingCaseStudies";
 import "./shopify-landing.css";
 
@@ -318,6 +319,9 @@ export default function ShopifyLandingClient() {
 
       {/* MIGRATION */}
       <MigrationShowcase calendlyUrl={CALENDLY_URL} />
+
+      {/* WEBSITE SHOWCASE */}
+      <WebsiteShowcase />
 
       {/* OUR PROCESS timeline */}
       <ProcessTimeline />
