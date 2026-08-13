@@ -1258,8 +1258,10 @@
    Five steps on a single brand-green rule that runs through the centre of the
    48px icon discs; the discs are opaque so they break the line. */
 
+/* Trimmed bottom padding: the next section is also white, so a full 100px here
+   would stack with its 100px top into a 200px band of empty white. */
 .shopify-lp .process-line {
-  padding: 100px 0;
+  padding: 100px 0 20px;
 }
 
 .shopify-lp .process-line__head {
@@ -1360,8 +1362,10 @@
 
 /* ---------------- TRUST SIGNALS (Why Us, from Figma) ---------------- */
 
+/* Same again: the uplift band below is effectively white too. */
 .shopify-lp .trust-signals {
   background: #ffffff;
+  padding-bottom: 30px;
 }
 
 .shopify-lp .trust-signals__flow {
