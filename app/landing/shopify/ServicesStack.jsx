@@ -149,7 +149,7 @@ export default function ServicesStack({ calendlyUrl }) {
   }, []);
 
   return (
-    <section className="services-stack">
+    <section id="services" className="services-stack">
       <div className="wrap">
         <div className="sec-head center reveal">
           <span className="eyebrow">Our Development Services</span>

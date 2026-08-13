@@ -86,16 +86,6 @@ function useCounters() {
   }, []);
 }
 
-const services = [
-  { tag: "Core Build", title: "Shopify Store Design & Development", text: "Custom Shopify stores with modern UI/UX, mobile-first design, and fast performance—built to reflect your brand and deliver a better shopping experience." },
-  { tag: "Move Platforms", title: "Ecommerce Store Migration To Shopify", text: "Migrate your ecommerce website from WooCommerce, Magento, BigCommerce, OpenCart, PrestaShop, or custom platforms with minimal downtime." },
-  { tag: "Design & Build", title: "Shopify Theme & App Development", text: "Create fast, responsive, and conversion-focused Shopify themes and apps that deliver exceptional shopping experiences." },
-  { tag: "Integrate", title: "Third-Party Integration & Automation", text: "Integrate payment gateways, shipping providers, marketplaces, ERP, CRM, inventory systems, and marketing tools." },
-  { tag: "B2B", title: "B2B Store Development", text: "Develop Shopify B2B stores with wholesale pricing, customer-specific catalogs, bulk ordering, custom pricing, account management, and other features." },
-  { tag: "Ongoing", title: "Shopify Maintenance & Support", text: "Keep your store secure, optimized, and continuously improving with ongoing technical support and enhancements." },
-];
-
-
 const tickerItems = [
   "Custom Ecommerce Solutions",
   "Mobile - First Development",
@@ -347,32 +337,6 @@ export default function ShopifyLandingClient() {
                 <ArrowIcon />
               </a>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SERVICES */}
-      <section id="services" style={{ paddingTop: 40, paddingBottom: 40 }}>
-        <div className="wrap">
-          <div className="sec-head reveal">
-            <span className="eyebrow">Our Shopify Services</span>
-            <h2>Shopify Solutions That Alva Tech Offers</h2>
-          </div>
-          <div className="services-grid reveal">
-            {services.map((svc) => (
-              <div key={svc.title} className="svc">
-                <div>
-                  <span className="tag">{svc.tag}</span>
-                  <h3>{svc.title}</h3>
-                  <p>{svc.text}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="cta-row reveal">
-            <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-              Schedule A Meeting
-            </a>
           </div>
         </div>
       </section>
