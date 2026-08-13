@@ -597,6 +597,20 @@
   }
 }
 
+/* On phones the collage leads and the copy follows, so the CTA finishes the
+   section instead of being stranded mid-band. Matches where the nav switches
+   to its mobile form. */
+@media (max-width: 900px) {
+  .shopify-lp .hero-band > .wrap {
+    order: 2;
+  }
+
+  .shopify-lp .hero-collage {
+    order: 1;
+    margin: 0 auto 28px;
+  }
+}
+
 /* ---------------- SECTION SHELL ---------------- */
 
 .shopify-lp section {
