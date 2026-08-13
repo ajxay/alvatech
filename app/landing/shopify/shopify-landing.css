@@ -1768,6 +1768,20 @@
 
 /* ---------------- FAQ ---------------- */
 
+/* The case-studies section is reused from the homepage and brings its own
+   100px bottom padding, which stacked with the FAQ's top padding. Scoped to
+   .shopify-lp so the homepage keeps its original spacing. */
+.shopify-lp .home13-cases {
+  padding-bottom: 0;
+}
+
+/* Sized so the gaps either side land at ~125px, matching the rest of the page:
+   above, against the case cards; below, against the final CTA's own 76px. */
+.shopify-lp #faq {
+  padding-top: 90px;
+  padding-bottom: 42px;
+}
+
 .shopify-lp .faq {
   max-width: 820px;
   margin: 0 auto;
