@@ -10,6 +10,7 @@ import ProcessTimeline from "./ProcessTimeline";
 import ConversionUplift from "./ConversionUplift";
 import WebsiteShowcase from "./WebsiteShowcase";
 import LandingCaseStudies from "./LandingCaseStudies";
+import { openCookieSettings } from "@/utlis/cookieConsent";
 import "./shopify-landing.css";
 
 const CALENDLY_URL = "https://calendly.com/nikhil-k-alvatech/30min";
@@ -459,12 +460,15 @@ export default function ShopifyLandingClient() {
             </div>
             <div className="foot-cols">
               <div>
-                <h6>Services</h6>
+                <h6>Legal</h6>
                 <ul>
-                  <li><a onClick={() => scrollToId("services")}>Store Development</a></li>
-                  <li><a onClick={() => scrollToId("services")}>Shopify Plus</a></li>
-                  <li><a onClick={() => scrollToId("migration")}>Migration</a></li>
-                  <li><a href="/services/custom-ecommerce-shopify-development-services">Theme Development</a></li>
+                  <li><a href="/page-privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
+                  <li><a href="/page-terms" target="_blank" rel="noopener noreferrer">Terms &amp; Conditions</a></li>
+                  <li>
+                    <button type="button" className="foot-linkbtn" onClick={openCookieSettings}>
+                      Cookie Settings
+                    </button>
+                  </li>
                 </ul>
               </div>
               <div>
@@ -473,7 +477,7 @@ export default function ShopifyLandingClient() {
                   <li><a onClick={() => scrollToId("why")}>Why Us</a></li>
                   <li><a onClick={() => scrollToId("cases")}>Case Studies</a></li>
                   <li><a onClick={() => scrollToId("faq")}>FAQ</a></li>
-                  <li><a href="/contact-us">Contact</a></li>
+                  <li><a href="/contact-us" target="_blank" rel="noopener noreferrer">Contact</a></li>
                 </ul>
               </div>
               <div>
