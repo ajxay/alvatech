@@ -1136,8 +1136,11 @@
    A pinned stack of 1240x396 cards: copy, tag pills and a CTA on the left over
    a subtle left-to-right gradient, with a 542px illustration flush right. */
 
+/* No bottom padding: every pin ends once the last card reaches the pin offset,
+   so the stack is back in normal flow by then and needs no release buffer.
+   The gap to the next section is owned by that section's own top padding. */
 .shopify-lp .services-stack {
-  padding: 80px 0 160px;
+  padding: 80px 0 0;
 }
 
 .shopify-lp .services-stack__list {
@@ -1238,7 +1241,7 @@
 
 @media (max-width: 991px) {
   .shopify-lp .services-stack {
-    padding: 56px 0 140px;
+    padding: 56px 0 0;
   }
 
   .shopify-lp .services-stack__card {
