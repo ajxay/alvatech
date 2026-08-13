@@ -2,6 +2,8 @@
 
 import { useTranslation } from "react-i18next";
 
+import { BOOKING_ANCHOR, scrollToBooking } from "./scrollToBooking";
+
 function ArrowIcon() {
   return (
     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
@@ -17,7 +19,7 @@ function ArrowIcon() {
   );
 }
 
-export default function ConversionUplift({ calendlyUrl }) {
+export default function ConversionUplift() {
   const { t } = useTranslation("common");
   const L = (k) => t(`shopifyLanding.uplift.${k}`);
 
@@ -29,9 +31,8 @@ export default function ConversionUplift({ calendlyUrl }) {
           <h2>{L("title")}</h2>
           <p>{L("lead")}</p>
           <a
-            href={calendlyUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={BOOKING_ANCHOR}
+            onClick={scrollToBooking}
             className="btn btn-primary uplift__cta"
           >
             {L("cta")}

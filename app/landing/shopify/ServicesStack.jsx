@@ -7,6 +7,8 @@ import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 
+import { BOOKING_ANCHOR, scrollToBooking } from "./scrollToBooking";
+
 const services = [
   {
     id: "custom-ecommerce",
@@ -53,7 +55,7 @@ function ArrowIcon() {
   );
 }
 
-export default function ServicesStack({ calendlyUrl }) {
+export default function ServicesStack() {
   const { t } = useTranslation("common");
   const L = (k, o) => t(`shopifyLanding.services.${k}`, o);
   const stackRef = useRef(null);
@@ -152,9 +154,8 @@ export default function ServicesStack({ calendlyUrl }) {
                     ))}
                   </ul>
                   <a
-                    href={calendlyUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href={BOOKING_ANCHOR}
+                    onClick={scrollToBooking}
                     className="btn btn-primary services-stack__cta"
                   >
                     {L("cta")}

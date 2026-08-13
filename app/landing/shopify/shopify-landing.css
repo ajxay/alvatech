@@ -1798,6 +1798,12 @@
   .shopify-lp .final-cta {
     padding-top: 52px;
   }
+
+  /* Every CTA scrolls here. The desktop 76px top padding already clears the
+     fixed header on its own; the smaller mobile padding needs the help. */
+  .shopify-lp #contact {
+    scroll-margin-top: 24px;
+  }
 }
 
 .shopify-lp .final-cta .eyebrow {

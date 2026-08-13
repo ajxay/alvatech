@@ -13,6 +13,7 @@ import CaseStudies from "@/components/homes/home-13/CaseStudies";
 import { useTranslation } from "react-i18next";
 import { openCookieSettings } from "@/utlis/cookieConsent";
 import LandingLanguageSwitcher from "./LandingLanguageSwitcher";
+import { BOOKING_ANCHOR, scrollToBooking } from "./scrollToBooking";
 import "./shopify-landing.css";
 
 const CALENDLY_URL = "https://calendly.com/nikhil-k-alvatech/30min";
@@ -126,9 +127,8 @@ export default function ShopifyLandingClient() {
             <div className="nav-cta">
               <LandingLanguageSwitcher />
               <a
-                href={CALENDLY_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={BOOKING_ANCHOR}
+                onClick={scrollToBooking}
                 className="btn btn-primary btn-sm"
               >
                 {L("nav.cta")}
@@ -167,7 +167,7 @@ export default function ShopifyLandingClient() {
               <h1>{L("hero.title")}</h1>
               <p className="lead">{L("hero.lead")}</p>
               <div className="hero-ctas">
-                <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+                <a href={BOOKING_ANCHOR} onClick={scrollToBooking} className="btn btn-primary">
                   {L("hero.cta")}
                   <ArrowIcon />
                 </a>
@@ -228,7 +228,7 @@ export default function ShopifyLandingClient() {
             <p>{L("about.p1")}</p>
             <p>{L("about.p2")}</p>
             <div className="about__cta">
-              <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+              <a href={BOOKING_ANCHOR} onClick={scrollToBooking} className="btn btn-primary">
                 {L("about.cta")}
                 <ArrowIcon />
               </a>
@@ -238,10 +238,10 @@ export default function ShopifyLandingClient() {
       </section>
 
       {/* OUR DEVELOPMENT SERVICES (stacking cards) */}
-      <ServicesStack calendlyUrl={CALENDLY_URL} />
+      <ServicesStack />
 
       {/* MIGRATION */}
-      <MigrationShowcase calendlyUrl={CALENDLY_URL} />
+      <MigrationShowcase />
 
       {/* WEBSITE SHOWCASE */}
       <WebsiteShowcase />
@@ -253,7 +253,7 @@ export default function ShopifyLandingClient() {
       <TrustSignals />
 
       {/* CONVERSION UPLIFT BAND */}
-      <ConversionUplift calendlyUrl={CALENDLY_URL} />
+      <ConversionUplift />
 
       {/* CASE STUDIES — reused from the homepage */}
       <div id="cases">
@@ -335,8 +335,8 @@ export default function ShopifyLandingClient() {
               <div>
                 <h6>{L("footer.getStarted")}</h6>
                 <ul>
-                  <li><a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">{L("footer.freeConsultation")}</a></li>
-                  <li><a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">{L("footer.freeAudit")}</a></li>
+                  <li><a href={BOOKING_ANCHOR} onClick={scrollToBooking}>{L("footer.freeConsultation")}</a></li>
+                  <li><a href={BOOKING_ANCHOR} onClick={scrollToBooking}>{L("footer.freeAudit")}</a></li>
                 </ul>
               </div>
             </div>

@@ -4,6 +4,8 @@ import { useTranslation } from "react-i18next";
 
 import Image from "next/image";
 
+import { BOOKING_ANCHOR, scrollToBooking } from "./scrollToBooking";
+
 const platformLogos = [
   { name: "Vendre", src: "/assets/images/case/landing-migration/logo-vendre.png", width: 1000, height: 296 },
   { name: "Norce", src: "/assets/images/case/landing-migration/logo-norce.png", width: 1961, height: 561 },
@@ -102,7 +104,7 @@ const migrationFeatures = [
   },
 ];
 
-export default function MigrationShowcase({ calendlyUrl }) {
+export default function MigrationShowcase() {
   const { t } = useTranslation("common");
   const L = (k) => t(`shopifyLanding.migration.${k}`);
 
@@ -166,7 +168,7 @@ export default function MigrationShowcase({ calendlyUrl }) {
             <h4>{L("ctaTitle")}</h4>
             <p>{L("ctaText")}</p>
           </div>
-          <a href={calendlyUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+          <a href={BOOKING_ANCHOR} onClick={scrollToBooking} className="btn btn-primary">
             {L("ctaButton")}
           </a>
         </div>
