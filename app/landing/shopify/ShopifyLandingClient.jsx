@@ -97,14 +97,54 @@ const tickerItems = [
 ];
 
 const faqs = [
-  { q: "How long does Shopify website development take?", a: "Most Shopify projects are completed within 4 to 8 weeks depending on complexity." },
-  { q: "Can you redesign my existing Shopify store?", a: "Yes. We can redesign, optimize, and modernize your current Shopify website without disrupting your business." },
-  { q: "Do you provide custom Shopify development?", a: "Absolutely. Every business has unique requirements, and we build custom solutions tailored to your goals." },
-  { q: "Will my Shopify website be mobile responsive?", a: "Yes. Every Shopify website we develop is fully responsive and optimized for mobile shopping." },
-  { q: "Can you migrate my existing ecommerce website?", a: "Yes. We migrate websites from WooCommerce, Magento, Wix, BigCommerce, OpenCart, and other ecommerce platforms." },
-  { q: "Do you provide SEO services?", a: "Yes. We build SEO-friendly Shopify websites and also offer ongoing SEO optimization services." },
-  { q: "Will I be able to manage the website myself?", a: "Definitely. Shopify's intuitive dashboard makes it easy to manage products, inventory, and orders." },
-  { q: "Do you provide maintenance after launch?", a: "Yes. We offer ongoing support, maintenance, performance optimization, and feature enhancements." },
+  {
+    q: "What is custom ecommerce development?",
+    a: "Custom ecommerce development means building an online store specifically around your business model, customer journey, products and operational requirements. Unlike a standard template-based store, a custom ecommerce solution can include tailored features, integrations, workflows, APIs, product logic and user experiences. Alva Tech develops scalable, high-performance ecommerce solutions designed to support long-term business growth.",
+  },
+  {
+    q: "How much does custom ecommerce development cost?",
+    a: "The cost of custom ecommerce development depends on factors such as the number of products, required features, integrations, design complexity, payment and shipping systems, and whether you need a custom backend or API integrations. Alva Tech first evaluates your business requirements and technical needs before recommending the most suitable ecommerce architecture and development approach.",
+  },
+  {
+    q: "How long does it take to develop a custom ecommerce website?",
+    a: "A custom ecommerce website can take anywhere from several weeks to several months, depending on its complexity. A relatively straightforward store can be launched faster, while projects involving custom functionality, ERP/CRM integrations, marketplaces, advanced product configurations or complex workflows require more development time. Alva Tech follows a structured process covering discovery, design, development, testing and launch.",
+  },
+  {
+    q: "Can you integrate a custom ecommerce website with ERP, CRM, payment and shipping systems?",
+    a: "Yes. Custom ecommerce websites can be integrated with ERP, CRM, payment gateways, shipping platforms, marketing automation tools and other business systems. Alva Tech builds API-based and custom integrations to connect ecommerce operations with systems such as CRM, ERP, payment, logistics and marketing platforms, helping businesses reduce manual work and create connected workflows.",
+  },
+  {
+    q: "What is custom Shopify development?",
+    a: "Custom Shopify development involves creating and modifying a Shopify store beyond standard themes and apps. This can include custom Shopify themes, sections, features, integrations, product functionality, checkout-related solutions, APIs and automated workflows. Alva Tech helps businesses build and scale Shopify stores with conversion-focused experiences, optimized storefronts and business-specific integrations.",
+  },
+  {
+    q: "Can you build a fully custom Shopify store?",
+    a: "Yes. Shopify can be customized extensively to create a branded and highly optimized ecommerce experience. Alva Tech can develop custom Shopify storefronts, tailor the user experience, build custom functionality, integrate third-party systems and optimize the store for performance, mobile users and conversions.",
+  },
+  {
+    q: "Can you integrate Shopify with ERP, CRM, payment and shipping systems?",
+    a: "Yes. Shopify can be connected with a wide range of business and ecommerce systems. Alva Tech can integrate Shopify with ERP and CRM platforms, payment providers, shipping and logistics systems, marketing tools and other third-party applications. The goal is to synchronize relevant data and automate workflows across your ecommerce ecosystem.",
+  },
+  {
+    q: "Is Shopify suitable for a growing or large ecommerce business?",
+    a: "Yes. Shopify can support growing ecommerce businesses, while Shopify Plus provides additional capabilities for businesses with more complex requirements, higher volumes and multiple markets. The right Shopify setup depends on your catalogue, traffic, integrations, markets, workflows and growth plans. Alva Tech helps businesses select and build an architecture that can scale with their operations.",
+  },
+  {
+    q: "Can you migrate my existing ecommerce website to Shopify?",
+    a: "Yes. Alva Tech can help businesses migrate from existing ecommerce platforms to Shopify. This can include migrations from platforms such as WooCommerce, Magento, Vendre, Norce, Kodmyran, Centra and Abicart. The migration process can cover products, customer data, order history, content, SEO elements, redirects and integrations, depending on the source platform and requirements.",
+  },
+  {
+    q: "Will I lose my SEO rankings when migrating from another ecommerce platform to Shopify?",
+    a: "A properly planned Shopify migration should be designed to preserve your existing SEO value as much as possible. Alva Tech can plan URL redirects, metadata migration, sitemap handling and other SEO-critical elements as part of the migration process. The objective is to transition to Shopify without unnecessarily disrupting your organic search visibility.",
+  },
+  {
+    q: "What ecommerce platform is best for my business: Shopify or custom development?",
+    a: "The right platform depends on your business requirements. Shopify is often a strong choice for businesses that want a scalable, managed ecommerce platform with a broad ecosystem of integrations. Custom development may be more suitable when your business requires highly specialized workflows, unique functionality, custom architecture or complex integrations. Alva Tech can assess your requirements and recommend Shopify, Shopify Plus or a custom ecommerce solution based on your specific needs.",
+  },
+  {
+    q: "How can Alva Tech help improve my ecommerce website's performance and conversions?",
+    a: "Alva Tech combines ecommerce development, mobile-first UX, performance optimization, integrations and conversion-focused design to help businesses build better online stores. The approach focuses on creating fast, scalable and easy-to-use ecommerce experiences while connecting the store with the systems needed to operate and grow the business.",
+  },
 ];
 
 function scrollToId(id) {
