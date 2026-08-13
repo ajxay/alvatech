@@ -159,13 +159,7 @@ export default function ShopifyLandingClient() {
   useReveal();
   useCounters();
 
-  const [sessions, setSessions] = useState(579000);
-  const [conv, setConv] = useState(4.2);
-  const [aov, setAov] = useState(50);
   const [openFaq, setOpenFaq] = useState(null);
-
-  const lift = Math.round(sessions * (conv / 100) * aov * 0.2);
-  const fmt = (n) => Number(n).toLocaleString("en-US");
 
   return (
     <div className="shopify-lp">
@@ -179,7 +173,6 @@ export default function ShopifyLandingClient() {
               <a onClick={() => scrollToId("why")}>Why Us</a>
               <a onClick={() => scrollToId("services")}>Services</a>
               <a onClick={() => scrollToId("migration")}>Migration</a>
-              <a onClick={() => scrollToId("roi")}>ROI</a>
               <a onClick={() => scrollToId("cases")}>Case Studies</a>
               <a onClick={() => scrollToId("faq")}>FAQ</a>
             </div>
@@ -332,73 +325,6 @@ export default function ShopifyLandingClient() {
 
       {/* CONVERSION UPLIFT BAND */}
       <ConversionUplift calendlyUrl={CALENDLY_URL} />
-
-      {/* ROI CALCULATOR */}
-      <section id="roi">
-        <div className="wrap">
-          <div className="sec-head reveal">
-            <span className="eyebrow">You Do The Math</span>
-            <h2>Your visitors are already there. What if more of them bought?</h2>
-            <p>
-              Our Shopify projects have delivered conversion rate increases of
-              up to 210%. Plug in your numbers to see what even a conservative
-              20% lift could mean for your store.
-            </p>
-          </div>
-          <div className="ledger reveal">
-            <div className="ledger-controls">
-              <div className="slider-row">
-                <label>Monthly sessions <output>{fmt(sessions)}</output></label>
-                <input
-                  type="range"
-                  min={50000}
-                  max={2000000}
-                  step={1000}
-                  value={sessions}
-                  onChange={(e) => setSessions(Number(e.target.value))}
-                />
-              </div>
-              <div className="slider-row">
-                <label>Current conversion rate <output>{conv}%</output></label>
-                <input
-                  type="range"
-                  min={0.5}
-                  max={10}
-                  step={0.1}
-                  value={conv}
-                  onChange={(e) => setConv(Number(e.target.value))}
-                />
-              </div>
-              <div className="slider-row">
-                <label>Average order value <output>${fmt(aov)}</output></label>
-                <input
-                  type="range"
-                  min={10}
-                  max={300}
-                  step={1}
-                  value={aov}
-                  onChange={(e) => setAov(Number(e.target.value))}
-                />
-              </div>
-            </div>
-            <div className="ledger-result">
-              <span className="eyebrow">Estimated Monthly Revenue Lift</span>
-              <div className="lift-val">${fmt(lift)}</div>
-              <p className="fine">
-                Based on a conservative 20% conversion rate lift applied to
-                your current revenue. Actual results vary by industry, traffic
-                quality, product offering, and implementation.
-              </p>
-              <div className="logic">Logic: Revenue = Visitors × Conversion Rate × AOV</div>
-            </div>
-          </div>
-          <div className="cta-row">
-            <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-              Optimise Your Store Today
-            </a>
-          </div>
-        </div>
-      </section>
 
       {/* CASE STUDIES — reused from the homepage */}
       <div id="cases">
