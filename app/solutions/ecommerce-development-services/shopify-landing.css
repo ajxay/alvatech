@@ -1561,9 +1561,63 @@
   }
 }
 
-@media (max-width: 560px) {
+/* On phones the grid stops working: two columns orphan the fifth step and wrap
+   most labels, so the row of steps becomes a vertical timeline instead — icon
+   in a left rail with the number and label beside it, joined by a rule that
+   replaces the horizontal one dropped above. */
+@media (max-width: 640px) {
   .shopify-lp .process-line__steps {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    row-gap: 0;
+    margin-top: 36px;
+  }
+
+  .shopify-lp .process-line__step {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    column-gap: 16px;
+    align-items: start;
+    padding: 0 0 32px;
+  }
+
+  .shopify-lp .process-line__step:last-child {
+    padding-bottom: 0;
+  }
+
+  /* Runs from below one icon to the next; the last step has nothing to join. */
+  .shopify-lp .process-line__step::before {
+    content: "";
+    position: absolute;
+    left: 23px;
+    top: 56px;
+    bottom: 0;
+    width: 1px;
+    background: var(--brand);
+  }
+
+  .shopify-lp .process-line__step:last-child::before {
+    display: none;
+  }
+
+  .shopify-lp .process-line__icon {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+
+  .shopify-lp .process-line__num {
+    grid-column: 2;
+    grid-row: 1;
+    margin-top: 0;
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .shopify-lp .process-line__label {
+    grid-column: 2;
+    grid-row: 2;
+    margin-top: 2px;
+    font-size: 17px;
+    line-height: 24px;
   }
 }
 
@@ -1873,6 +1927,13 @@
 
   .shopify-lp .result:nth-child(2n + 1) {
     border-left: none;
+  }
+
+  /* Five figures across two columns leave the last one alone on its row, so it
+     spans the full width and centres under the pair above instead of hanging
+     against the left edge. */
+  .shopify-lp .result:last-child {
+    grid-column: 1 / -1;
   }
 }
 
