@@ -748,42 +748,6 @@
   }
 }
 
-/* ---------------- AUDIT BANNER ---------------- */
-
-.shopify-lp .audit {
-  background: var(--brand);
-  border-radius: 28px;
-  padding: 50px 48px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  flex-wrap: wrap;
-  position: relative;
-  overflow: hidden;
-}
-
-@media (max-width: 640px) {
-  .shopify-lp .audit {
-    padding: 36px 26px;
-  }
-}
-
-.shopify-lp .audit h3 {
-  font-size: clamp(22px, 3vw, 30px);
-  max-width: 520px;
-  position: relative;
-  z-index: 1;
-  color: #fff;
-}
-
-.shopify-lp .audit .btn {
-  position: relative;
-  z-index: 1;
-  background: var(--ink);
-  color: #fff;
-}
-
 /* ---------------- MIGRATION SHOWCASE (from Figma) ---------------- */
 
 .shopify-lp .migration-show {

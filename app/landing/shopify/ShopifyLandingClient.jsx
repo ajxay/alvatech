@@ -310,18 +310,6 @@ export default function ShopifyLandingClient() {
       {/* CONVERSION UPLIFT BAND */}
       <ConversionUplift calendlyUrl={CALENDLY_URL} />
 
-      {/* AUDIT BANNER */}
-      <section>
-        <div className="wrap">
-          <div className="audit reveal">
-            <h3>Get your FREE Shopify store audit today.</h3>
-            <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-              Claim Free Audit
-            </a>
-          </div>
-        </div>
-      </section>
-
       {/* ROI CALCULATOR */}
       <section id="roi">
         <div className="wrap">
