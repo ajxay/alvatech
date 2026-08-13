@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import Script from "next/script";
 import ServicesStack from "./ServicesStack";
 import TrustSignals from "./TrustSignals";
 import MigrationShowcase from "./MigrationShowcase";
@@ -426,27 +427,19 @@ export default function ShopifyLandingClient() {
       {/* FINAL CTA */}
       <section id="contact" style={{ paddingTop: 0 }}>
         <div className="wrap">
-          <div className="final-cta reveal" style={{ textAlign: "center" }}>
+          <div className="final-cta reveal">
             <span className="eyebrow center" style={{ justifyContent: "center" }}>Ready When You Are</span>
-            <h2 style={{ margin: "16px auto 14px", maxWidth: 600 }}>
-              Let&apos;s build a Shopify store customers actually trust.
-            </h2>
-            <p style={{ color: "rgba(255,255,255,.7)", maxWidth: 480, margin: "0 auto 34px" }}>
+            <h2>Let&apos;s build a Shopify store customers actually trust.</h2>
+            <p>
               Book a free, no-pressure consultation. We&apos;ll audit your
               current store or scope your new one — no obligation.
             </p>
-            <div className="cta-row" style={{ gap: 14 }}>
-              <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn btn-light">
-                Get a Free Shopify Consultation
-              </a>
-              <a
-                onClick={() => scrollToId("cases")}
-                className="btn btn-ghost"
-                style={{ borderColor: "rgba(255,255,255,.3)", color: "var(--paper)", cursor: "pointer" }}
-              >
-                View Our Portfolio
-              </a>
-            </div>
+            {/* Calendly inline widget */}
+            <div
+              className="calendly-inline-widget final-cta__calendly"
+              data-url={CALENDLY_URL}
+              style={{ minWidth: 320, height: 700 }}
+            />
           </div>
         </div>
       </section>
@@ -494,6 +487,12 @@ export default function ShopifyLandingClient() {
           </div>
         </div>
       </footer>
+
+      {/* Powers the inline Calendly embed in the final CTA */}
+      <Script
+        src="https://assets.calendly.com/assets/external/widget.js"
+        strategy="lazyOnload"
+      />
     </div>
   );
 }
