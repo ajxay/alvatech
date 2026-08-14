@@ -1565,17 +1565,32 @@
   gap: 28px;
 }
 
-/* Runs from this disc to the next one; the last step has nothing to join. */
-.shopify-lp .process-line__step::before {
+/* The rail is drawn in two halves per step — one reaching up out of the disc,
+   one reaching down — each overshooting by half the 24px row gap so they meet.
+   Splitting it this way keeps the line continuous whatever height the cards
+   come out at; a single segment sized from one disc to the next only lines up
+   while every card happens to be the same height. */
+.shopify-lp .process-line__step::before,
+.shopify-lp .process-line__step::after {
   content: "";
   position: absolute;
   left: 35px;
-  top: 50%;
-  height: calc(100% + 24px);
   border-left: 2px dashed rgba(132, 186, 65, 0.45);
 }
 
-.shopify-lp .process-line__step:last-child::before {
+.shopify-lp .process-line__step::before {
+  top: -12px;
+  height: calc(50% + 12px);
+}
+
+.shopify-lp .process-line__step::after {
+  top: 50%;
+  bottom: -12px;
+}
+
+/* Nothing to join beyond the ends of the run. */
+.shopify-lp .process-line__step:first-child::before,
+.shopify-lp .process-line__step:last-child::after {
   display: none;
 }
 
@@ -1706,7 +1721,8 @@
     gap: 18px;
   }
 
-  .shopify-lp .process-line__step::before {
+  .shopify-lp .process-line__step::before,
+  .shopify-lp .process-line__step::after {
     left: 27px;
   }
 
@@ -1746,13 +1762,14 @@
     margin-top: 40px;
   }
 
+  /* Centred, not top-aligned: the disc marks the card as a whole. */
   .shopify-lp .process-line__step {
     grid-template-columns: 44px 1fr;
     gap: 14px;
-    align-items: start;
   }
 
-  .shopify-lp .process-line__step::before {
+  .shopify-lp .process-line__step::before,
+  .shopify-lp .process-line__step::after {
     left: 21px;
   }
 
