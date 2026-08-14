@@ -991,10 +991,13 @@
   width: 295px;
 }
 
+/* Height is pinned because the connector offsets itself past this label to
+   line up with the Shopify card — see .migration-show__arrow. */
 .shopify-lp .migration-show__flow-label {
   display: block;
   text-align: center;
   font-size: 18px;
+  line-height: 28px;
   color: #babbbd;
   margin-bottom: 24px;
 }
@@ -1038,7 +1041,6 @@
   justify-content: center;
   gap: 4px;
   align-self: center;
-  margin-top: 24px;
 }
 
 .shopify-lp .migration-show__arrow-line {
@@ -1063,14 +1065,33 @@
   background: #f7faf0;
   border: 0.25px solid var(--brand);
   border-radius: 4px;
+  padding: 16px;
 }
 
-@media (min-width: 761px) {
+/* Figma sizes the lockup to 41px in a 100px card (806:5515). */
+.shopify-lp .migration-show__shopify-box img {
+  max-width: 100%;
+  max-height: 41px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* 901px, not 761px: below that the flow itself stacks (see the 900px block),
+   and a horizontal connector inside a column reads as a stray dash pinned to
+   the left. */
+@media (min-width: 901px) {
+  /* The "from" column is taller than the "to" column, so centring on the row
+     leaves the line low. Clear the label (28px + 24px) and centre inside the
+     card's own 100px instead, which is where Figma puts it (806:5513 sits at
+     the card's midpoint). */
   .shopify-lp .migration-show__arrow {
     flex-direction: row;
     width: auto;
     flex: 1;
-    margin-top: 24px;
+    align-self: flex-start;
+    height: 100px;
+    margin-top: 52px;
   }
 
   .shopify-lp .migration-show__arrow-line {

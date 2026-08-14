@@ -141,10 +141,10 @@ export default function MigrationShowcase() {
             <span className="migration-show__flow-label">{L("toLabel")}</span>
             <div className="migration-show__shopify-box">
               <Image
-                src="/assets/images/case/landing-migration/icon-shopify.png"
+                src="/assets/images/case/landing-migration/logo-shopify.png"
                 alt="Shopify"
-                width={82}
-                height={91}
+                width={252}
+                height={72}
               />
             </div>
           </div>
