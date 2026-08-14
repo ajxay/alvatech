@@ -999,9 +999,12 @@
   margin-bottom: 24px;
 }
 
+/* Two across rather than four: it gives each card a landscape shape and leaves
+   the widest wordmark (Litium, 4.3:1) room to sit at the same cap height as
+   the rest. Four across forced ~82px-wide portrait cards. */
 .shopify-lp .migration-show__logos {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 12px;
 }
 
@@ -1009,12 +1012,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100px;
+  height: 92px;
   border: 0.25px solid var(--ink-soft);
   border-radius: 4px;
   padding: 16px;
 }
 
+/* Capping height is what makes the four read as one set — each wordmark gets
+   the same cap height. It only works because the files are cropped to their
+   ink; padding baked into a PNG would shrink that logo against the others. */
 .shopify-lp .migration-show__logo-box img {
   max-width: 100%;
   max-height: 24px;
@@ -1077,10 +1083,6 @@
 }
 
 @media (max-width: 900px) {
-  .shopify-lp .migration-show__logos {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .shopify-lp .migration-show__flow {
     flex-direction: column;
     padding: 24px;

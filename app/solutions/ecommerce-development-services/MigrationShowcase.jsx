@@ -6,11 +6,13 @@ import Image from "next/image";
 
 import { BOOKING_ANCHOR, scrollToBooking } from "./scrollToBooking";
 
+// Dimensions match each file's cropped ink box, so capping height in CSS gives
+// every wordmark the same cap height rather than the same padded-canvas height.
 const platformLogos = [
   { name: "Vendre", src: "/assets/images/case/landing-migration/logo-vendre.png", width: 1000, height: 296 },
-  { name: "Norce", src: "/assets/images/case/landing-migration/logo-norce.png", width: 1961, height: 561 },
-  { name: "Abicart", src: "/assets/images/case/landing-migration/logo-abicart.png", width: 400, height: 200 },
-  { name: "Litium", src: "/assets/images/case/landing-migration/logo-litium.png", width: 377, height: 213 },
+  { name: "Norce", src: "/assets/images/case/landing-migration/logo-norce.png", width: 1932, height: 537 },
+  { name: "Abicart", src: "/assets/images/case/landing-migration/logo-abicart.png", width: 400, height: 163 },
+  { name: "Litium", src: "/assets/images/case/landing-migration/logo-litium.png", width: 296, height: 69 },
 ];
 
 function DataMigrationIcon() {
