@@ -1545,96 +1545,266 @@
   color: var(--ink-soft);
 }
 
+/* A vertical rail: numbered discs on the left joined by a dashed line, each
+   paired with a card. The rail reads as one continuous run at any step count,
+   which the old five-across rule could not once it wrapped. */
 .shopify-lp .process-line__steps {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  margin: 48px 0 0;
+  max-width: 880px;
+  margin: 56px auto 0;
   padding: 0;
   list-style: none;
+  display: grid;
+  gap: 24px;
 }
 
-.shopify-lp .process-line__steps::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 24px;
-  height: 1px;
-  background: var(--brand);
-}
-
-/* positioned, so each step paints over the rule behind it */
 .shopify-lp .process-line__step {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding-right: 24px;
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  align-items: center;
+  gap: 28px;
 }
 
-.shopify-lp .process-line__icon,
+/* Runs from this disc to the next one; the last step has nothing to join. */
+.shopify-lp .process-line__step::before {
+  content: "";
+  position: absolute;
+  left: 35px;
+  top: 50%;
+  height: calc(100% + 24px);
+  border-left: 2px dashed rgba(132, 186, 65, 0.45);
+}
+
+.shopify-lp .process-line__step:last-child::before {
+  display: none;
+}
+
+/* Opaque, and above the rail, so the line stops at the disc edge. */
+.shopify-lp .process-line__marker {
+  position: relative;
+  z-index: 1;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 2px solid var(--brand);
+  background: var(--paper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shopify-lp .process-line__num {
+  font-family: var(--disp);
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 500;
+  color: var(--brand-dark);
+}
+
+.shopify-lp .process-line__card {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 28px;
+  padding: 24px 28px;
+  background: var(--card);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+/* The disc colour matches the backdrop baked into the icon files, so the two
+   read as one shape. Icons are 48px native and are never scaled up. */
+.shopify-lp .process-line__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: #f2f8e8;
+}
+
 .shopify-lp .process-line__icon img {
-  display: block;
   width: 48px;
   height: 48px;
 }
 
-.shopify-lp .process-line__num {
-  margin-top: 24px;
-  font-family: var(--disp);
-  font-size: 32px;
-  line-height: 40px;
-  color: var(--brand);
+.shopify-lp .process-line__body {
+  border-left: 1px solid var(--line);
+  padding-left: 28px;
 }
 
-.shopify-lp .process-line__label {
-  margin-top: 8px;
-  font-size: 18px;
-  line-height: 28px;
+.shopify-lp .process-line__body h3 {
+  font-size: 22px;
+  line-height: 1.3;
+  color: var(--ink);
+}
+
+.shopify-lp .process-line__body p {
+  margin: 8px 0 0;
+  font-size: 16px;
+  line-height: 1.6;
   color: var(--ink-soft);
 }
 
-/* Once the steps wrap, a single full-width rule would no longer line up with
-   them, so it is dropped. */
+.shopify-lp .process-line__go {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #f2f8e8;
+  color: var(--brand-dark);
+}
+
+.shopify-lp .process-line__go svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Closes the run: the fifth stage of the process, framed as what happens after
+   launch rather than as another numbered step. */
+.shopify-lp .process-line__outro {
+  max-width: 880px;
+  margin: 32px auto 0;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 28px;
+  padding: 24px 28px;
+  background: #f4f8ec;
+  border-radius: 16px;
+}
+
+.shopify-lp .process-line__outro-icon img {
+  width: 72px;
+  height: 72px;
+}
+
+.shopify-lp .process-line__outro-copy {
+  border-left: 1px solid var(--line);
+  padding-left: 28px;
+}
+
+.shopify-lp .process-line__outro-copy h3 {
+  font-size: 22px;
+  line-height: 1.3;
+  color: var(--brand-dark);
+}
+
+.shopify-lp .process-line__outro-copy p {
+  margin: 8px 0 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
 @media (max-width: 900px) {
-  .shopify-lp .process-line__steps {
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 40px;
+  .shopify-lp .process-line__step {
+    grid-template-columns: 56px 1fr;
+    gap: 18px;
   }
 
-  .shopify-lp .process-line__steps::before {
-    display: none;
+  .shopify-lp .process-line__step::before {
+    left: 27px;
+  }
+
+  .shopify-lp .process-line__marker {
+    width: 56px;
+    height: 56px;
+  }
+
+  .shopify-lp .process-line__num {
+    font-size: 19px;
+  }
+
+  .shopify-lp .process-line__card {
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .shopify-lp .process-line__icon {
+    width: 72px;
+    height: 72px;
+  }
+
+  .shopify-lp .process-line__icon img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .shopify-lp .process-line__body {
+    padding-left: 20px;
   }
 }
 
-/* On phones the grid stops working: two columns orphan the fifth step and wrap
-   most labels. The steps become a single centred stack instead, so they sit
-   under the centred heading rather than hugging the left edge. The numbers
-   carry the sequence that the horizontal rule carries on desktop. */
+/* Phones: the card stacks its own icon above the copy, and the arrow goes --
+   there is no room for three columns beside a rail. */
 @media (max-width: 640px) {
   .shopify-lp .process-line__steps {
-    grid-template-columns: 1fr;
-    row-gap: 34px;
     margin-top: 40px;
   }
 
   .shopify-lp .process-line__step {
-    align-items: center;
-    text-align: center;
-    padding-right: 0;
+    grid-template-columns: 44px 1fr;
+    gap: 14px;
+    align-items: start;
+  }
+
+  .shopify-lp .process-line__step::before {
+    left: 21px;
+  }
+
+  .shopify-lp .process-line__marker {
+    width: 44px;
+    height: 44px;
   }
 
   .shopify-lp .process-line__num {
-    margin-top: 14px;
-    font-size: 26px;
-    line-height: 32px;
+    font-size: 16px;
   }
 
-  .shopify-lp .process-line__label {
-    margin-top: 2px;
-    font-size: 17px;
-    line-height: 24px;
+  .shopify-lp .process-line__card {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 18px;
+  }
+
+  .shopify-lp .process-line__icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .shopify-lp .process-line__icon img {
+    width: 34px;
+    height: 34px;
+  }
+
+  .shopify-lp .process-line__body {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .shopify-lp .process-line__body h3 {
+    font-size: 19px;
+  }
+
+  .shopify-lp .process-line__go {
+    display: none;
+  }
+
+  .shopify-lp .process-line__outro {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    gap: 16px;
+    padding: 24px 20px;
+  }
+
+  .shopify-lp .process-line__outro-copy {
+    border-left: none;
+    padding-left: 0;
   }
 }
 

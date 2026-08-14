@@ -908,11 +908,27 @@
       "title": "All e-handel börjar med en tydlig plan",
       "lead": "Vi följer en strukturerad utvecklingsprocess som håller ditt projekt i tid, dig delaktig och din butik redo för lansering.",
       "steps": {
-        "discovery": "Analys och strategi",
-        "design": "Design och utveckling",
-        "integration": "Integration och migrering",
-        "testing": "Test och kvalitetskontroll",
-        "launch": "Lansering och support"
+        "discovery": {
+          "title": "Analys och strategi",
+          "text": "Vi sätter oss in i din verksamhet, dina kunder och dina mål och tar fram en skräddarsydd strategi som lägger grunden för framgång."
+        },
+        "design": {
+          "title": "Design och utveckling",
+          "text": "Vi formger snygga, användarvänliga gränssnitt och bygger snabba butiker som speglar ditt varumärke."
+        },
+        "integration": {
+          "title": "Integration och migrering",
+          "text": "Vi kopplar sömlöst in de verktyg du behöver och flyttar dina data säkert, helt utan krångel."
+        },
+        "testing": {
+          "title": "Test och lansering",
+          "text": "Vi testar varje detalj noggrant och lanserar din butik med trygghet, för en smidig driftsättning."
+        }
+      },
+      "outro": {
+        "title": "Din butik, redo att växa",
+        "text": "Efter lanseringen fortsätter vi stötta din tillväxt med löpande optimering och omsorg.",
+        "cta": "Låt oss bygga din butik"
       }
     },
     "trust": {

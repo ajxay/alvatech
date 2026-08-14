@@ -908,11 +908,27 @@
       "title": "Every Ecommerce Starts with a Clear Plan",
       "lead": "We follow a structured ecommerce development process that keeps your project on schedule, your feedback involved, and your store ready for launch.",
       "steps": {
-        "discovery": "Discovery & Strategy",
-        "design": "Design & Development",
-        "integration": "Integration & Migration",
-        "testing": "Testing & QC",
-        "launch": "Launch & Support"
+        "discovery": {
+          "title": "Discovery & Strategy",
+          "text": "We understand your business, audience, and goals to create a tailored strategy that sets the foundation for success."
+        },
+        "design": {
+          "title": "Design & Development",
+          "text": "We design stunning, user-friendly interfaces and build high-performing stores that reflect your brand."
+        },
+        "integration": {
+          "title": "Integration & Migration",
+          "text": "We seamlessly integrate the tools you need and migrate your data securely with zero hassle."
+        },
+        "testing": {
+          "title": "Testing & Launch",
+          "text": "We rigorously test every detail and launch your store with confidence, ensuring a smooth go-live."
+        }
+      },
+      "outro": {
+        "title": "Your Store, Ready to Grow",
+        "text": "Beyond launch, we support your growth with ongoing optimizations and care.",
+        "cta": "Let's Build Your Store"
       }
     },
     "trust": {
