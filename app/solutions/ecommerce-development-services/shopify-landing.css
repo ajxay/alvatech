@@ -989,6 +989,8 @@
 .shopify-lp .migration-show__flow-col--to {
   flex: none;
   width: 295px;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Height is pinned because the connector offsets itself past this label to
@@ -1049,12 +1051,30 @@
   border-left: 2px dashed rgba(132, 186, 65, 0.5);
 }
 
+/* Marks the direction of travel at the midpoint of the run. */
 .shopify-lp .migration-show__arrow-dot {
   flex: none;
-  width: 12px;
-  height: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   background: rgba(132, 186, 65, 0.25);
+  color: var(--brand-dark);
+}
+
+.shopify-lp .migration-show__arrow-dot svg {
+  width: 15px;
+  height: 15px;
+  /* Stacked layouts run the connector downwards, so the head follows. */
+  transform: rotate(90deg);
+}
+
+@media (min-width: 901px) {
+  .shopify-lp .migration-show__arrow-dot svg {
+    transform: none;
+  }
 }
 
 .shopify-lp .migration-show__shopify-box {
@@ -1081,17 +1101,21 @@
    and a horizontal connector inside a column reads as a stray dash pinned to
    the left. */
 @media (min-width: 901px) {
-  /* The "from" column is taller than the "to" column, so centring on the row
-     leaves the line low. Clear the label (28px + 24px) and centre inside the
-     card's own 100px instead, which is where Figma puts it (806:5513 sits at
-     the card's midpoint). */
+  /* The connector, the logo grid and the Shopify card all have to share one
+     midline. Each clears the 52px column label (28px text + 24px margin) and
+     then centres in what is left, so the line meets both sides dead centre
+     however many logo rows there are. */
   .shopify-lp .migration-show__arrow {
     flex-direction: row;
     width: auto;
     flex: 1;
-    align-self: flex-start;
-    height: 100px;
-    margin-top: 52px;
+    align-self: stretch;
+    padding-top: 52px;
+  }
+
+  .shopify-lp .migration-show__shopify-box {
+    margin-top: auto;
+    margin-bottom: auto;
   }
 
   .shopify-lp .migration-show__arrow-line {

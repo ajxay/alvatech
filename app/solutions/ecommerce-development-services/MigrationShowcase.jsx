@@ -133,7 +133,17 @@ export default function MigrationShowcase() {
 
           <div className="migration-show__arrow" aria-hidden="true">
             <span className="migration-show__arrow-line" />
-            <span className="migration-show__arrow-dot" />
+            <span className="migration-show__arrow-dot">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M9 6l6 6-6 6"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </span>
             <span className="migration-show__arrow-line" />
           </div>
 
