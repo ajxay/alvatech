@@ -298,8 +298,8 @@ export default function ShopifyLandingClient() {
             <Image
               src="/assets/images/case/landing-about/about-showcase.png"
               alt={L("about.imageAlt")}
-              width={428}
-              height={524}
+              width={856}
+              height={1048}
             />
           </div>
           <div className="about__copy reveal">
