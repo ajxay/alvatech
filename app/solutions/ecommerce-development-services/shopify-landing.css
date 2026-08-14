@@ -1678,43 +1678,6 @@
   height: 20px;
 }
 
-/* Closes the run: the fifth stage of the process, framed as what happens after
-   launch rather than as another numbered step. */
-.shopify-lp .process-line__outro {
-  max-width: 880px;
-  margin: 32px auto 0;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  gap: 28px;
-  padding: 24px 28px;
-  background: #f4f8ec;
-  border-radius: 16px;
-}
-
-.shopify-lp .process-line__outro-icon img {
-  width: 72px;
-  height: 72px;
-}
-
-.shopify-lp .process-line__outro-copy {
-  border-left: 1px solid var(--line);
-  padding-left: 28px;
-}
-
-.shopify-lp .process-line__outro-copy h3 {
-  font-size: 22px;
-  line-height: 1.3;
-  color: var(--brand-dark);
-}
-
-.shopify-lp .process-line__outro-copy p {
-  margin: 8px 0 0;
-  font-size: 16px;
-  line-height: 1.6;
-  color: var(--ink-soft);
-}
-
 @media (max-width: 900px) {
   .shopify-lp .process-line__step {
     grid-template-columns: 56px 1fr;
@@ -1810,18 +1773,96 @@
   .shopify-lp .process-line__go {
     display: none;
   }
+}
 
-  .shopify-lp .process-line__outro {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    text-align: center;
-    gap: 16px;
-    padding: 24px 20px;
+/* Desktop keeps the original Figma treatment (806:5373): five steps strung
+   along one green rule, each showing icon, number and label. The card chrome,
+   the descriptions and the vertical rail are the mobile presentation only.
+   `display: contents` drops the card wrapper out of layout so its parts sit
+   directly in the step's column, which lets both layouts share one DOM. */
+@media (min-width: 901px) {
+  .shopify-lp .process-line__steps {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0;
+    max-width: none;
+    margin: 48px 0 0;
   }
 
-  .shopify-lp .process-line__outro-copy {
+  .shopify-lp .process-line__steps::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 24px;
+    height: 1px;
+    background: var(--brand);
+  }
+
+  /* positioned, so each step paints over the rule behind it */
+  .shopify-lp .process-line__step {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 24px;
+  }
+
+  .shopify-lp .process-line__card {
+    display: contents;
+  }
+
+  .shopify-lp .process-line__step::before,
+  .shopify-lp .process-line__step::after,
+  .shopify-lp .process-line__body p,
+  .shopify-lp .process-line__go {
+    display: none;
+  }
+
+  /* The icons carry their own pale disc, so no backdrop is needed here. */
+  .shopify-lp .process-line__icon {
+    order: 1;
+    width: 48px;
+    height: 48px;
+    border-radius: 0;
+    background: none;
+  }
+
+  .shopify-lp .process-line__icon img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .shopify-lp .process-line__marker {
+    order: 2;
+    width: auto;
+    height: auto;
+    margin-top: 24px;
+    border: none;
+    border-radius: 0;
+    background: none;
+  }
+
+  .shopify-lp .process-line__num {
+    font-size: 32px;
+    line-height: 40px;
+    color: var(--brand);
+  }
+
+  .shopify-lp .process-line__body {
+    order: 3;
+    margin-top: 8px;
     border-left: none;
     padding-left: 0;
+  }
+
+  .shopify-lp .process-line__body h3 {
+    font-family: var(--body);
+    font-weight: 400;
+    letter-spacing: normal;
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--ink-soft);
   }
 }
 

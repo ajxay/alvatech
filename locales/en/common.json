@@ -921,14 +921,13 @@
           "text": "We seamlessly integrate the tools you need and migrate your data securely with zero hassle."
         },
         "testing": {
-          "title": "Testing & Launch",
-          "text": "We rigorously test every detail and launch your store with confidence, ensuring a smooth go-live."
+          "title": "Testing & QC",
+          "text": "We rigorously test every detail across devices and browsers so your store goes live without surprises."
+        },
+        "launch": {
+          "title": "Launch & Support",
+          "text": "We launch your store with confidence and keep supporting your growth with ongoing optimisations and care."
         }
-      },
-      "outro": {
-        "title": "Your Store, Ready to Grow",
-        "text": "Beyond launch, we support your growth with ongoing optimizations and care.",
-        "cta": "Let's Build Your Store"
       }
     },
     "trust": {

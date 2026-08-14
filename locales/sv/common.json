@@ -921,14 +921,13 @@
           "text": "Vi kopplar sömlöst in de verktyg du behöver och flyttar dina data säkert, helt utan krångel."
         },
         "testing": {
-          "title": "Test och lansering",
-          "text": "Vi testar varje detalj noggrant och lanserar din butik med trygghet, för en smidig driftsättning."
+          "title": "Test och kvalitetskontroll",
+          "text": "Vi testar varje detalj noggrant i olika enheter och webbläsare så att din butik lanseras utan överraskningar."
+        },
+        "launch": {
+          "title": "Lansering och support",
+          "text": "Vi lanserar din butik med trygghet och fortsätter stötta din tillväxt med löpande optimering och omsorg."
         }
-      },
-      "outro": {
-        "title": "Din butik, redo att växa",
-        "text": "Efter lanseringen fortsätter vi stötta din tillväxt med löpande optimering och omsorg.",
-        "cta": "Låt oss bygga din butik"
       }
     },
     "trust": {

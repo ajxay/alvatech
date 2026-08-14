@@ -4,13 +4,12 @@ import { useTranslation } from "react-i18next";
 
 import Image from "next/image";
 
-import { BOOKING_ANCHOR, scrollToBooking } from "./scrollToBooking";
-
 const steps = [
   { id: "discovery", num: "01", icon: "/assets/images/case/landing-process/step-1-discovery.png" },
   { id: "design", num: "02", icon: "/assets/images/case/landing-process/step-2-design.png" },
   { id: "integration", num: "03", icon: "/assets/images/case/landing-process/step-3-integration.png" },
   { id: "testing", num: "04", icon: "/assets/images/case/landing-process/step-4-testing.png" },
+  { id: "launch", num: "05", icon: "/assets/images/case/landing-process/step-5-launch.png" },
 ];
 
 function ArrowIcon() {
@@ -64,25 +63,6 @@ export default function ProcessTimeline() {
             </li>
           ))}
         </ol>
-
-        <div className="process-line__outro reveal">
-          <span className="process-line__outro-icon">
-            <Image
-              src="/assets/images/case/landing-process/step-5-launch.png"
-              alt=""
-              width={72}
-              height={72}
-              aria-hidden="true"
-            />
-          </span>
-          <div className="process-line__outro-copy">
-            <h3>{L("outro.title")}</h3>
-            <p>{L("outro.text")}</p>
-          </div>
-          <a href={BOOKING_ANCHOR} onClick={scrollToBooking} className="btn btn-primary">
-            {L("outro.cta")}
-          </a>
-        </div>
       </div>
     </section>
   );
