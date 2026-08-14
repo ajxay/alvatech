@@ -1,5 +1,7 @@
 import metaSource from "../meta.json";
 
+const SITE_ORIGIN = "https://alvatech.se";
+
 function buildPageMetaMap() {
   const map = new Map();
 
@@ -38,12 +40,37 @@ function normalizePathname(pathname) {
   return withSlash.replace(/\/$/, "") || "/";
 }
 
-/** Canonical alternates object for a route path, resolved against metadataBase. */
-export function canonicalFor(pathname) {
-  return { canonical: normalizePathname(pathname) };
+function languageAlternates(pathname) {
+  const path = normalizePathname(pathname);
+  const enHref =
+    path === "/"
+      ? `${SITE_ORIGIN}/?lang=en`
+      : `${SITE_ORIGIN}${path}?lang=en`;
+  const svHref =
+    path === "/"
+      ? `${SITE_ORIGIN}/?lang=sv`
+      : `${SITE_ORIGIN}${path}?lang=sv`;
+
+  return {
+    en: enHref,
+    sv: svHref,
+    "x-default": svHref,
+  };
 }
 
-/** Next.js metadata object for a route path (e.g. `/about-us`), including a canonical URL. */
+/**
+ * Canonical + hreflang alternates for a route path.
+ * EN/SV share the same path; language versions are distinguished with ?lang=.
+ */
+export function canonicalFor(pathname) {
+  const path = normalizePathname(pathname);
+  return {
+    canonical: path,
+    languages: languageAlternates(path),
+  };
+}
+
+/** Next.js metadata object for a route path (e.g. `/about-us`), including canonical + hreflang. */
 export function pageMetadataFor(pathname) {
   const key = normalizePathname(pathname);
   const entry = PAGE_META_BY_PATH.get(key);

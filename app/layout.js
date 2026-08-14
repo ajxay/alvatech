@@ -13,6 +13,14 @@ import { defaultSiteMetadata } from "@/data/pageMeta";
 export const metadata = {
   metadataBase: new URL("https://alvatech.se"),
   ...defaultSiteMetadata,
+  alternates: {
+    canonical: "/",
+    languages: {
+      en: "https://alvatech.se/?lang=en",
+      sv: "https://alvatech.se/?lang=sv",
+      "x-default": "https://alvatech.se/?lang=sv",
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
