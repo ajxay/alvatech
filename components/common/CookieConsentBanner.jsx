@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { useTranslation } from "react-i18next";
 import {
   COOKIE_SETTINGS_EVENT,
@@ -17,12 +18,15 @@ const brand = "#86BC40";
 
 export default function CookieConsentBanner() {
   const { t } = useTranslation("common");
+  const [mounted, setMounted] = useState(false);
   const [visible, setVisible] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
   const [analytics, setAnalytics] = useState(false);
   const [marketing, setMarketing] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
+
     const existing = getCookieConsent();
     if (existing) {
       setAnalytics(Boolean(existing.analytics));
@@ -45,8 +49,6 @@ export default function CookieConsentBanner() {
     return () => window.removeEventListener(COOKIE_SETTINGS_EVENT, openSettings);
   }, []);
 
-  if (!visible) return null;
-
   function handleAcceptAll() {
     acceptAllCookies();
     setVisible(false);
@@ -65,7 +67,9 @@ export default function CookieConsentBanner() {
     setShowDetails(false);
   }
 
-  return (
+  if (!mounted || !visible) return null;
+
+  return createPortal(
     <div
       role="dialog"
       aria-modal="true"
@@ -167,6 +171,7 @@ export default function CookieConsentBanner() {
           )}
         </div>
       </div>
-    </div>
+    </div>,
+    document.body,
   );
 }

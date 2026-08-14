@@ -1,7 +1,7 @@
 .cookie-consent {
   position: fixed;
   inset: auto 0 0 0;
-  z-index: 10050;
+  z-index: 2147483000;
   padding: 12px;
   padding-bottom: max(12px, env(safe-area-inset-bottom));
   pointer-events: none;

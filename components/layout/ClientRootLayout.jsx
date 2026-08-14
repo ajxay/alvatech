@@ -99,15 +99,15 @@ export default function ClientRootLayout({ children }) {
       <I18nProvider>
         <HtmlLang />
         <ParallaxProvider>{children}</ParallaxProvider>
+        <MobileMenu />
+        <ContactModal />
+        <NewsletterModal />
+        <SearchModal />
+        <Cart />
+        <BacktoTop />
+        <CookieConsentBanner />
+        <GoogleTagManager />
       </I18nProvider>
-      <MobileMenu />
-      <ContactModal />
-      <NewsletterModal />
-      <SearchModal />
-      <Cart />
-      <BacktoTop />
-      <CookieConsentBanner />
-      <GoogleTagManager />
     </Context>
   );
 }
