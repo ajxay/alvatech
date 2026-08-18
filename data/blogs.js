@@ -1,5 +1,28 @@
 export const blogsPosts4 = [
   {
+    id: 35,
+    slug: "klarna-vs-qliro-vs-swish-shopify-conversion",
+    category: "Shopify",
+    imgSrc: encodeURI("/assets/images/blog/Klarna vs Qliro vs Swish on Shopify.jpg"),
+    imgAlt: "Klarna vs Qliro vs Swish on Shopify: Which Payment Option Converts Best?",
+    imgCaption: "Klarna vs Qliro vs Swish on Shopify: Which Payment Option Converts Best?",
+    title: "Klarna vs Qliro vs Swish on Shopify: Which Payment Option Converts Best?",
+    titleSv: "Klarna vs Qliro vs Swish på Shopify: Vilket betalalternativ konverterar bäst?",
+    authorImg: "/assets/images/avatars/01.png",
+    authorAlt: "Alva Tech",
+    desc: "Comparing Klarna, Qliro, and Swish for your Shopify store in Sweden? See how each affects checkout conversion, fees, and setup — and how to combine them the right way.",
+    descSv:
+      "Funderar du på Klarna, Qliro eller Swish för din Shopify-butik i Sverige? Se hur de påverkar konverteringen i kassan, avgifterna och uppsättningen — och hur du kombinerar dem på rätt sätt.",
+    authorName: "Alva Tech",
+    date: "Aug 18, 2026",
+    metaTitle: "Klarna vs Qliro vs Swish on Shopify (2026) – Which Converts Best?",
+    metaTitleSv: "Klarna vs Qliro vs Swish på Shopify (2026) – Vilket konverterar bäst?",
+    metaDescription:
+      "Comparing Klarna, Qliro, and Swish for your Shopify store in Sweden? See how each affects checkout conversion, fees, and setup — and how to combine them the right way.",
+    metaDescriptionSv:
+      "Funderar du på Klarna, Qliro eller Swish för din Shopify-butik i Sverige? Se hur de påverkar konverteringen i kassan, avgifterna och uppsättningen — och hur du kombinerar dem på rätt sätt.",
+  },
+  {
     id: 34,
     slug: "fran-vendre-till-shopify-plus-migrering",
     category: "Shopify",

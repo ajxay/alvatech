@@ -6,6 +6,7 @@ import { Gallery, Item } from "react-photoswipe-gallery";
 import { useTranslation } from "react-i18next";
 import renderArticleIntro from "./renderArticleIntro";
 import { blogsPosts4, localizePost } from "@/data/blogs";
+import "./post-table.css";
 
 export default function BlogDetails1({ blogItem: rawBlogItem }) {
   const { t, i18n } = useTranslation("common");

@@ -1,0 +1,23 @@
+/* The theme styles table padding and alignment but leaves cells borderless, and
+   `.table-responsive` is not part of the bundled CSS, so a wide comparison
+   table would crush or overflow the page on a phone. Scoped to .post-content
+   so nothing outside article bodies is affected. */
+
+.post-content .table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Below this the four columns become unreadable, so scroll instead of wrap. */
+.post-content .table-responsive > table {
+  min-width: 640px;
+}
+
+.post-content table th,
+.post-content table td {
+  border: 1px solid rgba(131, 131, 131, 0.25);
+}
+
+.post-content table thead th {
+  background: rgba(134, 188, 64, 0.08);
+}

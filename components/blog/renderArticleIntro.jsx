@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import renderArticleIntroSv from "./renderArticleIntroSv";
 
 function SalesforceArticleIntro() {
@@ -1659,6 +1660,177 @@ function ShopifyMigrationArticleIntro() {
   );
 }
 
+function KlarnaQliroSwishArticleIntro() {
+  return (
+    <>
+      <p className="mb-4">
+        If you&apos;re running a Shopify store aimed at Swedish shoppers, the payment methods you show at checkout can matter as much as your product pages. Swedish consumers have strong, specific expectations: they want to pay later, they want to pay with their phone, and they abandon carts fast when a checkout feels foreign or clunky.
+      </p>
+      <p className="mb-4">
+        Three names dominate this conversation — <b>Klarna</b>, <b>Qliro</b>, and <b>Swish</b>. But they&apos;re not really competitors doing the same job. Klarna and Qliro are checkout and payment platforms; Swish is a single payment method that both of them (and Shopify Payments) can include. Understanding that distinction is the key to picking the right setup — and to actually improving conversion instead of just adding another logo to your checkout page.
+      </p>
+      <p className="mb-5">
+        This guide breaks down what each option does, how it affects conversion, and which combination makes sense for your store.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Why payment methods make or break conversion in Sweden</h4>
+      <p className="mb-3">
+        Sweden is one of the most digitally advanced, cashless markets in the world, and Swedish shoppers carry specific habits into every checkout:
+      </p>
+      <ul className="list-disc list-inside mb-3 pl-5 marker:text-primary">
+        <li><b>Pay-later is the norm, not a bonus.</b> Klarna originated in Sweden, and &quot;buy now, pay later&quot; is embedded in local shopping culture. A checkout without it can feel incomplete to Swedish buyers.</li>
+        <li><b>Mobile payment is expected.</b> Swish is used by roughly 8–9 million people in a country of about 10 million. For mobile shoppers especially, not offering it is a real drop-off risk.</li>
+        <li><b>Trust signals matter more than novelty.</b> Familiar logos at checkout reduce hesitation; unfamiliar ones increase it.</li>
+      </ul>
+      <p className="mb-4">
+        Get the mix wrong, and you&apos;re not losing sales to a competitor&apos;s product — you&apos;re losing them at your own checkout, to your own friction.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Klarna on Shopify</h4>
+      <p className="mb-3">
+        Klarna needs little introduction in the Nordics: it&apos;s a Stockholm-founded payments and commerce network offering pay-now, pay-later, and installment financing, and it&apos;s used across a large share of Swedish e-commerce.
+      </p>
+      <p className="mb-3">
+        <b>How it works with Shopify:</b> Klarna is available as a payment method inside Shopify Payments in supported countries, including Sweden. There&apos;s also a distinct product, Klarna Checkout, which replaces Shopify&apos;s native checkout entirely with Klarna&apos;s own flow — this is a different (and more involved) integration than simply enabling Klarna as a payment method.
+      </p>
+      <p className="mb-2"><b>Strengths:</b></p>
+      <ul className="list-disc list-inside mb-3 pl-5 marker:text-primary">
+        <li>Extremely high brand recognition in Sweden — shoppers trust it instantly</li>
+        <li>Pay-later and installment options that can lift average order value</li>
+        <li>Saved customer data across Klarna-enabled stores can speed up repeat checkouts</li>
+        <li>Native support inside Shopify Payments, so setup is comparatively simple</li>
+      </ul>
+      <p className="mb-2"><b>Trade-offs:</b></p>
+      <ul className="list-disc list-inside mb-3 pl-5 marker:text-primary">
+        <li>Klarna as a payment method inside Shopify Payments is tied to your store&apos;s currency setup, which can limit multi-market flexibility</li>
+        <li>Full Klarna Checkout is a bigger technical commitment than a standard payment app</li>
+        <li>It&apos;s one payment method, not a full local-payments strategy — it doesn&apos;t natively cover Swish</li>
+      </ul>
+      <p className="mb-4">
+        <b>Best for:</b> Stores where flexible, pay-later financing is central to the buying decision — higher-ticket items, fashion, home goods, or anything where &quot;try before you fully commit to paying&quot; reduces purchase anxiety.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Qliro on Shopify</h4>
+      <p className="mb-3">
+        Qliro is a Stockholm-based checkout and payments provider built specifically around Nordic buying habits. Rather than being a single payment method, Qliro is a unified checkout that bundles multiple local and international options — including Swish, Vipps (Norway), MobilePay (Denmark/Finland), Trustly, cards, and its own Qliro Pay Later products — under one contract and one integration.
+      </p>
+      <p className="mb-3">
+        <b>How it works with Shopify:</b> Qliro launched a dedicated Shopify app so merchants can run Qliro&apos;s checkout directly inside Shopify, going live for merchants from 2024 onward. It sits as a payment and checkout layer while product data, cart logic, fulfillment, and everything else stays native to Shopify.
+      </p>
+      <p className="mb-2"><b>Strengths:</b></p>
+      <ul className="list-disc list-inside mb-3 pl-5 marker:text-primary">
+        <li>One integration covers Swish, Vipps, MobilePay, Trustly, cards, and pay-later in a single checkout</li>
+        <li>Single contract and consolidated reporting, instead of managing multiple separate payment providers</li>
+        <li>Built-in currency handling — customers see local pricing, you get payouts in your preferred currency</li>
+        <li>Designed specifically to reduce steps in the Nordic checkout flow</li>
+        <li>Merchant case studies report meaningful conversion gains after switching (for example, a 22% conversion increase cited by one Qliro merchant)</li>
+      </ul>
+      <p className="mb-2"><b>Trade-offs:</b></p>
+      <ul className="list-disc list-inside mb-3 pl-5 marker:text-primary">
+        <li>Less globally recognized brand than Klarna outside the Nordics</li>
+        <li>Adds a layer between Shopify&apos;s native checkout and your customer, similar to other checkout-replacement apps — worth testing against your current setup</li>
+        <li>Overkill if you only sell in Sweden and don&apos;t need Nordic-wide payment coverage</li>
+      </ul>
+      <p className="mb-4">
+        <b>Best for:</b> Stores selling across the Nordics (not just Sweden) that want to consolidate multiple local payment methods — Swish, Vipps, MobilePay — into one checkout instead of stitching together separate apps for each country.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Swish on Shopify</h4>
+      <p className="mb-3">
+        Swish isn&apos;t a competitor to Klarna or Qliro — it&apos;s the payment method both of them can include. It&apos;s Sweden&apos;s dominant mobile payment system, backed by the country&apos;s major banks, and it works by having the customer confirm payment directly from their banking app: mobile shoppers get redirected into the Swish app, desktop shoppers scan a QR code.
+      </p>
+      <p className="mb-3">
+        <b>How it works with Shopify:</b> Swish is available natively inside Shopify Payments, but only on Shopify Plus. On other plans, merchants access Swish through a payments partner or checkout app — including Qliro, which lists Swish as one of its supported methods.
+      </p>
+      <p className="mb-2"><b>Strengths:</b></p>
+      <ul className="list-disc list-inside mb-3 pl-5 marker:text-primary">
+        <li>Used by roughly 8–9 million Swedes — this is closer to a checkout requirement than an optional add-on for a Sweden-focused store</li>
+        <li>No chargebacks, immediate fund capture, and a payment flow shoppers already trust from everyday use</li>
+        <li>Especially strong on mobile, where a bank-app redirect is faster than typing card details</li>
+      </ul>
+      <p className="mb-2"><b>Trade-offs:</b></p>
+      <ul className="list-disc list-inside mb-3 pl-5 marker:text-primary">
+        <li>Sweden-only — no relevance if you&apos;re expanding beyond the Swedish market</li>
+        <li>Native Shopify Payments access requires Shopify Plus; smaller stores need a third-party route</li>
+        <li>Doesn&apos;t offer pay-later or financing on its own — it&apos;s an instant-payment method, not a credit product</li>
+      </ul>
+      <p className="mb-4">
+        <b>Best for:</b> Any Shopify store selling primarily to Swedish consumers, particularly mobile-heavy audiences. This is less a &quot;should I use it&quot; question and more a &quot;how do I access it on my plan&quot; question.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Klarna vs Qliro vs Swish: side-by-side</h4>
+      <div className="table-responsive mb-4">
+        <table className="table table-bordered align-top mb-0">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Klarna</th>
+              <th scope="col">Qliro</th>
+              <th scope="col">Swish</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">What it is</th>
+              <td>Pay-later/financing payment method (or full checkout)</td>
+              <td>Unified Nordic checkout bundling multiple payment methods</td>
+              <td>Single mobile payment method</td>
+            </tr>
+            <tr>
+              <th scope="row">Geographic reach</th>
+              <td>Sweden + other supported European markets</td>
+              <td>Nordics (Sweden, Norway, Denmark, Finland)</td>
+              <td>Sweden only</td>
+            </tr>
+            <tr>
+              <th scope="row">Shopify access</th>
+              <td>Native in Shopify Payments (supported countries); separate Klarna Checkout option</td>
+              <td>Dedicated Shopify app</td>
+              <td>Native on Shopify Plus; via app/partner (incl. Qliro) on other plans</td>
+            </tr>
+            <tr>
+              <th scope="row">Conversion strength</th>
+              <td>High — trusted BNPL brand, boosts AOV</td>
+              <td>High — consolidates multiple local methods into fewer checkout steps</td>
+              <td>High on mobile — near-essential for Swedish mobile shoppers</td>
+            </tr>
+            <tr>
+              <th scope="row">Best fit</th>
+              <td>Higher-ticket, financing-driven purchases</td>
+              <td>Multi-market Nordic sellers wanting one integration</td>
+              <td>Sweden-focused stores, especially mobile-first audiences</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>So, which one actually converts best?</h4>
+      <p className="mb-3">
+        The honest answer: this isn&apos;t an either/or decision. Klarna and Qliro solve different problems, and Swish is a payment method both can carry. The stores that see the biggest conversion lift are usually the ones that stop treating this as &quot;pick one&quot; and start treating it as &quot;cover the bases.&quot;
+      </p>
+      <ul className="list-disc list-inside mb-3 pl-5 marker:text-primary">
+        <li>If you sell <b>mainly in Sweden</b> and want a straightforward, trusted pay-later option alongside cards, Klarna via Shopify Payments plus Swish (through Shopify Plus or a supporting app) covers the two things Swedish shoppers expect most.</li>
+        <li>If you sell <b>across the Nordics</b> and want to stop juggling separate integrations for Swish, Vipps, and MobilePay, Qliro&apos;s unified checkout is built for exactly that — one contract, one integration, local methods and pay-later bundled together.</li>
+        <li>If <b>checkout steps and cart abandonment</b> are your biggest issue, the data points consistently toward fewer clicks and fewer redirects winning — which is the core argument for a consolidated checkout like Qliro over stacking multiple standalone payment apps.</li>
+      </ul>
+      <p className="mb-4 fst-italic fw-bold">
+        The real lever isn&apos;t the logo you pick — it&apos;s how few steps stand between &quot;add to cart&quot; and &quot;order confirmed.&quot; Whichever combination you choose, that&apos;s the metric to test against.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Getting your Shopify checkout set up right</h4>
+      <p className="mb-3">
+        Payment configuration is one of those things that looks simple until you&apos;re weighing Shopify Payments eligibility, plan-level restrictions (like Swish on Plus), currency settings, and app-based checkout replacements against each other — and a wrong setup can quietly cost you conversions for months before anyone notices.
+      </p>
+      <p className="mb-3">
+        If you want a Shopify checkout built around how Swedish and Nordic shoppers actually pay — not just which app has the most reviews — Alvatech can help you map out and implement the right combination of Klarna, Qliro, and Swish for your store.
+      </p>
+      <p className="mb-4">
+        Have questions about which payment setup fits your store? <Link href="/contact-us">Get in touch with the Alvatech team</Link> to talk through your options.
+      </p>
+    </>
+  );
+}
+
 function DefaultArticleIntro() {
   return (
     <p>
@@ -1678,5 +1850,6 @@ export default function renderArticleIntro(articleId, language) {
   if (articleId === 32) return <GenerativeEngineOptimizationArticleIntro />;
   if (articleId === 33) return <ShopifyMigrationArticleIntro />;
   if (articleId === 34) return <VendreShopifyPlusMigrationArticleIntro />;
+  if (articleId === 35) return <KlarnaQliroSwishArticleIntro />;
   return <DefaultArticleIntro />;
 }
