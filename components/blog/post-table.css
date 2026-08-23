@@ -18,6 +18,14 @@
   border: 1px solid rgba(131, 131, 131, 0.25);
 }
 
+/* Something in the theme strips the borders off the final row, which leaves it
+   floating away from the table. The `tr:last-child` selector is only here to
+   outrank it — the values are the same as the rule above. */
+.post-content table tr:last-child > th,
+.post-content table tr:last-child > td {
+  border: 1px solid rgba(131, 131, 131, 0.25);
+}
+
 .post-content table thead th {
   background: rgba(134, 188, 64, 0.08);
 }
