@@ -2014,6 +2014,103 @@ function KlarnaQliroSwishArticleIntroSv() {
   );
 }
 
+function VippsSwishCheckoutArticleIntroSv() {
+  return (
+    <>
+      <p className="mb-4">
+        Om du säljer till kunder i Norge och Sverige bör två betalsätt ligga högt upp på prioriteringslistan för din kassa: <b>Vipps</b> och <b>Swish</b>. Båda är mobilförst-appar med bankstöd som dominerar vardagens betalningar i sina respektive länder — och båda kan i tysthet bli ett konverteringsproblem om de saknas i din Shopify-kassa.
+      </p>
+      <p className="mb-5">
+        Den här guiden går igenom vad varje betalsätt är, vad du behöver innan du börjar och exakt hur du får dem live i din Shopify-butik.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Därför spelar Vipps och Swish roll för konverteringen i Norden</h4>
+      <p className="mb-3">
+        Norska och svenska köpare ser inte Vipps och Swish som &quot;alternativa&quot; betalsätt — de är standard. Båda apparna låter kunden godkänna en betalning direkt från mobilen, utan att knappa in kortnummer, och båda backas av storbanker på sina hemmamarknader:
+      </p>
+      <ul className="list-disc list-inside mb-3 pl-5 marker:text-primary">
+        <li><b>Vipps</b> är Norges ledande app för mobila betalningar, som kopplar ett telefonnummer direkt till kundens Visa eller Mastercard, och når långt över 11 miljoner användare i Norden tillsammans med systervarumärket MobilePay.</li>
+        <li><b>Swish</b> är Sveriges dominerande mobila betalsätt, som används av uppskattningsvis 8–9 miljoner svenskar, och fungerar genom att kunden godkänner betalningen i sin bankapp eller med BankID.</li>
+      </ul>
+      <p className="mb-4">
+        För butiker med mycket mobiltrafik är det ingen liten lucka att utelämna dem i kassan — det är en friktionspunkt som syns direkt i siffrorna för övergivna varukorgar.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Innan du börjar: det här behöver du</h4>
+      <p className="mb-3">
+        Båda integrationerna har sina egna förutsättningar, så det är värt att bekräfta dessa innan du rör din Shopify-admin.
+      </p>
+      <p className="mb-2"><b>För Vipps:</b></p>
+      <ul className="list-disc list-inside mb-3 pl-5 marker:text-primary">
+        <li>Ett företagskonto hos Vipps MobilePay (registreringen startar en kort onboarding-process, som vanligtvis ger portalåtkomst inom 1–2 arbetsdagar)</li>
+        <li>API-uppgifter från Vipps MobilePays företagsportal</li>
+        <li>En Shopify-butik där du har åtkomst till Inställningar för att lägga till ett betalsätt</li>
+      </ul>
+      <p className="mb-2"><b>För Swish:</b></p>
+      <ul className="list-disc list-inside mb-3 pl-5 marker:text-primary">
+        <li>En Shopify-butik baserad i Sverige</li>
+        <li>Shopify Payments aktiverat och inställt på Sverige, eftersom Swish blir tillgängligt som alternativ först när Shopify Payments är igång</li>
+        <li>Genomförd identitetsverifiering på ditt Shopify Payments-konto</li>
+        <li>Kassans valuta inställd på SEK, eftersom Swish bara fungerar för kunder som betalar i svenska kronor</li>
+      </ul>
+      <p className="mb-4">
+        En viktig skillnad: Swishs inbyggda alternativ i Shopify Payments fungerar likadant oavsett Shopify-plan, men handlare som vill ha Swish via en bredare nordisk kassaleverantör (i stället för direkt via Shopify Payments) gör det vanligtvis genom en stödjande betalapp.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Så integrerar du Vipps i Shopify-kassan</h4>
+      <p className="mb-3">
+        Vipps (som heter MobilePay i Danmark och Finland) har ett officiellt Shopify-plugin, vilket är den mest tillförlitliga vägen för de flesta butiker.
+      </p>
+      <ol className="list-decimal list-inside mb-3 pl-5 marker:text-primary">
+        <li className="mb-2"><b>Registrera dig för Vipps MobilePay Payment Integration.</b> Det görs via Vipps MobilePays företagsportal, inte inuti Shopify. Efter registreringen får du inloggningsuppgifter och kan hämta dina API-nycklar från portalen.</li>
+        <li className="mb-2"><b>Installera pluginet Vipps/MobilePay Checkout från Shopify App Store.</b> Det är det officiella pluginet, och det kan konfigureras antingen för att lägga till Vipps/MobilePay som betalalternativ i din befintliga kassa, eller för att köras som din primära kassametod.</li>
+        <li className="mb-2"><b>Lägg in dina API-nycklar i appens inställningar.</b> Om du migrerar från en äldre version av pluginet kan de fyllas i automatiskt.</li>
+        <li className="mb-2"><b>Aktivera betalsättet.</b> Gå till Inställningar &gt; Betalningar i din Shopify-admin och aktivera Vipps/MobilePay Checkout som betalgateway.</li>
+        <li className="mb-2"><b>Installera Companion-pluginet (valfritt men rekommenderat).</b> Det lägger till korrekt Vipps/MobilePay-varumärkning och orderinformation inuti kundens app, vilket stärker förtroendet i betalögonblicket.</li>
+        <li className="mb-2"><b>Kör testordrar.</b> Innan du går live, genomför några testtransaktioner mot dina produktions-API-nycklar för att bekräfta att flödet fungerar hela vägen — orderskapande, bekräftelse och statussynkronisering tillbaka till Shopify.</li>
+        <li className="mb-2"><b>Ta bort eventuell äldre pluginversion.</b> Om du körde en tidigare Vipps-integration är den säker att ta bort när det nya pluginet är bekräftat fungerande.</li>
+      </ol>
+      <p className="mb-4">
+        <b>En notering om expresskassa:</b> Vipps MobilePay stödjer för närvarande inte expresskassa (en &quot;Köp med Vipps&quot;-knapp med ett tryck på produktsidor) direkt via Shopify, på grund av plattformsbegränsningar på Shopifys sida. Om en expressknapp på produktsidan är viktig för din butik kräver det vanligtvis ett separat tillägg som hanterar expresskassa och förifyller den vanliga Shopify-kassan, och som arbetar vid sidan av huvudpluginet i stället för att ersätta det.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Så integrerar du Swish i Shopify-kassan</h4>
+      <p className="mb-3">
+        Swishs vanligaste uppsättning körs inbyggt via Shopify Payments — ingen separat app krävs, förutsatt att din butik uppfyller behörighetskraven.
+      </p>
+      <ol className="list-decimal list-inside mb-3 pl-5 marker:text-primary">
+        <li className="mb-2"><b>Aktivera Shopify Payments för Sverige.</b> Gå till Inställningar &gt; Betalningar i din Shopify-admin och sätt upp Shopify Payments om du inte redan gjort det, med SEK som din behandlingsvaluta.</li>
+        <li className="mb-2"><b>Genomför identitetsverifieringen.</b> Om ditt konto inte redan är verifierat kommer Shopify att be dig ladda upp legitimation och genomföra ett kort verifieringsflöde (inklusive foto-ID och ett selfie-steg) innan Swish kan aktiveras.</li>
+        <li className="mb-2"><b>Aktivera Swish som betalsätt.</b> När Shopify Payments är live och verifierat dyker Swish upp som ett tillgängligt lokalt betalsätt som du kan slå på direkt i betalningsinställningarna.</li>
+        <li className="mb-2"><b>Bekräfta kassans valuta och butikens adress.</b> Kunder kan bara betala med Swish när de befinner sig i Sverige och checkar ut i SEK — dubbelkolla att butikens marknads- och valutainställningar stämmer med detta.</li>
+        <li className="mb-2"><b>Testa kassaflödet.</b> I kassan skannar Swish-kunder en QR-kod med Swish-appen eller svenska BankID-appen för att godkänna betalningen — kör en testorder för att bekräfta att QR-flödet visas korrekt på både dator och mobil.</li>
+      </ol>
+      <p className="mb-4">
+        Om Shopify Payments inte passar — till exempel om du vill ha Swish samlat i en bredare nordisk kassa tillsammans med Vipps, MobilePay och alternativ för betalning senare i en och samma integration — är en dedikerad betal-/kassaapp den vanligare vägen, eftersom den låter dig hantera flera lokala betalsätt under ett avtal i stället för att konfigurera varje för sig.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Vanliga misstag att undvika vid uppsättningen</h4>
+      <ul className="list-disc list-inside mb-3 pl-5 marker:text-primary">
+        <li><b>Fel valuta i kassan.</b> Både Vipps och Swish är knutna till specifika valutor och marknader — Swish kräver SEK och en Sverigebaserad butik, Vipps är byggt kring NOK och norska kunder. Om din uppsättning i Shopify Markets inte styr rätt valuta till rätt region kommer betalsättet helt enkelt inte att visas.</li>
+        <li><b>Att hoppa över testordrar.</b> Båda integrationerna rekommenderar att du kör testtransaktioner i produktionsläge före lansering. Att hoppa över det steget är den vanligaste orsaken till att handlare upptäcker betalproblem efter lanseringen i stället för före.</li>
+        <li><b>Att ta expresskassa för given.</b> Varken Vipps eller Swish &quot;bara fungerar&quot; som en expressknapp med ett tryck på produktsidor direkt ur lådan — det kräver ytterligare konfiguration eller ett dedikerat applager.</li>
+        <li><b>Att glömma Companion-/varumärkesappen för Vipps.</b> Grundpluginet hanterar betalningarna, men att hoppa över Companion-appen innebär att butikens varumärke och orderdetaljer inte visas inuti kundens Vipps-app — en liten förtroendesignal som är lätt att missa.</li>
+      </ul>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Att göra rätt från början</h4>
+      <p className="mb-3">
+        Både Vipps och Swish konverterar bra just för att de känns enkla för kunden — men för att komma dit måste uppsättningen vara korrekt hos dig: rätt valuta, rätt marknadsinställningar, rätt ordning mellan Shopify Payments och eventuella tredjepartsappar. En kassa som ser rätt ut i test men går sönder för riktiga kunder i Norge eller Sverige är ett vanligt och undvikbart resultat av att stressa igenom det här steget.
+      </p>
+      <p className="mb-3">
+        Vill du hellre att det här sköts ordentligt från början — anpassat efter hur din butik är strukturerad över marknader och valutor — kan Alvatech sätta upp Vipps, Swish och resten av din nordiska betalstack så att allt är testat och fungerar innan det någonsin når en riktig kund.
+      </p>
+      <p className="mb-4">
+        Osäker på om Vipps, Swish eller en samlad nordisk kassaapp passar din butik bäst? <Link href="/contact-us">Kontakta teamet på Alvatech</Link> så går vi igenom din uppsättning.
+      </p>
+    </>
+  );
+}
+
 export default function renderArticleIntroSv(articleId) {
   if (articleId === 26) return <BestAiToolsShopifyArticleIntroSv />;
   if (articleId === 27) return <SalesforceArticleIntroSv />;
@@ -2025,5 +2122,6 @@ export default function renderArticleIntroSv(articleId) {
   if (articleId === 33) return <ShopifyMigrationArticleIntroSv />;
   if (articleId === 34) return <VendreShopifyPlusMigrationArticleIntroSv />;
   if (articleId === 35) return <KlarnaQliroSwishArticleIntroSv />;
+  if (articleId === 36) return <VippsSwishCheckoutArticleIntroSv />;
   return <DefaultArticleIntroSv />;
 }

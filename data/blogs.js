@@ -1,5 +1,28 @@
 export const blogsPosts4 = [
   {
+    id: 36,
+    slug: "integrate-vipps-swish-shopify-checkout",
+    category: "Shopify",
+    imgSrc: "/assets/images/blog/integrate-vipps-swish-shopify-checkout.jpg",
+    imgAlt: "How to Integrate Vipps and Swish Into Your Shopify Checkout",
+    imgCaption: "How to Integrate Vipps and Swish Into Your Shopify Checkout",
+    title: "How to Integrate Vipps and Swish Into Your Shopify Checkout",
+    titleSv: "Så integrerar du Vipps och Swish i din Shopify-kassa",
+    authorImg: "/assets/images/avatars/01.png",
+    authorAlt: "Alva Tech",
+    desc: "Step-by-step guide to adding Vipps (Norway) and Swish (Sweden) to your Shopify checkout — requirements, setup steps, and tips to boost Nordic conversion.",
+    descSv:
+      "Steg-för-steg-guide för att lägga till Vipps (Norge) och Swish (Sverige) i din Shopify-kassa — krav, uppsättning och tips för att öka konverteringen i Norden.",
+    authorName: "Alva Tech",
+    date: "Aug 23, 2026",
+    metaTitle: "How to Integrate Vipps and Swish Into Shopify Checkout (2026 Guide)",
+    metaTitleSv: "Så integrerar du Vipps och Swish i Shopify-kassan (guide 2026)",
+    metaDescription:
+      "Step-by-step guide to adding Vipps (Norway) and Swish (Sweden) to your Shopify checkout — requirements, setup steps, and tips to boost Nordic conversion.",
+    metaDescriptionSv:
+      "Steg-för-steg-guide för att lägga till Vipps (Norge) och Swish (Sverige) i din Shopify-kassa — krav, uppsättning och tips för att öka konverteringen i Norden.",
+  },
+  {
     id: 35,
     slug: "klarna-vs-qliro-vs-swish-shopify-conversion",
     category: "Shopify",

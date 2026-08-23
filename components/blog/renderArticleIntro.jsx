@@ -1831,6 +1831,103 @@ function KlarnaQliroSwishArticleIntro() {
   );
 }
 
+function VippsSwishCheckoutArticleIntro() {
+  return (
+    <>
+      <p className="mb-4">
+        If you&apos;re selling to customers in Norway and Sweden, two payment methods should be near the top of your checkout priority list: <b>Vipps</b> and <b>Swish</b>. Both are mobile-first, bank-backed payment apps that dominate everyday spending in their respective countries — and both can quietly become a conversion problem if they&apos;re missing from your Shopify checkout.
+      </p>
+      <p className="mb-5">
+        This guide walks through what each payment method is, what you need before you start, and exactly how to get them live on your Shopify store.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Why Vipps and Swish matter for Nordic conversion</h4>
+      <p className="mb-3">
+        Norwegian and Swedish shoppers don&apos;t think of Vipps and Swish as &quot;alternative&quot; payment methods — they&apos;re the default. Both apps let a customer confirm a payment straight from their phone, without typing card numbers, and both are backed by major banks in their home markets:
+      </p>
+      <ul className="list-disc list-inside mb-3 pl-5 marker:text-primary">
+        <li><b>Vipps</b> is Norway&apos;s leading mobile payment app, connecting a phone number directly to the customer&apos;s Visa or Mastercard, and reaches well over 11 million users across the Nordics when combined with its sister brand MobilePay.</li>
+        <li><b>Swish</b> is Sweden&apos;s dominant mobile payment method, used by an estimated 8–9 million Swedes, and works by having the customer confirm payment through their banking app or BankID.</li>
+      </ul>
+      <p className="mb-4">
+        For mobile-heavy storefronts, leaving these out of checkout isn&apos;t a minor gap — it&apos;s a friction point that shows up directly in your abandoned-cart numbers.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Before you start: what you&apos;ll need</h4>
+      <p className="mb-3">
+        Both integrations have their own prerequisites, so it&apos;s worth confirming these before you touch your Shopify admin.
+      </p>
+      <p className="mb-2"><b>For Vipps:</b></p>
+      <ul className="list-disc list-inside mb-3 pl-5 marker:text-primary">
+        <li>A Vipps MobilePay business account (sign-up triggers a short onboarding process, typically resulting in portal access within 1–2 business days)</li>
+        <li>API credentials from the Vipps MobilePay business portal</li>
+        <li>A Shopify store with Settings access to add a payment method</li>
+      </ul>
+      <p className="mb-2"><b>For Swish:</b></p>
+      <ul className="list-disc list-inside mb-3 pl-5 marker:text-primary">
+        <li>A Shopify store based in Sweden</li>
+        <li>Shopify Payments activated and set to Sweden, since Swish is only available as an option once Shopify Payments is running</li>
+        <li>Completed identity verification on your Shopify Payments account</li>
+        <li>Checkout currency set to SEK, since Swish only works for customers paying in Swedish kronor</li>
+      </ul>
+      <p className="mb-4">
+        One important distinction: Swish&apos;s native option inside Shopify Payments works the same way regardless of Shopify plan, but merchants who want Swish through a broader Nordic checkout provider (rather than direct Shopify Payments) typically do so via a supporting payments app instead.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>How to integrate Vipps into Shopify checkout</h4>
+      <p className="mb-3">
+        Vipps (branded as MobilePay in Denmark and Finland) has an official Shopify plugin, which is the most reliable route for most stores.
+      </p>
+      <ol className="list-decimal list-inside mb-3 pl-5 marker:text-primary">
+        <li className="mb-2"><b>Sign up for Vipps MobilePay Payment Integration.</b> This is done through the Vipps MobilePay business portal rather than inside Shopify. After signing up, you&apos;ll receive login details and can retrieve your API keys from the portal.</li>
+        <li className="mb-2"><b>Install the Vipps/MobilePay Checkout plugin from the Shopify App Store.</b> This is the official plugin, and it can be configured either to add Vipps/MobilePay as a payment option on your existing checkout, or to run as your primary checkout method.</li>
+        <li className="mb-2"><b>Add your API keys in the app settings.</b> If you&apos;re migrating from an older version of the plugin, these may autofill.</li>
+        <li className="mb-2"><b>Activate the payment method.</b> In your Shopify admin, go to Settings &gt; Payments, and activate Vipps/MobilePay Checkout as a payment gateway.</li>
+        <li className="mb-2"><b>Install the Companion plugin (optional but recommended).</b> This adds proper Vipps/MobilePay branding and order information inside the customer&apos;s app, which helps reinforce trust at the point of payment.</li>
+        <li className="mb-2"><b>Run test orders.</b> Before going live, place a few test transactions against your production API keys to confirm the flow works end-to-end — order creation, confirmation, and status sync back to Shopify.</li>
+        <li className="mb-2"><b>Retire any older plugin version.</b> If you were running a previous Vipps integration, it&apos;s safe to remove once the new plugin is confirmed working.</li>
+      </ol>
+      <p className="mb-4">
+        <b>A note on express checkout:</b> Vipps MobilePay doesn&apos;t currently support express checkout (a one-tap &quot;Buy with Vipps&quot; button on product pages) directly through Shopify, due to platform limitations on Shopify&apos;s side. If a product-page express button matters to your store, this typically requires a separate add-on that handles express checkout and pre-fills the standard Shopify checkout, working alongside the main payment plugin rather than replacing it.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>How to integrate Swish into Shopify checkout</h4>
+      <p className="mb-3">
+        Swish&apos;s most common setup runs natively through Shopify Payments — no separate app required, provided your store meets the eligibility requirements.
+      </p>
+      <ol className="list-decimal list-inside mb-3 pl-5 marker:text-primary">
+        <li className="mb-2"><b>Activate Shopify Payments for Sweden.</b> Go to Settings &gt; Payments in your Shopify admin and set up Shopify Payments if you haven&apos;t already, using SEK as your processing currency.</li>
+        <li className="mb-2"><b>Complete identity verification.</b> If your account hasn&apos;t already been verified, Shopify will prompt you to upload identification and complete a short verification flow (including a photo ID and selfie step) before Swish can be activated.</li>
+        <li className="mb-2"><b>Activate Swish as a payment method.</b> Once Shopify Payments is live and verified, Swish appears as an available local payment method you can turn on directly in the Payments settings.</li>
+        <li className="mb-2"><b>Confirm your checkout currency and store address.</b> Customers can only pay with Swish when they&apos;re based in Sweden and checking out in SEK — double check your store&apos;s market and currency settings align with this.</li>
+        <li className="mb-2"><b>Test the checkout flow.</b> At checkout, Swish customers scan a QR code with the Swish app or Swedish BankID app to authorize payment — run a test order to confirm the QR flow displays correctly on both desktop and mobile.</li>
+      </ol>
+      <p className="mb-4">
+        If Shopify Payments isn&apos;t the right fit — for example, if you want Swish bundled into a broader Nordic checkout alongside Vipps, MobilePay, and pay-later options in a single integration — a dedicated payments/checkout app is the more common route, since it lets you manage multiple local methods under one contract instead of configuring each separately.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Common setup mistakes to avoid</h4>
+      <ul className="list-disc list-inside mb-3 pl-5 marker:text-primary">
+        <li><b>Wrong currency at checkout.</b> Both Vipps and Swish are tied to specific currencies and markets — Swish requires SEK and a Sweden-based store, Vipps is built around NOK and Norwegian customers. If your Shopify Markets setup doesn&apos;t route the right currency to the right region, the payment method simply won&apos;t appear.</li>
+        <li><b>Skipping test orders.</b> Both integrations recommend running production-mode test transactions before launch. Skipping this step is the most common reason merchants discover payment issues after going live rather than before.</li>
+        <li><b>Treating express checkout as automatic.</b> Neither Vipps nor Swish &quot;just works&quot; as a one-tap express button on product pages out of the box — that requires additional configuration or a dedicated app layer.</li>
+        <li><b>Forgetting the Companion/branding app for Vipps.</b> The base payment plugin processes payments, but skipping the Companion app means your store&apos;s branding and order details won&apos;t appear inside the customer&apos;s Vipps app — a small trust signal that&apos;s easy to miss.</li>
+      </ul>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Getting it right the first time</h4>
+      <p className="mb-3">
+        Vipps and Swish both convert well specifically because they feel effortless to the customer — but getting there requires the setup to be correct on your end: right currency, right market settings, right sequencing between Shopify Payments and any third-party apps. A checkout that looks right in testing but breaks for real customers in Norway or Sweden is a common, avoidable outcome of rushing this step.
+      </p>
+      <p className="mb-3">
+        If you&apos;d rather have this handled properly the first time — mapped to how your store is structured across markets and currencies — Alvatech can set up Vipps, Swish, and the rest of your Nordic payment stack so it&apos;s tested and working before it ever reaches a real customer.
+      </p>
+      <p className="mb-4">
+        Not sure whether Vipps, Swish, or a bundled Nordic checkout app fits your store best? <Link href="/contact-us">Get in touch with the Alvatech team</Link> to talk through your setup.
+      </p>
+    </>
+  );
+}
+
 function DefaultArticleIntro() {
   return (
     <p>
@@ -1851,5 +1948,6 @@ export default function renderArticleIntro(articleId, language) {
   if (articleId === 33) return <ShopifyMigrationArticleIntro />;
   if (articleId === 34) return <VendreShopifyPlusMigrationArticleIntro />;
   if (articleId === 35) return <KlarnaQliroSwishArticleIntro />;
+  if (articleId === 36) return <VippsSwishCheckoutArticleIntro />;
   return <DefaultArticleIntro />;
 }
