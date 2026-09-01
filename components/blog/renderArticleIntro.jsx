@@ -1928,6 +1928,101 @@ function VippsSwishCheckoutArticleIntro() {
   );
 }
 
+function SwitchEcommercePlatformArticleIntro() {
+  return (
+    <>
+      <p className="mb-4">
+        We&apos;ve had this conversation many times. A company reaches out — not because something broke, but because everything suddenly takes longer than it should. A feature that should take an afternoon to build ends up eating an entire sprint. The mobile experience feels unfinished. The integration with the business system never quite worked the way it was supposed to.
+      </p>
+      <p className="mb-4">
+        It&apos;s rarely a single crash that pushes a company to switch e-commerce platforms. More often it&apos;s a long string of small frictions that, over time, become more expensive to live with than to fix.
+      </p>
+      <p className="mb-5">
+        Here are the ten signs we keep recognising — grouped by where they actually hurt: the technology, the growth, the customer, and the team&apos;s day-to-day.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Signs 1–4: The Technology Has Become an Obstacle, Not a Tool</h4>
+      <p className="mb-3">
+        The first thing we look at when a company reaches out is how the platform actually performs. A slow product page or a heavy checkout is rarely just a technical detail — it&apos;s bounce rate, lost conversions, and weaker search visibility, plain and simple. If performance problems keep recurring despite optimisation attempts, it&apos;s usually not a matter of one wrong setting somewhere. It means the technical foundation no longer holds up.
+      </p>
+      <p className="mb-3">
+        The same pattern shows up in integrations. Modern e-commerce needs to talk to business systems, CRM, PIM, payment solutions, and logistics — and when every new connection requires custom development or manual workarounds, the platform starts to slow the business down instead of driving it. We see this often with companies that have built up their setup in layers over several years: fine on the surface, expensive and fragile underneath.
+      </p>
+      <p className="mb-3">
+        It shows up on the invoice too. Older or heavily customised platforms become costly to maintain — every new feature requires development work, security updates get complicated, and small changes take an unreasonable amount of time. It&apos;s rarely the new platform that&apos;s expensive. It&apos;s the old one that has become too expensive to keep.
+      </p>
+      <p className="mb-4">
+        And when downtime or outdated security become the norm rather than the exception, it&apos;s no longer a question of design and features. It&apos;s a question of whether the technical foundation can actually support what the business handles: customer data and payments.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Signs 5–6: The Platform Can&apos;t Keep Up With Growth</h4>
+      <p className="mb-3">
+        A platform that works great for a few hundred products won&apos;t automatically work for a few thousand. The same goes for selling in more markets, handling multiple languages and currencies, or serving customer segments that need different flows. We&apos;ve seen it again and again: it&apos;s rarely disloyalty to the old platform that pushes a company to switch — it&apos;s that growth has already outpaced it.
+      </p>
+      <p className="mb-4">
+        The clearest question to ask is also the simplest one: can your current e-commerce platform carry the business you want in two or three years? If the answer is no, or you&apos;re not sure, it&apos;s worth starting to plan before growth forces a rushed decision. A platform switch made in a panic, in the middle of a peak season, is rarely a good one.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Signs 7–8: The Customer Experience Is Falling Behind</h4>
+      <p className="mb-3">
+        Today&apos;s customers expect a fast, simple, relevant buying experience — and most visits happen on mobile. If the platform makes it hard to build personalised customer journeys, improve the checkout flow, or test your way to better conversion, it&apos;s no longer the marketing team&apos;s creativity setting the limit. It&apos;s the technology.
+      </p>
+      <p className="mb-4">
+        We especially see the mobile experience treated as an afterthought rather than the starting point — a desktop store retrofitted for mobile, not a store built mobile-first. That&apos;s an important distinction: mobile-friendly means it works on mobile. Mobile-first means the process starts there. The difference shows up directly in conversion.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Signs 9–10: The Team Is Spending Time on the Wrong Things</h4>
+      <p className="mb-3">
+        The last thing we usually ask about is what the team&apos;s day-to-day actually looks like. Are products, orders, and inventory still updated manually, in spreadsheets and repetitive routines? Then time that should go toward growth is going toward admin instead — a clear sign the systems aren&apos;t talking to each other the way they should.
+      </p>
+      <p className="mb-4">
+        The same goes for content and SEO. If every change to metadata, URL structure, or page content requires a developer, the marketing team becomes a bottleneck instead of a growth engine. The right platform should hand control back to the people actually driving content and organic traffic.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>What Switching Actually Requires</h4>
+      <p className="mb-3">
+        Switching e-commerce platforms is a bigger project than moving products from one system to another. A good migration accounts for business goals, customer data and product information, integrations, SEO and URL structure, performance, security, and — perhaps most importantly — how well the new platform can carry the growth you&apos;re actually planning for.
+      </p>
+      <p className="mb-4">
+        The three questions we always start with: Does the current platform support your business goals? Does it give customers the experience they expect? And can it grow along with the business? If the answer is no to more than one, it&apos;s worth a proper assessment before choosing the next step.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Frequently Asked Questions About Switching E-commerce Platforms</h4>
+      <p className="mb-2"><b>When should you switch e-commerce platforms?</b></p>
+      <p className="mb-3">
+        When the current solution is slowing the business down rather than carrying it — slow, hard to integrate, expensive to maintain, or too narrow for the growth you&apos;re planning. One or two of the signs above are rarely urgent. Several at once usually are.
+      </p>
+      <p className="mb-2"><b>How long does an e-commerce migration take?</b></p>
+      <p className="mb-3">
+        It depends on data volume, number of integrations, and how well-defined the requirements are from the start. We always set a timeline that holds up in production — not one that just looks good in a sales meeting.
+      </p>
+      <p className="mb-2"><b>Does switching platforms affect SEO?</b></p>
+      <p className="mb-3">
+        Only if it&apos;s done wrong. URL structure, redirects, and metadata are standard parts of a well-planned migration — rankings shouldn&apos;t have to drop.
+      </p>
+      <p className="mb-2"><b>What should you consider before choosing a new e-commerce platform?</b></p>
+      <p className="mb-3">
+        Business goals, integration needs, scalability, customer experience, security, SEO, and the actual cost over time — not just the licence fee.
+      </p>
+      <p className="mb-2"><b>Can AlvaTech help?</b></p>
+      <p className="mb-4">
+        Yes. We build and migrate e-commerce platforms for Swedish businesses that have outgrown their current setup, with a focus on making sure the foundation holds once they grow.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Is It Time?</h4>
+      <p className="mb-3">
+        Switching e-commerce platforms isn&apos;t a decision to make just because a new piece of technology feels more modern. But if you recognise several of the signs above, your current platform is probably already becoming an obstacle to growth.
+      </p>
+      <p className="mb-3">
+        We always start with a no-obligation review before recommending a switch. Sometimes the answer is to wait. More often, the answer is that you should have started a year ago.
+      </p>
+      <p className="mb-4">
+        <Link href="/contact-us">Book a review with AlvaTech</Link> for an honest read on where your current platform actually stands.
+      </p>
+    </>
+  );
+}
+
 function DefaultArticleIntro() {
   return (
     <p>
@@ -1949,5 +2044,6 @@ export default function renderArticleIntro(articleId, language) {
   if (articleId === 34) return <VendreShopifyPlusMigrationArticleIntro />;
   if (articleId === 35) return <KlarnaQliroSwishArticleIntro />;
   if (articleId === 36) return <VippsSwishCheckoutArticleIntro />;
+  if (articleId === 37) return <SwitchEcommercePlatformArticleIntro />;
   return <DefaultArticleIntro />;
 }

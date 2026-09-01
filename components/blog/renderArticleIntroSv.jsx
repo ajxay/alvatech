@@ -2111,6 +2111,101 @@ function VippsSwishCheckoutArticleIntroSv() {
   );
 }
 
+function SwitchEcommercePlatformArticleIntroSv() {
+  return (
+    <>
+      <p className="mb-4">
+        Vi har suttit i det här samtalet många gånger. Ett företag hör av sig — inte för att något gått sönder, utan för att allt plötsligt tar längre tid än det borde. En funktion som borde ta en eftermiddag att bygga kräver en hel sprint. Mobilupplevelsen känns halvfärdig. Integrationen mot affärssystemet har aldrig riktigt fungerat som utlovat.
+      </p>
+      <p className="mb-4">
+        Det är sällan en enskild krasch som får ett företag att byta e-handelsplattform. Oftare är det en lång rad små friktioner som med tiden blir dyrare att leva med än att åtgärda.
+      </p>
+      <p className="mb-5">
+        Här är de tio tecken vi känner igen gång på gång — grupperade efter var de faktiskt gör ont: i tekniken, i tillväxten, hos kunden och i teamets vardag.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Tecken 1–4: Tekniken har blivit ett hinder istället för ett verktyg</h4>
+      <p className="mb-3">
+        Det första vi tittar på när ett företag hör av sig är hur plattformen faktiskt presterar. En långsam produktsida eller en tung kassaprocess är sällan bara en teknisk detalj — det är avvisningsfrekvens, tappade konverteringar och sämre synlighet i sökresultat, rakt av. Om prestandaproblemen återkommer trots optimeringsförsök brukar det inte handla om en fel inställning någonstans. Det handlar om att den tekniska grunden inte längre räcker till.
+      </p>
+      <p className="mb-3">
+        Samma mönster syns i integrationerna. En modern e-handel behöver prata med affärssystem, CRM, PIM, betallösningar och logistik — och när varje ny koppling kräver specialutveckling eller manuella genvägar börjar plattformen bromsa snarare än driva verksamheten. Vi ser det ofta hos företag som byggt upp sin lösning i lager över flera år: fungerande på ytan, men dyrt och skört under.
+      </p>
+      <p className="mb-3">
+        Det syns också på fakturan. Äldre eller hårt specialanpassade plattformar blir kostsamma att underhålla — varje ny funktion kräver utveckling, säkerhetsuppdateringar blir komplicerade, och små ändringar tar orimligt lång tid. Det är sällan den nya plattformen som är dyr. Det är den gamla som blivit för dyr att behålla.
+      </p>
+      <p className="mb-4">
+        Och när driftstörningar eller föråldrad säkerhet blir återkommande snarare än undantag är det inte längre en fråga om design och funktioner. Det är en fråga om huruvida den tekniska grunden håller för det företaget faktiskt hanterar: kunddata och betalningar.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Tecken 5–6: Plattformen hänger inte med i tillväxten</h4>
+      <p className="mb-3">
+        En plattform som fungerar utmärkt för några hundra produkter är inte automatiskt rätt lösning för några tusen. Samma sak gäller när företaget börjar sälja på fler marknader, hantera flera språk och valutor, eller möta kundsegment som kräver olika flöden. Vi har sett gång på gång att det sällan är illojalitet mot den gamla plattformen som får företag att byta — det är att tillväxten redan har sprungit förbi den.
+      </p>
+      <p className="mb-4">
+        Den tydligaste frågan att ställa sig är egentligen den enklaste: kan er nuvarande e-handelsplattform bära den affär ni vill ha om två eller tre år? Om svaret är nej eller osäkert är det värt att börja planera innan tillväxten tvingar fram ett hastigt beslut. Ett plattformsbyte som görs i panik, mitt i en säsongstopp, blir sällan ett bra byte.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Tecken 7–8: Kundupplevelsen halkar efter</h4>
+      <p className="mb-3">
+        Kunder förväntar sig i dag en snabb, enkel och relevant köpupplevelse — och merparten av besöken sker via mobilen. Om plattformen gör det svårt att bygga personliga kundresor, förbättra kassaflödet eller testa sig fram till bättre konvertering, är det inte längre marknadsteamets kreativitet som sätter gränsen. Det är tekniken.
+      </p>
+      <p className="mb-4">
+        Vi ser särskilt ofta att mobilupplevelsen blivit ett eftertänk snarare än utgångspunkten — en desktopbutik som anpassats i efterhand, inte en butik som är byggd mobil först. Det är en viktig distinktion: mobilanpassad betyder att det fungerar på mobilen. Mobil först betyder att arbetssättet utgår därifrån. Skillnaden märks direkt i konverteringen.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Tecken 9–10: Teamet lägger tid på fel saker</h4>
+      <p className="mb-3">
+        Det sista vi brukar fråga om är hur teamets vardag faktiskt ser ut. Uppdateras produkter, order och lager fortfarande manuellt, i Excel-filer och repetitiva rutiner? Då går tid som borde gå till tillväxt istället åt till administration — ett tydligt tecken på att systemen inte pratar med varandra som de borde.
+      </p>
+      <p className="mb-4">
+        Samma sak gäller innehåll och SEO. Om varje ändring av metadata, URL-struktur eller sidinnehåll kräver hjälp från en utvecklare blir marknadsteamet en flaskhals istället för en tillväxtmotor. Rätt plattform ska ge kontrollen tillbaka till dem som faktiskt driver innehållet och den organiska trafiken.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Vad ett byte faktiskt kräver</h4>
+      <p className="mb-3">
+        Att byta e-handelsplattform är ett större projekt än att flytta produkter från ett system till ett annat. En bra migrering tar hänsyn till affärsmål, kunddata och produktinformation, integrationer, SEO och URL-struktur, prestanda, säkerhet och — kanske viktigast — hur väl den nya plattformen bär den tillväxt ni faktiskt planerar för.
+      </p>
+      <p className="mb-4">
+        De frågor vi alltid börjar med är tre: Stödjer den nuvarande plattformen era affärsmål? Ger den kunderna den upplevelse de förväntar sig? Och kan den växa i takt med verksamheten? Är svaret nej på fler än en är det värt en ordentlig nulägesanalys innan ni väljer nästa steg.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Vanliga frågor om att byta e-handelsplattform</h4>
+      <p className="mb-2"><b>När bör man byta e-handelsplattform?</b></p>
+      <p className="mb-3">
+        När den nuvarande lösningen bromsar snarare än bär affären — långsam, svår att integrera, dyr att underhålla eller för trång för den tillväxt ni planerar för. Ett eller två av tecknen ovan är sällan akut. Flera samtidigt brukar vara det.
+      </p>
+      <p className="mb-2"><b>Hur lång tid tar en e-handelsmigrering?</b></p>
+      <p className="mb-3">
+        Det beror på datamängd, antal integrationer och hur väldefinierade kraven är från start. Vi sätter alltid en tidsplan som håller i produktion — inte en som bara ser bra ut i ett säljmöte.
+      </p>
+      <p className="mb-2"><b>Påverkar ett plattformsbyte SEO?</b></p>
+      <p className="mb-3">
+        Bara om det görs fel. URL-struktur, omdirigeringar och metadata är standardmoment i en välplanerad migrering — rankningar ska inte behöva tappas.
+      </p>
+      <p className="mb-2"><b>Vad ska man tänka på innan man väljer en ny e-handelsplattform?</b></p>
+      <p className="mb-3">
+        Affärsmål, integrationsbehov, skalbarhet, kundupplevelse, säkerhet, SEO och den faktiska kostnaden över tid — inte bara licenskostnaden.
+      </p>
+      <p className="mb-2"><b>Kan AlvaTech hjälpa till?</b></p>
+      <p className="mb-4">
+        Ja. Vi bygger och migrerar e-handelsplattformar för svenska företag som vuxit ur sin nuvarande lösning, med fokus på att grunden håller när ni väl växer.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Är det dags?</h4>
+      <p className="mb-3">
+        Att byta e-handelsplattform är inget beslut man bör ta för att en ny teknik känns modernare. Men om ni känner igen flera av tecknen ovan är plattformen sannolikt redan på väg att bli ett hinder för tillväxten.
+      </p>
+      <p className="mb-3">
+        Vi gör alltid en förutsättningslös genomgång innan vi rekommenderar ett byte. Ibland är svaret att ni ska vänta. Oftare är svaret att ni borde ha börjat för ett år sedan.
+      </p>
+      <p className="mb-4">
+        <Link href="/contact-us">Boka en genomgång med AlvaTech</Link> och få en bedömning av var er nuvarande plattform faktiskt står.
+      </p>
+    </>
+  );
+}
+
 export default function renderArticleIntroSv(articleId) {
   if (articleId === 26) return <BestAiToolsShopifyArticleIntroSv />;
   if (articleId === 27) return <SalesforceArticleIntroSv />;
@@ -2123,5 +2218,6 @@ export default function renderArticleIntroSv(articleId) {
   if (articleId === 34) return <VendreShopifyPlusMigrationArticleIntroSv />;
   if (articleId === 35) return <KlarnaQliroSwishArticleIntroSv />;
   if (articleId === 36) return <VippsSwishCheckoutArticleIntroSv />;
+  if (articleId === 37) return <SwitchEcommercePlatformArticleIntroSv />;
   return <DefaultArticleIntroSv />;
 }

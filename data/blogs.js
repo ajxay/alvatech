@@ -1,5 +1,28 @@
 export const blogsPosts4 = [
   {
+    id: 37,
+    slug: "byta-e-handelsplattform-10-tecken",
+    category: "Strategy",
+    imgSrc: "/assets/images/blog/byta-e-handelsplattform-10-tecken.jpg",
+    imgAlt: "When Is It Time to Switch E-commerce Platforms? 10 Clear Signs",
+    imgCaption: "When Is It Time to Switch E-commerce Platforms? 10 Clear Signs",
+    title: "When Is It Time to Switch E-commerce Platforms? 10 Clear Signs",
+    titleSv: "När är det dags att byta e-handelsplattform? 10 tydliga tecken",
+    authorImg: "/assets/images/avatars/01.png",
+    authorAlt: "Alva Tech",
+    desc: "We've migrated stores that outgrew their platform, again and again. Here are the signs we recognise — and what actually determines whether it's time to switch e-commerce platforms.",
+    descSv:
+      "Vi har flyttat butiker som vuxit ur sin plattform gång på gång. Här är tecknen vi känner igen — och vad som faktiskt avgör om det är dags att byta e-handelsplattform.",
+    authorName: "Alva Tech",
+    date: "Sep 1, 2026",
+    metaTitle: "When Is It Time to Switch E-commerce Platforms? 10 Clear Signs — AlvaTech",
+    metaTitleSv: "När är det dags att byta e-handelsplattform? 10 tydliga tecken — AlvaTech",
+    metaDescription:
+      "We've migrated stores that outgrew their platform, again and again. Here are the signs we recognise — and what actually determines whether it's time to switch e-commerce platforms.",
+    metaDescriptionSv:
+      "Vi har flyttat butiker som vuxit ur sin plattform gång på gång. Här är tecknen vi känner igen — och vad som faktiskt avgör om det är dags att byta e-handelsplattform.",
+  },
+  {
     id: 36,
     slug: "integrate-vipps-swish-shopify-checkout",
     category: "Shopify",
