@@ -2023,6 +2023,173 @@ function SwitchEcommercePlatformArticleIntro() {
   );
 }
 
+function SlowShopifyStoreArticleIntro() {
+  const checklist = [
+    "Audit your Shopify theme",
+    "Remove unused apps",
+    "Review third-party scripts",
+    "Compress and resize images",
+    "Use responsive images",
+    "Optimize JavaScript",
+    "Remove unnecessary animations",
+    "Review homepage sections",
+    "Check mobile performance",
+    "Review Core Web Vitals",
+    "Test Liquid performance",
+    "Monitor performance after changes",
+  ];
+
+  return (
+    <>
+      <p className="mb-4">
+        We get this question often: why is my Shopify store loading slowly? The answer is rarely Shopify itself. More often it&apos;s the theme, the apps, the images, the JavaScript, or the third-party tools that have quietly stacked up into more weight than the platform was ever meant to carry.
+      </p>
+      <p className="mb-4">
+        Shopify measures performance through metrics such as Largest Contentful Paint (LCP), Cumulative Layout Shift (CLS), Interaction to Next Paint (INP) and Time to First Byte (TTFB). These are useful numbers — but what matters isn&apos;t the score itself, it&apos;s what the score is actually pointing at.
+      </p>
+      <p className="mb-5">
+        Here are the seven causes we run into most often when diagnosing a slow Shopify store — and what usually fixes them.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>1. Your Theme Is Too Heavy</h4>
+      <p className="mb-3">
+        Your theme controls most of what a customer sees and interacts with. A heavy theme usually carries excess Liquid code, unnecessary JavaScript, large CSS files, too many sections, and a DOM structure that&apos;s grown complicated over the years without anyone cleaning up behind it. The more the browser has to process, the longer the page takes to become usable.
+      </p>
+      <p className="mb-3">
+        Shopify itself flags deeply nested Liquid loops and unnecessary processing as common causes of slow server rendering and TTFB — see its theme performance documentation.
+      </p>
+      <p className="mb-4">
+        We see this most often in stores that have been live for years and accumulated customizations in layers — fine on the surface, heavier underneath than anyone realizes. The fix is rarely adding more code on top. Start with a performance audit of the theme, remove what&apos;s no longer used, and consider a partial rebuild if the customizations have piled up too far to untangle one by one.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>2. You Have Too Many Apps</h4>
+      <p className="mb-3">
+        Apps aren&apos;t the problem by themselves — the number of them running unchecked usually is. Each one can add JavaScript, CSS, tracking scripts, and external requests, and when ten apps do that on every page at once, a sluggish storefront isn&apos;t surprising.
+      </p>
+      <p className="mb-3">
+        Shopify has pointed to render-blocking apps as one of the most common causes of delayed page rendering.
+      </p>
+      <p className="mb-4">
+        The simplest fix is going through your installed apps and asking: do we actually still need this one? If not, remove it. For the ones you keep, check whether their scripts can be limited to only the pages where the feature is used — and whether more than one app is solving the same problem your theme already handles.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>3. Your Product Images Are Too Large</h4>
+      <p className="mb-3">
+        Images are often the single heaviest part of a product page, and frequently the actual Largest Contentful Paint element — which makes image optimization one of the highest-leverage fixes available. A multi-megabyte image doesn&apos;t need to load at full size on a mobile screen that can only display a fraction of it.
+      </p>
+      <p className="mb-4">
+        Compress large images, use responsive sizing, and reach for modern formats where it makes sense. Avoid lazy-loading your most important above-the-fold image, but do lazy-load everything further down the page. The goal is simple: high image quality without downloading more data than the customer actually needs.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>4. Too Much JavaScript</h4>
+      <p className="mb-3">
+        JavaScript drives a lot of what makes a Shopify store interactive — menus, filters, sliders, recommendations. But when too much of it has to download, parse, and execute before the page becomes usable, it shows immediately: sluggish menus, buttons that don&apos;t respond, delayed product content, especially on mobile.
+      </p>
+      <p className="mb-4">
+        Audit the code and remove what isn&apos;t needed. For what remains but isn&apos;t critical, techniques like defer, async, or dynamic imports let scripts load only when they&apos;re actually required. Most importantly, content that can be rendered directly through HTML and Liquid — product information, navigation — shouldn&apos;t have to wait on JavaScript at all.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>5. Your Homepage Has Too Many Elements</h4>
+      <p className="mb-3">
+        A homepage trying to show everything often ends up showing nothing well. Sliders, video backgrounds, carousels, animations, review widgets, social feeds, pop-ups — each one harmless alone, a real burden together.
+      </p>
+      <p className="mb-4">
+        The question worth asking about every section is simple: does this help the customer understand the offer or move closer to a purchase? If not, it&apos;s a candidate to cut. Prioritize what customers need to see first — the core message, the main product, the key benefits, social proof, and a clear call to action. A simpler homepage usually beats an overloaded one.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>6. Third-Party Scripts Are Adding Up</h4>
+      <p className="mb-3">
+        Most stores depend on external services — analytics, advertising, chat, reviews, personalization, A/B testing. Each one adds network requests, and together they can slow down how quickly the content that actually matters gets in front of the visitor.
+      </p>
+      <p className="mb-4">
+        List every third-party script running on the site and sort each into one of three buckets: essential (keep), useful but not critical (defer or optimize), and unused (remove). This matters especially for mobile visitors, who are more likely to be on slower connections and less powerful devices.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>7. Mobile Isn&apos;t Actually Optimized</h4>
+      <p className="mb-3">
+        A store can perform fine on desktop and still feel sluggish on mobile — usually because of oversized images, complex menus, heavy JavaScript, or a desktop-first layout retrofitted for smaller screens rather than built for them from the start.
+      </p>
+      <p className="mb-4">
+        Checking whether a site is &quot;mobile-friendly&quot; isn&apos;t enough. What matters is how it actually performs there: LCP, CLS, INP, image sizes, font loading, and how the above-the-fold content behaves. Make sure images have defined dimensions too, so the browser knows how much space to reserve before they load — otherwise the layout jumps, which is exactly what CLS measures (Shopify&apos;s own guidance on preventing image layout shift covers this in more depth).
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>How to Check Your Store&apos;s Speed</h4>
+      <p className="mb-3">
+        Before making changes, establish a baseline. Google PageSpeed Insights, Chrome Lighthouse, Shopify&apos;s own performance reports, and Shopify Theme Inspector each show a different part of the picture. Don&apos;t fixate on a single score — the point is understanding why the page is slow.
+      </p>
+      <p className="mb-4">
+        A high TTFB points to Liquid and theme-side rendering. Poor LCP points to hero images, rendering, and blocking resources. Poor CLS points to image dimensions and dynamic content. Poor INP points to JavaScript and heavy interactions. That&apos;s what lets you prioritize what actually affects the experience, rather than chasing a score.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Is Shopify the Problem?</h4>
+      <p className="mb-4">
+        Rarely, and almost never alone. Shopify delivers much of the storefront through its CDN and handles a range of optimizations automatically. In practice, the bottleneck is almost always how the store has been built and configured on top of the platform — the theme, the apps, the images, the JavaScript, and the third-party tools, together. That&apos;s why real speed optimization means reviewing the whole store, not tweaking a single setting.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>How AlvaTech Can Help</h4>
+      <p className="mb-3">
+        We&apos;ve run this diagnosis many times, and the pattern is rarely a single cause — it&apos;s a combination that built up over time. Our work on Shopify speed is never just about shaving a load time; it&apos;s about doing that without giving up SEO, user experience, or conversion.
+      </p>
+      <p className="mb-3">
+        We help businesses with Shopify development, theme customization, migration, app integrations, technical SEO, and performance optimization — usually together, since they&apos;re rarely solvable in isolation. A structured review typically covers theme performance, image optimization, an audit of apps and scripts, a Core Web Vitals analysis, mobile performance, and an SEO check to make sure nothing important gets lost along the way.
+      </p>
+      <p className="mb-4">
+        The goal isn&apos;t just a faster store. It&apos;s one that&apos;s fast, discoverable, easy to use, and built to grow.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Shopify Store Speed Checklist</h4>
+      <p className="mb-3">Before calling your store &quot;slow,&quot; work through this:</p>
+      {/* The box glyph is the marker, so the list drops its own. */}
+      <ul className="mb-3" style={{ listStyle: "none", paddingLeft: 0 }}>
+        {checklist.map((item) => (
+          <li key={item}>☐&nbsp;&nbsp;{item}</li>
+        ))}
+      </ul>
+      <p className="mb-4">
+        Measure first. Identify the problem. Optimize. Test again. Optimizing without understanding the cause usually produces a lot of work and little improvement.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Final Thoughts</h4>
+      <p className="mb-3">
+        A slow Shopify store rarely needs a full rebuild. It needs the actual bottleneck identified — a heavy theme, too many apps, oversized images, excessive JavaScript, third-party scripts, an overloaded homepage, or poor mobile optimization are all common candidates, but rarely all at once.
+      </p>
+      <p className="mb-4">
+        The approach stays the same regardless of which one it is: measure, identify, optimize, test, repeat. When performance, SEO, UX, and Shopify development all need to work together, that&apos;s usually where an experienced partner adds the most value — not by solving one problem at a time, but by seeing the whole picture.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Frequently Asked Questions</h4>
+      <p className="mb-2"><b>1. Why is my Shopify store loading slowly?</b></p>
+      <p className="mb-3">
+        Usually a heavy theme, too many apps, large images, excessive JavaScript, third-party scripts, complex Liquid code, or poor mobile optimization. The first step is always finding the specific bottleneck, not guessing.
+      </p>
+      <p className="mb-2"><b>2. How can I speed up my Shopify store?</b></p>
+      <p className="mb-3">
+        Start with the theme and installed apps. Then optimize images, remove unnecessary scripts, reduce JavaScript, improve Liquid performance, and review the mobile experience. Always measure before and after.
+      </p>
+      <p className="mb-2"><b>3. Do Shopify apps slow down a website?</b></p>
+      <p className="mb-3">
+        Yes. Some apps add JavaScript, CSS, and external requests that can block rendering and delay page load. Unused or unnecessary apps should be removed or optimized.
+      </p>
+      <p className="mb-2"><b>4. Do large images make Shopify stores slower?</b></p>
+      <p className="mb-3">
+        Yes, especially on mobile, where they increase the amount of data that needs to download. Responsive, optimized images reduce unnecessary page weight and improve load time.
+      </p>
+      <p className="mb-2"><b>5. Does Shopify speed affect SEO?</b></p>
+      <p className="mb-3">
+        Yes. Core Web Vitals — LCP, CLS, and INP — measure parts of the user experience and are used as ranking signals. Technical performance is part of a long-term SEO strategy, not a separate concern.
+      </p>
+      <p className="mb-2"><b>6. How do I check my Shopify store&apos;s speed?</b></p>
+      <p className="mb-3">
+        Google PageSpeed Insights, Chrome Lighthouse, and Shopify&apos;s own performance tools are a good starting point. Shopify Theme Inspector helps developers dig deeper into Liquid rendering.
+      </p>
+      <p className="mb-2"><b>7. Can AlvaTech help improve Shopify store speed?</b></p>
+      <p className="mb-4">
+        Yes. We work on Shopify development, theme customization, migration, app integrations, technical SEO, and performance optimization — and rarely tackle them in isolation, since they&apos;re rarely standalone problems.
+      </p>
+    </>
+  );
+}
+
 function DefaultArticleIntro() {
   return (
     <p>
@@ -2045,5 +2212,6 @@ export default function renderArticleIntro(articleId, language) {
   if (articleId === 35) return <KlarnaQliroSwishArticleIntro />;
   if (articleId === 36) return <VippsSwishCheckoutArticleIntro />;
   if (articleId === 37) return <SwitchEcommercePlatformArticleIntro />;
+  if (articleId === 38) return <SlowShopifyStoreArticleIntro />;
   return <DefaultArticleIntro />;
 }

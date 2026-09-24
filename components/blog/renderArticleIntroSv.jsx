@@ -2206,6 +2206,167 @@ function SwitchEcommercePlatformArticleIntroSv() {
   );
 }
 
+function SlowShopifyStoreArticleIntroSv() {
+  const checklist = [
+    "Granska Shopify-temat",
+    "Ta bort oanvända appar",
+    "Kontrollera tredjepartsskript",
+    "Komprimera och optimera bilder",
+    "Använd responsiva bilder",
+    "Optimera JavaScript",
+    "Ta bort onödiga animationer",
+    "Granska startsidans sektioner",
+    "Kontrollera mobil prestanda",
+    "Analysera Core Web Vitals",
+    "Kontrollera Liquid-prestanda",
+    "Mät prestandan igen efter optimeringar",
+  ];
+
+  return (
+    <>
+      <p className="mb-4">
+        Vi får den här frågan ofta: varför laddar min Shopify-butik långsamt? Svaret är sällan Shopify i sig. Oftare är det temat, apparna, bilderna, JavaScripten eller tredjepartsverktygen som tillsammans byggt upp en tyngd som plattformen aldrig var tänkt att bära.
+      </p>
+      <p className="mb-4">
+        Shopify mäter prestanda bland annat via Largest Contentful Paint (LCP), Cumulative Layout Shift (CLS), Interaction to Next Paint (INP) och Time to First Byte (TTFB). Det är användbara mått — men det viktiga är inte poängen i sig, utan vad den faktiskt pekar på.
+      </p>
+      <p className="mb-5">
+        Här går vi igenom de sju orsaker vi stöter på oftast när vi diagnostiserar en långsam Shopify-butik — och vad som faktiskt brukar lösa dem.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>1. Temat är för tungt</h4>
+      <p className="mb-3">
+        Temat styr en stor del av det kunden ser och interagerar med. Ett tungt tema bär ofta på överflödig Liquid-kod, onödig JavaScript, stora CSS-filer, för många sektioner och en DOM-struktur som vuxit sig komplex över tid utan att någon rensat efter sig. Ju mer kod webbläsaren behöver bearbeta, desto längre dröjer det innan sidan blir användbar.
+      </p>
+      <p className="mb-4">
+        Vi ser det här mönstret särskilt ofta hos butiker som funnits i flera år och samlat på sig anpassningar lager på lager — fungerande på ytan, men allt tyngre under. Lösningen är sällan att lägga till mer kod på toppen. Börja med en prestandagranskning av temat, ta bort det som inte längre används, och överväg en delvis ombyggnad om anpassningarna blivit för många för att rensa bort en och en.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>2. För många appar</h4>
+      <p className="mb-3">
+        Appar är sällan problemet i sig — det är mängden. Varje app kan lägga till JavaScript, CSS, spårningsskript och externa förfrågningar, och när tio appar gör det samtidigt på varje sida är det inte konstigt att butiken känns trög.
+      </p>
+      <p className="mb-4">
+        Den enklaste åtgärden är att gå igenom listan med installerade appar och fråga: behöver vi verkligen den här? Om svaret är nej, ta bort den. För apparna ni behöver, undersök om skripten kan begränsas till de sidor där funktionen faktiskt används — och kontrollera om flera appar löser samma sak som redan finns inbyggt i temat.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>3. Produktbilderna är för stora</h4>
+      <p className="mb-3">
+        Bilder är ofta den enskilt tyngsta delen av en produktsida, och utgör dessutom vanligen själva Largest Contentful Paint-elementet — vilket gör bildoptimering till en av de mest verkningsfulla åtgärderna som finns. En bild på flera megabyte behöver inte levereras i fullstorlek till en mobilskärm som bara kan visa en bråkdel av den.
+      </p>
+      <p className="mb-4">
+        Komprimera stora bilder, använd responsiva bildstorlekar och moderna format där det är lämpligt, och undvik lazy loading på den viktigaste bilden ovanför vikningen — allt längre ned på sidan bör däremot lazy-loadas. Målet är enkelt: hög bildkvalitet utan att ladda ner mer data än kunden faktiskt behöver.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>4. För mycket JavaScript</h4>
+      <p className="mb-3">
+        JavaScript driver mycket av det som gör en Shopify-butik interaktiv — menyer, filter, sliders, rekommendationer. Men när för mycket av det måste laddas, tolkas och köras innan sidan blir användbar märks det direkt: långsamma menyer, knappar som inte reagerar, försenat produktinnehåll, särskilt på mobilen.
+      </p>
+      <p className="mb-4">
+        Gå igenom koden och ta bort det som inte behövs. För det som är kvar men inte kritiskt går det att använda defer, async eller dynamiska imports så att skriptet laddas när det faktiskt krävs. Och viktigast: innehåll som kan renderas direkt med HTML och Liquid — produktinformation, navigation — bör inte behöva vänta på JavaScript överhuvudtaget.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>5. Startsidan har för många element</h4>
+      <p className="mb-3">
+        En startsida som ska visa allt riskerar att inte visa något bra. Bildspel, videobakgrunder, karuseller, animationer, recensionswidgets, sociala flöden och pop-ups — var för sig oskyldiga, tillsammans en belastning.
+      </p>
+      <p className="mb-4">
+        Frågan värd att ställa om varje sektion är enkel: hjälper den kunden att förstå erbjudandet eller komma närmare ett köp? Om inte, är den en kandidat att ta bort. Prioritera det kunden behöver se först — varumärkets budskap, huvudprodukten, de viktigaste fördelarna, socialt bevis och en tydlig uppmaning till handling. En enklare startsida ger ofta en bättre upplevelse än en fullproppad.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>6. Tredjepartsskript</h4>
+      <p className="mb-3">
+        De flesta butiker är beroende av externa tjänster — analys, annonsering, chatt, recensioner, personalisering, A/B-testning. Var och en introducerar ytterligare nätverksförfrågningar, och tillsammans kan de bromsa hur snabbt det viktigaste innehållet faktiskt visas.
+      </p>
+      <p className="mb-4">
+        Gör en lista över samtliga tredjepartsskript på webbplatsen och sortera dem i tre kategorier: nödvändiga (behåll), viktiga men inte kritiska (optimera eller fördröj), och onödiga (ta bort). Det spelar särskilt stor roll för mobilanvändare, som ofta har långsammare uppkoppling och mindre kraftfulla enheter.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>7. Mobilen är inte optimerad</h4>
+      <p className="mb-3">
+        En butik kan prestera bra på desktop och ändå kännas trög på mobilen — vanliga orsaker är för stora bilder, komplexa menyer, tung JavaScript och en desktop-först-design som anpassats i efterhand snarare än byggts för mobilen från grunden.
+      </p>
+      <p className="mb-4">
+        Det räcker inte att kontrollera om webbplatsen är mobilanpassad. Det viktiga är hur den faktiskt presterar där: LCP, CLS, INP, bildstorlekar, typsnittsladdning och hur innehållet ovanför vikningen beter sig. Se också till att bilder har definierade dimensioner, så att webbläsaren vet vilket utrymme som ska reserveras innan bilden laddats — annars hoppar layouten till, vilket är precis det CLS mäter.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Hur kontrollerar du hastigheten på din Shopify-butik?</h4>
+      <p className="mb-3">
+        Innan ni börjar optimera behöver ni en tydlig utgångspunkt. Google PageSpeed Insights, Chrome Lighthouse, Shopifys egna prestandaverktyg och Shopify Theme Inspector visar alla olika delar av bilden. Fokusera inte på en enda poäng — det viktiga är att förstå varför sidan är långsam.
+      </p>
+      <p className="mb-4">
+        En hög TTFB pekar mot Liquid och temats server-rendering. Dålig LCP pekar mot hero-bilder, rendering och blockerande resurser. Dålig CLS pekar mot bilddimensioner och dynamiskt innehåll. Dålig INP pekar mot JavaScript och tunga interaktioner. På så sätt går det att prioritera det som faktiskt påverkar användarupplevelsen, istället för att jaga en poäng.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Är det Shopify som gör butiken långsam?</h4>
+      <p className="mb-4">
+        Sällan, och nästan aldrig ensamt. Shopify levererar mycket av innehållet via CDN och hanterar en rad optimeringar automatiskt. I praktiken ligger flaskhalsen nästan alltid i hur butiken byggts och konfigurerats ovanpå plattformen — temat, apparna, bilderna, JavaScripten och tredjepartstjänsterna tillsammans. Det är därför en riktig hastighetsoptimering kräver en genomgång av hela butiken, inte en enskild inställning.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Hur AlvaTech kan hjälpa till</h4>
+      <p className="mb-3">
+        Vi har suttit med den här typen av diagnos många gånger, och mönstret är sällan en enda orsak — det är en kombination som byggts upp över tid. Vårt arbete med Shopify-hastighet handlar därför aldrig bara om att sänka en laddningstid, utan om att göra det utan att tumma på SEO, användarupplevelse eller konvertering.
+      </p>
+      <p className="mb-3">
+        Vi hjälper företag med Shopify-utveckling, temaanpassning, migrering, appintegrationer, teknisk SEO och prestandaoptimering — ofta i kombination, eftersom de sällan går att lösa var för sig. En strukturerad genomgång brukar omfatta temaoptimering, bildoptimering, en granskning av appar och skript, en Core Web Vitals-analys, mobiloptimering och en SEO-kontroll för att säkerställa att inget viktigt tappas på vägen.
+      </p>
+      <p className="mb-4">
+        Målet är inte bara en snabbare butik. Det är en butik som är snabb, sökbar, användarvänlig och byggd för att växa.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Checklista för snabbare Shopify-butik</h4>
+      <p className="mb-3">Innan ni drar slutsatsen att butiken är långsam, gå igenom:</p>
+      {/* Rutan är markören, så listan tar bort sin egen. */}
+      <ul className="mb-3" style={{ listStyle: "none", paddingLeft: 0 }}>
+        {checklist.map((item) => (
+          <li key={item}>☐&nbsp;&nbsp;{item}</li>
+        ))}
+      </ul>
+      <p className="mb-4">
+        Mät först. Identifiera problemet. Optimera. Testa igen. Att optimera utan att förstå orsaken ger sällan annat än mycket arbete och lite resultat.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Slutsats</h4>
+      <p className="mb-3">
+        En långsam Shopify-butik kräver sällan att hela webbplatsen byggs om. Den kräver att man hittar den faktiska flaskhalsen — ett tungt tema, för många appar, för stora bilder, för mycket JavaScript, tredjepartsskript, en överlastad startsida eller bristande mobiloptimering är alla vanliga kandidater, men sällan alla på samma gång.
+      </p>
+      <p className="mb-4">
+        Tillvägagångssättet är detsamma oavsett vilken det är: mät, identifiera, optimera, testa, upprepa. När prestanda, SEO, UX och Shopify-utveckling behöver fungera tillsammans är det ofta där en erfaren partner gör som mest nytta — inte genom att lösa ett problem i taget, utan genom att se helheten.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Vanliga frågor om långsamma Shopify-butiker</h4>
+      <p className="mb-2"><b>1. Varför laddar min Shopify-butik långsamt?</b></p>
+      <p className="mb-3">
+        Oftast på grund av ett tungt tema, för många appar, stora bilder, mycket JavaScript, tredjepartsskript, komplex Liquid-kod eller bristande mobiloptimering. Första steget är alltid att hitta den specifika flaskhalsen, inte att gissa.
+      </p>
+      <p className="mb-2"><b>2. Hur gör jag min Shopify-butik snabbare?</b></p>
+      <p className="mb-3">
+        Börja med temat och de installerade apparna. Optimera sedan bilder, ta bort onödiga skript, minska JavaScript, förbättra Liquid-prestandan och kontrollera mobilupplevelsen. Mät alltid före och efter.
+      </p>
+      <p className="mb-2"><b>3. Kan Shopify-appar göra en butik långsammare?</b></p>
+      <p className="mb-3">
+        Ja. Vissa appar lägger till JavaScript, CSS och externa förfrågningar som kan blockera rendering och fördröja sidladdningen. Oanvända eller onödiga appar bör tas bort eller optimeras.
+      </p>
+      <p className="mb-2"><b>4. Gör stora bilder Shopify-butiker långsammare?</b></p>
+      <p className="mb-3">
+        Ja, särskilt på mobila enheter där de ökar mängden data som behöver laddas ner. Optimerade och responsiva bilder minskar onödig sidvikt och förbättrar laddningstiden.
+      </p>
+      <p className="mb-2"><b>5. Påverkar Shopify-hastigheten SEO?</b></p>
+      <p className="mb-3">
+        Ja. Core Web Vitals — LCP, CLS och INP — mäter delar av användarupplevelsen och används som rankningssignaler. Teknisk prestanda är därför en del av en långsiktig SEO-strategi, inte en separat fråga.
+      </p>
+      <p className="mb-2"><b>6. Hur kontrollerar jag hastigheten på min Shopify-butik?</b></p>
+      <p className="mb-3">
+        Google PageSpeed Insights, Chrome Lighthouse och Shopifys egna prestandaverktyg ger en bra utgångspunkt. Shopify Theme Inspector hjälper utvecklare att gå djupare in i Liquid-rendering.
+      </p>
+      <p className="mb-2"><b>7. Kan AlvaTech hjälpa till att förbättra hastigheten på en Shopify-butik?</b></p>
+      <p className="mb-4">
+        Ja. Vi arbetar med Shopify-utveckling, temaanpassning, migrering, appintegrationer, teknisk SEO och prestandaoptimering — och löser dem sällan var för sig, eftersom de sällan är fristående problem.
+      </p>
+    </>
+  );
+}
+
 export default function renderArticleIntroSv(articleId) {
   if (articleId === 26) return <BestAiToolsShopifyArticleIntroSv />;
   if (articleId === 27) return <SalesforceArticleIntroSv />;
@@ -2219,5 +2380,6 @@ export default function renderArticleIntroSv(articleId) {
   if (articleId === 35) return <KlarnaQliroSwishArticleIntroSv />;
   if (articleId === 36) return <VippsSwishCheckoutArticleIntroSv />;
   if (articleId === 37) return <SwitchEcommercePlatformArticleIntroSv />;
+  if (articleId === 38) return <SlowShopifyStoreArticleIntroSv />;
   return <DefaultArticleIntroSv />;
 }

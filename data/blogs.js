@@ -1,5 +1,28 @@
 export const blogsPosts4 = [
   {
+    id: 38,
+    slug: "shopify-butik-laddar-langsamt",
+    category: "Shopify",
+    imgSrc: "/assets/images/blog/shopify-butik-laddar-langsamt.jpg",
+    imgAlt: "Why Is My Shopify Store Loading Slowly? 7 Causes & Fixes",
+    imgCaption: "Why Is My Shopify Store Loading Slowly? 7 Causes & Fixes",
+    title: "Why Is My Shopify Store Loading Slowly? 7 Causes & Fixes",
+    titleSv: "Varför laddar min Shopify-butik långsamt? 7 orsaker och lösningar",
+    authorImg: "/assets/images/avatars/01.png",
+    authorAlt: "Alva Tech",
+    desc: "We diagnose slow Shopify stores every week. Here are the seven most common causes — and how to fix them for better Core Web Vitals, UX and conversions.",
+    descSv:
+      "Vi diagnostiserar långsamma Shopify-butiker varje vecka. Här är de sju vanligaste orsakerna — och hur ni åtgärdar dem för bättre Core Web Vitals, UX och konvertering.",
+    authorName: "Alva Tech",
+    date: "Sep 24, 2026",
+    metaTitle: "Shopify Store Loading Slowly? 7 Causes & Fixes — AlvaTech",
+    metaTitleSv: "Shopify-butik laddar långsamt? 7 orsaker och lösningar — AlvaTech",
+    metaDescription:
+      "We diagnose slow Shopify stores every week. Here are the seven most common causes — and how to fix them for better Core Web Vitals, UX and conversions.",
+    metaDescriptionSv:
+      "Vi diagnostiserar långsamma Shopify-butiker varje vecka. Här är de sju vanligaste orsakerna — och hur ni åtgärdar dem för bättre Core Web Vitals, UX och konvertering.",
+  },
+  {
     id: 37,
     slug: "byta-e-handelsplattform-10-tecken",
     category: "Strategy",
