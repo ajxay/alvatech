@@ -3,6 +3,17 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  // The DPA is reachable by direct link only -- it is stamped confidential and
+  // nothing on the site links to it. A robots.txt Disallow would publish the
+  // path in a file anyone can read; this keeps it out of results instead.
+  async headers() {
+    return [
+      {
+        source: "/assets/pdfs/alvatech-data-processing-agreement.pdf",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow, noarchive" }],
+      },
+    ];
+  },
   async redirects() {
     return [
       {
