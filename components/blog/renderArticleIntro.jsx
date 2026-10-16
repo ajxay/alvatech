@@ -2190,6 +2190,204 @@ function SlowShopifyStoreArticleIntro() {
   );
 }
 
+function HauntedShopifyStoreArticleIntro() {
+  const checklist = [
+    "Run PageSpeed Insights on your home, collection and product pages (mobile first).",
+    "Compress and resize your largest images and keep hero images eager-loaded.",
+    "Remove unused apps and check your theme for leftover code.",
+    "Remove unused tracking pixels and tags.",
+    "Cut sliders, carousels and heavy animations.",
+    "Set image dimensions and reserve space for banners and widgets.",
+    "Test on a real phone and re-measure after every change.",
+  ];
+
+  return (
+    <>
+      <p className="mb-4">
+        It is almost Halloween, and while fake spiders and plastic skeletons are harmless fun, there is one thing that genuinely frightens online store owners: a slow Shopify store. Visitors arrive, wait a few seconds, see nothing useful and quietly vanish. You never see them leave, and your sales report is the only clue that something is lurking in the shadows.
+      </p>
+      <p className="mb-4">
+        The good news is that slow load times are rarely random. They are caused by a handful of repeat offenders, and once you know the signs you can banish them. In this guide we walk through seven scary signs that your store is haunted, what causes each one and exactly how to fix it.
+      </p>
+      <p className="mb-5">
+        At AlvaTech we diagnose slow Shopify stores every week, so everything below comes from patterns we see again and again in real projects.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Why a slow Shopify store costs more than it looks</h4>
+      <p className="mb-3">Page speed is not just a technical detail. It touches almost every number you care about:</p>
+      <ul className="list-disc list-inside mb-3 pl-5 marker:text-primary">
+        <li><b>Conversion rate:</b> shoppers are impatient, especially on mobile. Every extra second of waiting gives them another reason to leave.</li>
+        <li><b>SEO:</b> Google uses Core Web Vitals as part of its page experience signals. A slow, unstable page can hold back your rankings, particularly against competitors with similar content.</li>
+        <li><b>Ad performance:</b> if you pay for traffic from Google, Meta or TikTok, a slow landing page means you pay for clicks that never get to see your products.</li>
+        <li><b>Customer trust:</b> a laggy store feels unreliable, and nobody wants to enter card details on a site that feels broken.</li>
+      </ul>
+      <p className="mb-3">Google&apos;s guidance for a good experience is simple to remember:</p>
+      <ul className="list-disc list-inside mb-3 pl-5 marker:text-primary">
+        <li>Largest Contentful Paint (LCP): 2.5 seconds or less</li>
+        <li>Interaction to Next Paint (INP): 200 milliseconds or less</li>
+        <li>Cumulative Layout Shift (CLS): 0.1 or less</li>
+      </ul>
+      <p className="mb-4">Keep these three numbers in mind as we go through the signs.</p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>First, check whether your store is haunted</h4>
+      <p className="mb-3">Before you start fixing things, measure. These free tools give you a quick diagnosis:</p>
+      <ul className="list-disc list-inside mb-3 pl-5 marker:text-primary">
+        <li><b>Google PageSpeed Insights:</b> enter your home page, a collection page and a product page. Look at the mobile results first.</li>
+        <li><b>Google Search Console:</b> the Core Web Vitals report shows real-user data and groups problem URLs together.</li>
+        <li><b>Shopify&apos;s web performance reports:</b> found in your admin under Analytics &gt; Reports (look for the Core Web Vitals reports), with a summary on the Online Store &gt; Themes page.</li>
+        <li><b>Chrome DevTools and Shopify Theme Inspector for Chrome:</b> more technical tools that show which scripts and Liquid code take the longest to run.</li>
+      </ul>
+      <p className="mb-4">
+        Test more than one page. Home pages are often optimized while product and collection pages, which earn you the money, are the ones hiding the ghosts.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Sign 1: The ghost of giant images</h4>
+      <p className="mb-2"><b>What it looks like:</b> your hero banner appears late, product images pop in one by one, and PageSpeed Insights warns about oversized images or a poor LCP score.</p>
+      <p className="mb-2"><b>Why it happens:</b> images are usually the heaviest part of an e-commerce page. Photos uploaded straight from a camera or design tool, huge banners and auto-playing background videos can add megabytes to a single page.</p>
+      <p className="mb-2"><b>How to fix it:</b></p>
+      <ul className="list-disc list-inside mb-4 pl-5 marker:text-primary">
+        <li>Resize images before uploading. A product photo rarely needs to be wider than the largest size it is displayed at.</li>
+        <li>Let Shopify&apos;s image tools serve the right size for each device by using responsive images with proper width settings in your theme.</li>
+        <li>Lazy-load images below the fold, but never lazy-load your main hero image. It is usually your LCP element and should load as early as possible.</li>
+        <li>Always set width and height attributes so the browser can reserve space (this also helps with Sign 6).</li>
+        <li>Replace heavy background videos with a compressed poster image or a short, optimized clip.</li>
+      </ul>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Sign 2: Zombie apps that refuse to die</h4>
+      <p className="mb-2"><b>What it looks like:</b> your store got slower over time, especially after you installed a few apps to &ldquo;just try them out&rdquo;. Some apps you no longer use are still running scripts.</p>
+      <p className="mb-2"><b>Why it happens:</b> many Shopify apps add their own JavaScript and CSS to every page of your store, even pages where the app does nothing. Worse, uninstalling an app does not always remove the code it left behind in your theme.</p>
+      <p className="mb-2"><b>How to fix it:</b></p>
+      <ul className="list-disc list-inside mb-3 pl-5 marker:text-primary">
+        <li>Make a list of every installed app and write down what business value each one delivers.</li>
+        <li>Remove anything you do not actively use, then check your theme code for leftover snippets.</li>
+        <li>Replace simple apps with native Shopify or theme features where possible, for example basic announcement bars, simple badges or size charts.</li>
+        <li>For apps you must keep, compare speed with and without them. If one app costs more speed than it earns in revenue, look for a lighter alternative or a custom solution.</li>
+      </ul>
+      <p className="mb-4">There is no magic number of apps that is too many. What matters is the combined weight of what they load.</p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Sign 3: A cursed, bloated theme</h4>
+      <p className="mb-2"><b>What it looks like:</b> your theme has dozens of features you never use, the home page has a long chain of sliders and carousels, and even a clean demo store of your theme scores poorly.</p>
+      <p className="mb-2"><b>Why it happens:</b> some multi-purpose themes try to be everything for everyone. That flexibility comes with a lot of code that loads whether you need it or not. Older themes that were never updated to modern Shopify standards can be heavy too.</p>
+      <p className="mb-2"><b>How to fix it:</b></p>
+      <ul className="list-disc list-inside mb-4 pl-5 marker:text-primary">
+        <li>Remove sections and features you do not use.</li>
+        <li>Cut back on sliders, carousels and animated effects. They look impressive in a demo but are often slow and are rarely clicked.</li>
+        <li>Make sure you are on a modern Online Store 2.0 theme and keep it updated.</li>
+        <li>Keep the home page focused: a clear hero, a few key collections and a handful of trust signals are usually enough.</li>
+        <li>For larger stores with complex needs, a lean custom theme built around your catalog and customer journey will outperform a heavy off-the-shelf theme.</li>
+      </ul>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Sign 4: Poltergeist scripts that run your store from the shadows</h4>
+      <p className="mb-2"><b>What it looks like:</b> your page seems to finish loading, but it still feels sticky. Clicks respond late, chat widgets pop up after a delay and your INP score is poor.</p>
+      <p className="mb-2"><b>Why it happens:</b> tracking pixels, tag managers, live chat, review widgets, heatmaps, A/B testing tools and social media embeds all run JavaScript in the visitor&apos;s browser. Each one seems small, but together they can freeze the page while the browser works through them.</p>
+      <p className="mb-2"><b>How to fix it:</b></p>
+      <ul className="list-disc list-inside mb-4 pl-5 marker:text-primary">
+        <li>Audit your Google Tag Manager container and remove old pixels, expired campaigns and duplicate tags.</li>
+        <li>Load non-essential scripts later, for example loading a chat widget only after the visitor interacts with the page.</li>
+        <li>Use Shopify&apos;s built-in customer events and web pixels where possible instead of stacking more custom scripts into your theme.</li>
+        <li>Ask a simple question about every tool: do we actually look at this data? If not, remove it.</li>
+      </ul>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Sign 5: Haunted code and render-blocking files</h4>
+      <p className="mb-2"><b>What it looks like:</b> PageSpeed Insights flags render-blocking resources, unused JavaScript or unused CSS. The page stays blank for a moment before anything appears.</p>
+      <p className="mb-2"><b>Why it happens:</b> over the years stores collect custom snippets, old experiments, leftover code from removed apps and unminified files. Some of this code blocks the browser from displaying the page until it has been downloaded and processed. Inefficient Liquid code, such as large loops over big collections, can also slow down how quickly the server responds.</p>
+      <p className="mb-2"><b>How to fix it:</b></p>
+      <ul className="list-disc list-inside mb-3 pl-5 marker:text-primary">
+        <li>Remove dead code and commented-out experiments from your theme files.</li>
+        <li>Defer or load asynchronously any script that is not needed for the first view of the page.</li>
+        <li>Minify your CSS and JavaScript and remove what is unused.</li>
+        <li>Use Shopify Theme Inspector to find slow Liquid sections and simplify them.</li>
+      </ul>
+      <p className="mb-4">
+        This is the sign that usually needs a developer. Code-level clean-up is delicate, and removing the wrong snippet can break your cart or checkout, so back up your theme first or have an experienced Shopify team handle it.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Sign 6: Phantom layout shifts</h4>
+      <p className="mb-2"><b>What it looks like:</b> you start to tap a button and the page jumps. An announcement bar pushes everything down after loading, fonts change as they appear and images pop in and shove the text around.</p>
+      <p className="mb-2"><b>Why it happens:</b> this is Cumulative Layout Shift. It occurs when elements load without reserved space, such as images without dimensions, late-loading banners, pop-ups and custom fonts that swap in after the page has rendered.</p>
+      <p className="mb-2"><b>How to fix it:</b></p>
+      <ul className="list-disc list-inside mb-4 pl-5 marker:text-primary">
+        <li>Set width and height (or an aspect ratio) on all images and videos.</li>
+        <li>Reserve space for announcement bars, review stars and app widgets so they do not push content around.</li>
+        <li>Limit yourself to one or two font families and preload the most important font file.</li>
+        <li>Use font-display settings that avoid invisible text and big jumps.</li>
+        <li>Aim for a CLS score of 0.1 or lower.</li>
+      </ul>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Sign 7: A nightmare on mobile</h4>
+      <p className="mb-2"><b>What it looks like:</b> the store feels fine on your office laptop but painful on a phone. The mobile menu is slow, a large pop-up covers the screen and the page takes ages on a normal 4G connection.</p>
+      <p className="mb-2"><b>Why it happens:</b> most shoppers browse on their phones, but many stores are built and tested on fast desktop connections. Mobile devices have less processing power, so heavy JavaScript hurts far more there.</p>
+      <p className="mb-2"><b>How to fix it:</b></p>
+      <ul className="list-disc list-inside mb-4 pl-5 marker:text-primary">
+        <li>Test on a real mid-range phone, not just a desktop browser, and use throttled connection settings in your testing tools.</li>
+        <li>Replace full-screen pop-ups with lighter, less intrusive banners.</li>
+        <li>Simplify the mobile menu and avoid heavy mega-menu scripts.</li>
+        <li>Reduce what loads above the fold on mobile. Show the product, the price and the buy button first.</li>
+        <li>Treat mobile as the main experience, not a smaller version of the desktop site.</li>
+      </ul>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Your anti-haunting checklist</h4>
+      <p className="mb-3">Use this quick list to start your clean-up today:</p>
+      <ul className="list-disc list-inside mb-3 pl-5 marker:text-primary">
+        {checklist.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
+      </ul>
+      <p className="mb-4">
+        Change one thing at a time and measure after each step. That way you know which fix actually moved the needle.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>When it is time to bring in specialists</h4>
+      <p className="mb-3">
+        Many speed fixes are simple enough to do yourself, such as image clean-up and removing unused apps. But if your store still feels sluggish after the basics, or if the problems come from your theme code, integrations or a complex tech stack, it is time to bring in specialists.
+      </p>
+      <p className="mb-3">
+        AlvaTech is a Shopify and digital growth partner based in Linköping, Sweden. We have delivered more than 100 custom Shopify stores, and we work with Nordic payment, shipping and marketplace integrations such as Klarna, Swish, Qliro, Vipps, PostNord and DHL, so we know how to keep a store fast even when it is connected to many systems.
+      </p>
+      <p className="mb-2">Here is how we can help:</p>
+      <ul className="list-disc list-inside mb-3 pl-5 marker:text-primary">
+        <li><b>Speed and performance audits:</b> we find out exactly which apps, scripts, images and code slow your store down.</li>
+        <li><b>Theme optimization and custom Shopify development:</b> lean, scalable themes built around your business instead of a one-size-fits-all template.</li>
+        <li><b>Shopify migrations:</b> if your current platform is holding you back, we can move you to Shopify without losing your products, customers, orders or SEO data.</li>
+        <li><b>SEO and conversion optimization:</b> once your store is fast, we help turn that speed into rankings and revenue.</li>
+      </ul>
+      <p className="mb-4">
+        Learn more about our <Link href="/services/custom-ecommerce-shopify-development-services">Shopify and e-commerce development services</Link> and our <Link href="/services/digital-marketing-services">digital marketing services</Link>, or read our guide on <Link href="/blog/byta-e-handelsplattform-10-tecken">when it is time to change e-commerce platform</Link>.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Frequently asked questions</h4>
+      <p className="mb-2"><b>What is a good load time for a Shopify store?</b></p>
+      <p className="mb-3">
+        Google recommends an LCP of 2.5 seconds or less, an INP of 200 milliseconds or less and a CLS of 0.1 or less. Aim to meet these on mobile for your most important pages: home, collection and product pages.
+      </p>
+      <p className="mb-2"><b>Is Shopify itself slow?</b></p>
+      <p className="mb-3">
+        No. Shopify&apos;s hosting and content delivery network are built for e-commerce at scale. When a Shopify store is slow, the cause is almost always the theme, the installed apps, third-party scripts or heavy media.
+      </p>
+      <p className="mb-2"><b>How many apps are too many for a Shopify store?</b></p>
+      <p className="mb-3">
+        There is no fixed number. A single poorly built app can slow a store more than five lightweight ones. Judge each app by what it loads and what it earns, and remove anything that is not pulling its weight.
+      </p>
+      <p className="mb-2"><b>Does page speed affect SEO?</b></p>
+      <p className="mb-3">
+        Yes. Core Web Vitals are part of Google&apos;s page experience signals. Speed will not make up for weak content, but it can support your rankings and, just as importantly, it improves the experience that turns visitors into customers.
+      </p>
+      <p className="mb-2"><b>Can I speed up my Shopify store without a developer?</b></p>
+      <p className="mb-4">
+        Partly. Compressing images, removing unused apps, trimming tracking tags and simplifying your home page are all doable on your own. Code-level problems, custom theme work and complex integrations are best handled by an experienced Shopify developer.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Slow load times cost you customers quietly</h4>
+      <p className="mb-3">
+        A slow store costs you customers silently, which is exactly what makes it so scary. Work through the seven signs above, measure as you go and keep your store lean. If you would rather have specialists do the diagnosis, AlvaTech is ready to help.
+      </p>
+      <p className="mb-4">
+        Ready to get your load times under control? <Link href="/contact-us">Book a speed audit with AlvaTech</Link> and we will help make your Shopify store fast, stable and ready for the busy autumn and winter shopping season, including Black Friday.
+      </p>
+    </>
+  );
+}
+
 function DefaultArticleIntro() {
   return (
     <p>
@@ -2213,5 +2411,6 @@ export default function renderArticleIntro(articleId, language) {
   if (articleId === 36) return <VippsSwishCheckoutArticleIntro />;
   if (articleId === 37) return <SwitchEcommercePlatformArticleIntro />;
   if (articleId === 38) return <SlowShopifyStoreArticleIntro />;
+  if (articleId === 39) return <HauntedShopifyStoreArticleIntro />;
   return <DefaultArticleIntro />;
 }

@@ -1,5 +1,29 @@
 export const blogsPosts4 = [
   {
+    id: 39,
+    slug: "langsam-shopify-butik-7-tecken",
+    category: "Shopify",
+    imgSrc: "/assets/images/blog/langsam-shopify-butik-7-tecken.jpg",
+    imgAlt: "7 Scary Signs Your Shopify Store Is Haunted by Slow Load Times",
+    imgCaption: "7 Scary Signs Your Shopify Store Is Haunted by Slow Load Times",
+    title: "7 Scary Signs Your Shopify Store Is Haunted by Slow Load Times",
+    titleSv:
+      "7 skrämmande tecken på att din Shopify-butik är hemsökt – och hur du får den att ladda snabbare",
+    authorImg: "/assets/images/avatars/01.png",
+    authorAlt: "Alva Tech",
+    desc: "Is your Shopify store haunted by slow load times? Spot the 7 scary signs, learn what causes them and how to fix them for better speed, SEO and sales.",
+    descSv:
+      "Är din Shopify-butik hemsökt av långsamma laddningstider? Se de 7 tecknen, orsakerna och hur du åtgärdar dem för bättre hastighet, SEO och försäljning.",
+    authorName: "Alva Tech",
+    date: "Oct 16, 2026",
+    metaTitle: "7 Scary Signs Your Shopify Store Is Slow (+ Fixes)",
+    metaTitleSv: "7 skrämmande tecken på en långsam Shopify-butik",
+    metaDescription:
+      "Is your Shopify store haunted by slow load times? Spot the 7 scary signs, learn what causes them and how to fix them for better speed, SEO and sales.",
+    metaDescriptionSv:
+      "Är din Shopify-butik hemsökt av långsamma laddningstider? Se de 7 tecknen, orsakerna och hur du åtgärdar dem för bättre hastighet, SEO och försäljning.",
+  },
+  {
     id: 38,
     slug: "shopify-butik-laddar-langsamt",
     category: "Shopify",
