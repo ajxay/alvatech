@@ -1,5 +1,30 @@
 export const blogsPosts4 = [
   {
+    id: 40,
+    slug: "ai-sokmotoroptimering",
+    category: "SEO",
+    imgSrc: "/assets/images/blog/ai-sokmotoroptimering.jpg",
+    imgAlt: "How to Get Your Website Cited in ChatGPT, Google AI Overviews and Other AI Search Results",
+    imgCaption: "How to Get Your Website Cited in ChatGPT, Google AI Overviews and Other AI Search Results",
+    title:
+      "How to Get Your Website Cited in ChatGPT, Google AI Overviews and Other AI Search Results",
+    titleSv:
+      "Så får du din webbplats citerad i ChatGPT, Google AI Overviews och andra AI-sökresultat",
+    authorImg: "/assets/images/avatars/01.png",
+    authorAlt: "Alva Tech",
+    desc: "Learn how to get your website cited by ChatGPT, Google AI Overviews and other AI search engines with authoritative content and solid SEO.",
+    descSv:
+      "Lär dig hur du får din webbplats citerad av ChatGPT, Google AI Overviews och andra AI-sökmotorer med trovärdigt innehåll och en stabil SEO-grund.",
+    authorName: "Alva Tech",
+    date: "Oct 30, 2026",
+    metaTitle: "AI Search Optimization: Get Cited by ChatGPT & Google",
+    metaTitleSv: "AI-sökmotoroptimering: Bli citerad av ChatGPT och Google",
+    metaDescription:
+      "Learn how to get your website cited by ChatGPT, Google AI Overviews and other AI search engines with authoritative content and solid SEO.",
+    metaDescriptionSv:
+      "Lär dig hur du får din webbplats citerad av ChatGPT, Google AI Overviews och andra AI-sökmotorer med trovärdigt innehåll och en stabil SEO-grund.",
+  },
+  {
     id: 39,
     slug: "langsam-shopify-butik-7-tecken",
     category: "Shopify",

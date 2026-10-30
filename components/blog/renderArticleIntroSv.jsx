@@ -2578,6 +2578,207 @@ function HauntedShopifyStoreArticleIntroSv() {
   );
 }
 
+function AiSearchOptimizationArticleIntroSv() {
+  return (
+    <>
+      <p className="mb-4">
+        Sökningar besvaras allt oftare direkt, antingen på resultatsidan eller i en chatt. Någon ställer en fråga till ChatGPT, Perplexity eller Google, får ett sammanfattat svar och går vidare. Pew Research Center har visat att Google-användare klickade mer sällan på vanliga sökresultat när en AI-sammanfattning visades. De varumärken som nämns i svaret får uppmärksamhet och förtroende. De som inte nämns saknas i samtalet.
+      </p>
+      <p className="mb-5">
+        Det är den här förändringen som AI-sökmotoroptimering handlar om. Det innebär att strukturera din webbplats, ditt innehåll och ditt varumärkes digitala närvaro så att AI-drivna sökmotorer kan hitta, förstå, lita på och hänvisa till dig. I den här guiden går vi igenom hur systemen väljer källor och vilka konkreta åtgärder som ökar dina chanser att bli citerad.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Vad är AI-sökmotoroptimering?</h4>
+      <p className="mb-3">
+        AI-sökmotoroptimering är processen att göra ditt innehåll lättare för stora språkmodeller och AI-baserade sökfunktioner att hitta, tolka och citera. Det bygger vidare på traditionell SEO i stället för att ersätta den. Traditionell SEO siktar på en hög placering i sökresultaten, medan AI-sökmotoroptimering siktar på att bli en del av själva svaret.
+      </p>
+      <p className="mb-3">Du kommer att stöta på flera begrepp som beskriver närliggande områden:</p>
+      <ul className="list-disc list-inside mb-3 pl-5 marker:text-primary">
+        <li><b>Generative Engine Optimization (GEO):</b> optimering för sökmotorer och AI-verktyg som genererar svar, till exempel ChatGPT, Gemini, Claude och Perplexity.</li>
+        <li><b>Answer Engine Optimization (AEO):</b> att strukturera innehåll så att det ger direkta och tydliga svar på specifika frågor.</li>
+        <li><b>AI SEO-strategier:</b> ett bredare samlingsbegrepp för strategier som kombinerar teknisk SEO, innehållskvalitet och varumärkesauktoritet.</li>
+      </ul>
+      <p className="mb-4">I praktiken överlappar de kraftigt. Därför räcker det med en sammanhängande strategi för alla tre.</p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Hur väljer AI-sökmotorer vilka källor de citerar?</h4>
+      <p className="mb-3">
+        När du förstår urvalsprocessen blir det enklare att prioritera rätt åtgärder. Plattformarna fungerar olika, men många följer ett liknande mönster:
+      </p>
+      <ul className="list-disc list-inside mb-3 pl-5 marker:text-primary">
+        <li><b>Hämtning.</b> Systemet identifierar relevanta sidor från ett sökindex eller genom egen genomsökning. Vid aktuella frågor används ofta en webbsökning i realtid.</li>
+        <li><b>Utvärdering.</b> Innehållet bedöms utifrån relevans, tydlighet, aktualitet och trovärdighet.</li>
+        <li><b>Sammanställning.</b> AI-systemet formulerar ett svar och lägger till källhänvisningar till det innehåll som använts.</li>
+      </ul>
+      <p className="mb-4">
+        AI-system hänvisar alltså ofta till specifika textavsnitt, inte till hela sidor. Om det viktigaste svaret göms bakom en lång inledning blir det svårare att plocka ut och citera. Sidor som redan rankar bra i traditionella sökresultat har dessutom bättre förutsättningar att hämtas in, och därför är en stark SEO-grund fortfarande avgörande.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Så blir du citerad av ChatGPT och andra AI-sökmotorer</h4>
+
+      <p className="mb-2"><b>1. Börja varje avsnitt med ett direkt svar</b></p>
+      <p className="mb-3">
+        Om en rubrik ställer en fråga bör du besvara den i de första en eller två meningarna innan du går på djupet. Att svara först och förklara sedan är en av de mest användbara principerna inom AEO, eftersom det ger AI-system ett tydligt och fristående textavsnitt att använda.
+      </p>
+      <p className="mb-2"><b>Svagt:</b> &rdquo;Det finns många faktorer att ta hänsyn till när man funderar på strukturerad data.&rdquo;</p>
+      <p className="mb-4"><b>Bättre:</b> &rdquo;Strukturerad data är kod som beskriver innehåll på din webbplats, till exempel produkter, författare eller vanliga frågor, så att sökmotorer kan tolka informationen mer exakt.&rdquo;</p>
+
+      <p className="mb-2"><b>2. Skriv rubriker som människor faktiskt ställer frågor</b></p>
+      <p className="mb-4">
+        Människor använder ofta hela meningar när de pratar med AI-verktyg. Använd rubriker som &rdquo;Hur lång tid tar en Shopify-migrering?&rdquo; i stället för enbart &rdquo;Migreringstid&rdquo;. Frågebaserade rubriker ligger närmare det användarna skriver och gör avsnitten lättare att hitta.
+      </p>
+
+      <p className="mb-2"><b>3. Tillför värde som inte kan sammanfattas bort</b></p>
+      <p className="mb-4">
+        AI-modeller kan lätt omformulera generella råd, så generella råd blir sällan citerade. Det som kan bli citerat är sådant en modell inte kan hitta på: egen erfarenhet, egna data, namngivna kundcase, jämförelser, skärmbilder eller välgrundade ståndpunkter med belägg. Om din sida innehåller den enda källan till en uppgift blir du den naturliga referensen.
+      </p>
+
+      <p className="mb-2"><b>4. Visa tydligt din expertis och trovärdighet</b></p>
+      <p className="mb-3">
+        Googles riktlinjer för kvalitetsbedömare lyfter fram erfarenhet, expertis, auktoritet och tillförlitlighet (E-E-A-T). Det är inte en direkt rankingfaktor, men ett användbart sätt att tänka, och det är rimligt att förvänta sig att AI-system värderar liknande signaler. Några praktiska sätt att visa dem:
+      </p>
+      <ul className="list-disc list-inside mb-4 pl-5 marker:text-primary">
+        <li>Publicera innehåll under riktiga författarnamn med korta presentationer och relevanta meriter.</li>
+        <li>Ha en tydlig Om oss-sida med företagsinformation, ort och kontaktuppgifter.</li>
+        <li>Länka till primärkällor när du använder statistik.</li>
+        <li>Uppdatera äldre innehåll och visa när det senast granskades.</li>
+      </ul>
+
+      <p className="mb-2"><b>5. Bygg synlighet utanför den egna webbplatsen</b></p>
+      <p className="mb-4">
+        AI-sökmotorer bildar sig en uppfattning om varumärken från hela webben, inte bara från företagens egna sidor. Recensioner, branschregister, poddar, gästartiklar, diskussioner på Reddit och i andra forum samt omnämnanden i media påverkar hur säkert ett AI-system kopplar ditt varumärke till ett ämne. När ditt varumärke beskrivs konsekvent på flera trovärdiga platser blir det lättare för systemen att förstå vad ni erbjuder.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Optimering för Google AI Overviews</h4>
+      <p className="mb-3">
+        Google AI Overviews bygger på Googles eget index. Enligt Googles dokumentation finns det inga extra krav för att visas i AI Overviews eller AI Mode, och inget särskilt schema eller några särskilda filer behövs. Optimering handlar därför om stabila SEO-grunder, med några förbättringar som gör svar lätta att plocka ut:
+      </p>
+      <ul className="list-disc list-inside mb-3 pl-5 marker:text-primary">
+        <li><b>Se till att sidorna går att indexera.</b> Sidor som blockeras av robots.txt, innehåller noindex eller förlitar sig på svårtolkad klientbaserad rendering kan inte användas. Kontrollera genomsökning och indexering i Google Search Console.</li>
+        <li><b>Fokusera på hela frågan, inte bara sökordet.</b> AI Overviews visas ofta för längre, konversationsliknande och sammansatta frågor. Besvara de följdfrågor läsaren sannolikt har på samma sida.</li>
+        <li><b>Använd tydliga definitioner, listor och tabeller.</b> Korta definitioner, numrerade steg och jämförelsetabeller är lätta att plocka ut och visa.</li>
+        <li>Komplettera med bilder och video när de faktiskt hjälper till att förklara ämnet.</li>
+        <li><b>Möt användarens sökintention.</b> Google har framhållit att vanliga SEO-principer gäller även för AI-funktioner, så hjälpsamt, användarorienterat innehåll är fortfarande grunden.</li>
+      </ul>
+      <p className="mb-4">
+        Google har inte publicerat någon checklista som garanterar att en sida visas i AI Overviews. Var skeptisk till alla löften om garanterad placering.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Den tekniska grunden: SEO-hygien först</h4>
+      <p className="mb-3">
+        Även det bästa innehållet behöver en webbplats som sökmotorer och AI-system kan läsa. Dessa områden är värda att granska:
+      </p>
+      <ul className="list-disc list-inside mb-4 pl-5 marker:text-primary">
+        <li><b>Strukturerad data.</b> Lägg in korrekt schemamarkering, till exempel Organization, Article, Product och BreadcrumbList. Eftersom Google säger att inget särskilt schema krävs för AI Overviews är markeringen ett sätt att minska tvetydighet om vem du är och vad varje sida handlar om, inte en genväg till citering. Se till att den stämmer med den synliga texten. En anmärkning om FAQ: enligt rapporter om Googles dokumentationsuppdatering i maj 2026 visas FAQ-rika resultat inte längre i Google Search, även om markeringen fortfarande förstås. En synlig FAQ-sektion är fortfarande användbar för läsare och för att hämta svar, men lägg inte till FAQPage-markering i förhoppningen om ett rikt resultat.</li>
+        <li><b>Åtkomst för AI-crawlers.</b> Granska robots.txt och regler i ditt CDN eller din brandvägg, och skilj på vad botarna gör. OpenAI har till exempel GPTBot (träning av modeller), OAI-SearchBot (sökfunktionen i ChatGPT) och ChatGPT-User (hämtning när en användare ber om det). Att blockera GPTBot påverkar inte om du kan dyka upp i ChatGPT-sökning, men att blockera OAI-SearchBot gör det. Googles AI Overviews och AI Mode bygger på Googlebot och Googles index. Google-Extended är en robots.txt-token för träning och grundning av svar i Gemini, inte en crawler, och den påverkar inte Google Search. Anthropic och Perplexity har också separata botar för träning och sökning, så kontrollera varje leverantörs aktuella dokumentation. Att tillåta eller blockera är ett affärsbeslut. Fatta det medvetet, bot för bot.</li>
+        <li><b>Snabb laddning och ren rendering.</b> Snabba sidor med lättillgänglig HTML är lättare för crawlers att läsa. Goda Core Web Vitals bidrar dessutom till en bättre användarupplevelse.</li>
+        <li><b>Tydlig webbplatsstruktur.</b> Gruppera relaterade sidor i ämneskluster med beskrivande interna länkar. En huvudsida med flera stödjande artiklar gör det lättare att bedöma hur djup din kunskap är.</li>
+        <li><b>Aktuellt innehåll.</b> Uppdatera statistik, skärmbilder och produktinformation regelbundet, och håll XML-webbplatskartan uppdaterad så att ändringar upptäcks.</li>
+      </ul>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Vad det här betyder för e-handel och Shopify-butiker</h4>
+      <p className="mb-3">
+        För en webbutik är det sällan bloggartiklarna som betyder mest i AI-sök. Det är produkt- och kategorisidorna, och frågorna är praktiska: vilken produkt passar ett behov, hur två alternativ skiljer sig, om något finns i lager. Några saker gör de sidorna lättare att förstå och citera:
+      </p>
+      <ul className="list-disc list-inside mb-3 pl-5 marker:text-primary">
+        <li><b>Komplett och specifik produktdata.</b> Tydliga titlar, beskrivningar som svarar på verkliga köpfrågor (material, storlekar, kompatibilitet, skötsel) och konsekventa attribut mellan varianter.</li>
+        <li><b>Produktmarkering som stämmer med sidan.</b> Många Shopify-teman genererar grundläggande Product-markering. Kontrollera att pris, lagerstatus och recensioner i markeringen stämmer med det besökaren faktiskt ser.</li>
+        <li><b>Aktuella Merchant Center- och företagsuppgifter.</b> Google nämner själva att Merchant Center- och Business Profile-uppgifter ska hållas uppdaterade. Avvikelser mellan flöde och webbplats är värda att åtgärda oavsett.</li>
+        <li><b>Riktiga recensioner och omnämnanden.</b> Recensioner på din egen webbplats och på andra ställen hjälper till att beskriva vad du säljer och hur det fungerar.</li>
+        <li><b>Jämförelse- och köpguider.</b> Sidor som jämför alternativ eller förklarar hur man väljer besvarar just de sammansatta frågor som AI-verktyg får.</li>
+      </ul>
+      <p className="mb-4">
+        Inget av detta garanterar en citering, men allt hjälper även vanlig sökning och konvertering. Därför behandlar vi det som ett och samma arbete.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>En enkel innehållsstruktur som fungerar bra för AI-sök</h4>
+      <p className="mb-3">Prova att strukturera viktiga sidor så här:</p>
+      <ul className="list-disc list-inside mb-3 pl-5 marker:text-primary">
+        <li>Börja med en kort sammanfattning som besvarar sidans huvudfråga.</li>
+        <li>Använd frågebaserade underrubriker och ge ett direkt svar under varje.</li>
+        <li>Skriv korta stycken och använd listor eller tabeller när innehållet naturligt är strukturerat.</li>
+        <li>Ange författare, publiceringsdatum och datum för senaste uppdatering.</li>
+        <li>Avsluta med en FAQ som besvarar relaterade frågor i två till fyra meningar vardera.</li>
+      </ul>
+      <p className="mb-4">
+        Strukturen fungerar lika bra för mänskliga läsare, vilket är det bästa skälet att använda den.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Så hjälper AlvaTech företag att synas i AI-sökresultat</h4>
+      <p className="mb-3">
+        AlvaTech är en Shopify- och digital tillväxtpartner baserad i Linköping, Sverige. Teamet kombinerar utveckling av e-handelslösningar med CRM- och ERP-system och datadriven digital marknadsföring. Det är relevant eftersom synlighet i AI-sök kräver att både webbplatsen och marknadsföringen fungerar tillsammans.
+      </p>
+      <p className="mb-2">Vi hjälper företag med AI-sökmotoroptimering genom:</p>
+      <ul className="list-disc list-inside mb-3 pl-5 marker:text-primary">
+        <li><b>Teknisk grund.</b> Shopify-lösningar och specialutvecklade e-handelsplattformar som byggs för att vara snabba, strukturerade och tillgängliga för crawlers, så att sökmotorer och AI-system kan förstå produkt- och kategorisidor.</li>
+        <li><b>SEO och innehållsstrategi.</b> Sökmotoroptimering och innehållsplanering som utgår från verkliga kundfrågor och bygger grunden för både AEO och GEO.</li>
+        <li><b>Konvertering och analys.</b> Konverteringsoptimering och datadriven uppföljning, så att trafiken från AI-baserad sökning blir faktiska affärsresultat.</li>
+        <li><b>Integrerade system.</b> CRM och automatisering som hjälper er att ta hand om nya leads från besökare som hittat er via AI-sök.</li>
+      </ul>
+      <p className="mb-3">
+        Arbetet börjar med strategi: vi granskar hur AI-verktyg beskriver ditt varumärke i dag, identifierar luckor i innehåll och teknik och mäter resultatet i affärsnytta snarare än synlighetsmått.
+      </p>
+      <p className="mb-4">
+        Läs mer om våra tjänster inom <Link href="/services/custom-ecommerce-shopify-development-services">Shopify och e-handelsutveckling</Link> och <Link href="/services/digital-marketing-services">digital marknadsföring</Link>, eller <Link href="/contact-us">boka en AI visibility audit med AlvaTech</Link> för att se hur din webbplats står sig i dag.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Så mäter du resultatet av AI-sökmotoroptimering</h4>
+      <p className="mb-3">
+        Synlighet i AI-sök är svårare att mäta än placeringar, men du kan ändå få en användbar bild:
+      </p>
+      <ul className="list-disc list-inside mb-3 pl-5 marker:text-primary">
+        <li><b>Testa relevanta frågor.</b> Gör en lista med 20–50 frågor som dina kunder ställer och kör dem regelbundet i ChatGPT, Gemini, Perplexity och Google. Anteckna om ditt varumärke nämns, citeras eller saknas, och vilka som citeras i stället.</li>
+        <li><b>Analysera hänvisningstrafik.</b> Kontrollera i ditt analysverktyg om besökare kommer från chatgpt.com, perplexity.ai och liknande källor. ChatGPT lägger dessutom en utm_source-parameter på länkar som skickar besökare vidare (ofta utm_source=chatgpt.com), så filtrera på den också. Kontrollera det exakta värdet i era egna rapporter. Skapa ett eget segment för att följa utvecklingen över tid.</li>
+        <li><b>Använd Google Search Console.</b> Följ visningar och klick för frågebaserade sökningar, som ofta utlöser AI-funktioner.</li>
+        <li><b>Följ varumärkessökningar.</b> En ökning av sökningar på ditt varumärkesnamn följer ofta på ökad synlighet i AI-sök.</li>
+        <li><b>Kontrollera hur AI beskriver dig.</b> Notera om AI-svar beskriver dina produkter rätt. Felaktigheter visar vilket innehåll som behöver förtydligas.</li>
+      </ul>
+      <p className="mb-4">
+        Räkna med att resultat tar månader snarare än dagar, och att AI-svar kan variera mellan olika frågor och över tid.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Vanliga misstag att undvika</h4>
+      <ul className="list-disc list-inside mb-4 pl-5 marker:text-primary">
+        <li>Att publicera tunt, massproducerat AI-innehåll utan egen input.</li>
+        <li>Att överanvända sökord eller lägga till markering som inte stämmer med det synliga innehållet.</li>
+        <li>Att blockera fel botar. Träningsbotar och sökbotar gör olika saker, så besluta om varje för sig.</li>
+        <li>Att bara putsa den egna webbplatsen och ignorera rykte och omnämnanden på andra platser.</li>
+        <li>Att behandla AI-sök som en ersättning för SEO i stället för en förlängning av den.</li>
+      </ul>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Nästa steg: så kommer du igång</h4>
+      <p className="mb-4">
+        Börja i liten skala. Välj ut dina fem viktigaste sidor, skriv om inledningarna så att de besvarar huvudfrågan direkt, lägg till tydlig författar- och datuminformation och se över relevant strukturerad data. Testa sedan dina viktigaste frågor i olika AI-verktyg, anteckna luckorna och upprepa sida för sida. Företag som börjar nu påverkar vad AI-systemen lär sig om deras bransch.
+      </p>
+
+      <h4 className="h4 xl:h3 mt-5 mb-2 xl:mb-3 " style={{ color: "#86BC40" }}>Vanliga frågor om AI-sökmotoroptimering</h4>
+      <p className="mb-2"><b>1. Vad är AI-sökmotoroptimering?</b></p>
+      <p className="mb-3">
+        AI-sökmotoroptimering innebär att du anpassar innehåll, teknisk struktur och varumärkesnärvaro så att AI-verktyg som ChatGPT, Google AI Overviews och Perplexity lättare kan hitta, förstå och hänvisa till din webbplats. Det bygger på traditionell SEO och omfattar bland annat Generative Engine Optimization (GEO) och Answer Engine Optimization (AEO).
+      </p>
+      <p className="mb-2"><b>2. Hur får jag ChatGPT att citera min webbplats?</b></p>
+      <p className="mb-3">
+        Publicera tydligt och trovärdigt innehåll som svarar direkt på specifika frågor, stöd dina påståenden med egen data eller erfarenhet och se till att sidorna går att genomsöka och indexera. Kontrollera också att du inte blockerar OpenAIs sökbot (OAI-SearchBot) i robots.txt. Bygg dessutom närvaro på trovärdiga externa sajter, eftersom ChatGPT kan använda information från många källor. Ingen metod garanterar en citering, men åtgärderna förbättrar dina förutsättningar.
+      </p>
+      <p className="mb-2"><b>3. Skiljer sig Generative Engine Optimization (GEO) från SEO?</b></p>
+      <p className="mb-3">
+        GEO delar de flesta grunder med SEO, som kvalitetsinnehåll, teknisk hälsa och trovärdighet. Skillnaden ligger i målet: SEO siktar på placeringar, medan GEO siktar på att bli citerad eller rekommenderad i AI-genererade svar. Den bästa strategin behandlar dem som ett sammanhängande arbete.
+      </p>
+      <p className="mb-2"><b>4. Hjälper strukturerad data med Google AI Overviews?</b></p>
+      <p className="mb-3">
+        Strukturerad data hjälper sökmotorer att förstå innehållet och är god praxis, men Google säger att inget särskilt schema krävs för att visas i AI Overviews eller AI Mode. Använd den för att förtydliga innehållet, se till att den stämmer med den synliga texten och kombinera den med hjälpsam, välstrukturerad text.
+      </p>
+      <p className="mb-2"><b>5. Ska jag blockera AI-crawlers i robots.txt?</b></p>
+      <p className="mb-3">
+        Det beror på vad du vill uppnå. Att blockera träningsbotar som GPTBot är ett separat beslut från att blockera sökbotar som OAI-SearchBot, och det senare kan minska din synlighet i ChatGPT-sökning. Google-Extended påverkar inte Google Search. Besluta bot för bot i stället för att blockera allt eller inget.
+      </p>
+      <p className="mb-2"><b>6. Hur kan AlvaTech hjälpa mitt företag med AI SEO-strategier?</b></p>
+      <p className="mb-4">
+        AlvaTech kombinerar teknisk e-handelsutveckling, SEO, innehållsstrategi och konverteringsoptimering för att göra din webbplats enklare för AI-system att förstå och hänvisa till. Teamet kan granska din nuvarande synlighet, åtgärda tekniska brister och bygga innehåll utifrån de frågor dina kunder ställer. Besök alvatech.se för att komma i kontakt med teamet.
+      </p>
+    </>
+  );
+}
+
 export default function renderArticleIntroSv(articleId) {
   if (articleId === 26) return <BestAiToolsShopifyArticleIntroSv />;
   if (articleId === 27) return <SalesforceArticleIntroSv />;
@@ -2593,5 +2794,6 @@ export default function renderArticleIntroSv(articleId) {
   if (articleId === 37) return <SwitchEcommercePlatformArticleIntroSv />;
   if (articleId === 38) return <SlowShopifyStoreArticleIntroSv />;
   if (articleId === 39) return <HauntedShopifyStoreArticleIntroSv />;
+  if (articleId === 40) return <AiSearchOptimizationArticleIntroSv />;
   return <DefaultArticleIntroSv />;
 }
