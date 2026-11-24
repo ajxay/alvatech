@@ -1,5 +1,28 @@
 export const blogsPosts4 = [
   {
+    id: 41,
+    slug: "black-month-e-handelsutveckling",
+    category: "Ecommerce",
+    imgSrc: "/assets/images/blog/black-month-e-handelsutveckling.jpg",
+    imgAlt: "Black Month Special: Get E-commerce Development at 500 SEK/Hour",
+    imgCaption: "Black Month Special: Get E-commerce Development at 500 SEK/Hour",
+    title: "Black Month Special: Get E-commerce Development at 500 SEK/Hour",
+    titleSv: "Black Month-erbjudande: Få e-handelsutveckling för endast 500 SEK/timme",
+    authorImg: "/assets/images/avatars/01.png",
+    authorAlt: "Alva Tech",
+    desc: "Get expert e-commerce development services at 500 SEK/hour with Alvatech's Black Month offer, valid throughout November.",
+    descSv:
+      "Få professionella tjänster inom e-handelsutveckling för 500 SEK/timme med Alvatechs Black Month-erbjudande. Gäller hela november.",
+    authorName: "Alva Tech",
+    date: "Nov 24, 2026",
+    metaTitle: "Black Month E-commerce Development Offer | Alvatech",
+    metaTitleSv: "Black Month-erbjudande på e-handelsutveckling | Alvatech",
+    metaDescription:
+      "Get expert e-commerce development services at 500 SEK/hour with Alvatech's Black Month offer, valid throughout November.",
+    metaDescriptionSv:
+      "Få professionella tjänster inom e-handelsutveckling för 500 SEK/timme med Alvatechs Black Month-erbjudande. Gäller hela november.",
+  },
+  {
     id: 40,
     slug: "ai-sokmotoroptimering",
     category: "SEO",
