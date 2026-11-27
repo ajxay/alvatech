@@ -1,5 +1,28 @@
 export const blogsPosts4 = [
   {
+    id: 42,
+    slug: "ai-drivet-erp",
+    category: "Business",
+    imgSrc: "/assets/images/blog/ai-drivet-erp.webp",
+    imgAlt: "How AI-Driven ERP Systems Can Improve Inventory and Supply Chain Management",
+    imgCaption: "How AI-Driven ERP Systems Can Improve Inventory and Supply Chain Management",
+    title: "How AI-Driven ERP Systems Can Improve Inventory and Supply Chain Management",
+    titleSv: "Hur AI-drivna ERP-system kan förbättra lagerhantering och leveranskedjor",
+    authorImg: "/assets/images/avatars/01.png",
+    authorAlt: "Alva Tech",
+    desc: "Learn how AI-driven ERP improves demand forecasting, inventory control and supply chain visibility. See key use cases, benefits and how Alvatech helps.",
+    descSv:
+      "Upptäck hur AI-drivet ERP förbättrar efterfrågeprognoser, lagerkontroll och insyn i leveranskedjan. Läs om användningsområden, fördelar och hur Alvatech kan hjälpa ditt företag.",
+    authorName: "Alva Tech",
+    date: "Nov 27, 2026",
+    metaTitle: "AI-Driven ERP: Smarter Inventory & Supply Chain | Alvatech",
+    metaTitleSv: "AI-drivet ERP: Smartare lagerhantering & leveranskedjor | Alvatech",
+    metaDescription:
+      "Learn how AI-driven ERP improves demand forecasting, inventory control and supply chain visibility. See key use cases, benefits and how Alvatech helps.",
+    metaDescriptionSv:
+      "Upptäck hur AI-drivet ERP förbättrar efterfrågeprognoser, lagerkontroll och insyn i leveranskedjan. Läs om användningsområden, fördelar och hur Alvatech kan hjälpa ditt företag.",
+  },
+  {
     id: 41,
     slug: "black-month-e-handelsutveckling",
     category: "Ecommerce",
